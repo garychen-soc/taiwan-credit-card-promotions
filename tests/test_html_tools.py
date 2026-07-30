@@ -17,7 +17,14 @@ class HtmlToolsTests(unittest.TestCase):
     def test_strips_markup(self) -> None:
         self.assertEqual(strip_html("<p>登錄&nbsp;時間</p>"), "登錄 時間")
 
+    def test_malformed_official_link_does_not_abort_page(self) -> None:
+        page = parse_page(
+            '<p>活動內容</p><a href="https://link to：https://bad.example">錯誤連結</a>',
+            "https://bank.example/campaign",
+        )
+        self.assertIn("活動內容", page.text)
+        self.assertEqual(page.links[0]["url"], "")
+
 
 if __name__ == "__main__":
     unittest.main()
-

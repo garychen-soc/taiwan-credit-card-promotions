@@ -34,7 +34,45 @@
         "cathaybk.com.tw"
       ],
       "adapter": "cathay_online_shopping"
+    },
+    {
+      "id": "ctbc",
+      "bank_name": "中國信託",
+      "entry_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/store.html?utm_source=google_keyword&utm_medium=google_keyword&utm_campaign=25546_Linepay_Q1_2023&ctsource=google_keyword&ctchannel=google_keyword&ctid=25546_Linepay_Q1_2023&Unit=13157&Seed=8723CK001",
+      "discovery_urls": [
+        "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/index.html",
+        "https://www.ctbcbank.com/twrbo/zh_tw/cc_index/cc_product/cc_card_intro/cc_card_intro_09.html"
+      ],
+      "official_domains": [
+        "ctbcbank.com"
+      ],
+      "adapter": "ctbc_linepay"
+    },
+    {
+      "id": "sinopac",
+      "bank_name": "永豐銀行",
+      "entry_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/list.html",
+      "discovery_urls": [
+        "https://bank.sinopac.com/sinopacBT/personal/credit-card.html",
+        "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/list.html"
+      ],
+      "official_domains": [
+        "sinopac.com"
+      ],
+      "adapter": "sinopac_discounts"
+    },
+    {
+      "id": "scsb",
+      "bank_name": "上海商銀",
+      "entry_url": "https://www.scsb.com.tw/content/card/hotList",
+      "discovery_urls": [
+        "https://www.scsb.com.tw/content/card",
+        "https://www.scsb.com.tw/content/card/hotList"
+      ],
+      "official_domains": [
+        "scsb.com.tw"
+      ],
+      "adapter": "scsb_hotlist"
     }
   ]
 }
-

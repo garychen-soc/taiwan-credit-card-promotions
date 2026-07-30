@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from .extractors import extract_cathay, extract_dbs
+from .extractors import extract_cathay, extract_ctbc, extract_dbs, extract_scsb, extract_sinopac
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -34,6 +34,12 @@ def build_payload(config: dict, now: datetime) -> dict:
             found, source_health, source_alerts = extract_dbs(source, **kwargs)
         elif adapter == "cathay_online_shopping":
             found, source_health, source_alerts = extract_cathay(source, **kwargs)
+        elif adapter == "ctbc_linepay":
+            found, source_health, source_alerts = extract_ctbc(source, **kwargs)
+        elif adapter == "sinopac_discounts":
+            found, source_health, source_alerts = extract_sinopac(source, **kwargs)
+        elif adapter == "scsb_hotlist":
+            found, source_health, source_alerts = extract_scsb(source, **kwargs)
         else:
             raise ValueError(f"Unknown adapter: {adapter}")
         activities.extend(item.to_dict() for item in found)

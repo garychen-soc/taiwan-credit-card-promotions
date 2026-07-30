@@ -447,6 +447,10 @@ a { color: inherit; }
   border-radius: 50%;
 }
 .activity-card[data-bank="dbs"] .bank-badge span { background: #d71920; }
+.activity-card[data-bank="cathay"] .bank-badge span { background: #6c40a3; }
+.activity-card[data-bank="ctbc"] .bank-badge span { background: #008c84; }
+.activity-card[data-bank="sinopac"] .bank-badge span { background: #138a48; }
+.activity-card[data-bank="scsb"] .bank-badge span { background: #bb2027; }
 .status-badges { display: flex; gap: 5px; flex-wrap: wrap; justify-content: end; }
 .status-badge {
   padding: 3px 8px;
@@ -679,4 +683,3 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
-

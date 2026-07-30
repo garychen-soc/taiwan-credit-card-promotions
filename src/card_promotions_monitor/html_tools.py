@@ -32,7 +32,11 @@ class PageParser(HTMLParser):
             self._in_heading = True
         if tag == "a":
             href = values.get("data-link") or values.get("href") or ""
-            self._link = {"url": urljoin(self.base_url, href), "text": ""}
+            try:
+                resolved_url = urljoin(self.base_url, href)
+            except ValueError:
+                resolved_url = ""
+            self._link = {"url": resolved_url, "text": ""}
         if tag in {"br", "p", "div", "li", "h1", "h2", "h3", "tr"}:
             self.text_parts.append("\n")
 
@@ -104,4 +108,3 @@ def walk_strings(value):
     elif isinstance(value, list):
         for item in value:
             yield from walk_strings(item)
-
