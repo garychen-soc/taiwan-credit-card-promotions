@@ -1,0 +1,20 @@
+[project]
+name = "taiwan-credit-card-promotions"
+version = "0.1.0"
+description = "Official-source Taiwan credit-card promotion monitor and calendar site"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+card-promotions-update = "card_promotions_monitor.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#151711">
+  <meta name="description" content="整理星展與國泰世華網購信用卡活動、登錄時間、回饋與行事曆提醒。">
+  <meta property="og:title" content="刷卡活動登錄雷達">
+  <meta property="og:description" content="今天、明天要登錄的信用卡活動，一眼掌握。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://garychen-soc.github.io/taiwan-credit-card-promotions/assets/og.png">
+  <title>刷卡活動登錄雷達</title>
+  <link rel="stylesheet" href="./assets/app.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <header class="site-header">
+    <div class="header-shell">
+      <nav class="topbar" aria-label="主要導覽">
+        <a class="brand" href="./" aria-label="刷卡活動登錄雷達首頁">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span>登錄雷達</span>
+        </a>
+        <div class="topbar-meta">
+          <span id="source-dot" class="source-dot" aria-hidden="true"></span>
+          <span id="update-label">載入官方資料中</span>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">CREDIT CARD PROMOTION RADAR</p>
+          <h1>別錯過<br><em>登錄的那一刻</em></h1>
+          <p class="hero-intro">跨銀行整理網購優惠、登錄時點與回饋門檻。重要活動先提醒，消費期間與登錄時間都能一鍵加入行事曆。</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-jump-filter="today">查看今日登錄</button>
+            <button class="ghost-button" type="button" data-jump-filter="tomorrow">查看明日登錄</button>
+          </div>
+        </div>
+
+        <section class="hero-stats" aria-label="活動摘要">
+          <div class="hero-stat hero-stat-accent">
+            <span class="stat-label">需登錄活動</span>
+            <strong id="stat-registration">—</strong>
+            <span>筆</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-label">高回饋</span>
+            <strong id="stat-high-return">—</strong>
+            <span>筆</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-label">官方活動</span>
+            <strong id="stat-total">—</strong>
+            <span>筆</span>
+          </div>
+          <p id="threshold-note" class="threshold-note">高回饋門檻載入中</p>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="agenda-section" aria-labelledby="agenda-title">
+      <div class="section-shell">
+        <div class="section-heading agenda-heading">
+          <div>
+            <p class="section-kicker">DON'T MISS THE WINDOW</p>
+            <h2 id="agenda-title">近期登錄</h2>
+          </div>
+          <p>所有時間均為台北時間，下載 `.ics` 即含 10 分鐘前提醒。</p>
+        </div>
+
+        <div class="agenda-grid">
+          <article class="agenda-column is-today">
+            <div class="agenda-column-head">
+              <div>
+                <span class="day-pill">今日</span>
+                <h3 id="today-date">—</h3>
+              </div>
+              <strong id="today-count">—</strong>
+            </div>
+            <div id="today-agenda" class="agenda-list" aria-live="polite"></div>
+          </article>
+
+          <article class="agenda-column">
+            <div class="agenda-column-head">
+              <div>
+                <span class="day-pill day-pill-muted">明日</span>
+                <h3 id="tomorrow-date">—</h3>
+              </div>
+              <strong id="tomorrow-count">—</strong>
+            </div>
+            <div id="tomorrow-agenda" class="agenda-list" aria-live="polite"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" aria-labelledby="catalog-title">
+      <div class="section-shell">
+        <div class="section-heading catalog-heading">
+          <div>
+            <p class="section-kicker">EXPLORE ALL PROMOTIONS</p>
+            <h2 id="catalog-title">活動總覽</h2>
+          </div>
+          <p id="result-count" class="result-count" aria-live="polite">載入中</p>
+        </div>
+
+        <div class="filter-panel">
+          <div id="quick-filters" class="quick-filters" role="group" aria-label="快速分類">
+            <button type="button" data-filter="priority" aria-pressed="true">重點</button>
+            <button type="button" data-filter="today" aria-pressed="false">今日登錄</button>
+            <button type="button" data-filter="tomorrow" aria-pressed="false">明日登錄</button>
+            <button type="button" data-filter="registration" aria-pressed="false">需登錄</button>
+            <button type="button" data-filter="high-return" aria-pressed="false">高回饋</button>
+            <button type="button" data-filter="upcoming" aria-pressed="false">即將開始</button>
+            <button type="button" data-filter="ending" aria-pressed="false">即將結束</button>
+            <button type="button" data-filter="all" aria-pressed="false">全部</button>
+          </div>
+
+          <div class="filter-fields">
+            <label class="search-field">
+              <span class="sr-only">搜尋活動</span>
+              <span class="search-icon" aria-hidden="true"></span>
+              <input id="search-input" type="search" placeholder="搜尋通路、活動或回饋" autocomplete="off">
+            </label>
+            <label>
+              <span class="sr-only">銀行</span>
+              <select id="bank-select">
+                <option value="">所有銀行</option>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">活動分類</span>
+              <select id="category-select">
+                <option value="">所有分類</option>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">排序</span>
+              <select id="sort-select">
+                <option value="recommended">重點優先</option>
+                <option value="registration">登錄時間</option>
+                <option value="ending">結束時間</option>
+                <option value="reward">回饋高低</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div id="activity-list" class="activity-grid" aria-busy="true">
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+
+        <div id="empty-state" class="empty-state" hidden>
+          <span aria-hidden="true">○</span>
+          <h3>沒有符合條件的活動</h3>
+          <p>試著切換分類、銀行，或清除搜尋文字。</p>
+          <button id="clear-filters" type="button" class="ghost-button">查看全部活動</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="transparency-section" aria-labelledby="transparency-title">
+      <div class="section-shell transparency-grid">
+        <div>
+          <p class="section-kicker">OFFICIAL SOURCE FIRST</p>
+          <h2 id="transparency-title">資料透明，才值得提醒</h2>
+          <p>只採銀行官方活動頁與公開結構化資料。若原網址失效，系統會先在相同官方網域尋找替代入口，再將異常與候選新網址送至 Slack。</p>
+        </div>
+        <div>
+          <ul id="source-health-list" class="source-health-list"></ul>
+          <div id="alerts-panel" class="alerts-panel" hidden></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <p>本站為資訊整理工具，不代表星展銀行或國泰世華銀行。活動資格、名額與回饋以官方最新公告為準。</p>
+      <a href="#main-content">回到活動總覽 ↑</a>
+    </div>
+  </footer>
+
+  <template id="agenda-item-template">
+    <article class="agenda-item">
+      <div class="agenda-time">
+        <strong></strong>
+        <span></span>
+      </div>
+      <div class="agenda-content">
+        <p class="agenda-bank"></p>
+        <h4></h4>
+        <div class="agenda-actions">
+          <a class="agenda-register" target="_blank" rel="noopener noreferrer">前往登錄</a>
+          <a class="agenda-google" target="_blank" rel="noopener noreferrer">Google</a>
+          <button class="ics-button" type="button">.ics + 提醒</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <template id="activity-card-template">
+    <article class="activity-card">
+      <div class="card-topline">
+        <div class="bank-badge"><span></span><strong></strong></div>
+        <div class="status-badges"></div>
+      </div>
+      <div class="card-body">
+        <p class="merchant-name"></p>
+        <h3></h3>
+        <p class="summary"></p>
+        <ul class="meta-list">
+          <li><span>活動期間</span><strong class="activity-period"></strong></li>
+          <li class="reward-row"><span>最高回饋</span><strong class="reward-value"></strong></li>
+        </ul>
+        <section class="registration-box">
+          <div class="registration-heading">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <strong>活動登錄</strong>
+          </div>
+          <div class="registration-windows"></div>
+          <p class="registration-review" hidden>官方註明需登錄，精確時間待確認；請先查看原始活動頁。</p>
+        </section>
+      </div>
+      <div class="card-actions">
+        <a class="official-link" target="_blank" rel="noopener noreferrer">官方頁面 ↗</a>
+        <a class="activity-google" target="_blank" rel="noopener noreferrer">活動行事曆</a>
+        <button class="activity-ics ics-button" type="button">下載 .ics</button>
+      </div>
+    </article>
+  </template>
+
+  <noscript><p class="noscript">請啟用 JavaScript 以顯示活動資料與行事曆功能。</p></noscript>
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>

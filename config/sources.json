@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "timezone": "Asia/Taipei",
+  "high_return": {
+    "percent_at_least": 10,
+    "amount_twd_at_least": 500
+  },
+  "sources": [
+    {
+      "id": "dbs",
+      "bank_name": "星展銀行",
+      "entry_url": "https://www.dbs.com.tw/personal-zh/cards/cards-offers/default.page",
+      "shopping_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/default.html",
+      "discovery_urls": [
+        "https://www.dbs.com.tw/personal-zh/cards/cards-offers/default.page",
+        "https://www.dbs.com.tw/personal-zh/cards/default.page"
+      ],
+      "official_domains": [
+        "dbs.com.tw"
+      ],
+      "adapter": "dbs_shopping"
+    },
+    {
+      "id": "cathay",
+      "bank_name": "國泰世華",
+      "entry_url": "https://www.cathay-cube.com.tw/cathaybk/personal/event/overview#filter=online-shopping",
+      "data_url": "https://www.cathay-cube.com.tw/cathaybk/personal/event/overview/credit-card.model.list.json",
+      "discovery_urls": [
+        "https://www.cathay-cube.com.tw/cathaybk/personal/event/overview?category=credit-card",
+        "https://www.cathay-cube.com.tw/cathaybk/personal/event/overview"
+      ],
+      "official_domains": [
+        "cathay-cube.com.tw",
+        "cathaybk.com.tw"
+      ],
+      "adapter": "cathay_online_shopping"
+    }
+  ]
+}
+
