@@ -451,6 +451,10 @@ a { color: inherit; }
 .activity-card[data-bank="ctbc"] .bank-badge span { background: #008c84; }
 .activity-card[data-bank="sinopac"] .bank-badge span { background: #138a48; }
 .activity-card[data-bank="scsb"] .bank-badge span { background: #bb2027; }
+.activity-card[data-bank="obank"] .bank-badge span { background: #ef7d00; }
+.activity-card[data-bank="yuanta"] .bank-badge span { background: #008d9b; }
+.activity-card[data-bank="esun"] .bank-badge span { background: #00a38b; }
+.activity-card[data-bank="sunny"] .bank-badge span { background: #ee7421; }
 .status-badges { display: flex; gap: 5px; flex-wrap: wrap; justify-content: end; }
 .status-badge {
   padding: 3px 8px;

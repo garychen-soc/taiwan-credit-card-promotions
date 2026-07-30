@@ -8,7 +8,17 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from .cache import activity_cache, new_cache_stats
-from .extractors import extract_cathay, extract_ctbc, extract_dbs, extract_scsb, extract_sinopac
+from .extractors import (
+    extract_cathay,
+    extract_ctbc,
+    extract_dbs,
+    extract_esun,
+    extract_obank,
+    extract_scsb,
+    extract_sinopac,
+    extract_sunny,
+    extract_yuanta,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -49,6 +59,14 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
             found, source_health, source_alerts = extract_sinopac(source, **kwargs)
         elif adapter == "scsb_hotlist":
             found, source_health, source_alerts = extract_scsb(source, **kwargs)
+        elif adapter == "obank_debit_card":
+            found, source_health, source_alerts = extract_obank(source, **kwargs)
+        elif adapter == "yuanta_promotions":
+            found, source_health, source_alerts = extract_yuanta(source, **kwargs)
+        elif adapter == "esun_discounts":
+            found, source_health, source_alerts = extract_esun(source, **kwargs)
+        elif adapter == "sunny_card_promotions":
+            found, source_health, source_alerts = extract_sunny(source, **kwargs)
         else:
             raise ValueError(f"Unknown adapter: {adapter}")
         activities.extend(item.to_dict() for item in found)

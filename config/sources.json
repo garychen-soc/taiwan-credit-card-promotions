@@ -73,6 +73,236 @@
         "scsb.com.tw"
       ],
       "adapter": "scsb_hotlist"
+    },
+    {
+      "id": "obank",
+      "bank_name": "王道銀行",
+      "entry_url": "https://www.o-bank.com/retail/event/event-compaign",
+      "discovery_urls": [
+        "https://www.o-bank.com/retail/event/event-compaign"
+      ],
+      "official_domains": [
+        "o-bank.com"
+      ],
+      "adapter": "obank_debit_card",
+      "scope": "Content_divContent_1 簽帳金融卡分頁；排除存錢、貸款、投資理財"
+    },
+    {
+      "id": "yuanta",
+      "bank_name": "元大銀行",
+      "entry_url": "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/list.do",
+      "discovery_urls": [
+        "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/list.do",
+        "https://www.yuantabank.com.tw/bank/creditCard/index.do"
+      ],
+      "official_domains": [
+        "yuantabank.com.tw"
+      ],
+      "adapter": "yuanta_promotions"
+    },
+    {
+      "id": "esun",
+      "bank_name": "玉山銀行",
+      "entry_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
+      "data_url": "https://www.esunbank.com/api/client/CreditCardDiscount/DiscountSearchResult?sc_lang=zh-TW",
+      "item_id": "{D594B641-F7C9-458D-AD85-FE9B53220895}",
+      "detail_root": "/zh-tw/personal/credit-card/discount/shopInfo",
+      "discovery_urls": [
+        "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
+        "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops/all"
+      ],
+      "official_domains": [
+        "esunbank.com.tw",
+        "esunbank.com"
+      ],
+      "adapter": "esun_discounts"
+    },
+    {
+      "id": "sunny",
+      "bank_name": "陽信銀行",
+      "entry_url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1",
+      "discovery_urls": [
+        "https://www.sunnybank.com.tw/net/Main/Page/6",
+        "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1"
+      ],
+      "official_domains": [
+        "sunnybank.com.tw"
+      ],
+      "adapter": "sunny_card_promotions",
+      "fallback_activities": [
+        {
+          "title": "開箱囉！網購刷陽信卡 天天都是購物節",
+          "period": "115/7/1-115/12/31",
+          "summary": "陽信信用卡網購專案；活動登錄時段需以官方活動頁公告為準。",
+          "url": "https://www.sunnybank.com.tw/activityevent/11507_eshop/web.html",
+          "registration_required": true,
+          "registration_text": "活動需登錄，實際開放時間請見官方活動頁。"
+        },
+        {
+          "title": "夏日旅遊趣 刷陽信卡 享最高回饋3,000元",
+          "period": "115/7/1-115/9/30",
+          "summary": "旅遊消費最高回饋3,000元。",
+          "url": "https://www.sunnybank.com.tw/activityevent/2026travel_q3/web.html"
+        },
+        {
+          "title": "115年陽信一卡通聯名卡 中港澳享最高3%回饋",
+          "period": "115/7/1-115/9/30",
+          "summary": "一卡通聯名卡中港澳消費最高3%回饋。",
+          "url": "https://www.sunnybank.com.tw/activityevent/2026Card02/web.html"
+        },
+        {
+          "title": "日本大國藥妝刷陽信JCB卡 享最高30%事後現金回饋",
+          "period": "115/7/1-115/8/31",
+          "summary": "日本大國藥妝刷陽信JCB卡最高30%事後現金回饋。",
+          "url": "https://www.sunnybank.com.tw/activityevent/Daikoku/web.html"
+        },
+        {
+          "title": "鑫世界卡新卡首刷禮－陽信領航・禮遇起航",
+          "period": "115/7/1-115/12/31",
+          "summary": "鑫世界商務卡新卡首刷禮。",
+          "url": "https://www.sunnybank.com.tw/creditcard/wcardinfo/"
+        },
+        {
+          "title": "璀璨非凡滿額贈",
+          "period": "115/6/1-115/8/31",
+          "summary": "陽信信用卡滿額回饋活動。",
+          "url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1"
+        },
+        {
+          "title": "驚喜雙月配 新戶最高回饋300元",
+          "period": "115/6/1-115/11/30",
+          "summary": "新戶最高回饋300元。",
+          "url": "https://www.sunnybank.com.tw/activityevent/115newcustomer/web.html"
+        },
+        {
+          "title": "公共事業費代繳so easy 點數輕鬆拿",
+          "period": "115/7/1-115/12/31",
+          "summary": "公共事業費代繳點數回饋。",
+          "url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1"
+        },
+        {
+          "title": "陽信一卡通聯名卡、逢甲人認同卡 暢遊中國精彩、細品香港好味",
+          "period": "即日起-115/12/31",
+          "summary": "中國與香港指定消費優惠。",
+          "url": "https://www.sunnybank.com.tw/activityevent/Mastercard2026/web.html"
+        },
+        {
+          "title": "旅日消費回饋加倍 陽信JCB卡享最高10%回饋",
+          "period": "115/4/1-115/9/30",
+          "summary": "陽信JCB卡旅日消費最高10%回饋。",
+          "url": "https://www.sunnybank.com.tw/activityevent/2026Jconveniencestore/web.html"
+        },
+        {
+          "title": "陽信現金紅利點亮您的質感生活",
+          "period": "即日起-115/12/31",
+          "summary": "陽信現金紅利點數回饋。",
+          "url": "https://www.sunnybank.com.tw/activityevent/2026_Points/web.html"
+        },
+        {
+          "title": "陽信JCB晶緻卡獨享禮遇",
+          "period": "115/1/1-115/12/31",
+          "summary": "陽信JCB晶緻卡年度禮遇。",
+          "url": "https://www.sunnybank.com.tw/activityevent/2026JCB/web.html"
+        },
+        {
+          "title": "台灣行動支付 綁定陽信信用卡最高回饋200元",
+          "period": "115/1/1-115/12/31",
+          "summary": "台灣行動支付綁定陽信信用卡最高回饋200元。",
+          "url": "https://www.sunnybank.com.tw/activityevent/2026Q1mobilepay/web.html"
+        },
+        {
+          "title": "陽信信用卡綁定icash Pay，7-ELEVEN贈10% OPEN POINT",
+          "period": "115/7/1-115/12/31",
+          "summary": "icash Pay綁定陽信信用卡於7-ELEVEN享10% OPEN POINT。",
+          "url": "https://www.sunnybank.com.tw/activityevent/115icashpay711/web.html"
+        },
+        {
+          "title": "115年陽信曜晶卡 回饋分期我都曜",
+          "period": "115/1/1-115/12/31",
+          "summary": "陽信曜晶卡年度回饋及分期優惠。",
+          "url": "https://www.sunnybank.com.tw/activityevent/2026VISA01/web.html"
+        },
+        {
+          "title": "115年JCB彭大家族聯名晶緻卡 吃喝玩樂盡享回饋",
+          "period": "115/1/1-115/12/31",
+          "summary": "JCB彭大家族聯名晶緻卡年度回饋。",
+          "url": "https://www.sunnybank.com.tw/activityevent/2026pdfamily/web.html"
+        },
+        {
+          "title": "115年尊寵生日獻禮",
+          "period": "115/1/1-115/12/31",
+          "summary": "陽信信用卡持卡人生日禮遇。",
+          "url": "https://www.sunnybank.com.tw/activityevent/115hbd/web.html"
+        },
+        {
+          "title": "115年陽信JCB晶緻卡 日韓泰3%無上限",
+          "period": "115/1/1-115/12/31",
+          "summary": "日韓泰消費3%回饋無上限。",
+          "url": "https://www.sunnybank.com.tw/activityevent/115JCB01/web.html"
+        },
+        {
+          "title": "Sunny Life賞利點卡 回饋無上限",
+          "period": "115/1/1-115/12/31",
+          "summary": "Sunny Life賞利點卡年度回饋無上限。",
+          "url": "https://www.sunnybank.com.tw/activityevent/11501SunnyLifeCard/web.html"
+        },
+        {
+          "title": "115年光禾市集 天天卡友 單筆滿388元最高享5%回饋",
+          "period": "115/1/1-115/12/31",
+          "summary": "光禾市集單筆滿388元最高享5%回饋。",
+          "url": "https://www.sunnybank.com.tw/net/Prg/ActNewsView/1940"
+        },
+        {
+          "title": "115年寶雅 陽信卡友日 POYA PAY綁定陽信卡樂享優惠",
+          "period": "115/1/1-115/12/31",
+          "summary": "寶雅卡友日及POYA PAY綁卡優惠。",
+          "url": "https://www.sunnybank.com.tw/net/Prg/ActNewsView/1941"
+        },
+        {
+          "title": "115年小北百貨 陽信卡友日 單筆滿300元贈30元刷卡金",
+          "period": "115/1/1-115/12/31",
+          "summary": "小北百貨卡友日單筆滿300元贈30元刷卡金。",
+          "url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1"
+        },
+        {
+          "title": "115年全國電子 陽信卡友日 單筆分期滿額享回饋",
+          "period": "115/1/1-115/12/31",
+          "summary": "全國電子卡友日單筆分期滿額回饋。",
+          "url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1"
+        },
+        {
+          "title": "115年台灣大車隊55688 最高享6%刷卡金回饋",
+          "period": "115/1/1-115/12/31",
+          "summary": "台灣大車隊55688最高享6%刷卡金回饋。",
+          "url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1"
+        },
+        {
+          "title": "115年度學費分期輕鬆繳",
+          "period": "115/1/1-115/12/31",
+          "summary": "學費分期優惠。",
+          "url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1"
+        },
+        {
+          "title": "115年刷陽信卡 單筆消費分期",
+          "period": "即日起-115/12/31",
+          "summary": "陽信信用卡單筆消費分期。",
+          "url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1"
+        },
+        {
+          "title": "115年度繳稅費選陽信 輕鬆無負擔",
+          "period": "115/1/1-115/12/31",
+          "summary": "年度繳稅費分期及回饋優惠。",
+          "url": "https://www.sunnybank.com.tw/activityevent/2026tax/web.html"
+        },
+        {
+          "title": "7月東森購物網刷陽信卡，最高回饋800元",
+          "period": "115/7/1-115/7/31",
+          "summary": "東森購物網刷陽信信用卡或VISA金融卡，滿額登錄最高回饋800元。",
+          "url": "https://www.sunnybank.com.tw/net/Prg/ActNewsView/1905",
+          "registration_required": true,
+          "registration_text": "活動一於2026/7/27 15:00~2026/7/31 23:59開放登錄；活動二於2026/7/26 15:00~2026/7/31 23:59開放登錄。"
+        }
+      ]
     }
   ]
 }

@@ -12,8 +12,11 @@ from card_promotions_monitor.extractors import (
     _html_segments,
     _lifecycle,
     _parse_period,
+    _roc_period,
     _registration_windows,
     _reward_values,
+    _yuanta_cards,
+    _esun_cards,
 )
 
 
@@ -55,6 +58,26 @@ class RegistrationWindowTests(unittest.TestCase):
         self.assertIn("2026-07-24T15:00:00+08:00", starts)
         self.assertIn("2026-08-24T15:00:00+08:00", starts)
 
+    def test_parses_noon_and_explicit_adjusted_registration_dates(self) -> None:
+        values = _registration_windows(
+            "本活動於每月1日中午12:00起開放登錄，"
+            "登錄日期如下，7月：07/01、8月：08/03、9月：09/01。",
+            2026,
+            date(2026, 7, 1),
+            date(2026, 9, 30),
+        )
+        self.assertEqual(
+            [item.start for item in values],
+            [
+                "2026-07-01T12:00:00+08:00",
+                "2026-08-03T12:00:00+08:00",
+                "2026-09-01T12:00:00+08:00",
+            ],
+        )
+
+    def test_negative_registration_wording_is_not_requirement(self) -> None:
+        self.assertFalse(_has_registration_requirement("活動登錄專區（本活動不須登錄）"))
+
     def test_parses_same_day_range(self) -> None:
         values = _registration_windows(
             "於2026/9/9 16:00至23:59開放登錄。",
@@ -63,6 +86,15 @@ class RegistrationWindowTests(unittest.TestCase):
         self.assertEqual(len(values), 1)
         self.assertEqual(values[0].start, "2026-09-09T16:00:00+08:00")
         self.assertEqual(values[0].end, "2026-09-09T23:59:00+08:00")
+
+    def test_parses_registration_deadline(self) -> None:
+        values = _registration_windows(
+            "登錄期限至2026/10/31 23:59止，逾期恕不受理。",
+            2026,
+        )
+        self.assertEqual(len(values), 1)
+        self.assertEqual(values[0].label, "登錄截止")
+        self.assertEqual(values[0].start, "2026-10-31T23:59:00+08:00")
 
     def test_ignores_malformed_range_endpoint(self) -> None:
         values = _registration_windows(
@@ -140,6 +172,14 @@ class ClassificationTests(unittest.TestCase):
             _compact_period("20190531000000-29991231235959"),
             (date(2019, 5, 31), None),
         )
+        self.assertEqual(
+            _parse_period("活動日期：2026/04/02起至2026/12/31止", 2026),
+            (date(2026, 4, 2), date(2026, 12, 31)),
+        )
+        self.assertEqual(
+            _roc_period("115/7/1-115/12/31", date(2026, 7, 30)),
+            (date(2026, 7, 1), date(2026, 12, 31)),
+        )
 
     def test_extracts_card_class_text_and_segments(self) -> None:
         html = (
@@ -159,6 +199,27 @@ class ClassificationTests(unittest.TestCase):
         blocks = _ctbc_card_blocks(html)
         self.assertEqual(len(blocks), 1)
         self.assertNotIn("其他商店", blocks[0])
+
+    def test_extracts_yuanta_listing_card(self) -> None:
+        html = (
+            '<li><div class="pic"><img src="x"></div>'
+            "<h6>網購最高回饋</h6><p>活動摘要</p>"
+            '<a href="/bank/creditCard/promotionActivity/in.do?id=abc">詳細內容</a></li>'
+        )
+        cards = _yuanta_cards(html, "https://www.yuantabank.com.tw/bank/", "yuanta")
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]["title"], "網購最高回饋")
+        self.assertTrue(cards[0]["url"].endswith("id=abc"))
+
+    def test_extracts_esun_api_card(self) -> None:
+        html = (
+            '<div class="col-12 paginationList"><a href="/zh-tw/personal/credit-card/'
+            'discount/shopInfo?sno=100"><p class="l-cardDiscountAllContent__discount--title h3">'
+            '網購商店</p><p class="l-cardDiscountAllContent__discount--word">最高10%回饋</p></a></div>'
+        )
+        cards = _esun_cards(html, "https://www.esunbank.com/zh-tw/", "esun")
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]["summary"], "最高10%回饋")
 
 
 if __name__ == "__main__":

@@ -52,6 +52,7 @@ def fetch_text(
     url: str,
     allowed_domains: list[str],
     *,
+    data: dict[str, str] | None = None,
     timeout: float = 25.0,
     attempts: int = 2,
     max_bytes: int = 8_000_000,
@@ -59,14 +60,19 @@ def fetch_text(
     domains = [item.lower().rstrip(".") for item in allowed_domains]
     if not is_allowed_url(url, domains):
         raise ValueError(f"URL is outside official domains: {url}")
+    encoded_data = urllib.parse.urlencode(data).encode("utf-8") if data is not None else None
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.7",
+        "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.5",
+        "Cache-Control": "no-cache",
+    }
+    if encoded_data is not None:
+        headers["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8"
     request = urllib.request.Request(
         url,
-        headers={
-            "User-Agent": USER_AGENT,
-            "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.7",
-            "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.5",
-            "Cache-Control": "no-cache",
-        },
+        data=encoded_data,
+        headers=headers,
     )
     opener = urllib.request.build_opener(
         urllib.request.HTTPSHandler(context=ssl.create_default_context()),
@@ -100,6 +106,7 @@ def fetch_text(
         return _fetch_with_system_curl(
             url,
             domains,
+            data=data,
             timeout=timeout,
             max_bytes=max_bytes,
         )
@@ -118,6 +125,7 @@ def _fetch_with_system_curl(
     url: str,
     allowed_domains: list[str],
     *,
+    data: dict[str, str] | None,
     timeout: float,
     max_bytes: int,
 ) -> FetchResult:
@@ -142,8 +150,15 @@ def _fetch_with_system_curl(
             "Accept-Language: zh-TW,zh;q=0.9,en;q=0.5",
             "--write-out",
             marker.decode() + "%{http_code}\t%{url_effective}\t%{content_type}\t%{redirect_url}",
-            current_url,
         ]
+        if data is not None:
+            command.extend([
+                "--header",
+                "Content-Type: application/x-www-form-urlencoded; charset=UTF-8",
+                "--data",
+                urllib.parse.urlencode(data),
+            ])
+        command.append(current_url)
         completed = subprocess.run(
             command,
             capture_output=True,
