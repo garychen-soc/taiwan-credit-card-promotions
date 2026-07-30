@@ -9,6 +9,7 @@ from typing import Any
 from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
+from .cache import record_detail_requests, reuse_cached_promotion, source_fingerprint
 from .fetch import fetch_json, fetch_text
 from .html_tools import clean_inline, parse_page, strip_html, walk_strings
 from .models import Alert, Promotion, RegistrationWindow, SourceHealth
@@ -348,9 +349,13 @@ def extract_dbs(
     now: datetime,
     percent_threshold: float,
     amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
 ) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
     checked_at = _now_iso(now)
     alerts: list[Alert] = []
+    cache = activity_cache or {}
+    stats = cache_stats if cache_stats is not None else {}
     shopping_url = source["shopping_url"]
     try:
         entry = fetch_text(source["entry_url"], source["official_domains"])
@@ -412,6 +417,30 @@ def extract_dbs(
     activities: list[Promotion] = []
     failed_details = 0
     for merchant, url in merchant_links:
+        activity_id = _stable_id(source["id"], url)
+        fingerprint = source_fingerprint(
+            source["id"],
+            {
+                "listing_hash": listing.content_hash,
+                "merchant": merchant,
+                "url": url,
+            },
+        )
+        cached = reuse_cached_promotion(
+            cache,
+            activity_id=activity_id,
+            fingerprint=fingerprint,
+            now=now,
+            source_entry_url=source["entry_url"],
+            percent_threshold=percent_threshold,
+            amount_threshold=amount_threshold,
+            stats=stats,
+            avoids_detail_request=True,
+        )
+        if cached:
+            activities.append(cached)
+            continue
+        record_detail_requests(stats)
         try:
             detail = fetch_text(url, source["official_domains"])
         except RuntimeError:
@@ -444,7 +473,7 @@ def extract_dbs(
         categories = _categories(body_for_tags)
         tags = [merchant, source["bank_name"], *categories]
         activities.append(Promotion(
-            id=_stable_id(source["id"], detail.final_url),
+            id=activity_id,
             bank_id=source["id"],
             bank_name=source["bank_name"],
             title=title,
@@ -467,6 +496,8 @@ def extract_dbs(
             lifecycle=_lifecycle(start, end, now.astimezone(TAIPEI).date()),
             tags=list(dict.fromkeys(tags)),
             review_required=registration_required and not windows,
+            source_fingerprint=fingerprint,
+            last_detail_checked_at=checked_at,
         ))
 
     status = "complete" if failed_details == 0 and activities else ("partial" if activities else "failed")
@@ -553,9 +584,13 @@ def extract_cathay(
     now: datetime,
     percent_threshold: float,
     amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
 ) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
     checked_at = _now_iso(now)
     alerts: list[Alert] = []
+    cache = activity_cache or {}
+    stats = cache_stats if cache_stats is not None else {}
     data_url = source["data_url"]
     resolved_entry = ""
     entry_status = "complete"
@@ -618,9 +653,26 @@ def extract_cathay(
             continue
         public_url = urljoin("https://www.cathay-cube.com.tw", path)
         model_url = public_url[:-5] + ".model.json" if public_url.endswith(".html") else f"{public_url}.model.json"
+        activity_id = _stable_id(source["id"], public_url)
+        fingerprint = source_fingerprint(source["id"], campaign)
+        cached = reuse_cached_promotion(
+            cache,
+            activity_id=activity_id,
+            fingerprint=fingerprint,
+            now=now,
+            source_entry_url=source["entry_url"],
+            percent_threshold=percent_threshold,
+            amount_threshold=amount_threshold,
+            stats=stats,
+            avoids_detail_request=True,
+        )
+        if cached:
+            activities.append(cached)
+            continue
         model: Any = {}
         detail_props: dict[str, Any] = {}
         detail_links: list[dict[str, str]] = []
+        record_detail_requests(stats)
         try:
             _, model = fetch_json(model_url, source["official_domains"])
             detail_props = _find_campaign_properties(model)
@@ -656,7 +708,7 @@ def extract_cathay(
         merchant = re.split(r"刷|領券|分期|滿額|最高|2026", title, maxsplit=1)[0].strip(" ，、")
         merchant = merchant or title
         activities.append(Promotion(
-            id=_stable_id(source["id"], public_url),
+            id=activity_id,
             bank_id=source["id"],
             bank_name=source["bank_name"],
             title=title,
@@ -680,6 +732,8 @@ def extract_cathay(
             tags=list(dict.fromkeys([merchant, source["bank_name"], *categories])),
             official_status="ended_by_official" if explicit_ended else "published",
             review_required=registration_required and not windows,
+            source_fingerprint=fingerprint,
+            last_detail_checked_at=checked_at,
         ))
 
     status = "complete" if failed_details == 0 and activities else ("partial" if activities else "failed")
@@ -793,10 +847,14 @@ def extract_ctbc(
     now: datetime,
     percent_threshold: float,
     amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
 ) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
     checked_at = _now_iso(now)
     today = now.astimezone(TAIPEI).date()
     alerts: list[Alert] = []
+    cache = activity_cache or {}
+    stats = cache_stats if cache_stats is not None else {}
     try:
         entry = fetch_text(source["entry_url"], source["official_domains"])
     except RuntimeError as exc:
@@ -869,6 +927,27 @@ def extract_ctbc(
             body_text = strip_html(block)
             summary = clean_inline("｜".join(item for item in (main_offer, _class_text(block, "card__text")) if item))
             summary = summary or title
+            detail_target = re.search(r'data-target="(#[^"]+)"', block)
+            public_url = result.final_url.split("#", 1)[0] + (detail_target.group(1) if detail_target else "")
+            activity_id = _stable_id(
+                source["id"],
+                f"{public_url}|{title}|{start.isoformat()}|{summary}",
+            )
+            fingerprint = source_fingerprint(source["id"], block)
+            cached = reuse_cached_promotion(
+                cache,
+                activity_id=activity_id,
+                fingerprint=fingerprint,
+                now=now,
+                source_entry_url=source["entry_url"],
+                percent_threshold=percent_threshold,
+                amount_threshold=amount_threshold,
+                stats=stats,
+                avoids_detail_request=False,
+            )
+            if cached:
+                activities.append(cached)
+                continue
             links = parse_page(block, result.final_url).links
             register_link = next(
                 (link["url"] for link in links if "登錄" in link.get("text", "") and link["url"].startswith("https://")),
@@ -882,11 +961,9 @@ def extract_ctbc(
                 (reward_percent is not None and reward_percent >= percent_threshold)
                 or (reward_amount is not None and reward_amount >= amount_threshold)
             )
-            detail_target = re.search(r'data-target="(#[^"]+)"', block)
-            public_url = result.final_url.split("#", 1)[0] + (detail_target.group(1) if detail_target else "")
             categories = _categories(body_text, category_names[category_id])
             activities.append(Promotion(
-                id=_stable_id(source["id"], f"{public_url}|{title}|{start.isoformat()}|{summary}"),
+                id=activity_id,
                 bank_id=source["id"],
                 bank_name=source["bank_name"],
                 title=title,
@@ -909,6 +986,8 @@ def extract_ctbc(
                 lifecycle=_lifecycle(start, end, today),
                 tags=list(dict.fromkeys([title, source["bank_name"], *categories])),
                 review_required=registration_required and not windows,
+                source_fingerprint=fingerprint,
+                last_detail_checked_at=checked_at,
             ))
 
     status = "complete" if activities and failed_pages == 0 and not alerts else ("partial" if activities else "failed")
@@ -927,10 +1006,14 @@ def extract_sinopac(
     now: datetime,
     percent_threshold: float,
     amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
 ) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
     checked_at = _now_iso(now)
     today = now.astimezone(TAIPEI).date()
     alerts: list[Alert] = []
+    cache = activity_cache or {}
+    stats = cache_stats if cache_stats is not None else {}
     try:
         listing = fetch_text(source["entry_url"], source["official_domains"])
     except RuntimeError as exc:
@@ -970,18 +1053,49 @@ def extract_sinopac(
             continue
         seen_urls.add(public_url)
         paragraphs = re.findall(r"<p[^>]*>(.*?)</p>", block, flags=re.I | re.S)
+        title = strip_html(title_match.group(1))
+        summary = strip_html(paragraphs[0]) if paragraphs else title
         cards.append({
             "url": public_url,
-            "title": strip_html(title_match.group(1)),
-            "summary": strip_html(paragraphs[0]) if paragraphs else strip_html(title_match.group(1)),
+            "id": _stable_id(source["id"], public_url),
+            "title": title,
+            "summary": summary,
             "start": start,
             "end": end,
+            "fingerprint": source_fingerprint(
+                source["id"],
+                {
+                    "url": public_url,
+                    "title": title,
+                    "summary": summary,
+                    "period": compact.group(1),
+                },
+            ),
         })
 
-    fetched = _fetch_many([item["url"] for item in cards], source["official_domains"])
+    urls_to_fetch: list[str] = []
+    for card in cards:
+        card["cached"] = reuse_cached_promotion(
+            cache,
+            activity_id=card["id"],
+            fingerprint=card["fingerprint"],
+            now=now,
+            source_entry_url=source["entry_url"],
+            percent_threshold=percent_threshold,
+            amount_threshold=amount_threshold,
+            stats=stats,
+            avoids_detail_request=True,
+        )
+        if not card["cached"]:
+            urls_to_fetch.append(card["url"])
+    record_detail_requests(stats, len(urls_to_fetch))
+    fetched = _fetch_many(urls_to_fetch, source["official_domains"])
     activities: list[Promotion] = []
     failed_details = 0
     for card in cards:
+        if card["cached"]:
+            activities.append(card["cached"])
+            continue
         result = fetched[card["url"]]
         if isinstance(result, Exception):
             failed_details += 1
@@ -1008,7 +1122,7 @@ def extract_sinopac(
             if registration_url == REGISTRATION_URL_DEFAULTS["sinopac"]:
                 registration_url = public_url
         activities.append(Promotion(
-            id=_stable_id(source["id"], public_url),
+            id=card["id"],
             bank_id=source["id"],
             bank_name=source["bank_name"],
             title=card["title"],
@@ -1031,6 +1145,8 @@ def extract_sinopac(
             lifecycle=_lifecycle(start, end, today),
             tags=list(dict.fromkeys([card["title"], source["bank_name"], *categories])),
             review_required=registration_required and not windows,
+            source_fingerprint=card["fingerprint"],
+            last_detail_checked_at=checked_at,
         ))
 
     status = "complete" if activities and failed_details == 0 and not alerts else ("partial" if activities else "failed")
@@ -1049,10 +1165,14 @@ def extract_scsb(
     now: datetime,
     percent_threshold: float,
     amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
 ) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
     checked_at = _now_iso(now)
     today = now.astimezone(TAIPEI).date()
     alerts: list[Alert] = []
+    cache = activity_cache or {}
+    stats = cache_stats if cache_stats is not None else {}
     try:
         listing = fetch_text(source["entry_url"], source["official_domains"])
     except RuntimeError as exc:
@@ -1098,16 +1218,45 @@ def extract_scsb(
         if public_url in seen_urls:
             continue
         seen_urls.add(public_url)
+        summary = _class_text(block, "sub_title") or title
+        type_tag = type_match.group(1) if type_match else ""
         cards.append({
             "url": public_url,
+            "id": _stable_id(source["id"], public_url),
             "title": title,
-            "summary": _class_text(block, "sub_title") or title,
-            "type": type_match.group(1) if type_match else "",
+            "summary": summary,
+            "type": type_tag,
             "start": start,
             "end": end,
+            "fingerprint": source_fingerprint(
+                source["id"],
+                {
+                    "url": public_url,
+                    "title": title,
+                    "summary": summary,
+                    "type": type_tag,
+                    "period": period_text,
+                },
+            ),
         })
 
-    fetched = _fetch_many([item["url"] for item in cards], source["official_domains"])
+    urls_to_fetch = []
+    for card in cards:
+        card["cached"] = reuse_cached_promotion(
+            cache,
+            activity_id=card["id"],
+            fingerprint=card["fingerprint"],
+            now=now,
+            source_entry_url=source["entry_url"],
+            percent_threshold=percent_threshold,
+            amount_threshold=amount_threshold,
+            stats=stats,
+            avoids_detail_request=True,
+        )
+        if not card["cached"]:
+            urls_to_fetch.append(card["url"])
+    record_detail_requests(stats, len(urls_to_fetch))
+    fetched = _fetch_many(urls_to_fetch, source["official_domains"])
     type_categories = {
         "mobilepay": "行動支付",
         "travel": "旅遊交通",
@@ -1118,6 +1267,9 @@ def extract_scsb(
     activities: list[Promotion] = []
     failed_details = 0
     for card in cards:
+        if card["cached"]:
+            activities.append(card["cached"])
+            continue
         result = fetched[card["url"]]
         if isinstance(result, Exception):
             failed_details += 1
@@ -1145,7 +1297,7 @@ def extract_scsb(
             REGISTRATION_URL_DEFAULTS["scsb"] if registration_required else ""
         )
         activities.append(Promotion(
-            id=_stable_id(source["id"], public_url),
+            id=card["id"],
             bank_id=source["id"],
             bank_name=source["bank_name"],
             title=card["title"],
@@ -1168,6 +1320,8 @@ def extract_scsb(
             lifecycle=_lifecycle(start, end, today),
             tags=list(dict.fromkeys([card["title"], source["bank_name"], *categories])),
             review_required=registration_required and not windows,
+            source_fingerprint=card["fingerprint"],
+            last_detail_checked_at=checked_at,
         ))
 
     status = "complete" if activities and failed_details == 0 and not alerts else ("partial" if activities else "failed")

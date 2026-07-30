@@ -30,6 +30,7 @@ def build_summary(data: dict, site_url: str) -> str:
     sources = data.get("source_health", [])
     agenda = data.get("registration_agenda", {})
     alerts = data.get("alerts", [])
+    cache = data.get("cache", {})
     generated = datetime.fromisoformat(data["generated_at"])
     health = "、".join(
         f"{source['bank_name']} {source['status']}"
@@ -44,6 +45,11 @@ def build_summary(data: dict, site_url: str) -> str:
             f"高回饋 {summary.get('high_return', 0)} 筆"
         ),
         f"來源：{health}",
+        (
+            f"快取：沿用 {cache.get('reused_activities', 0)} 筆｜"
+            f"省略明細讀取 {cache.get('detail_requests_avoided', 0)} 次｜"
+            f"實際明細讀取 {cache.get('detail_requests_performed', 0)} 次"
+        ),
         "",
         *_agenda_lines("今日", agenda.get("today", {})),
         "",

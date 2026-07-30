@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, fields
 from typing import Any
 
 
@@ -42,11 +42,27 @@ class Promotion:
     tags: list[str] = field(default_factory=list)
     official_status: str = "published"
     review_required: bool = False
+    source_fingerprint: str = ""
+    last_detail_checked_at: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         payload = asdict(self)
         payload["registration_windows"] = [item.to_dict() for item in self.registration_windows]
         return payload
+
+    @classmethod
+    def from_dict(cls, value: dict[str, Any]) -> "Promotion":
+        payload = {
+            item.name: value[item.name]
+            for item in fields(cls)
+            if item.name in value
+        }
+        payload["registration_windows"] = [
+            item if isinstance(item, RegistrationWindow) else RegistrationWindow(**item)
+            for item in value.get("registration_windows", [])
+            if isinstance(item, (dict, RegistrationWindow))
+        ]
+        return cls(**payload)
 
 
 @dataclass(slots=True)
@@ -74,4 +90,3 @@ class Alert:
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
-
