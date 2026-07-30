@@ -10,15 +10,19 @@ from zoneinfo import ZoneInfo
 from .cache import activity_cache, new_cache_stats
 from .extractors import (
     extract_cathay,
+    extract_chb,
     extract_ctbc,
     extract_dbs,
     extract_esun,
+    extract_first,
     extract_hncb,
     extract_kgi,
     extract_obank,
     extract_scsb,
     extract_sinopac,
     extract_sunny,
+    extract_taipei_fubon,
+    extract_taishin,
     extract_tcbbank,
     extract_yuanta,
 )
@@ -76,6 +80,14 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
             found, source_health, source_alerts = extract_kgi(source, **kwargs)
         elif adapter == "hncb_credit_card_tab":
             found, source_health, source_alerts = extract_hncb(source, **kwargs)
+        elif adapter == "taipei_fubon_wicket_promotions":
+            found, source_health, source_alerts = extract_taipei_fubon(source, **kwargs)
+        elif adapter == "taishin_offer_categories":
+            found, source_health, source_alerts = extract_taishin(source, **kwargs)
+        elif adapter == "firstbank_touch_promotions":
+            found, source_health, source_alerts = extract_first(source, **kwargs)
+        elif adapter == "chb_credit_card_categories":
+            found, source_health, source_alerts = extract_chb(source, **kwargs)
         else:
             raise ValueError(f"Unknown adapter: {adapter}")
         activities.extend(item.to_dict() for item in found)

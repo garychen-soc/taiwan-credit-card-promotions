@@ -5,9 +5,13 @@ from datetime import date
 
 from card_promotions_monitor.extractors import (
     _class_text,
+    _chb_cards,
     _compact_period,
     _categories,
     _ctbc_card_blocks,
+    _firstbank_cards,
+    _fubon_cards,
+    _fubon_page_listener,
     _has_registration_requirement,
     _html_segments,
     _hncb_credit_card_cards,
@@ -17,6 +21,7 @@ from card_promotions_monitor.extractors import (
     _roc_period,
     _registration_windows,
     _reward_values,
+    _taishin_cards,
     _tcbbank_api_cards,
     _yuanta_cards,
     _esun_cards,
@@ -196,6 +201,10 @@ class ClassificationTests(unittest.TestCase):
             _parse_period("活動期間：115/7/1~115/9/30", 2026),
             (date(2026, 7, 1), date(2026, 9, 30)),
         )
+        self.assertEqual(
+            _parse_period("2026.07.08~2026.09.30", 2026),
+            (date(2026, 7, 8), date(2026, 9, 30)),
+        )
 
     def test_extracts_card_class_text_and_segments(self) -> None:
         html = (
@@ -296,6 +305,89 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(panel_id, "card-panel")
         self.assertEqual([item["title"] for item in cards], ["信用卡優惠"])
         self.assertEqual(cards[0]["url"], "https://partner.example/card-offer")
+
+    def test_extracts_taipei_fubon_listing_card(self) -> None:
+        html = (
+            '<div class="discount-card">'
+            '<a href="Detail?sn=D000289" class="discount-link"></a>'
+            '<h3 class="discount-name">3C家電滿額回饋</h3>'
+            '<div class="discount-date">2026.07.01~2026.09.30</div>'
+            '<h5 class="discount-text">最高送3,500元</h5></div>'
+        )
+        cards = _fubon_cards(
+            html,
+            "https://cardpromote.taipeifubon.com.tw/promotion/Result",
+            "taipei_fubon",
+            date(2026, 7, 30),
+        )
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]["start"], date(2026, 7, 1))
+        self.assertEqual(cards[0]["end"], date(2026, 9, 30))
+
+    def test_fubon_page_listener_uses_visible_page_after_index_shift(self) -> None:
+        html = (
+            '<a href="./Result?1-1.-fmList-divSearchResult-nav-navigation-5-pageLink">'
+            "11</a>"
+        )
+        self.assertEqual(
+            _fubon_page_listener(
+                html,
+                "https://cardpromote.taipeifubon.com.tw/promotion/Result",
+                11,
+            ),
+            "https://cardpromote.taipeifubon.com.tw/promotion/"
+            "Result?1-1.0-fmList-divSearchResult-nav-navigation-5-pageLink",
+        )
+
+    def test_extracts_taishin_json_card(self) -> None:
+        cards = _taishin_cards(
+            [{
+                "promotionId": "WM_20260630112228562",
+                "promotionName": "海外消費分期優惠",
+                "promotionBrief": "享優惠利率",
+                "promotionStartDate": "2026-06-30T16:00:00.000+00:00",
+                "promotionEndDate": "2026-09-30T15:59:59.000+00:00",
+                "regRequired": "Y",
+            }],
+            "https://mkpcard.taishinbank.com.tw/tscccms/promotion/offerList/A",
+            "taishin",
+            "A",
+            date(2026, 7, 30),
+        )
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]["start"], date(2026, 7, 1))
+        self.assertEqual(cards[0]["end"], date(2026, 9, 30))
+        self.assertTrue(cards[0]["registration_required"])
+
+    def test_extracts_firstbank_activity_links(self) -> None:
+        html = (
+            '<a href="/sites/card/touch/1234567890123">'
+            "網購滿額回饋活動</a>"
+        )
+        cards = _firstbank_cards(
+            html,
+            "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
+            "first",
+            date(2026, 7, 30),
+        )
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]["title"], "網購滿額回饋活動")
+
+    def test_extracts_chb_editor_activity_links_only(self) -> None:
+        html = (
+            '<a class="editor_link" href="https://www.bankchb.com/frontend/'
+            'bonusDetail.jsp?id=3577">【線上購物】MOMO全通路活動</a>'
+            '<a class="editor_link" href="/frontend/mashup.jsp?funcId=x">'
+            "信用卡費率</a>"
+        )
+        cards = _chb_cards(
+            html,
+            "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3655",
+            "chb",
+            date(2026, 7, 30),
+        )
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]["title"], "【線上購物】MOMO全通路活動")
 
 
 if __name__ == "__main__":

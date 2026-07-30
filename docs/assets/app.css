@@ -458,6 +458,10 @@ a { color: inherit; }
 .activity-card[data-bank="tcbbank"] .bank-badge span { background: #c51f30; }
 .activity-card[data-bank="kgi"] .bank-badge span { background: #0067a0; }
 .activity-card[data-bank="hncb"] .bank-badge span { background: #13844b; }
+.activity-card[data-bank="taipei_fubon"] .bank-badge span { background: #0068b7; }
+.activity-card[data-bank="taishin"] .bank-badge span { background: #d71920; }
+.activity-card[data-bank="first"] .bank-badge span { background: #007a3d; }
+.activity-card[data-bank="chb"] .bank-badge span { background: #d99a00; }
 .status-badges { display: flex; gap: 5px; flex-wrap: wrap; justify-content: end; }
 .status-badge {
   padding: 3px 8px;

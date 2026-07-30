@@ -346,6 +346,79 @@
       ],
       "adapter": "hncb_credit_card_tab",
       "scope": "aria-label=信用卡 的 tab 所指定 aria-controls 容器；排除存款/外匯、基金/投資、保險、貸款、其他分頁"
+    },
+    {
+      "id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "entry_url": "https://cardpromote.taipeifubon.com.tw/promotion/Result",
+      "discovery_urls": [
+        "https://cardpromote.taipeifubon.com.tw/promotion/Result",
+        "https://cardpromote.taipeifubon.com.tw/promotion/Index"
+      ],
+      "official_domains": [
+        "taipeifubon.com.tw"
+      ],
+      "adapter": "taipei_fubon_wicket_promotions",
+      "session_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "max_listing_pages": 80
+    },
+    {
+      "id": "taishin",
+      "bank_name": "台新銀行",
+      "entry_url": "https://mkpcard.taishinbank.com.tw/tscccms/promotion/offerList/A",
+      "category_url_template": "https://mkpcard.taishinbank.com.tw/tscccms/promotion/offerList/{category}",
+      "page_data_url": "https://mkpcard.taishinbank.com.tw/tscccms/promotion/getMorePromotionList/",
+      "category_codes": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "discovery_urls": [
+        "https://mkpcard.taishinbank.com.tw/tscccms/promotion/offerList/A",
+        "https://mkpcard.taishinbank.com.tw/tscccms/"
+      ],
+      "official_domains": [
+        "taishinbank.com.tw"
+      ],
+      "adapter": "taishin_offer_categories",
+      "max_pages_per_category": 50
+    },
+    {
+      "id": "first",
+      "bank_name": "第一銀行",
+      "entry_url": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
+      "discovery_urls": [
+        "https://card.firstbank.com.tw/sites/card/touch/1565690686288"
+      ],
+      "official_domains": [
+        "firstbank.com.tw"
+      ],
+      "adapter": "firstbank_touch_promotions"
+    },
+    {
+      "id": "chb",
+      "bank_name": "彰化銀行",
+      "entry_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3657",
+      "category_ids": [
+        "3646",
+        "3655",
+        "3654",
+        "3656"
+      ],
+      "discovery_urls": [
+        "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3657",
+        "https://www.bankchb.com/frontend/mashup.jsp?funcId=116a6c4815"
+      ],
+      "official_domains": [
+        "bankchb.com"
+      ],
+      "adapter": "chb_credit_card_categories"
     }
   ]
 }

@@ -10,7 +10,13 @@ from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 from .cache import record_detail_requests, reuse_cached_promotion, source_fingerprint
-from .fetch import fetch_json, fetch_text, is_allowed_url
+from .fetch import (
+    PersistentHTTPSession,
+    SystemCurlSession,
+    fetch_json,
+    fetch_text,
+    is_allowed_url,
+)
 from .html_tools import clean_inline, parse_page, strip_html, walk_strings
 from .models import Alert, Promotion, RegistrationWindow, SourceHealth
 
@@ -30,6 +36,10 @@ REGISTRATION_URL_DEFAULTS = {
     "tcbbank": "https://www.tcbbank.com.tw/CreditCard/RegQuery/Act_login.aspx",
     "kgi": "https://www.kgibank.com/creditcard/campaign/registrationlist",
     "hncb": "https://www.hncb.com.tw/wps/portal/HNCB/card",
+    "taipei_fubon": "https://cardpromote.taipeifubon.com.tw/promotion/Result",
+    "taishin": "https://mkpcard.taishinbank.com.tw/tscccms/register/select",
+    "first": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
+    "chb": "https://www.bankchb.com/frontend/CampaignLog.jsp",
 }
 MONTHS = {
     "1月": 1, "2月": 2, "3月": 3, "4月": 4, "5月": 5, "6月": 6,
@@ -886,6 +896,7 @@ def _parse_period(value: str, default_year: int) -> tuple[date, date | None] | N
         _normalize_roc_dates(value).replace("年", "/")
         .replace("月", "/")
         .replace("日", "")
+        .replace(".", "/")
         .replace("起", "")
         .replace("止", "")
     )
@@ -2517,7 +2528,10 @@ def _listing_promotions(
         summary = card["summary"]
         if summary == card["title"] and page and page.headings:
             summary = page.headings
-        registration_text = _registration_excerpt(text)
+        registration_text = (
+            _registration_excerpt(text)
+            or clean_inline(str(card.get("registration_text") or ""))
+        )
         windows = _registration_windows(
             registration_text or text,
             start.year,
@@ -2525,7 +2539,8 @@ def _listing_promotions(
             end,
         )
         registration_required = bool(
-            windows
+            card.get("registration_required")
+            or windows
             or _has_registration_requirement(text)
             or _has_registration_requirement(summary)
         )
@@ -2771,4 +2786,671 @@ def extract_hncb(
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"], listing.final_url,
         status, len(activities), checked_at, message,
+    ), []
+
+
+def _fubon_cards(
+    html: str,
+    base_url: str,
+    bank_id: str,
+    today: date,
+) -> list[dict[str, Any]]:
+    cards: list[dict[str, Any]] = []
+    for block in _html_segments(html, r'<div\s+class="discount-card"'):
+        title = _class_text(block, "discount-name")
+        period_text = _class_text(block, "discount-date")
+        summary = _class_text(block, "discount-text")
+        href = re.search(
+            r'<a[^>]+href="([^"]*Detail\?sn=[A-Z]\d+)"',
+            block,
+            flags=re.I,
+        )
+        if not title or not href:
+            continue
+        public_url = urljoin(base_url, href.group(1))
+        period = _parse_period(period_text, today.year)
+        start, end = period if period else (today, None)
+        cards.append({
+            "id": _stable_id(bank_id, public_url),
+            "title": title,
+            "summary": summary or period_text or title,
+            "url": public_url,
+            "start": start,
+            "end": end,
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {
+                    "title": title,
+                    "period": period_text,
+                    "summary": summary,
+                    "url": public_url,
+                },
+            ),
+            "fetch_detail": True,
+        })
+    return cards
+
+
+def _fubon_has_next(html: str) -> bool:
+    return bool(re.search(
+        r'<a[^>]+href="[^"]*fmList-divSearchResult-nav-next[^"]*"',
+        html,
+        flags=re.I,
+    ))
+
+
+def _fubon_page_listeners(html: str, base_url: str) -> dict[int, str]:
+    listeners: dict[int, str] = {}
+    for match in re.finditer(
+        r'<a[^>]+href="([^"]*fmList-divSearchResult-nav-navigation-'
+        r'\d+-pageLink)"[^>]*>(.*?)</a>',
+        html,
+        flags=re.I | re.S,
+    ):
+        label = strip_html(match.group(2))
+        if not label.isdigit():
+            continue
+        href = re.sub(r"(\d+-1)\.-", r"\1.0-", match.group(1))
+        listeners[int(label)] = urljoin(base_url, href)
+    return listeners
+
+
+def _fubon_page_listener(html: str, base_url: str, page_number: int) -> str:
+    return _fubon_page_listeners(html, base_url).get(page_number, "")
+
+
+def _fubon_ajax_redirect(html: str, base_url: str) -> str:
+    match = re.search(
+        r"<redirect>\s*<!\[CDATA\[(.*?)\]\]>\s*</redirect>",
+        html,
+        flags=re.I | re.S,
+    )
+    return urljoin(base_url, match.group(1).strip()) if match else ""
+
+
+def extract_taipei_fubon(
+    source: dict[str, Any],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
+) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    with PersistentHTTPSession(
+        source["official_domains"],
+        user_agent=str(source.get("session_user_agent") or ""),
+    ) as session:
+        try:
+            listing = session.fetch_text(source["entry_url"])
+        except RuntimeError as exc:
+            return [], SourceHealth(
+                source["id"], source["bank_name"], source["entry_url"], "",
+                "failed", 0, checked_at, str(exc),
+            ), [Alert(
+                "source_failed",
+                source["bank_name"],
+                "台北富邦指定卡友優惠入口暫時無法讀取。",
+                source["entry_url"],
+            )]
+
+        first_cards = _fubon_cards(
+            listing.text,
+            listing.final_url,
+            source["id"],
+            today,
+        )
+        if not first_cards:
+            message = "指定入口存在，但找不到卡友優惠清單；可能是官方頁面結構已變更。"
+            return [], SourceHealth(
+                source["id"], source["bank_name"], source["entry_url"],
+                listing.final_url, "failed", 0, checked_at, message,
+            ), [Alert(
+                "source_structure_changed",
+                source["bank_name"],
+                message,
+                source["entry_url"],
+            )]
+
+        cards = list(first_cards)
+        seen_signatures = {tuple(card["id"] for card in first_cards)}
+        page_html = listing.text
+        page_failures = 0
+        max_pages = int(source.get("max_listing_pages", 80))
+        referer_url = listing.final_url
+        cache_buster = int(datetime.now().timestamp() * 1000)
+        for page_number in range(1, max_pages):
+            if not _fubon_has_next(page_html):
+                break
+            page_cards: list[dict[str, Any]] = []
+            target_page = page_number + 1
+            for navigation_attempt in range(80):
+                listeners = _fubon_page_listeners(
+                    page_html,
+                    listing.final_url,
+                )
+                listener_url = listeners.get(target_page, "")
+                requested_page = target_page
+                if not listener_url:
+                    recovery_pages = [
+                        value for value in listeners
+                        if value < target_page
+                    ]
+                    if not recovery_pages:
+                        break
+                    requested_page = max(recovery_pages)
+                    listener_url = listeners[requested_page]
+                try:
+                    result = session.fetch_text(
+                        f"{listener_url}"
+                        f"&_={cache_buster + page_number * 100 + navigation_attempt}",
+                        headers={
+                            "Accept": "application/xml, text/xml, */*; q=0.01",
+                            "Cache-Control": "no-cache",
+                            "Referer": referer_url,
+                            "Wicket-Ajax": "true",
+                            "Wicket-Ajax-BaseURL": "promotion/Result",
+                            "X-Requested-With": "XMLHttpRequest",
+                        },
+                    )
+                except RuntimeError:
+                    break
+                redirect_url = _fubon_ajax_redirect(
+                    result.text,
+                    listing.final_url,
+                )
+                if redirect_url:
+                    try:
+                        refreshed = session.fetch_text(redirect_url)
+                    except RuntimeError:
+                        break
+                    page_html = refreshed.text
+                    referer_url = refreshed.final_url
+                    continue
+                landed_cards = _fubon_cards(
+                    result.text,
+                    listing.final_url,
+                    source["id"],
+                    today,
+                )
+                if not landed_cards:
+                    break
+                page_html = result.text
+                if requested_page == target_page:
+                    page_cards = landed_cards
+                    break
+            signature = tuple(card["id"] for card in page_cards)
+            if not page_cards or signature in seen_signatures:
+                page_failures += 1
+                break
+            seen_signatures.add(signature)
+            cards.extend(page_cards)
+        else:
+            if _fubon_has_next(page_html):
+                page_failures += 1
+
+    unique_cards = []
+    seen_ids: set[str] = set()
+    for card in cards:
+        if card["id"] in seen_ids:
+            continue
+        seen_ids.add(card["id"])
+        if not card["end"] or card["end"] >= today:
+            unique_cards.append(card)
+    activities, failed_details = _listing_promotions(
+        source,
+        unique_cards,
+        now=now,
+        percent_threshold=percent_threshold,
+        amount_threshold=amount_threshold,
+        activity_cache=activity_cache,
+        cache_stats=cache_stats,
+    )
+    status = (
+        "complete"
+        if activities and page_failures == 0 and failed_details == 0
+        else ("partial" if activities else "failed")
+    )
+    issues = []
+    if page_failures:
+        issues.append("官方 Wicket 清單未能完整翻至最後一頁")
+    if failed_details:
+        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+    if not issues:
+        issues.append(f"已讀取 {len(seen_signatures)} 個官方清單分頁")
+    return activities, SourceHealth(
+        source["id"], source["bank_name"], source["entry_url"],
+        listing.final_url, status, len(activities), checked_at, "；".join(issues),
+    ), []
+
+
+def _taishin_cards(
+    rows: list[dict[str, Any]],
+    base_url: str,
+    bank_id: str,
+    category: str,
+    today: date,
+) -> list[dict[str, Any]]:
+    cards: list[dict[str, Any]] = []
+    for row in rows:
+        promotion_id = clean_inline(str(row.get("promotionId") or ""))
+        title = clean_inline(str(row.get("promotionName") or ""))
+        if not promotion_id or not title:
+            continue
+        summary = clean_inline(str(row.get("promotionBrief") or "")) or title
+        start = _date_from_iso(str(row.get("promotionStartDate") or "")) or today
+        end = _date_from_iso(str(row.get("promotionEndDate") or ""))
+        public_url = urljoin(base_url, f"/tscccms/promotion/detail/{promotion_id}")
+        registration_required = str(row.get("regRequired") or "").upper() == "Y"
+        cards.append({
+            "id": _stable_id(bank_id, promotion_id),
+            "title": title,
+            "summary": summary,
+            "url": public_url,
+            "start": start,
+            "end": end,
+            "registration_required": registration_required,
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {
+                    "promotion_id": promotion_id,
+                    "title": title,
+                    "summary": summary,
+                    "start": row.get("promotionStartDate"),
+                    "end": row.get("promotionEndDate"),
+                    "registration_required": registration_required,
+                    "category": category,
+                },
+            ),
+            "fetch_detail": True,
+        })
+    return cards
+
+
+def extract_taishin(
+    source: dict[str, Any],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
+) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    cards: list[dict[str, Any]] = []
+    failed_categories = 0
+    failed_pages = 0
+    resolved_url = ""
+    max_pages = int(source.get("max_pages_per_category", 50))
+
+    with SystemCurlSession(source["official_domains"]) as session:
+        for category in source.get("category_codes", list("ABCDEFGHI")):
+            category_url = source["category_url_template"].format(category=category)
+            try:
+                listing = session.fetch_text(category_url)
+            except RuntimeError:
+                failed_categories += 1
+                continue
+            resolved_url = resolved_url or listing.final_url
+            token_match = re.search(
+                r'name="_csrf"\s+value="([^"]+)"',
+                listing.text,
+                flags=re.I,
+            )
+            total_match = re.search(
+                r'id="totalPage"[^>]+value="(\d+)"',
+                listing.text,
+                flags=re.I,
+            )
+            if not token_match or not total_match:
+                failed_categories += 1
+                continue
+            total_pages = min(int(total_match.group(1)), max_pages)
+            token = token_match.group(1)
+            for page_number in range(1, total_pages + 1):
+                try:
+                    _, payload = session.fetch_json(
+                        source["page_data_url"],
+                        data={
+                            "_csrf": token,
+                            "categoryId": category,
+                            "queryStoreType": "null",
+                            "queryRegionId": "null",
+                            "queryKeyWord": "",
+                            "queryOrderAscDesc": "Desc",
+                            "queryPage": str(page_number),
+                        },
+                        headers={
+                            "Accept": "application/json, text/javascript, */*; q=0.01",
+                            "Referer": category_url,
+                            "X-Requested-With": "XMLHttpRequest",
+                        },
+                    )
+                except RuntimeError:
+                    failed_pages += 1
+                    break
+                if not isinstance(payload, list):
+                    failed_pages += 1
+                    break
+                cards.extend(_taishin_cards(
+                    [row for row in payload if isinstance(row, dict)],
+                    category_url,
+                    source["id"],
+                    category,
+                    today,
+                ))
+            if int(total_match.group(1)) > max_pages:
+                failed_pages += 1
+
+    if not cards:
+        message = "台新 A–I 信用卡優惠分類暫時無法取得活動資料。"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"],
+            resolved_url, "failed", 0, checked_at, message,
+        ), [Alert(
+            "source_failed",
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+
+    unique_cards = []
+    seen_ids: set[str] = set()
+    for card in cards:
+        if card["id"] in seen_ids:
+            continue
+        seen_ids.add(card["id"])
+        if not card["end"] or card["end"] >= today:
+            unique_cards.append(card)
+    activities, failed_details = _listing_promotions(
+        source,
+        unique_cards,
+        now=now,
+        percent_threshold=percent_threshold,
+        amount_threshold=amount_threshold,
+        activity_cache=activity_cache,
+        cache_stats=cache_stats,
+    )
+    status = (
+        "complete"
+        if activities
+        and failed_categories == 0
+        and failed_pages == 0
+        and failed_details == 0
+        else ("partial" if activities else "failed")
+    )
+    issues = []
+    if failed_categories:
+        issues.append(f"{failed_categories} 個 A–I 分類清單暫時無法讀取")
+    if failed_pages:
+        issues.append(f"{failed_pages} 個分類分頁暫時無法讀取")
+    if failed_details:
+        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+    if not issues:
+        issues.append("已讀取 A–I 九個信用卡優惠分類")
+    return activities, SourceHealth(
+        source["id"], source["bank_name"], source["entry_url"],
+        resolved_url, status, len(activities), checked_at, "；".join(issues),
+    ), []
+
+
+def _firstbank_cards(
+    html: str,
+    base_url: str,
+    bank_id: str,
+    today: date,
+) -> list[dict[str, Any]]:
+    cards: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for match in re.finditer(
+        r'<a[^>]+href="([^"]*/sites/card/(?:touch/)?\d+[^"]*)"[^>]*>(.*?)</a>',
+        html,
+        flags=re.I | re.S,
+    ):
+        public_url = urljoin(base_url, match.group(1))
+        title = strip_html(match.group(2))
+        if public_url == base_url or len(title) < 4 or public_url in seen:
+            continue
+        seen.add(public_url)
+        cards.append({
+            "id": _stable_id(bank_id, public_url),
+            "title": title,
+            "summary": title,
+            "url": public_url,
+            "start": today,
+            "end": None,
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {"title": title, "url": public_url},
+            ),
+            "fetch_detail": True,
+        })
+    return cards
+
+
+def extract_first(
+    source: dict[str, Any],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
+) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    try:
+        listing = fetch_text(source["entry_url"], source["official_domains"])
+    except RuntimeError as exc:
+        if "403" in str(exc):
+            message = (
+                "指定網址存在，但第一銀行的存取防護拒絕自動化 GET；"
+                "本次不改用其他網址，待官方解除限制後再讀取。"
+            )
+            alert_type = "source_access_blocked"
+        else:
+            message = "第一銀行指定信用卡優惠入口暫時無法讀取；未改用其他網址。"
+            alert_type = "source_failed"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"], "",
+            "failed", 0, checked_at, message,
+        ), [Alert(
+            alert_type,
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+    if re.search(r"Access Denied|You don't have permission", listing.text, re.I):
+        message = (
+            "指定網址存在，但第一銀行的存取防護拒絕自動化 GET；"
+            "本次不改用其他網址，待官方解除限制後再讀取。"
+        )
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"],
+            listing.final_url, "failed", 0, checked_at, message,
+        ), [Alert(
+            "source_access_blocked",
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+    cards = _firstbank_cards(
+        listing.text,
+        listing.final_url,
+        source["id"],
+        today,
+    )
+    if not cards:
+        message = "指定入口可讀取，但找不到信用卡活動連結；可能是官方頁面結構已變更。"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"],
+            listing.final_url, "failed", 0, checked_at, message,
+        ), [Alert(
+            "source_structure_changed",
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+    activities, failed_details = _listing_promotions(
+        source,
+        cards,
+        now=now,
+        percent_threshold=percent_threshold,
+        amount_threshold=amount_threshold,
+        activity_cache=activity_cache,
+        cache_stats=cache_stats,
+    )
+    status = "complete" if activities and failed_details == 0 else ("partial" if activities else "failed")
+    message = "" if failed_details == 0 else f"{failed_details} 個官方活動明細暫時無法讀取。"
+    return activities, SourceHealth(
+        source["id"], source["bank_name"], source["entry_url"],
+        listing.final_url, status, len(activities), checked_at, message,
+    ), []
+
+
+def _chb_cards(
+    html: str,
+    base_url: str,
+    bank_id: str,
+    today: date,
+) -> list[dict[str, Any]]:
+    cards: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for match in re.finditer(
+        r'<a[^>]+class="[^"]*\beditor_link\b[^"]*"[^>]+'
+        r'href="([^"]*bonusDetail\.jsp\?id=\d+)"[^>]*>(.*?)</a>',
+        html,
+        flags=re.I | re.S,
+    ):
+        title = strip_html(match.group(2))
+        public_url = urljoin(base_url, match.group(1))
+        if not title.startswith("【") or public_url in seen:
+            continue
+        seen.add(public_url)
+        cards.append({
+            "id": _stable_id(bank_id, public_url),
+            "title": title,
+            "summary": title,
+            "url": public_url,
+            "start": today,
+            "end": None,
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {"title": title, "url": public_url},
+            ),
+            "fetch_detail": True,
+        })
+    return cards
+
+
+def extract_chb(
+    source: dict[str, Any],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
+) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    try:
+        listing = fetch_text(source["entry_url"], source["official_domains"])
+    except RuntimeError as exc:
+        message = "彰化銀行指定信用卡優惠入口暫時無法讀取。"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"], "",
+            "failed", 0, checked_at, str(exc),
+        ), [Alert(
+            "source_failed",
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+
+    category_ids = [str(value) for value in source.get("category_ids", [])]
+    missing_ids = [
+        category_id
+        for category_id in category_ids
+        if not re.search(
+            rf'bonusDetail\.jsp\?id={re.escape(category_id)}(?:["&])',
+            listing.text,
+        )
+    ]
+    if missing_ids:
+        message = (
+            "指定入口的信用卡分類結構已變更；"
+            f"找不到分類 {', '.join(missing_ids)}，本次停止擷取以避免混入其他內容。"
+        )
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"],
+            listing.final_url, "failed", 0, checked_at, message,
+        ), [Alert(
+            "source_structure_changed",
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+
+    category_urls = [
+        urljoin(listing.final_url, f"bonusDetail.jsp?id={category_id}")
+        for category_id in category_ids
+    ]
+    fetched = _fetch_many(category_urls, source["official_domains"], workers=4)
+    cards: list[dict[str, Any]] = []
+    failed_categories = 0
+    for category_url in category_urls:
+        result = fetched.get(category_url)
+        if isinstance(result, Exception) or result is None:
+            failed_categories += 1
+            continue
+        cards.extend(_chb_cards(
+            result.text,
+            result.final_url,
+            source["id"],
+            today,
+        ))
+    unique_cards = []
+    seen_ids: set[str] = set()
+    for card in cards:
+        if card["id"] in seen_ids:
+            continue
+        seen_ids.add(card["id"])
+        unique_cards.append(card)
+    if not unique_cards:
+        message = "彰化銀行四個信用卡優惠分類可讀取，但找不到活動明細連結。"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"],
+            listing.final_url, "failed", 0, checked_at, message,
+        ), [Alert(
+            "source_structure_changed",
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+    activities, failed_details = _listing_promotions(
+        source,
+        unique_cards,
+        now=now,
+        percent_threshold=percent_threshold,
+        amount_threshold=amount_threshold,
+        activity_cache=activity_cache,
+        cache_stats=cache_stats,
+    )
+    status = (
+        "complete"
+        if activities and failed_categories == 0 and failed_details == 0
+        else ("partial" if activities else "failed")
+    )
+    issues = []
+    if failed_categories:
+        issues.append(f"{failed_categories} 個信用卡分類暫時無法讀取")
+    if failed_details:
+        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+    return activities, SourceHealth(
+        source["id"], source["bank_name"], source["entry_url"],
+        listing.final_url, status, len(activities), checked_at, "；".join(issues),
     ), []
