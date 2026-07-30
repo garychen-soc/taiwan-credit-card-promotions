@@ -419,6 +419,40 @@
         "bankchb.com"
       ],
       "adapter": "chb_credit_card_categories"
+    },
+    {
+      "id": "ubot",
+      "bank_name": "聯邦銀行",
+      "entry_url": "https://card.ubot.com.tw/CardActivity?category=%E7%B6%B2%E8%B3%BC%E6%95%B8%E4%BD%8D",
+      "api_url": "https://card.ubot.com.tw/eCardServiceAPI/api/Rewards",
+      "category_names": [
+        "強打優惠",
+        "卡片優惠",
+        "百貨零售",
+        "旅遊優惠",
+        "交通汽修",
+        "網購數位",
+        "生活繳費",
+        "購物娛樂"
+      ],
+      "data_categories": [
+        "卡片優惠",
+        "百貨零售",
+        "旅遊優惠",
+        "交通汽修",
+        "網購數位",
+        "生活繳費",
+        "購物娛樂"
+      ],
+      "discovery_urls": [
+        "https://card.ubot.com.tw/CardActivity?category=%E7%B6%B2%E8%B3%BC%E6%95%B8%E4%BD%8D",
+        "https://card.ubot.com.tw/CardActivity?category=%E5%BC%B7%E6%89%93%E5%84%AA%E6%83%A0"
+      ],
+      "official_domains": [
+        "ubot.com.tw"
+      ],
+      "adapter": "ubot_reward_categories",
+      "scope": "讀取 Rewards API 的七個 catalog；強打優惠由 hotOrder 聚合標記，不重複建立活動"
     }
   ]
 }

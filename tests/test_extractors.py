@@ -23,6 +23,7 @@ from card_promotions_monitor.extractors import (
     _reward_values,
     _taishin_cards,
     _tcbbank_api_cards,
+    _ubot_cards,
     _yuanta_cards,
     _esun_cards,
 )
@@ -358,6 +359,41 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(cards[0]["start"], date(2026, 7, 1))
         self.assertEqual(cards[0]["end"], date(2026, 9, 30))
         self.assertTrue(cards[0]["registration_required"])
+
+    def test_extracts_ubot_categories_and_keeps_shared_url_titles(self) -> None:
+        rows = [
+            {
+                "title": "Uber Eats",
+                "desc": "刷聯邦卡享3%",
+                "url": "https://activity.ubot.com.tw/aws_act/delivery/index.htm",
+                "catalog": "網購數位",
+                "order": 0,
+                "hotOrder": 1,
+                "sdt": "2026-07-01 00:00:00",
+                "edt": "2026-12-31 23:59:59",
+            },
+            {
+                "title": "foodpanda",
+                "desc": "刷聯邦卡享3%",
+                "url": "https://activity.ubot.com.tw/aws_act/delivery/index.htm",
+                "catalog": "網購數位",
+                "order": 0,
+                "hotOrder": None,
+                "sdt": "2026-07-01 00:00:00",
+                "edt": "2026-12-31 23:59:59",
+            },
+        ]
+        cards = _ubot_cards(
+            rows,
+            "ubot",
+            date(2026, 7, 30),
+            ["ubot.com.tw"],
+        )
+        self.assertEqual(len(cards), 2)
+        self.assertNotEqual(cards[0]["id"], cards[1]["id"])
+        self.assertEqual(cards[0]["base_category"], "網購")
+        self.assertEqual(cards[0]["featured_category"], "強打優惠")
+        self.assertFalse(cards[1]["featured"])
 
     def test_extracts_firstbank_activity_links(self) -> None:
         html = (

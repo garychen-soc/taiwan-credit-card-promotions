@@ -40,6 +40,7 @@ REGISTRATION_URL_DEFAULTS = {
     "taishin": "https://mkpcard.taishinbank.com.tw/tscccms/register/select",
     "first": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
     "chb": "https://www.bankchb.com/frontend/CampaignLog.jsp",
+    "ubot": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
 }
 MONTHS = {
     "1月": 1, "2月": 2, "3月": 3, "4月": 4, "5月": 5, "6月": 6,
@@ -2506,6 +2507,8 @@ def _listing_promotions(
 
     for card in cards:
         if card["cached"]:
+            if card.get("featured"):
+                card["cached"].featured = True
             activities.append(card["cached"])
             continue
         page = None
@@ -2553,8 +2556,11 @@ def _listing_promotions(
         )
         categories = _categories(
             f"{card['title']} {summary} {text[:2200]}",
-            None,
+            clean_inline(str(card.get("base_category") or "")) or None,
         )
+        if card.get("featured_category"):
+            categories.append(clean_inline(str(card["featured_category"])))
+            categories = list(dict.fromkeys(categories))
         registration_url = ""
         if registration_required:
             registration_url = (
@@ -2582,9 +2588,18 @@ def _listing_promotions(
             max_reward_percent=reward_percent,
             max_reward_amount_twd=reward_amount,
             high_return=high_return,
-            featured=registration_required or high_return,
+            featured=bool(card.get("featured")) or registration_required or high_return,
             lifecycle=_lifecycle(start, end, today),
-            tags=list(dict.fromkeys([card["title"], source["bank_name"], *categories])),
+            tags=list(dict.fromkeys([
+                card["title"],
+                source["bank_name"],
+                *(
+                    [clean_inline(str(card["official_category"]))]
+                    if card.get("official_category")
+                    else []
+                ),
+                *categories,
+            ])),
             review_required=registration_required and not windows,
             source_fingerprint=card["fingerprint"],
             last_detail_checked_at=checked_at,
@@ -2926,7 +2941,7 @@ def extract_taipei_fubon(
                 break
             page_cards: list[dict[str, Any]] = []
             target_page = page_number + 1
-            for navigation_attempt in range(80):
+            for navigation_attempt in range(200):
                 listeners = _fubon_page_listeners(
                     page_html,
                     listing.final_url,
@@ -3008,6 +3023,25 @@ def extract_taipei_fubon(
         activity_cache=activity_cache,
         cache_stats=cache_stats,
     )
+    fallback_count = 0
+    if page_failures and activity_cache:
+        known_ids = {activity.id for activity in activities}
+        for cached in activity_cache.values():
+            if (
+                not isinstance(cached, dict)
+                or cached.get("bank_id") != source["id"]
+                or cached.get("id") in known_ids
+            ):
+                continue
+            cached_end = _date_from_iso(str(cached.get("end_date") or ""))
+            if cached_end and cached_end < today:
+                continue
+            promotion = Promotion.from_dict(cached)
+            promotion.observed_at = checked_at
+            promotion.source_entry_url = source["entry_url"]
+            activities.append(promotion)
+            known_ids.add(promotion.id)
+            fallback_count += 1
     status = (
         "complete"
         if activities and page_failures == 0 and failed_details == 0
@@ -3016,6 +3050,8 @@ def extract_taipei_fubon(
     issues = []
     if page_failures:
         issues.append("官方 Wicket 清單未能完整翻至最後一頁")
+    if fallback_count:
+        issues.append(f"沿用上一版 {fallback_count} 筆有效活動，避免清單暫時縮減")
     if failed_details:
         issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
     if not issues:
@@ -3454,3 +3490,181 @@ def extract_chb(
         source["id"], source["bank_name"], source["entry_url"],
         listing.final_url, status, len(activities), checked_at, "；".join(issues),
     ), []
+
+
+UBOT_CATEGORY_MAP = {
+    "卡片優惠": "卡片權益",
+    "百貨零售": "百貨購物",
+    "旅遊優惠": "旅遊交通",
+    "交通汽修": "加油交通",
+    "網購數位": "網購",
+    "生活繳費": "繳費稅款",
+    "購物娛樂": "生活消費",
+}
+
+
+def _ubot_cards(
+    rows: list[dict[str, Any]],
+    bank_id: str,
+    today: date,
+    official_domains: list[str],
+) -> list[dict[str, Any]]:
+    cards: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for row in rows:
+        title = clean_inline(str(row.get("title") or ""))
+        summary = clean_inline(str(row.get("desc") or "")) or title
+        public_url = clean_inline(str(row.get("url") or ""))
+        official_category = clean_inline(str(row.get("catalog") or ""))
+        if (
+            not title
+            or official_category not in UBOT_CATEGORY_MAP
+            or not is_allowed_url(public_url, official_domains)
+        ):
+            continue
+        identity = f"{official_category}|{title}|{public_url}"
+        if identity in seen:
+            continue
+        seen.add(identity)
+        try:
+            start = date.fromisoformat(str(row.get("sdt") or "")[:10])
+        except ValueError:
+            start = today
+        try:
+            end = date.fromisoformat(str(row.get("edt") or "")[:10])
+        except ValueError:
+            end = None
+        is_featured = row.get("hotOrder") is not None
+        cards.append({
+            "id": _stable_id(bank_id, identity),
+            "title": title,
+            "summary": summary,
+            "url": public_url,
+            "start": start,
+            "end": end,
+            "base_category": UBOT_CATEGORY_MAP[official_category],
+            "official_category": official_category,
+            "featured": is_featured,
+            "featured_category": "強打優惠" if is_featured else "",
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {
+                    "title": title,
+                    "summary": summary,
+                    "url": public_url,
+                    "official_category": official_category,
+                    "order": row.get("order"),
+                    "hot_order": row.get("hotOrder"),
+                    "start": row.get("sdt"),
+                    "end": row.get("edt"),
+                },
+            ),
+            "fetch_detail": True,
+        })
+    return cards
+
+
+def extract_ubot(
+    source: dict[str, Any],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
+) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    try:
+        listing = fetch_text(source["entry_url"], source["official_domains"])
+        api_result, payload = fetch_json(
+            source["api_url"],
+            source["official_domains"],
+        )
+    except RuntimeError as exc:
+        message = "聯邦銀行指定活動入口或官方 Rewards 資料暫時無法讀取。"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"], "",
+            "failed", 0, checked_at, str(exc),
+        ), [Alert(
+            "source_failed",
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+
+    rows = (
+        payload.get("info", [])
+        if isinstance(payload, dict) and payload.get("rtnCode") == "0000"
+        else []
+    )
+    rows = [row for row in rows if isinstance(row, dict)]
+    cards = _ubot_cards(
+        rows,
+        source["id"],
+        today,
+        source["official_domains"],
+    )
+    if not cards:
+        message = "聯邦銀行 Rewards API 可讀取，但找不到有效的官方活動資料。"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"],
+            api_result.final_url, "failed", 0, checked_at, message,
+        ), [Alert(
+            "source_structure_changed",
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+
+    observed_categories = {
+        clean_inline(str(row.get("catalog") or ""))
+        for row in rows
+        if row.get("catalog")
+    }
+    expected_categories = {
+        clean_inline(str(value))
+        for value in source.get("data_categories", [])
+    }
+    missing_categories = sorted(expected_categories - observed_categories)
+    activities, failed_details = _listing_promotions(
+        source,
+        cards,
+        now=now,
+        percent_threshold=percent_threshold,
+        amount_threshold=amount_threshold,
+        activity_cache=activity_cache,
+        cache_stats=cache_stats,
+    )
+    status = (
+        "complete"
+        if activities and not missing_categories and failed_details == 0
+        else ("partial" if activities else "failed")
+    )
+    issues = []
+    if missing_categories:
+        issues.append(f"官方資料缺少分類：{', '.join(missing_categories)}")
+    if failed_details:
+        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+    if not issues:
+        hot_count = sum(
+            1 for activity in activities
+            if "強打優惠" in activity.categories
+        )
+        issues.append(
+            f"已讀取 7 個資料分類；API 共 {len(cards)} 筆，"
+            f"目前有效 {len(activities)} 筆；"
+            f"另以 hotOrder 標記 {hot_count} 筆強打優惠"
+        )
+    alerts = []
+    if missing_categories:
+        alerts.append(Alert(
+            "source_structure_changed",
+            source["bank_name"],
+            issues[0],
+            source["entry_url"],
+        ))
+    return activities, SourceHealth(
+        source["id"], source["bank_name"], source["entry_url"],
+        listing.final_url, status, len(activities), checked_at, "；".join(issues),
+    ), alerts

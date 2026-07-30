@@ -462,6 +462,7 @@ a { color: inherit; }
 .activity-card[data-bank="taishin"] .bank-badge span { background: #d71920; }
 .activity-card[data-bank="first"] .bank-badge span { background: #007a3d; }
 .activity-card[data-bank="chb"] .bank-badge span { background: #d99a00; }
+.activity-card[data-bank="ubot"] .bank-badge span { background: #005bac; }
 .status-badges { display: flex; gap: 5px; flex-wrap: wrap; justify-content: end; }
 .status-badge {
   padding: 3px 8px;

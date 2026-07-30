@@ -24,6 +24,7 @@ from .extractors import (
     extract_taipei_fubon,
     extract_taishin,
     extract_tcbbank,
+    extract_ubot,
     extract_yuanta,
 )
 
@@ -88,6 +89,8 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
             found, source_health, source_alerts = extract_first(source, **kwargs)
         elif adapter == "chb_credit_card_categories":
             found, source_health, source_alerts = extract_chb(source, **kwargs)
+        elif adapter == "ubot_reward_categories":
+            found, source_health, source_alerts = extract_ubot(source, **kwargs)
         else:
             raise ValueError(f"Unknown adapter: {adapter}")
         activities.extend(item.to_dict() for item in found)

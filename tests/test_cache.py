@@ -86,6 +86,27 @@ class ActivityCacheTests(unittest.TestCase):
         self.assertIsNone(value)
         self.assertEqual(stats["cache_misses"], 1)
 
+    def test_preserves_source_featured_flag_when_reusing_cache(self) -> None:
+        fingerprint = source_fingerprint("bank", {"title": "強打活動"})
+        cached = cached_activity(fingerprint=fingerprint)
+        cached["max_reward_percent"] = 3
+        cached["high_return"] = False
+        cached["registration_required"] = False
+        cached["featured"] = True
+        value = reuse_cached_promotion(
+            {"bank-activity": cached},
+            activity_id="bank-activity",
+            fingerprint=fingerprint,
+            now=datetime(2026, 7, 30, 10, 0, tzinfo=TAIPEI),
+            source_entry_url="https://bank.example/",
+            percent_threshold=10,
+            amount_threshold=500,
+            stats=new_cache_stats(),
+            avoids_detail_request=True,
+        )
+        self.assertIsNotNone(value)
+        self.assertTrue(value.featured)
+
     def test_refreshes_stale_cached_activity(self) -> None:
         fingerprint = source_fingerprint("bank", {"title": "測試活動"})
         stats = new_cache_stats()

@@ -118,7 +118,11 @@ def reuse_cached_promotion(
             and promotion.max_reward_amount_twd >= amount_threshold
         )
     )
-    promotion.featured = promotion.registration_required or promotion.high_return
+    promotion.featured = (
+        promotion.featured
+        or promotion.registration_required
+        or promotion.high_return
+    )
     start = _date_value(promotion.start_date) or now.date()
     end = _date_value(promotion.end_date)
     if promotion.official_status == "ended_by_official" or (end and end < now.date()):
