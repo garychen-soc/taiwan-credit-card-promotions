@@ -13,10 +13,13 @@ from .extractors import (
     extract_ctbc,
     extract_dbs,
     extract_esun,
+    extract_hncb,
+    extract_kgi,
     extract_obank,
     extract_scsb,
     extract_sinopac,
     extract_sunny,
+    extract_tcbbank,
     extract_yuanta,
 )
 
@@ -67,6 +70,12 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
             found, source_health, source_alerts = extract_esun(source, **kwargs)
         elif adapter == "sunny_card_promotions":
             found, source_health, source_alerts = extract_sunny(source, **kwargs)
+        elif adapter == "tcbbank_card_promotions":
+            found, source_health, source_alerts = extract_tcbbank(source, **kwargs)
+        elif adapter == "kgi_card_campaigns":
+            found, source_health, source_alerts = extract_kgi(source, **kwargs)
+        elif adapter == "hncb_credit_card_tab":
+            found, source_health, source_alerts = extract_hncb(source, **kwargs)
         else:
             raise ValueError(f"Unknown adapter: {adapter}")
         activities.extend(item.to_dict() for item in found)

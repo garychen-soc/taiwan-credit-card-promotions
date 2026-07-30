@@ -10,11 +10,14 @@ from card_promotions_monitor.extractors import (
     _ctbc_card_blocks,
     _has_registration_requirement,
     _html_segments,
+    _hncb_credit_card_cards,
+    _kgi_cards,
     _lifecycle,
     _parse_period,
     _roc_period,
     _registration_windows,
     _reward_values,
+    _tcbbank_api_cards,
     _yuanta_cards,
     _esun_cards,
 )
@@ -86,6 +89,15 @@ class RegistrationWindowTests(unittest.TestCase):
         self.assertEqual(len(values), 1)
         self.assertEqual(values[0].start, "2026-09-09T16:00:00+08:00")
         self.assertEqual(values[0].end, "2026-09-09T23:59:00+08:00")
+
+    def test_parses_em_dash_range(self) -> None:
+        values = _registration_windows(
+            "登錄時間:2026/07/29 17:00 — 2026/07/31 23:59",
+            2026,
+        )
+        self.assertEqual(len(values), 1)
+        self.assertEqual(values[0].start, "2026-07-29T17:00:00+08:00")
+        self.assertEqual(values[0].end, "2026-07-31T23:59:00+08:00")
 
     def test_parses_registration_deadline(self) -> None:
         values = _registration_windows(
@@ -180,6 +192,10 @@ class ClassificationTests(unittest.TestCase):
             _roc_period("115/7/1-115/12/31", date(2026, 7, 30)),
             (date(2026, 7, 1), date(2026, 12, 31)),
         )
+        self.assertEqual(
+            _parse_period("活動期間：115/7/1~115/9/30", 2026),
+            (date(2026, 7, 1), date(2026, 9, 30)),
+        )
 
     def test_extracts_card_class_text_and_segments(self) -> None:
         html = (
@@ -220,6 +236,66 @@ class ClassificationTests(unittest.TestCase):
         cards = _esun_cards(html, "https://www.esunbank.com/zh-tw/", "esun")
         self.assertEqual(len(cards), 1)
         self.assertEqual(cards[0]["summary"], "最高10%回饋")
+
+    def test_extracts_tcbbank_listing_card(self) -> None:
+        cards = _tcbbank_api_cards(
+            [{
+                "Title": "低碳生活新品味",
+                "SubTitle": "(至116年1月5日有效)",
+                "Url": "/Promotion/Info.html?ID=701",
+                "StartDate": "2025-12-29T00:00:00.000",
+                "EndDate": "2027-01-06T00:00:00.000",
+            }],
+            "https://www.tcbbank.com.tw/creditcard/J_01.html",
+            "tcbbank",
+            date(2026, 7, 30),
+        )
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]["title"], "低碳生活新品味")
+        self.assertEqual(cards[0]["start"], date(2025, 12, 29))
+        self.assertEqual(cards[0]["end"], date(2027, 1, 5))
+
+    def test_extracts_kgi_roc_period_and_summary(self) -> None:
+        html = (
+            '<div class="fs-h3 fs-lg-h3 color-primary-blue">'
+            "指定旅行社最高4,500元刷卡金</div>"
+            '<div class="fs-h5 kgibStatic011__item-title">'
+            "活動期間：115/7/1~115/9/30 需登錄</div>"
+            '<a href="/zh-tw/personal/promotion/card-campaign/travelagency-a">'
+            "了解更多</a>"
+        )
+        cards = _kgi_cards(
+            html,
+            "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign",
+            "kgi",
+            date(2026, 7, 30),
+        )
+        self.assertEqual(len(cards), 1)
+        self.assertEqual(cards[0]["start"], date(2026, 7, 1))
+        self.assertEqual(cards[0]["end"], date(2026, 9, 30))
+
+    def test_hncb_parser_is_limited_to_credit_card_tab(self) -> None:
+        html = (
+            '<a aria-controls="deposit-panel" role="tab" aria-label="存款/外匯">存款</a>'
+            '<a aria-controls="card-panel" role="tab" aria-label="信用卡">信用卡</a>'
+            '<div class="tab-pane" id="deposit-panel" role="tabpanel">'
+            '<div class="feature-title"><a href="/deposit">存款優惠</a></div></div>'
+            '<div class="tab-pane" id="card-panel" role="tabpanel">'
+            '<div class="feature-title"><a href="+https://partner.example/card-offer">'
+            "信用卡優惠</a></div></div>"
+            '<div class="tab-pane" id="other-panel" role="tabpanel">'
+            '<div class="feature-title"><a href="/loan">貸款優惠</a></div></div>'
+        )
+        cards, panel_id = _hncb_credit_card_cards(
+            html,
+            "https://www.hncb.com.tw/wps/portal/HNCB/card",
+            "hncb",
+            ["hncb.com.tw"],
+            date(2026, 7, 30),
+        )
+        self.assertEqual(panel_id, "card-panel")
+        self.assertEqual([item["title"] for item in cards], ["信用卡優惠"])
+        self.assertEqual(cards[0]["url"], "https://partner.example/card-offer")
 
 
 if __name__ == "__main__":

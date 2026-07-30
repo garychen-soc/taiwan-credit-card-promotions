@@ -10,7 +10,7 @@ from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 from .cache import record_detail_requests, reuse_cached_promotion, source_fingerprint
-from .fetch import fetch_json, fetch_text
+from .fetch import fetch_json, fetch_text, is_allowed_url
 from .html_tools import clean_inline, parse_page, strip_html, walk_strings
 from .models import Alert, Promotion, RegistrationWindow, SourceHealth
 
@@ -27,6 +27,9 @@ REGISTRATION_URL_DEFAULTS = {
     "yuanta": "https://www.yuantabank.com.tw/bank/creditCard/productActivityMember/list.do",
     "esun": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
     "sunny": "https://www.sunnybank.com.tw/portal/pt/pt01002/PT01002Index.xhtml",
+    "tcbbank": "https://www.tcbbank.com.tw/CreditCard/RegQuery/Act_login.aspx",
+    "kgi": "https://www.kgibank.com/creditcard/campaign/registrationlist",
+    "hncb": "https://www.hncb.com.tw/wps/portal/HNCB/card",
 }
 MONTHS = {
     "1月": 1, "2月": 2, "3月": 3, "4月": 4, "5月": 5, "6月": 6,
@@ -54,6 +57,14 @@ def _date_from_iso(value: str | None) -> date | None:
 
 def _date_text(value: date | None) -> str | None:
     return value.isoformat() if value else None
+
+
+def _normalize_roc_dates(value: str) -> str:
+    return re.sub(
+        r"(?<!\d)(1\d{2})(?=(?:年|/)\d{1,2}(?:月|/)\d{1,2})",
+        lambda match: str(int(match.group(1)) + 1911),
+        value,
+    )
 
 
 def _lifecycle(start: date, end: date | None, today: date, *, ended: bool = False) -> str:
@@ -120,7 +131,15 @@ def _registration_windows(
     activity_start: date | None = None,
     activity_end: date | None = None,
 ) -> list[RegistrationWindow]:
-    normalized = clean_inline(text.replace("～", "~").replace("至", "~"))
+    normalized = _normalize_roc_dates(
+        clean_inline(
+            text.replace("～", "~")
+            .replace("至", "~")
+            .replace("—", "~")
+            .replace("–", "~")
+            .replace("－", "~")
+        )
+    )
     windows: list[RegistrationWindow] = []
     seen: set[tuple[str, str]] = set()
     range_spans: list[tuple[int, int]] = []
@@ -864,7 +883,7 @@ def _class_text(block: str, class_name: str) -> str:
 
 def _parse_period(value: str, default_year: int) -> tuple[date, date | None] | None:
     normalized = (
-        value.replace("年", "/")
+        _normalize_roc_dates(value).replace("年", "/")
         .replace("月", "/")
         .replace("日", "")
         .replace("起", "")
@@ -906,6 +925,7 @@ def _official_detail_period(
     fallback_end: date | None,
     today: date,
 ) -> tuple[date, date | None]:
+    text = _normalize_roc_dates(text)
     labelled = re.search(
         r"(?:活動期間|活動時間|活動日期)[：:\s]*"
         r"((?:(?:20\d{2})[年/])?\d{1,2}[月/]\d{1,2}日?\s*(?:起)?"
@@ -1202,7 +1222,24 @@ def extract_sinopac(
     failed_details = 0
     for card in cards:
         if card["cached"]:
-            activities.append(card["cached"])
+            cached = card["cached"]
+            cached_start = _date_from_iso(cached.start_date) or today
+            cached_end = _date_from_iso(cached.end_date)
+            cached.registration_windows = _registration_windows(
+                cached.registration_text,
+                cached_start.year,
+                cached_start,
+                cached_end,
+            )
+            cached.registration_required = bool(
+                cached.registration_windows
+                or _has_registration_requirement(cached.registration_text)
+            )
+            cached.review_required = (
+                cached.registration_required and not cached.registration_windows
+            )
+            cached.featured = cached.registration_required or cached.high_return
+            activities.append(cached)
             continue
         result = fetched[card["url"]]
         if isinstance(result, Exception):
@@ -2201,3 +2238,537 @@ def extract_sunny(
         "陽信活動入口可讀取，但目前仍使用官方索引快照；請覆核是否有新增活動。",
         source["entry_url"],
     )]
+
+
+def _end_date_from_text(value: str, today: date) -> date | None:
+    normalized = _normalize_roc_dates(value)
+    match = re.search(
+        r"(?:至|到)\s*(20\d{2})年(\d{1,2})月(\d{1,2})日",
+        normalized,
+    )
+    if not match:
+        return None
+    try:
+        return date(int(match.group(1)), int(match.group(2)), int(match.group(3)))
+    except ValueError:
+        return None
+
+
+def _tcbbank_cards(
+    html: str,
+    base_url: str,
+    bank_id: str,
+    today: date,
+) -> list[dict[str, Any]]:
+    cards: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    for block in _html_segments(html, r'<div\s+class="admin-btn"'):
+        title = _class_text(block, "img_btn_text")
+        period_text = _class_text(block, "sm_p")
+        href = re.search(
+            r'<a[^>]+href="([^"]*/Promotion/Info\.html\?ID=\d+)"',
+            block,
+            flags=re.I,
+        )
+        if not title or not href:
+            continue
+        public_url = urljoin(base_url, href.group(1))
+        key = (title, public_url)
+        if key in seen:
+            continue
+        seen.add(key)
+        end = _end_date_from_text(period_text, today)
+        cards.append({
+            "id": _stable_id(bank_id, f"{public_url}|{title}"),
+            "title": title,
+            "summary": period_text or title,
+            "url": public_url,
+            "start": today,
+            "end": end,
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {"title": title, "period": period_text, "url": public_url},
+            ),
+            "fetch_detail": True,
+        })
+    return cards
+
+
+def _tcbbank_api_cards(
+    rows: list[dict[str, Any]],
+    base_url: str,
+    bank_id: str,
+    today: date,
+) -> list[dict[str, Any]]:
+    cards: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    for item in rows:
+        title = clean_inline(str(item.get("Title") or ""))
+        summary = clean_inline(str(item.get("SubTitle") or ""))
+        raw_url = clean_inline(str(item.get("Url") or ""))
+        if not title or not raw_url:
+            continue
+        public_url = urljoin(base_url, raw_url)
+        key = (title, public_url)
+        if key in seen:
+            continue
+        seen.add(key)
+        try:
+            start = datetime.fromisoformat(str(item.get("StartDate") or "")).date()
+        except ValueError:
+            start = today
+        end = _end_date_from_text(summary, today)
+        cards.append({
+            "id": _stable_id(bank_id, f"{public_url}|{title}"),
+            "title": title,
+            "summary": summary or title,
+            "url": public_url,
+            "start": start,
+            "end": end,
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {
+                    "title": title,
+                    "summary": summary,
+                    "url": public_url,
+                    "start": item.get("StartDate"),
+                    "end": item.get("EndDate"),
+                },
+            ),
+            "fetch_detail": True,
+        })
+    return cards
+
+
+def _kgi_cards(
+    html: str,
+    base_url: str,
+    bank_id: str,
+    today: date,
+) -> list[dict[str, Any]]:
+    cards: list[dict[str, Any]] = []
+    for block in _html_segments(
+        html,
+        r'<div\s+class="fs-h3 fs-lg-h3 color-primary-blue"',
+    ):
+        title = _class_text(block, "color-primary-blue")
+        summary = _class_text(block, "kgibStatic011__item-title")
+        href = re.search(
+            r'<a[^>]+href="([^"]*/personal/promotion/card-campaign/[^"?#]+)"',
+            block,
+            flags=re.I,
+        )
+        if not title or not href:
+            continue
+        public_url = urljoin(base_url, href.group(1))
+        period = _parse_period(summary, today.year)
+        start, end = period if period else (today, None)
+        cards.append({
+            "id": _stable_id(bank_id, f"{public_url}|{title}"),
+            "title": title,
+            "summary": summary or title,
+            "url": public_url,
+            "start": start,
+            "end": end,
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {"title": title, "summary": summary, "url": public_url},
+            ),
+            "fetch_detail": True,
+        })
+    return cards
+
+
+def _hncb_credit_card_cards(
+    html: str,
+    base_url: str,
+    bank_id: str,
+    official_domains: list[str],
+    today: date,
+) -> tuple[list[dict[str, Any]], str]:
+    tab_match = re.search(
+        r'<a[^>]+aria-controls="([^"]+)"[^>]+role="tab"[^>]+aria-label="信用卡"[^>]*>',
+        html,
+        flags=re.I,
+    )
+    if not tab_match:
+        tab_match = re.search(
+            r'<a[^>]+role="tab"[^>]+aria-label="信用卡"[^>]+aria-controls="([^"]+)"[^>]*>',
+            html,
+            flags=re.I,
+        )
+    if not tab_match:
+        return [], ""
+    panel_id = tab_match.group(1)
+    scope = next(
+        (
+            segment
+            for segment in _html_segments(
+                html,
+                r'<div\s+class="tab-pane[^"]*"',
+            )
+            if re.search(
+                rf'<div[^>]+id="{re.escape(panel_id)}"[^>]+role="tabpanel"',
+                segment[:1000],
+                flags=re.I,
+            )
+        ),
+        "",
+    )
+    if not scope:
+        return [], panel_id
+
+    cards: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    for match in re.finditer(
+        r'<div\s+class="feature-title"[^>]*>(.*?)</div>',
+        scope,
+        flags=re.I | re.S,
+    ):
+        anchor = re.search(
+            r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>',
+            match.group(1),
+            flags=re.I | re.S,
+        )
+        if not anchor:
+            continue
+        title = strip_html(anchor.group(2))
+        public_url = urljoin(base_url, clean_inline(anchor.group(1)).lstrip("+"))
+        if not title or not public_url.startswith("https://"):
+            continue
+        key = (title, public_url)
+        if key in seen:
+            continue
+        seen.add(key)
+        cards.append({
+            "id": _stable_id(bank_id, f"{public_url}|{title}"),
+            "title": title,
+            "summary": title,
+            "url": public_url,
+            "start": today,
+            "end": None,
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {"panel": panel_id, "title": title, "url": public_url},
+            ),
+            "fetch_detail": is_allowed_url(public_url, official_domains),
+        })
+    return cards, panel_id
+
+
+def _listing_promotions(
+    source: dict[str, Any],
+    cards: list[dict[str, Any]],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None,
+    cache_stats: dict[str, Any] | None,
+) -> tuple[list[Promotion], int]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    cache = activity_cache or {}
+    stats = cache_stats if cache_stats is not None else {}
+    urls_to_fetch: list[str] = []
+
+    for card in cards:
+        card["cached"] = reuse_cached_promotion(
+            cache,
+            activity_id=card["id"],
+            fingerprint=card["fingerprint"],
+            now=now,
+            source_entry_url=source["entry_url"],
+            percent_threshold=percent_threshold,
+            amount_threshold=amount_threshold,
+            stats=stats,
+            avoids_detail_request=bool(card["fetch_detail"]),
+        )
+        if not card["cached"] and card["fetch_detail"]:
+            urls_to_fetch.append(card["url"])
+
+    unique_urls = list(dict.fromkeys(urls_to_fetch))
+    record_detail_requests(stats, len(unique_urls))
+    fetched = _fetch_many(unique_urls, source["official_domains"], workers=6)
+    activities: list[Promotion] = []
+    failed_details = 0
+
+    for card in cards:
+        if card["cached"]:
+            activities.append(card["cached"])
+            continue
+        page = None
+        text = f"{card['title']} {card['summary']}"
+        result = fetched.get(card["url"])
+        if card["fetch_detail"]:
+            if isinstance(result, Exception) or result is None:
+                failed_details += 1
+            else:
+                page = parse_page(result.text, result.final_url)
+                text = page.text
+        start, end = _official_detail_period(
+            text,
+            card["start"],
+            card["end"],
+            today,
+        )
+        if end and end < today:
+            continue
+        summary = card["summary"]
+        if summary == card["title"] and page and page.headings:
+            summary = page.headings
+        registration_text = _registration_excerpt(text)
+        windows = _registration_windows(
+            registration_text or text,
+            start.year,
+            start,
+            end,
+        )
+        registration_required = bool(
+            windows
+            or _has_registration_requirement(text)
+            or _has_registration_requirement(summary)
+        )
+        reward_percent, reward_amount = _reward_values(
+            f"{card['title']} {summary} {text[:4500]}"
+        )
+        high_return = (
+            (reward_percent is not None and reward_percent >= percent_threshold)
+            or (reward_amount is not None and reward_amount >= amount_threshold)
+        )
+        categories = _categories(
+            f"{card['title']} {summary} {text[:2200]}",
+            None,
+        )
+        registration_url = ""
+        if registration_required:
+            registration_url = (
+                _registration_url(page.links, source["id"])
+                if page
+                else REGISTRATION_URL_DEFAULTS[source["id"]]
+            )
+        activities.append(Promotion(
+            id=card["id"],
+            bank_id=source["id"],
+            bank_name=source["bank_name"],
+            title=card["title"],
+            merchant=card["title"],
+            categories=categories,
+            start_date=start.isoformat(),
+            end_date=_date_text(end),
+            summary=summary[:700],
+            source_url=card["url"],
+            source_entry_url=source["entry_url"],
+            observed_at=checked_at,
+            registration_required=registration_required,
+            registration_text=registration_text,
+            registration_url=registration_url,
+            registration_windows=windows,
+            max_reward_percent=reward_percent,
+            max_reward_amount_twd=reward_amount,
+            high_return=high_return,
+            featured=registration_required or high_return,
+            lifecycle=_lifecycle(start, end, today),
+            tags=list(dict.fromkeys([card["title"], source["bank_name"], *categories])),
+            review_required=registration_required and not windows,
+            source_fingerprint=card["fingerprint"],
+            last_detail_checked_at=checked_at,
+        ))
+    return activities, failed_details
+
+
+def extract_tcbbank(
+    source: dict[str, Any],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
+) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    try:
+        listing = fetch_text(source["entry_url"], source["official_domains"])
+    except RuntimeError as exc:
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"], "",
+            "failed", 0, checked_at, str(exc),
+        ), [Alert(
+            "source_failed",
+            source["bank_name"],
+            "台中銀行指定信用卡優惠入口暫時無法讀取。",
+            source["entry_url"],
+        )]
+    try:
+        _, payload = fetch_json(source["data_url"], source["official_domains"])
+    except RuntimeError as exc:
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"], listing.final_url,
+            "failed", 0, checked_at, str(exc),
+        ), [Alert(
+            "source_failed",
+            source["bank_name"],
+            "台中銀行信用卡入口存在，但其官方活動清單端點暫時無法讀取。",
+            source["entry_url"],
+        )]
+    rows = payload.get("row", []) if isinstance(payload, dict) else []
+    cards = [
+        card
+        for card in _tcbbank_api_cards(
+            rows if isinstance(rows, list) else [],
+            listing.final_url,
+            source["id"],
+            today,
+        )
+        if not card["end"] or card["end"] >= today
+    ]
+    activities, failed_details = _listing_promotions(
+        source,
+        cards,
+        now=now,
+        percent_threshold=percent_threshold,
+        amount_threshold=amount_threshold,
+        activity_cache=activity_cache,
+        cache_stats=cache_stats,
+    )
+    status = "complete" if activities and failed_details == 0 else ("partial" if activities else "failed")
+    message = "" if failed_details == 0 else f"{failed_details} 個官方活動明細暫時無法讀取。"
+    return activities, SourceHealth(
+        source["id"], source["bank_name"], source["entry_url"], listing.final_url,
+        status, len(activities), checked_at, message,
+    ), []
+
+
+def extract_kgi(
+    source: dict[str, Any],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
+) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    pages = []
+    seen_page_signatures: set[tuple[str, ...]] = set()
+    failed_pages = 0
+    for page_number in range(1, int(source.get("max_listing_pages", 10)) + 1):
+        url = source["entry_url"] if page_number == 1 else f"{source['entry_url']}?p={page_number}"
+        try:
+            result = fetch_text(url, source["official_domains"])
+        except RuntimeError:
+            failed_pages += 1
+            break
+        cards = _kgi_cards(result.text, result.final_url, source["id"], today)
+        signature = tuple(card["id"] for card in cards)
+        if not cards or signature in seen_page_signatures:
+            break
+        seen_page_signatures.add(signature)
+        pages.append((result, cards))
+    if not pages:
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"], "",
+            "failed", 0, checked_at, "凱基銀行信用卡活動清單暫時無法讀取。",
+        ), [Alert(
+            "source_failed",
+            source["bank_name"],
+            "凱基銀行指定信用卡活動入口暫時無法讀取。",
+            source["entry_url"],
+        )]
+
+    cards = []
+    seen_ids: set[str] = set()
+    for _, page_cards in pages:
+        for card in page_cards:
+            if card["id"] in seen_ids:
+                continue
+            seen_ids.add(card["id"])
+            if not card["end"] or card["end"] >= today:
+                cards.append(card)
+    activities, failed_details = _listing_promotions(
+        source,
+        cards,
+        now=now,
+        percent_threshold=percent_threshold,
+        amount_threshold=amount_threshold,
+        activity_cache=activity_cache,
+        cache_stats=cache_stats,
+    )
+    status = (
+        "complete"
+        if activities and failed_pages == 0 and failed_details == 0
+        else ("partial" if activities else "failed")
+    )
+    issues = []
+    if failed_pages:
+        issues.append(f"{failed_pages} 個清單分頁暫時無法讀取")
+    if failed_details:
+        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+    return activities, SourceHealth(
+        source["id"], source["bank_name"], source["entry_url"], pages[0][0].final_url,
+        status, len(activities), checked_at, "；".join(issues),
+    ), []
+
+
+def extract_hncb(
+    source: dict[str, Any],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
+) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    try:
+        listing = fetch_text(source["entry_url"], source["official_domains"])
+    except RuntimeError as exc:
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"], "",
+            "failed", 0, checked_at, str(exc),
+        ), [Alert(
+            "source_failed",
+            source["bank_name"],
+            "華南銀行指定熱門優惠入口暫時無法讀取；未改用其他分頁。",
+            source["entry_url"],
+        )]
+    cards, panel_id = _hncb_credit_card_cards(
+        listing.text,
+        listing.final_url,
+        source["id"],
+        source["official_domains"],
+        today,
+    )
+    if not panel_id or not cards:
+        message = "找不到 aria-label=信用卡 對應的 tabpanel；為避免混入其他金融商品，本次停止擷取。"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"], listing.final_url,
+            "failed", 0, checked_at, message,
+        ), [Alert(
+            "source_structure_changed",
+            source["bank_name"],
+            message,
+            source["entry_url"],
+        )]
+    activities, failed_details = _listing_promotions(
+        source,
+        cards,
+        now=now,
+        percent_threshold=percent_threshold,
+        amount_threshold=amount_threshold,
+        activity_cache=activity_cache,
+        cache_stats=cache_stats,
+    )
+    status = "complete" if activities and failed_details == 0 else ("partial" if activities else "failed")
+    message = (
+        f"僅讀取信用卡 tab 對應容器 {panel_id}；已排除存款/外匯、基金/投資、保險、貸款與其他分頁。"
+    )
+    if failed_details:
+        message += f" {failed_details} 個華南官方活動明細暫時無法讀取。"
+    return activities, SourceHealth(
+        source["id"], source["bank_name"], source["entry_url"], listing.final_url,
+        status, len(activities), checked_at, message,
+    ), []

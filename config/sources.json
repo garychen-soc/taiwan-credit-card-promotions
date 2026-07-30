@@ -303,6 +303,49 @@
           "registration_text": "活動一於2026/7/27 15:00~2026/7/31 23:59開放登錄；活動二於2026/7/26 15:00~2026/7/31 23:59開放登錄。"
         }
       ]
+    },
+    {
+      "id": "tcbbank",
+      "bank_name": "台中銀行",
+      "entry_url": "https://www.tcbbank.com.tw/creditcard/J_01.html",
+      "data_url": "https://www.tcbbank.com.tw/WWWAPI/api/Promotion/Entrance?ID=2",
+      "discovery_urls": [
+        "https://www.tcbbank.com.tw/creditcard/J_01.html",
+        "https://www.tcbbank.com.tw/CreditCard/J_01.html"
+      ],
+      "official_domains": [
+        "tcbbank.com.tw"
+      ],
+      "adapter": "tcbbank_card_promotions"
+    },
+    {
+      "id": "kgi",
+      "bank_name": "凱基銀行",
+      "entry_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign",
+      "discovery_urls": [
+        "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign",
+        "https://www.kgibank.com.tw/zh-tw/personal/credit-card"
+      ],
+      "official_domains": [
+        "kgibank.com.tw",
+        "kgibank.com"
+      ],
+      "adapter": "kgi_card_campaigns",
+      "max_listing_pages": 10
+    },
+    {
+      "id": "hncb",
+      "bank_name": "華南銀行",
+      "entry_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/per_finance/service/public_item/best_offer",
+      "discovery_urls": [
+        "https://www.hncb.com.tw/wps/portal/HNCB/card",
+        "https://www.hncb.com.tw/wps/portal/HNCB/per_finance/service/public_item/best_offer"
+      ],
+      "official_domains": [
+        "hncb.com.tw"
+      ],
+      "adapter": "hncb_credit_card_tab",
+      "scope": "aria-label=信用卡 的 tab 所指定 aria-controls 容器；排除存款/外匯、基金/投資、保險、貸款、其他分頁"
     }
   ]
 }
