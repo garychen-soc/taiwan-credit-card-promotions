@@ -31,6 +31,8 @@
 - 高回饋定義：回饋率至少 10%，或單筆／每期最高回饋至少 NT$500
 - 指定入口失效時，只在銀行官方網域尋找替代網址，並輸出警示
 - 已收錄活動保留清單指紋與結構化內容；清單未變更時直接沿用，避免重複讀取明細
+- 手動、每週與每月更新共用程序鎖，同時間只允許一個更新寫入資料
+- 發布前執行覆蓋率防護；大量來源失敗、系統性 DNS 失敗或活動數災難性下降時，只寫診斷報告並保留上一版網站
 
 ## 架構
 
@@ -61,7 +63,7 @@ node --check docs/assets/app.js
 python3 scripts/automation_summary.py
 ```
 
-`scripts/automation_summary.py` 僅讀取更新後的精簡 JSON，供排程直接產生 Slack 摘要，避免重複讀取所有原始頁面內容。
+`scripts/automation_summary.py` 讀取 `reports/latest.json` 產生 Slack 摘要；若發布防護阻擋候選資料，會明確回報網站仍保留的上一版筆數，避免排程誤稱更新成功。
 
 ## 安全邊界
 

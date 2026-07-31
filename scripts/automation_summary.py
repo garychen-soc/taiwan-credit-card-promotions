@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_DATA = ROOT / "docs" / "data" / "promotions.json"
+DEFAULT_DATA = ROOT / "reports" / "latest.json"
 DEFAULT_SITE_URL = "https://garychen-soc.github.io/taiwan-credit-card-promotions/"
 
 
@@ -32,6 +32,23 @@ def build_summary(data: dict, site_url: str) -> str:
     alerts = data.get("alerts", [])
     cache = data.get("cache", {})
     generated = datetime.fromisoformat(data["generated_at"])
+    guard = data.get("publish_guard", {})
+    if guard.get("blocked"):
+        reasons = "、".join(guard.get("reason_codes", [])) or "coverage_guard"
+        return "\n".join([
+            f"*信用卡活動更新已阻擋｜{generated:%Y-%m-%d %H:%M}*",
+            f"原因：{reasons}",
+            (
+                f"來源失敗 {guard.get('source_failed', 0)}/{guard.get('source_total', 0)}｜"
+                f"DNS 失敗 {guard.get('dns_failures', 0)}｜"
+                f"候選有效活動 {guard.get('candidate_active_or_upcoming', 0)} 筆"
+            ),
+            (
+                f"已保留上一版 {guard.get('previous_active_or_upcoming', 0)} 筆有效活動，"
+                "未覆寫網站、未提交、未部署。"
+            ),
+            f"<{site_url}|開啟目前網站>",
+        ])
     health = "、".join(
         f"{source['bank_name']} {source['status']}"
         for source in sources
