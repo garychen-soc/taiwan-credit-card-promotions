@@ -31,6 +31,7 @@ from .extractors import (
     extract_tcbbank,
     extract_ubot,
     extract_yuanta,
+    normalize_registration_url,
 )
 
 
@@ -287,6 +288,14 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
         now,
         cache_stats,
     )
+    for activity in activities:
+        if activity.get("registration_required"):
+            activity["registration_url"] = normalize_registration_url(
+                str(activity.get("bank_id") or ""),
+                str(activity.get("registration_url") or ""),
+            )
+        else:
+            activity["registration_url"] = ""
 
     activities.sort(
         key=lambda item: (

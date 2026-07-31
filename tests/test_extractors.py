@@ -26,10 +26,51 @@ from card_promotions_monitor.extractors import (
     _ubot_cards,
     _yuanta_cards,
     _esun_cards,
+    normalize_registration_url,
 )
 
 
 class RegistrationWindowTests(unittest.TestCase):
+    def test_uses_verified_central_registration_portals(self) -> None:
+        self.assertEqual(
+            normalize_registration_url(
+                "kgi",
+                "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign?category=All",
+            ),
+            "https://www.kgibank.com/creditcard/campaign/registrationlist",
+        )
+        self.assertEqual(
+            normalize_registration_url(
+                "chb",
+                "https://www.bankchb.com/frontend/mashup.jsp?funcId=116a6c4815",
+            ),
+            "https://www.bankchb.com/frontend/CampaignLog.html",
+        )
+        self.assertEqual(
+            normalize_registration_url(
+                "hncb",
+                "https://www.hncb.com.tw/wps/portal/HNCB/card/+https:/invalid.example",
+            ),
+            "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
+        )
+
+    def test_keeps_verified_activity_specific_registration_url(self) -> None:
+        value = "https://cardweb.ubot.com.tw/register_extra"
+        self.assertEqual(normalize_registration_url("ubot", value), value)
+        self.assertEqual(
+            normalize_registration_url(
+                "ubot",
+                "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx?_gl=tracking",
+            ),
+            "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+        )
+
+    def test_rejects_external_registration_link(self) -> None:
+        self.assertEqual(
+            normalize_registration_url("obank", "https://merchant.example/register"),
+            "https://www.o-bank.com/retail/event/event-compaign",
+        )
+
     def test_parses_exact_range(self) -> None:
         values = _registration_windows(
             "須於2026/8/28 16:00~8/31 23:59於官網完成活動登錄。",

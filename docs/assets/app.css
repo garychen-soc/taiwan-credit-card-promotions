@@ -411,6 +411,37 @@ a { color: inherit; }
   background: var(--muted);
   transform: rotate(45deg);
 }
+.filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+.clear-filter-button {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.clear-filter-button:hover {
+  background: var(--ink);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+.registration-link {
+  margin-left: auto;
+  color: var(--ink);
+  font-size: .74rem;
+  font-weight: 850;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .activity-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -686,6 +717,8 @@ a { color: inherit; }
   .filter-panel { top: 6px; padding: 12px; }
   .filter-fields { grid-template-columns: 1fr 1fr; }
   .filter-fields label:last-child { grid-column: 1 / -1; }
+  .filter-actions { display: block; }
+  .clear-filter-button { width: 100%; }
   .transparency-grid { grid-template-columns: 1fr; gap: 30px; }
   .footer-inner { display: block; }
   .footer-inner a { display: inline-block; margin-top: 14px; }
