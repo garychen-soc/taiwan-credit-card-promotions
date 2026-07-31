@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://garychen-soc.github.io/taiwan-credit-card-promotions/assets/og.png">
   <title>刷卡活動登錄雷達</title>
-  <link rel="stylesheet" href="./assets/app.css">
+  <link rel="stylesheet" href="./assets/app.css?v=20260801-registration-links">
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳至主要內容</a>
@@ -148,6 +148,11 @@
               </select>
             </label>
           </div>
+          <div class="filter-actions">
+            <button type="button" class="clear-filter-button" data-clear-filters aria-label="清除所有搜尋與篩選條件">
+              清除搜尋與篩選
+            </button>
+          </div>
         </div>
 
         <div id="activity-list" class="activity-grid" aria-busy="true">
@@ -160,7 +165,7 @@
           <span aria-hidden="true">○</span>
           <h3>沒有符合條件的活動</h3>
           <p>試著切換分類、銀行，或清除搜尋文字。</p>
-          <button id="clear-filters" type="button" class="ghost-button">查看全部活動</button>
+          <button type="button" class="ghost-button" data-clear-filters>查看全部活動</button>
         </div>
       </div>
     </section>
@@ -223,6 +228,7 @@
           <div class="registration-heading">
             <span class="pulse-dot" aria-hidden="true"></span>
             <strong>活動登錄</strong>
+            <a class="registration-link" target="_blank" rel="noopener noreferrer">前往登錄</a>
           </div>
           <div class="registration-windows"></div>
           <p class="registration-review" hidden>官方註明需登錄，精確時間待確認；請先查看原始活動頁。</p>
@@ -237,6 +243,6 @@
   </template>
 
   <noscript><p class="noscript">請啟用 JavaScript 以顯示活動資料與行事曆功能。</p></noscript>
-  <script src="./assets/app.js" defer></script>
+  <script src="./assets/app.js?v=20260801-registration-links" defer></script>
 </body>
 </html>

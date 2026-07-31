@@ -24,7 +24,7 @@ from .models import Alert, Promotion, RegistrationWindow, SourceHealth
 TAIPEI = ZoneInfo("Asia/Taipei")
 ONLINE_TAG = "cub-tags:camapigns/credit-card/online-shopping"
 REGISTRATION_URL_DEFAULTS = {
-    "dbs": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/deeplink/index.html?SERVICE_ID=camp_registration&source=pweb",
+    "dbs": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
     "cathay": "https://www.cathaybk.com.tw/promotion/",
     "ctbc": "https://www.ctbcbank.com/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_register.html",
     "sinopac": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/list.html",
@@ -33,14 +33,34 @@ REGISTRATION_URL_DEFAULTS = {
     "yuanta": "https://www.yuantabank.com.tw/bank/creditCard/productActivityMember/list.do",
     "esun": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
     "sunny": "https://www.sunnybank.com.tw/portal/pt/pt01002/PT01002Index.xhtml",
-    "tcbbank": "https://www.tcbbank.com.tw/CreditCard/RegQuery/Act_login.aspx",
+    "tcbbank": "https://www.tcbbank.com.tw/CreditCard/RegQuery2/Act_login.aspx",
     "kgi": "https://www.kgibank.com/creditcard/campaign/registrationlist",
-    "hncb": "https://www.hncb.com.tw/wps/portal/HNCB/card",
-    "taipei_fubon": "https://cardpromote.taipeifubon.com.tw/promotion/Result",
-    "taishin": "https://mkpcard.taishinbank.com.tw/tscccms/register/select",
+    "hncb": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
+    "taipei_fubon": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
+    "taishin": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
     "first": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
-    "chb": "https://www.bankchb.com/frontend/CampaignLog.jsp",
+    "chb": "https://www.bankchb.com/frontend/CampaignLog.html",
     "ubot": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+}
+STRICT_REGISTRATION_URL_BANKS = frozenset({
+    "dbs",
+    "cathay",
+    "ctbc",
+    "scsb",
+    "yuanta",
+    "tcbbank",
+    "kgi",
+    "hncb",
+    "taipei_fubon",
+    "taishin",
+    "chb",
+})
+REGISTRATION_URL_ALLOWED_HOSTS = {
+    "sinopac": ("bank.sinopac.com",),
+    "obank": ("o-bank.com",),
+    "esun": ("esunbank.com.tw", "esun.co"),
+    "sunny": ("sunnybank.com.tw",),
+    "ubot": ("card.ubot.com.tw", "cardweb.ubot.com.tw"),
 }
 MONTHS = {
     "1月": 1, "2月": 2, "3月": 3, "4月": 4, "5月": 5, "6月": 6,
@@ -411,12 +431,38 @@ def _registration_excerpt(text: str) -> str:
 
 
 def _registration_url(links: list[dict[str, str]], bank_id: str) -> str:
+    if bank_id in STRICT_REGISTRATION_URL_BANKS:
+        return REGISTRATION_URL_DEFAULTS[bank_id]
     for link in links:
         text = link.get("text", "")
-        url = link.get("url", "")
+        url = clean_inline(link.get("url", ""))
         if "登錄" in text and url.startswith("https://"):
-            return url
+            return normalize_registration_url(bank_id, url)
     return REGISTRATION_URL_DEFAULTS[bank_id]
+
+
+def normalize_registration_url(bank_id: str, candidate: str = "") -> str:
+    """Return a verified bank registration portal instead of a text-match link."""
+    default = REGISTRATION_URL_DEFAULTS.get(bank_id, "")
+    if bank_id in STRICT_REGISTRATION_URL_BANKS:
+        return default
+    value = clean_inline(candidate)
+    if not value.startswith("https://"):
+        return default
+    hostname = (urlsplit(value).hostname or "").lower()
+    allowed_hosts = REGISTRATION_URL_ALLOWED_HOSTS.get(bank_id, ())
+    if allowed_hosts and any(
+        hostname == allowed or hostname.endswith(f".{allowed}")
+        for allowed in allowed_hosts
+    ):
+        if (
+            bank_id == "ubot"
+            and hostname == "card.ubot.com.tw"
+            and urlsplit(value).path == "/eCard/activity_login/register_activity.aspx"
+        ):
+            return default
+        return value
+    return default
 
 
 def _discover_replacement(

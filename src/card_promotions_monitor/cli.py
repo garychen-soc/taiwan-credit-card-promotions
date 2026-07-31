@@ -1,9 +1,14 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
 import json
 import sys
+import tempfile
+from copy import deepcopy
+from contextlib import contextmanager
 from datetime import date, datetime, timedelta
+from math import ceil
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -26,15 +31,194 @@ from .extractors import (
     extract_tcbbank,
     extract_ubot,
     extract_yuanta,
+    normalize_registration_url,
 )
 
 
 ROOT = Path(__file__).resolve().parents[2]
+PUBLISH_GUARD_EXIT_CODE = 4
+UPDATE_ALREADY_RUNNING_EXIT_CODE = 3
+DNS_FAILURE_MARKERS = (
+    "nodename nor servname provided",
+    "name or service not known",
+    "temporary failure in name resolution",
+    "could not resolve host",
+    "getaddrinfo failed",
+)
 
 
 def load_json(path: Path):
     with path.open(encoding="utf-8") as handle:
         return json.load(handle)
+
+
+@contextmanager
+def update_lock(path: Path):
+    """Prevent scheduled and manual refreshes from writing the same snapshot."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a+", encoding="utf-8") as handle:
+        try:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as exc:
+            raise RuntimeError("promotion refresh already in progress") from exc
+        try:
+            yield
+        finally:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+
+
+def _is_current_activity(item: dict, today: date) -> bool:
+    end_text = str(item.get("end_date") or "")
+    if end_text:
+        try:
+            if date.fromisoformat(end_text) < today:
+                return False
+        except ValueError:
+            pass
+    return True
+
+
+def _lifecycle_for(item: dict, today: date) -> str:
+    start_text = str(item.get("start_date") or "")
+    end_text = str(item.get("end_date") or "")
+    try:
+        if start_text and date.fromisoformat(start_text) > today:
+            return "upcoming"
+        if end_text and date.fromisoformat(end_text) < today:
+            return "ended"
+    except ValueError:
+        return str(item.get("lifecycle") or "active")
+    return "active"
+
+
+def retain_failed_source_activities(
+    activities: list[dict],
+    health: list[dict],
+    previous_payload: dict | None,
+    now: datetime,
+    cache_stats: dict,
+) -> None:
+    """Keep still-current verified activities when an entire source is unavailable."""
+    if not isinstance(previous_payload, dict):
+        return
+    failed_source_ids = {
+        item.get("id")
+        for item in health
+        if item.get("status") == "failed" and int(item.get("activity_count") or 0) == 0
+    }
+    if not failed_source_ids:
+        return
+
+    existing_ids = {item.get("id") for item in activities}
+    retained_by_source: dict[str, int] = {}
+    for cached in previous_payload.get("activities", []):
+        if not isinstance(cached, dict):
+            continue
+        source_id = cached.get("bank_id")
+        if source_id not in failed_source_ids or cached.get("id") in existing_ids:
+            continue
+        if not _is_current_activity(cached, now.date()):
+            continue
+        retained = deepcopy(cached)
+        retained["lifecycle"] = _lifecycle_for(retained, now.date())
+        activities.append(retained)
+        existing_ids.add(retained.get("id"))
+        retained_by_source[source_id] = retained_by_source.get(source_id, 0) + 1
+
+    retained_total = sum(retained_by_source.values())
+    cache_stats["source_fallback_activities"] = retained_total
+    for item in health:
+        retained_count = retained_by_source.get(item.get("id"), 0)
+        if not retained_count:
+            continue
+        item["retained_activity_count"] = retained_count
+        suffix = f"沿用上一版 {retained_count} 筆仍在效期內的活動；未視為本次成功讀取。"
+        item["message"] = f"{item.get('message', '').strip()} {suffix}".strip()
+
+
+def assess_publish_guard(payload: dict, previous_payload: dict | None) -> dict:
+    health = payload.get("source_health", [])
+    source_total = len(health)
+    source_failed = sum(1 for item in health if item.get("status") == "failed")
+    dns_failures = sum(
+        1
+        for item in health
+        if any(
+            marker in str(item.get("message") or "").lower()
+            for marker in DNS_FAILURE_MARKERS
+        )
+    )
+    candidate_active = int(payload.get("summary", {}).get("active_or_upcoming") or 0)
+    previous_active = 0
+    if isinstance(previous_payload, dict):
+        previous_active = int(
+            previous_payload.get("summary", {}).get("active_or_upcoming") or 0
+        )
+    drop_ratio = (
+        max(0.0, 1 - (candidate_active / previous_active))
+        if previous_active
+        else 0.0
+    )
+
+    reason_codes: list[str] = []
+    if source_total and dns_failures >= max(3, ceil(source_total * 0.5)):
+        reason_codes.append("systemic_dns_failure")
+    if source_total and source_failed >= ceil(source_total * 0.8):
+        reason_codes.append("catastrophic_source_failure")
+    if previous_active and source_failed >= 2 and drop_ratio >= 0.5:
+        reason_codes.append("catastrophic_activity_regression")
+
+    blocked = bool(reason_codes)
+    return {
+        "status": "blocked" if blocked else "passed",
+        "blocked": blocked,
+        "reason_codes": reason_codes,
+        "source_total": source_total,
+        "source_failed": source_failed,
+        "dns_failures": dns_failures,
+        "candidate_active_or_upcoming": candidate_active,
+        "previous_active_or_upcoming": previous_active,
+        "activity_drop_percent": round(drop_ratio * 100, 1),
+        "published_snapshot_preserved": blocked and isinstance(previous_payload, dict),
+    }
+
+
+def write_json_atomic(path: Path, payload: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    encoded = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    temporary_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=path.parent,
+            prefix=f".{path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as handle:
+            handle.write(encoded)
+            temporary_path = Path(handle.name)
+        temporary_path.replace(path)
+    finally:
+        if temporary_path and temporary_path.exists():
+            temporary_path.unlink()
+
+
+def persist_payload(
+    payload: dict,
+    previous_payload: dict | None,
+    output_path: Path,
+    report_path: Path,
+) -> int:
+    guard = assess_publish_guard(payload, previous_payload)
+    payload["publish_guard"] = guard
+    write_json_atomic(report_path, payload)
+    if guard["blocked"]:
+        print(json.dumps({"summary": payload["summary"], "publish_guard": guard}, ensure_ascii=False))
+        return PUBLISH_GUARD_EXIT_CODE
+    write_json_atomic(output_path, payload)
+    print(json.dumps(payload["summary"], ensure_ascii=False))
+    return 0 if all(item["status"] != "failed" for item in payload["source_health"]) else 2
 
 
 def build_payload(config: dict, now: datetime, previous_payload: dict | None = None) -> dict:
@@ -96,6 +280,22 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
         activities.extend(item.to_dict() for item in found)
         health.append(source_health.to_dict())
         alerts.extend(item.to_dict() for item in source_alerts)
+
+    retain_failed_source_activities(
+        activities,
+        health,
+        previous_payload,
+        now,
+        cache_stats,
+    )
+    for activity in activities:
+        if activity.get("registration_required"):
+            activity["registration_url"] = normalize_registration_url(
+                str(activity.get("bank_id") or ""),
+                str(activity.get("registration_url") or ""),
+            )
+        else:
+            activity["registration_url"] = ""
 
     activities.sort(
         key=lambda item: (
@@ -167,24 +367,30 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--config", type=Path, default=ROOT / "config" / "sources.json")
     parser.add_argument("--output", type=Path, default=ROOT / "docs" / "data" / "promotions.json")
     parser.add_argument("--report", type=Path, default=ROOT / "reports" / "latest.json")
+    parser.add_argument("--lock", type=Path, default=ROOT / "reports" / "update.lock")
     args = parser.parse_args(argv)
 
-    config = load_json(args.config)
-    previous_payload = None
-    if args.output.exists():
-        try:
-            previous_payload = load_json(args.output)
-        except (json.JSONDecodeError, OSError):
+    try:
+        with update_lock(args.lock):
+            config = load_json(args.config)
             previous_payload = None
-    now = datetime.now(ZoneInfo(config.get("timezone", "Asia/Taipei")))
-    payload = build_payload(config, now, previous_payload)
-    encoded = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.report.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(encoded, encoding="utf-8")
-    args.report.write_text(encoded, encoding="utf-8")
-    print(json.dumps(payload["summary"], ensure_ascii=False))
-    return 0 if all(item["status"] != "failed" for item in payload["source_health"]) else 2
+            if args.output.exists():
+                try:
+                    previous_payload = load_json(args.output)
+                except (json.JSONDecodeError, OSError):
+                    previous_payload = None
+            now = datetime.now(ZoneInfo(config.get("timezone", "Asia/Taipei")))
+            payload = build_payload(config, now, previous_payload)
+            return persist_payload(payload, previous_payload, args.output, args.report)
+    except RuntimeError as exc:
+        if str(exc) != "promotion refresh already in progress":
+            raise
+        print(json.dumps({
+            "status": "skipped",
+            "reason": "update_already_running",
+            "message": "已有信用卡活動更新正在執行，本次未讀取或寫入資料。",
+        }, ensure_ascii=False))
+        return UPDATE_ALREADY_RUNNING_EXIT_CODE
 
 
 if __name__ == "__main__":

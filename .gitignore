@@ -5,5 +5,5 @@ __pycache__/
 .venv/
 reports/*.json
 reports/*.md
+reports/*.lock
 !reports/.gitkeep
-

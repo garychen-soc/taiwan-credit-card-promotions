@@ -34,7 +34,7 @@
     resultCount: document.querySelector("#result-count"),
     activityList: document.querySelector("#activity-list"),
     emptyState: document.querySelector("#empty-state"),
-    clearFilters: document.querySelector("#clear-filters"),
+    clearFilters: document.querySelectorAll("[data-clear-filters]"),
     sourceHealthList: document.querySelector("#source-health-list"),
     alertsPanel: document.querySelector("#alerts-panel"),
     agendaTemplate: document.querySelector("#agenda-item-template"),
@@ -154,7 +154,7 @@
       title: `[登錄] ${activity.bank_name}｜${activity.title}`,
       start: window.start,
       end: window.end,
-      details: `${window.label}\n${window.source_text}\n\n官方活動頁：${activity.source_url}`,
+      details: `${window.label}\n${window.source_text || ""}\n\n官方活動頁：${activity.source_url}`,
       url: activity.registration_url || activity.source_url,
       filename: `${activity.bank_name}-${activity.merchant}-登錄提醒`
     };
@@ -208,6 +208,7 @@
       node.querySelector("h4").textContent = item.title;
       const register = node.querySelector(".agenda-register");
       register.href = item.registration_url || item.source_url;
+      register.textContent = activity.bank_id === "dbs" ? "查看登錄方式" : "前往登錄";
       const config = calendarConfigForWindow(activity, item);
       const google = node.querySelector(".agenda-google");
       google.href = googleCalendarUrl(config);
@@ -278,6 +279,9 @@
     if (!activity.registration_required) {
       registrationBox.hidden = true;
     } else {
+      const registrationLink = node.querySelector(".registration-link");
+      registrationLink.href = activity.registration_url || activity.source_url;
+      registrationLink.textContent = activity.bank_id === "dbs" ? "查看登錄方式" : "前往登錄";
       const windowsBox = node.querySelector(".registration-windows");
       const windows = relevantWindows(activity);
       windows.forEach((window) => {
@@ -427,6 +431,18 @@
     renderActivities();
   }
 
+  function clearAllFilters() {
+    state.query = "";
+    state.bank = "";
+    state.category = "";
+    state.sort = "recommended";
+    el.searchInput.value = "";
+    el.bankSelect.value = "";
+    el.categorySelect.value = "";
+    el.sortSelect.value = "recommended";
+    setQuickFilter("all");
+  }
+
   function bindEvents() {
     el.quickFilters.addEventListener("click", (event) => {
       const button = event.target.closest("button[data-filter]");
@@ -448,17 +464,7 @@
       state.sort = el.sortSelect.value;
       renderActivities();
     });
-    el.clearFilters.addEventListener("click", () => {
-      state.query = "";
-      state.bank = "";
-      state.category = "";
-      state.sort = "recommended";
-      el.searchInput.value = "";
-      el.bankSelect.value = "";
-      el.categorySelect.value = "";
-      el.sortSelect.value = "recommended";
-      setQuickFilter("all");
-    });
+    el.clearFilters.forEach((button) => button.addEventListener("click", clearAllFilters));
     document.querySelectorAll("[data-jump-filter]").forEach((button) => {
       button.addEventListener("click", () => {
         setQuickFilter(button.dataset.jumpFilter);
@@ -497,4 +503,3 @@
 
   init();
 })();
-
