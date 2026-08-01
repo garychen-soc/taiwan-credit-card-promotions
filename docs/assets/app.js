@@ -10,7 +10,8 @@
     bank: "",
     category: "",
     query: "",
-    sort: "recommended"
+    sort: "recommended",
+    agendaDate: ""
   };
 
   const el = {
@@ -217,14 +218,43 @@
     });
   }
 
+  function agendaItemsFor(dateKey) {
+    const values = [];
+    state.activities.forEach((activity) => {
+      (activity.registration_windows || []).forEach((window) => {
+        if (!window.start || !window.start.startsWith(dateKey)) return;
+        values.push({
+          ...window,
+          activity_id: activity.id,
+          bank_name: activity.bank_name,
+          title: activity.title,
+          merchant: activity.merchant,
+          registration_url: activity.registration_url,
+          source_url: activity.source_url
+        });
+      });
+    });
+    return values.sort((a, b) => (
+      a.start.localeCompare(b.start)
+      || a.bank_name.localeCompare(b.bank_name, "zh-Hant")
+      || a.title.localeCompare(b.title, "zh-Hant")
+    ));
+  }
+
   function renderAgenda() {
-    const agenda = state.data.registration_agenda;
-    const today = agenda.today;
-    const tomorrow = agenda.tomorrow;
-    el.todayDate.textContent = dateFmt.format(parseDate(today.date));
-    el.tomorrowDate.textContent = dateFmt.format(parseDate(tomorrow.date));
-    renderAgendaColumn(el.todayAgenda, today.date, today.items, el.todayCount);
-    renderAgendaColumn(el.tomorrowAgenda, tomorrow.date, tomorrow.items, el.tomorrowCount);
+    const today = taipeiDateKey();
+    const tomorrow = addDays(today, 1);
+    state.agendaDate = today;
+    el.todayDate.textContent = dateFmt.format(parseDate(today));
+    el.tomorrowDate.textContent = dateFmt.format(parseDate(tomorrow));
+    renderAgendaColumn(el.todayAgenda, today, agendaItemsFor(today), el.todayCount);
+    renderAgendaColumn(el.tomorrowAgenda, tomorrow, agendaItemsFor(tomorrow), el.tomorrowCount);
+  }
+
+  function refreshDateSensitiveViews() {
+    if (!state.data || state.agendaDate === taipeiDateKey()) return;
+    renderAgenda();
+    renderActivities();
   }
 
   function formatPeriod(activity) {
@@ -471,6 +501,9 @@
         document.querySelector("#catalog-title").scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) refreshDateSensitiveViews();
+    });
   }
 
   async function init() {
@@ -489,6 +522,7 @@
       renderAgenda();
       renderHealth();
       renderActivities();
+      window.setInterval(refreshDateSensitiveViews, 60000);
     } catch (error) {
       el.sourceDot.classList.add("is-error");
       el.updateLabel.textContent = "資料載入失敗";
