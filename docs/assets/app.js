@@ -3,6 +3,8 @@
 
   const DATA_URL = "./data/promotions.json";
   const DAY_MS = 86400000;
+  const MINUTE_MS = 60000;
+  const REGISTRATION_CALENDAR_DURATION_MINUTES = 15;
   const state = {
     data: null,
     activities: [],
@@ -84,6 +86,12 @@
     return taipeiDateKey(new Date(date.getTime() + days * DAY_MS));
   }
 
+  function addMinutes(value, minutes) {
+    const date = parseDate(value);
+    if (!date) return value;
+    return new Date(date.getTime() + minutes * MINUTE_MS).toISOString();
+  }
+
   function escapeIcs(value) {
     return String(value ?? "")
       .replaceAll("\\", "\\\\")
@@ -154,7 +162,7 @@
     return {
       title: `[登錄] ${activity.bank_name}｜${activity.title}`,
       start: window.start,
-      end: window.end,
+      end: addMinutes(window.start, REGISTRATION_CALENDAR_DURATION_MINUTES),
       details: `${window.label}\n${window.source_text || ""}\n\n官方活動頁：${activity.source_url}`,
       url: activity.registration_url || activity.source_url,
       filename: `${activity.bank_name}-${activity.merchant}-登錄提醒`
