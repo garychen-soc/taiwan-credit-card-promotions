@@ -35,8 +35,10 @@ jobs:
           python -m json.tool config/sources.json >/dev/null
           python -m json.tool docs/data/promotions.json >/dev/null
           node --check docs/assets/time-state.js
+          node --check docs/assets/catalog-state.js
           node --check docs/assets/app.js
           node --test tests/test_time_state.js
+          node --test tests/test_catalog_state.js
 
   deploy:
     if: github.event_name != 'pull_request'
