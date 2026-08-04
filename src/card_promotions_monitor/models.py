@@ -34,6 +34,9 @@ class Promotion:
     registration_text: str = ""
     terms_sections: dict[str, str] = field(default_factory=dict)
     terms_raw: str = ""
+    parent_activity_id: str = ""
+    activity_periods: list[dict[str, str]] = field(default_factory=list)
+    reward_tiers: list[dict[str, Any]] = field(default_factory=list)
     registration_url: str = ""
     registration_windows: list[RegistrationWindow] = field(default_factory=list)
     max_reward_percent: float | None = None
@@ -44,6 +47,8 @@ class Promotion:
     tags: list[str] = field(default_factory=list)
     official_status: str = "published"
     review_required: bool = False
+    needs_review: bool = False
+    review_message: str = ""
     source_fingerprint: str = ""
     last_detail_checked_at: str = ""
 

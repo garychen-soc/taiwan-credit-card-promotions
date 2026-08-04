@@ -402,7 +402,12 @@ def _registration_windows(
                 year += 1
                 month = 1
 
-    return sorted(windows, key=lambda item: item.start)
+    by_start: dict[str, RegistrationWindow] = {}
+    for window in sorted(windows, key=lambda item: (item.start, item.end or "")):
+        existing = by_start.get(window.start)
+        if existing is None or (existing.end is None and window.end is not None):
+            by_start[window.start] = window
+    return sorted(by_start.values(), key=lambda item: item.start)
 
 
 def _registration_excerpt(text: str) -> str:
@@ -503,6 +508,133 @@ def _terms_content(text: str) -> tuple[str, dict[str, str]]:
         sections[key] = clipped
         remaining -= len(clipped)
     return raw, sections
+
+
+SUBACTIVITY_HEADING = re.compile(
+    r"(?m)^(?:【((?:活動[一二三四五六七八九十]|玉山卡|玉山\s*Pi|玉山Unicard)[^】]{0,45})】([^\n]{0,80})"
+    r"|(活動[一二三四五六七八九十]))\s*$"
+)
+
+
+def _subactivity_blocks(text: str) -> list[tuple[str, str]]:
+    """Split only pages with two or more reliable, repeated activity headings."""
+    primary = text.split("\n注意事項\n", 1)[0]
+    matches = list(SUBACTIVITY_HEADING.finditer(primary))
+    if len(matches) < 2:
+        return []
+    blocks: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for index, match in enumerate(matches):
+        heading = clean_inline(
+            f"{match.group(1) or ''} {match.group(2) or ''}"
+            if match.group(1) else (match.group(3) or "")
+        )
+        if heading in seen:
+            continue
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(primary)
+        block = primary[match.start():end].strip()
+        if not re.search(r"活動(?:期間|日期)[：:]", block):
+            continue
+        seen.add(heading)
+        blocks.append((heading, block))
+    return blocks if len(blocks) >= 2 else []
+
+
+def _subactivity_period(
+    text: str,
+    fallback_start: date,
+    fallback_end: date | None,
+    today: date,
+) -> tuple[date, date | None]:
+    periods = _activity_periods(text, fallback_start.year)
+    if periods:
+        return periods[0]["start"], periods[-1]["end"]
+    parsed = _official_detail_period(text, fallback_start, fallback_end, today)
+    single = re.search(
+        r"活動日期[：:\s]*(20\d{2})/(\d{1,2})/(\d{1,2})",
+        _normalize_roc_dates(text),
+    )
+    if single:
+        try:
+            value = date(int(single.group(1)), int(single.group(2)), int(single.group(3)))
+            return value, value
+        except ValueError:
+            pass
+    return parsed
+
+
+def _activity_periods(text: str, default_year: int) -> list[dict[str, Any]]:
+    normalized = _normalize_roc_dates(text)
+    pattern = re.compile(
+        r"(?m)^(第一波|第二波|第三波)?\s*"
+        r"((?:20\d{2}/)?\d{1,2}/\d{1,2}\s*(?:[~～－–—-]|至)\s*"
+        r"(?:20\d{2}/)?\d{1,2}/\d{1,2})\s*$"
+    )
+    values: list[dict[str, Any]] = []
+    for match in pattern.finditer(normalized):
+        parsed = _parse_period(match.group(2), default_year)
+        if not parsed:
+            continue
+        start, end = parsed
+        value = {"start": start, "end": end or start, "label": match.group(1) or "活動期間"}
+        if value not in values:
+            values.append(value)
+    return sorted(values, key=lambda item: item["start"])
+
+
+def _reward_tiers(text: str) -> list[dict[str, int]]:
+    tiers: list[dict[str, int]] = []
+    pattern = re.compile(
+        r"(?m)^([\d,]+)元\s*\n([\d,]+)元\s*\n([\d,]+)元\s*\n(\d+)名\s*$"
+    )
+    for match in pattern.finditer(text):
+        tiers.append({
+            "spend_amount_twd": int(match.group(1).replace(",", "")),
+            "reward_amount_twd": int(match.group(2).replace(",", "")),
+            "installment_reward_amount_twd": int(match.group(3).replace(",", "")),
+            "quota": int(match.group(4)),
+        })
+    return tiers
+
+
+def _promotion_invariants(promotion: Promotion) -> None:
+    start = _date_from_iso(promotion.start_date)
+    end = _date_from_iso(promotion.end_date)
+    if not promotion.activity_periods and start and promotion.terms_raw:
+        parsed_periods = _activity_periods(promotion.terms_raw, start.year)
+        promotion.activity_periods = [
+            {"start": item["start"].isoformat(), "end": item["end"].isoformat(), "label": item["label"]}
+            for item in parsed_periods
+        ]
+        if len(parsed_periods) > 1:
+            start = parsed_periods[0]["start"]
+            end = parsed_periods[-1]["end"]
+            promotion.start_date = start.isoformat()
+            promotion.end_date = end.isoformat()
+    issues: list[str] = []
+    ordered = sorted(
+        promotion.registration_windows,
+        key=lambda item: item.start,
+    )
+    for window in ordered:
+        window_start = datetime.fromisoformat(window.start)
+        window_end = datetime.fromisoformat(window.end) if window.end else None
+        if window_end and window_end <= window_start:
+            issues.append("登錄截止時間不晚於開始時間")
+        if start and window_start.date() < start:
+            issues.append("登錄時間早於活動期間")
+        if end and window_start.date() > end:
+            issues.append("登錄時間晚於活動期間")
+    for previous, current in zip(ordered, ordered[1:]):
+        previous_end = datetime.fromisoformat(previous.end) if previous.end else None
+        current_start = datetime.fromisoformat(current.start)
+        if previous_end and current_start < previous_end:
+            issues.append("同一子活動的登錄視窗互相重疊")
+            break
+    if issues:
+        promotion.needs_review = True
+        promotion.review_required = True
+        promotion.review_message = "；".join(dict.fromkeys(issues)) + "，請至官方頁確認對應的登錄時間。"
 
 
 def _registration_url(links: list[dict[str, str]], bank_id: str) -> str:
@@ -729,6 +861,7 @@ def extract_dbs(
             registration_text=registration_text,
             terms_sections=terms_sections,
             terms_raw=terms_raw,
+            reward_tiers=_reward_tiers(text),
             registration_url=_registration_url(page.links, "dbs") if registration_required else "",
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -1507,7 +1640,7 @@ def extract_sinopac(
             registration_url = _registration_url(page.links, "sinopac") if page else public_url
             if registration_url == REGISTRATION_URL_DEFAULTS["sinopac"]:
                 registration_url = public_url
-        activities.append(Promotion(
+        promotion = Promotion(
             id=card["id"],
             bank_id=source["id"],
             bank_name=source["bank_name"],
@@ -1524,6 +1657,7 @@ def extract_sinopac(
             registration_text=registration_text,
             terms_sections=terms_sections,
             terms_raw=terms_raw,
+            reward_tiers=_reward_tiers(text),
             registration_url=registration_url,
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -1535,7 +1669,9 @@ def extract_sinopac(
             review_required=registration_required and not windows,
             source_fingerprint=card["fingerprint"],
             last_detail_checked_at=checked_at,
-        ))
+        )
+        _promotion_invariants(promotion)
+        activities.append(promotion)
 
     status = "complete" if activities and failed_details == 0 and not alerts else ("partial" if activities else "failed")
     message = _detail_failure_message(failed_details, "官方活動明細", invalid_urls)
@@ -1691,7 +1827,7 @@ def extract_scsb(
         registration_url = _registration_url(page.links, "scsb") if registration_required and page else (
             REGISTRATION_URL_DEFAULTS["scsb"] if registration_required else ""
         )
-        activities.append(Promotion(
+        promotion = Promotion(
             id=card["id"],
             bank_id=source["id"],
             bank_name=source["bank_name"],
@@ -1708,6 +1844,7 @@ def extract_scsb(
             registration_text=registration_text,
             terms_sections=terms_sections,
             terms_raw=terms_raw,
+            reward_tiers=_reward_tiers(text),
             registration_url=registration_url,
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -1719,7 +1856,9 @@ def extract_scsb(
             review_required=registration_required and not windows,
             source_fingerprint=card["fingerprint"],
             last_detail_checked_at=checked_at,
-        ))
+        )
+        _promotion_invariants(promotion)
+        activities.append(promotion)
 
     status = "complete" if activities and failed_details == 0 and not alerts else ("partial" if activities else "failed")
     message = _detail_failure_message(failed_details, "官方活動明細", invalid_urls)
@@ -2230,17 +2369,27 @@ def extract_esun(
 
     urls_to_fetch: list[str] = []
     for card in cards:
-        card["cached"] = reuse_cached_promotion(
-            cache,
-            activity_id=card["id"],
-            fingerprint=card["fingerprint"],
-            now=now,
-            source_entry_url=source["entry_url"],
-            percent_threshold=percent_threshold,
-            amount_threshold=amount_threshold,
-            stats=stats,
-            avoids_detail_request=True,
-        )
+        cached_ids = [
+            activity_id
+            for activity_id, item in cache.items()
+            if item.get("parent_activity_id") == card["id"]
+        ] or ([card["id"]] if card["id"] in cache else [])
+        cached_items = [
+            value
+            for activity_id in cached_ids
+            if (value := reuse_cached_promotion(
+                cache,
+                activity_id=activity_id,
+                fingerprint=card["fingerprint"],
+                now=now,
+                source_entry_url=source["entry_url"],
+                percent_threshold=percent_threshold,
+                amount_threshold=amount_threshold,
+                stats=stats,
+                avoids_detail_request=True,
+            )) is not None
+        ]
+        card["cached"] = cached_items if cached_ids and len(cached_items) == len(cached_ids) else []
         if not card["cached"]:
             urls_to_fetch.append(card["url"])
     record_detail_requests(stats, len(urls_to_fetch))
@@ -2251,34 +2400,10 @@ def extract_esun(
     invalid_urls: list[str] = []
     for card in cards:
         if card["cached"]:
-            cached = card["cached"]
-            reward_percent, reward_amount = _reward_values(
-                f"{card['title']} {card['summary']}"
-            )
-            cached.max_reward_percent = reward_percent
-            cached.max_reward_amount_twd = reward_amount
-            cached.high_return = (
-                (reward_percent is not None and reward_percent >= percent_threshold)
-                or (reward_amount is not None and reward_amount >= amount_threshold)
-            )
-            cached_start = _date_from_iso(cached.start_date) or today
-            cached_end = _date_from_iso(cached.end_date)
-            cached.registration_windows = _registration_windows(
-                cached.registration_text,
-                cached_start.year,
-                cached_start,
-                cached_end,
-            )
-            cached.registration_required = bool(
-                cached.registration_windows
-                or _has_registration_requirement(cached.registration_text)
-            )
-            cached.review_required = (
-                cached.registration_required and not cached.registration_windows
-            )
-            cached.featured = cached.registration_required or cached.high_return
-            if cached.lifecycle != "ended":
-                activities.append(cached)
+            for cached in card["cached"]:
+                _promotion_invariants(cached)
+                if cached.lifecycle != "ended":
+                    activities.append(cached)
             continue
         result = fetched[card["url"]]
         if isinstance(result, Exception):
@@ -2294,60 +2419,74 @@ def extract_esun(
             page = parse_page(result.text, result.final_url)
             text = page.text
             public_url = result.final_url
-        start, end = _period_from_text(text, today)
-        if end and end < today:
-            continue
-        registration_text = _registration_excerpt(text)
-        terms_raw, terms_sections = _terms_content(text)
-        windows = _registration_windows(registration_text or text, start.year, start, end)
-        registration_required = bool(windows or _has_registration_requirement(text))
-        # 玉山明細頁的全站風險揭露含循環利率等百分比；回饋門檻只採
-        # 官方優惠清單的標題與摘要，避免把頁尾利率誤判為活動回饋。
-        reward_percent, reward_amount = _reward_values(
-            f"{card['title']} {card['summary']}"
-        )
-        high_return = (
-            (reward_percent is not None and reward_percent >= percent_threshold)
-            or (reward_amount is not None and reward_amount >= amount_threshold)
-        )
-        categories = _categories(
-            f"{card['title']} {card['summary']} {text[:2200]}",
-            None,
-        )
-        registration_url = (
-            _registration_url(page.links, "esun")
-            if registration_required and page
-            else (public_url if registration_required else "")
-        )
-        activities.append(Promotion(
-            id=card["id"],
-            bank_id=source["id"],
-            bank_name=source["bank_name"],
-            title=card["title"],
-            merchant=card["title"],
-            categories=categories,
-            start_date=start.isoformat(),
-            end_date=_date_text(end),
-            summary=card["summary"][:700],
-            source_url=public_url,
-            source_entry_url=source["entry_url"],
-            observed_at=checked_at,
-            registration_required=registration_required,
-            registration_text=registration_text,
-            terms_sections=terms_sections,
-            terms_raw=terms_raw,
-            registration_url=registration_url,
-            registration_windows=windows,
-            max_reward_percent=reward_percent,
-            max_reward_amount_twd=reward_amount,
-            high_return=high_return,
-            featured=registration_required or high_return,
-            lifecycle=_lifecycle(start, end, today),
-            tags=list(dict.fromkeys([card["title"], source["bank_name"], *categories])),
-            review_required=registration_required and not windows,
-            source_fingerprint=card["fingerprint"],
-            last_detail_checked_at=checked_at,
-        ))
+        parent_start, parent_end = _period_from_text(text, today)
+        blocks = _subactivity_blocks(text)
+        candidates = blocks or [(card["title"], text)]
+        for heading, activity_text in candidates:
+            start, end = _subactivity_period(
+                activity_text, parent_start, parent_end, today,
+            )
+            if end and end < today:
+                continue
+            registration_text = _registration_excerpt(activity_text)
+            terms_raw, terms_sections = _terms_content(activity_text)
+            windows = _registration_windows(
+                registration_text or activity_text, start.year, start, end,
+            )
+            registration_required = bool(
+                windows or _has_registration_requirement(activity_text)
+            )
+            title = f"{card['title']}｜{heading}" if blocks else card["title"]
+            reward_text = (
+                f"{title} {card['summary']} {activity_text[:4500]}"
+                if blocks else f"{card['title']} {card['summary']}"
+            )
+            reward_percent, reward_amount = _reward_values(reward_text)
+            high_return = (
+                (reward_percent is not None and reward_percent >= percent_threshold)
+                or (reward_amount is not None and reward_amount >= amount_threshold)
+            )
+            categories = _categories(
+                f"{title} {card['summary']} {activity_text[:2200]}", None,
+            )
+            registration_url = (
+                _registration_url(page.links, "esun")
+                if registration_required and page
+                else (public_url if registration_required else "")
+            )
+            promotion = Promotion(
+                id=(
+                    _stable_id(source["id"], f"{public_url}|{heading}|{start.isoformat()}")
+                    if blocks else card["id"]
+                ),
+                parent_activity_id=card["id"],
+                activity_periods=[
+                    {"start": item["start"].isoformat(), "end": item["end"].isoformat(), "label": item["label"]}
+                    for item in _activity_periods(activity_text, start.year)
+                ],
+                bank_id=source["id"], bank_name=source["bank_name"],
+                title=title, merchant=card["title"], categories=categories,
+                start_date=start.isoformat(), end_date=_date_text(end),
+                summary=(clean_inline(activity_text.split("\n", 2)[-1]) or card["summary"])[:700],
+                source_url=public_url, source_entry_url=source["entry_url"],
+                observed_at=checked_at,
+                registration_required=registration_required,
+                registration_text=registration_text,
+                terms_sections=terms_sections, terms_raw=terms_raw,
+                registration_url=registration_url, registration_windows=windows,
+                reward_tiers=_reward_tiers(activity_text),
+                max_reward_percent=reward_percent,
+                max_reward_amount_twd=reward_amount,
+                high_return=high_return,
+                featured=registration_required or high_return,
+                lifecycle=_lifecycle(start, end, today),
+                tags=list(dict.fromkeys([card["title"], heading, source["bank_name"], *categories])),
+                review_required=registration_required and not windows,
+                source_fingerprint=card["fingerprint"],
+                last_detail_checked_at=checked_at,
+            )
+            _promotion_invariants(promotion)
+            activities.append(promotion)
 
     status = (
         "complete"
@@ -2754,17 +2893,27 @@ def _listing_promotions(
     urls_to_fetch: list[str] = []
 
     for card in cards:
-        card["cached"] = reuse_cached_promotion(
-            cache,
-            activity_id=card["id"],
-            fingerprint=card["fingerprint"],
-            now=now,
-            source_entry_url=source["entry_url"],
-            percent_threshold=percent_threshold,
-            amount_threshold=amount_threshold,
-            stats=stats,
-            avoids_detail_request=bool(card["fetch_detail"]),
-        )
+        cached_ids = [
+            activity_id
+            for activity_id, item in cache.items()
+            if item.get("parent_activity_id") == card["id"]
+        ] or ([card["id"]] if card["id"] in cache else [])
+        cached_items = [
+            value
+            for activity_id in cached_ids
+            if (value := reuse_cached_promotion(
+                cache,
+                activity_id=activity_id,
+                fingerprint=card["fingerprint"],
+                now=now,
+                source_entry_url=source["entry_url"],
+                percent_threshold=percent_threshold,
+                amount_threshold=amount_threshold,
+                stats=stats,
+                avoids_detail_request=bool(card["fetch_detail"]),
+            )) is not None
+        ]
+        card["cached"] = cached_items if cached_ids and len(cached_items) == len(cached_ids) else []
         if not card["cached"] and card["fetch_detail"]:
             urls_to_fetch.append(card["url"])
 
@@ -2777,9 +2926,11 @@ def _listing_promotions(
 
     for card in cards:
         if card["cached"]:
-            if card.get("featured"):
-                card["cached"].featured = True
-            activities.append(card["cached"])
+            for cached in card["cached"]:
+                if card.get("featured"):
+                    cached.featured = True
+                _promotion_invariants(cached)
+                activities.append(cached)
             continue
         page = None
         text = f"{card['title']} {card['summary']}"
@@ -2843,7 +2994,7 @@ def _listing_promotions(
                 if page
                 else REGISTRATION_URL_DEFAULTS[source["id"]]
             )
-        activities.append(Promotion(
+        promotion = Promotion(
             id=card["id"],
             bank_id=source["id"],
             bank_name=source["bank_name"],
@@ -2860,6 +3011,7 @@ def _listing_promotions(
             registration_text=registration_text,
             terms_sections=terms_sections,
             terms_raw=terms_raw,
+            reward_tiers=_reward_tiers(text),
             registration_url=registration_url,
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -2880,7 +3032,63 @@ def _listing_promotions(
             review_required=registration_required and not windows,
             source_fingerprint=card["fingerprint"],
             last_detail_checked_at=checked_at,
-        ))
+        )
+        blocks = _subactivity_blocks(text)
+        if blocks and source["id"] == "ubot":
+            for heading, activity_text in blocks:
+                child = Promotion.from_dict(promotion.to_dict())
+                child.id = _stable_id(
+                    source["id"], f"{card['url']}|{heading}",
+                )
+                child.parent_activity_id = card["id"]
+                child.activity_periods = [
+                    {"start": item["start"].isoformat(), "end": item["end"].isoformat(), "label": item["label"]}
+                    for item in _activity_periods(activity_text, start.year)
+                ]
+                child.title = f"{card['title']}｜{heading}"
+                child.start_date, child.end_date = (
+                    value.isoformat() if value else None
+                    for value in _subactivity_period(
+                        activity_text, start, end, today,
+                    )
+                )
+                child.summary = clean_inline(activity_text)[:700]
+                child.registration_text = _registration_excerpt(activity_text)
+                child.registration_windows = _registration_windows(
+                    child.registration_text or activity_text,
+                    (_date_from_iso(child.start_date) or today).year,
+                    _date_from_iso(child.start_date),
+                    _date_from_iso(child.end_date),
+                )
+                child.registration_required = bool(
+                    child.registration_windows
+                    or _has_registration_requirement(activity_text)
+                )
+                child.terms_raw, child.terms_sections = _terms_content(activity_text)
+                child.reward_tiers = _reward_tiers(activity_text)
+                child.max_reward_percent, child.max_reward_amount_twd = _reward_values(activity_text)
+                child.high_return = bool(
+                    (child.max_reward_percent is not None and child.max_reward_percent >= percent_threshold)
+                    or (child.max_reward_amount_twd is not None and child.max_reward_amount_twd >= amount_threshold)
+                )
+                child.featured = child.registration_required or child.high_return
+                child.lifecycle = _lifecycle(
+                    _date_from_iso(child.start_date) or today,
+                    _date_from_iso(child.end_date),
+                    today,
+                )
+                child.review_required = child.registration_required and not child.registration_windows
+                _promotion_invariants(child)
+                activities.append(child)
+            continue
+        if blocks:
+            promotion.needs_review = True
+            promotion.review_required = True
+            promotion.review_message = (
+                f"本頁含 {len(blocks)} 個活動，請至官方頁確認對應的登錄時間。"
+            )
+        _promotion_invariants(promotion)
+        activities.append(promotion)
     return activities, failed_details, invalid_urls
 
 

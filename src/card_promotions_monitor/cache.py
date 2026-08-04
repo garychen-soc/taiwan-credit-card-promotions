@@ -8,7 +8,7 @@ from typing import Any
 from .models import Promotion
 
 
-CACHE_SCHEMA_VERSION = 2
+CACHE_SCHEMA_VERSION = 4
 CACHE_MAX_AGE_DAYS = 30
 CACHE_BOUNDARY_REFRESH_DAYS = 3
 

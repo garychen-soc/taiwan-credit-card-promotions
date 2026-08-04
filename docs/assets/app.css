@@ -622,6 +622,19 @@ a { color: inherit; }
 .terms-content section + section { margin-top: 12px; }
 .terms-content h4 { margin: 0 0 4px; color: var(--ink); font-size: .75rem; }
 .terms-content p { margin: 0; white-space: pre-line; line-height: 1.55; }
+.data-review {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border: 1px solid #e7b85d;
+  border-radius: 10px;
+  background: #fff7df;
+  color: #76520b;
+  font-size: .76rem;
+}
+.reward-tiers { width: 100%; margin-top: 14px; border-collapse: collapse; font-size: .68rem; }
+.reward-tiers caption { margin-bottom: 6px; text-align: left; font-weight: 800; }
+.reward-tiers th, .reward-tiers td { padding: 6px 4px; border-bottom: 1px solid var(--line); text-align: right; }
+.reward-tiers th:first-child, .reward-tiers td:first-child { text-align: left; }
 .card-actions {
   display: flex;
   align-items: center;
