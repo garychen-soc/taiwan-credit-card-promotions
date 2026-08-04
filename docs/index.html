@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://garychen-soc.github.io/taiwan-credit-card-promotions/assets/og.png">
   <title>刷卡活動登錄雷達</title>
-  <link rel="stylesheet" href="./assets/app.css?v=20260804-registration-kind">
+  <link rel="stylesheet" href="./assets/app.css?v=20260804-fixed-pagination">
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳至主要內容</a>
@@ -113,6 +113,7 @@
             <button type="button" data-filter="priority" aria-pressed="true">重點</button>
             <button type="button" data-filter="today" aria-pressed="false">今日登錄</button>
             <button type="button" data-filter="tomorrow" aria-pressed="false">明日登錄</button>
+            <button type="button" data-filter="review" aria-pressed="false">需人工確認</button>
             <button type="button" data-filter="registration" aria-pressed="false">需登錄</button>
             <button type="button" data-filter="high-return" aria-pressed="false">高回饋</button>
             <button type="button" data-filter="upcoming" aria-pressed="false">即將開始</button>
@@ -161,6 +162,12 @@
           <div class="skeleton-card"></div>
         </div>
 
+        <nav id="pagination" class="pagination" aria-label="活動分頁" hidden>
+          <button id="page-previous" type="button">上一頁</button>
+          <span id="page-status" aria-live="polite"></span>
+          <button id="page-next" type="button">下一頁</button>
+        </nav>
+
         <div id="empty-state" class="empty-state" hidden>
           <span aria-hidden="true">○</span>
           <h3>沒有符合條件的活動</h3>
@@ -203,8 +210,8 @@
         <h4></h4>
         <div class="agenda-actions">
           <a class="agenda-register" target="_blank" rel="noopener noreferrer">前往登錄</a>
-          <a class="agenda-google" target="_blank" rel="noopener noreferrer">Google</a>
-          <button class="ics-button" type="button">.ics + 提醒</button>
+          <a class="agenda-google" target="_blank" rel="noopener noreferrer" aria-label="加入 Google Calendar">Google</a>
+          <button class="ics-button" type="button" aria-label="下載含 10 分鐘提醒的 ICS">.ics + 提醒</button>
         </div>
       </div>
     </article>
@@ -236,14 +243,15 @@
       </div>
       <div class="card-actions">
         <a class="official-link" target="_blank" rel="noopener noreferrer">官方頁面 ↗</a>
-        <a class="activity-google" target="_blank" rel="noopener noreferrer">活動行事曆</a>
-        <button class="activity-ics ics-button" type="button">下載 .ics</button>
+        <a class="activity-google" target="_blank" rel="noopener noreferrer" aria-label="將活動期間加入 Google Calendar">活動行事曆</a>
+        <button class="activity-ics ics-button" type="button" aria-label="下載活動期間 ICS">下載 .ics</button>
       </div>
     </article>
   </template>
 
   <noscript><p class="noscript">請啟用 JavaScript 以顯示活動資料與行事曆功能。</p></noscript>
   <script src="./assets/time-state.js?v=20260804-dynamic-lifecycle"></script>
-  <script src="./assets/app.js?v=20260804-registration-kind" defer></script>
+  <script src="./assets/catalog-state.js?v=20260804-fixed-pagination"></script>
+  <script src="./assets/app.js?v=20260804-fixed-pagination" defer></script>
 </body>
 </html>

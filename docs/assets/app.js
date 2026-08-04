@@ -6,6 +6,7 @@
   const MINUTE_MS = 60000;
   const REGISTRATION_CALENDAR_DURATION_MINUTES = 15;
   const timeState = window.CardPromotionTime;
+  const catalogState = window.CardPromotionCatalog;
   const state = {
     data: null,
     activities: [],
@@ -14,6 +15,7 @@
     category: "",
     query: "",
     sort: "recommended",
+    page: 1,
     agendaDate: ""
   };
 
@@ -37,6 +39,10 @@
     sortSelect: document.querySelector("#sort-select"),
     resultCount: document.querySelector("#result-count"),
     activityList: document.querySelector("#activity-list"),
+    pagination: document.querySelector("#pagination"),
+    pagePrevious: document.querySelector("#page-previous"),
+    pageNext: document.querySelector("#page-next"),
+    pageStatus: document.querySelector("#page-status"),
     emptyState: document.querySelector("#empty-state"),
     clearFilters: document.querySelectorAll("[data-clear-filters]"),
     sourceHealthList: document.querySelector("#source-health-list"),
@@ -449,10 +455,12 @@
         google.rel = "noopener noreferrer";
         google.textContent = "G";
         google.title = "加入 Google Calendar";
+        google.setAttribute("aria-label", `將「${activity.title}」登錄提醒加入 Google Calendar`);
         const ics = document.createElement("button");
         ics.type = "button";
         ics.textContent = "10";
         ics.title = "下載含 10 分鐘提醒的 .ics";
+        ics.setAttribute("aria-label", `下載「${activity.title}」含 10 分鐘提醒的 ICS`);
         setIcsButton(ics, config);
         buttons.append(google, ics);
         item.append(text, buttons);
@@ -489,6 +497,7 @@
       case "priority": return activity.featured && activity.lifecycle !== "ended";
       case "today": return activityHasRegistrationOn(activity, today);
       case "tomorrow": return activityHasRegistrationOn(activity, tomorrow);
+      case "review": return activity.needs_review;
       case "registration": return activity.registration_required && activity.lifecycle !== "ended";
       case "high-return": return activity.high_return && activity.lifecycle !== "ended";
       case "upcoming": return activity.lifecycle === "upcoming";
@@ -537,11 +546,50 @@
       }
       return true;
     }));
+    const page = catalogState.paginate(values, state.filter, state.page);
+    if (state.page !== page.page) {
+      state.page = page.page;
+      syncUrl("replace");
+    }
     el.activityList.replaceChildren();
-    values.forEach((activity) => el.activityList.append(renderActivity(activity)));
+    page.items.forEach((activity) => el.activityList.append(renderActivity(activity)));
     el.activityList.setAttribute("aria-busy", "false");
-    el.resultCount.textContent = `${values.length} 筆活動`;
+    el.resultCount.textContent = page.paginated
+      ? `${values.length} 筆活動 · 第 ${page.page}/${page.pageCount} 頁`
+      : `${values.length} 筆活動`;
+    el.pagination.hidden = !page.paginated;
+    el.pagePrevious.disabled = page.page <= 1;
+    el.pageNext.disabled = page.page >= page.pageCount;
+    el.pageStatus.textContent = `第 ${page.page} 頁，共 ${page.pageCount} 頁`;
     el.emptyState.hidden = values.length > 0;
+  }
+
+  function syncUrl(method = "push") {
+    const url = `${window.location.pathname}${catalogState.search(state)}${window.location.hash}`;
+    window.history[method === "replace" ? "replaceState" : "pushState"]({}, "", url);
+  }
+
+  function restoreStateFromUrl() {
+    Object.assign(state, catalogState.read(window.location.search));
+  }
+
+  function applyStateToControls() {
+    el.searchInput.value = state.query;
+    el.bankSelect.value = state.bank;
+    el.categorySelect.value = state.category;
+    el.sortSelect.value = state.sort;
+    if (el.bankSelect.value !== state.bank) state.bank = "";
+    if (el.categorySelect.value !== state.category) state.category = "";
+    if (el.sortSelect.value !== state.sort) state.sort = "recommended";
+    el.quickFilters.querySelectorAll("button").forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.filter === state.filter));
+    });
+  }
+
+  function commitCatalogState({ scroll = false } = {}) {
+    syncUrl("push");
+    renderActivities();
+    if (scroll) document.querySelector("#catalog-title").scrollIntoView({ block: "start" });
   }
 
   function populateFilters() {
@@ -575,12 +623,14 @@
     }
   }
 
-  function setQuickFilter(filter) {
+  function setQuickFilter(filter, { push = true } = {}) {
     state.filter = filter;
+    state.page = 1;
     el.quickFilters.querySelectorAll("button").forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.filter === filter));
     });
-    renderActivities();
+    if (push) commitCatalogState();
+    else renderActivities();
   }
 
   function clearAllFilters() {
@@ -588,33 +638,52 @@
     state.bank = "";
     state.category = "";
     state.sort = "recommended";
+    state.page = 1;
     el.searchInput.value = "";
     el.bankSelect.value = "";
     el.categorySelect.value = "";
     el.sortSelect.value = "recommended";
-    setQuickFilter("all");
+    state.filter = "all";
+    applyStateToControls();
+    commitCatalogState();
   }
 
   function bindEvents() {
+    let searchTimer = 0;
     el.quickFilters.addEventListener("click", (event) => {
       const button = event.target.closest("button[data-filter]");
       if (button) setQuickFilter(button.dataset.filter);
     });
     el.searchInput.addEventListener("input", () => {
-      state.query = el.searchInput.value.trim();
-      renderActivities();
+      window.clearTimeout(searchTimer);
+      searchTimer = window.setTimeout(() => {
+        state.query = el.searchInput.value.trim();
+        state.page = 1;
+        commitCatalogState();
+      }, 150);
     });
     el.bankSelect.addEventListener("change", () => {
       state.bank = el.bankSelect.value;
-      renderActivities();
+      state.page = 1;
+      commitCatalogState();
     });
     el.categorySelect.addEventListener("change", () => {
       state.category = el.categorySelect.value;
-      renderActivities();
+      state.page = 1;
+      commitCatalogState();
     });
     el.sortSelect.addEventListener("change", () => {
       state.sort = el.sortSelect.value;
-      renderActivities();
+      state.page = 1;
+      commitCatalogState();
+    });
+    el.pagePrevious.addEventListener("click", () => {
+      state.page -= 1;
+      commitCatalogState({ scroll: true });
+    });
+    el.pageNext.addEventListener("click", () => {
+      state.page += 1;
+      commitCatalogState({ scroll: true });
     });
     el.clearFilters.forEach((button) => button.addEventListener("click", clearAllFilters));
     document.querySelectorAll("[data-jump-filter]").forEach((button) => {
@@ -626,9 +695,15 @@
     document.addEventListener("visibilitychange", () => {
       if (!document.hidden) refreshDateSensitiveViews();
     });
+    window.addEventListener("popstate", () => {
+      restoreStateFromUrl();
+      applyStateToControls();
+      renderActivities();
+    });
   }
 
   async function init() {
+    restoreStateFromUrl();
     bindEvents();
     try {
       const response = await fetch(DATA_URL, { cache: "no-store" });
@@ -640,9 +715,11 @@
       updateDerivedSummary();
       el.thresholdNote.textContent = `高回饋：回饋率 ≥ ${state.data.thresholds.percent_at_least}% 或單筆／每期最高回饋 ≥ NT$${Number(state.data.thresholds.amount_twd_at_least).toLocaleString("zh-TW")}`;
       populateFilters();
+      applyStateToControls();
       renderAgenda();
       renderHealth();
       renderActivities();
+      syncUrl("replace");
       window.setInterval(refreshDateSensitiveViews, 60000);
     } catch (error) {
       el.sourceDot.classList.add("is-error");
