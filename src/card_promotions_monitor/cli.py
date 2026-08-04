@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 
 from .cache import activity_cache, new_cache_stats
 from .extractors import (
+    _promotion_invariants,
     extract_cathay,
     extract_chb,
     extract_ctbc,
@@ -33,10 +34,11 @@ from .extractors import (
     extract_yuanta,
     normalize_registration_url,
 )
+from .models import Promotion
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SCHEMA_VERSION = 4
+SCHEMA_VERSION = 5
 PUBLISH_GUARD_EXIT_CODE = 4
 UPDATE_ALREADY_RUNNING_EXIT_CODE = 3
 DNS_FAILURE_MARKERS = (
@@ -299,6 +301,9 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
         cache_stats,
     )
     for activity in activities:
+        promotion = Promotion.from_dict(activity)
+        _promotion_invariants(promotion)
+        activity.update(promotion.to_dict())
         if activity.get("registration_required"):
             activity["registration_url"] = normalize_registration_url(
                 str(activity.get("bank_id") or ""),

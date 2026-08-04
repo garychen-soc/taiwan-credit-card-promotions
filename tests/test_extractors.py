@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 
 from card_promotions_monitor.extractors import (
     _class_text,
+    _activity_periods,
     _chb_cards,
     _compact_period,
     _categories,
@@ -20,9 +21,12 @@ from card_promotions_monitor.extractors import (
     _kgi_cards,
     _lifecycle,
     _parse_period,
+    _promotion_invariants,
     _roc_period,
     _registration_windows,
     _reward_values,
+    _reward_tiers,
+    _subactivity_blocks,
     _terms_content,
     _taishin_cards,
     _tcbbank_api_cards,
@@ -33,9 +37,59 @@ from card_promotions_monitor.extractors import (
     normalize_registration_url,
 )
 from card_promotions_monitor.fetch import FetchResult
+from card_promotions_monitor.models import Promotion, RegistrationWindow
 
 
 class RegistrationWindowTests(unittest.TestCase):
+    def test_splits_repeated_activity_headings_before_notes(self) -> None:
+        blocks = _subactivity_blocks(
+            "頁首\n【活動一】第一波\n活動日期：2026/8/2\n登錄辦法：8/7 17:00\n"
+            "【活動二】第二波\n活動期間：2026/8/3~2026/8/15\n登錄辦法：8/20 17:00\n"
+            "注意事項\n【活動一】重複說明"
+        )
+        self.assertEqual(
+            [heading for heading, _ in blocks],
+            ["活動一 第一波", "活動二 第二波"],
+        )
+
+    def test_extracts_four_reward_tiers(self) -> None:
+        text = (
+            "35,000元\n700元\n800元\n100名\n"
+            "50,000元\n1,000元\n1,100元\n100名\n"
+            "65,000元\n1,300元\n2,100元\n100名\n"
+            "75,000元\n1,500元\n2,500元\n50名"
+        )
+        tiers = _reward_tiers(text)
+        self.assertEqual(len(tiers), 4)
+        self.assertEqual(tiers[2]["spend_amount_twd"], 65000)
+        self.assertEqual(tiers[2]["installment_reward_amount_twd"], 2100)
+        self.assertEqual(tiers[3]["quota"], 50)
+
+    def test_extracts_multiple_roc_activity_waves(self) -> None:
+        periods = _activity_periods(
+            "活動期間：\n第一波 115/7/30-8/31\n第二波 115/9/1-10/31",
+            2026,
+        )
+        self.assertEqual(len(periods), 2)
+        self.assertEqual(periods[0]["start"].isoformat(), "2026-07-30")
+        self.assertEqual(periods[1]["end"].isoformat(), "2026-10-31")
+
+    def test_marks_out_of_period_registration_for_manual_review(self) -> None:
+        promotion = Promotion(
+            id="offer", bank_id="bank", bank_name="銀行", title="活動",
+            merchant="商店", categories=["網購"], start_date="2026-08-01",
+            end_date="2026-08-15", summary="摘要", source_url="https://bank.example/offer",
+            source_entry_url="https://bank.example", observed_at="2026-08-04T00:00:00+08:00",
+            registration_required=True,
+            registration_windows=[RegistrationWindow(
+                start="2026-08-20T17:00:00+08:00", end=None,
+                label="登錄開放", source_text="8/20 17:00 開放登錄",
+            )],
+        )
+        _promotion_invariants(promotion)
+        self.assertTrue(promotion.needs_review)
+        self.assertIn("晚於活動期間", promotion.review_message)
+
     def test_preserves_non_registration_terms_in_sections(self) -> None:
         raw, sections = _terms_content(
             "活動期間：2026/8/1 至 2026/8/31\n"
@@ -110,6 +164,16 @@ class RegistrationWindowTests(unittest.TestCase):
         )
         self.assertEqual(len(values), 1)
         self.assertEqual(values[0].end, "2026-07-31T23:59:00+08:00")
+
+    def test_same_start_prefers_confirmed_range_over_start_only_duplicate(self) -> None:
+        values = _registration_windows(
+            "登錄辦法：2026/8/20 17:00~2026/8/31 23:59 開放登錄。"
+            "8/20 17:00 開放登錄。",
+            2026,
+        )
+        self.assertEqual(len(values), 1)
+        self.assertEqual(values[0].start, "2026-08-20T17:00:00+08:00")
+        self.assertEqual(values[0].end, "2026-08-31T23:59:00+08:00")
 
     def test_parses_second_precision_range(self) -> None:
         values = _registration_windows(

@@ -267,6 +267,11 @@
   }
 
   function formatPeriod(activity) {
+    if ((activity.activity_periods || []).length > 1) {
+      return activity.activity_periods.map((period) => (
+        `${period.label} ${shortDateFmt.format(parseDate(period.start))}－${shortDateFmt.format(parseDate(period.end, true))}`
+      )).join("；");
+    }
     const start = shortDateFmt.format(parseDate(activity.start_date));
     if (!activity.end_date) return `${start} 起`;
     return `${start}－${shortDateFmt.format(parseDate(activity.end_date, true))}`;
@@ -285,6 +290,7 @@
     const badges = [];
     if (activity.registration_required) badges.push(["重點登錄", "is-registration"]);
     if (activity.high_return) badges.push(["高回饋", "is-high"]);
+    if (activity.needs_review) badges.push(["需人工確認", "is-review"]);
     if (activity.lifecycle === "upcoming") badges.push(["即將開始", "is-upcoming"]);
     if (activity.lifecycle === "ended") badges.push(["官方已結束", "is-ended"]);
     return badges;
@@ -336,6 +342,36 @@
       details.dataset.rendered = "true";
     });
     cardBody.append(details);
+  }
+
+  function appendReviewAndTiers(cardBody, activity) {
+    if (activity.needs_review) {
+      const review = document.createElement("p");
+      review.className = "data-review";
+      review.textContent = activity.review_message || "本頁含多個活動，請至官方頁確認對應的登錄時間。";
+      cardBody.append(review);
+    }
+    if (!(activity.reward_tiers || []).length) return;
+    const table = document.createElement("table");
+    table.className = "reward-tiers";
+    table.innerHTML = "<caption>分階回饋門檻</caption><thead><tr><th>消費門檻</th><th>回饋</th><th>分期加碼</th><th>名額</th></tr></thead>";
+    const body = document.createElement("tbody");
+    activity.reward_tiers.forEach((tier) => {
+      const row = document.createElement("tr");
+      [
+        `NT$${Number(tier.spend_amount_twd).toLocaleString("zh-TW")}`,
+        `NT$${Number(tier.reward_amount_twd).toLocaleString("zh-TW")}`,
+        `NT$${Number(tier.installment_reward_amount_twd).toLocaleString("zh-TW")}`,
+        `${Number(tier.quota).toLocaleString("zh-TW")} 名`
+      ].forEach((value) => {
+        const cell = document.createElement("td");
+        cell.textContent = value;
+        row.append(cell);
+      });
+      body.append(row);
+    });
+    table.append(body);
+    cardBody.append(table);
   }
 
   function renderActivity(activity) {
@@ -397,7 +433,9 @@
       if (!windows.length) node.querySelector(".registration-review").hidden = false;
     }
 
-    appendTermsDetails(node.querySelector(".card-body"), activity);
+    const cardBody = node.querySelector(".card-body");
+    appendReviewAndTiers(cardBody, activity);
+    appendTermsDetails(cardBody, activity);
 
     node.querySelector(".official-link").href = activity.source_url;
     const activityConfig = calendarConfigForActivity(activity);
