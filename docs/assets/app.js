@@ -190,6 +190,7 @@
     const start = parseDate(window.start);
     const end = parseDate(window.end);
     if (end && end < now) return "已結束";
+    if (start && start <= now && !end) return "已開放";
     if (start && start <= now && (!end || end >= now)) return "登錄中";
     return "即將開放";
   }
@@ -291,7 +292,10 @@
 
   function relevantWindows(activity) {
     const now = Date.now();
-    const future = activity.registration_windows.filter((item) => parseDate(item.end).getTime() >= now);
+    const future = activity.registration_windows.filter((item) => {
+      const boundary = parseDate(item.end) || parseDate(item.start);
+      return boundary && boundary.getTime() >= now;
+    });
     return (future.length ? future : activity.registration_windows.slice(-1)).slice(0, 3);
   }
 
@@ -328,8 +332,11 @@
         const text = document.createElement("p");
         const start = parseDate(window.start);
         const end = parseDate(window.end);
-        const sameDay = taipeiDateKey(start) === taipeiDateKey(end);
-        text.innerHTML = `<strong>${shortDateFmt.format(start)} ${timeFmt.format(start)}</strong><span>${sameDay ? windowStatus(window) : `至 ${shortDateFmt.format(end)} ${timeFmt.format(end)}`}</span>`;
+        const sameDay = end && taipeiDateKey(start) === taipeiDateKey(end);
+        const timing = !end
+          ? "起（截止時間未確認）"
+          : (sameDay ? windowStatus(window) : `至 ${shortDateFmt.format(end)} ${timeFmt.format(end)}`);
+        text.innerHTML = `<strong>${shortDateFmt.format(start)} ${timeFmt.format(start)}</strong><span>${timing}</span>`;
         const buttons = document.createElement("div");
         buttons.className = "registration-buttons";
         const config = calendarConfigForWindow(activity, window);

@@ -7,7 +7,7 @@ from typing import Any
 @dataclass(slots=True)
 class RegistrationWindow:
     start: str
-    end: str
+    end: str | None
     label: str
     source_text: str
     reminder_minutes: int = 10
