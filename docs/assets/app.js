@@ -5,6 +5,7 @@
   const DAY_MS = 86400000;
   const MINUTE_MS = 60000;
   const REGISTRATION_CALENDAR_DURATION_MINUTES = 15;
+  const timeState = window.CardPromotionTime;
   const state = {
     data: null,
     activities: [],
@@ -262,8 +263,19 @@
 
   function refreshDateSensitiveViews() {
     if (!state.data || state.agendaDate === taipeiDateKey()) return;
+    state.activities = state.activities.map((activity) => (
+      timeState.deriveActivity(activity, state.data.thresholds)
+    ));
+    updateDerivedSummary();
     renderAgenda();
     renderActivities();
+  }
+
+  function updateDerivedSummary() {
+    const current = state.activities.filter((activity) => activity.lifecycle !== "ended");
+    el.statRegistration.textContent = current.filter((activity) => activity.registration_required).length;
+    el.statHighReturn.textContent = current.filter((activity) => activity.high_return).length;
+    el.statTotal.textContent = current.length;
   }
 
   function formatPeriod(activity) {
@@ -606,11 +618,10 @@
       const response = await fetch(DATA_URL, { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       state.data = await response.json();
-      state.activities = state.data.activities;
-      const summary = state.data.summary;
-      el.statRegistration.textContent = summary.registration_required;
-      el.statHighReturn.textContent = summary.high_return;
-      el.statTotal.textContent = summary.active_or_upcoming;
+      state.activities = state.data.activities.map((activity) => (
+        timeState.deriveActivity(activity, state.data.thresholds)
+      ));
+      updateDerivedSummary();
       el.thresholdNote.textContent = `高回饋：回饋率 ≥ ${state.data.thresholds.percent_at_least}% 或單筆／每期最高回饋 ≥ NT$${Number(state.data.thresholds.amount_twd_at_least).toLocaleString("zh-TW")}`;
       populateFilters();
       renderAgenda();
