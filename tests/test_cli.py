@@ -10,6 +10,7 @@ from zoneinfo import ZoneInfo
 from card_promotions_monitor.cli import (
     PUBLISH_GUARD_EXIT_CODE,
     assess_publish_guard,
+    classify_registration_urls,
     persist_payload,
     retain_failed_source_activities,
     update_lock,
@@ -42,6 +43,38 @@ def candidate_payload(*, failed: int, active: int, dns_failures: int = 0) -> dic
 
 
 class PublishGuardTests(unittest.TestCase):
+    def test_classifies_shared_portal_and_activity_specific_urls(self) -> None:
+        activities = [
+            {"bank_id": "bank", "registration_required": True, "registration_url": "https://bank.example/portal", "source_url": "https://bank.example/a"},
+            {"bank_id": "bank", "registration_required": True, "registration_url": "https://bank.example/portal", "source_url": "https://bank.example/b"},
+            {"bank_id": "bank", "registration_required": True, "registration_url": "https://bank.example/c/register", "source_url": "https://bank.example/c"},
+            {"bank_id": "bank", "registration_required": True, "registration_url": "https://bank.example/d", "source_url": "https://bank.example/d"},
+        ]
+        classify_registration_urls(activities)
+        self.assertEqual(activities[0]["registration_url_kind"], "bank_portal")
+        self.assertEqual(activities[1]["registration_url_kind"], "bank_portal")
+        self.assertEqual(activities[2]["registration_url_kind"], "activity_specific")
+        self.assertEqual(activities[3]["registration_url_kind"], "unknown")
+
+    def test_public_artifact_strips_bookkeeping_and_writes_ledger(self) -> None:
+        candidate = candidate_payload(failed=0, active=1)
+        candidate["activities"] = [{
+            "id": "offer", "title": "活動", "source_entry_url": "https://bank.example",
+            "source_fingerprint": "abc", "observed_at": "2026-08-04T10:00:00+08:00",
+            "last_detail_checked_at": "2026-08-04T09:00:00+08:00", "official_status": "published",
+            "lifecycle": "active",
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            persist_payload(candidate, None, root / "public.json", root / "report.json", root / "cache.json")
+            public = json.loads((root / "public.json").read_text())
+            report = json.loads((root / "report.json").read_text())
+            cache = json.loads((root / "cache.json").read_text())
+        self.assertNotIn("source_fingerprint", public["activities"][0])
+        self.assertNotIn("lifecycle", public["activities"][0])
+        self.assertEqual(report["activities"][0]["source_fingerprint"], "abc")
+        self.assertEqual(cache["activities"]["offer"]["fingerprint"], "abc")
+
     def test_blocks_systemic_dns_failure(self) -> None:
         candidate = candidate_payload(failed=16, active=27, dns_failures=14)
         previous = {"summary": {"active_or_upcoming": 1110}}

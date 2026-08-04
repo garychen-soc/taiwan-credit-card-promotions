@@ -5,6 +5,8 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from card_promotions_monitor.cache import (
+    activity_cache,
+    bookkeeping_payload,
     new_cache_stats,
     reuse_cached_promotion,
     source_fingerprint,
@@ -45,6 +47,25 @@ def cached_activity(
 
 
 class ActivityCacheTests(unittest.TestCase):
+    def test_joins_public_content_with_bookkeeping_ledger(self) -> None:
+        payload = {"activities": [{"id": "offer", "title": "活動"}]}
+        ledger = {"activities": {"offer": {
+            "fingerprint": "abc",
+            "last_detail_checked_at": "2026-08-04T10:00:00+08:00",
+        }}}
+        joined = activity_cache(payload, ledger)["offer"]
+        self.assertEqual(joined["title"], "活動")
+        self.assertEqual(joined["source_fingerprint"], "abc")
+        self.assertEqual(joined["last_detail_checked_at"], "2026-08-04T10:00:00+08:00")
+        self.assertEqual(joined["source_entry_url"], "")
+        self.assertEqual(joined["observed_at"], "")
+
+    def test_bookkeeping_payload_contains_no_activity_content(self) -> None:
+        ledger = bookkeeping_payload([cached_activity(fingerprint="abc")], "2026-08-04")
+        entry = ledger["activities"]["bank-activity"]
+        self.assertEqual(set(entry), {"fingerprint", "last_detail_checked_at"})
+        self.assertNotIn("title", entry)
+
     def test_reuses_matching_fresh_activity_and_avoids_detail_request(self) -> None:
         fingerprint = source_fingerprint("bank", {"title": "測試活動"})
         stats = new_cache_stats("2026-07-20T10:00:00+08:00")

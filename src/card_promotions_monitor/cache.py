@@ -13,16 +13,47 @@ CACHE_MAX_AGE_DAYS = 30
 CACHE_BOUNDARY_REFRESH_DAYS = 3
 
 
-def activity_cache(payload: dict[str, Any] | None) -> dict[str, dict[str, Any]]:
+def activity_cache(
+    payload: dict[str, Any] | None,
+    ledger: dict[str, Any] | None = None,
+) -> dict[str, dict[str, Any]]:
     if not isinstance(payload, dict):
         return {}
     activities = payload.get("activities", [])
     if not isinstance(activities, list):
         return {}
+    metadata = ledger.get("activities", {}) if isinstance(ledger, dict) else {}
+    values: dict[str, dict[str, Any]] = {}
+    for item in activities:
+        if not isinstance(item, dict) or not isinstance(item.get("id"), str):
+            continue
+        merged = dict(item)
+        merged.setdefault("source_entry_url", "")
+        merged.setdefault("observed_at", "")
+        bookkeeping = metadata.get(item["id"], {}) if isinstance(metadata, dict) else {}
+        if isinstance(bookkeeping, dict):
+            merged["source_fingerprint"] = bookkeeping.get(
+                "fingerprint", merged.get("source_fingerprint", ""),
+            )
+            merged["last_detail_checked_at"] = bookkeeping.get(
+                "last_detail_checked_at", merged.get("last_detail_checked_at", ""),
+            )
+        values[item["id"]] = merged
+    return values
+
+
+def bookkeeping_payload(activities: list[dict[str, Any]], generated_at: str) -> dict[str, Any]:
     return {
-        item["id"]: item
-        for item in activities
-        if isinstance(item, dict) and isinstance(item.get("id"), str)
+        "schema_version": CACHE_SCHEMA_VERSION,
+        "generated_at": generated_at,
+        "activities": {
+            item["id"]: {
+                "fingerprint": item.get("source_fingerprint", ""),
+                "last_detail_checked_at": item.get("last_detail_checked_at", ""),
+            }
+            for item in activities
+            if isinstance(item, dict) and isinstance(item.get("id"), str)
+        },
     }
 
 

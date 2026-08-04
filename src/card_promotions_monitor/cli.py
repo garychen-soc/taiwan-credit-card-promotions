@@ -5,6 +5,7 @@ import fcntl
 import json
 import sys
 import tempfile
+from collections import Counter
 from copy import deepcopy
 from contextlib import contextmanager
 from datetime import date, datetime, timedelta
@@ -12,8 +13,9 @@ from math import ceil
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from .cache import activity_cache, new_cache_stats
+from .cache import activity_cache, bookkeeping_payload, new_cache_stats
 from .extractors import (
+    REGISTRATION_URL_DEFAULTS,
     _promotion_invariants,
     extract_cathay,
     extract_chb,
@@ -38,7 +40,7 @@ from .models import Promotion
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SCHEMA_VERSION = 5
+SCHEMA_VERSION = 6
 PUBLISH_GUARD_EXIT_CODE = 4
 UPDATE_ALREADY_RUNNING_EXIT_CODE = 3
 DNS_FAILURE_MARKERS = (
@@ -207,11 +209,30 @@ def write_json_atomic(path: Path, payload: dict) -> None:
             temporary_path.unlink()
 
 
+def classify_registration_urls(activities: list[dict]) -> None:
+    counts = Counter(
+        (item.get("bank_id", ""), item.get("registration_url", ""))
+        for item in activities
+        if item.get("registration_required") and item.get("registration_url")
+    )
+    for activity in activities:
+        url = activity.get("registration_url", "")
+        if not activity.get("registration_required") or not url:
+            activity["registration_url_kind"] = "unknown"
+        elif url in REGISTRATION_URL_DEFAULTS.values() or counts[(activity.get("bank_id", ""), url)] > 1:
+            activity["registration_url_kind"] = "bank_portal"
+        elif url != activity.get("source_url"):
+            activity["registration_url_kind"] = "activity_specific"
+        else:
+            activity["registration_url_kind"] = "unknown"
+
+
 def persist_payload(
     payload: dict,
     previous_payload: dict | None,
     output_path: Path,
     report_path: Path,
+    cache_path: Path | None = None,
 ) -> int:
     guard = assess_publish_guard(payload, previous_payload)
     payload["publish_guard"] = guard
@@ -219,12 +240,29 @@ def persist_payload(
     if guard["blocked"]:
         print(json.dumps({"summary": payload["summary"], "publish_guard": guard}, ensure_ascii=False))
         return PUBLISH_GUARD_EXIT_CODE
-    write_json_atomic(output_path, payload)
+    public_payload = deepcopy(payload)
+    for activity in public_payload.get("activities", []):
+        for field_name in (
+            "source_entry_url", "source_fingerprint", "observed_at",
+            "last_detail_checked_at", "official_status", "lifecycle",
+        ):
+            activity.pop(field_name, None)
+    write_json_atomic(output_path, public_payload)
+    if cache_path is not None:
+        write_json_atomic(
+            cache_path,
+            bookkeeping_payload(payload.get("activities", []), payload.get("generated_at", "")),
+        )
     print(json.dumps(payload["summary"], ensure_ascii=False))
     return 0 if all(item["status"] != "failed" for item in payload["source_health"]) else 2
 
 
-def build_payload(config: dict, now: datetime, previous_payload: dict | None = None) -> dict:
+def build_payload(
+    config: dict,
+    now: datetime,
+    previous_payload: dict | None = None,
+    cache_ledger: dict | None = None,
+) -> dict:
     thresholds = config["high_return"]
     previous_schema = (
         int(previous_payload.get("schema_version") or 0)
@@ -232,8 +270,8 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
         else 0
     )
     cached_activities = (
-        activity_cache(previous_payload)
-        if previous_schema >= SCHEMA_VERSION
+        activity_cache(previous_payload, cache_ledger)
+        if previous_schema >= 5
         else {}
     )
     cache_stats = new_cache_stats(
@@ -312,6 +350,8 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
         else:
             activity["registration_url"] = ""
 
+    classify_registration_urls(activities)
+
     activities.sort(
         key=lambda item: (
             0 if item["registration_required"] else 1,
@@ -350,6 +390,14 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
         "generated_at": now.replace(microsecond=0).isoformat(),
         "timezone": config["timezone"],
         "thresholds": thresholds,
+        "sources": [
+            {
+                "id": source["id"],
+                "bank_name": source["bank_name"],
+                "source_entry_url": source["entry_url"],
+            }
+            for source in config["sources"]
+        ],
         "cache": cache_stats,
         "summary": {
             "total": len(activities),
@@ -382,6 +430,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--config", type=Path, default=ROOT / "config" / "sources.json")
     parser.add_argument("--output", type=Path, default=ROOT / "docs" / "data" / "promotions.json")
     parser.add_argument("--report", type=Path, default=ROOT / "reports" / "latest.json")
+    parser.add_argument("--cache", type=Path, default=ROOT / "data" / "activity_cache.json")
     parser.add_argument("--lock", type=Path, default=ROOT / "reports" / "update.lock")
     args = parser.parse_args(argv)
 
@@ -394,9 +443,17 @@ def main(argv: list[str] | None = None) -> int:
                     previous_payload = load_json(args.output)
                 except (json.JSONDecodeError, OSError):
                     previous_payload = None
+            cache_ledger = None
+            if args.cache.exists():
+                try:
+                    cache_ledger = load_json(args.cache)
+                except (json.JSONDecodeError, OSError):
+                    cache_ledger = None
             now = datetime.now(ZoneInfo(config.get("timezone", "Asia/Taipei")))
-            payload = build_payload(config, now, previous_payload)
-            return persist_payload(payload, previous_payload, args.output, args.report)
+            payload = build_payload(config, now, previous_payload, cache_ledger)
+            return persist_payload(
+                payload, previous_payload, args.output, args.report, args.cache,
+            )
     except RuntimeError as exc:
         if str(exc) != "promotion refresh already in progress":
             raise
