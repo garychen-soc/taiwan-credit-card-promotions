@@ -299,6 +299,45 @@
     return (future.length ? future : activity.registration_windows.slice(-1)).slice(0, 3);
   }
 
+  const termsLabels = {
+    period: "活動期間",
+    eligibility: "參加資格",
+    offer: "優惠內容",
+    method: "活動辦法",
+    registration: "登錄辦法",
+    installment: "分期辦法",
+    quota: "名額／限量",
+    notes: "注意事項",
+    overview: "其他條件"
+  };
+
+  function appendTermsDetails(cardBody, activity) {
+    const entries = Object.entries(activity.terms_sections || {}).filter(([, value]) => value);
+    if (!entries.length) return;
+    const details = document.createElement("details");
+    details.className = "terms-details";
+    const summary = document.createElement("summary");
+    summary.textContent = "查看活動條件";
+    details.append(summary);
+    details.addEventListener("toggle", () => {
+      if (!details.open || details.dataset.rendered === "true") return;
+      const content = document.createElement("div");
+      content.className = "terms-content";
+      entries.forEach(([key, value]) => {
+        const section = document.createElement("section");
+        const heading = document.createElement("h4");
+        heading.textContent = termsLabels[key] || key;
+        const paragraph = document.createElement("p");
+        paragraph.textContent = value;
+        section.append(heading, paragraph);
+        content.append(section);
+      });
+      details.append(content);
+      details.dataset.rendered = "true";
+    });
+    cardBody.append(details);
+  }
+
   function renderActivity(activity) {
     const node = el.activityTemplate.content.cloneNode(true);
     const card = node.querySelector(".activity-card");
@@ -357,6 +396,8 @@
       });
       if (!windows.length) node.querySelector(".registration-review").hidden = false;
     }
+
+    appendTermsDetails(node.querySelector(".card-body"), activity);
 
     node.querySelector(".official-link").href = activity.source_url;
     const activityConfig = calendarConfigForActivity(activity);

@@ -23,6 +23,7 @@ from card_promotions_monitor.extractors import (
     _roc_period,
     _registration_windows,
     _reward_values,
+    _terms_content,
     _taishin_cards,
     _tcbbank_api_cards,
     _ubot_cards,
@@ -35,6 +36,22 @@ from card_promotions_monitor.fetch import FetchResult
 
 
 class RegistrationWindowTests(unittest.TestCase):
+    def test_preserves_non_registration_terms_in_sections(self) -> None:
+        raw, sections = _terms_content(
+            "活動期間：2026/8/1 至 2026/8/31\n"
+            "參加資格：限正卡持卡人\n"
+            "活動辦法：單筆滿 10,000 元享刷卡金\n"
+            "分期辦法：須分 12 期以上\n"
+            "登錄辦法：8/7 17:00 開放登錄\n"
+            "注意事項：限量 600 名，額滿為止"
+        )
+
+        self.assertIn("限正卡持卡人", raw)
+        self.assertIn("單筆滿 10,000 元", sections["method"])
+        self.assertIn("須分 12 期以上", sections["installment"])
+        self.assertIn("8/7 17:00", sections["registration"])
+        self.assertIn("限量 600 名", sections["notes"])
+
     def test_uses_verified_central_registration_portals(self) -> None:
         self.assertEqual(
             normalize_registration_url(

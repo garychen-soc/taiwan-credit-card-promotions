@@ -32,6 +32,8 @@ class Promotion:
     observed_at: str
     registration_required: bool = False
     registration_text: str = ""
+    terms_sections: dict[str, str] = field(default_factory=dict)
+    terms_raw: str = ""
     registration_url: str = ""
     registration_windows: list[RegistrationWindow] = field(default_factory=list)
     max_reward_percent: float | None = None

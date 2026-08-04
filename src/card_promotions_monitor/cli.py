@@ -36,7 +36,7 @@ from .extractors import (
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 PUBLISH_GUARD_EXIT_CODE = 4
 UPDATE_ALREADY_RUNNING_EXIT_CODE = 3
 DNS_FAILURE_MARKERS = (

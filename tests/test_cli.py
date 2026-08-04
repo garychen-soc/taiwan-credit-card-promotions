@@ -132,6 +132,36 @@ class PublishGuardTests(unittest.TestCase):
         self.assertEqual(published["publish_guard"]["status"], "passed")
         self.assertEqual(published["alerts"][0]["old_url"], rejected_url)
 
+    def test_raw_terms_remain_available_to_public_artifact_cache(self) -> None:
+        candidate = candidate_payload(failed=0, active=1)
+        candidate["activities"] = [{
+            "id": "offer",
+            "bank_id": "bank-0",
+            "terms_raw": "參加資格：限正卡持卡人",
+            "terms_sections": {"eligibility": "參加資格：限正卡持卡人"},
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            exit_code = persist_payload(
+                candidate,
+                None,
+                root / "promotions.json",
+                root / "latest.json",
+            )
+            report = json.loads((root / "latest.json").read_text())
+            public = json.loads((root / "promotions.json").read_text())
+
+        self.assertEqual(exit_code, 0)
+        self.assertIn("terms_raw", report["activities"][0])
+        self.assertEqual(
+            public["activities"][0]["terms_raw"],
+            "參加資格：限正卡持卡人",
+        )
+        self.assertEqual(
+            public["activities"][0]["terms_sections"]["eligibility"],
+            "參加資格：限正卡持卡人",
+        )
+
     def test_failed_source_retains_previous_current_activities(self) -> None:
         activities: list[dict] = []
         health = [{

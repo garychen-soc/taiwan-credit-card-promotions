@@ -599,6 +599,29 @@ a { color: inherit; }
   font-weight: 900;
 }
 .registration-review { margin: 0; color: #8a513c; font-size: .76rem; }
+.terms-details {
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .78rem;
+}
+.terms-details summary {
+  padding: 12px 0 0;
+  color: var(--blue);
+  cursor: pointer;
+  font-weight: 760;
+}
+.terms-content {
+  max-height: 360px;
+  margin-top: 10px;
+  padding: 12px;
+  overflow: auto;
+  border-radius: 12px;
+  background: #f7f6f1;
+}
+.terms-content section + section { margin-top: 12px; }
+.terms-content h4 { margin: 0 0 4px; color: var(--ink); font-size: .75rem; }
+.terms-content p { margin: 0; white-space: pre-line; line-height: 1.55; }
 .card-actions {
   display: flex;
   align-items: center;
