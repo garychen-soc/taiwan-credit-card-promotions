@@ -599,6 +599,7 @@ a { color: inherit; }
   font-weight: 900;
 }
 .registration-review { margin: 0; color: #8a513c; font-size: .76rem; }
+.registration-portal-hint { margin: 8px 0 0; color: #8a513c; font-size: .72rem; line-height: 1.45; }
 .terms-details {
   margin-top: 14px;
   border-top: 1px solid var(--line);

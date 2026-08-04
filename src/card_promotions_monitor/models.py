@@ -38,6 +38,7 @@ class Promotion:
     activity_periods: list[dict[str, str]] = field(default_factory=list)
     reward_tiers: list[dict[str, Any]] = field(default_factory=list)
     registration_url: str = ""
+    registration_url_kind: str = "unknown"
     registration_windows: list[RegistrationWindow] = field(default_factory=list)
     max_reward_percent: float | None = None
     max_reward_amount_twd: int | None = None

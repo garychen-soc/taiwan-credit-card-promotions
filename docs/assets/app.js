@@ -170,6 +170,20 @@
     };
   }
 
+  function registrationLinkText(activity) {
+    if (activity.registration_url_kind === "bank_portal") return "前往統一登錄頁";
+    if (activity.registration_url_kind === "activity_specific") return "前往活動登錄";
+    return activity.bank_id === "dbs" ? "查看登錄方式" : "前往登錄";
+  }
+
+  function appendPortalHint(target, activity) {
+    if (activity.registration_url_kind !== "bank_portal") return;
+    const hint = document.createElement("p");
+    hint.className = "registration-portal-hint";
+    hint.textContent = `此為統一登錄頁，到站後請找「${activity.title}」。`;
+    target.append(hint);
+  }
+
   function calendarConfigForActivity(activity) {
     return {
       title: `${activity.bank_name}｜${activity.title}`,
@@ -219,7 +233,8 @@
       node.querySelector("h4").textContent = item.title;
       const register = node.querySelector(".agenda-register");
       register.href = item.registration_url || item.source_url;
-      register.textContent = activity.bank_id === "dbs" ? "查看登錄方式" : "前往登錄";
+      register.textContent = registrationLinkText(activity);
+      appendPortalHint(node.querySelector(".agenda-content"), activity);
       const config = calendarConfigForWindow(activity, item);
       const google = node.querySelector(".agenda-google");
       google.href = googleCalendarUrl(config);
@@ -410,7 +425,8 @@
     } else {
       const registrationLink = node.querySelector(".registration-link");
       registrationLink.href = activity.registration_url || activity.source_url;
-      registrationLink.textContent = activity.bank_id === "dbs" ? "查看登錄方式" : "前往登錄";
+      registrationLink.textContent = registrationLinkText(activity);
+      appendPortalHint(registrationBox, activity);
       const windowsBox = node.querySelector(".registration-windows");
       const windows = relevantWindows(activity);
       windows.forEach((window) => {
