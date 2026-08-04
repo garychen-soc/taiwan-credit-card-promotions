@@ -560,6 +560,7 @@ def extract_dbs(
 
     activities: list[Promotion] = []
     failed_details = 0
+    invalid_urls: list[str] = []
     for merchant, url in merchant_links:
         activity_id = _stable_id(source["id"], url)
         fingerprint = source_fingerprint(
@@ -603,8 +604,11 @@ def extract_dbs(
         record_detail_requests(stats)
         try:
             detail = fetch_text(url, source["official_domains"])
-        except RuntimeError:
+        except Exception as exc:
             failed_details += 1
+            invalid_url = _invalid_detail_url(exc)
+            if invalid_url:
+                invalid_urls.append(invalid_url)
             continue
         page = parse_page(detail.text, detail.final_url)
         text = page.text
@@ -661,7 +665,8 @@ def extract_dbs(
         ))
 
     status = "complete" if failed_details == 0 and activities else ("partial" if activities else "failed")
-    message = "" if failed_details == 0 else f"{failed_details} 個購物網站活動頁暫時無法讀取。"
+    message = _detail_failure_message(failed_details, "購物網站活動頁", invalid_urls)
+    alerts.extend(_invalid_url_alerts(source, invalid_urls))
     if alerts:
         message = f"{message} 使用者指定入口需留意。".strip()
     status = "partial" if alerts and status == "complete" else status
@@ -797,6 +802,7 @@ def extract_cathay(
     today = now.astimezone(TAIPEI).date()
     activities: list[Promotion] = []
     failed_details = 0
+    invalid_urls: list[str] = []
     campaigns = listing.get("campaigns", []) if isinstance(listing, dict) else []
     for campaign in campaigns:
         if not isinstance(campaign, dict):
@@ -838,8 +844,12 @@ def extract_cathay(
             _, model = fetch_json(model_url, source["official_domains"])
             detail_props = _find_campaign_properties(model)
             detail_links = _model_links(model, public_url)
-        except RuntimeError:
+        except Exception as exc:
             failed_details += 1
+            invalid_url = _invalid_detail_url(exc)
+            if invalid_url:
+                invalid_urls.append(invalid_url)
+                continue
         combined_props = {**props, **detail_props}
         title = strip_html(str(
             combined_props.get("campaignTitle")
@@ -900,7 +910,12 @@ def extract_cathay(
     status = "complete" if failed_details == 0 and activities else ("partial" if activities else "failed")
     if entry_status == "partial" and status == "complete":
         status = "partial"
-    message = "" if failed_details == 0 else f"{failed_details} 個活動明細的結構化頁面暫時無法讀取。"
+    message = _detail_failure_message(
+        failed_details,
+        "活動明細的結構化頁面",
+        invalid_urls,
+    )
+    alerts.extend(_invalid_url_alerts(source, invalid_urls))
     if entry_status == "partial":
         message = f"{message} 使用者指定入口需留意。".strip()
     return activities, SourceHealth(
@@ -999,11 +1014,67 @@ def _official_detail_period(
     return fallback_start, fallback_end
 
 
+INVALID_DETAIL_URL_MARKERS = (
+    "URL is outside official domains:",
+    "Redirected outside official domains:",
+    "Final URL is outside official domains:",
+)
+
+
+def _invalid_detail_url(error: BaseException) -> str:
+    """Return the rejected URL from a fetch exception chain, if present."""
+    seen: set[int] = set()
+    current: BaseException | None = error
+    while current is not None and id(current) not in seen:
+        seen.add(id(current))
+        message = str(current)
+        for marker in INVALID_DETAIL_URL_MARKERS:
+            if marker not in message:
+                continue
+            value = message.split(marker, 1)[1].strip()
+            match = re.match(r"https?://[^\s]+", value)
+            if match:
+                return match.group(0).rstrip(".,;:)]}>'\"")
+        current = current.__cause__ or current.__context__
+    return ""
+
+
+def _detail_failure_message(
+    count: int,
+    noun: str,
+    invalid_urls: list[str],
+) -> str:
+    parts = [f"{count} 個{noun}暫時無法讀取"] if count else []
+    if invalid_urls:
+        parts.append(
+            "官方頁輸出不允許的明細 URL，已拒絕並跳過："
+            + "、".join(dict.fromkeys(invalid_urls))
+        )
+    return "；".join(parts)
+
+
+def _invalid_url_alerts(
+    source: dict[str, Any],
+    invalid_urls: list[str],
+) -> list[Alert]:
+    return [
+        Alert(
+            "source_emitted_invalid_url",
+            source["bank_name"],
+            "官方活動頁輸出不符合安全規則的明細 URL；該筆已跳過，未放寬官方網域白名單。",
+            url,
+        )
+        for url in dict.fromkeys(invalid_urls)
+    ]
+
+
 def _fetch_many(urls: list[str], domains: list[str], workers: int = 6) -> dict[str, Any]:
     def fetch_one(url: str) -> Any:
         try:
             return fetch_text(url, domains)
-        except RuntimeError as exc:
+        except Exception as exc:
+            # A single detail page must not abort every other source. The caller
+            # classifies rejected URLs separately and records them in health/alerts.
             return exc
 
     with ThreadPoolExecutor(max_workers=max(1, min(workers, len(urls) or 1))) as executor:
@@ -1278,6 +1349,7 @@ def extract_sinopac(
     fetched = _fetch_many(urls_to_fetch, source["official_domains"])
     activities: list[Promotion] = []
     failed_details = 0
+    invalid_urls: list[str] = []
     for card in cards:
         if card["cached"]:
             cached = card["cached"]
@@ -1302,6 +1374,10 @@ def extract_sinopac(
         result = fetched[card["url"]]
         if isinstance(result, Exception):
             failed_details += 1
+            invalid_url = _invalid_detail_url(result)
+            if invalid_url:
+                invalid_urls.append(invalid_url)
+                continue
             page = None
             text = f"{card['title']} {card['summary']}"
             public_url = card["url"]
@@ -1353,7 +1429,8 @@ def extract_sinopac(
         ))
 
     status = "complete" if activities and failed_details == 0 and not alerts else ("partial" if activities else "failed")
-    message = "" if failed_details == 0 else f"{failed_details} 個官方活動明細暫時無法讀取。"
+    message = _detail_failure_message(failed_details, "官方活動明細", invalid_urls)
+    alerts.extend(_invalid_url_alerts(source, invalid_urls))
     if alerts:
         message = f"{message} 使用者指定入口需留意。".strip()
     return activities, SourceHealth(
@@ -1469,6 +1546,7 @@ def extract_scsb(
     }
     activities: list[Promotion] = []
     failed_details = 0
+    invalid_urls: list[str] = []
     for card in cards:
         if card["cached"]:
             activities.append(card["cached"])
@@ -1476,6 +1554,10 @@ def extract_scsb(
         result = fetched[card["url"]]
         if isinstance(result, Exception):
             failed_details += 1
+            invalid_url = _invalid_detail_url(result)
+            if invalid_url:
+                invalid_urls.append(invalid_url)
+                continue
             page = None
             text = f"{card['title']} {card['summary']}"
             public_url = card["url"]
@@ -1528,7 +1610,8 @@ def extract_scsb(
         ))
 
     status = "complete" if activities and failed_details == 0 and not alerts else ("partial" if activities else "failed")
-    message = "" if failed_details == 0 else f"{failed_details} 個官方活動明細暫時無法讀取。"
+    message = _detail_failure_message(failed_details, "官方活動明細", invalid_urls)
+    alerts.extend(_invalid_url_alerts(source, invalid_urls))
     if alerts:
         message = f"{message} 使用者指定入口需留意。".strip()
     return activities, SourceHealth(
@@ -1820,6 +1903,7 @@ def extract_yuanta(
 
     activities: list[Promotion] = []
     failed_details = 0
+    invalid_urls: list[str] = []
     for card in cards:
         if card["cached"]:
             cached = card["cached"]
@@ -1845,6 +1929,10 @@ def extract_yuanta(
         result = fetched[card["url"]]
         if isinstance(result, Exception):
             failed_details += 1
+            invalid_url = _invalid_detail_url(result)
+            if invalid_url:
+                invalid_urls.append(invalid_url)
+                continue
             page = None
             text = f"{card['title']} {card['summary']}"
             public_url = card["url"]
@@ -1911,11 +1999,11 @@ def extract_yuanta(
     if failed_listing_pages:
         issues.append(f"{failed_listing_pages} 個清單分頁暫時無法讀取")
     if failed_details:
-        issues.append(f"{failed_details} 個活動明細暫時無法讀取")
+        issues.append(_detail_failure_message(failed_details, "活動明細", invalid_urls))
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"], first_page.final_url,
         status, len(activities), checked_at, "；".join(issues),
-    ), []
+    ), _invalid_url_alerts(source, invalid_urls)
 
 
 def _esun_cards(html: str, base_url: str, bank_id: str) -> list[dict[str, Any]]:
@@ -2042,6 +2130,7 @@ def extract_esun(
 
     activities: list[Promotion] = []
     failed_details = 0
+    invalid_urls: list[str] = []
     for card in cards:
         if card["cached"]:
             cached = card["cached"]
@@ -2076,6 +2165,10 @@ def extract_esun(
         result = fetched[card["url"]]
         if isinstance(result, Exception):
             failed_details += 1
+            invalid_url = _invalid_detail_url(result)
+            if invalid_url:
+                invalid_urls.append(invalid_url)
+                continue
             page = None
             text = f"{card['title']} {card['summary']}"
             public_url = card["url"]
@@ -2144,11 +2237,15 @@ def extract_esun(
     if failed_listing_pages:
         issues.append(f"{failed_listing_pages} 個 API 清單分頁暫時無法讀取")
     if failed_details:
-        issues.append(f"{failed_details} 個優惠明細轉往非玉山網域或暫時無法讀取")
+        issues.append(_detail_failure_message(
+            failed_details,
+            "優惠明細轉往非玉山網域或",
+            invalid_urls,
+        ))
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"], entry.final_url,
         status, len(activities), checked_at, "；".join(issues),
-    ), []
+    ), _invalid_url_alerts(source, invalid_urls)
 
 
 def _roc_period(value: str, today: date) -> tuple[date, date | None]:
@@ -2523,7 +2620,7 @@ def _listing_promotions(
     amount_threshold: int,
     activity_cache: dict[str, dict[str, Any]] | None,
     cache_stats: dict[str, Any] | None,
-) -> tuple[list[Promotion], int]:
+) -> tuple[list[Promotion], int, list[str]]:
     checked_at = _now_iso(now)
     today = now.astimezone(TAIPEI).date()
     cache = activity_cache or {}
@@ -2550,6 +2647,7 @@ def _listing_promotions(
     fetched = _fetch_many(unique_urls, source["official_domains"], workers=6)
     activities: list[Promotion] = []
     failed_details = 0
+    invalid_urls: list[str] = []
 
     for card in cards:
         if card["cached"]:
@@ -2563,6 +2661,10 @@ def _listing_promotions(
         if card["fetch_detail"]:
             if isinstance(result, Exception) or result is None:
                 failed_details += 1
+                invalid_url = _invalid_detail_url(result) if isinstance(result, Exception) else ""
+                if invalid_url:
+                    invalid_urls.append(invalid_url)
+                    continue
             else:
                 page = parse_page(result.text, result.final_url)
                 text = page.text
@@ -2650,7 +2752,7 @@ def _listing_promotions(
             source_fingerprint=card["fingerprint"],
             last_detail_checked_at=checked_at,
         ))
-    return activities, failed_details
+    return activities, failed_details, invalid_urls
 
 
 def extract_tcbbank(
@@ -2699,7 +2801,7 @@ def extract_tcbbank(
         )
         if not card["end"] or card["end"] >= today
     ]
-    activities, failed_details = _listing_promotions(
+    activities, failed_details, invalid_urls = _listing_promotions(
         source,
         cards,
         now=now,
@@ -2709,11 +2811,11 @@ def extract_tcbbank(
         cache_stats=cache_stats,
     )
     status = "complete" if activities and failed_details == 0 else ("partial" if activities else "failed")
-    message = "" if failed_details == 0 else f"{failed_details} 個官方活動明細暫時無法讀取。"
+    message = _detail_failure_message(failed_details, "官方活動明細", invalid_urls)
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"], listing.final_url,
         status, len(activities), checked_at, message,
-    ), []
+    ), _invalid_url_alerts(source, invalid_urls)
 
 
 def extract_kgi(
@@ -2763,7 +2865,7 @@ def extract_kgi(
             seen_ids.add(card["id"])
             if not card["end"] or card["end"] >= today:
                 cards.append(card)
-    activities, failed_details = _listing_promotions(
+    activities, failed_details, invalid_urls = _listing_promotions(
         source,
         cards,
         now=now,
@@ -2781,11 +2883,11 @@ def extract_kgi(
     if failed_pages:
         issues.append(f"{failed_pages} 個清單分頁暫時無法讀取")
     if failed_details:
-        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+        issues.append(_detail_failure_message(failed_details, "官方活動明細", invalid_urls))
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"], pages[0][0].final_url,
         status, len(activities), checked_at, "；".join(issues),
-    ), []
+    ), _invalid_url_alerts(source, invalid_urls)
 
 
 def extract_hncb(
@@ -2829,7 +2931,7 @@ def extract_hncb(
             message,
             source["entry_url"],
         )]
-    activities, failed_details = _listing_promotions(
+    activities, failed_details, invalid_urls = _listing_promotions(
         source,
         cards,
         now=now,
@@ -2843,11 +2945,15 @@ def extract_hncb(
         f"僅讀取信用卡 tab 對應容器 {panel_id}；已排除存款/外匯、基金/投資、保險、貸款與其他分頁。"
     )
     if failed_details:
-        message += f" {failed_details} 個華南官方活動明細暫時無法讀取。"
+        message += " " + _detail_failure_message(
+            failed_details,
+            "華南官方活動明細",
+            invalid_urls,
+        )
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"], listing.final_url,
         status, len(activities), checked_at, message,
-    ), []
+    ), _invalid_url_alerts(source, invalid_urls)
 
 
 def _fubon_cards(
@@ -3060,7 +3166,7 @@ def extract_taipei_fubon(
         seen_ids.add(card["id"])
         if not card["end"] or card["end"] >= today:
             unique_cards.append(card)
-    activities, failed_details = _listing_promotions(
+    activities, failed_details, invalid_urls = _listing_promotions(
         source,
         unique_cards,
         now=now,
@@ -3099,13 +3205,13 @@ def extract_taipei_fubon(
     if fallback_count:
         issues.append(f"沿用上一版 {fallback_count} 筆有效活動，避免清單暫時縮減")
     if failed_details:
-        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+        issues.append(_detail_failure_message(failed_details, "官方活動明細", invalid_urls))
     if not issues:
         issues.append(f"已讀取 {len(seen_signatures)} 個官方清單分頁")
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"],
         listing.final_url, status, len(activities), checked_at, "；".join(issues),
-    ), []
+    ), _invalid_url_alerts(source, invalid_urls)
 
 
 def _taishin_cards(
@@ -3247,7 +3353,7 @@ def extract_taishin(
         seen_ids.add(card["id"])
         if not card["end"] or card["end"] >= today:
             unique_cards.append(card)
-    activities, failed_details = _listing_promotions(
+    activities, failed_details, invalid_urls = _listing_promotions(
         source,
         unique_cards,
         now=now,
@@ -3270,13 +3376,13 @@ def extract_taishin(
     if failed_pages:
         issues.append(f"{failed_pages} 個分類分頁暫時無法讀取")
     if failed_details:
-        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+        issues.append(_detail_failure_message(failed_details, "官方活動明細", invalid_urls))
     if not issues:
         issues.append("已讀取 A–I 九個信用卡優惠分類")
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"],
         resolved_url, status, len(activities), checked_at, "；".join(issues),
-    ), []
+    ), _invalid_url_alerts(source, invalid_urls)
 
 
 def _firstbank_cards(
@@ -3376,7 +3482,7 @@ def extract_first(
             message,
             source["entry_url"],
         )]
-    activities, failed_details = _listing_promotions(
+    activities, failed_details, invalid_urls = _listing_promotions(
         source,
         cards,
         now=now,
@@ -3386,11 +3492,11 @@ def extract_first(
         cache_stats=cache_stats,
     )
     status = "complete" if activities and failed_details == 0 else ("partial" if activities else "failed")
-    message = "" if failed_details == 0 else f"{failed_details} 個官方活動明細暫時無法讀取。"
+    message = _detail_failure_message(failed_details, "官方活動明細", invalid_urls)
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"],
         listing.final_url, status, len(activities), checked_at, message,
-    ), []
+    ), _invalid_url_alerts(source, invalid_urls)
 
 
 def _chb_cards(
@@ -3513,7 +3619,7 @@ def extract_chb(
             message,
             source["entry_url"],
         )]
-    activities, failed_details = _listing_promotions(
+    activities, failed_details, invalid_urls = _listing_promotions(
         source,
         unique_cards,
         now=now,
@@ -3531,11 +3637,11 @@ def extract_chb(
     if failed_categories:
         issues.append(f"{failed_categories} 個信用卡分類暫時無法讀取")
     if failed_details:
-        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+        issues.append(_detail_failure_message(failed_details, "官方活動明細", invalid_urls))
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"],
         listing.final_url, status, len(activities), checked_at, "；".join(issues),
-    ), []
+    ), _invalid_url_alerts(source, invalid_urls)
 
 
 UBOT_CATEGORY_MAP = {
@@ -3673,7 +3779,7 @@ def extract_ubot(
         for value in source.get("data_categories", [])
     }
     missing_categories = sorted(expected_categories - observed_categories)
-    activities, failed_details = _listing_promotions(
+    activities, failed_details, invalid_urls = _listing_promotions(
         source,
         cards,
         now=now,
@@ -3691,7 +3797,7 @@ def extract_ubot(
     if missing_categories:
         issues.append(f"官方資料缺少分類：{', '.join(missing_categories)}")
     if failed_details:
-        issues.append(f"{failed_details} 個官方活動明細暫時無法讀取")
+        issues.append(_detail_failure_message(failed_details, "官方活動明細", invalid_urls))
     if not issues:
         hot_count = sum(
             1 for activity in activities
@@ -3710,6 +3816,7 @@ def extract_ubot(
             issues[0],
             source["entry_url"],
         ))
+    alerts.extend(_invalid_url_alerts(source, invalid_urls))
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"],
         listing.final_url, status, len(activities), checked_at, "；".join(issues),

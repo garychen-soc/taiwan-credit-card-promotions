@@ -80,6 +80,58 @@ class PublishGuardTests(unittest.TestCase):
                 report_payload["publish_guard"]["published_snapshot_preserved"]
             )
 
+    def test_one_invalid_detail_source_still_publishes_other_sources(self) -> None:
+        rejected_url = "http://10.100.6.38/frontend/bonusDetail.jsp?id=3450"
+        candidate = {
+            "generated_at": "2026-08-04T12:00:00+08:00",
+            "summary": {"active_or_upcoming": 1, "total": 1},
+            "source_health": [
+                {
+                    "id": "healthy-bank",
+                    "bank_name": "正常銀行",
+                    "status": "complete",
+                    "activity_count": 1,
+                    "message": "",
+                },
+                {
+                    "id": "chb",
+                    "bank_name": "彰化銀行",
+                    "status": "failed",
+                    "activity_count": 0,
+                    "message": (
+                        "1 個官方活動明細暫時無法讀取；"
+                        f"官方頁輸出不允許的明細 URL，已拒絕並跳過：{rejected_url}"
+                    ),
+                },
+            ],
+            "alerts": [{
+                "type": "source_emitted_invalid_url",
+                "bank_name": "彰化銀行",
+                "message": "該筆已跳過",
+                "old_url": rejected_url,
+                "new_url": "",
+            }],
+            "activities": [{"id": "healthy-offer", "bank_id": "healthy-bank"}],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            exit_code = persist_payload(
+                candidate,
+                None,
+                root / "promotions.json",
+                root / "latest.json",
+            )
+
+            published = json.loads((root / "promotions.json").read_text())
+
+        self.assertEqual(exit_code, 2)
+        self.assertEqual(
+            [item["id"] for item in published["activities"]],
+            ["healthy-offer"],
+        )
+        self.assertEqual(published["publish_guard"]["status"], "passed")
+        self.assertEqual(published["alerts"][0]["old_url"], rejected_url)
+
     def test_failed_source_retains_previous_current_activities(self) -> None:
         activities: list[dict] = []
         health = [{

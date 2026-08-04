@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import unittest
-from datetime import date
+from datetime import date, datetime
+from unittest.mock import patch
+from zoneinfo import ZoneInfo
 
 from card_promotions_monitor.extractors import (
     _class_text,
@@ -26,8 +28,10 @@ from card_promotions_monitor.extractors import (
     _ubot_cards,
     _yuanta_cards,
     _esun_cards,
+    extract_chb,
     normalize_registration_url,
 )
+from card_promotions_monitor.fetch import FetchResult
 
 
 class RegistrationWindowTests(unittest.TestCase):
@@ -200,6 +204,45 @@ class RegistrationWindowTests(unittest.TestCase):
 
 
 class ClassificationTests(unittest.TestCase):
+    def test_chb_invalid_detail_redirect_is_skipped_and_reported(self) -> None:
+        source = {
+            "id": "chb",
+            "bank_name": "彰化銀行",
+            "entry_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3657",
+            "official_domains": ["bankchb.com"],
+            "category_ids": ["3646"],
+        }
+        entry_html = '<a href="bonusDetail.jsp?id=3646">信用卡優惠</a>'
+        category_html = (
+            '<a class="editor_link" href="bonusDetail.jsp?id=3450">'
+            "【測試】不安全導向活動</a>"
+        )
+        rejected_url = "http://10.100.6.38/frontend/bonusDetail.jsp?id=3450"
+
+        def fake_fetch(url: str, _domains: list[str], **_kwargs) -> FetchResult:
+            if "id=3450" in url:
+                raise ValueError(f"URL is outside official domains: {rejected_url}")
+            html = category_html if "id=3646" in url else entry_html
+            return FetchResult(url, url, 200, html, "text/html", "fixture")
+
+        with patch(
+            "card_promotions_monitor.extractors.fetch_text",
+            side_effect=fake_fetch,
+        ):
+            activities, health, alerts = extract_chb(
+                source,
+                now=datetime(2026, 8, 4, 12, 0, tzinfo=ZoneInfo("Asia/Taipei")),
+                percent_threshold=10,
+                amount_threshold=500,
+            )
+
+        self.assertEqual(activities, [])
+        self.assertEqual(health.status, "failed")
+        self.assertIn(rejected_url, health.message)
+        self.assertEqual(len(alerts), 1)
+        self.assertEqual(alerts[0].type, "source_emitted_invalid_url")
+        self.assertEqual(alerts[0].old_url, rejected_url)
+
     def test_reward_threshold_inputs(self) -> None:
         percent, amount = _reward_values("最高享12%回饋，另贈NT$1,500刷卡金")
         self.assertEqual(percent, 12)
