@@ -435,6 +435,76 @@ def _registration_excerpt(text: str) -> str:
     return " ".join(dict.fromkeys(prioritized))[:2400]
 
 
+TERMS_SECTION_RULES = (
+    ("period", ("活動期間", "優惠期間", "活動日期", "活動時間")),
+    ("eligibility", ("參加資格", "適用對象", "適用卡別", "活動資格")),
+    ("offer", ("優惠內容", "回饋內容", "活動內容")),
+    ("method", ("活動辦法", "參加辦法", "活動方式", "消費門檻")),
+    ("registration", ("登錄辦法", "登錄方式", "登錄時間", "登錄期間")),
+    ("installment", ("分期辦法", "分期")),
+    ("quota", ("限量名額", "限量", "名額", "額滿")),
+    ("notes", ("注意事項", "重要事項", "活動注意事項")),
+)
+PUBLIC_TERMS_SECTION_LIMIT = 1800
+PUBLIC_TERMS_TOTAL_LIMIT = 6000
+def _terms_content(text: str) -> tuple[str, dict[str, str]]:
+    """Keep full report text and compact original-language sections for the UI."""
+    raw = text.strip()
+    if not raw:
+        return "", {}
+    anchors = tuple(
+        anchor
+        for _, values in TERMS_SECTION_RULES
+        for anchor in values
+    )
+    expanded = re.sub(
+        rf"(?<!\n)(?=(?:{'|'.join(map(re.escape, anchors))})[：:])",
+        "\n",
+        raw,
+    )
+    grouped: dict[str, list[str]] = {}
+    current = "overview"
+    for source_line in expanded.splitlines():
+        line = clean_inline(source_line)
+        if not line:
+            continue
+        heading_key = next(
+            (
+                key
+                for key, values in TERMS_SECTION_RULES
+                if any(
+                    re.match(rf"^[※＊*【\[(（]?\s*{re.escape(anchor)}", line)
+                    for anchor in values
+                )
+            ),
+            "",
+        )
+        if heading_key:
+            current = heading_key
+        elif current == "overview":
+            inferred_key = next(
+                (
+                    key
+                    for key, values in TERMS_SECTION_RULES
+                    if any(anchor in line for anchor in values)
+                ),
+                "overview",
+            )
+            current = inferred_key
+        grouped.setdefault(current, []).append(line)
+
+    sections: dict[str, str] = {}
+    remaining = PUBLIC_TERMS_TOTAL_LIMIT
+    for key in ("period", "eligibility", "offer", "method", "registration", "installment", "quota", "notes", "overview"):
+        value = "\n".join(dict.fromkeys(grouped.get(key, []))).strip()
+        if not value or remaining <= 0:
+            continue
+        clipped = value[: min(PUBLIC_TERMS_SECTION_LIMIT, remaining)]
+        sections[key] = clipped
+        remaining -= len(clipped)
+    return raw, sections
+
+
 def _registration_url(links: list[dict[str, str]], bank_id: str) -> str:
     if bank_id in STRICT_REGISTRATION_URL_BANKS:
         return REGISTRATION_URL_DEFAULTS[bank_id]
@@ -631,6 +701,7 @@ def extract_dbs(
         title = page.title.split("|", 1)[0].strip() or f"{merchant} 星展信用卡活動"
         summary = page.headings[:700] or title
         registration_text = _registration_excerpt(text)
+        terms_raw, terms_sections = _terms_content(text)
         registration_required = "登錄" in text and "全部無需登錄" not in text
         windows = _registration_windows(registration_text or text, start.year, start, end)
         reward_percent, reward_amount = _reward_values(f"{title} {summary}")
@@ -656,6 +727,8 @@ def extract_dbs(
             observed_at=checked_at,
             registration_required=registration_required,
             registration_text=registration_text,
+            terms_sections=terms_sections,
+            terms_raw=terms_raw,
             registration_url=_registration_url(page.links, "dbs") if registration_required else "",
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -869,6 +942,29 @@ def extract_cathay(
             or title
         ))
         registration_text = _model_registration_text(model, combined_props)
+        terms_text = "\n".join(
+            dict.fromkeys(
+                clean_inline(strip_html(value))
+                for value in (
+                    title,
+                    summary,
+                    registration_text,
+                    *(
+                        text
+                        for text in walk_strings(model)
+                        if any(
+                            token in text
+                            for token in (
+                                "活動期間", "參加資格", "活動辦法", "登錄",
+                                "注意事項", "分期", "限量", "回饋",
+                            )
+                        )
+                    ),
+                )
+                if clean_inline(strip_html(value))
+            )
+        )
+        terms_raw, terms_sections = _terms_content(terms_text)
         windows = _registration_windows(registration_text, start.year, start, end)
         registration_required = bool(
             _has_registration_requirement(registration_text)
@@ -898,6 +994,8 @@ def extract_cathay(
             observed_at=checked_at,
             registration_required=registration_required,
             registration_text=registration_text,
+            terms_sections=terms_sections,
+            terms_raw=terms_raw,
             registration_url=_registration_url(detail_links, "cathay") if registration_required else "",
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -1216,6 +1314,7 @@ def extract_ctbc(
                 "",
             )
             registration_text = _registration_excerpt(body_text)
+            terms_raw, terms_sections = _terms_content(body_text)
             windows = _registration_windows(registration_text or body_text, start.year, start, end)
             registration_required = bool(register_link or windows or _has_registration_requirement(body_text))
             reward_percent, reward_amount = _reward_values(f"{title} {summary} {body_text}")
@@ -1239,6 +1338,8 @@ def extract_ctbc(
                 observed_at=checked_at,
                 registration_required=registration_required,
                 registration_text=registration_text,
+                terms_sections=terms_sections,
+                terms_raw=terms_raw,
                 registration_url=register_link or (REGISTRATION_URL_DEFAULTS["ctbc"] if registration_required else ""),
                 registration_windows=windows,
                 max_reward_percent=reward_percent,
@@ -1392,6 +1493,7 @@ def extract_sinopac(
             public_url = result.final_url
         start, end = _official_detail_period(text, card["start"], card["end"], today)
         registration_text = _registration_excerpt(text)
+        terms_raw, terms_sections = _terms_content(text)
         windows = _registration_windows(registration_text or text, start.year, start, end)
         registration_required = bool(windows or _has_registration_requirement(text))
         reward_percent, reward_amount = _reward_values(f"{card['title']} {card['summary']} {text[:4500]}")
@@ -1420,6 +1522,8 @@ def extract_sinopac(
             observed_at=checked_at,
             registration_required=registration_required,
             registration_text=registration_text,
+            terms_sections=terms_sections,
+            terms_raw=terms_raw,
             registration_url=registration_url,
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -1572,6 +1676,7 @@ def extract_scsb(
             public_url = result.final_url
         start, end = _official_detail_period(text, card["start"], card["end"], today)
         registration_text = _registration_excerpt(text)
+        terms_raw, terms_sections = _terms_content(text)
         windows = _registration_windows(registration_text or text, start.year, start, end)
         registration_required = bool(windows or _has_registration_requirement(text))
         reward_percent, reward_amount = _reward_values(f"{card['title']} {card['summary']} {text[:4500]}")
@@ -1601,6 +1706,8 @@ def extract_scsb(
             observed_at=checked_at,
             registration_required=registration_required,
             registration_text=registration_text,
+            terms_sections=terms_sections,
+            terms_raw=terms_raw,
             registration_url=registration_url,
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -1749,6 +1856,7 @@ def extract_obank(
             activities.append(cached)
             continue
         registration_text = _registration_excerpt(description)
+        terms_raw, terms_sections = _terms_content(description)
         windows = _registration_windows(registration_text or description, start.year, start, end)
         registration_required = bool(windows or _has_registration_requirement(description))
         reward_percent, reward_amount = _reward_values(body_text)
@@ -1779,6 +1887,8 @@ def extract_obank(
             observed_at=checked_at,
             registration_required=registration_required,
             registration_text=registration_text,
+            terms_sections=terms_sections,
+            terms_raw=terms_raw,
             registration_url=registration_url,
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -1949,6 +2059,7 @@ def extract_yuanta(
         if end and end < today:
             continue
         registration_text = _registration_excerpt(text)
+        terms_raw, terms_sections = _terms_content(text)
         windows = _registration_windows(registration_text or text, start.year, start, end)
         registration_required = bool(windows or _has_registration_requirement(text))
         reward_percent, reward_amount = _reward_values(
@@ -1982,6 +2093,8 @@ def extract_yuanta(
             observed_at=checked_at,
             registration_required=registration_required,
             registration_text=registration_text,
+            terms_sections=terms_sections,
+            terms_raw=terms_raw,
             registration_url=registration_url,
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -2185,6 +2298,7 @@ def extract_esun(
         if end and end < today:
             continue
         registration_text = _registration_excerpt(text)
+        terms_raw, terms_sections = _terms_content(text)
         windows = _registration_windows(registration_text or text, start.year, start, end)
         registration_required = bool(windows or _has_registration_requirement(text))
         # 玉山明細頁的全站風險揭露含循環利率等百分比；回饋門檻只採
@@ -2220,6 +2334,8 @@ def extract_esun(
             observed_at=checked_at,
             registration_required=registration_required,
             registration_text=registration_text,
+            terms_sections=terms_sections,
+            terms_raw=terms_raw,
             registration_url=registration_url,
             registration_windows=windows,
             max_reward_percent=reward_percent,
@@ -2328,6 +2444,9 @@ def extract_sunny(
             continue
         registration_required = bool(item.get("registration_required"))
         registration_text = item.get("registration_text", "")
+        terms_raw, terms_sections = _terms_content(
+            f"{title}\n{item.get('summary', '')}\n{registration_text}"
+        )
         windows = _registration_windows(registration_text, start.year, start, end)
         text = f"{title} {item.get('summary', '')}"
         reward_percent, reward_amount = _reward_values(text)
@@ -2351,6 +2470,8 @@ def extract_sunny(
             observed_at=checked_at,
             registration_required=registration_required,
             registration_text=registration_text,
+            terms_sections=terms_sections,
+            terms_raw=terms_raw,
             registration_url=(
                 item.get("registration_url")
                 or (REGISTRATION_URL_DEFAULTS["sunny"] if registration_required else "")
@@ -2688,6 +2809,7 @@ def _listing_promotions(
             _registration_excerpt(text)
             or clean_inline(str(card.get("registration_text") or ""))
         )
+        terms_raw, terms_sections = _terms_content(text)
         windows = _registration_windows(
             registration_text or text,
             start.year,
@@ -2736,6 +2858,8 @@ def _listing_promotions(
             observed_at=checked_at,
             registration_required=registration_required,
             registration_text=registration_text,
+            terms_sections=terms_sections,
+            terms_raw=terms_raw,
             registration_url=registration_url,
             registration_windows=windows,
             max_reward_percent=reward_percent,
