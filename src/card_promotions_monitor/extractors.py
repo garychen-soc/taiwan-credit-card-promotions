@@ -3,8 +3,9 @@ from __future__ import annotations
 import calendar
 import hashlib
 import re
+import unicodedata
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date, datetime, time, timedelta
+from datetime import date, datetime, time
 from typing import Any
 from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
@@ -162,17 +163,25 @@ def _registration_windows(
     activity_start: date | None = None,
     activity_end: date | None = None,
 ) -> list[RegistrationWindow]:
+    normalized_text = unicodedata.normalize("NFKC", text)
+    normalized_text = (
+        normalized_text.replace("〜", "~")
+        .replace("～", "~")
+        .replace("至", "~")
+        .replace("—", "~")
+        .replace("–", "~")
+        .replace("－", "~")
+    )
+    normalized_text = re.sub(
+        r"(?<=\d):(\d{2}):\d{2}(?=\D|$)",
+        r":\1",
+        normalized_text,
+    )
     normalized = _normalize_roc_dates(
-        clean_inline(
-            text.replace("～", "~")
-            .replace("至", "~")
-            .replace("—", "~")
-            .replace("–", "~")
-            .replace("－", "~")
-        )
+        clean_inline(normalized_text)
     )
     windows: list[RegistrationWindow] = []
-    seen: set[tuple[str, str]] = set()
+    seen: set[tuple[str, str | None]] = set()
     range_spans: list[tuple[int, int]] = []
 
     range_pattern = re.compile(
@@ -256,8 +265,7 @@ def _registration_windows(
             start = datetime(year, int(match.group(2)), int(match.group(3)), hour, minute, tzinfo=TAIPEI)
         except ValueError:
             continue
-        end = start + timedelta(minutes=30)
-        key = (start.isoformat(), end.isoformat())
+        key = (start.isoformat(), None)
         if key in seen:
             continue
         seen.add(key)
@@ -288,8 +296,7 @@ def _registration_windows(
             )
         except ValueError:
             continue
-        end = deadline + timedelta(minutes=30)
-        key = (deadline.isoformat(), end.isoformat())
+        key = (deadline.isoformat(), None)
         if key in seen:
             continue
         seen.add(key)
@@ -306,8 +313,7 @@ def _registration_windows(
             start = datetime(year, int(match.group(2)), int(match.group(3)), hour, minute, tzinfo=TAIPEI)
         except ValueError:
             continue
-        end = start + timedelta(minutes=30)
-        key = (start.isoformat(), end.isoformat())
+        key = (start.isoformat(), None)
         if key in seen:
             continue
         seen.add(key)
@@ -320,8 +326,7 @@ def _registration_windows(
         if day < period_start or day > period_end:
             return
         start = datetime.combine(day, time(hour, minute), tzinfo=TAIPEI)
-        end = start + timedelta(minutes=30)
-        key = (start.isoformat(), end.isoformat())
+        key = (start.isoformat(), None)
         if key in seen:
             return
         seen.add(key)

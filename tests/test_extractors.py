@@ -94,6 +94,24 @@ class RegistrationWindowTests(unittest.TestCase):
         self.assertEqual(len(values), 1)
         self.assertEqual(values[0].end, "2026-07-31T23:59:00+08:00")
 
+    def test_parses_second_precision_range(self) -> None:
+        values = _registration_windows(
+            "登錄時間：2026/8/7 17:00:00~2026/8/31 23:59:00",
+            2026,
+        )
+        self.assertEqual(len(values), 1)
+        self.assertEqual(values[0].start, "2026-08-07T17:00:00+08:00")
+        self.assertEqual(values[0].end, "2026-08-31T23:59:00+08:00")
+
+    def test_normalizes_fullwidth_time_and_roc_year_range(self) -> None:
+        values = _registration_windows(
+            "登錄時間：115/8/7 17：00：00～115/8/31 23：59：00",
+            2026,
+        )
+        self.assertEqual(len(values), 1)
+        self.assertEqual(values[0].start, "2026-08-07T17:00:00+08:00")
+        self.assertEqual(values[0].end, "2026-08-31T23:59:00+08:00")
+
     def test_parses_start_only(self) -> None:
         values = _registration_windows(
             "刷卡金活動於2026/7/31 16:00開始登錄，額滿即止。",
@@ -101,7 +119,7 @@ class RegistrationWindowTests(unittest.TestCase):
         )
         self.assertEqual(len(values), 1)
         self.assertEqual(values[0].start, "2026-07-31T16:00:00+08:00")
-        self.assertEqual(values[0].end, "2026-07-31T16:30:00+08:00")
+        self.assertIsNone(values[0].end)
 
     def test_parses_taiwan_time_words(self) -> None:
         values = _registration_windows(
@@ -128,6 +146,7 @@ class RegistrationWindowTests(unittest.TestCase):
                 "2026-09-01T12:00:00+08:00",
             ],
         )
+        self.assertTrue(all(item.end is None for item in values))
 
     def test_negative_registration_wording_is_not_requirement(self) -> None:
         self.assertFalse(_has_registration_requirement("活動登錄專區（本活動不須登錄）"))
@@ -158,6 +177,7 @@ class RegistrationWindowTests(unittest.TestCase):
         self.assertEqual(len(values), 1)
         self.assertEqual(values[0].label, "登錄截止")
         self.assertEqual(values[0].start, "2026-10-31T23:59:00+08:00")
+        self.assertIsNone(values[0].end)
 
     def test_ignores_malformed_range_endpoint(self) -> None:
         values = _registration_windows(
@@ -185,6 +205,7 @@ class RegistrationWindowTests(unittest.TestCase):
                 "2026-09-06T13:00:00+08:00",
             ],
         )
+        self.assertTrue(all(item.end is None for item in values))
 
     def test_parses_recurring_nth_weekday_registration(self) -> None:
         values = _registration_windows(
@@ -201,6 +222,7 @@ class RegistrationWindowTests(unittest.TestCase):
                 "2026-09-02T16:00:00+08:00",
             ],
         )
+        self.assertTrue(all(item.end is None for item in values))
 
 
 class ClassificationTests(unittest.TestCase):

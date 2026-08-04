@@ -36,6 +36,7 @@ from .extractors import (
 
 
 ROOT = Path(__file__).resolve().parents[2]
+SCHEMA_VERSION = 3
 PUBLISH_GUARD_EXIT_CODE = 4
 UPDATE_ALREADY_RUNNING_EXIT_CODE = 3
 DNS_FAILURE_MARKERS = (
@@ -223,7 +224,16 @@ def persist_payload(
 
 def build_payload(config: dict, now: datetime, previous_payload: dict | None = None) -> dict:
     thresholds = config["high_return"]
-    cached_activities = activity_cache(previous_payload)
+    previous_schema = (
+        int(previous_payload.get("schema_version") or 0)
+        if isinstance(previous_payload, dict)
+        else 0
+    )
+    cached_activities = (
+        activity_cache(previous_payload)
+        if previous_schema >= SCHEMA_VERSION
+        else {}
+    )
     cache_stats = new_cache_stats(
         previous_payload.get("generated_at", "")
         if isinstance(previous_payload, dict)
@@ -331,7 +341,7 @@ def build_payload(config: dict, now: datetime, previous_payload: dict | None = N
         return sorted(values, key=lambda item: (item["start"], item["bank_name"], item["title"]))
 
     return {
-        "schema_version": 2,
+        "schema_version": SCHEMA_VERSION,
         "generated_at": now.replace(microsecond=0).isoformat(),
         "timezone": config["timezone"],
         "thresholds": thresholds,
