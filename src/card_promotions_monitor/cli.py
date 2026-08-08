@@ -153,16 +153,45 @@ def assess_publish_guard(payload: dict, previous_payload: dict | None) -> dict:
             for marker in DNS_FAILURE_MARKERS
         )
     )
-    candidate_active = int(payload.get("summary", {}).get("active_or_upcoming") or 0)
+    candidate_fallback = int(
+        payload.get("cache", {}).get("source_fallback_activities") or 0
+    )
+    candidate_active = max(
+        0,
+        int(payload.get("summary", {}).get("active_or_upcoming") or 0)
+        - candidate_fallback,
+    )
     previous_active = 0
     if isinstance(previous_payload, dict):
-        previous_active = int(
-            previous_payload.get("summary", {}).get("active_or_upcoming") or 0
+        previous_fallback = int(
+            previous_payload.get("cache", {}).get("source_fallback_activities") or 0
+        )
+        previous_active = max(
+            0,
+            int(previous_payload.get("summary", {}).get("active_or_upcoming") or 0)
+            - previous_fallback,
         )
     drop_ratio = (
         max(0.0, 1 - (candidate_active / previous_active))
         if previous_active
         else 0.0
+    )
+
+    previous_source_counts = {
+        str(item.get("id")): int(item.get("activity_count") or 0)
+        for item in (
+            previous_payload.get("source_health", [])
+            if isinstance(previous_payload, dict)
+            else []
+        )
+        if isinstance(item, dict) and item.get("id")
+    }
+    has_source_activity_regression = any(
+        previous_count > 0
+        and (1 - (int(item.get("activity_count") or 0) / previous_count)) > 0.4
+        for item in health
+        if (previous_count := previous_source_counts.get(str(item.get("id"))))
+        is not None
     )
 
     reason_codes: list[str] = []
@@ -172,6 +201,8 @@ def assess_publish_guard(payload: dict, previous_payload: dict | None) -> dict:
         reason_codes.append("catastrophic_source_failure")
     if previous_active and source_failed >= 2 and drop_ratio >= 0.5:
         reason_codes.append("catastrophic_activity_regression")
+    if has_source_activity_regression:
+        reason_codes.append("source_activity_regression")
 
     blocked = bool(reason_codes)
     return {

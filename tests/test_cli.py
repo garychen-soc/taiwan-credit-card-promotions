@@ -90,6 +90,28 @@ class PublishGuardTests(unittest.TestCase):
         guard = assess_publish_guard(candidate, previous)
         self.assertFalse(guard["blocked"])
 
+    def test_blocks_single_large_source_regression_below_global_threshold(self) -> None:
+        candidate = candidate_payload(failed=1, active=859)
+        previous = candidate_payload(failed=0, active=1071)
+        previous["source_health"][0]["activity_count"] = 212
+
+        guard = assess_publish_guard(candidate, previous)
+
+        self.assertTrue(guard["blocked"])
+        self.assertIn("source_activity_regression", guard["reason_codes"])
+        self.assertNotIn("catastrophic_activity_regression", guard["reason_codes"])
+
+    def test_activity_drop_excludes_retained_fallback_activities(self) -> None:
+        candidate = candidate_payload(failed=16, active=1110)
+        candidate["cache"] = {"source_fallback_activities": 1069}
+        previous = candidate_payload(failed=0, active=1110)
+
+        guard = assess_publish_guard(candidate, previous)
+
+        self.assertEqual(guard["candidate_active_or_upcoming"], 41)
+        self.assertEqual(guard["activity_drop_percent"], 96.3)
+        self.assertIn("catastrophic_activity_regression", guard["reason_codes"])
+
     def test_blocked_candidate_does_not_replace_public_output(self) -> None:
         candidate = candidate_payload(failed=16, active=27, dns_failures=14)
         previous = {
