@@ -1,62 +1,50 @@
 {
   "schema_version": 4,
-  "generated_at": "2026-08-04T13:53:51+08:00",
+  "generated_at": "2026-08-08T11:46:50+08:00",
   "activities": {
-    "esun-0729030c92ba": {
-      "fingerprint": "bcda20ce4b1f13d77f548a32925bc5a6524184c99dd552cd46f4b8f348ba9076",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
     "esun-4122301e38f6": {
       "fingerprint": "49d23f8374ea8b9153e5eef91ad4588a9ca0a9d232f0ae50d802e28e860ebb7f",
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
     },
     "esun-bf78fdca4069": {
       "fingerprint": "bcda20ce4b1f13d77f548a32925bc5a6524184c99dd552cd46f4b8f348ba9076",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-9ecf0f82ba2a": {
       "fingerprint": "7bfec2507a1584e4bc4adc789435455d445ce11e3a10c8c5efce8bfe32c9e1c9",
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
     },
+    "esun-4cdb0c49dc83": {
+      "fingerprint": "8fe7749245d0b082cff46bd4a959f14acd5fbfeee5157fff5a741c3804200dcb",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "ubot-986dafdb94e4": {
       "fingerprint": "78a4577e8895d1b064db8780ef0e447dec34a36127a124e6cd5639e67d57675f",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "sinopac-811a04e0f2f8": {
       "fingerprint": "49eb5b7a6948a25673f70b9cd9e828859c94cf5a15bc8e798ab687dfdb9a9ae1",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
-    "esun-69f3b96bd153": {
-      "fingerprint": "d54547d95dae0b4786fca39ee89835a10dc1ab43498fbde7dd0e66c8c9a2ef33",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "ubot-57796476bddc": {
-      "fingerprint": "522bbc84695b7d16755570ed3609fc5c525db349af5a8282fb6d95029bc61092",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "ubot-fe2285fe77c1": {
-      "fingerprint": "3373430d2059ceb4b4da7fe6bfee61d5a5a46a07cd6fb0c6729541b9ebe3adee",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
     "esun-b91856bb6933": {
       "fingerprint": "aed90491d665d0a6d22d1acd844fc2c5e12069dedaa4e56522ffe701e9bd6b69",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "cathay-45bbe13879e3": {
       "fingerprint": "f6a1cd427980337cbcf9a9a264006fbbaf097a5323b9b42cdfe72fc7075f6df3",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taipei_fubon-933c1777e683": {
       "fingerprint": "fa085bb03d218c16720f41f30d52260e0f94e3ee4bd2a35ee2e75509198d55f6",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-a00fa6beefc2": {
       "fingerprint": "4497893f9779c4a9facd8151c29a577ec3523ba920443b5ceac4139fc8f2cb89",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "ubot-f1a8bf370aaf": {
       "fingerprint": "21df0df851806caa04ea893357fcfa6a60ea71da0a5dc3fd4caf10920a7e9304",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "kgi-301d6be6fa97": {
       "fingerprint": "fc33a8e82cd19defcfb6a7b072542b2e2d64aa8408b624591488d7f85144ed49",
@@ -68,11 +56,11 @@
     },
     "esun-823280504e31": {
       "fingerprint": "bcda20ce4b1f13d77f548a32925bc5a6524184c99dd552cd46f4b8f348ba9076",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-dca0eef29206": {
       "fingerprint": "bcda20ce4b1f13d77f548a32925bc5a6524184c99dd552cd46f4b8f348ba9076",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-86f7a9cf6947": {
       "fingerprint": "49d23f8374ea8b9153e5eef91ad4588a9ca0a9d232f0ae50d802e28e860ebb7f",
@@ -97,6 +85,10 @@
     "esun-f2c8355f42ab": {
       "fingerprint": "d7250bcd29a9c58e17795b3f5d2a69d993879423bf1ed6305dabaf9bcd6718ed",
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+    },
+    "esun-69f3b96bd153": {
+      "fingerprint": "d54547d95dae0b4786fca39ee89835a10dc1ab43498fbde7dd0e66c8c9a2ef33",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "ubot-8a543a0da85e": {
       "fingerprint": "9f2b8eb7017550f3afb2a44e45ec001486fc1f98655c85d75439059980866413",
@@ -179,12 +171,12 @@
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
     },
     "cathay-019a7a515f76": {
-      "fingerprint": "621094267b0629d88c14855a41d33de5e3b50628c886a1f8fc82e47e34279f93",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+      "fingerprint": "9d23b134366e0ff728869647d7fbf72de2ee0b06a287a83b2203f266ef832d92",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "cathay-2366b39b9e70": {
-      "fingerprint": "2e672f235af23628231861244f53318f10733745e060abb94a7db941f8d8d308",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+      "fingerprint": "e46ceacd09e7075a03a74eaabe0f5adb8ba3bf85e699090d992985f03280c001",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "cathay-13c2781d54a0": {
       "fingerprint": "ee3a735788c7be6a0bd8d10ab04374b63d73ebbd619fffac1ba1f5fc49b5303a",
@@ -330,13 +322,17 @@
       "fingerprint": "cbaa80aecc0a5eb4414cd4abe0fbdc6455bca05a15b9fef43ca91e48da1d5229",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "esun-cde85269a798": {
+      "fingerprint": "45451d6acf1093813eaeeadcf187117d31f630f3e6764c380b4675c6cc811091",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "esun-67416128b27f": {
       "fingerprint": "bcda20ce4b1f13d77f548a32925bc5a6524184c99dd552cd46f4b8f348ba9076",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-67a618b93e34": {
       "fingerprint": "bcda20ce4b1f13d77f548a32925bc5a6524184c99dd552cd46f4b8f348ba9076",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-ff71fb2b4983": {
       "fingerprint": "7bfec2507a1584e4bc4adc789435455d445ce11e3a10c8c5efce8bfe32c9e1c9",
@@ -401,6 +397,14 @@
     "yuanta-634e140cf74d": {
       "fingerprint": "2894208872939b62bdb4f46cad4118959b25593ffd1627ef34d13842290d667a",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    },
+    "ubot-f4faf96768f3": {
+      "fingerprint": "462efff464cb724f10808b60b0604f5d0d23cabbb87d72c02721e79bcdf3ffb2",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "ubot-62f6d71a0684": {
+      "fingerprint": "4abb5a1603494b8f99082cc64dca84149b72bc6a9cc2f774170d651d04f29ed6",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taipei_fubon-73238ade7aa0": {
       "fingerprint": "e68d7d3aa4ec66d468d7ea0e9a1d7debec556c4a321b64d266ea1ed4e967e341",
@@ -618,6 +622,10 @@
       "fingerprint": "73dd3abceecedd1cec7ccb24161f9b8c682a51498798000a38c330a4aa42990d",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "esun-bce5bd6fcc4e": {
+      "fingerprint": "6cfa748bf33aca9e1ee65bb9df70d5b417c7880cc265956077f79b8a832f8c6e",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "esun-5785cd191083": {
       "fingerprint": "e055d27ac0fdecb8b305cd33a4b6e6092ba76cd7e9aeebac687bdd21723e2a24",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
@@ -642,13 +650,17 @@
       "fingerprint": "81cc541ef42d32f96ada8b727eca450e7a755dfc3a587e87c32206c690eef294",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "obank-d12843a30210": {
+      "fingerprint": "cf5942144dab9f9fd988fb68b9fad37ba839f7749ec66c8748da5d1dc0e77562",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "ubot-033d2d82c202": {
       "fingerprint": "1791ab2cc811a7e9e857bd567b34d5572de2e9da212052074422a094ea70727c",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
-    "ubot-56f360a518e1": {
-      "fingerprint": "3eb50e46bddda36c6ce2339f827866c5bace9b4af664cd00ebda2fcee9b0d2e4",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    "ubot-e82028a2e775": {
+      "fingerprint": "e4f8cc8406b4652603df271650cebd7cca28f0eee0c3f4a9b7af33059593bff2",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "ubot-99adbb00aa54": {
       "fingerprint": "0012379bdbd321215da12f9f17633aa233092a8972b4947e6b08a3eff53462a1",
@@ -684,7 +696,7 @@
     },
     "ubot-685431c40f88": {
       "fingerprint": "78a4577e8895d1b064db8780ef0e447dec34a36127a124e6cd5639e67d57675f",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "ubot-59324e3875f6": {
       "fingerprint": "a77f21ea726bef8fdd8d7af773b581311649dd9844db7832c2032de66969a939",
@@ -1074,18 +1086,6 @@
       "fingerprint": "db00409d32fa652575d85686afe47c80227aa2aa2a68a8db6ee24cdd3f9099cf",
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
     },
-    "esun-142e1844e422": {
-      "fingerprint": "bcda20ce4b1f13d77f548a32925bc5a6524184c99dd552cd46f4b8f348ba9076",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "esun-3bad497b0d6c": {
-      "fingerprint": "245b2fb14f4ede7331bd5e6b29cb97d97d748bb7318569409cdf693bf69bac8c",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "esun-a6cc60e729e1": {
-      "fingerprint": "e34185a20514ec9958e6ae1f2a7adbf5d6abdff2b36b995c4b48e0c7c306bfab",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
     "esun-dc10cef56c09": {
       "fingerprint": "7bfec2507a1584e4bc4adc789435455d445ce11e3a10c8c5efce8bfe32c9e1c9",
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
@@ -1098,101 +1098,69 @@
       "fingerprint": "0d1a7b5bf526c2b7532451e48e34267c12ab14e0adae4d94f8fa2986e669813c",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
-    "ubot-bed4297e1352": {
-      "fingerprint": "51687d55e13494c96a14be9261cbe6bbdece7637263dcfbfd4fbc40306093c01",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    "ubot-f97836a304f4": {
+      "fingerprint": "465e67c8abaa620c0d8147a9b7f0fabcdbe010927b56a024227f91b2c24e42de",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
-    "kgi-5e94796743f8": {
-      "fingerprint": "d566525281407fffdd34af736a82a86fefd0313a56458d291ec698834bd0ef02",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+    "taipei_fubon-cc257a64586e": {
+      "fingerprint": "a565d9792180e8041685b6b3236ebf8a64786a7797d4b770e3bd4ad80ac532ce",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
-    "taipei_fubon-343a9b19c10e": {
-      "fingerprint": "bc15093d8d33f38936cfdf7279dcf89404847758154289f9fc14040326a803b5",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "taipei_fubon-79d18542de95": {
-      "fingerprint": "bbca548170824d6bbe44c79c4f9fb9c381cf97e53de5b83000f81e1b572f9258",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "taishin-f82138e6aabf": {
-      "fingerprint": "c68b46f7202aa0782a05d39959b9802572742112b736fd2b38a3694926ccf5fd",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "taishin-8bbb697e34ff": {
-      "fingerprint": "a8691a65f2f1699f0620cf5c0a1757e6e65c97e9145b0163ded263008ab80b54",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "taishin-3e8e5c93a00f": {
-      "fingerprint": "85e21521eec7db5a41d141c14d14b7d31ef4d88302240e4f317f66f9186e7161",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "chb-edbdcaed8153": {
-      "fingerprint": "adee8c61082bd8c21bf6aac6a5f04621e8f48fbcf7fc17263d9a4e14603bc6b5",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "esun-cfd1aa5b4ae3": {
-      "fingerprint": "43bbd4de8d2b4481a360c5a38e3f9bfcbd0d507a8c77f48cdb0a930e1f117c93",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
-    },
-    "taishin-6e8782d64332": {
-      "fingerprint": "6a193d99dc9a0865590b7a971c65395672adfe9f489ac76daaf16f624f852773",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    "esun-142e1844e422": {
+      "fingerprint": "bcda20ce4b1f13d77f548a32925bc5a6524184c99dd552cd46f4b8f348ba9076",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taipei_fubon-9d2c89051b23": {
       "fingerprint": "ac858b0c0e2baa28e478d27efb9ea8f531d90448b6e3a5e4c00c20dfadeb7246",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taipei_fubon-054135c077da": {
       "fingerprint": "74393a8527e3523d14c1c99ebdc9a557d7de6b7e78fae59b2433094690dd24c5",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taipei_fubon-0325406d8714": {
       "fingerprint": "3e8311b1b971f1bfb5a2e2118e802b68eff7ef7cc9254fd1a1ec0545e9d8554b",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taishin-8ca4b9579b36": {
       "fingerprint": "d9d5da94665404b23b78f0f3f1beb007ef14dfb13e1b194aee3a9097b8b82232",
-      "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taishin-bd5ecd2d5c8b": {
       "fingerprint": "4003ad7e34b36621325340d28c89d85bf77f0b3f922a7fb86a17ba1027add267",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taishin-af0de914737f": {
       "fingerprint": "357b6c8f75e377c3b689dfe9437af6dc976cddddc3105576b1158d7d63825da1",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taishin-d329f143db1e": {
       "fingerprint": "0095ea005de13c1d630305f09edb42dee836fab4cabd41e92900e2aadd339d22",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-581293955f99": {
       "fingerprint": "4634c1745bd85e61da224c3f8911b82e981ed5794026475d188eedfa2c396829",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-4ef1fc65ebef": {
       "fingerprint": "0b097b30bfd3c652f43b5c483485e19426c02c13393f5d6966796ca3f930fd19",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-dc057dd1766d": {
       "fingerprint": "ea2f5798756064678eefc0936e0120e98e1833b69eb947d7700f9df63141a448",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-57cc7992a1f6": {
       "fingerprint": "27168e05bdb74ca566c0b1ce0731b6b4f65f65073d1cc307ef1f39ac12c9c544",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
-    },
-    "esun-4cdb0c49dc83": {
-      "fingerprint": "7600bcef3d852ee92add126ec85fb307f00cee407fe0b39be485763410b820b8",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taishin-666a4387a46f": {
       "fingerprint": "d7b54d088e3b45a9711702208e0c9b7d41931a094af6af5632c33e8405691641",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-85888f2c4daa": {
       "fingerprint": "9a2eb765f63fc422e3746331efc40849b4c0adac05bd1f2dbc23a96fe268e2db",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taishin-140735387525": {
       "fingerprint": "ea9df3a2717fcc2e9af14ff19b60024b6680100fe7b75f33aac9ff13ef9d0a49",
@@ -1238,13 +1206,37 @@
       "fingerprint": "902ac5aed6912793c4e65f23f9e66177e0b0b1f09a5388a09ab381d88a176610",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "taipei_fubon-2c52ab66180e": {
+      "fingerprint": "42bf049e86040374883e2ac7212db69a8e4f7256191edaac5ea7893ab592bac9",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "taishin-afa09ddcc121": {
+      "fingerprint": "c78f3646861a422ddb703666778868ead4afb13cb7f77f161393d4d18e60a183",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "taipei_fubon-5f973c73e333": {
       "fingerprint": "a224228a7ee7c43bea18b89dba8aa650110b13eb9d36ea6cd25832bf372cd565",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "esun-3bad497b0d6c": {
+      "fingerprint": "245b2fb14f4ede7331bd5e6b29cb97d97d748bb7318569409cdf693bf69bac8c",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "ubot-d9d42f7e53ca": {
+      "fingerprint": "7685404399e738d13075fa2e6ad48c70860c7c536ab3fc4f630d70e9254ddd2c",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "taishin-99c54491ad12": {
+      "fingerprint": "46f5403ac1375da4e56adbb7eb9e31f4a05592545163e4945dc19f57bf0b2627",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "esun-c748e8aa5ff0": {
       "fingerprint": "8288739b8b25ebad44d0221178196c7c1c360c5c0239f3268f709c5ca81d3220",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    },
+    "esun-a6cc60e729e1": {
+      "fingerprint": "e34185a20514ec9958e6ae1f2a7adbf5d6abdff2b36b995c4b48e0c7c306bfab",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-55636e3ebc50": {
       "fingerprint": "a0054321ecee4c3533c3a50a6e717a53cca25601b023d06088da8aaf7b29784a",
@@ -1474,10 +1466,6 @@
       "fingerprint": "25429a4aaacfd4deee3c54f455b62c25c0e59fcba37ce92955fddc77f0cdb5ed",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
-    "ubot-6bb71587c051": {
-      "fingerprint": "a299d35d0aa11d922f96098532cb2bf5201ced81ab92058f804eb70ba33e71cd",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
-    },
     "tcbbank-d5590c29a4c2": {
       "fingerprint": "7c4a365e48d1a01d9ef2e336be59ff60263a6a861a2d64193927bf4821bef788",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
@@ -1489,6 +1477,26 @@
     "esun-8fc94a8dfee0": {
       "fingerprint": "78ccf49dbfd61031d77b26e50069d4f7ea1f0610fd570e886e9cd02ff6a6d2da",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    },
+    "kgi-c416c8020714": {
+      "fingerprint": "bcdb39bc24133d694a996fbf80d8afa46a2ec94ca530da738df67735bad12df5",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "taipei_fubon-7487897b0131": {
+      "fingerprint": "60e0a15254fd725a776602cbe1e6a0dbf1f39e4d1379a681cdcb1a1d0f0f6f61",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "taishin-3e36e0b677b6": {
+      "fingerprint": "6af6cbfde89e91d41f499309914a49dbdb250fbf7e3684d6b09753e01378696b",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "esun-cfd1aa5b4ae3": {
+      "fingerprint": "a5dc7ec6928285504a4dde07fb5837753352c8917b51c12f20af6805a3404016",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "ubot-955d41deb3ef": {
+      "fingerprint": "a9f99f60d04ff09530b011fc0e0b3a6fc531d38e3dbe8856696d9118bb63de5d",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taipei_fubon-d5e72aee807c": {
       "fingerprint": "933248954534a65363060595dfb0af49aef7ab44b58cd5150b0bdd6d1e289282",
@@ -1842,6 +1850,10 @@
       "fingerprint": "eba09a01522c14a4539359be811fa8b2c5a073b7f6d0da4adbdbdf6e0bf78e14",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "taishin-67d339a1b1f9": {
+      "fingerprint": "0937f08f80c0ad78b1b7aa50389e04aaec10529e25b9e2fc702c5487a1465cc8",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "taishin-d416ab3faffc": {
       "fingerprint": "a9fa2d94bed1684fbe8f2cd6e425b0ecdef4a22bb09197cc972c3dda909d1faf",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
@@ -2006,6 +2018,10 @@
       "fingerprint": "8fb584a59c2265909b443e9f1f32ed625b1a75c569952193b7954913db8d7670",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "taipei_fubon-03399ef43730": {
+      "fingerprint": "5f8cafc8aa043744c16fe17db152ced229d17ffd96173a6b70d10c19b1e4c7ef",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "taipei_fubon-76be48973d7e": {
       "fingerprint": "8d6de9c164b3e3d3f5b9244fa42e1b71e3a2fb8f6f7ee09d3a6741d8b32422fc",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
@@ -2078,10 +2094,6 @@
       "fingerprint": "27ed8cfb05d3fa138a1a78a64c8262ae32ba56df6c28df186115923dae5f815b",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
-    "esun-f35d5f5f267c": {
-      "fingerprint": "d9ec77d049adfddf5e260ef2a541138416d9d0e5a0aa59e0526c3329cb20beb9",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
-    },
     "obank-ee3d3761708b": {
       "fingerprint": "9e714848d70d3803cf64c768b4ddc00ba5166931a737f4dbb71a7dc618452db5",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
@@ -2089,6 +2101,14 @@
     "obank-31be12b2322e": {
       "fingerprint": "3cc3dd0d3f988dca897ac701d42b83babf2bc12dce8012c0c89004de2ee3abca",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    },
+    "esun-f35d5f5f267c": {
+      "fingerprint": "38ca4cad2683efe6cadf2a70a953864f1d73ea2624004424a177519eda90c3a5",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "kgi-5df83c812dc5": {
+      "fingerprint": "c2846325605d75857e68dcef5652fa200846bf19aaa2430cb8dd3a6739cbe139",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taipei_fubon-729c28e670f8": {
       "fingerprint": "318f3cd498bf152d49c87df0f3d9c77357b03f7ddab5cae3dc29f8d7613afa73",
@@ -2117,6 +2137,10 @@
     "taipei_fubon-131655e9cc98": {
       "fingerprint": "981966677673e046f1314a7a180a88ef30773d8e6e008b794b738eec5acf8cbc",
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+    },
+    "tcbbank-1dd06dd82f55": {
+      "fingerprint": "02bfc98a8b0c13d7f1ce2e62cc8d03fb11a640abd5a6873a52683ff3ad886881",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taipei_fubon-ef3402af398c": {
       "fingerprint": "3b82d078952e8baf02c7599c2968d00882299dfb9cda8541ed897c3f1d7a10b5",
@@ -3270,13 +3294,17 @@
       "fingerprint": "525cfc02d5aa30ac26b24f4104908472db2659fc7293bb5452c82d3c281082cd",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "taishin-edf4daff22c8": {
+      "fingerprint": "c56ce01be7ebc465ee0d3f3e44557f0bbbd3c257d5d302561cf060eeb26f207a",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "taishin-60c9f7e4ebf3": {
       "fingerprint": "df027dcd54de78be4a6d08b1802a2e55c847c889cd01da7e92339fd4fee1631a",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
     "taishin-73afe45eadee": {
-      "fingerprint": "e8b4ac94e246b6d434cd4b89d207e3ea4e8141fbb78bf7ed4105022c6219e75f",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "fingerprint": "c467bf038834b2426f674601d3bd9b4af861e5361c228073ad069bb01da75a9a",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taishin-f32a8b2a9cfa": {
       "fingerprint": "31478f49cebfe05f808daab3be64bb34deaef5b9f63076fdabc8d6ab9e482545",
@@ -3381,6 +3409,10 @@
     "cathay-31bfcdbcb900": {
       "fingerprint": "213e90ba625f7947b32c3c09c1d96325ebd944451f6860b5403b34e75137d0ef",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    },
+    "cathay-6949148a1d21": {
+      "fingerprint": "8bef83a5107ef2d7d7fcfd91a129699cc219be19ba979b0328f81e813341c5a4",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "cathay-c0fa4e85fd8d": {
       "fingerprint": "a000e176349041d9fe34b953f1ef6f18b84977919ea65b557b0d20967a4ec45d",
@@ -3767,8 +3799,8 @@
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
     "ubot-d12119e9e651": {
-      "fingerprint": "849820cec59f11e5f183b5db6ecfd7c5b8dfc9e3b323dfdc0ffa16002c3d2c1a",
-      "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+      "fingerprint": "ca1ba041a5718894298a8a2d778341727c4feb655cb1ffc12a616648b67bed8d",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "ubot-8b3d82d1d5ea": {
       "fingerprint": "79356102c7c97a232f96384c5f0634d8adf0e00132aefe899c4f5e8f9a010ed4",
@@ -4062,6 +4094,14 @@
       "fingerprint": "78aa7ca530a89605869480aaa2236d58d68ee9cc5f338fb795630e84ec666517",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "taishin-9e4ac7dde0d1": {
+      "fingerprint": "3b9d8b00c7b376736a317b34025aaddd4e442cccf4bafde81aaa908b6a51e852",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "taishin-58f4d866fb88": {
+      "fingerprint": "00581ed3a225ecdf92d8f3c42817426a92cf40249de25298292c79cdd475627f",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "taishin-bf73de54a24a": {
       "fingerprint": "24e069be8a137bb45088c840c1516a4ee25823640be22e1f640bd866f50d80ef",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
@@ -4078,6 +4118,14 @@
       "fingerprint": "dea78029f65b9f5b8dfcbc3524f2cc3365df00fc62c1dbf0e6fb113dc930ad0d",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "taishin-f2ae27bc502a": {
+      "fingerprint": "84dfc387e87385a91387974fe94365396004f0c7e53be40d4b25eb9f68e088f5",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
+    "taishin-303dbaa879b2": {
+      "fingerprint": "91f46b19f2d103250aabf2f6d2aeb1f1bcced29564d4aefaf323e5308857eae1",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "taishin-d73d5d349574": {
       "fingerprint": "df79e751e966dc72039f527c83087ae005ab7e3078d0d10362e7af17b15f500e",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
@@ -4093,6 +4141,10 @@
     "taishin-8794d9d87355": {
       "fingerprint": "c2c758a337c72ca41db600f2304d24245f8d60c701e0f24fddb626ec6733b3f6",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    },
+    "taishin-7cebcddfffb8": {
+      "fingerprint": "b3f15201240b564278847cf2903a8bc58423c4dea7d7fd40a4aaa7e0e534e9e9",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taishin-59b54916f0c6": {
       "fingerprint": "6bcd6b4413230d071771f2b08fea4ac0002c894c7cb21c647cadacbe7c37d3d5",
@@ -4186,6 +4238,10 @@
       "fingerprint": "1ce4526455c5c091efccb4fec1a13604e73face934398f7b82a7f18bcc9faad5",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
     },
+    "taishin-6e8782d64332": {
+      "fingerprint": "6a193d99dc9a0865590b7a971c65395672adfe9f489ac76daaf16f624f852773",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "taishin-1e17e8e58a36": {
       "fingerprint": "9e79ac1808f09a714a6bea11d57351c71bfa93b08aabf184bb4a0c1ceca88b1e",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
@@ -4201,6 +4257,10 @@
     "taishin-fd5c8925473c": {
       "fingerprint": "56fa22ac2f85a28b3bc31cd00bc39577dedc6ca205dc1670dd94ab85ea3360e3",
       "last_detail_checked_at": "2026-08-04T13:26:44+08:00"
+    },
+    "taishin-10f119c3c421": {
+      "fingerprint": "0a8b2dcac2b15a0db365b2d10a409cefe2d4338acda74e81966d07e5b5951982",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "taishin-919c5ae7ffae": {
       "fingerprint": "3c77ece2be51a41f532b88d46c83a6a15e372b03198a473fb0622183ec5b2f37",
@@ -4286,6 +4346,10 @@
       "fingerprint": "86717420d0c528d1b1be28ff633cf28a797e2203c08141b595be84b08a067858",
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
     },
+    "chb-edbdcaed8153": {
+      "fingerprint": "adee8c61082bd8c21bf6aac6a5f04621e8f48fbcf7fc17263d9a4e14603bc6b5",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
+    },
     "esun-a3d009f1c1ea": {
       "fingerprint": "978f4a8e5461fd32781a17f825e23f544507cc9e9921ea5789f652bc11265507",
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
@@ -4297,6 +4361,10 @@
     "esun-03d6a6b22b54": {
       "fingerprint": "f9d73b33e3ba3b718c498f452a183837e095447db8f9c7c7bc761c200feb4c65",
       "last_detail_checked_at": "2026-08-04T13:53:51+08:00"
+    },
+    "esun-fd8dd99cd22d": {
+      "fingerprint": "6dcf39e8b1dade79c38120bf59cc47d146e43a3646d5a47dc7fedcab6e8c8d5f",
+      "last_detail_checked_at": "2026-08-08T11:46:50+08:00"
     },
     "esun-c6339c4dc159": {
       "fingerprint": "876cff5f34d6c28e8d0b49dabd6c367d8ea50171fcffba3c23fcc240738e2a82",
