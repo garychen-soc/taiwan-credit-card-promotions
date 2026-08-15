@@ -453,6 +453,23 @@
       ],
       "adapter": "ubot_reward_categories",
       "scope": "讀取 Rewards API 的七個 catalog；強打優惠由 hotOrder 聚合標記，不重複建立活動"
+    },
+    {
+      "id": "megabank",
+      "bank_name": "兆豐銀行",
+      "entry_url": "https://www.megabank.com.tw/personal/credit-card/event/overview?Keywords=&Tag=Tag&creaditcard=all&discount=all&type=all&area=all",
+      "api_url": "https://www.megabank.com.tw/api/client/DiscountOverview/GetDiscount?sc_lang=zh-TW&sc_site=bank-zh-tw&dic_lang=zh-TW",
+      "api_item_id": "{F9A985A0-EA67-4BF8-A865-9E1522CBC298}",
+      "api_setting_id": "{2C3011E0-9805-415A-87BA-9E4B02EE09BA}",
+      "discovery_urls": [
+        "https://www.megabank.com.tw/personal/credit-card/event/overview?Keywords=&Tag=Tag&creaditcard=all&discount=all&type=all&area=all",
+        "https://www.megabank.com.tw/personal/credit-card"
+      ],
+      "official_domains": [
+        "megabank.com.tw"
+      ],
+      "adapter": "megabank_registration_promotions",
+      "scope": "僅收錄官方 DiscountOverview API 中 Tags 含「需登錄」、未下架且尚未結束的項目"
     }
   ]
 }

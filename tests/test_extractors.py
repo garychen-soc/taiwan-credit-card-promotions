@@ -20,6 +20,7 @@ from card_promotions_monitor.extractors import (
     _hncb_credit_card_cards,
     _kgi_cards,
     _lifecycle,
+    _megabank_cards,
     _parse_period,
     _promotion_invariants,
     _roc_period,
@@ -34,6 +35,7 @@ from card_promotions_monitor.extractors import (
     _yuanta_cards,
     _esun_cards,
     extract_chb,
+    extract_megabank,
     normalize_registration_url,
 )
 from card_promotions_monitor.fetch import FetchResult
@@ -200,6 +202,15 @@ class RegistrationWindowTests(unittest.TestCase):
         )
         self.assertEqual(len(values), 1)
         self.assertEqual(values[0].start, "2026-07-31T16:00:00+08:00")
+        self.assertIsNone(values[0].end)
+
+    def test_parses_megabank_limited_registration_opening(self) -> None:
+        values = _registration_windows(
+            "momo購物網活動於115/8/27 14:00開放限量登錄",
+            2026,
+        )
+        self.assertEqual(len(values), 1)
+        self.assertEqual(values[0].start, "2026-08-27T14:00:00+08:00")
         self.assertIsNone(values[0].end)
 
     def test_parses_taiwan_time_words(self) -> None:
@@ -611,6 +622,114 @@ class ClassificationTests(unittest.TestCase):
         )
         self.assertEqual(len(cards), 1)
         self.assertEqual(cards[0]["title"], "【線上購物】MOMO全通路活動")
+
+    def test_megabank_cards_keep_only_current_registration_items(self) -> None:
+        rows = [
+            {
+                "Title": "八月網購回饋",
+                "Description": "活動期間：115/8/1~8/31",
+                "Tags": ["強檔", "需登錄"],
+                "Removal": "",
+                "DetailPageLinkHtml": '<a href="/personal/credit-card/event/overview/august">了解更多</a>',
+                "KeyValues": {"discount": ["Entry", "Shopping"]},
+            },
+            {
+                "Title": "一般免登錄優惠",
+                "Description": "活動期間：115/8/1~8/31",
+                "Tags": ["強檔"],
+                "Removal": "",
+                "DetailPageLinkHtml": '<a href="/personal/credit-card/event/overview/general">了解更多</a>',
+            },
+            {
+                "Title": "七月已結束活動",
+                "Description": "活動期間：115/7/1~7/31",
+                "Tags": ["需登錄"],
+                "Removal": "",
+                "DetailPageLinkHtml": '<a href="/personal/credit-card/event/overview/july">了解更多</a>',
+            },
+            {
+                "Title": "官網已下架活動",
+                "Description": "活動期間：115/8/1~8/31",
+                "Tags": ["需登錄"],
+                "Removal": "c-card--disabled",
+                "DetailPageLinkHtml": '<a href="/personal/credit-card/event/overview/removed">了解更多</a>',
+            },
+            {
+                "Title": "信用卡服務登錄",
+                "Description": "",
+                "Tags": ["需登錄"],
+                "Removal": "",
+                "DetailPageLinkHtml": '<a href="/personal/credit-card/event/overview/service">了解更多</a>',
+            },
+        ]
+
+        cards = _megabank_cards(
+            rows,
+            "https://www.megabank.com.tw/personal/credit-card/event/overview",
+            "megabank",
+            ["megabank.com.tw"],
+            date(2026, 8, 15),
+        )
+
+        self.assertEqual([card["title"] for card in cards], ["八月網購回饋", "信用卡服務登錄"])
+        self.assertEqual(cards[0]["end"], date(2026, 8, 31))
+        self.assertTrue(cards[0]["registration_required"])
+        self.assertTrue(cards[0]["featured"])
+        self.assertEqual(cards[0]["registration_url"], cards[0]["url"])
+
+    def test_megabank_extractor_preserves_activity_specific_registration_page(self) -> None:
+        source = {
+            "id": "megabank",
+            "bank_name": "兆豐銀行",
+            "entry_url": "https://www.megabank.com.tw/personal/credit-card/event/overview?Tag=Tag",
+            "api_url": "https://www.megabank.com.tw/api/client/DiscountOverview/GetDiscount",
+            "api_item_id": "{item}",
+            "api_setting_id": "{setting}",
+            "official_domains": ["megabank.com.tw"],
+        }
+        row = {
+            "Title": "網購爸氣刷",
+            "Description": "活動期間：115/8/1~8/31",
+            "Tags": ["需登錄"],
+            "Removal": "",
+            "DetailPageLinkHtml": '<a href="/personal/credit-card/event/overview/ec202608">了解更多</a>',
+            "KeyValues": {"discount": ["Entry", "Shopping"]},
+        }
+        detail = (
+            "<h1>網購爸氣刷</h1><p>活動期間：115/8/1~8/31</p><p>更多優惠</p>"
+            "<p>回饋上限NT$2,200，本活動於115/8/27 14:00開放限量登錄</p>"
+            "<p>您可能有興趣</p><p>其他活動最高回饋NT$5,000</p>"
+            "<p>謹慎理財 信用至上，循環利率上限15%</p>"
+        )
+
+        def fake_fetch(url: str, _domains: list[str], **_kwargs) -> FetchResult:
+            html = detail if url.endswith("ec202608") else "<h1>優惠總覽</h1>"
+            return FetchResult(url, url, 200, html, "text/html", "fixture")
+
+        with (
+            patch("card_promotions_monitor.extractors.fetch_text", side_effect=fake_fetch),
+            patch(
+                "card_promotions_monitor.extractors.fetch_json",
+                return_value=(FetchResult(source["api_url"], source["api_url"], 200, "[]", "application/json", "fixture"), [row]),
+            ),
+        ):
+            activities, health, alerts = extract_megabank(
+                source,
+                now=datetime(2026, 8, 15, 12, 0, tzinfo=ZoneInfo("Asia/Taipei")),
+                percent_threshold=10,
+                amount_threshold=500,
+            )
+
+        self.assertEqual(len(activities), 1)
+        self.assertEqual(health.status, "complete")
+        self.assertEqual(alerts, [])
+        self.assertEqual(activities[0].registration_url, activities[0].source_url)
+        self.assertEqual(activities[0].max_reward_amount_twd, 2200)
+        self.assertIsNone(activities[0].max_reward_percent)
+        self.assertEqual(
+            [window.start for window in activities[0].registration_windows],
+            ["2026-08-27T14:00:00+08:00"],
+        )
 
 
 if __name__ == "__main__":

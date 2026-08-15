@@ -42,6 +42,7 @@ REGISTRATION_URL_DEFAULTS = {
     "first": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
     "chb": "https://www.bankchb.com/frontend/CampaignLog.html",
     "ubot": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+    "megabank": "https://www.megabank.com.tw/personal/credit-card/event/overview?Keywords=&Tag=Tag&creaditcard=all&discount=all&type=all&area=all",
 }
 STRICT_REGISTRATION_URL_BANKS = frozenset({
     "dbs",
@@ -62,6 +63,7 @@ REGISTRATION_URL_ALLOWED_HOSTS = {
     "esun": ("esunbank.com.tw", "esun.co"),
     "sunny": ("sunnybank.com.tw",),
     "ubot": ("card.ubot.com.tw", "cardweb.ubot.com.tw"),
+    "megabank": ("megabank.com.tw",),
 }
 MONTHS = {
     "1月": 1, "2月": 2, "3月": 3, "4月": 4, "5月": 5, "6月": 6,
@@ -138,6 +140,7 @@ def _reward_values(text: str) -> tuple[float | None, int | None]:
         r"(?:最高(?:享|贈|回饋)?|贈)\s*(?:NT\$|\$)\s*([\d,]+)\s*(?:元)?(?:刷卡金|現折|回饋)?",
         r"(?:最高(?:享|贈|回饋)?|贈)\s*([\d,]+)\s*元(?:刷卡金|現折|回饋)",
         r"(?:刷卡金|現折)\s*(?:NT\$|\$)?\s*([\d,]+)",
+        r"(?:每戶)?回饋上限(?:為)?\s*(?:NT\$|\$)?\s*([\d,]+)\s*元?",
     )
     amounts: list[int] = []
     for pattern in amount_patterns:
@@ -250,7 +253,7 @@ def _registration_windows(
         if any(start <= match.start() < end for start, end in range_spans):
             continue
         context = normalized[max(0, match.start() - 90): min(len(normalized), match.end() + 110)]
-        if not any(marker in context for marker in ("開始登錄", "開放登錄", "活動登錄日期")):
+        if not any(marker in context for marker in ("開始登錄", "開放登錄", "開放限量登錄", "活動登錄日期")):
             continue
         nearby = normalized[max(0, match.start() - 25): min(len(normalized), match.end() + 20)]
         if (
@@ -2945,6 +2948,18 @@ def _listing_promotions(
             else:
                 page = parse_page(result.text, result.final_url)
                 text = page.text
+                start_marker = clean_inline(str(card.get("content_start_marker") or ""))
+                if start_marker and start_marker in text:
+                    text = text.split(start_marker, 1)[1]
+                raw_end_markers = card.get("content_end_markers") or []
+                end_markers = (
+                    [clean_inline(str(value)) for value in raw_end_markers]
+                    if isinstance(raw_end_markers, (list, tuple))
+                    else [clean_inline(str(raw_end_markers))]
+                )
+                end_positions = [text.index(marker) for marker in end_markers if marker and marker in text]
+                if end_positions:
+                    text = text[:min(end_positions)]
         start, end = _official_detail_period(
             text,
             card["start"],
@@ -2989,11 +3004,13 @@ def _listing_promotions(
             categories = list(dict.fromkeys(categories))
         registration_url = ""
         if registration_required:
-            registration_url = (
-                _registration_url(page.links, source["id"])
-                if page
-                else REGISTRATION_URL_DEFAULTS[source["id"]]
-            )
+            registration_url = clean_inline(str(card.get("registration_url") or ""))
+            if not registration_url:
+                registration_url = (
+                    _registration_url(page.links, source["id"])
+                    if page
+                    else REGISTRATION_URL_DEFAULTS[source["id"]]
+                )
         promotion = Promotion(
             id=card["id"],
             bank_id=source["id"],
@@ -4158,3 +4175,131 @@ def extract_ubot(
         source["id"], source["bank_name"], source["entry_url"],
         listing.final_url, status, len(activities), checked_at, "；".join(issues),
     ), alerts
+
+
+def _megabank_cards(
+    rows: list[dict[str, Any]],
+    base_url: str,
+    bank_id: str,
+    official_domains: list[str],
+    today: date,
+) -> list[dict[str, Any]]:
+    """Build cards from Mega Bank's official need-registration filter."""
+    cards: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for row in rows:
+        raw_tags = row.get("Tags") or []
+        tags = (
+            [clean_inline(str(value)) for value in raw_tags]
+            if isinstance(raw_tags, list)
+            else [clean_inline(str(raw_tags))]
+        )
+        if "需登錄" not in tags or clean_inline(str(row.get("Removal") or "")):
+            continue
+        title = clean_inline(str(row.get("Title") or ""))
+        summary = clean_inline(str(row.get("Description") or "")) or title
+        link_html = str(row.get("DetailPageLinkHtml") or "")
+        link_match = re.search(r'href=["\']([^"\']+)', link_html, flags=re.I)
+        public_url = urljoin(base_url, link_match.group(1)) if link_match else ""
+        if not title or not is_allowed_url(public_url, official_domains):
+            continue
+        period = _parse_period(summary, today.year)
+        start, end = period if period else (today, None)
+        if end and end < today:
+            continue
+        identity = f"{public_url}|{title}"
+        if identity in seen:
+            continue
+        seen.add(identity)
+        cards.append({
+            "id": _stable_id(bank_id, identity),
+            "title": title,
+            "summary": summary,
+            "url": public_url,
+            "start": start,
+            "end": end,
+            "registration_required": True,
+            "registration_url": public_url,
+            "content_start_marker": "更多優惠",
+            "content_end_markers": ["您可能有興趣", "謹慎理財 信用至上"],
+            "official_category": "需登錄",
+            "featured": "強檔" in tags,
+            "fingerprint": source_fingerprint(
+                bank_id,
+                {
+                    "title": title,
+                    "summary": summary,
+                    "url": public_url,
+                    "tags": tags,
+                    "key_values": row.get("KeyValues"),
+                    "removal": row.get("Removal"),
+                    "content_bounds_version": 2,
+                },
+            ),
+            "fetch_detail": True,
+        })
+    return cards
+
+
+def extract_megabank(
+    source: dict[str, Any],
+    *,
+    now: datetime,
+    percent_threshold: float,
+    amount_threshold: int,
+    activity_cache: dict[str, dict[str, Any]] | None = None,
+    cache_stats: dict[str, Any] | None = None,
+) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
+    checked_at = _now_iso(now)
+    today = now.astimezone(TAIPEI).date()
+    try:
+        listing = fetch_text(source["entry_url"], source["official_domains"])
+        api_result, payload = fetch_json(
+            source["api_url"],
+            source["official_domains"],
+            data={
+                "itemID": source["api_item_id"],
+                "settingID": source["api_setting_id"],
+            },
+        )
+    except RuntimeError as exc:
+        message = "兆豐銀行需登錄活動入口或官方優惠資料暫時無法讀取。"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"], "",
+            "failed", 0, checked_at, str(exc),
+        ), [Alert("source_failed", source["bank_name"], message, source["entry_url"])]
+
+    rows = [row for row in payload if isinstance(row, dict)] if isinstance(payload, list) else []
+    cards = _megabank_cards(
+        rows,
+        listing.final_url,
+        source["id"],
+        source["official_domains"],
+        today,
+    )
+    if not cards:
+        message = "兆豐銀行官方優惠資料可讀取，但找不到仍有效的「需登錄」活動。"
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"],
+            api_result.final_url, "failed", 0, checked_at, message,
+        ), [Alert("source_structure_changed", source["bank_name"], message, source["entry_url"])]
+
+    activities, failed_details, invalid_urls = _listing_promotions(
+        source,
+        cards,
+        now=now,
+        percent_threshold=percent_threshold,
+        amount_threshold=amount_threshold,
+        activity_cache=activity_cache,
+        cache_stats=cache_stats,
+    )
+    status = "complete" if activities and failed_details == 0 else ("partial" if activities else "failed")
+    message = (
+        _detail_failure_message(failed_details, "官方活動明細", invalid_urls)
+        if failed_details
+        else f"官方 API 共篩出 {len(cards)} 筆仍有效的「需登錄」項目；收錄 {len(activities)} 筆"
+    )
+    return activities, SourceHealth(
+        source["id"], source["bank_name"], source["entry_url"],
+        listing.final_url, status, len(activities), checked_at, message,
+    ), _invalid_url_alerts(source, invalid_urls)
