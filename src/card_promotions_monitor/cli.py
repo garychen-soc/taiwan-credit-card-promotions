@@ -25,6 +25,7 @@ from .extractors import (
     extract_first,
     extract_hncb,
     extract_kgi,
+    extract_megabank,
     extract_obank,
     extract_scsb,
     extract_sinopac,
@@ -356,6 +357,8 @@ def build_payload(
             found, source_health, source_alerts = extract_chb(source, **kwargs)
         elif adapter == "ubot_reward_categories":
             found, source_health, source_alerts = extract_ubot(source, **kwargs)
+        elif adapter == "megabank_registration_promotions":
+            found, source_health, source_alerts = extract_megabank(source, **kwargs)
         else:
             raise ValueError(f"Unknown adapter: {adapter}")
         activities.extend(item.to_dict() for item in found)
