@@ -10,6 +10,7 @@ from zoneinfo import ZoneInfo
 from card_promotions_monitor.cli import (
     PUBLISH_GUARD_EXIT_CODE,
     _write_public_artifacts,
+    annotate_source_registration_coverage,
     assess_publish_guard,
     classify_registration_urls,
     load_previous_public_payload,
@@ -45,6 +46,20 @@ def candidate_payload(*, failed: int, active: int, dns_failures: int = 0) -> dic
 
 
 class PublishGuardTests(unittest.TestCase):
+    def test_source_registration_coverage_is_explicit(self) -> None:
+        activities = [
+            {"bank_id": "bank", "registration_required": True, "registration_windows": [{"start": "2026-08-01T10:00:00+08:00"}]},
+            {"bank_id": "bank", "registration_required": True, "registration_windows": []},
+            {"bank_id": "bank", "registration_required": False, "registration_windows": []},
+        ]
+        health = [{"id": "bank", "activity_count": 3}]
+
+        annotate_source_registration_coverage(activities, health)
+
+        self.assertEqual(health[0]["registration_required_count"], 2)
+        self.assertEqual(health[0]["registration_time_confirmed_count"], 1)
+        self.assertEqual(health[0]["registration_time_coverage_percent"], 50.0)
+
     def test_classifies_shared_portal_and_activity_specific_urls(self) -> None:
         activities = [
             {"bank_id": "bank", "registration_required": True, "registration_url": "https://bank.example/portal", "source_url": "https://bank.example/a"},

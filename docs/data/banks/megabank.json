@@ -1,6 +1,6 @@
 {
-  "schema_version": 7,
-  "generated_at": "2026-08-16T09:46:55+08:00",
+  "schema_version": 8,
+  "generated_at": "2026-08-16T10:02:00+08:00",
   "bank_id": "megabank",
   "bank_name": "兆豐銀行",
   "activity_count": 32,
@@ -33,6 +33,9 @@
           "source_text": "金額登錄即享: 門檻 贈品 贈品限量名額 $6,500 100元刷卡金 100名 $20,000 300元刷卡金 40名 $40,000 600元刷卡金 20名 注意事項 活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 100,
@@ -78,6 +81,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 600,
       "featured": true,
@@ -121,6 +127,9 @@
           "source_text": "登錄即享: 門檻 贈品 贈品限量名額 滿$6,500 刷卡金100元 80名 滿$20,000 刷卡金300元 30名 滿$40,000 刷卡金600元 10名 注意事項 活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 600,
@@ -176,6 +185,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2200,
       "featured": true,
@@ -222,6 +234,9 @@
           "source_text": "1 活動期間~全台萬家福量販店,登錄滿額即享: 門檻 贈品 贈品限量名額 單筆分期滿$10,000 刷卡金200元 500名 單筆分期滿$20,000 刷卡金400元 250名 ※2026/7/30 14:00開放登錄 【愛買】2026/7/29-9/1 活動期間~全台愛買量販店,消費滿額即贈: 門檻 贈品 贈品限量名額 單筆分期滿$10,000 愛買現金抵用券200元 100名 單筆分期滿$20,000 愛買現金抵用券400",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 400,
@@ -288,6 +303,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 1.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -338,6 +356,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026q3lidoforbonus",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 9.1,
       "max_reward_amount_twd": 3000,
       "featured": true,
@@ -356,8 +377,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-d1af75eb060c.json"
     },
     {
@@ -389,6 +410,9 @@
           "source_text": "msung Pay); 非實體通路如網路、非面對面、傳真、郵購刷卡消費, 或其他電子支付交易皆不適用。 注意事項 政府採購卡、商務卡及公司戶所持VISA金融卡不適用本活動。 活動於2026/7/23 14:00於兆豐官網開放登錄。 7-ELEVEN 50元現金抵用券符合回饋資格認定: 開放登錄日起~2026/9/30期間先行完成網頁登錄;活動期間內只需登錄一次,完成網頁登錄之當月(含當月)起~2026/9/30,均可參與本活動",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -436,6 +460,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 1500,
       "featured": true,
@@ -477,6 +504,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/megabirthday",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": 300,
       "featured": true,
@@ -492,8 +522,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-63d5796b6b7b.json"
     },
     {
@@ -539,6 +569,9 @@
           "source_text": "卡通、愛金卡...等等)、行動支付(如Apple Pay)者,非本活動之回饋對象,敬請注意。 活動需登錄,本行分別於2026/7/10 14:00、2026/8/10 14:00、2026/9/10 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 本行VISA金融卡、政府網路採購卡及公司商務卡不適用本活動。 正、附卡消費合併計算且正、附卡合併每戶(以正卡人身分證字號歸戶計算)於活動期間刷卡金限擇優回饋乙次",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 5000,
@@ -602,6 +635,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -644,6 +680,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ecselect2026q3",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -658,8 +697,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-ab149ad22913.json"
     },
     {
@@ -689,6 +728,9 @@
           "source_text": "券500元】(活動需登錄,每戶限領乙份,限量1,000名)。 卡別 門檻 日幣雙幣卡 JPY250,000(含)以上 美金雙幣卡 USD1,600(含)以上 注意事項 1.本活動於2026/7/1 10:00開放登錄~2026/9/30之23時59分止,限正卡持卡人登錄,若登錄提前額滿,則不再接受新登錄。未於登錄期間內完成登錄者,視同放棄參加本活動,恕不接受人工登錄、事後補登或要求優惠回饋,完成登錄時間悉以本行系統為準。 2",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 2.5,
       "max_reward_amount_twd": null,
@@ -735,6 +777,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 1200,
       "featured": true,
@@ -776,6 +821,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/insmastercard2026",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -790,8 +838,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-34e3218dfb35.json"
     },
     {
@@ -814,6 +862,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/buygogoro",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -824,8 +875,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-5032bbb469a1.json"
     },
     {
@@ -850,6 +901,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2025megaonebuy",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 4.0,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -862,8 +916,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-bec6bee969a6.json"
     },
     {
@@ -886,6 +940,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/megaone2025ins",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -896,8 +953,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-0372ebe5ce7b.json"
     },
     {
@@ -922,6 +979,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/aptrc115h2",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -934,8 +994,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": ""
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。"
     },
     {
       "id": "megabank-b2902e5fb780",
@@ -957,6 +1017,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/premium-installment",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -967,8 +1030,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-b2902e5fb780.json"
     },
     {
@@ -992,6 +1055,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026mastercardins",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1003,8 +1069,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-cc25194a5a0b.json"
     },
     {
@@ -1031,6 +1097,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/lido10pay2026h2",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 9.1,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1045,8 +1114,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-8de29c45eb9a.json"
     },
     {
@@ -1069,6 +1138,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/twponepointfive",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 1.5,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1079,8 +1151,8 @@
         "行動支付"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": ""
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。"
     },
     {
       "id": "megabank-8a209d30700f",
@@ -1102,6 +1174,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115h2bt21-vd",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1112,8 +1187,8 @@
         "其他優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-8a209d30700f.json"
     },
     {
@@ -1136,6 +1211,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/bt21welcomegift2026h1",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -1146,8 +1224,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-7f0538102e78.json"
     },
     {
@@ -1181,6 +1259,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/auto_installment",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 7.0,
       "max_reward_amount_twd": 800,
       "featured": true,
@@ -1196,8 +1277,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-c3d62a504109.json"
     },
     {
@@ -1226,6 +1307,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/mcgift115h1",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -1236,8 +1320,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-8be773b8fed8.json"
     },
     {
@@ -1264,6 +1348,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026cki",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
@@ -1278,8 +1365,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-6906e74eec2e.json"
     },
     {
@@ -1302,6 +1389,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/vau",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1312,8 +1402,8 @@
         "其他優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-cfe01a52f47c.json"
     },
     {
@@ -1344,6 +1434,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026h1lidoforeign",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 9.1,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -1362,8 +1455,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-bcb68e3fe9eb.json"
     },
     {
@@ -1387,6 +1480,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ezcard_rename",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1398,8 +1494,8 @@
         "海外消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-043abaadea82.json"
     }
   ]

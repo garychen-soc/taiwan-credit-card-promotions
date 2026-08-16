@@ -528,6 +528,7 @@ a { color: inherit; }
 .status-badge.is-registration { background: var(--orange-soft); color: #c54316; }
 .status-badge.is-high { background: #eef8d6; color: #577b13; }
 .status-badge.is-upcoming { background: #e9effd; color: var(--blue); }
+.status-badge.is-review { background: #fff2cc; color: #7a5700; }
 .status-badge.is-ended { background: #ecebe7; color: #777; }
 .card-body { flex: 1; padding: 24px 22px 20px; }
 .merchant-name {
@@ -622,6 +623,17 @@ a { color: inherit; }
 }
 .registration-review { margin: 0; color: #8a513c; font-size: .76rem; }
 .registration-portal-hint { margin: 8px 0 0; color: #8a513c; font-size: .72rem; line-height: 1.45; }
+.registration-timing {
+  margin: 10px 0;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .62);
+  color: #75442f;
+  font-size: .72rem;
+}
+.registration-timing strong { display: block; margin-bottom: 4px; }
+.registration-timing ul { margin: 0; padding-left: 1.15rem; }
+.registration-timing li + li { margin-top: 3px; }
 .terms-details {
   margin-top: 14px;
   border-top: 1px solid var(--line);

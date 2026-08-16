@@ -606,6 +606,76 @@ def _reward_tiers(text: str) -> list[dict[str, int]]:
     return tiers
 
 
+def _registration_timing_contracts(promotion: Promotion) -> list[str]:
+    """Return only timing rules supported by explicit terms or date facts."""
+    if not promotion.registration_required:
+        return []
+    text = clean_inline(
+        f"{promotion.registration_text}\n{promotion.terms_raw}"
+    )
+    contracts: list[str] = []
+    if any(marker in text for marker in (
+        "不提供登錄前之消費",
+        "登錄前之消費不列入",
+        "登錄前消費不列入",
+        "登錄成功後之新增消費",
+        "登錄成功後新增消費",
+    )):
+        contracts.append("register_before_spend")
+    if (
+        any(marker in text for marker in (
+            "需先消費後登錄",
+            "可先消費後登錄",
+            "消費後再登錄",
+        ))
+        or re.search(
+            r"不一定.{0,80}(?:完成活動)?登錄.{0,180}活動期間內.{0,120}"
+            r"消費交易.{0,80}(?:皆可|均可)列入",
+            text,
+        )
+    ):
+        contracts.append("retroactive_ok")
+    if any(marker in text for marker in (
+        "每月需重新登錄",
+        "每期需重新登錄",
+        "每月重新登錄",
+        "每期重新登錄",
+        "每波活動須分別登錄",
+        "各檔須分別登錄",
+        "每月皆需登錄",
+        "需每月登錄",
+        "限當月登錄",
+    )):
+        contracts.append("per_period_reregister")
+
+    activity_end = _date_from_iso(promotion.end_date)
+    finite_registration_ends = [
+        datetime.fromisoformat(window.end).date()
+        for window in promotion.registration_windows
+        if window.end
+    ]
+    if (
+        activity_end
+        and finite_registration_ends
+        and max(finite_registration_ends) < activity_end
+    ):
+        contracts.append("registration_closes_early")
+    return contracts or ["unknown"]
+
+
+def _append_review_issues(promotion: Promotion, issues: list[str]) -> None:
+    unique = list(dict.fromkeys(issue for issue in issues if issue))
+    if not unique:
+        return
+    promotion.needs_review = True
+    promotion.review_required = True
+    existing = promotion.review_message.strip()
+    additions = [issue for issue in unique if issue not in existing]
+    if additions:
+        detail = "；".join(additions)
+        promotion.review_message = f"{existing} {detail}。".strip() if existing else f"{detail}。"
+
+
 def _promotion_invariants(promotion: Promotion) -> None:
     start = _date_from_iso(promotion.start_date)
     end = _date_from_iso(promotion.end_date)
@@ -621,6 +691,12 @@ def _promotion_invariants(promotion: Promotion) -> None:
             promotion.start_date = start.isoformat()
             promotion.end_date = end.isoformat()
     issues: list[str] = []
+    if end is None:
+        issues.append("活動截止日尚未確認")
+    if start and end and end < start:
+        issues.append("活動截止日早於開始日")
+    if promotion.registration_required and not promotion.registration_windows:
+        issues.append("官方註明需登錄，但尚未取得可確認的登錄時點")
     ordered = sorted(
         promotion.registration_windows,
         key=lambda item: item.start,
@@ -640,10 +716,8 @@ def _promotion_invariants(promotion: Promotion) -> None:
         if previous_end and current_start < previous_end:
             issues.append("同一子活動的登錄視窗互相重疊")
             break
-    if issues:
-        promotion.needs_review = True
-        promotion.review_required = True
-        promotion.review_message = "；".join(dict.fromkeys(issues)) + "，請至官方頁確認對應的登錄時間。"
+    _append_review_issues(promotion, issues)
+    promotion.registration_timing_contracts = _registration_timing_contracts(promotion)
 
 
 def _reparse_cached_promotion(

@@ -214,6 +214,53 @@ class RegistrationWindowTests(unittest.TestCase):
         self.assertTrue(promotion.needs_review)
         self.assertIn("晚於活動期間", promotion.review_message)
 
+    def test_marks_missing_registration_time_and_period_for_review(self) -> None:
+        promotion = Promotion(
+            id="offer", bank_id="bank", bank_name="銀行", title="活動",
+            merchant="商店", categories=["網購"], start_date="2026-08-01",
+            end_date=None, summary="摘要", source_url="https://bank.example/offer",
+            source_entry_url="https://bank.example", observed_at="2026-08-04T00:00:00+08:00",
+            registration_required=True,
+        )
+
+        _promotion_invariants(promotion)
+
+        self.assertTrue(promotion.needs_review)
+        self.assertTrue(promotion.review_required)
+        self.assertIn("活動截止日尚未確認", promotion.review_message)
+        self.assertIn("尚未取得可確認的登錄時點", promotion.review_message)
+        self.assertEqual(promotion.registration_timing_contracts, ["unknown"])
+
+    def test_extracts_explicit_registration_timing_contracts(self) -> None:
+        promotion = Promotion(
+            id="offer", bank_id="bank", bank_name="銀行", title="活動",
+            merchant="商店", categories=["網購"], start_date="2026-08-01",
+            end_date="2026-09-30", summary="摘要", source_url="https://bank.example/offer",
+            source_entry_url="https://bank.example", observed_at="2026-08-04T00:00:00+08:00",
+            registration_required=True,
+            terms_raw=(
+                "不提供登錄前之消費回饋。需先消費後登錄。"
+                "本活動需每月登錄。"
+            ),
+            registration_windows=[RegistrationWindow(
+                start="2026-08-01T10:00:00+08:00",
+                end="2026-08-31T23:59:00+08:00",
+                label="登錄期間", source_text="8月登錄期間",
+            )],
+        )
+
+        _promotion_invariants(promotion)
+
+        self.assertEqual(
+            promotion.registration_timing_contracts,
+            [
+                "register_before_spend",
+                "retroactive_ok",
+                "per_period_reregister",
+                "registration_closes_early",
+            ],
+        )
+
     def test_preserves_non_registration_terms_in_sections(self) -> None:
         raw, sections = _terms_content(
             "活動期間：2026/8/1 至 2026/8/31\n"

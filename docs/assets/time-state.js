@@ -40,5 +40,26 @@
     };
   }
 
-  return { deriveActivity, highReturnFor, lifecycleFor, taipeiDateKey };
+  const registrationTimingLabels = {
+    register_before_spend: "先登錄再消費；登錄前消費可能不適用優惠",
+    retroactive_ok: "可先消費再登錄；仍須在官方截止前完成",
+    registration_closes_early: "登錄早於活動結束截止；不要等到活動最後一天",
+    per_period_reregister: "每期需重新登錄；前一期成功不代表本期已完成",
+    unknown: "登錄與消費先後未確認；請查看官方條款"
+  };
+
+  function registrationTimingMessages(contracts) {
+    const values = Array.isArray(contracts) && contracts.length ? contracts : ["unknown"];
+    return [...new Set(values)]
+      .map((value) => registrationTimingLabels[value])
+      .filter(Boolean);
+  }
+
+  return {
+    deriveActivity,
+    highReturnFor,
+    lifecycleFor,
+    registrationTimingMessages,
+    taipeiDateKey
+  };
 }));

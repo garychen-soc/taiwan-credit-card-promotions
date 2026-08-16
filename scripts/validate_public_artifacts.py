@@ -24,6 +24,9 @@ def load_json(path: Path) -> dict:
 
 def validate() -> dict[str, int]:
     index = load_json(INDEX_PATH)
+    schema_version = index.get("schema_version")
+    if not isinstance(schema_version, int):
+        raise ValueError("promotions.json must contain an integer schema_version")
     catalog = index.get("catalog")
     if not isinstance(catalog, dict):
         raise ValueError("promotions.json is missing catalog metadata")
@@ -51,6 +54,8 @@ def validate() -> dict[str, int]:
         if not isinstance(reference, str) or not reference.startswith("banks/"):
             raise ValueError(f"invalid bank shard reference for {bank_id}: {reference!r}")
         bank = load_json(DATA_ROOT / reference)
+        if bank.get("schema_version") != schema_version:
+            raise ValueError(f"schema_version mismatch in {reference}")
         if bank.get("bank_id") != bank_id:
             raise ValueError(f"bank id mismatch in {reference}")
         activities = bank.get("activities")
@@ -60,6 +65,11 @@ def validate() -> dict[str, int]:
             raise ValueError(f"activity_count mismatch in {reference}")
         bank_activity_count += len(activities)
         for activity in activities:
+            timing_contracts = activity.get("registration_timing_contracts")
+            if not isinstance(timing_contracts, list):
+                raise ValueError(
+                    f"registration_timing_contracts must be a list in {reference}"
+                )
             activity_id = str(activity.get("id") or "")
             if not activity_id:
                 raise ValueError(f"activity without id in {reference}")
@@ -81,6 +91,8 @@ def validate() -> dict[str, int]:
         if not reference.startswith("activities/"):
             raise ValueError(f"invalid detail reference: {reference!r}")
         detail = load_json(DATA_ROOT / reference)
+        if detail.get("schema_version") != schema_version:
+            raise ValueError(f"schema_version mismatch in {reference}")
         expected_id = Path(reference).stem
         if detail.get("activity_id") != expected_id:
             raise ValueError(f"activity id mismatch in {reference}")
