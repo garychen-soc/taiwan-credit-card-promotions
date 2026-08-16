@@ -2,6 +2,11 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const catalog = require("../docs/assets/catalog-state.js");
 
+test("registration is the lightweight default view", () => {
+  assert.equal(catalog.read("").filter, "registration");
+  assert.equal(catalog.search({ filter: "registration", page: 1 }), "?filter=registration");
+});
+
 test("fixed pagination never appends more than 50 activities", () => {
   const values = Array.from({ length: 1113 }, (_, index) => index);
   const middle = catalog.paginate(values, "all", 2);

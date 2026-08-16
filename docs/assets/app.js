@@ -5,18 +5,22 @@
   const DAY_MS = 86400000;
   const MINUTE_MS = 60000;
   const REGISTRATION_CALENDAR_DURATION_MINUTES = 15;
+  const INDEX_FILTERS = new Set(["today", "tomorrow", "review", "registration"]);
   const timeState = window.CardPromotionTime;
   const catalogState = window.CardPromotionCatalog;
   const state = {
     data: null,
     activities: [],
-    filter: "priority",
+    filter: "registration",
     bank: "",
     category: "",
     query: "",
     sort: "recommended",
     page: 1,
-    agendaDate: ""
+    agendaDate: "",
+    catalogLoaded: false,
+    catalogPromise: null,
+    detailCache: new Map()
   };
 
   const el = {
@@ -97,6 +101,10 @@
     const date = parseDate(value);
     if (!date) return value;
     return new Date(date.getTime() + minutes * MINUTE_MS).toISOString();
+  }
+
+  function resolveDataUrl(reference) {
+    return new URL(reference, new URL(DATA_URL, window.location.href)).href;
   }
 
   function escapeIcs(value) {
@@ -293,6 +301,12 @@
   }
 
   function updateDerivedSummary() {
+    if (!state.catalogLoaded && state.data?.catalog) {
+      el.statRegistration.textContent = state.data.summary.registration_required;
+      el.statHighReturn.textContent = state.data.summary.high_return;
+      el.statTotal.textContent = state.data.catalog.activity_count;
+      return;
+    }
     const current = state.activities.filter((activity) => activity.lifecycle !== "ended");
     el.statRegistration.textContent = current.filter((activity) => activity.registration_required).length;
     el.statHighReturn.textContent = current.filter((activity) => activity.high_return).length;
@@ -350,29 +364,60 @@
     overview: "其他條件"
   };
 
+  function appendTermsSections(details, sections) {
+    const entries = Object.entries(sections || {}).filter(([, value]) => value);
+    const content = document.createElement("div");
+    content.className = "terms-content";
+    if (!entries.length) {
+      const empty = document.createElement("p");
+      empty.textContent = "目前沒有可分段顯示的條款，請查看官方活動頁。";
+      content.append(empty);
+    }
+    entries.forEach(([key, value]) => {
+      const section = document.createElement("section");
+      const heading = document.createElement("h4");
+      heading.textContent = termsLabels[key] || key;
+      const paragraph = document.createElement("p");
+      paragraph.textContent = value;
+      section.append(heading, paragraph);
+      content.append(section);
+    });
+    details.append(content);
+  }
+
   function appendTermsDetails(cardBody, activity) {
-    const entries = Object.entries(activity.terms_sections || {}).filter(([, value]) => value);
-    if (!entries.length) return;
+    const inlineSections = activity.terms_sections || {};
+    if (!activity.detail_ref && !Object.keys(inlineSections).length) return;
     const details = document.createElement("details");
     details.className = "terms-details";
     const summary = document.createElement("summary");
     summary.textContent = "查看活動條件";
     details.append(summary);
-    details.addEventListener("toggle", () => {
+    details.addEventListener("toggle", async () => {
       if (!details.open || details.dataset.rendered === "true") return;
-      const content = document.createElement("div");
-      content.className = "terms-content";
-      entries.forEach(([key, value]) => {
-        const section = document.createElement("section");
-        const heading = document.createElement("h4");
-        heading.textContent = termsLabels[key] || key;
-        const paragraph = document.createElement("p");
-        paragraph.textContent = value;
-        section.append(heading, paragraph);
-        content.append(section);
-      });
-      details.append(content);
       details.dataset.rendered = "true";
+      if (Object.keys(inlineSections).length) {
+        appendTermsSections(details, inlineSections);
+        return;
+      }
+      const loading = document.createElement("p");
+      loading.className = "terms-loading";
+      loading.textContent = "正在載入活動條款…";
+      details.append(loading);
+      try {
+        let detail = state.detailCache.get(activity.id);
+        if (!detail) {
+          const response = await fetch(resolveDataUrl(activity.detail_ref), { cache: "no-store" });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          detail = await response.json();
+          state.detailCache.set(activity.id, detail);
+        }
+        loading.remove();
+        appendTermsSections(details, detail.terms_sections);
+      } catch (error) {
+        loading.textContent = "活動條款暫時無法載入，請改看官方活動頁。";
+        console.error(error);
+      }
     });
     cardBody.append(details);
   }
@@ -586,16 +631,62 @@
     });
   }
 
-  function commitCatalogState({ scroll = false } = {}) {
+  function stateNeedsFullCatalog() {
+    return !INDEX_FILTERS.has(state.filter);
+  }
+
+  async function loadFullCatalog() {
+    if (state.catalogLoaded) return;
+    if (state.catalogPromise) return state.catalogPromise;
+    const files = Object.values(state.data?.catalog?.bank_files || {});
+    if (!files.length) {
+      state.catalogLoaded = true;
+      return;
+    }
+    state.catalogPromise = Promise.all(files.map(async (reference) => {
+      const response = await fetch(resolveDataUrl(reference), { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}: ${reference}`);
+      return response.json();
+    })).then((banks) => {
+      const activities = banks.flatMap((bank) => bank.activities || []);
+      state.activities = activities.map((activity) => (
+        timeState.deriveActivity(activity, state.data.thresholds)
+      ));
+      state.catalogLoaded = true;
+      state.catalogPromise = null;
+      updateDerivedSummary();
+    }).catch((error) => {
+      state.catalogPromise = null;
+      throw error;
+    });
+    return state.catalogPromise;
+  }
+
+  async function ensureCatalogForState() {
+    if (!stateNeedsFullCatalog()) return;
+    el.activityList.setAttribute("aria-busy", "true");
+    el.resultCount.textContent = "正在載入完整活動目錄…";
+    await loadFullCatalog();
+  }
+
+  async function commitCatalogState({ scroll = false } = {}) {
     syncUrl("push");
-    renderActivities();
+    try {
+      await ensureCatalogForState();
+      renderActivities();
+    } catch (error) {
+      el.activityList.setAttribute("aria-busy", "false");
+      el.resultCount.textContent = "完整活動目錄載入失敗";
+      console.error(error);
+    }
     if (scroll) document.querySelector("#catalog-title").scrollIntoView({ block: "start" });
   }
 
   function populateFilters() {
-    const banks = [...new Map(state.activities.map((item) => [item.bank_id, item.bank_name])).entries()];
+    const banks = (state.data.sources || []).map((item) => [item.id, item.bank_name]);
     banks.forEach(([id, name]) => el.bankSelect.add(new Option(name, id)));
-    const categories = [...new Set(state.activities.flatMap((item) => item.categories))].sort();
+    const categories = state.data.catalog?.categories
+      || [...new Set(state.activities.flatMap((item) => item.categories))].sort();
     categories.forEach((name) => el.categorySelect.add(new Option(name, name)));
   }
 
@@ -695,10 +786,15 @@
     document.addEventListener("visibilitychange", () => {
       if (!document.hidden) refreshDateSensitiveViews();
     });
-    window.addEventListener("popstate", () => {
+    window.addEventListener("popstate", async () => {
       restoreStateFromUrl();
       applyStateToControls();
-      renderActivities();
+      try {
+        await ensureCatalogForState();
+        renderActivities();
+      } catch (error) {
+        console.error(error);
+      }
     });
   }
 
@@ -718,6 +814,7 @@
       applyStateToControls();
       renderAgenda();
       renderHealth();
+      await ensureCatalogForState();
       renderActivities();
       syncUrl("replace");
       window.setInterval(refreshDateSensitiveViews, 60000);

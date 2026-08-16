@@ -11,6 +11,7 @@ from card_promotions_monitor.cli import (
     PUBLISH_GUARD_EXIT_CODE,
     assess_publish_guard,
     classify_registration_urls,
+    load_previous_public_payload,
     persist_payload,
     retain_failed_source_activities,
     update_lock,
@@ -60,9 +61,10 @@ class PublishGuardTests(unittest.TestCase):
         candidate = candidate_payload(failed=0, active=1)
         candidate["activities"] = [{
             "id": "offer", "title": "活動", "source_entry_url": "https://bank.example",
+            "bank_id": "bank-0", "bank_name": "銀行 0", "registration_required": True,
             "source_fingerprint": "abc", "observed_at": "2026-08-04T10:00:00+08:00",
             "last_detail_checked_at": "2026-08-04T09:00:00+08:00", "official_status": "published",
-            "lifecycle": "active",
+            "lifecycle": "active", "high_return": True,
         }]
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -72,6 +74,8 @@ class PublishGuardTests(unittest.TestCase):
             cache = json.loads((root / "cache.json").read_text())
         self.assertNotIn("source_fingerprint", public["activities"][0])
         self.assertNotIn("lifecycle", public["activities"][0])
+        self.assertNotIn("high_return", public["activities"][0])
+        self.assertEqual(public["catalog"]["registration_index_count"], 1)
         self.assertEqual(report["activities"][0]["source_fingerprint"], "abc")
         self.assertEqual(cache["activities"]["offer"]["fingerprint"], "abc")
 
@@ -166,7 +170,11 @@ class PublishGuardTests(unittest.TestCase):
                 "old_url": rejected_url,
                 "new_url": "",
             }],
-            "activities": [{"id": "healthy-offer", "bank_id": "healthy-bank"}],
+            "activities": [{
+                "id": "healthy-offer",
+                "bank_id": "healthy-bank",
+                "registration_required": True,
+            }],
         }
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -187,11 +195,13 @@ class PublishGuardTests(unittest.TestCase):
         self.assertEqual(published["publish_guard"]["status"], "passed")
         self.assertEqual(published["alerts"][0]["old_url"], rejected_url)
 
-    def test_raw_terms_remain_available_to_public_artifact_cache(self) -> None:
+    def test_raw_terms_move_to_lazy_detail_and_rehydrate_for_cache(self) -> None:
         candidate = candidate_payload(failed=0, active=1)
         candidate["activities"] = [{
             "id": "offer",
             "bank_id": "bank-0",
+            "bank_name": "銀行 0",
+            "registration_required": True,
             "terms_raw": "參加資格：限正卡持卡人",
             "terms_sections": {"eligibility": "參加資格：限正卡持卡人"},
         }]
@@ -205,15 +215,19 @@ class PublishGuardTests(unittest.TestCase):
             )
             report = json.loads((root / "latest.json").read_text())
             public = json.loads((root / "promotions.json").read_text())
+            detail = json.loads((root / "activities" / "offer.json").read_text())
+            rehydrated = load_previous_public_payload(root / "promotions.json")
 
         self.assertEqual(exit_code, 0)
         self.assertIn("terms_raw", report["activities"][0])
+        self.assertNotIn("terms_raw", public["activities"][0])
+        self.assertEqual(public["activities"][0]["detail_ref"], "activities/offer.json")
         self.assertEqual(
-            public["activities"][0]["terms_raw"],
+            detail["terms_raw"],
             "參加資格：限正卡持卡人",
         )
         self.assertEqual(
-            public["activities"][0]["terms_sections"]["eligibility"],
+            rehydrated["activities"][0]["terms_sections"]["eligibility"],
             "參加資格：限正卡持卡人",
         )
 
