@@ -1,6 +1,6 @@
 {
-  "schema_version": 7,
-  "generated_at": "2026-08-16T09:46:55+08:00",
+  "schema_version": 8,
+  "generated_at": "2026-08-16T10:02:00+08:00",
   "timezone": "Asia/Taipei",
   "thresholds": {
     "percent_at_least": 10,
@@ -102,7 +102,7 @@
     "strategy": "listing_fingerprint_with_current_parser",
     "schema_version": 4,
     "max_age_days": 30,
-    "previous_generated_at": "2026-08-16T09:25:11+08:00",
+    "previous_generated_at": "2026-08-16T09:46:55+08:00",
     "reused_activities": 1251,
     "reparsed_activities": 1249,
     "cached_inputs_missing": 2,
@@ -115,6 +115,8 @@
     "active_or_upcoming": 1280,
     "registration_required": 347,
     "registration_times_confirmed": 141,
+    "registration_time_coverage_percent": 40.6,
+    "needs_review": 283,
     "high_return": 789,
     "alerts": 11
   },
@@ -126,8 +128,11 @@
       "resolved_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/default.html",
       "status": "complete",
       "activity_count": 17,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": ""
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "",
+      "registration_required_count": 17,
+      "registration_time_confirmed_count": 17,
+      "registration_time_coverage_percent": 100.0
     },
     {
       "id": "cathay",
@@ -136,8 +141,11 @@
       "resolved_url": "https://www.cathay-cube.com.tw/cathaybk/personal/event/overview",
       "status": "complete",
       "activity_count": 21,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": ""
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "",
+      "registration_required_count": 11,
+      "registration_time_confirmed_count": 11,
+      "registration_time_coverage_percent": 100.0
     },
     {
       "id": "ctbc",
@@ -146,8 +154,11 @@
       "resolved_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/store.html?utm_source=google_keyword&utm_medium=google_keyword&utm_campaign=25546_Linepay_Q1_2023&ctsource=google_keyword&ctchannel=google_keyword&ctid=25546_Linepay_Q1_2023&Unit=13157&Seed=8723CK001",
       "status": "complete",
       "activity_count": 121,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": ""
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "",
+      "registration_required_count": 21,
+      "registration_time_confirmed_count": 20,
+      "registration_time_coverage_percent": 95.2
     },
     {
       "id": "sinopac",
@@ -156,8 +167,11 @@
       "resolved_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/list.html",
       "status": "complete",
       "activity_count": 23,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": ""
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "",
+      "registration_required_count": 17,
+      "registration_time_confirmed_count": 3,
+      "registration_time_coverage_percent": 17.6
     },
     {
       "id": "scsb",
@@ -166,8 +180,11 @@
       "resolved_url": "https://www.scsb.com.tw/content/card/hotList",
       "status": "complete",
       "activity_count": 22,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": ""
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "",
+      "registration_required_count": 6,
+      "registration_time_confirmed_count": 2,
+      "registration_time_coverage_percent": 33.3
     },
     {
       "id": "obank",
@@ -176,8 +193,11 @@
       "resolved_url": "https://www.o-bank.com/zh-tw/retail/event/event-compaign",
       "status": "complete",
       "activity_count": 30,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "僅讀取簽帳金融卡分頁 Content_divContent_1；已排除存錢、貸款及投資理財分頁。"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "僅讀取簽帳金融卡分頁 Content_divContent_1；已排除存錢、貸款及投資理財分頁。",
+      "registration_required_count": 7,
+      "registration_time_confirmed_count": 4,
+      "registration_time_coverage_percent": 57.1
     },
     {
       "id": "yuanta",
@@ -186,8 +206,11 @@
       "resolved_url": "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/list.do",
       "status": "complete",
       "activity_count": 30,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": ""
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "",
+      "registration_required_count": 4,
+      "registration_time_confirmed_count": 1,
+      "registration_time_coverage_percent": 25.0
     },
     {
       "id": "esun",
@@ -196,8 +219,11 @@
       "resolved_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
       "status": "partial",
       "activity_count": 193,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "2 個優惠明細轉往非玉山網域或暫時無法讀取；官方頁輸出不允許的明細 URL，已拒絕並跳過：https://esun.co/cSgYy、https://esun.co/zbyZF"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "2 個優惠明細轉往非玉山網域或暫時無法讀取；官方頁輸出不允許的明細 URL，已拒絕並跳過：https://esun.co/cSgYy、https://esun.co/zbyZF",
+      "registration_required_count": 54,
+      "registration_time_confirmed_count": 29,
+      "registration_time_coverage_percent": 53.7
     },
     {
       "id": "sunny",
@@ -206,8 +232,11 @@
       "resolved_url": "",
       "status": "partial",
       "activity_count": 27,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "指定入口存在，但 Cloudflare 對自動化請求回傳 403；本次沿用已驗證的官方索引快照，待官方解除限制後恢復即時讀取。"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "指定入口存在，但 Cloudflare 對自動化請求回傳 403；本次沿用已驗證的官方索引快照，待官方解除限制後恢復即時讀取。",
+      "registration_required_count": 1,
+      "registration_time_confirmed_count": 0,
+      "registration_time_coverage_percent": 0.0
     },
     {
       "id": "tcbbank",
@@ -216,8 +245,11 @@
       "resolved_url": "https://www.tcbbank.com.tw/creditcard/J_01.html",
       "status": "complete",
       "activity_count": 18,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": ""
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "",
+      "registration_required_count": 2,
+      "registration_time_confirmed_count": 0,
+      "registration_time_coverage_percent": 0.0
     },
     {
       "id": "kgi",
@@ -226,8 +258,11 @@
       "resolved_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign",
       "status": "complete",
       "activity_count": 38,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": ""
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "",
+      "registration_required_count": 13,
+      "registration_time_confirmed_count": 8,
+      "registration_time_coverage_percent": 61.5
     },
     {
       "id": "hncb",
@@ -236,8 +271,11 @@
       "resolved_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/per_finance/service/public_item/best_offer",
       "status": "complete",
       "activity_count": 42,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "僅讀取信用卡 tab 對應容器 id-cbbdca5b-6d30-44e8-bb52-4676dbe3fc5a-content；已排除存款/外匯、基金/投資、保險、貸款與其他分頁。"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "僅讀取信用卡 tab 對應容器 id-cbbdca5b-6d30-44e8-bb52-4676dbe3fc5a-content；已排除存款/外匯、基金/投資、保險、貸款與其他分頁。",
+      "registration_required_count": 7,
+      "registration_time_confirmed_count": 0,
+      "registration_time_coverage_percent": 0.0
     },
     {
       "id": "taipei_fubon",
@@ -246,8 +284,11 @@
       "resolved_url": "https://cardpromote.taipeifubon.com.tw/promotion/Result",
       "status": "complete",
       "activity_count": 214,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "已讀取 24 個官方清單分頁"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "已讀取 24 個官方清單分頁",
+      "registration_required_count": 31,
+      "registration_time_confirmed_count": 12,
+      "registration_time_coverage_percent": 38.7
     },
     {
       "id": "taishin",
@@ -256,8 +297,11 @@
       "resolved_url": "https://mkpcard.taishinbank.com.tw/tscccms/promotion/offerList/A",
       "status": "complete",
       "activity_count": 204,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "已讀取 A–I 九個信用卡優惠分類"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "已讀取 A–I 九個信用卡優惠分類",
+      "registration_required_count": 18,
+      "registration_time_confirmed_count": 4,
+      "registration_time_coverage_percent": 22.2
     },
     {
       "id": "first",
@@ -266,8 +310,11 @@
       "resolved_url": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
       "status": "complete",
       "activity_count": 140,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "已透過官方 REST 逐分類讀取活動"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "已透過官方 REST 逐分類讀取活動",
+      "registration_required_count": 55,
+      "registration_time_confirmed_count": 2,
+      "registration_time_coverage_percent": 3.6
     },
     {
       "id": "chb",
@@ -276,8 +323,11 @@
       "resolved_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3657",
       "status": "partial",
       "activity_count": 19,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "8 個官方活動明細暫時無法讀取；官方頁輸出不允許的明細 URL，已拒絕並跳過：http://10.100.6.38/frontend/bonusDetail.jsp?id=3450、http://10.100.6.38/frontend/bonusDetail.jsp?id=3625、http://10.100.6.38/frontend/bonusDetail.jsp?id=3624、http://10.100.6.38/frontend/bonusDetail.jsp?id=3623、http://10.100.6.38/frontend/bonusDetail.jsp?id=3622、http://10.100.6.38/frontend/bonusDetail.jsp?id=3621、http://10.100.6.38/frontend/bonusDetail.jsp?id=3594、http://10.100.6.38/frontend/bonusDetail.jsp?id=3640"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "8 個官方活動明細暫時無法讀取；官方頁輸出不允許的明細 URL，已拒絕並跳過：http://10.100.6.38/frontend/bonusDetail.jsp?id=3450、http://10.100.6.38/frontend/bonusDetail.jsp?id=3625、http://10.100.6.38/frontend/bonusDetail.jsp?id=3624、http://10.100.6.38/frontend/bonusDetail.jsp?id=3623、http://10.100.6.38/frontend/bonusDetail.jsp?id=3622、http://10.100.6.38/frontend/bonusDetail.jsp?id=3621、http://10.100.6.38/frontend/bonusDetail.jsp?id=3594、http://10.100.6.38/frontend/bonusDetail.jsp?id=3640",
+      "registration_required_count": 11,
+      "registration_time_confirmed_count": 1,
+      "registration_time_coverage_percent": 9.1
     },
     {
       "id": "ubot",
@@ -286,8 +336,11 @@
       "resolved_url": "https://card.ubot.com.tw/CardActivity?category=%E7%B6%B2%E8%B3%BC%E6%95%B8%E4%BD%8D",
       "status": "complete",
       "activity_count": 93,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "已讀取 7 個資料分類；API 共 93 筆，目前有效 93 筆；另以 hotOrder 標記 14 筆強打優惠"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "已讀取 7 個資料分類；API 共 93 筆，目前有效 93 筆；另以 hotOrder 標記 14 筆強打優惠",
+      "registration_required_count": 43,
+      "registration_time_confirmed_count": 17,
+      "registration_time_coverage_percent": 39.5
     },
     {
       "id": "megabank",
@@ -296,8 +349,11 @@
       "resolved_url": "https://www.megabank.com.tw/personal/credit-card/event/overview?Keywords=&Tag=Tag&creaditcard=all&discount=all&type=all&area=all",
       "status": "complete",
       "activity_count": 32,
-      "checked_at": "2026-08-16T09:46:55+08:00",
-      "message": "官方 API 共篩出 32 筆仍有效的「需登錄」項目；收錄 32 筆"
+      "checked_at": "2026-08-16T10:02:00+08:00",
+      "message": "官方 API 共篩出 32 筆仍有效的「需登錄」項目；收錄 32 筆",
+      "registration_required_count": 32,
+      "registration_time_confirmed_count": 12,
+      "registration_time_coverage_percent": 37.5
     }
   ],
   "alerts": [
@@ -431,6 +487,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 5025,
       "featured": true,
@@ -475,6 +534,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 3350,
       "featured": true,
@@ -487,7 +549,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "登錄時間晚於活動期間，請至官方頁確認對應的登錄時間。",
+      "review_message": "登錄時間晚於活動期間。",
       "detail_ref": "activities/esun-bf78fdca4069.json"
     },
     {
@@ -519,6 +581,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -531,8 +596,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-811a04e0f2f8.json"
     },
     {
@@ -594,6 +659,9 @@
           "source_text": "/01 ~ 08/31 | momo 滿16,000享300 活動名額:100 交易方式 刷卡金額 刷卡金回饋 單筆且分期 16,000元 300元 登錄時間:2026/08/27 16:00 ~ 2026/08/31 23:59 活動名額:100 08/01 ~ 08/31 | momo 滿30,000享800 活動名額:60 交易方式 刷卡金額 刷卡金回饋 單筆且分期 30,000元 800元 登錄時間:2026/08/2",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 4.0,
       "max_reward_amount_twd": 1600,
@@ -675,6 +743,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 4.0,
       "max_reward_amount_twd": 1600,
       "featured": true,
@@ -731,6 +802,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 50,
       "featured": true,
@@ -746,8 +820,8 @@
         "海外消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-63a46253f43e.json"
     },
     {
@@ -783,6 +857,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -795,8 +872,8 @@
         "生活消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-922af9e40cd2.json"
     },
     {
@@ -828,6 +905,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -840,7 +920,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "登錄時間晚於活動期間，請至官方頁確認對應的登錄時間。",
+      "review_message": "登錄時間晚於活動期間。",
       "detail_ref": "activities/esun-f2c8355f42ab.json"
     },
     {
@@ -885,6 +965,9 @@
           "source_text": "登錄,活動總限量1,800名。 第一波消費登錄時間2026/8/18 10:00~2026/8/20 23:59 (限量900名,額滿為止) 第二波消費登錄時間2026/9/1 10:00~2026/9/3 23:59 (限量900名,額滿為止) ※ 每歸戶於每波檔期【滿額禮】及【分期禮】限擇優回饋1次,回饋上限350元刷卡金。 第一波活動登錄 (限量900名) 第二波活動登錄 (限量900名) 注意事項 此活動僅",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -946,6 +1029,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -959,8 +1045,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-8a543a0da85e.json"
     },
     {
@@ -1001,6 +1087,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 7000,
       "featured": true,
@@ -1013,8 +1102,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-8fe9d698178c.json"
     },
     {
@@ -1045,6 +1134,9 @@
           "source_text": "金額登錄即享: 門檻 贈品 贈品限量名額 $6,500 100元刷卡金 100名 $20,000 300元刷卡金 40名 $40,000 600元刷卡金 20名 注意事項 活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 100,
@@ -1096,6 +1188,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1136,6 +1231,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1145,8 +1243,8 @@
         "百貨購物"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-d5536f78d0f7.json"
     },
     {
@@ -1176,6 +1274,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1192,8 +1293,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-55182d27066a.json"
     },
     {
@@ -1325,6 +1426,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 9.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1338,8 +1442,8 @@
         "強打優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-31d4cc8b650b.json"
     },
     {
@@ -1372,6 +1476,9 @@
       "registration_url": "https://www.yuantabank.com.tw/bank/creditCard/productActivityMember/list.do",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": 100,
       "featured": true,
@@ -1385,8 +1492,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/yuanta-8d1f1838472e.json"
     },
     {
@@ -1417,6 +1524,9 @@
           "source_text": "登錄即享: 門檻 贈品 贈品限量名額 滿$6,500 刷卡金100元 80名 滿$20,000 刷卡金300元 30名 滿$40,000 刷卡金600元 10名 注意事項 活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 600,
@@ -1461,6 +1571,9 @@
           "source_text": "登錄即享: 門檻 贈品 贈品限量名額 滿$6,500 刷卡金100元 80名 滿$20,000 刷卡金300元 30名 滿$40,000 刷卡金600元 10名 注意事項 活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 600,
@@ -1515,6 +1628,9 @@
           "source_text": ",享1,800元刷卡金 (限量90名) 8/18~8/25單筆分期滿NT$8,000,享600元刷卡金 (限量120名) ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/8/28 14:00 開放限量登錄 ※本活動每戶限擇優回饋乙次,回饋上限NT$2,200。 蝦皮購物商城優惠券 兆豐信用卡專屬88折券 8/8當日蝦皮購物APP商城單筆消費滿NT$2,000結帳時使用指定優惠券享88折,最高折抵1,500元",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2200,
@@ -1581,6 +1697,9 @@
           "source_text": "| PChome 滿16,000享300 活動名額:100 交易方式 刷卡金額 刷卡金回饋 單筆且分期(限3/6/10期) 16,000元 300元 登錄時間:2026/08/27 17:00 ~ 2026/08/31 23:59 活動名額:100 08/01 ~ 08/31 | PChome 滿25,000享700 活動名額:60 交易方式 刷卡金額 刷卡金回饋 單筆且分期(限3/6/10期) 25,000元 700元 登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 4.0,
       "max_reward_amount_twd": 1600,
@@ -1650,6 +1769,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 4.0,
       "max_reward_amount_twd": 1600,
       "featured": true,
@@ -1717,6 +1839,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 1600,
       "featured": true,
@@ -1768,6 +1893,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -1783,8 +1911,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-ba0a3964bb4c.json"
     },
     {
@@ -1818,6 +1946,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 2026,
       "featured": true,
@@ -1832,8 +1963,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-ac38f67ef3aa.json"
     },
     {
@@ -1867,6 +1998,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -1882,7 +2016,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "本頁含 3 個活動，請至官方頁確認對應的登錄時間。",
+      "review_message": "本頁含 3 個活動，請至官方頁確認對應的登錄時間。 官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-be5918b78f33.json"
     },
     {
@@ -1915,6 +2049,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1928,8 +2065,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-6023f068cbd8.json"
     },
     {
@@ -1959,6 +2096,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -1975,8 +2115,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-249896747ed9.json"
     },
     {
@@ -2006,6 +2146,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -2023,7 +2166,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "本頁含 4 個活動，請至官方頁確認對應的登錄時間。",
+      "review_message": "本頁含 4 個活動，請至官方頁確認對應的登錄時間。 官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-0ed3aecf590e.json"
     },
     {
@@ -2054,6 +2197,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 1300,
       "featured": true,
@@ -2071,8 +2217,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-9c7aec7eae3e.json"
     },
     {
@@ -2102,6 +2248,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -2118,8 +2267,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-449d1a996685.json"
     },
     {
@@ -2149,6 +2298,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 28.0,
       "max_reward_amount_twd": 400,
       "featured": true,
@@ -2165,8 +2317,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-a54d23df60d1.json"
     },
     {
@@ -2196,6 +2348,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 400,
       "featured": true,
@@ -2212,8 +2367,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-5e04056adad4.json"
     },
     {
@@ -2243,6 +2398,9 @@
           "source_text": "1.參加活動須於2026/08/21 16:00~2026/08/31 23:59完成活動登錄始符合資格,活動登錄限量名額1,000名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、簽帳金融卡、LINE PAY、街口支付、悠遊付、橘子支付等第三方支付不適用。3.正附卡消費合併計",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": 10,
@@ -2292,6 +2450,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 6.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -2340,6 +2501,9 @@
           "source_text": "PChome 24h購物 累積滿額加碼優惠 (8/1-8/31) 累積分期滿10萬最高享1,000小樹點(信用卡)+ 1,000 P幣回饋 1.參加本活動須於2026/8/31 16:00~2026/8/31 23:59完成活動登錄始符合資格,活動登錄限量名額300名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、LINE PAY、Pi錢包、街口支付、悠遊付及AFTEE(後支付)等第三方支付不適用,簽帳金融卡不適",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -2397,6 +2561,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 6.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -2445,6 +2612,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -2487,6 +2657,9 @@
           "source_text": "全國電子分期滿額登錄成功最高享5%回饋 分期(限五期以上)滿額登錄成功最高贈4,000元刷卡金 實體門市再加贈全國電子點數1,000點!(限量) 1.須於2026/8/28 16:00~8/31 23:59 於本行官網登錄專區、國泰優惠APP完成活動登錄始符合資格且限以正卡人資料登錄,限量登錄2,000名,額滿即關閉。2.商務卡、簽帳金融卡、第三方支付不適用。3.正附卡消費合併計算,限擇優門檻回饋乙次,",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": 4000,
@@ -2531,6 +2704,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 1200,
       "featured": true,
@@ -2572,6 +2748,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -2611,6 +2790,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -2620,8 +2802,8 @@
         "百貨購物"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-460553489279.json"
     },
     {
@@ -2651,6 +2833,9 @@
           "source_text": "通路刷彰銀 最高享20%回饋 活動期間: 2026年8月1日~2026年8月31日 適用卡別: 彰銀信用卡(不含公司商務卡、VISA Debit卡) 登錄時間:2026/8/1 10:00~2026/8/31 23:59,各指定百貨通路,各限量登錄1,000名,額滿即提前終止。 (活動已額滿) 登錄網址:https://www.bankchb.com/frontend/CampaignLog.html?v=1 活動內",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": null,
@@ -2696,6 +2881,9 @@
           "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄:於2026/8/31 16:00開始登錄。登錄名額有限,額滿即止。 並於指定期間內完成登錄,即可享: 正卡持卡人所持之信用卡於回饋當時需為有效卡,若有遭限制或停止使用、延遲繳款或其他違反信用卡約定條款之情事,本行得不待通知逕行取消持卡人之回饋資格。需於",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2000,
@@ -2752,6 +2940,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -2807,6 +2998,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 7000,
       "featured": true,
@@ -2854,6 +3048,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -2900,6 +3097,9 @@
           "source_text": "(活動登錄日期:2026/8/31 15:00起~PChome活動網站進行登錄) 本活動限於PChome24h購物刷星展信用卡消費達指定門檻及期數,於指定期間內完成登錄成功,即可享限量P幣回饋。正、附卡消費合併計算,以上本月所有門檻除三星旗鑑館加碼活動以外每一正卡持",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": null,
@@ -2949,6 +3149,9 @@
           "source_text": "(以上優惠活動8/31上午11:00於東森購物活動網站開放登錄) (以上優惠活動8/31上午11:00於東森購物活動網站開放登錄,每正卡人活動期間限回饋乙次且不可跨等級重複兌換。) 持卡人需於消費當月~指定活動網站完成登錄,登錄額滿活動即提前終止。上述活動",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2000,
@@ -3004,6 +3207,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 5000,
       "featured": true,
@@ -3051,6 +3257,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -3090,6 +3299,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 100,
       "featured": true,
@@ -3102,8 +3314,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-2aa97156ba89.json"
     },
     {
@@ -3130,6 +3342,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -3143,8 +3358,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-3df4d8f22627.json"
     },
     {
@@ -3179,6 +3394,9 @@
           "source_text": "int 600點」。 活動登錄 (限量3,000名) ※ 每歸戶限擇優回饋1次,回饋上限玉山e point 600點,限登錄成功始符合回饋資格。 ※ 登錄辦法:2026/8/20 11:00~2026/8/31 23:59統一開放正卡人於玉山銀行官網或下載玉山wallet登錄,活動期間限登錄3,000名,額滿為止。 ※ 玉山e point 1點=1元,可折抵信用卡消費,使用說明詳見玉山e point官網。 注意事項 優",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -3222,6 +3440,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -3235,8 +3456,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-80fd7c50352d.json"
     },
     {
@@ -3266,6 +3487,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -3282,8 +3506,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-0ee8256a4b7e.json"
     },
     {
@@ -3312,6 +3536,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -3327,8 +3554,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-928cac2b37e2.json"
     },
     {
@@ -3359,6 +3586,9 @@
           "source_text": "0元)。>>活動詳情 ※ 玉山e point,1點=1元。折抵未出帳消費最高可折抵30%;線上消費 / 實體門市最高可折抵100%。(詳情請見) ※ 登錄辦法:2026/8/28 14:00~ 2026/8/31 23:59 統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等,恕不適用上述活動。 8/28(限量2,000名)",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 3000,
@@ -3404,6 +3634,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 3000,
       "featured": true,
@@ -3447,6 +3680,9 @@
           "source_text": "0元)。>>活動詳情 ※ 玉山e point,1點=1元。折抵未出帳消費最高可折抵30%;線上消費 / 實體門市最高可折抵100%。(詳情請見) ※ 登錄辦法:2026/8/27 14:00~ 2026/8/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等,恕不適用。 8/27登錄(限量600名)",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 3000,
@@ -3492,6 +3728,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": 3000,
       "featured": true,
@@ -3532,6 +3771,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -3546,8 +3788,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-ce3404a8073d.json"
     },
     {
@@ -3589,6 +3831,9 @@
           "source_text": ":00~2026/8/5 23:59統一開放正卡人於玉山銀行官網登錄或下載玉山Wallet,活動期間限登錄3,000名,額滿為止。 ※ 好評延長再加開登錄名額:2026/8/27 11:00~2026/8/31 23:59 統一開放正卡人於玉山銀行官網登錄或下載玉山Wallet,限登錄1,000名,額滿為止 (活動期間內僅需登錄完成即享活動資格,無須重複登錄)。 ※ 玉山e point 1點=1元,可折抵信用卡消費,使",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -3637,6 +3882,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 5025,
       "featured": true,
@@ -3674,6 +3922,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": 5025,
       "featured": true,
@@ -3686,8 +3937,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-0b051d79de81.json"
     },
     {
@@ -3718,6 +3969,9 @@
           "source_text": "※ 於2026/8/31 10:00 於momo活動登記頁開放登錄,限量130名,額滿為止。 刷玉山Unicard單筆分期滿60,000元,享8,900元回饋:成功登錄機車館限定活動可獲得,機車館限定6,500元 (5,000元刷卡金+1,500 mo點)",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 8900,
@@ -3756,6 +4010,9 @@
       "registration_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -3767,8 +4024,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-3dfd8272c8c9.json"
     },
     {
@@ -3799,6 +4056,9 @@
           "source_text": "功者始符合活動資格。 ※ 玉山e point,1點=1元。折抵未出帳消費最高可折抵30%;線上消費 / 實體門市最高可折抵100%。(詳情請見) ※ 登錄時間:2026/8/24 15:00~ 2026/8/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等,恕不適用。 8/24登錄(限量2,000名)",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 2000,
@@ -3844,6 +4104,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -3887,6 +4150,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 3850,
       "featured": true,
@@ -3929,6 +4195,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 3850,
       "featured": true,
@@ -3968,6 +4237,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -3982,8 +4254,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-5d6b06548a6f.json"
     },
     {
@@ -4025,6 +4297,9 @@
           "source_text": "算。符合活動資格,統一於2026年10月中旬後陸續回饋於正卡人帳戶。 ※正卡、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※登錄辦法:2026/8/27 14:00~ 2026/8/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※簽帳金融卡、公司卡及採購卡等,恕不適用本活動。 ※玉山e point,1點=1元。折抵未出帳消費最高可折抵30%;線上消費 /",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": null,
@@ -4073,6 +4348,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 300,
       "featured": true,
@@ -4110,6 +4388,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -4122,8 +4403,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-67a618b93e34.json"
     },
     {
@@ -4161,6 +4442,9 @@
           "source_text": "2026/8/26 13:00~2026/8/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 2026/8/28 13:00~2026/8/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 8/26 13:00開放登錄(限量1,750名) 8/28 13:00開放登錄(限量1,750名)",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 900,
@@ -4207,6 +4491,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 800,
       "featured": true,
@@ -4252,6 +4539,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 30.0,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -4295,6 +4585,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -4333,6 +4626,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": 15000,
       "featured": true,
@@ -4347,8 +4643,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-8ea937cc677b.json"
     },
     {
@@ -4372,6 +4668,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 1200,
       "featured": true,
@@ -4383,8 +4682,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-1294bfc2e38f.json"
     },
     {
@@ -4415,6 +4714,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 300,
       "featured": true,
@@ -4427,8 +4729,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-5dc42eb201ad.json"
     },
     {
@@ -4498,6 +4800,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -4544,6 +4849,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 100,
       "featured": true,
@@ -4556,8 +4864,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-220cbd3edb49.json"
     },
     {
@@ -4580,6 +4888,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -4590,8 +4901,8 @@
         "網購"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-50d5ef6e597a.json"
     },
     {
@@ -4629,6 +4940,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 1200,
       "featured": true,
@@ -4643,8 +4957,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-7670c3a60934.json"
     },
     {
@@ -4727,6 +5041,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
@@ -4772,6 +5089,9 @@
       "registration_url": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -4789,8 +5109,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-cd4ca802d246.json"
     },
     {
@@ -4821,6 +5141,9 @@
       "registration_url": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -4838,8 +5161,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-9f319cf43de8.json"
     },
     {
@@ -4870,6 +5193,9 @@
       "registration_url": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -4887,8 +5213,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-2e9e9235ebfe.json"
     },
     {
@@ -4919,6 +5245,9 @@
       "registration_url": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -4936,8 +5265,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-bfc6d6e4a4a8.json"
     },
     {
@@ -4968,6 +5297,9 @@
           "source_text": "1 活動期間~全台萬家福量販店,登錄滿額即享: 門檻 贈品 贈品限量名額 單筆分期滿$10,000 刷卡金200元 500名 單筆分期滿$20,000 刷卡金400元 250名 ※2026/7/30 14:00開放登錄 【愛買】2026/7/29-9/1 活動期間~全台愛買量販店,消費滿額即贈: 門檻 贈品 贈品限量名額 單筆分期滿$10,000 愛買現金抵用券200元 100名 單筆分期滿$20,000 愛買現金抵用券400",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 400,
@@ -5015,6 +5347,9 @@
       "registration_url": "https://www.yuantabank.com.tw/bank/creditCard/productActivityMember/list.do",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -5029,8 +5364,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/yuanta-634e140cf74d.json"
     },
     {
@@ -5056,6 +5391,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -5069,8 +5407,8 @@
         "強打優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-f4faf96768f3.json"
     },
     {
@@ -5096,6 +5434,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -5109,8 +5450,8 @@
         "強打優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-62f6d71a0684.json"
     },
     {
@@ -5136,6 +5477,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 2026,
       "featured": true,
@@ -5149,8 +5493,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-1588a71753e5.json"
     },
     {
@@ -5184,6 +5528,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 10000,
       "featured": true,
@@ -5198,8 +5545,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-73238ade7aa0.json"
     },
     {
@@ -5235,6 +5582,9 @@
           "source_text": "消費當日~現場公告之指定地點兌換贈品。 活動期間:2026/7/1~2026/9/30 誠品線上單筆分期滿6,000元享100元刷卡金 (限100份) 登錄期間2026/9/22 16:00~2026/9/30 23:59,若登錄名額額滿,將提前關閉 2026/9/22 16:00起立即登錄 單筆滿3,000元以上享3期0利率 單筆滿6,000元以上享6期0利率 單筆滿12,000元以上享12期0利率 活動期間:202",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 7.0,
       "max_reward_amount_twd": 115,
@@ -5289,6 +5639,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 7.0,
       "max_reward_amount_twd": 115,
       "featured": true,
@@ -5337,6 +5690,9 @@
       "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -5349,8 +5705,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/scsb-89ed9faac395.json"
     },
     {
@@ -5408,6 +5764,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.8,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -5448,6 +5807,9 @@
       "registration_url": "https://www.ctbcbank.com/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_register.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -5457,8 +5819,8 @@
         "旅遊交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ctbc-30d61ad06d21.json"
     },
     {
@@ -5491,6 +5853,9 @@
       "registration_url": "https://www.yuantabank.com.tw/bank/creditCard/productActivityMember/list.do",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 50.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -5504,8 +5869,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/yuanta-e1efdb9976ea.json"
     },
     {
@@ -5545,6 +5910,9 @@
           "source_text": "活動時間:2026/7/1~2026/9/30(登錄期限~2026/10/31 23:59止) 2.持卡人須於2026/10/31 23:59前~活動登錄專區完成登錄(尚未核卡前亦可登錄),若未於登錄截止時間內完",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -5613,6 +5981,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 1.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -5663,6 +6034,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026q3lidoforbonus",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 9.1,
       "max_reward_amount_twd": 3000,
       "featured": true,
@@ -5681,8 +6055,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-d1af75eb060c.json"
     },
     {
@@ -5714,6 +6088,9 @@
           "source_text": "msung Pay); 非實體通路如網路、非面對面、傳真、郵購刷卡消費, 或其他電子支付交易皆不適用。 注意事項 政府採購卡、商務卡及公司戶所持VISA金融卡不適用本活動。 活動於2026/7/23 14:00於兆豐官網開放登錄。 7-ELEVEN 50元現金抵用券符合回饋資格認定: 開放登錄日起~2026/9/30期間先行完成網頁登錄;活動期間內只需登錄一次,完成網頁登錄之當月(含當月)起~2026/9/30,均可參與本活動",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -5761,6 +6138,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 1500,
       "featured": true,
@@ -5802,6 +6182,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/megabirthday",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": 300,
       "featured": true,
@@ -5817,8 +6200,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-63d5796b6b7b.json"
     },
     {
@@ -5864,6 +6247,9 @@
           "source_text": "卡通、愛金卡...等等)、行動支付(如Apple Pay)者,非本活動之回饋對象,敬請注意。 活動需登錄,本行分別於2026/7/10 14:00、2026/8/10 14:00、2026/9/10 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 本行VISA金融卡、政府網路採購卡及公司商務卡不適用本活動。 正、附卡消費合併計算且正、附卡合併每戶(以正卡人身分證字號歸戶計算)於活動期間刷卡金限擇優回饋乙次",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 5000,
@@ -5927,6 +6313,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -5969,6 +6358,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ecselect2026q3",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -5983,8 +6375,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-ab149ad22913.json"
     },
     {
@@ -6014,6 +6406,9 @@
           "source_text": "券500元】(活動需登錄,每戶限領乙份,限量1,000名)。 卡別 門檻 日幣雙幣卡 JPY250,000(含)以上 美金雙幣卡 USD1,600(含)以上 注意事項 1.本活動於2026/7/1 10:00開放登錄~2026/9/30之23時59分止,限正卡持卡人登錄,若登錄提前額滿,則不再接受新登錄。未於登錄期間內完成登錄者,視同放棄參加本活動,恕不接受人工登錄、事後補登或要求優惠回饋,完成登錄時間悉以本行系統為準。 2",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 2.5,
       "max_reward_amount_twd": null,
@@ -6055,6 +6450,9 @@
       "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 1.0,
       "max_reward_amount_twd": 35100,
       "featured": true,
@@ -6070,8 +6468,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/kgi-59062350de8b.json"
     },
     {
@@ -6101,6 +6499,9 @@
       "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 300,
       "featured": true,
@@ -6117,8 +6518,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/kgi-f54ae9d94460.json"
     },
     {
@@ -6147,6 +6548,9 @@
       "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 1.0,
       "max_reward_amount_twd": 4500,
       "featured": true,
@@ -6162,8 +6566,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/kgi-ab451e3ac1c3.json"
     },
     {
@@ -6192,6 +6596,9 @@
       "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 7.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -6207,8 +6614,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/kgi-27203da02273.json"
     },
     {
@@ -6251,6 +6658,9 @@
           "source_text": "心/生活市集/遠傳friday購物/樂天市場 滿額最高享1.5% 無名額限制 交易方式 刷卡金額 刷卡金回饋 分期累積或單筆 5,000元 1.5% 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 無名額限制 活動期間:2026/7/1-2026/9/30 單件商品滿990元,於折價券欄位輸入「kgi26q3」刷凱基卡享現折280元優惠! 需於結帳時於折價券欄位輸入指定折扣碼並刷凱基卡方可折抵",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 280,
@@ -6312,6 +6722,9 @@
           "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/9/22 14:00起開放登錄~2026/9/30 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個PChome24h購物優惠活動,每歸戶限擇優擇一項活",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
@@ -6379,6 +6792,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -6436,6 +6852,9 @@
           "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/9/22 14:00起開放登錄~2026/9/30 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算回饋,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個淘寶優惠活動,每歸戶限擇優擇一項活動回饋乙次。 ",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
@@ -6496,6 +6915,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -6554,6 +6976,9 @@
           "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/9/22 14:00起開放登錄~2026/9/30 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算回饋,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個酷澎coupang優惠活動,每歸戶限擇優擇一項活",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
@@ -6619,6 +7044,9 @@
           "source_text": "如下(活動採每月開放登錄,活動期間僅需登錄一次,不需每月重覆登錄) 【活動一】活動期間每戶最高擇優回饋乙次,上限1,000元刷卡金 第一波登錄時間2026/7/20 14:00起~2026/7/31 23:59,額滿為止,語音活動代碼:0711。 第二波登錄時間2026/8/20 14:00起~2026/8/31 23:59,額滿為止,語音活動代碼:0812。 第三波登錄時間2026/9/18 14:00起~2026/9/30",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
@@ -6719,6 +7147,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 300,
       "featured": true,
@@ -6799,6 +7230,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -6850,6 +7284,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -6864,8 +7301,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-24e895d83900.json"
     },
     {
@@ -6899,6 +7336,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -6913,8 +7353,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-1e855e2606fe.json"
     },
     {
@@ -6947,6 +7387,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -6960,8 +7403,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-381e75da6adb.json"
     },
     {
@@ -7009,6 +7452,9 @@
           "source_text": "成功登錄且符合本活動資格之交易 時間優先順序作為回饋依據,額滿為止。 (1)每月開放登錄時間: 2026/7/15 15:00起~2026/7/31 23:59止登錄,額滿為止。 2026/8/15 15:00起~2026/8/31 23:59止登錄,額滿為止。 2026/9/15 15:00起~2026/9/30 23:59止登錄,額滿為止。 (2)登錄方式: *網路登錄:於台北富邦銀行之【網路銀行】或是下載【Fubon+台",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
@@ -7059,6 +7505,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -7073,8 +7522,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-c6e5bb0e6fc0.json"
     },
     {
@@ -7105,6 +7554,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -7122,8 +7574,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-5879cbd7c462.json"
     },
     {
@@ -7152,6 +7604,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 3000,
       "featured": true,
@@ -7167,8 +7622,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-b7778291fd3b.json"
     },
     {
@@ -7197,6 +7652,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -7212,8 +7670,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-5621bfe1a654.json"
     },
     {
@@ -7253,6 +7711,9 @@
           "source_text": "* 本活動須~「星展Card+信用卡數位服務」進行登錄; 7月分期活動於7/24下午3點整開始登錄; 8月分期活動於8/24登錄下午3點整開始登錄; 9月分期活動於9/24下午3點整開始登錄,當月消費須當月登錄,登錄名額有限,額滿即止。 限於SHOPLINE合作商店網站,刷星展信用卡分期消費達指定門檻並於指定期間內完成登錄,即可享刷卡金回饋。本活動回饋資格採正附卡合計,每一歸戶每月回饋資格須個別登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 3600,
@@ -7315,6 +7776,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -7376,6 +7840,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2400,
       "featured": true,
@@ -7436,6 +7903,9 @@
           "source_text": "* 本活動須~「星展Card+信用卡數位服務」進行登錄; 當月消費須當月登錄,7月活動於7/27 15:00開始登錄;8月活動於8/27 15:00開始登錄;9月活動於9/28 15:00開始登錄。登錄名額有限,額滿即止。 限於綠界科技合作商店網站,刷星展信用卡分期消費達指定門檻並於指定期間內完成登錄,即可享刷卡金回饋。本活動回饋資格採正附卡合計,每一歸戶每月回饋資格須個別登錄,每月回饋不累贈限回饋一次。",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2600,
@@ -7504,6 +7974,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -7570,6 +8043,9 @@
           "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
@@ -7638,6 +8114,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -7704,6 +8183,9 @@
           "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
@@ -7772,6 +8254,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -7839,6 +8324,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 6500,
       "featured": true,
@@ -7885,6 +8373,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -7898,8 +8389,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-2850fe180b9a.json"
     },
     {
@@ -7931,6 +8422,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 6.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -7943,8 +8437,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-52f8c07009f3.json"
     },
     {
@@ -7971,6 +8465,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "retroactive_ok"
+      ],
       "max_reward_percent": 4.0,
       "max_reward_amount_twd": 10000,
       "featured": true,
@@ -7984,8 +8481,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-381b3b144d41.json"
     },
     {
@@ -8012,6 +8509,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "per_period_reregister"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8025,8 +8525,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-83d36451e297.json"
     },
     {
@@ -8053,6 +8553,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8066,8 +8569,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-551726e1e0d8.json"
     },
     {
@@ -8093,6 +8596,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8105,8 +8611,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-a416e4255b5a.json"
     },
     {
@@ -8150,6 +8656,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 7.3,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8164,8 +8673,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-e3ee8719dc4f.json"
     },
     {
@@ -8199,6 +8708,9 @@
           "source_text": "繳入智生活App「社區管理費服務」所顯示之繳費帳號,始符合活動抽獎資格。 2. 若欲參加本季抽獎之參加者,需於2026/9/30 23:59前登錄活動問卷,並於2026/7/1 00:00~2026/9/30 23:59,透過智生活App社區管理費服務取得繳費帳號後,~玉山行動銀行App轉帳繳納1筆智生活社區管理費。 中獎公告及贈獎時程 1. 活動得獎名單將於2026/10/20公布於玉山銀行官方網站「最新消息與公告",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -8303,6 +8815,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8317,8 +8832,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-316575ec2e21.json"
     },
     {
@@ -8346,6 +8861,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 7.5,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8360,8 +8878,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-1a1f42858dc2.json"
     },
     {
@@ -8389,6 +8907,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/Activity/RegisterEvent?EventId=JU2026&mac=86dcc98a3c89622138a15f87d6785202ca4ca0bff7c4a439a9ea003014ec0a50&PRJCD=ACTIVITY",
       "registration_url_kind": "activity_specific",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 8.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8403,8 +8924,8 @@
         "海外消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-5908090db5e8.json"
     },
     {
@@ -8441,6 +8962,9 @@
           "source_text": "分期滿100,000元,贈「1,700點玉山e point」。 ※ 登錄辦法:統一開放正卡人於玉山銀行官網登錄,總限量1,200名,每歸戶僅限登錄1次。 第一波2026/7/24 10:00~2026/9/30 23:59 (限量400名,額滿為止) 第二波2026/8/24 10:00~2026/9/30 23:59 (限量400名,額滿為止) 第三波2026/9/24 10:00~2026/9/30 23:59 (",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -8502,6 +9026,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.5,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8544,6 +9071,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 1.5,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8557,8 +9087,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-6b400caae0c9.json"
     },
     {
@@ -8593,6 +9123,9 @@
           "source_text": "辦卡活動立即前往了解與申辦 注意事項 首次綁定定義:2026/7/1前從未以玉山信用卡綁定全盈+PAY消費,於活動期間內首次綁定玉山卡消費。 本活動採登錄參加,需於指定登錄時間 (2026/7/1上午10:00起開放登錄活動,於活動最後一日2026/9/30 23:59截止登錄,若遇額滿即提前截止,額滿恕無法補登,登錄時間以本行系統時間為準) ~本行官網活動網頁登錄成功,且登錄人需為正卡人,始符合回饋資格。活動限量登錄3萬名,",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
@@ -8638,6 +9171,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8653,8 +9189,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-4cdb0c49dc83.json"
     },
     {
@@ -8681,6 +9217,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 8.5,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8694,8 +9233,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-bce5bd6fcc4e.json"
     },
     {
@@ -8743,6 +9282,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 4000,
       "featured": true,
@@ -8780,6 +9322,9 @@
       "registration_url": "https://www.o-bank.com/egift/RegisterCampaign",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8790,8 +9335,8 @@
         "其他優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/obank-5e0ec9b7f662.json"
     },
     {
@@ -8814,6 +9359,9 @@
       "registration_url": "https://www.o-bank.com/egift/RegisterCampaign",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -8824,8 +9372,8 @@
         "海外消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/obank-cead55ceb90e.json"
     },
     {
@@ -8870,6 +9418,9 @@
           "source_text": "登錄日期如下 : 7月 : 07/15、8月 : 08/14、9月 : 09/15) 活動登錄>> 活動詳情>>",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 8.8,
       "max_reward_amount_twd": null,
@@ -8927,6 +9478,9 @@
           "source_text": "登錄日期如下, 7月:07/01、8月:08/03、9月:09/01) 活動登錄>> 活動詳情>>",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
@@ -8986,6 +9540,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -9022,6 +9579,9 @@
       "registration_url": "https://www.o-bank.com/egift/RegisterCampaign",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 7.8,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -9032,8 +9592,8 @@
         "行動支付"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/obank-d12843a30210.json"
     },
     {
@@ -9058,6 +9618,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": 600,
       "featured": true,
@@ -9070,8 +9633,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-e0f531fba8fb.json"
     },
     {
@@ -9096,6 +9659,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": 50,
       "featured": true,
@@ -9108,8 +9674,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-188866c1ef6d.json"
     },
     {
@@ -9164,6 +9730,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 80.0,
       "max_reward_amount_twd": 9500,
       "featured": true,
@@ -9180,8 +9749,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-033d2d82c202.json"
     },
     {
@@ -9207,6 +9776,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -9220,8 +9792,8 @@
         "強打優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-e82028a2e775.json"
     },
     {
@@ -9289,6 +9861,9 @@
           "source_text": "每月5日下午2點開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "per_period_reregister"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 120,
@@ -9373,6 +9948,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "per_period_reregister"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 120,
       "featured": true,
@@ -9433,6 +10011,9 @@
           "source_text": "每月1日下午3點開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "per_period_reregister"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 200,
@@ -9496,6 +10077,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 24.0,
       "max_reward_amount_twd": 750,
       "featured": true,
@@ -9511,8 +10095,8 @@
         "海外消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-b6d4705cafa4.json"
     },
     {
@@ -9560,6 +10144,9 @@
           "source_text": "每月10日下午3點開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": 9500,
@@ -9624,6 +10211,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": 9500,
       "featured": true,
@@ -9671,6 +10261,9 @@
           "source_text": "回饋: 滿NT$ 35,000 享900元刷卡金。 滿NT$ 50,000 享1,500元刷卡金。 滿NT$ 65,000 享2,000元刷卡金 ※本活動採限量登錄共100名,將於2026/8/27 14:00於兆豐銀行官網開放登錄。每戶(正、附卡合併計算)回饋刷卡金最高NT$1,200。 ※本活動僅適用直營獨立門市/通路,排除百貨及店中店門市。 ※本活動僅限特約商店分期付款,不適用於指定卡片自動分期、帳單分期、單筆簽單分期或",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 1200,
@@ -9722,6 +10315,9 @@
           "source_text": "客服取消指定卡片分期設定,並登錄本活動,方能享有分期優惠。 須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 8.88,
       "max_reward_amount_twd": null,
@@ -9783,6 +10379,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -9827,6 +10426,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -9840,8 +10442,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-8a3c0bf8d91d.json"
     },
     {
@@ -9866,6 +10468,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -9878,8 +10483,8 @@
         "生活消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-807f822bd2a0.json"
     },
     {
@@ -9955,6 +10560,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -9993,6 +10601,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -10005,8 +10616,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-986dafdb94e4.json"
     },
     {
@@ -10033,6 +10644,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 2.68,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10047,8 +10661,8 @@
         "強打優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-59324e3875f6.json"
     },
     {
@@ -10072,6 +10686,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10083,8 +10700,8 @@
         "行動支付"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-7ee52ff8f592.json"
     },
     {
@@ -10111,6 +10728,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/insmastercard2026",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10125,8 +10745,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-34e3218dfb35.json"
     },
     {
@@ -10157,6 +10777,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
@@ -10174,8 +10797,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-563224b7a2e3.json"
     },
     {
@@ -10248,6 +10871,9 @@
           "source_text": "/7/24 14:00~2026/7/31 23:59統一開放持卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄 (限量10,000名)。 8月加碼於2026/8/24 14:00~2026/8/31 23:59統一開放持卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄 (限量10,000名)。 7/24 14:00 開放登錄 (限量10,000名) 8/24 14:00 開放登錄 (限量10,00",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
       ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": null,
@@ -10338,6 +10964,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10386,6 +11015,9 @@
       "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10399,8 +11031,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/scsb-59d7544f6f69.json"
     },
     {
@@ -10430,6 +11062,9 @@
       "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10440,8 +11075,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/scsb-c461a05d06d2.json"
     },
     {
@@ -10535,6 +11170,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10580,6 +11218,9 @@
       "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10594,8 +11235,8 @@
         "餐飲美食"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/scsb-de06e5ada1c6.json"
     },
     {
@@ -10661,6 +11302,9 @@
           "source_text": "每月6號10:00開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
@@ -10739,6 +11383,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 8.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10815,6 +11462,9 @@
           "source_text": "每月6號下午1:00開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
@@ -10894,6 +11544,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -10971,6 +11624,9 @@
           "source_text": "每月6號下午1:00開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
@@ -11050,6 +11706,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -11127,6 +11786,9 @@
           "source_text": "每月6號下午1:00開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
@@ -11206,6 +11868,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -11283,6 +11948,9 @@
           "source_text": "每月6號下午1:00開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
@@ -11362,6 +12030,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -11439,6 +12110,9 @@
           "source_text": "每月6號下午1:00開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
@@ -11519,6 +12193,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -11598,6 +12275,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -11675,6 +12355,9 @@
           "source_text": "每月6號10:00開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
@@ -11754,6 +12437,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -11831,6 +12517,9 @@
           "source_text": "每月6號10:00開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
@@ -11910,6 +12599,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -11987,6 +12679,9 @@
           "source_text": "每月6號下午1:00開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
@@ -12066,6 +12761,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12144,6 +12842,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12178,6 +12879,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/buygogoro",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -12188,8 +12892,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-5032bbb469a1.json"
     },
     {
@@ -12214,6 +12918,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2025megaonebuy",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 4.0,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -12226,8 +12933,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-bec6bee969a6.json"
     },
     {
@@ -12250,6 +12957,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/megaone2025ins",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -12260,8 +12970,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-0372ebe5ce7b.json"
     },
     {
@@ -12286,6 +12996,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/aptrc115h2",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12298,8 +13011,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": ""
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。"
     },
     {
       "id": "megabank-b2902e5fb780",
@@ -12321,6 +13034,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/premium-installment",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12331,8 +13047,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-b2902e5fb780.json"
     },
     {
@@ -12356,6 +13072,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026mastercardins",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12367,8 +13086,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-cc25194a5a0b.json"
     },
     {
@@ -12395,6 +13114,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/lido10pay2026h2",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 9.1,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12409,8 +13131,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-8de29c45eb9a.json"
     },
     {
@@ -12433,6 +13155,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/twponepointfive",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 1.5,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12443,8 +13168,8 @@
         "行動支付"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": ""
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。"
     },
     {
       "id": "megabank-8a209d30700f",
@@ -12466,6 +13191,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115h2bt21-vd",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12476,8 +13204,8 @@
         "其他優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-8a209d30700f.json"
     },
     {
@@ -12500,6 +13228,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/bt21welcomegift2026h1",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -12510,8 +13241,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-7f0538102e78.json"
     },
     {
@@ -12545,6 +13276,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/auto_installment",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 7.0,
       "max_reward_amount_twd": 800,
       "featured": true,
@@ -12560,8 +13294,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-c3d62a504109.json"
     },
     {
@@ -12590,6 +13324,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/mcgift115h1",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -12600,8 +13337,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-8be773b8fed8.json"
     },
     {
@@ -12631,6 +13368,9 @@
       "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12647,8 +13387,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/kgi-113694c6dff1.json"
     },
     {
@@ -12674,6 +13414,9 @@
       "registration_url": "https://www.tcbbank.com.tw/CreditCard/RegQuery2/Act_login.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 80.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12686,8 +13429,8 @@
         "海外消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/tcbbank-c7b676f7a732.json"
     },
     {
@@ -12713,6 +13456,9 @@
       "registration_url": "https://www.tcbbank.com.tw/CreditCard/RegQuery2/Act_login.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12725,8 +13471,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/tcbbank-e8edd5286a00.json"
     },
     {
@@ -12769,6 +13515,9 @@
           "source_text": "於2026/7/1~2026/12/31(含)前進件且於2027/1/10(含)前核卡,進件及核卡日期皆以本行系統為準。 登錄規則: 最晚須於核卡後30日內完成登錄。 開放登錄時間2026/7/10 10:00起~2027/1/10 23:59止,名額無上限。 登錄方式: 下載【Fubon+ 台北富邦行動銀行】註冊/登入後,點選【優惠】>>【活動登錄】勾選活動即完成登錄。 語音登錄:撥打(02)8751-1313,請說【語音登",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
@@ -12822,6 +13571,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 25.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12837,8 +13589,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-03cd14552e88.json"
     },
     {
@@ -12871,6 +13623,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -12884,8 +13639,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-84249cb7c1ec.json"
     },
     {
@@ -12959,6 +13714,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13005,6 +13763,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -13019,8 +13780,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-747a83fbe2cf.json"
     },
     {
@@ -13055,6 +13816,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -13070,8 +13834,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-7e6eef551fd6.json"
     },
     {
@@ -13190,6 +13954,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
+      ],
       "max_reward_percent": 25.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13239,6 +14006,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13253,8 +14023,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-cb0fcc114ad0.json"
     },
     {
@@ -13285,6 +14055,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13296,8 +14069,8 @@
         "餐飲美食"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-0c14efeca6f6.json"
     },
     {
@@ -13330,6 +14103,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -13343,8 +14119,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-2aa76d1b00ac.json"
     },
     {
@@ -13378,6 +14154,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -13392,8 +14171,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-352ad8e9245d.json"
     },
     {
@@ -13429,6 +14208,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13445,8 +14227,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-35cf0538fcf6.json"
     },
     {
@@ -13477,6 +14259,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13494,8 +14279,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-8e903aa33382.json"
     },
     {
@@ -13526,6 +14311,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13543,8 +14331,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-79d319fa2ba6.json"
     },
     {
@@ -13575,6 +14363,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13592,8 +14383,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-87d873e5cd6b.json"
     },
     {
@@ -13630,6 +14421,9 @@
           "source_text": "優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
@@ -13694,6 +14488,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
+      ],
       "max_reward_percent": 4.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13744,6 +14541,10 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "per_period_reregister",
+        "registration_closes_early"
+      ],
       "max_reward_percent": 7.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13793,6 +14594,10 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "per_period_reregister",
+        "registration_closes_early"
+      ],
       "max_reward_percent": 6.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13827,6 +14632,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "register_before_spend"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13837,8 +14645,8 @@
         "生活消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-cd808c87e379.json"
     },
     {
@@ -13862,6 +14670,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13872,8 +14683,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-ac4df7878051.json"
     },
     {
@@ -13896,6 +14707,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13905,8 +14719,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-f8be72a62713.json"
     },
     {
@@ -13929,6 +14743,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "register_before_spend"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13938,8 +14755,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-94bfd6107e11.json"
     },
     {
@@ -13962,6 +14779,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -13971,8 +14791,8 @@
         "其他優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-b5ecb750ab8d.json"
     },
     {
@@ -13995,6 +14815,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14004,8 +14827,8 @@
         "生活消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-6b0e486ece28.json"
     },
     {
@@ -14028,6 +14851,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14037,8 +14863,8 @@
         "生活消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-6dbcd458ad85.json"
     },
     {
@@ -14061,6 +14887,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14070,8 +14899,8 @@
         "行動支付"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-ef66ac41a562.json"
     },
     {
@@ -14113,6 +14942,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14153,6 +14985,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -14165,8 +15000,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-cf5ab0782234.json"
     },
     {
@@ -14194,6 +15029,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 6.66,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14208,8 +15046,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-0e06c1bae668.json"
     },
     {
@@ -14257,6 +15095,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.2,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -14299,6 +15140,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 4.5,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14313,8 +15157,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-2dc19b4861d9.json"
     },
     {
@@ -14342,6 +15186,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14356,8 +15203,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-8528c02290df.json"
     },
     {
@@ -14386,6 +15233,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14401,8 +15251,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-14ae5f6150e7.json"
     },
     {
@@ -14429,6 +15279,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.75,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14442,8 +15295,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-a3bd44c89085.json"
     },
     {
@@ -14468,6 +15321,9 @@
       "registration_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 5025,
       "featured": true,
@@ -14479,8 +15335,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-dd4fbd5c316a.json"
     },
     {
@@ -14514,6 +15370,9 @@
           "source_text": "下載玉山Wallet登錄,每月限量名額共6,000名,額滿為止,開放登錄時間:當月15日早上10:00 ~ 當月最後一日23:59止,例如7月份活動登錄時間為:2026/7/15 10:00 ~ 2026/7/31 23:59止,以此類推。 本活動綁定icash Pay於「7-ELEVEN實體門市」消費,登錄加碼6% OPENPOINT點數,每歸戶每月回饋上限200點;當月符合資格之消費,點數最晚將於次次月底前匯入icas",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "registration_closes_early"
       ],
       "max_reward_percent": 6.0,
       "max_reward_amount_twd": null,
@@ -14558,6 +15417,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14573,8 +15435,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-971d635c5d17.json"
     },
     {
@@ -14600,6 +15462,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14613,8 +15478,8 @@
         "餐飲美食"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-2f5e48ad3d47.json"
     },
     {
@@ -14724,6 +15589,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 50,
       "featured": true,
@@ -14761,6 +15629,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 800,
       "featured": true,
@@ -14772,8 +15643,8 @@
         "行動支付"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-1a35045619da.json"
     },
     {
@@ -14797,6 +15668,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
@@ -14808,8 +15682,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-c1b298a073e6.json"
     },
     {
@@ -14833,6 +15707,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
@@ -14844,8 +15721,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-d2b5d1a7b830.json"
     },
     {
@@ -14869,6 +15746,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14880,8 +15760,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-eb7a6639c169.json"
     },
     {
@@ -14906,6 +15786,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "per_period_reregister"
+      ],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14918,8 +15801,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-be379c81a55a.json"
     },
     {
@@ -14945,6 +15828,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "per_period_reregister"
+      ],
       "max_reward_percent": 1.0,
       "max_reward_amount_twd": 8500,
       "featured": true,
@@ -14958,8 +15844,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-da47bc52c072.json"
     },
     {
@@ -14984,6 +15870,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "per_period_reregister"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -14996,8 +15885,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-ec28ed697877.json"
     },
     {
@@ -15021,6 +15910,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 3000,
       "featured": true,
@@ -15032,8 +15924,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-9dbc5d92e2a3.json"
     },
     {
@@ -15058,6 +15950,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": 100,
       "featured": true,
@@ -15070,8 +15965,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-ef33061fd98b.json"
     },
     {
@@ -15095,6 +15990,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -15106,8 +16004,8 @@
         "行動支付"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-f2e795c8d0ae.json"
     },
     {
@@ -15131,6 +16029,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -15142,8 +16043,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-17a03d111ec7.json"
     },
     {
@@ -15167,6 +16068,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 1.5,
       "max_reward_amount_twd": 90000,
       "featured": true,
@@ -15178,8 +16082,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-504dc9fdc9eb.json"
     },
     {
@@ -15204,6 +16108,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.88,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -15216,8 +16123,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-355440c5f576.json"
     },
     {
@@ -15242,6 +16149,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.5,
       "max_reward_amount_twd": 2000,
       "featured": true,
@@ -15254,8 +16164,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-a70b25005771.json"
     },
     {
@@ -15279,6 +16189,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
@@ -15290,8 +16203,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-001c0a7760c9.json"
     },
     {
@@ -15316,6 +16229,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -15328,8 +16244,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-ead28d95b49a.json"
     },
     {
@@ -15354,6 +16270,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -15366,8 +16285,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-a1c740b74776.json"
     },
     {
@@ -15392,6 +16311,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -15404,8 +16326,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-90873f4dd51f.json"
     },
     {
@@ -15430,6 +16352,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -15442,8 +16367,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-55b03acde81f.json"
     },
     {
@@ -15468,6 +16393,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -15480,8 +16408,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-ff0ec07bcdb9.json"
     },
     {
@@ -15507,6 +16435,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 100,
       "featured": true,
@@ -15520,8 +16451,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-0f999f15ca15.json"
     },
     {
@@ -15547,6 +16478,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 4500,
       "featured": true,
@@ -15560,8 +16494,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-0f6b3e341952.json"
     },
     {
@@ -15587,6 +16521,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 4500,
       "featured": true,
@@ -15600,8 +16537,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-9bb33e5baf09.json"
     },
     {
@@ -15627,6 +16564,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 4500,
       "featured": true,
@@ -15640,8 +16580,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-188cde65ebcf.json"
     },
     {
@@ -15667,6 +16607,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 4500,
       "featured": true,
@@ -15680,8 +16623,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-d6c78717ca01.json"
     },
     {
@@ -15707,6 +16650,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 4500,
       "featured": true,
@@ -15720,8 +16666,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-6b11d8be8dfb.json"
     },
     {
@@ -15747,6 +16693,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 4500,
       "featured": true,
@@ -15760,8 +16709,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-0a0a69345d6e.json"
     },
     {
@@ -15787,6 +16736,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 4500,
       "featured": true,
@@ -15800,8 +16752,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-bef6bd53b606.json"
     },
     {
@@ -15827,6 +16779,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 4500,
       "featured": true,
@@ -15840,8 +16795,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-52ec88be20dc.json"
     },
     {
@@ -15873,6 +16828,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 110,
       "featured": true,
@@ -15886,8 +16844,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-a5ae3de0f0af.json"
     },
     {
@@ -15912,6 +16870,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -15924,8 +16885,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-f6d5de7cd04a.json"
     },
     {
@@ -15949,6 +16910,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 13.88,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -15960,8 +16924,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-22b9c0873d78.json"
     },
     {
@@ -15987,6 +16951,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": 30,
       "featured": true,
@@ -16000,8 +16967,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-5299b5853556.json"
     },
     {
@@ -16027,6 +16994,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": 30,
       "featured": true,
@@ -16040,8 +17010,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-7ae2e557e0bd.json"
     },
     {
@@ -16068,6 +17038,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 88,
       "featured": true,
@@ -16082,8 +17055,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-19db90f20fcd.json"
     },
     {
@@ -16110,6 +17083,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 88,
       "featured": true,
@@ -16124,8 +17100,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-2b3103e320c6.json"
     },
     {
@@ -16152,6 +17128,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 88,
       "featured": true,
@@ -16166,8 +17145,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-4fbc88cbc504.json"
     },
     {
@@ -16194,6 +17173,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 88,
       "featured": true,
@@ -16208,8 +17190,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-a3136b403a39.json"
     },
     {
@@ -16236,6 +17218,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 88,
       "featured": true,
@@ -16250,8 +17235,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-96ebae6bc938.json"
     },
     {
@@ -16278,6 +17263,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 88,
       "featured": true,
@@ -16292,8 +17280,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-bd3366460bfb.json"
     },
     {
@@ -16320,6 +17308,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 88,
       "featured": true,
@@ -16334,8 +17325,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-7b26f655ac20.json"
     },
     {
@@ -16362,6 +17353,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 88,
       "featured": true,
@@ -16376,8 +17370,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-23beb94cd692.json"
     },
     {
@@ -16445,6 +17439,9 @@
           "source_text": "每月22日上午10時起開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "per_period_reregister"
       ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": 200,
@@ -16516,6 +17513,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "retroactive_ok"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -16528,8 +17528,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-154dfbfaf8c1.json"
     },
     {
@@ -16555,6 +17555,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": 250,
       "featured": true,
@@ -16568,8 +17571,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-d551538ec0ce.json"
     },
     {
@@ -16636,6 +17639,9 @@
           "source_text": "每月10日下午3點開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 21.0,
       "max_reward_amount_twd": null,
@@ -16719,6 +17725,9 @@
           "source_text": "每月10日下午3點開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 200,
@@ -16805,6 +17814,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -16844,6 +17856,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
@@ -16855,8 +17870,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-f8077f3069bd.json"
     },
     {
@@ -16926,6 +17941,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 3000,
       "featured": true,
@@ -16967,6 +17985,9 @@
       "registration_url": "https://cardweb.ubot.com.tw/register_extra",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 250,
       "featured": true,
@@ -16980,8 +18001,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-c051a4fd5f92.json"
     },
     {
@@ -17007,6 +18028,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 9500,
       "featured": true,
@@ -17020,8 +18044,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-88054727f0db.json"
     },
     {
@@ -17046,6 +18070,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 150,
       "featured": true,
@@ -17058,8 +18085,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-f597222be943.json"
     },
     {
@@ -17172,6 +18199,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 3600,
       "featured": true,
@@ -17255,6 +18285,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 8.0,
       "max_reward_amount_twd": 150,
       "featured": true,
@@ -17318,6 +18351,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 80.0,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -17335,8 +18371,8 @@
         "強打優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-3c6333903081.json"
     },
     {
@@ -17365,6 +18401,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 80.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -17381,8 +18420,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-48c75117c36c.json"
     },
     {
@@ -17410,6 +18449,9 @@
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 80.0,
       "max_reward_amount_twd": 300,
       "featured": true,
@@ -17425,8 +18467,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-dab677957eea.json"
     },
     {
@@ -17542,6 +18584,9 @@
           "source_text": "每月1日15:00起開放登錄",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
@@ -17674,6 +18719,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -17711,6 +18759,9 @@
       "registration_url": "https://www.sunnybank.com.tw/portal/pt/pt01002/PT01002Index.xhtml",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -17720,8 +18771,8 @@
         "網購"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sunny-b75ea4fdf3e4.json"
     },
     {
@@ -17754,6 +18805,9 @@
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 4800,
       "featured": true,
@@ -17767,8 +18821,8 @@
         "餐飲美食"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taipei_fubon-e23f09c98852.json"
     },
     {
@@ -17851,6 +18905,9 @@
           "reminder_minutes": 10
         }
       ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 80.0,
       "max_reward_amount_twd": 200,
       "featured": true,
@@ -17895,6 +18952,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026cki",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
@@ -17909,8 +18969,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-6906e74eec2e.json"
     },
     {
@@ -17940,6 +19000,9 @@
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 19.0,
       "max_reward_amount_twd": 1,
       "featured": true,
@@ -17956,8 +19019,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-5ed29641c924.json"
     },
     {
@@ -17983,6 +19046,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -17995,8 +19061,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-ed46d0cbd16b.json"
     },
     {
@@ -18022,6 +19088,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 5000,
       "featured": true,
@@ -18034,8 +19103,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-ec744f47c2b8.json"
     },
     {
@@ -18058,6 +19127,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/vau",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -18068,8 +19140,8 @@
         "其他優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-cfe01a52f47c.json"
     },
     {
@@ -18100,6 +19172,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026h1lidoforeign",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 9.1,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -18118,8 +19193,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-bcb68e3fe9eb.json"
     },
     {
@@ -18143,6 +19218,9 @@
       "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ezcard_rename",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -18154,8 +19232,8 @@
         "海外消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-043abaadea82.json"
     },
     {
@@ -18183,6 +19261,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -18197,8 +19278,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-50cb61dc30a2.json"
     },
     {
@@ -18225,6 +19306,9 @@
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -18238,8 +19322,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-6107d1d27b2b.json"
     },
     {
@@ -18267,6 +19351,9 @@
       "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -18281,8 +19368,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/esun-91b66abf96a2.json"
     },
     {
@@ -18309,6 +19396,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 500,
       "featured": true,
@@ -18323,8 +19413,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-34b9f4fbbf18.json"
     },
     {
@@ -18348,6 +19438,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 10000,
       "featured": true,
@@ -18359,8 +19452,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-1101c1e450fa.json"
     },
     {
@@ -18385,6 +19478,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
       "featured": true,
@@ -18397,8 +19493,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-a81695771066.json"
     },
     {
@@ -18422,6 +19518,9 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": 60000,
       "featured": true,
@@ -18433,8 +19532,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-64f6a8978776.json"
     },
     {
@@ -18461,6 +19560,9 @@
       "registration_url": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -18474,8 +19576,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-58163204d99a.json"
     },
     {
@@ -18501,6 +19603,9 @@
       "registration_url": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -18513,8 +19618,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-6b392b31ca89.json"
     },
     {
@@ -18539,6 +19644,9 @@
       "registration_url": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -18550,8 +19658,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-cf2edec87359.json"
     }
   ],

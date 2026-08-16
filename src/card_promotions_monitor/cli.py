@@ -42,7 +42,7 @@ from .models import Promotion
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SCHEMA_VERSION = 7
+SCHEMA_VERSION = 8
 PUBLISH_GUARD_EXIT_CODE = 4
 UPDATE_ALREADY_RUNNING_EXIT_CODE = 3
 DNS_FAILURE_MARKERS = (
@@ -438,6 +438,27 @@ def classify_registration_urls(activities: list[dict]) -> None:
             activity["registration_url_kind"] = "unknown"
 
 
+def annotate_source_registration_coverage(
+    activities: list[dict],
+    source_health: list[dict],
+) -> None:
+    """Expose how much each source answers the core registration-time question."""
+    by_source: dict[str, list[dict]] = {}
+    for activity in activities:
+        by_source.setdefault(str(activity.get("bank_id") or ""), []).append(activity)
+    for source in source_health:
+        values = by_source.get(str(source.get("id") or ""), [])
+        required = [item for item in values if item.get("registration_required")]
+        confirmed = [item for item in required if item.get("registration_windows")]
+        source["registration_required_count"] = len(required)
+        source["registration_time_confirmed_count"] = len(confirmed)
+        source["registration_time_coverage_percent"] = (
+            round(len(confirmed) / len(required) * 100, 1)
+            if required
+            else None
+        )
+
+
 def persist_payload(
     payload: dict,
     previous_payload: dict | None,
@@ -557,6 +578,7 @@ def build_payload(
             activity["registration_url"] = ""
 
     classify_registration_urls(activities)
+    annotate_source_registration_coverage(activities, health)
 
     activities.sort(
         key=lambda item: (
@@ -591,6 +613,11 @@ def build_payload(
                 })
         return sorted(values, key=lambda item: (item["start"], item["bank_name"], item["title"]))
 
+    active_registration = [item for item in active if item["registration_required"]]
+    active_registration_confirmed = [
+        item for item in active_registration if item["registration_windows"]
+    ]
+
     return {
         "schema_version": SCHEMA_VERSION,
         "generated_at": now.replace(microsecond=0).isoformat(),
@@ -608,10 +635,13 @@ def build_payload(
         "summary": {
             "total": len(activities),
             "active_or_upcoming": len(active),
-            "registration_required": sum(1 for item in active if item["registration_required"]),
-            "registration_times_confirmed": sum(
-                1 for item in active if item["registration_windows"]
-            ),
+            "registration_required": len(active_registration),
+            "registration_times_confirmed": len(active_registration_confirmed),
+            "registration_time_coverage_percent": round(
+                len(active_registration_confirmed) / len(active_registration) * 100,
+                1,
+            ) if active_registration else None,
+            "needs_review": sum(1 for item in active if item["needs_review"]),
             "high_return": sum(1 for item in active if item["high_return"]),
             "alerts": len(alerts),
         },

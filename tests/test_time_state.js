@@ -1,6 +1,10 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { deriveActivity, lifecycleFor } = require("../docs/assets/time-state.js");
+const {
+  deriveActivity,
+  lifecycleFor,
+  registrationTimingMessages
+} = require("../docs/assets/time-state.js");
 
 test("lifecycle follows the current Taipei date instead of generated data", () => {
   const activity = { start_date: "2026-08-03", end_date: "2026-08-10" };
@@ -27,4 +31,18 @@ test("high return is derived from artifact thresholds", () => {
   assert.equal(derived.high_return, true);
   assert.equal(derived.featured, true);
   assert.equal(derived.lifecycle, "active");
+});
+
+test("registration timing contracts explain the user consequence", () => {
+  assert.deepEqual(
+    registrationTimingMessages(["register_before_spend", "per_period_reregister"]),
+    [
+    "先登錄再消費；登錄前消費可能不適用優惠",
+      "每期需重新登錄；前一期成功不代表本期已完成"
+    ]
+  );
+  assert.deepEqual(
+    registrationTimingMessages([]),
+    ["登錄與消費先後未確認；請查看官方條款"]
+  );
 });

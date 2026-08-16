@@ -5,7 +5,7 @@
   const DAY_MS = 86400000;
   const MINUTE_MS = 60000;
   const REGISTRATION_CALENDAR_DURATION_MINUTES = 15;
-  const INDEX_FILTERS = new Set(["today", "tomorrow", "review", "registration"]);
+  const INDEX_FILTERS = new Set(["today", "tomorrow", "registration"]);
   const timeState = window.CardPromotionTime;
   const catalogState = window.CardPromotionCatalog;
   const state = {
@@ -196,6 +196,24 @@
     hint.className = "registration-portal-hint";
     hint.textContent = `此為統一登錄頁，到站後請找「${activity.title}」。`;
     target.append(hint);
+  }
+
+  function appendTimingContracts(target, activity) {
+    const messages = timeState.registrationTimingMessages(
+      activity.registration_timing_contracts
+    );
+    const section = document.createElement("section");
+    section.className = "registration-timing";
+    const heading = document.createElement("strong");
+    heading.textContent = "登錄與消費順序";
+    const list = document.createElement("ul");
+    messages.forEach((message) => {
+      const item = document.createElement("li");
+      item.textContent = message;
+      list.append(item);
+    });
+    section.append(heading, list);
+    target.append(section);
   }
 
   function calendarConfigForActivity(activity) {
@@ -423,7 +441,11 @@
   }
 
   function appendReviewAndTiers(cardBody, activity) {
-    if (activity.needs_review) {
+    const reviewShownInRegistration = (
+      activity.registration_required
+      && !(activity.registration_windows || []).length
+    );
+    if (activity.needs_review && !reviewShownInRegistration) {
       const review = document.createElement("p");
       review.className = "data-review";
       review.textContent = activity.review_message || "本頁含多個活動，請至官方頁確認對應的登錄時間。";
@@ -478,6 +500,7 @@
       registrationLink.href = activity.registration_url || activity.source_url;
       registrationLink.textContent = registrationLinkText(activity);
       appendPortalHint(registrationBox, activity);
+      appendTimingContracts(registrationBox, activity);
       const windowsBox = node.querySelector(".registration-windows");
       const windows = relevantWindows(activity);
       windows.forEach((window) => {
@@ -511,7 +534,12 @@
         item.append(text, buttons);
         windowsBox.append(item);
       });
-      if (!windows.length) node.querySelector(".registration-review").hidden = false;
+      if (!windows.length) {
+        const review = node.querySelector(".registration-review");
+        review.textContent = activity.review_message
+          || "官方註明需登錄，但尚未取得可確認的登錄時點；請先查看原始活動頁。";
+        review.hidden = false;
+      }
     }
 
     const cardBody = node.querySelector(".card-body");
@@ -704,7 +732,11 @@
       const name = document.createElement("strong");
       name.textContent = item.bank_name;
       const status = document.createElement("span");
-      status.textContent = `${item.status === "complete" ? "來源正常" : item.status === "partial" ? "部分可讀" : "讀取失敗"} · ${item.activity_count} 筆`;
+      const sourceStatus = item.status === "complete" ? "來源正常" : item.status === "partial" ? "部分可讀" : "讀取失敗";
+      const registrationCoverage = item.registration_required_count
+        ? ` · 登錄時點 ${item.registration_time_confirmed_count}/${item.registration_required_count}（${item.registration_time_coverage_percent}%）`
+        : " · 無需登錄活動";
+      status.textContent = `${sourceStatus} · ${item.activity_count} 筆${registrationCoverage}`;
       li.append(dot, name, status);
       el.sourceHealthList.append(li);
     });

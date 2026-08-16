@@ -1,6 +1,6 @@
 {
-  "schema_version": 7,
-  "generated_at": "2026-08-16T09:46:55+08:00",
+  "schema_version": 8,
+  "generated_at": "2026-08-16T10:02:00+08:00",
   "bank_id": "chb",
   "bank_name": "彰化銀行",
   "activity_count": 19,
@@ -25,6 +25,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -34,8 +37,8 @@
         "百貨購物"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-d5536f78d0f7.json"
     },
     {
@@ -64,6 +67,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -73,8 +79,8 @@
         "百貨購物"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-460553489279.json"
     },
     {
@@ -104,6 +110,9 @@
           "source_text": "通路刷彰銀 最高享20%回饋 活動期間: 2026年8月1日~2026年8月31日 適用卡別: 彰銀信用卡(不含公司商務卡、VISA Debit卡) 登錄時間:2026/8/1 10:00~2026/8/31 23:59,各指定百貨通路,各限量登錄1,000名,額滿即提前終止。 (活動已額滿) 登錄網址:https://www.bankchb.com/frontend/CampaignLog.html?v=1 活動內",
           "reminder_minutes": 10
         }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
       ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": null,
@@ -139,6 +148,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "register_before_spend"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -149,8 +161,8 @@
         "生活消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-cd808c87e379.json"
     },
     {
@@ -174,6 +186,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 10.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -184,8 +199,8 @@
         "加油交通"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-ac4df7878051.json"
     },
     {
@@ -208,6 +223,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -217,8 +235,8 @@
         "分期"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-f8be72a62713.json"
     },
     {
@@ -241,6 +259,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "register_before_spend"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -250,8 +271,8 @@
         "繳費稅款"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-94bfd6107e11.json"
     },
     {
@@ -274,6 +295,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 3.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -283,8 +307,8 @@
         "其他優惠"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-b5ecb750ab8d.json"
     },
     {
@@ -307,6 +331,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -316,8 +343,8 @@
         "生活消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-6b0e486ece28.json"
     },
     {
@@ -340,6 +367,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -349,8 +379,8 @@
         "生活消費"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-6dbcd458ad85.json"
     },
     {
@@ -373,6 +403,9 @@
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
@@ -382,8 +415,8 @@
         "行動支付"
       ],
       "review_required": true,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-ef66ac41a562.json"
     },
     {
@@ -413,6 +446,7 @@
       "registration_url": "",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": false,
@@ -447,6 +481,7 @@
       "registration_url": "",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": false,
@@ -481,6 +516,7 @@
       "registration_url": "",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": false,
@@ -515,6 +551,7 @@
       "registration_url": "",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": false,
@@ -548,6 +585,7 @@
       "registration_url": "",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [],
       "max_reward_percent": 2.0,
       "max_reward_amount_twd": null,
       "featured": false,
@@ -583,6 +621,7 @@
       "registration_url": "",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": null,
       "featured": false,
@@ -593,9 +632,9 @@
         "旅遊交通",
         "加油交通"
       ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
       "detail_ref": "activities/chb-91b7ad9ea1eb.json"
     },
     {
@@ -618,6 +657,7 @@
       "registration_url": "",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [],
       "max_reward_percent": null,
       "max_reward_amount_twd": 10000,
       "featured": true,
@@ -626,9 +666,9 @@
         "彰化銀行",
         "百貨購物"
       ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
       "detail_ref": "activities/chb-ad0bff9bae03.json"
     },
     {
@@ -651,6 +691,7 @@
       "registration_url": "",
       "registration_url_kind": "unknown",
       "registration_windows": [],
+      "registration_timing_contracts": [],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": false,
@@ -659,9 +700,9 @@
         "彰化銀行",
         "其他優惠"
       ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
       "detail_ref": "activities/chb-edbdcaed8153.json"
     }
   ]

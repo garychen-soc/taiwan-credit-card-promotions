@@ -40,6 +40,7 @@ class Promotion:
     registration_url: str = ""
     registration_url_kind: str = "unknown"
     registration_windows: list[RegistrationWindow] = field(default_factory=list)
+    registration_timing_contracts: list[str] = field(default_factory=list)
     max_reward_percent: float | None = None
     max_reward_amount_twd: int | None = None
     high_return: bool = False
