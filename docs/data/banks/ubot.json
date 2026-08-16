@@ -1,6 +1,6 @@
 {
   "schema_version": 8,
-  "generated_at": "2026-08-16T10:02:00+08:00",
+  "generated_at": "2026-08-16T10:18:32+08:00",
   "bank_id": "ubot",
   "bank_name": "聯邦銀行",
   "activity_count": 93,
@@ -3480,43 +3480,6 @@
       "detail_ref": "activities/ubot-03b2892d4158.json"
     },
     {
-      "id": "ubot-3e55f00b8b00",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "Trip.com",
-      "merchant": "Trip.com",
-      "categories": [
-        "旅遊交通",
-        "海外消費"
-      ],
-      "start_date": "2026-05-15",
-      "end_date": "2026-12-31",
-      "summary": "刷聯邦JCB卡訂房享最高14%、機票最高10%現折優惠",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202605jcb_trip/index.htm",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 14.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "Trip.com",
-        "聯邦銀行",
-        "旅遊優惠",
-        "旅遊交通",
-        "海外消費"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-3e55f00b8b00.json"
-    },
-    {
       "id": "ubot-82d4ff604873",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -3556,6 +3519,43 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ubot-82d4ff604873.json"
+    },
+    {
+      "id": "ubot-3e55f00b8b00",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "Trip.com",
+      "merchant": "Trip.com",
+      "categories": [
+        "旅遊交通",
+        "海外消費"
+      ],
+      "start_date": "2026-05-15",
+      "end_date": "2026-12-31",
+      "summary": "刷聯邦JCB卡訂房享最高14%、機票最高10%現折優惠",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202605jcb_trip/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 14.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "Trip.com",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "海外消費"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-3e55f00b8b00.json"
     },
     {
       "id": "ubot-0e0d1746df51",

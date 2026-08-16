@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import fcntl
+import hashlib
 import json
 import re
 import sys
@@ -15,6 +16,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from .cache import activity_cache, bookkeeping_payload, new_cache_stats
+from .calendar_feed import build_registration_feed
 from .extractors import (
     REGISTRATION_URL_DEFAULTS,
     _promotion_invariants,
@@ -242,6 +244,26 @@ def write_json_atomic(path: Path, payload: dict) -> None:
             temporary_path.unlink()
 
 
+def write_text_atomic(path: Path, value: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=path.parent,
+            prefix=f".{path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as handle:
+            handle.write(value)
+            temporary_path = Path(handle.name)
+        temporary_path.replace(path)
+    finally:
+        if temporary_path and temporary_path.exists():
+            temporary_path.unlink()
+
+
 INTERNAL_ACTIVITY_FIELDS = {
     "source_entry_url",
     "source_fingerprint",
@@ -251,6 +273,118 @@ INTERNAL_ACTIVITY_FIELDS = {
 }
 DERIVED_ACTIVITY_FIELDS = {"lifecycle", "high_return"}
 DETAIL_ACTIVITY_FIELDS = {"registration_text", "terms_raw", "terms_sections"}
+DEDUPLICATION_IGNORED_FIELDS = {
+    "id",
+    "source_url",
+    "source_entry_url",
+    "source_fingerprint",
+    "observed_at",
+    "last_detail_checked_at",
+    "official_status",
+    "lifecycle",
+    "high_return",
+    "parent_activity_id",
+}
+
+
+def _deduplication_signature(activity: dict) -> str:
+    visible = {
+        key: value
+        for key, value in activity.items()
+        if key not in DEDUPLICATION_IGNORED_FIELDS
+    }
+    encoded = json.dumps(
+        visible,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+    return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _has_deduplication_evidence(activity: dict) -> bool:
+    return bool(
+        len(str(activity.get("terms_raw") or "")) >= 100
+        or activity.get("registration_windows")
+        or len(str(activity.get("summary") or "")) >= 40
+        or activity.get("reward_tiers")
+        or float(activity.get("max_reward_percent") or 0) > 0
+        or int(activity.get("max_reward_amount_twd") or 0) > 0
+    )
+
+
+def deduplicate_exact_promotions(activities: list[dict]) -> list[dict]:
+    """Merge only evidence-rich activities whose complete visible content matches.
+
+    Cross-URL matches must also come from pages with the same complete activity
+    list.  This prevents sparse or partially parsed pages from being collapsed
+    merely because their titles happen to match.
+    """
+    page_signatures: dict[tuple[str, str], str] = {}
+    page_items: dict[tuple[str, str], list[str]] = {}
+    for activity in activities:
+        page_key = (
+            str(activity.get("bank_id") or ""),
+            str(activity.get("source_url") or ""),
+        )
+        page_items.setdefault(page_key, []).append(
+            _deduplication_signature(activity)
+        )
+    for page_key, signatures in page_items.items():
+        value = "|".join(sorted(signatures))
+        page_signatures[page_key] = hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+    seen: set[tuple[str, str, str]] = set()
+    deduplicated: list[dict] = []
+    for activity in sorted(
+        activities,
+        key=lambda item: (
+            str(item.get("source_url") or ""),
+            str(item.get("id") or ""),
+        ),
+    ):
+        if not _has_deduplication_evidence(activity):
+            deduplicated.append(activity)
+            continue
+        bank_id = str(activity.get("bank_id") or "")
+        source_url = str(activity.get("source_url") or "")
+        identity = (
+            bank_id,
+            _deduplication_signature(activity),
+            page_signatures[(bank_id, source_url)],
+        )
+        if identity in seen:
+            continue
+        seen.add(identity)
+        deduplicated.append(activity)
+    return deduplicated
+
+
+def apply_published_source_counts(
+    activities: list[dict],
+    source_health: list[dict],
+) -> None:
+    """Reflect deduped counts without masking a failed source behind fallback."""
+    published_counts = Counter(
+        str(activity.get("bank_id") or "")
+        for activity in activities
+    )
+    for source in source_health:
+        if source.get("status") == "failed":
+            continue
+        source["activity_count"] = published_counts.get(
+            str(source.get("id") or ""),
+            0,
+        )
+
+
+def _registration_feed_path(output_path: Path) -> Path:
+    site_root = (
+        output_path.parent.parent
+        if output_path.parent.name == "data"
+        else output_path.parent
+    )
+    return site_root / "calendars" / "registration.ics"
 
 
 def _artifact_filename(activity_id: str) -> str:
@@ -473,6 +607,10 @@ def persist_payload(
         print(json.dumps({"summary": payload["summary"], "publish_guard": guard}, ensure_ascii=False))
         return PUBLISH_GUARD_EXIT_CODE
     _write_public_artifacts(payload, output_path)
+    write_text_atomic(
+        _registration_feed_path(output_path),
+        build_registration_feed(payload),
+    )
     if cache_path is not None:
         write_json_atomic(
             cache_path,
@@ -576,6 +714,9 @@ def build_payload(
             )
         else:
             activity["registration_url"] = ""
+
+    activities = deduplicate_exact_promotions(activities)
+    apply_published_source_counts(activities, health)
 
     classify_registration_urls(activities)
     annotate_source_registration_coverage(activities, health)

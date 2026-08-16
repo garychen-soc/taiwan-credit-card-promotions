@@ -1,9 +1,9 @@
 {
   "schema_version": 8,
-  "generated_at": "2026-08-16T10:02:00+08:00",
+  "generated_at": "2026-08-16T10:18:32+08:00",
   "bank_id": "esun",
   "bank_name": "玉山銀行",
-  "activity_count": 193,
+  "activity_count": 192,
   "activities": [
     {
       "id": "esun-4122301e38f6",
@@ -2324,98 +2324,6 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/esun-7ba1761c2f47.json"
-    },
-    {
-      "id": "esun-b768462676de",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "玉山Pi拍錢包信用卡",
-      "merchant": "玉山Pi拍錢包信用卡",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-06-01",
-      "end_date": "2026-11-30",
-      "summary": "讀取中 ::: 個人金融企業/商家私銀/亞資ESG 永續金融關於玉山 智能客服服務據點 EN 網站導覽 玉山銀行官方網站 個人金融 企業/商家 私銀/亞資 ESG 永續金融 產品與服務 存匯 產品/服務介紹 存匯首頁 臺幣服務 外幣服務 外幣優惠 ATM服務 保管箱服務 一站式外籍人才金融專區 線上申辦/查詢 線上開立數位帳戶 ATM據點查詢 台外幣利率查詢 匯率查詢 匯率換算 線上票信查詢 基本資料更新 全方位代收網 IXML憑證 預約預填分行業務 線上取號 信用卡 產品/服務介紹 信用卡首頁 信用卡介紹 簽帳金融卡 全球企業卡 玉山電子支付 支付碳帳戶 信用卡理財 刷卡優惠 商店收款服務 點數專區 國民旅遊卡專區 理債關懷專區 更多服務 信用卡申辦 辦卡進度查詢/補件 掛失/補發/開卡 額度調整申請/補件 卡友權益/服務 帳戶自動扣繳卡費 帳單e化申請 各項服務申請 活動登錄 貸款 產品/服務介紹 貸款首頁 個人信貸 信貸最新優惠 房屋貸款 所有專案貸款 個人紓困緩繳方案 理債關懷專區 友善貸款專區 線上申辦/查詢 貸款試算 信貸線上申請 房貸(含二順位)線上申請 房貸保證人線上申請 房貸額度利率評估 智能房屋價值試算 貸款線上簽約 查詢/補件/調閱平台 契約變更線上申請 房屋抵押權塗銷線上申請 財富管理 產品/服務介紹 財富管理首頁 貴賓理財 共同基金 海外ETF 海外股票 海外債券 結構型商品 黃金存摺 更多服務 玉山投研觀點 理財快易通 我的觀察清單 信託 產品/服務介紹 信託首頁 傳富發發金錢信託 樂活久久安養信託 簡易型安養信託 子女教育信託 股權傳承信託 危老不",
-      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/intro/co-branded-card/pi-card#1",
-      "registration_required": true,
-      "parent_activity_id": "esun-b768462676de",
-      "activity_periods": [
-        {
-          "start": "2026-06-01",
-          "end": "2026-06-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-01",
-          "end": "2026-07-31",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-08-01",
-          "end": "2026-10-31",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-08-01",
-          "end": "2026-08-31",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-01",
-          "end": "2026-11-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-07-24T14:00:00+08:00",
-          "end": "2026-07-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "幣)。 ※ 每月每卡上限100P幣。 ※ 綁定Pi 拍錢包App於全家便利商店消費另享5%P幣加碼,故不列入上述消費累積與回饋計算。 ※ 登錄辦法: 7月加碼於2026/7/24 14:00~2026/7/31 23:59統一開放持卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄 (限量10,000名)。 8月加碼於2026/8/24 14:00~2026/8/31 23:59統一開放持卡人於玉山銀行官網活動",
-          "reminder_minutes": 10
-        },
-        {
-          "start": "2026-08-24T14:00:00+08:00",
-          "end": "2026-08-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "/7/24 14:00~2026/7/31 23:59統一開放持卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄 (限量10,000名)。 8月加碼於2026/8/24 14:00~2026/8/31 23:59統一開放持卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄 (限量10,000名)。 7/24 14:00 開放登錄 (限量10,000名) 8/24 14:00 開放登錄 (限量10,00",
-          "reminder_minutes": 10
-        }
-      ],
-      "registration_timing_contracts": [
-        "registration_closes_early"
-      ],
-      "max_reward_percent": 3.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "玉山Pi拍錢包信用卡",
-        "玉山銀行",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/esun-b768462676de.json"
     },
     {
       "id": "esun-2dc19b4861d9",
@@ -6187,48 +6095,6 @@
       "detail_ref": "activities/esun-a28633a74ce6.json"
     },
     {
-      "id": "esun-85a50b69568f",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "可樂旅遊",
-      "merchant": "可樂旅遊",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款"
-      ],
-      "start_date": "2026-07-15",
-      "end_date": "2026-12-31",
-      "summary": "讀取中 ::: 個人金融企業/商家私銀/亞資ESG 永續金融關於玉山 智能客服服務據點 EN 網站導覽 玉山銀行官方網站 個人金融 企業/商家 私銀/亞資 ESG 永續金融 產品與服務 存匯 產品/服務介紹 存匯首頁 臺幣服務 外幣服務 外幣優惠 ATM服務 保管箱服務 一站式外籍人才金融專區 線上申辦/查詢 線上開立數位帳戶 ATM據點查詢 台外幣利率查詢 匯率查詢 匯率換算 線上票信查詢 基本資料更新 全方位代收網 IXML憑證 預約預填分行業務 線上取號 信用卡 產品/服務介紹 信用卡首頁 信用卡介紹 簽帳金融卡 全球企業卡 玉山電子支付 支付碳帳戶 信用卡理財 刷卡優惠 商店收款服務 點數專區 國民旅遊卡專區 理債關懷專區 更多服務 信用卡申辦 辦卡進度查詢/補件 掛失/補發/開卡 額度調整申請/補件 卡友權益/服務 帳戶自動扣繳卡費 帳單e化申請 各項服務申請 活動登錄 貸款 產品/服務介紹 貸款首頁 個人信貸 信貸最新優惠 房屋貸款 所有專案貸款 個人紓困緩繳方案 理債關懷專區 友善貸款專區 線上申辦/查詢 貸款試算 信貸線上申請 房貸(含二順位)線上申請 房貸保證人線上申請 房貸額度利率評估 智能房屋價值試算 貸款線上簽約 查詢/補件/調閱平台 契約變更線上申請 房屋抵押權塗銷線上申請 財富管理 產品/服務介紹 財富管理首頁 貴賓理財 共同基金 海外ETF 海外股票 海外債券 結構型商品 黃金存摺 更多服務 玉山投研觀點 理財快易通 我的觀察清單 信託 產品/服務介紹 信託首頁 傳富發發金錢信託 樂活久久安養信託 簡易型安養信託 子女教育信託 股權傳承信託 危老不",
-      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=3121",
-      "registration_required": false,
-      "parent_activity_id": "esun-85a50b69568f",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "可樂旅遊",
-        "玉山銀行",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/esun-85a50b69568f.json"
-    },
-    {
       "id": "esun-4b42b37f0f11",
       "bank_id": "esun",
       "bank_name": "玉山銀行",
@@ -6269,6 +6135,48 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/esun-4b42b37f0f11.json"
+    },
+    {
+      "id": "esun-85a50b69568f",
+      "bank_id": "esun",
+      "bank_name": "玉山銀行",
+      "title": "可樂旅遊",
+      "merchant": "可樂旅遊",
+      "categories": [
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款"
+      ],
+      "start_date": "2026-07-15",
+      "end_date": "2026-12-31",
+      "summary": "讀取中 ::: 個人金融企業/商家私銀/亞資ESG 永續金融關於玉山 智能客服服務據點 EN 網站導覽 玉山銀行官方網站 個人金融 企業/商家 私銀/亞資 ESG 永續金融 產品與服務 存匯 產品/服務介紹 存匯首頁 臺幣服務 外幣服務 外幣優惠 ATM服務 保管箱服務 一站式外籍人才金融專區 線上申辦/查詢 線上開立數位帳戶 ATM據點查詢 台外幣利率查詢 匯率查詢 匯率換算 線上票信查詢 基本資料更新 全方位代收網 IXML憑證 預約預填分行業務 線上取號 信用卡 產品/服務介紹 信用卡首頁 信用卡介紹 簽帳金融卡 全球企業卡 玉山電子支付 支付碳帳戶 信用卡理財 刷卡優惠 商店收款服務 點數專區 國民旅遊卡專區 理債關懷專區 更多服務 信用卡申辦 辦卡進度查詢/補件 掛失/補發/開卡 額度調整申請/補件 卡友權益/服務 帳戶自動扣繳卡費 帳單e化申請 各項服務申請 活動登錄 貸款 產品/服務介紹 貸款首頁 個人信貸 信貸最新優惠 房屋貸款 所有專案貸款 個人紓困緩繳方案 理債關懷專區 友善貸款專區 線上申辦/查詢 貸款試算 信貸線上申請 房貸(含二順位)線上申請 房貸保證人線上申請 房貸額度利率評估 智能房屋價值試算 貸款線上簽約 查詢/補件/調閱平台 契約變更線上申請 房屋抵押權塗銷線上申請 財富管理 產品/服務介紹 財富管理首頁 貴賓理財 共同基金 海外ETF 海外股票 海外債券 結構型商品 黃金存摺 更多服務 玉山投研觀點 理財快易通 我的觀察清單 信託 產品/服務介紹 信託首頁 傳富發發金錢信託 樂活久久安養信託 簡易型安養信託 子女教育信託 股權傳承信託 危老不",
+      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=3121",
+      "registration_required": false,
+      "parent_activity_id": "esun-85a50b69568f",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "可樂旅遊",
+        "玉山銀行",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/esun-85a50b69568f.json"
     },
     {
       "id": "esun-468802d48528",

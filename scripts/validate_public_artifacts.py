@@ -5,12 +5,14 @@ from __future__ import annotations
 
 import gzip
 import json
+import re
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_ROOT = ROOT / "docs" / "data"
 INDEX_PATH = DATA_ROOT / "promotions.json"
+REGISTRATION_FEED_PATH = ROOT / "docs" / "calendars" / "registration.ics"
 MAX_INDEX_GZIP_BYTES = 100_000
 
 
@@ -104,11 +106,30 @@ def validate() -> dict[str, int]:
             f"(limit {MAX_INDEX_GZIP_BYTES - 1})"
         )
 
+    feed = REGISTRATION_FEED_PATH.read_text(encoding="utf-8")
+    if not feed.startswith("BEGIN:VCALENDAR\n") and not feed.startswith("BEGIN:VCALENDAR\r\n"):
+        raise ValueError("registration feed must start with BEGIN:VCALENDAR")
+    if "X-WR-CALNAME:信用卡活動登錄提醒" not in feed:
+        raise ValueError("registration feed is missing its calendar name")
+    event_count = feed.count("BEGIN:VEVENT")
+    if feed.count("BEGIN:VALARM") != event_count:
+        raise ValueError("each registration feed event must have a reminder")
+    uids = re.findall(r"^UID:(.+)$", feed, flags=re.MULTILINE)
+    normalized_uids = [value.rstrip("\r") for value in uids]
+    if len(normalized_uids) != event_count or len(set(normalized_uids)) != event_count:
+        raise ValueError("registration feed event UIDs must be present and unique")
+    if not feed.rstrip().endswith("END:VCALENDAR"):
+        raise ValueError("registration feed must end with END:VCALENDAR")
+    if any(len(line.encode("utf-8")) > 75 for line in feed.splitlines()):
+        raise ValueError("registration feed contains a line longer than 75 octets")
+
     return {
         "index_activities": len(index_activities),
         "catalog_activities": bank_activity_count,
         "detail_files": len(detail_refs),
         "index_gzip_bytes": compressed_size,
+        "feed_events": event_count,
+        "feed_rrules": feed.count("RRULE:"),
     }
 
 
@@ -119,5 +140,7 @@ if __name__ == "__main__":
         f"index={result['index_activities']}, "
         f"catalog={result['catalog_activities']}, "
         f"details={result['detail_files']}, "
-        f"index_gzip={result['index_gzip_bytes']} bytes"
+        f"index_gzip={result['index_gzip_bytes']} bytes, "
+        f"feed_events={result['feed_events']}, "
+        f"feed_rrules={result['feed_rrules']}"
     )
