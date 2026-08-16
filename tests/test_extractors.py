@@ -40,12 +40,131 @@ from card_promotions_monitor.extractors import (
     extract_first,
     extract_megabank,
     normalize_registration_url,
+    reuse_cached_promotion,
 )
+from card_promotions_monitor.cache import new_cache_stats, source_fingerprint
 from card_promotions_monitor.fetch import FetchResult
 from card_promotions_monitor.models import Promotion, RegistrationWindow
 
 
 class RegistrationWindowTests(unittest.TestCase):
+    def test_cache_hit_reparses_official_terms_with_current_parser(self) -> None:
+        fingerprint = source_fingerprint("bank", {"listing": "same"})
+        promotion = Promotion(
+            id="bank-offer", bank_id="bank", bank_name="測試銀行", title="測試活動",
+            merchant="測試商店", categories=["網購"], start_date="2026-08-01",
+            end_date="2026-08-31", summary="最高 3% 回饋",
+            source_url="https://bank.example/offer",
+            source_entry_url="https://bank.example", observed_at="2026-08-01T10:00:00+08:00",
+            registration_required=True,
+            registration_windows=[RegistrationWindow(
+                start="2026-08-07T17:00:00+08:00",
+                end="2026-08-07T17:15:00+08:00",
+                label="舊解析結果", source_text="舊解析結果",
+            )],
+            terms_raw="登錄時間：2026/8/7 17:00:00~2026/8/31 23:59:00\n最高 12% 回饋",
+            max_reward_percent=3,
+            source_fingerprint=fingerprint,
+            last_detail_checked_at="2026-08-01T10:00:00+08:00",
+        )
+        stats = new_cache_stats()
+
+        value = reuse_cached_promotion(
+            {promotion.id: promotion.to_dict()},
+            activity_id=promotion.id,
+            fingerprint=fingerprint,
+            now=datetime(2026, 8, 10, 10, 0, tzinfo=ZoneInfo("Asia/Taipei")),
+            source_entry_url="https://bank.example",
+            percent_threshold=10,
+            amount_threshold=500,
+            stats=stats,
+            avoids_detail_request=True,
+        )
+
+        self.assertIsNotNone(value)
+        self.assertEqual(value.registration_windows[0].end, "2026-08-31T23:59:00+08:00")
+        self.assertEqual(value.max_reward_percent, 3)
+        self.assertFalse(value.high_return)
+        self.assertEqual(stats["reparsed_activities"], 1)
+        self.assertEqual(stats["detail_requests_avoided"], 1)
+
+    def test_cache_reparse_uses_matching_current_activity_period(self) -> None:
+        fingerprint = source_fingerprint("bank", {"listing": "same"})
+        promotion = Promotion(
+            id="bank-recurring", bank_id="bank", bank_name="測試銀行", title="每月活動",
+            merchant="測試商店", categories=["生活消費"], start_date="2024-01-01",
+            end_date="2026-09-30", summary="每月登錄",
+            source_url="https://bank.example/offer",
+            source_entry_url="https://bank.example", observed_at="2026-08-01T10:00:00+08:00",
+            registration_required=True,
+            terms_raw="活動暨登錄期間：115/7/1-9/30，每月5日下午2點開放登錄",
+            activity_periods=[
+                {"start": "2024-01-01", "end": "2024-06-30", "label": "舊活動"},
+                {"start": "2026-07-01", "end": "2026-09-30", "label": "目前活動"},
+            ],
+            source_fingerprint=fingerprint,
+            last_detail_checked_at="2026-08-01T10:00:00+08:00",
+        )
+
+        value = reuse_cached_promotion(
+            {promotion.id: promotion.to_dict()},
+            activity_id=promotion.id,
+            fingerprint=fingerprint,
+            now=datetime(2026, 8, 10, 10, 0, tzinfo=ZoneInfo("Asia/Taipei")),
+            source_entry_url="https://bank.example",
+            percent_threshold=10,
+            amount_threshold=500,
+            stats=new_cache_stats(),
+            avoids_detail_request=True,
+        )
+
+        self.assertEqual(
+            [window.start for window in value.registration_windows],
+            [
+                "2026-07-05T14:00:00+08:00",
+                "2026-08-05T14:00:00+08:00",
+                "2026-09-05T14:00:00+08:00",
+            ],
+        )
+
+    def test_cache_reparse_does_not_merge_other_subactivity_windows(self) -> None:
+        fingerprint = source_fingerprint("bank", {"listing": "same"})
+        promotion = Promotion(
+            id="bank-multi", bank_id="bank", bank_name="測試銀行", title="主活動",
+            merchant="測試商店", categories=["網購"], start_date="2026-08-01",
+            end_date="2026-08-31", summary="主活動",
+            source_url="https://bank.example/offer",
+            source_entry_url="https://bank.example", observed_at="2026-08-01T10:00:00+08:00",
+            registration_required=True,
+            registration_windows=[RegistrationWindow(
+                start="2026-08-25T16:00:00+08:00", end="2026-08-25T16:15:00+08:00",
+                label="舊解析結果", source_text="舊解析結果",
+            )],
+            terms_raw=(
+                "活動一 登錄時間：2026/8/25 16:00~2026/8/31 23:59\n"
+                "活動二 登錄時間：2026/8/9 12:00~2026/8/10 12:00"
+            ),
+            source_fingerprint=fingerprint,
+            last_detail_checked_at="2026-08-01T10:00:00+08:00",
+        )
+
+        value = reuse_cached_promotion(
+            {promotion.id: promotion.to_dict()},
+            activity_id=promotion.id,
+            fingerprint=fingerprint,
+            now=datetime(2026, 8, 10, 10, 0, tzinfo=ZoneInfo("Asia/Taipei")),
+            source_entry_url="https://bank.example",
+            percent_threshold=10,
+            amount_threshold=500,
+            stats=new_cache_stats(),
+            avoids_detail_request=True,
+        )
+
+        self.assertEqual(len(value.registration_windows), 1)
+        self.assertEqual(value.registration_windows[0].end, "2026-08-31T23:59:00+08:00")
+        self.assertTrue(value.needs_review)
+        self.assertIn("本頁含多個活動", value.review_message)
+
     def test_splits_repeated_activity_headings_before_notes(self) -> None:
         blocks = _subactivity_blocks(
             "頁首\n【活動一】第一波\n活動日期：2026/8/2\n登錄辦法：8/7 17:00\n"

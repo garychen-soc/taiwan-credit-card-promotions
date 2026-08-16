@@ -59,11 +59,13 @@ def bookkeeping_payload(activities: list[dict[str, Any]], generated_at: str) -> 
 
 def new_cache_stats(previous_generated_at: str = "") -> dict[str, Any]:
     return {
-        "strategy": "listing_fingerprint",
+        "strategy": "listing_fingerprint_with_current_parser",
         "schema_version": CACHE_SCHEMA_VERSION,
         "max_age_days": CACHE_MAX_AGE_DAYS,
         "previous_generated_at": previous_generated_at,
         "reused_activities": 0,
+        "reparsed_activities": 0,
+        "cached_inputs_missing": 0,
         "cache_misses": 0,
         "detail_requests_avoided": 0,
         "detail_requests_performed": 0,

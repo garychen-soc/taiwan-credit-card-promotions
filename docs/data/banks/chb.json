@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "generated_at": "2026-08-16T09:25:11+08:00",
+  "generated_at": "2026-08-16T09:46:55+08:00",
   "bank_id": "chb",
   "bank_name": "彰化銀行",
   "activity_count": 19,
@@ -101,7 +101,7 @@
           "start": "2026-08-01T10:00:00+08:00",
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "優惠訊息/登錄 登錄時間:2026/8/1 10:00~2026/8/31 23:59,各指定百貨通路,各限量登錄1,000名,額滿即提前終止。 (活動已額滿) 登錄網址:https://www.bankchb.com/frontend/CampaignLog.html?v=1 活動登",
+          "source_text": "通路刷彰銀 最高享20%回饋 活動期間: 2026年8月1日~2026年8月31日 適用卡別: 彰銀信用卡(不含公司商務卡、VISA Debit卡) 登錄時間:2026/8/1 10:00~2026/8/31 23:59,各指定百貨通路,各限量登錄1,000名,額滿即提前終止。 (活動已額滿) 登錄網址:https://www.bankchb.com/frontend/CampaignLog.html?v=1 活動內",
           "reminder_minutes": 10
         }
       ],

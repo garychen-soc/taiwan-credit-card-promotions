@@ -12,7 +12,11 @@ from typing import Any
 from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
-from .cache import record_detail_requests, reuse_cached_promotion, source_fingerprint
+from .cache import (
+    record_detail_requests,
+    reuse_cached_promotion as _reuse_cached_promotion,
+    source_fingerprint,
+)
 from .fetch import (
     PersistentHTTPSession,
     SystemCurlSession,
@@ -640,6 +644,122 @@ def _promotion_invariants(promotion: Promotion) -> None:
         promotion.needs_review = True
         promotion.review_required = True
         promotion.review_message = "；".join(dict.fromkeys(issues)) + "，請至官方頁確認對應的登錄時間。"
+
+
+def _reparse_cached_promotion(
+    promotion: Promotion,
+    *,
+    percent_threshold: float,
+    amount_threshold: int,
+    today: date,
+) -> bool:
+    """Rebuild text-derived fields from the cached official terms.
+
+    The public detail shard is the durable input cache.  It keeps the official
+    page text once, while data/activity_cache.json stores bookkeeping only.
+    This makes parser fixes apply on the next run without downloading every
+    unchanged detail page or committing a second copy of its HTML.
+    """
+    raw = promotion.terms_raw.strip()
+    if not raw:
+        return False
+
+    start = _date_from_iso(promotion.start_date)
+    end = _date_from_iso(promotion.end_date)
+    period_candidates: list[tuple[date, date]] = []
+    for period in promotion.activity_periods:
+        period_start = _date_from_iso(period.get("start"))
+        period_end = _date_from_iso(period.get("end"))
+        if period_start and period_end:
+            period_candidates.append((period_start, period_end))
+    matching_end = [value for value in period_candidates if value[1] == end]
+    if matching_end:
+        start = max(value[0] for value in matching_end)
+    elif period_candidates:
+        current = [
+            value for value in period_candidates
+            if value[0] <= today <= value[1]
+        ]
+        if current:
+            start = max(value[0] for value in current)
+            end = min(value[1] for value in current)
+    _, promotion.terms_sections = _terms_content(raw)
+    registration_text = _registration_excerpt(raw)
+    if registration_text:
+        promotion.registration_text = registration_text
+    reparsed_windows = _registration_windows(
+        raw,
+        start.year if start else today.year,
+        start,
+        end,
+    )
+    subactivity_markers = set(re.findall(r"活動\s*([一二三四五六七八九十])", raw))
+    if (
+        promotion.registration_windows
+        and len(reparsed_windows) > len(promotion.registration_windows)
+        and len(subactivity_markers) >= 2
+    ):
+        reparsed_by_start = {window.start: window for window in reparsed_windows}
+        promotion.registration_windows = [
+            reparsed_by_start.get(window.start, window)
+            for window in promotion.registration_windows
+        ]
+        promotion.needs_review = True
+        promotion.review_required = True
+        promotion.review_message = (
+            "本頁含多個活動，未自動合併其他子活動的登錄時間，"
+            "請至官方頁確認對應的登錄時間。"
+        )
+    else:
+        promotion.registration_windows = reparsed_windows
+    promotion.registration_required = bool(
+        promotion.registration_required
+        or promotion.registration_windows
+        or _has_registration_requirement(raw)
+    )
+
+    promotion.high_return = bool(
+        (
+            promotion.max_reward_percent is not None
+            and promotion.max_reward_percent >= percent_threshold
+        )
+        or (
+            promotion.max_reward_amount_twd is not None
+            and promotion.max_reward_amount_twd >= amount_threshold
+        )
+    )
+    parsed_tiers = _reward_tiers(raw)
+    if parsed_tiers:
+        promotion.reward_tiers = parsed_tiers
+    promotion.review_required = bool(
+        promotion.review_required
+        or (promotion.registration_required and not promotion.registration_windows)
+    )
+    promotion.featured = bool(
+        promotion.featured
+        or promotion.registration_required
+        or promotion.high_return
+    )
+    _promotion_invariants(promotion)
+    return True
+
+
+def reuse_cached_promotion(*args: Any, **kwargs: Any) -> Promotion | None:
+    """Reuse network input while always applying the current parser."""
+    promotion = _reuse_cached_promotion(*args, **kwargs)
+    if promotion is None:
+        return None
+    stats = kwargs.get("stats")
+    reparsed = _reparse_cached_promotion(
+        promotion,
+        percent_threshold=float(kwargs["percent_threshold"]),
+        amount_threshold=int(kwargs["amount_threshold"]),
+        today=kwargs["now"].astimezone(TAIPEI).date(),
+    )
+    if isinstance(stats, dict):
+        key = "reparsed_activities" if reparsed else "cached_inputs_missing"
+        stats[key] = int(stats.get(key, 0)) + 1
+    return promotion
 
 
 def _registration_url(links: list[dict[str, str]], bank_id: str) -> str:
