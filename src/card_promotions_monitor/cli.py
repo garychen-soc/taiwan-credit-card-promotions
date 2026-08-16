@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import fcntl
 import json
+import re
 import sys
 import tempfile
 from collections import Counter
@@ -41,7 +42,7 @@ from .models import Promotion
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SCHEMA_VERSION = 6
+SCHEMA_VERSION = 7
 PUBLISH_GUARD_EXIT_CODE = 4
 UPDATE_ALREADY_RUNNING_EXIT_CODE = 3
 DNS_FAILURE_MARKERS = (
@@ -241,6 +242,165 @@ def write_json_atomic(path: Path, payload: dict) -> None:
             temporary_path.unlink()
 
 
+INTERNAL_ACTIVITY_FIELDS = {
+    "source_entry_url",
+    "source_fingerprint",
+    "observed_at",
+    "last_detail_checked_at",
+    "official_status",
+}
+DERIVED_ACTIVITY_FIELDS = {"lifecycle", "high_return"}
+DETAIL_ACTIVITY_FIELDS = {"registration_text", "terms_raw", "terms_sections"}
+
+
+def _artifact_filename(activity_id: str) -> str:
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", activity_id):
+        raise ValueError(f"Unsafe activity id for public artifact: {activity_id}")
+    return f"{activity_id}.json"
+
+
+def _lightweight_activity(activity: dict, detail_ref: str = "") -> dict:
+    value = deepcopy(activity)
+    for field_name in (
+        INTERNAL_ACTIVITY_FIELDS
+        | DERIVED_ACTIVITY_FIELDS
+        | DETAIL_ACTIVITY_FIELDS
+    ):
+        value.pop(field_name, None)
+    if detail_ref:
+        value["detail_ref"] = detail_ref
+    return value
+
+
+def _write_public_artifacts(payload: dict, output_path: Path) -> dict:
+    """Write a small registration index plus lazy bank and detail shards."""
+    data_root = output_path.parent
+    bank_root = data_root / "banks"
+    detail_root = data_root / "activities"
+    generated_at = str(payload.get("generated_at") or "")
+    schema_version = int(payload.get("schema_version") or SCHEMA_VERSION)
+    sources = {
+        str(item.get("id")): item
+        for item in payload.get("sources", [])
+        if isinstance(item, dict) and item.get("id")
+    }
+    activities_by_bank: dict[str, list[dict]] = {}
+    detail_names: set[str] = set()
+    lightweight: list[dict] = []
+
+    for activity in payload.get("activities", []):
+        if not isinstance(activity, dict):
+            continue
+        activity_id = str(activity.get("id") or "")
+        if not activity_id:
+            continue
+        filename = _artifact_filename(activity_id)
+        has_detail = any(activity.get(field) for field in DETAIL_ACTIVITY_FIELDS)
+        detail_ref = f"activities/{filename}" if has_detail else ""
+        light = _lightweight_activity(activity, detail_ref)
+        lightweight.append(light)
+        bank_id = str(light.get("bank_id") or "unknown")
+        activities_by_bank.setdefault(bank_id, []).append(light)
+        if not has_detail:
+            continue
+        detail_names.add(filename)
+        write_json_atomic(detail_root / filename, {
+            "schema_version": schema_version,
+            "generated_at": generated_at,
+            "activity_id": activity_id,
+            "bank_id": activity.get("bank_id", ""),
+            "title": activity.get("title", ""),
+            "source_url": activity.get("source_url", ""),
+            "registration_text": activity.get("registration_text", ""),
+            "terms_raw": activity.get("terms_raw", ""),
+            "terms_sections": activity.get("terms_sections", {}),
+        })
+
+    bank_files: dict[str, str] = {}
+    bank_names: set[str] = set()
+    for bank_id, activities in sorted(activities_by_bank.items()):
+        filename = f"{bank_id}.json"
+        bank_files[bank_id] = f"banks/{filename}"
+        bank_names.add(filename)
+        source = sources.get(bank_id, {})
+        write_json_atomic(bank_root / filename, {
+            "schema_version": schema_version,
+            "generated_at": generated_at,
+            "bank_id": bank_id,
+            "bank_name": source.get("bank_name")
+            or (activities[0].get("bank_name") if activities else ""),
+            "activity_count": len(activities),
+            "activities": activities,
+        })
+
+    public_payload = deepcopy(payload)
+    public_payload["activities"] = [
+        activity for activity in lightweight
+        if activity.get("registration_required")
+    ]
+    public_payload["catalog"] = {
+        "default_filter": "registration",
+        "activity_count": len(lightweight),
+        "registration_index_count": len(public_payload["activities"]),
+        "bank_files": bank_files,
+        "categories": sorted({
+            category
+            for activity in lightweight
+            for category in activity.get("categories", [])
+            if isinstance(category, str) and category
+        }),
+    }
+    write_json_atomic(output_path, public_payload)
+
+    for directory, expected in ((bank_root, bank_names), (detail_root, detail_names)):
+        if not directory.exists():
+            continue
+        for path in directory.glob("*.json"):
+            if path.name not in expected:
+                path.unlink()
+    return public_payload
+
+
+def load_previous_public_payload(output_path: Path) -> dict | None:
+    """Rehydrate a layered public snapshot for cache reuse and guard comparison."""
+    if not output_path.exists():
+        return None
+    try:
+        payload = load_json(output_path)
+    except (json.JSONDecodeError, OSError):
+        return None
+    catalog = payload.get("catalog")
+    if not isinstance(catalog, dict) or not isinstance(catalog.get("bank_files"), dict):
+        return payload
+
+    activities: list[dict] = []
+    for reference in catalog["bank_files"].values():
+        if not isinstance(reference, str):
+            continue
+        bank_path = output_path.parent / reference
+        try:
+            bank_payload = load_json(bank_path)
+        except (json.JSONDecodeError, OSError):
+            continue
+        for light in bank_payload.get("activities", []):
+            if not isinstance(light, dict):
+                continue
+            activity = dict(light)
+            detail_ref = activity.pop("detail_ref", "")
+            if isinstance(detail_ref, str) and detail_ref:
+                try:
+                    detail = load_json(output_path.parent / detail_ref)
+                except (json.JSONDecodeError, OSError):
+                    detail = {}
+                for field_name in DETAIL_ACTIVITY_FIELDS:
+                    if field_name in detail:
+                        activity[field_name] = detail[field_name]
+            activities.append(activity)
+    if activities:
+        payload["activities"] = activities
+    return payload
+
+
 def classify_registration_urls(activities: list[dict]) -> None:
     counts = Counter(
         (item.get("bank_id", ""), item.get("registration_url", ""))
@@ -272,14 +432,7 @@ def persist_payload(
     if guard["blocked"]:
         print(json.dumps({"summary": payload["summary"], "publish_guard": guard}, ensure_ascii=False))
         return PUBLISH_GUARD_EXIT_CODE
-    public_payload = deepcopy(payload)
-    for activity in public_payload.get("activities", []):
-        for field_name in (
-            "source_entry_url", "source_fingerprint", "observed_at",
-            "last_detail_checked_at", "official_status", "lifecycle",
-        ):
-            activity.pop(field_name, None)
-    write_json_atomic(output_path, public_payload)
+    _write_public_artifacts(payload, output_path)
     if cache_path is not None:
         write_json_atomic(
             cache_path,
@@ -471,12 +624,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         with update_lock(args.lock):
             config = load_json(args.config)
-            previous_payload = None
-            if args.output.exists():
-                try:
-                    previous_payload = load_json(args.output)
-                except (json.JSONDecodeError, OSError):
-                    previous_payload = None
+            previous_payload = load_previous_public_payload(args.output)
             cache_ledger = None
             if args.cache.exists():
                 try:

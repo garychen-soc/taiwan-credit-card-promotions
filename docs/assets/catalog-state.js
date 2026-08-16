@@ -10,9 +10,9 @@
 
   function read(search) {
     const params = new URLSearchParams(search || "");
-    const filter = params.get("filter") || "priority";
+    const filter = params.get("filter") || "registration";
     return {
-      filter: FILTERS.has(filter) ? filter : "priority",
+      filter: FILTERS.has(filter) ? filter : "registration",
       bank: params.get("bank") || "",
       category: params.get("category") || "",
       query: params.get("q") || "",
@@ -23,7 +23,7 @@
 
   function search(state) {
     const params = new URLSearchParams();
-    params.set("filter", state.filter || "priority");
+    params.set("filter", state.filter || "registration");
     if (state.bank) params.set("bank", state.bank);
     if (state.category) params.set("category", state.category);
     if (state.query) params.set("q", state.query);

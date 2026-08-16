@@ -32,6 +32,7 @@
 - 高回饋定義：回饋率至少 10%，或單筆／每期最高回饋至少 NT$500
 - 指定入口失效時，只在銀行官方網域尋找替代網址，並輸出警示
 - 已收錄活動保留清單指紋與結構化內容；清單未變更時直接沿用，避免重複讀取明細
+- 首頁先載入小於 100 KB（gzip）的登錄活動索引；瀏覽完整清單時才載入各銀行目錄，展開活動條件時才載入條款原文
 - 手動、每週與每月更新共用程序鎖，同時間只允許一個更新寫入資料
 - 發布前執行覆蓋率防護；大量來源失敗、系統性 DNS 失敗、活動數災難性下降，或任一來源相較上一版下降超過 40% 時，只寫診斷報告並保留上一版網站；全站跌幅會排除沿用舊快照的 fallback 活動
 
@@ -43,7 +44,9 @@
        ├─ 官方網域與重新導向檢查
        ├─ 已收錄活動快取（清單指紋、30 天定期重驗、起訖日前後強制重驗）
        ├─ 活動、回饋、登錄時段標準化
-       ├─ docs/data/promotions.json
+       ├─ docs/data/promotions.json（首屏登錄索引）
+       ├─ docs/data/banks/*.json（各銀行完整活動目錄）
+       ├─ docs/data/activities/*.json（展開時載入的條款原文）
        └─ reports/latest.json（本機更新報告，不發布）
 
 docs/
@@ -61,6 +64,7 @@ docs/
 PYTHONPATH=src python3 scripts/update_data.py
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 node --check docs/assets/app.js
+python3 scripts/validate_public_artifacts.py
 python3 scripts/automation_summary.py
 ```
 
