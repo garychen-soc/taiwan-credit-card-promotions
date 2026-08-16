@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "chb",
   "bank_name": "彰化銀行",
   "activity_count": 19,
@@ -108,7 +108,8 @@
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "通路刷彰銀 最高享20%回饋 活動期間: 2026年8月1日~2026年8月31日 適用卡別: 彰銀信用卡(不含公司商務卡、VISA Debit卡) 登錄時間:2026/8/1 10:00~2026/8/31 23:59,各指定百貨通路,各限量登錄1,000名,額滿即提前終止。 (活動已額滿) 登錄網址:https://www.bankchb.com/frontend/CampaignLog.html?v=1 活動內",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -402,7 +403,56 @@
       "reward_tiers": [],
       "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-07-01T08:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-08-01T08:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-01T08:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-01T08:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-01T08:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-01T08:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -414,9 +464,9 @@
         "彰化銀行",
         "行動支付"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/chb-ef66ac41a562.json"
     },
     {

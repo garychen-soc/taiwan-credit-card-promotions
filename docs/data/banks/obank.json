@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "obank",
   "bank_name": "王道銀行",
   "activity_count": 30,
@@ -30,7 +30,8 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "名) (星空領地獎)指定日期天母棒球場星空露營席1組(共6名) (主場統帥獎)指定場次天母棒球場賽事內野B1區雙人球票 (共2名,每名得獎者獲得指定場次球票,每場2張) *本活動於2026/06/15中午12:00起開放登錄,本活動限額3,000名,額滿將於活動登錄頁顯示。 活動登錄>> 活動詳情>>",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -150,21 +151,24 @@
           "end": null,
           "label": "指定月份登錄開放",
           "source_text": "登錄日期如下 : 7月 : 07/15、8月 : 08/14、9月 : 09/15) 活動登錄>> 活動詳情>>",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-14T12:00:00+08:00",
           "end": null,
           "label": "指定月份登錄開放",
           "source_text": "登錄日期如下 : 7月 : 07/15、8月 : 08/14、9月 : 09/15) 活動登錄>> 活動詳情>>",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-15T12:00:00+08:00",
           "end": null,
           "label": "指定月份登錄開放",
           "source_text": "登錄日期如下 : 7月 : 07/15、8月 : 08/14、9月 : 09/15) 活動登錄>> 活動詳情>>",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -210,21 +214,24 @@
           "end": null,
           "label": "指定月份登錄開放",
           "source_text": "登錄日期如下, 7月:07/01、8月:08/03、9月:09/01) 活動登錄>> 活動詳情>>",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-03T12:00:00+08:00",
           "end": null,
           "label": "指定月份登錄開放",
           "source_text": "登錄日期如下, 7月:07/01、8月:08/03、9月:09/01) 活動登錄>> 活動詳情>>",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-01T12:00:00+08:00",
           "end": null,
           "label": "指定月份登錄開放",
           "source_text": "登錄日期如下, 7月:07/01、8月:08/03、9月:09/01) 活動登錄>> 活動詳情>>",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -270,22 +277,25 @@
           "start": "2026-07-15T12:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日中午12:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "屈臣氏 (包含官方線上商城,不適用外送平台服務) ※本活動於每月15日中午12:00起開放登錄(遇假日提前~前一營業日),活動登錄須於消費當月完成始享有回饋,每月限額5,000名,額滿將於活動登錄頁顯示。 ",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-15T12:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日中午12:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "屈臣氏 (包含官方線上商城,不適用外送平台服務) ※本活動於每月15日中午12:00起開放登錄(遇假日提前~前一營業日),活動登錄須於消費當月完成始享有回饋,每月限額5,000名,額滿將於活動登錄頁顯示。 ",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-15T12:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日中午12:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "屈臣氏 (包含官方線上商城,不適用外送平台服務) ※本活動於每月15日中午12:00起開放登錄(遇假日提前~前一營業日),活動登錄須於消費當月完成始享有回饋,每月限額5,000名,額滿將於活動登錄頁顯示。 ",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [

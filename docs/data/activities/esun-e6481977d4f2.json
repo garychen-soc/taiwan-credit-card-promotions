@@ -1,0 +1,13 @@
+{
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:48:45+08:00",
+  "activity_id": "esun-e6481977d4f2",
+  "bank_id": "esun",
+  "title": "玉山Wallet樂享優惠 天天開心",
+  "source_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/esunwallet/ecpaydiscount?tab=1",
+  "registration_text": "",
+  "terms_raw": "玉山 Wallet\n立即下載\n謹慎理財 信用無價\n循環利率：5.88%-15%(依本行電腦評等而訂，基準日：2015/09/01)。\n預借現金手續費(依預借現金約定結付幣別區分)：預借現金金額x3.5%+(新臺幣150元/5美元/550日圓/4歐元)\n其他相關費率依本行網站及申請書公告",
+  "terms_sections": {
+    "overview": "玉山 Wallet\n立即下載\n謹慎理財 信用無價\n循環利率：5.88%-15%(依本行電腦評等而訂，基準日：2015/09/01)。\n預借現金手續費(依預借現金約定結付幣別區分)：預借現金金額x3.5%+(新臺幣150元/5美元/550日圓/4歐元)\n其他相關費率依本行網站及申請書公告"
+  }
+}

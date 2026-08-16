@@ -44,7 +44,7 @@ from .models import Promotion
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SCHEMA_VERSION = 8
+SCHEMA_VERSION = 9
 PUBLISH_GUARD_EXIT_CODE = 4
 UPDATE_ALREADY_RUNNING_EXIT_CODE = 3
 DNS_FAILURE_MARKERS = (
@@ -749,6 +749,7 @@ def build_payload(
                     "start": window["start"],
                     "end": window["end"],
                     "label": window["label"],
+                    "precision": window.get("precision", "datetime"),
                     "registration_url": item["registration_url"],
                     "source_url": item["source_url"],
                 })

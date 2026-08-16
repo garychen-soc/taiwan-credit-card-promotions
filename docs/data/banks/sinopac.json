@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "sinopac",
   "bank_name": "永豐銀行",
   "activity_count": 23,
@@ -33,7 +33,16 @@
       "reward_tiers": [],
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2025-12-30",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "本活動於2025/12/30開放登錄15,000名,須由正卡持卡人於符合交易次月底前透過永豐銀行網站進行線上登錄(例:1月交易,2月底前須登錄),時間以本行系統時間為準,登錄本活動時請勿同",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -50,7 +59,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "登錄時間早於活動期間。",
       "detail_ref": "activities/sinopac-811a04e0f2f8.json"
     },
     {
@@ -81,7 +90,16 @@
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "登錄時間:2026/7/17 11:00~2026/8/31 23:59,名額限量5,000名。 三、「iPhone 17」 (256GB) 乙台抽獎資格,限於活動開始前未曾啟用,且於活動期間2026/7/1-2026/8/31首次完成啟用「消費碳足跡查詢」功能,並綁定指",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-08-31",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "限獲得一次抽獎資格,活動資格及啟用紀錄以本行系統登錄資料為準。 五、30元刷卡金活動將於2026年7月17日11:00~2026年8月31曰23:59開放登錄。限於本活動期間內首次啟用「消費碳足跡查詢」功能並綁定指定行動支付之客戶,且以前5,000名完成活動登錄者,始得享30元刷卡金,以本行系統記",
+          "reminder_minutes": 10,
+          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
@@ -98,9 +116,9 @@
         "海外消費",
         "分期"
       ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "同一子活動的登錄視窗互相重疊。",
       "detail_ref": "activities/sinopac-c3de07f6b557.json"
     },
     {
@@ -310,7 +328,40 @@
       "reward_tiers": [],
       "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-04-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "饋。例如,已登錄本行「網購/電視購物優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/4/1、2026/7/1、2026/10/1當日開放登錄8,000名。因活動反應熱烈,2026/5/27起增加名額~12,000名。 A7:需要登錄。因活動反應熱烈,",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-05-27",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "波活動須分別登錄乙次,於2026/4/1、2026/7/1、2026/10/1當日開放登錄8,000名。因活動反應熱烈,2026/5/27起增加名額~12,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,000名。 活動方式:每波活動須分別登錄乙次,於2026/4/",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-07-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "行「網購/電視購物優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/4/1、2026/7/1、2026/10/1當日開放登錄8,000名。因活動反應熱烈,2026/5/27起增加名額~12,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-10-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/4/1、2026/7/1、2026/10/1當日開放登錄8,000名。因活動反應熱烈,2026/5/27起增加名額~12,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,0",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "per_period_reregister"
       ],
@@ -328,7 +379,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "登錄時間早於活動期間；登錄時間晚於活動期間。",
       "detail_ref": "activities/sinopac-83d36451e297.json"
     },
     {
@@ -442,18 +493,28 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
+          "start": "2026-07-15",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "完成登錄,即享Marshall Minor IV 真無限藍芽耳機/經典黑! ※贈品為限量提供,每歸戶最高回饋乙份贈品,於2026/7/15 PM15:00開放登錄400名,本活動限量回饋90名,以符合活動門檻且同時成功登錄時間依序回饋~額滿為止,不另行公告。 活動期間: 2026/6/24-8/7",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
           "start": "2026-07-15T15:00:00+08:00",
           "end": null,
           "label": "登錄開放",
           "source_text": "富世界卡正卡,並於登錄期間內完成活動登錄且於消費期間內完成【指定任務】,即可獲得Dyson V8 Cyclone SV55 無線吸塵器乙台(每人限領乙次,限量50名)。 登錄期間:2026/7/15 15:00起~2026/8/7 23:59,額滿將提前關閉 *贈品為限量提供,每人限領乙次,於2026/7/15 PM15:00開放登錄100名,本活動限量回饋50名,以符合活動門檻且同時成功登錄時間依序回饋~額滿為止,不另行公告",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-07T23:59:00+08:00",
           "end": null,
           "label": "登錄開放",
           "source_text": "動登錄且於消費期間內完成【指定任務】,即可獲得Dyson V8 Cyclone SV55 無線吸塵器乙台(每人限領乙次,限量50名)。 登錄期間:2026/7/15 15:00起~2026/8/7 23:59,額滿將提前關閉 *贈品為限量提供,每人限領乙次,於2026/7/15 PM15:00開放登錄100名,本活動限量回饋50名,以符合活動門檻且同時成功登錄時間依序回饋~額滿為止,不另行公告。 第一條 活動期間: 2026",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -472,8 +533,8 @@
         "分期"
       ],
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "本頁含多個活動，未自動合併其他子活動的登錄時間，請至官方頁確認對應的登錄時間。",
       "detail_ref": "activities/sinopac-25efb0c26a98.json"
     },
     {
@@ -599,14 +660,16 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "不溯及既往。 ※上半年開放登錄4萬名,下半年分別於7月及11月各開放1萬名,上半年已登錄者毋須重新登錄,自登錄當月起享活動參加資格,不溯及既往。 活動二及活動三皆為限量登錄,統一於1/1 00:00開放登錄,自登錄當月起享活動資格,不得溯及既往。 ※首次代繳係指2025/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-01T00:00:00+08:00",
           "end": null,
           "label": "登錄開放",
           "source_text": "/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享活動資格。 (限量5,000名,8/1 00:00開放登錄) 首次代繳係指2025/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享活動資格。 符合交易需於活動期間內刷卡交",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -626,7 +689,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "登錄時間早於活動期間，請至官方頁確認對應的登錄時間。",
+      "review_message": "，請至官方頁確認對應的登錄時間。 登錄時間早於活動期間。",
       "detail_ref": "activities/sinopac-effa8fb207fc.json"
     },
     {

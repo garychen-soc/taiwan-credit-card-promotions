@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "first",
   "bank_name": "第一銀行",
   "activity_count": 140,
@@ -193,7 +193,16 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-06-23",
+          "end": "2026-12-31",
+          "label": "活動登錄期間（時間未確認）",
+          "source_text": "2026年7月~12月減碳綠色消費樂集點 活動期間:2026/7/1~2026/12/31 登錄期間:2026/6/23~2026/12/31 贈環保綠點3,000點,限量前1,000名 活動對象於精選綠色消費通路刷卡消費,單筆刷卡滿新臺幣300元(含)以上,贈環保綠點3,000點,每戶限回饋乙份,限量前1,000名(需登錄及於環保集點AP",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -211,7 +220,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "登錄時間早於活動期間。",
       "detail_ref": "activities/first-2f5e48ad3d47.json"
     },
     {
@@ -240,85 +249,97 @@
           "start": "2026-01-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-02-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-03-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-04-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-05-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-06-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用方式 本活動登錄網頁 本活動登錄網頁於2026年1月1日起每月1日15:00開放登錄。 客服諮詢專線:02-2767-3077(每週一~五10:00~17:00,國定假日及例假日除外)。 每月開放",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -477,7 +498,16 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-07-01",
+          "end": "2026-12-31",
+          "label": "活動登錄期間（時間未確認）",
+          "source_text": "【2026年7-12月首刷禮最高500元】 活動期間:2026/7/1~2026/12/31 登錄期間:2026/7/1~2026/12/31 首次申辦指定卡別之正卡/附卡 指定卡別:一卡通聯名卡、綠活卡、星璨卡、悠遊聯名卡、御璽商旅卡、宜蘭認同卡、桃園市市民卡聯名卡及桃園市認同卡。 活動期間首次申辦指定卡別之正/附卡且完成登錄,於核卡後4",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -491,9 +521,9 @@
         "生活消費",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-eb7a6639c169.json"
     },
     {
@@ -683,7 +713,7 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
       "registration_timing_contracts": [
-        "unknown"
+        "per_period_reregister"
       ],
       "max_reward_percent": 5.0,
       "max_reward_amount_twd": 100,
@@ -760,7 +790,16 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01",
+          "end": "2026-12-31",
+          "label": "活動登錄期間（時間未確認）",
+          "source_text": "保費分期繳.輕鬆0利率 活動期間:2026/1/1~2026/12/31 登錄期間:2026/1/1~2026/12/31 不限保險公司,單筆達10,000元即可申請! 活動期間內,持一銀信用卡代扣繳任一保險公司保費,單筆達新臺幣10,000元(含)以上,登錄享分期6期0利率優惠。 ※已於2025年登錄成功,2026年無",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -774,9 +813,9 @@
         "其他優惠",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-17a03d111ec7.json"
     },
     {
@@ -799,7 +838,16 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01",
+          "end": "2026-12-31",
+          "label": "活動登錄期間（時間未確認）",
+          "source_text": "保費刷一銀卡滿額加碼贈 活動期間:2026/1/1~2026/12/31 登錄期間:2026/1/1~2026/12/31 不限卡別,最高享9萬元回饋 活動期間持一銀卡代扣繳「壽、產險」新台幣保費,單筆保費金額達指定門檻,登錄後享滿額回饋,活動期間每戶回饋上限9萬元(限量8,000名)。 單筆消費門檻 5萬元 10萬元 ",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -813,9 +861,9 @@
         "其他優惠",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-504dc9fdc9eb.json"
     },
     {
@@ -839,7 +887,16 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01",
+          "end": "2026-12-31",
+          "label": "活動登錄期間（時間未確認）",
+          "source_text": "刷一銀卡繳學雜費免手續費 活動期間:2026/1/1~2026/12/31 登錄期間:2026/1/1~2026/12/31 分3期0利率!申辦6、12期享優惠利率。 於活動期間內,使用第一銀行信用卡,於第e學雜費入口網、聯卡中心繳學費平台、i繳費平台、台灣銀行學雜費入口網刷卡繳學雜費,可享手續費及分期利率優惠: 刷卡繳學",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -854,9 +911,9 @@
         "繳費稅款",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-355440c5f576.json"
     },
     {
@@ -880,7 +937,16 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01",
+          "end": "2026-12-31",
+          "label": "活動登錄期間（時間未確認）",
+          "source_text": "學費滿額贈 活動期間:2026/1/1~2026/12/31 登錄期間:2026/1/1~2026/12/31 一銀卡繳學費刷卡金輕鬆入袋 【活動一】 2026/7~2026/9透過「第e學雜費入口網、聯卡中心繳學費平台、i繳費平台、台灣銀行學雜費入口網」刷卡繳學雜費,單筆達1萬元以上,完成登錄後回饋刷卡金0",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -895,9 +961,9 @@
         "繳費稅款",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-a70b25005771.json"
     },
     {
@@ -960,9 +1026,106 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-02-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-03-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-04-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-05-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-06-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-07-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-08-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 三井3C不適用「大全聯/全聯系列所有門市、台北三創門市、台茂羅技店以及L",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
       "registration_timing_contracts": [
-        "unknown"
+        "per_period_reregister"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
@@ -975,9 +1138,9 @@
         "百貨購物",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-ead28d95b49a.json"
     },
     {
@@ -1001,9 +1164,106 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-02-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-03-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-04-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-05-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-06-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-07-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-08-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
       "registration_timing_contracts": [
-        "unknown"
+        "per_period_reregister"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
@@ -1016,9 +1276,9 @@
         "百貨購物",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-a1c740b74776.json"
     },
     {
@@ -1042,9 +1302,106 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-02-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-03-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-04-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-05-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-06-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-07-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-08-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
       "registration_timing_contracts": [
-        "unknown"
+        "per_period_reregister"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
@@ -1057,9 +1414,9 @@
         "百貨購物",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-90873f4dd51f.json"
     },
     {
@@ -1083,9 +1440,106 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-02-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-03-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-04-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-05-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-06-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-07-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-08-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
       "registration_timing_contracts": [
-        "unknown"
+        "per_period_reregister"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
@@ -1098,9 +1552,9 @@
         "百貨購物",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-55b03acde81f.json"
     },
     {
@@ -1124,9 +1578,106 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-02-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-03-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-04-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-05-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-06-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-07-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-08-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
       "registration_timing_contracts": [
-        "unknown"
+        "per_period_reregister"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
@@ -1139,9 +1690,9 @@
         "百貨購物",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-ff0ec07bcdb9.json"
     },
     {
@@ -1601,7 +2152,16 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-07-01",
+          "end": "2027-01-31",
+          "label": "活動登錄期間（時間未確認）",
+          "source_text": "新卡友日韓消費5%回饋 活動期間:2026/7/1~2026/12/31 登錄期間:2026/7/1~2027/1/31 2026下半年指定JCB卡專屬 活動對象完成登錄,享核卡後60天內於日本或韓國消費(幣別為日圓/韓元或消費國家為日本/韓國之一般消費(請點選))5%現金回饋! (正附卡合併計算,每戶回饋上限新臺幣5",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -1616,9 +2176,9 @@
         "海外消費",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-f6d5de7cd04a.json"
     },
     {
@@ -2133,43 +2693,49 @@
           "start": "2026-07-22T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日上午10時起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "活動期間:2026/7/1~2026/12/31 登錄期間:每月22日上午10點起(逐月登錄,額滿即關閉) Uber Eats, foodpanda, MOS order 當月消費滿5,000元,持本行",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-22T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日上午10時起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "活動期間:2026/7/1~2026/12/31 登錄期間:每月22日上午10點起(逐月登錄,額滿即關閉) Uber Eats, foodpanda, MOS order 當月消費滿5,000元,持本行",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-22T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日上午10時起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "活動期間:2026/7/1~2026/12/31 登錄期間:每月22日上午10點起(逐月登錄,額滿即關閉) Uber Eats, foodpanda, MOS order 當月消費滿5,000元,持本行",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-22T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日上午10時起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "活動期間:2026/7/1~2026/12/31 登錄期間:每月22日上午10點起(逐月登錄,額滿即關閉) Uber Eats, foodpanda, MOS order 當月消費滿5,000元,持本行",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-22T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日上午10時起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "活動期間:2026/7/1~2026/12/31 登錄期間:每月22日上午10點起(逐月登錄,額滿即關閉) Uber Eats, foodpanda, MOS order 當月消費滿5,000元,持本行",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-22T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日上午10時起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "活動期間:2026/7/1~2026/12/31 登錄期間:每月22日上午10點起(逐月登錄,額滿即關閉) Uber Eats, foodpanda, MOS order 當月消費滿5,000元,持本行",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -2244,7 +2810,16 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-07-01",
+          "end": "2026-12-31",
+          "label": "活動登錄期間（時間未確認）",
+          "source_text": "義享天地聯名卡迎賓好禮 活動期間:2026/7/1~2026/12/31 登錄期間:2026/7/1~2026/12/31 適用2026年7~12月新核卡客戶 【新戶首刷好禮2選1】需登錄 活動門檻 迎賓好禮 核卡後45天內新增一般消費滿新臺幣2,000元(含)以上,完成申請電子帳單且登錄享好禮2選1。 義享時尚廣場50",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "retroactive_ok"
       ],
@@ -2259,9 +2834,9 @@
         "行動支付",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/first-154dfbfaf8c1.json"
     },
     {
@@ -2412,9 +2987,42 @@
       "reward_tiers": [],
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-01T00:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
       "registration_timing_contracts": [
-        "unknown"
+        "per_period_reregister"
       ],
       "max_reward_percent": 0.0,
       "max_reward_amount_twd": 2500,
@@ -2429,7 +3037,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "活動截止日尚未確認。",
       "detail_ref": "activities/first-a81695771066.json"
     },
     {

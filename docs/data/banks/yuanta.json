@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "yuanta",
   "bank_name": "元大銀行",
   "activity_count": 30,
@@ -192,7 +192,8 @@
           "end": null,
           "label": "登錄截止",
           "source_text": "活動時間:2026/7/1~2026/9/30(登錄期限~2026/10/31 23:59止) 2.持卡人須於2026/10/31 23:59前~活動登錄專區完成登錄(尚未核卡前亦可登錄),若未於登錄截止時間內完",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -212,7 +213,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "登錄時間晚於活動期間，請至官方頁確認對應的登錄時間。",
+      "review_message": "，請至官方頁確認對應的登錄時間。 登錄時間晚於活動期間。",
       "detail_ref": "activities/yuanta-7731a3453969.json"
     },
     {

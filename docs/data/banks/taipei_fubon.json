@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "taipei_fubon",
   "bank_name": "台北富邦銀行",
   "activity_count": 214,
@@ -303,7 +303,8 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/9/22 14:00起開放登錄~2026/9/30 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個PChome24h購物優惠活動,每歸戶限擇優擇一項活",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -365,14 +366,16 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "2.本活動須以正卡持卡人資料登錄始符合回饋活動資格,登錄時間: 分三波登錄,登錄時間及語音活動代碼如下(活動採每月開放登錄,活動期間僅需登錄一次,不需每月重覆登錄) 第一波登錄時間2026/7/20 14:00起~2026/7/31 23:59,額滿為止,語音活動代碼:0710。 第二波登錄時間2026/8/20 14:00起~2026/8/31 23:59,額滿為止,語音活動代碼:0811。 第三波登錄時間2026/9/18",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-31T23:59:00+08:00",
           "end": null,
           "label": "登錄開放",
           "source_text": "符合回饋活動資格,登錄時間: 分三波登錄,登錄時間及語音活動代碼如下(活動採每月開放登錄,活動期間僅需登錄一次,不需每月重覆登錄) 第一波登錄時間2026/7/20 14:00起~2026/7/31 23:59,額滿為止,語音活動代碼:0710。 第二波登錄時間2026/8/20 14:00起~2026/8/31 23:59,額滿為止,語音活動代碼:0811。 第三波登錄時間2026/9/18 14:00起~2026/9/30",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -433,7 +436,8 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/9/22 14:00起開放登錄~2026/9/30 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算回饋,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個淘寶優惠活動,每歸戶限擇優擇一項活動回饋乙次。 ",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -495,7 +499,8 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/9/22 14:00起開放登錄~2026/9/30 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算回饋,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個蝦皮購物優惠活動,每歸戶限擇優擇一項活動回饋乙次",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -557,7 +562,8 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/9/22 14:00起開放登錄~2026/9/30 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算回饋,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個酷澎coupang優惠活動,每歸戶限擇優擇一項活",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -618,14 +624,16 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "分三波登錄,登錄時間及語音活動代碼如下(活動採每月開放登錄,活動期間僅需登錄一次,不需每月重覆登錄) 【活動一】活動期間每戶最高擇優回饋乙次,上限1,000元刷卡金 第一波登錄時間2026/7/20 14:00起~2026/7/31 23:59,額滿為止,語音活動代碼:0711。 第二波登錄時間2026/8/20 14:00起~2026/8/31 23:59,額滿為止,語音活動代碼:0812。 第三波登錄時間2026/9/18",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-31T23:59:00+08:00",
           "end": null,
           "label": "登錄開放",
           "source_text": "如下(活動採每月開放登錄,活動期間僅需登錄一次,不需每月重覆登錄) 【活動一】活動期間每戶最高擇優回饋乙次,上限1,000元刷卡金 第一波登錄時間2026/7/20 14:00起~2026/7/31 23:59,額滿為止,語音活動代碼:0711。 第二波登錄時間2026/8/20 14:00起~2026/8/31 23:59,額滿為止,語音活動代碼:0812。 第三波登錄時間2026/9/18 14:00起~2026/9/30",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -685,52 +693,60 @@
           "end": "2026-04-30T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "附卡合併計算,且以次月15日(含)前完整請款之實際成功金額計算(幣別為新台幣),符合活動回饋資格,將於次次月底起陸續回饋~正卡持卡人信用卡帳戶,以4月份為例:於2026/4/1 00:00~2026/4/30 23:59止,於指定亞洲精選國家實體消費滿額,並完成活動登錄,且特店需於2026/5/15 (含)前完成請款,若為付款失敗、退貨等將不列入計算。符合以上活動回饋資格者,將於2026/6月底起陸續回饋即享券。 即",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-04-19T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月19日16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "NT$300即享券(5%)+基本權益最高1%,共計6%。 ※每月19日16:00開放登錄,每月登錄名額限量10,000名,每戶每月限回饋乙張。 立即登錄 更多優惠 注意事項 注意事項: 本活動須以正卡",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-05-19T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月19日16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "NT$300即享券(5%)+基本權益最高1%,共計6%。 ※每月19日16:00開放登錄,每月登錄名額限量10,000名,每戶每月限回饋乙張。 立即登錄 更多優惠 注意事項 注意事項: 本活動須以正卡",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-06-19T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月19日16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "NT$300即享券(5%)+基本權益最高1%,共計6%。 ※每月19日16:00開放登錄,每月登錄名額限量10,000名,每戶每月限回饋乙張。 立即登錄 更多優惠 注意事項 注意事項: 本活動須以正卡",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-19T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月19日16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "NT$300即享券(5%)+基本權益最高1%,共計6%。 ※每月19日16:00開放登錄,每月登錄名額限量10,000名,每戶每月限回饋乙張。 立即登錄 更多優惠 注意事項 注意事項: 本活動須以正卡",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-19T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月19日16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "NT$300即享券(5%)+基本權益最高1%,共計6%。 ※每月19日16:00開放登錄,每月登錄名額限量10,000名,每戶每月限回饋乙張。 立即登錄 更多優惠 注意事項 注意事項: 本活動須以正卡",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-19T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月19日16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "NT$300即享券(5%)+基本權益最高1%,共計6%。 ※每月19日16:00開放登錄,每月登錄名額限量10,000名,每戶每月限回饋乙張。 立即登錄 更多優惠 注意事項 注意事項: 本活動須以正卡",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
+        "per_period_reregister",
         "registration_closes_early"
       ],
       "max_reward_percent": 15.0,
@@ -748,7 +764,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "同一子活動的登錄視窗互相重疊，請至官方頁確認對應的登錄時間。",
+      "review_message": "，請至官方頁確認對應的登錄時間。 同一子活動的登錄視窗互相重疊。",
       "detail_ref": "activities/taipei_fubon-ab431c1d0485.json"
     },
     {
@@ -789,31 +805,36 @@
           "end": "2026-07-31T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "2026/6/30 23:59止) 滿新台幣5,000元(含)以上,且特店需於2026/7/15 (含)前完成請款,若為付款失敗、退貨等將不列入計算。 並於當月2026/7/1 00:00~2026/7/31 23:59止,新增指定精選通路消費滿額並完成活動登錄,且特店需於2026/8/15 (含)前完成請款,若為付款失敗、退貨等將不列入計算。 符合以上活動回饋資格者,將於115/9月底陸續回饋即享券。 即享券將於1",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-17T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月17日16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "即享券依消費門檻擇優提供,國內一般消費定義詳見注意事項。 *每月17日16:00開放登錄,每月登錄名額共15,000名,限登錄正卡人資料。 立即登錄 更多優惠 注意事項 活動期間內需透過本行網路銀行/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-17T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月17日16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "即享券依消費門檻擇優提供,國內一般消費定義詳見注意事項。 *每月17日16:00開放登錄,每月登錄名額共15,000名,限登錄正卡人資料。 立即登錄 更多優惠 注意事項 活動期間內需透過本行網路銀行/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-17T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月17日16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "即享券依消費門檻擇優提供,國內一般消費定義詳見注意事項。 *每月17日16:00開放登錄,每月登錄名額共15,000名,限登錄正卡人資料。 立即登錄 更多優惠 注意事項 活動期間內需透過本行網路銀行/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
+        "per_period_reregister",
         "registration_closes_early"
       ],
       "max_reward_percent": 15.0,
@@ -833,7 +854,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "同一子活動的登錄視窗互相重疊，請至官方頁確認對應的登錄時間。",
+      "review_message": "，請至官方頁確認對應的登錄時間。 同一子活動的登錄視窗互相重疊。",
       "detail_ref": "activities/taipei_fubon-a3eb9350049f.json"
     },
     {
@@ -866,7 +887,16 @@
       "reward_tiers": [],
       "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-05-15",
+          "end": "2026-09-30",
+          "label": "活動登錄期間（時間未確認）",
+          "source_text": "卡人信用卡帳上,持卡人不得要求折換現金或轉讓予他人,如商家未於期限內請款或為付款失敗、訂單取消、銷退等訂單恕不列入計算範圍。 5.登錄時間:2026/5/15~2026/9/30 6.登錄方式: ◆網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】。 ◆語音登錄:撥打(02)8751-1313按777,進入行銷活動登錄系統後按1,並",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -883,9 +913,9 @@
         "海外消費",
         "分期"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/taipei_fubon-24e895d83900.json"
     },
     {
@@ -1026,14 +1056,16 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "成功與否,以台北富邦銀行登錄之資料庫為準,若符合活動回饋資格之戶數超過限量名額,將依成功登錄且符合本活動資格之交易 時間優先順序作為回饋依據,額滿為止。 (1)每月開放登錄時間: 2026/7/15 15:00起~2026/7/31 23:59止登錄,額滿為止。 2026/8/15 15:00起~2026/8/31 23:59止登錄,額滿為止。 2026/9/15 15:00起~2026/9/30 23:59止登錄,額滿為止。",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-15T15:00:00+08:00",
           "end": null,
           "label": "登錄開放",
           "source_text": "成功登錄且符合本活動資格之交易 時間優先順序作為回饋依據,額滿為止。 (1)每月開放登錄時間: 2026/7/15 15:00起~2026/7/31 23:59止登錄,額滿為止。 2026/8/15 15:00起~2026/8/31 23:59止登錄,額滿為止。 2026/9/15 15:00起~2026/9/30 23:59止登錄,額滿為止。 (2)登錄方式: *網路登錄:於台北富邦銀行之【網路銀行】或是下載【Fubon+台",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1089,7 +1121,7 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [],
       "registration_timing_contracts": [
-        "unknown"
+        "per_period_reregister"
       ],
       "max_reward_percent": 20.0,
       "max_reward_amount_twd": null,
@@ -1147,7 +1179,16 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "於2026/7/1~2026/12/31(含)前進件且於2027/1/10(含)前核卡,進件及核卡日期皆以本行系統為準。 登錄規則: 最晚須於核卡後30日內完成登錄。 開放登錄時間2026/7/10 10:00起~2027/1/10 23:59止,名額無上限。 登錄方式: 下載【Fubon+ 台北富邦行動銀行】註冊/登入後,點選【優惠】>>【活動登錄】勾選活動即完成登錄。 語音登錄:撥打(02)8751-1313,請說【語音登",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2027-01-10",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "費回饋維持不變。上述國家若有異動,依本行官網公告為準。 本活動需於2026/7/1~2026/12/31(含)前進件且於2027/1/10(含)前核卡,進件及核卡日期皆以本行系統為準。 登錄規則: 最晚須於核卡後30日內完成登錄。 開放登錄時間2026/7/10 10:00起~2027/1/10 ",
+          "reminder_minutes": 10,
+          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
@@ -1168,9 +1209,9 @@
         "繳費稅款",
         "分期"
       ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間晚於活動期間。",
       "detail_ref": "activities/taipei_fubon-7bff8a4ac1b1.json"
     },
     {
@@ -1310,42 +1351,48 @@
           "end": "2026-07-31T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "提前終止活動,額滿為止,不另行通知。額滿後恕無法補登及享有回饋資格,登錄未成功者亦同,登錄結果以本行系統顯示為準。 登錄時間: 月份 登錄時間 登錄名額 7月 2026/7/22 16:00~2026/7/31 23:59 限量5,000名 8月 2026/8/22 16:00~2026/8/31 23:59 限量5,000名 9月 2026/9/22 16:00~2026/9/30 23:59 限量5,000名 10",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-22T16:00:00+08:00",
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "錄結果以本行系統顯示為準。 登錄時間: 月份 登錄時間 登錄名額 7月 2026/7/22 16:00~2026/7/31 23:59 限量5,000名 8月 2026/8/22 16:00~2026/8/31 23:59 限量5,000名 9月 2026/9/22 16:00~2026/9/30 23:59 限量5,000名 10月 2026/10/22 16:00~2026/10/31 23:59 限量5,000名",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日下午16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日下午16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日下午16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月22日下午16:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1508,87 +1555,108 @@
           "end": "2026-01-31T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "登錄名額限量,額滿將提前終止活動,登錄結果以本行系統顯示為準,恕無法補登享回饋資格,登錄未成功者亦同。本活動之回饋,正、附卡消費合併計算。 登錄期間 活動代碼 2026/1/1 00:00~1/31 23:59 0106 2026/2/1 00:00~2/28 23:59 0203 2026/3/1 00:00~3/31 23:59 0303 2026/4/1 00:00~4/30 23:59 0403 2",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-02-01T00:00:00+08:00",
           "end": "2026-02-28T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "恕無法補登享回饋資格,登錄未成功者亦同。本活動之回饋,正、附卡消費合併計算。 登錄期間 活動代碼 2026/1/1 00:00~1/31 23:59 0106 2026/2/1 00:00~2/28 23:59 0203 2026/3/1 00:00~3/31 23:59 0303 2026/4/1 00:00~4/30 23:59 0403 2026/5/1 00:00~5/31 23:59 0503 2",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-03-01T00:00:00+08:00",
           "end": "2026-03-31T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "消費合併計算。 登錄期間 活動代碼 2026/1/1 00:00~1/31 23:59 0106 2026/2/1 00:00~2/28 23:59 0203 2026/3/1 00:00~3/31 23:59 0303 2026/4/1 00:00~4/30 23:59 0403 2026/5/1 00:00~5/31 23:59 0503 2026/6/1 00:00~6/30 23:59 0603 2",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-04-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日00:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-05-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日00:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-06-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日00:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日00:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日00:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日00:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日00:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日00:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日00:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-31",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/31) 網路投保旅平險抽Rimowa行李箱,再享2%回饋(~2026/9/30) 萬事達海外消費回饋最高享25%現金回饋(~2026/9/30) 樂遊韓國萬事達OL",
+          "reminder_minutes": 10,
+          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
+        "per_period_reregister",
         "registration_closes_early"
       ],
       "max_reward_percent": 25.0,

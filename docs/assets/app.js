@@ -167,13 +167,17 @@
   }
 
   function calendarConfigForWindow(activity, window) {
+    const dateOnly = window.precision === "date";
     return {
       title: `[登錄] ${activity.bank_name}｜${activity.title}`,
       start: window.start,
-      end: addMinutes(window.start, REGISTRATION_CALENDAR_DURATION_MINUTES),
+      end: dateOnly
+        ? (window.end || window.start)
+        : addMinutes(window.start, REGISTRATION_CALENDAR_DURATION_MINUTES),
       details: `${window.label}\n${window.source_text || ""}\n\n官方活動頁：${activity.source_url}`,
       url: activity.registration_url || activity.source_url,
-      filename: `${activity.bank_name}-${activity.merchant}-登錄提醒`
+      filename: `${activity.bank_name}-${activity.merchant}-登錄提醒`,
+      allDay: dateOnly
     };
   }
 
@@ -228,7 +232,7 @@
   function windowStatus(window) {
     const now = new Date();
     const start = parseDate(window.start);
-    const end = parseDate(window.end);
+    const end = parseDate(window.end, window.precision === "date");
     if (end && end < now) return "已結束";
     if (start && start <= now && !end) return "已開放";
     if (start && start <= now && (!end || end >= now)) return "登錄中";
@@ -252,7 +256,9 @@
       const article = node.querySelector(".agenda-item");
       const status = windowStatus(item);
       if (status === "已結束") article.classList.add("is-past");
-      node.querySelector(".agenda-time strong").textContent = timeFmt.format(parseDate(item.start));
+      node.querySelector(".agenda-time strong").textContent = item.precision === "date"
+        ? "時間未確認"
+        : timeFmt.format(parseDate(item.start));
       node.querySelector(".agenda-time span").textContent = status;
       node.querySelector(".agenda-bank").textContent = `${item.bank_name} · ${item.merchant}`;
       node.querySelector("h4").textContent = item.title;
@@ -357,7 +363,7 @@
   function relevantWindows(activity) {
     const now = Date.now();
     const future = activity.registration_windows.filter((item) => {
-      const boundary = parseDate(item.end) || parseDate(item.start);
+      const boundary = parseDate(item.end, item.precision === "date") || parseDate(item.start);
       return boundary && boundary.getTime() >= now;
     });
     return (future.length ? future : activity.registration_windows.slice(-1)).slice(0, 3);
@@ -502,11 +508,17 @@
         const text = document.createElement("p");
         const start = parseDate(window.start);
         const end = parseDate(window.end);
+        const dateOnly = window.precision === "date";
         const sameDay = end && taipeiDateKey(start) === taipeiDateKey(end);
-        const timing = !end
-          ? "起（截止時間未確認）"
-          : (sameDay ? windowStatus(window) : `至 ${shortDateFmt.format(end)} ${timeFmt.format(end)}`);
-        text.innerHTML = `<strong>${shortDateFmt.format(start)} ${timeFmt.format(start)}</strong><span>${timing}</span>`;
+        const timing = dateOnly
+          ? (end && !sameDay ? `至 ${shortDateFmt.format(end)}（時間未確認）` : "（時間未確認）")
+          : (!end
+            ? "起（截止時間未確認）"
+            : (sameDay ? windowStatus(window) : `至 ${shortDateFmt.format(end)} ${timeFmt.format(end)}`));
+        const startLabel = dateOnly
+          ? shortDateFmt.format(start)
+          : `${shortDateFmt.format(start)} ${timeFmt.format(start)}`;
+        text.innerHTML = `<strong>${startLabel}</strong><span>${timing}</span>`;
         const buttons = document.createElement("div");
         buttons.className = "registration-buttons";
         const config = calendarConfigForWindow(activity, window);
@@ -519,9 +531,14 @@
         google.setAttribute("aria-label", `將「${activity.title}」登錄提醒加入 Google Calendar`);
         const ics = document.createElement("button");
         ics.type = "button";
-        ics.textContent = "10";
-        ics.title = "下載含 10 分鐘提醒的 .ics";
-        ics.setAttribute("aria-label", `下載「${activity.title}」含 10 分鐘提醒的 ICS`);
+        ics.textContent = dateOnly ? "日" : "10";
+        ics.title = dateOnly ? "下載全天登錄期間 .ics（官方未提供時間）" : "下載含 10 分鐘提醒的 .ics";
+        ics.setAttribute(
+          "aria-label",
+          dateOnly
+            ? `下載「${activity.title}」全天登錄期間 ICS，官方未提供時間`
+            : `下載「${activity.title}」含 10 分鐘提醒的 ICS`
+        );
         setIcsButton(ics, config);
         buttons.append(google, ics);
         item.append(text, buttons);

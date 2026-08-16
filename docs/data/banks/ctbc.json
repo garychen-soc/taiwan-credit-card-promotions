@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "ctbc",
   "bank_name": "中國信託",
   "activity_count": 121,
@@ -66,43 +66,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -146,43 +152,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 火箭速配最高享8% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 火箭速配最高享8% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 火箭速配最高享8% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 火箭速配最高享8% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 火箭速配最高享8% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 火箭速配最高享8% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -226,43 +238,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -307,43 +325,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -388,43 +412,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -469,43 +499,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -550,43 +586,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -631,43 +673,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -712,43 +760,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -793,43 +847,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -874,43 +934,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -956,43 +1022,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1038,43 +1110,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1119,43 +1197,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1200,43 +1284,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1281,43 +1371,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1362,43 +1458,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1443,43 +1545,49 @@
           "start": "2026-07-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T13:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號下午1:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1524,43 +1632,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1605,43 +1719,49 @@
           "start": "2026-07-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-06T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月6號10:00開放登錄",
-          "reminder_minutes": 10
+          "source_text": "026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [

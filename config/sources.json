@@ -113,7 +113,8 @@
       ],
       "official_domains": [
         "esunbank.com.tw",
-        "esunbank.com"
+        "esunbank.com",
+        "esun.co"
       ],
       "adapter": "esun_discounts"
     },
@@ -449,7 +450,8 @@
         "https://card.ubot.com.tw/CardActivity?category=%E5%BC%B7%E6%89%93%E5%84%AA%E6%83%A0"
       ],
       "official_domains": [
-        "ubot.com.tw"
+        "ubot.com.tw",
+        "newnewbank.com.tw"
       ],
       "adapter": "ubot_reward_categories",
       "scope": "讀取 Rewards API 的七個 catalog；強打優惠由 hotOrder 聚合標記，不重複建立活動"

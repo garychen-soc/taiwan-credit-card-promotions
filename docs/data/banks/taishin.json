@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "taishin",
   "bank_name": "台新銀行",
   "activity_count": 204,
@@ -37,7 +37,8 @@
           "end": "2026-08-30T23:59:00+08:00",
           "label": "活動登錄期間",
           "source_text": "活動期間 活動期間 2026-07-31~2026-08-30 優惠內容 【開店慶滿額贈100點】 活動期間:2026/7/31~2026/8/30 登錄期間:2026/7/31 10:00~2026/8/30 23:59 活動期間當日單店 .刷SKM Park Outlets聯名卡單筆消費滿3,000元,贈100點台新Point(信用卡) (限量100份) .刷其他台新信用卡單筆消費滿6,000元,贈100點台新Po",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -139,7 +140,40 @@
       "reward_tiers": [],
       "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-08-12",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "026/8/1-8/12 單筆且分期刷滿10,000元,回饋台新Point(信用卡)800點。 ※活動二須由正卡持卡人於2026/8/12當日14:00~23:59,於台新銀行官網「今日精選區」開放登錄(詳下方說明),限量登錄400名,額滿為止;每戶回饋上限800點,不得與活動一、三重覆回饋。 ※",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-08-17",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "計算後四捨五入之數額為台新Point(信用卡)回饋,每戶回饋上限台新Point(信用卡)800點。 活動三指定登錄日期:2026/8/17、2026/8/27(任擇一日)當日14:00~23:59,單日登錄限量400名。依活動回饋比例計算後四捨五入之數額為台新Point(信用卡)回饋,回饋上限台新",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-08-21",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": ",不累贈、不重複回饋且每歸戶每月僅能擇優回饋乙次(即客戶同時符合活動一~活動三資格,僅擇優回饋)。 活動一指定登錄日期:2026/8/21當日14:00~23:59,單日登錄限量200名。依活動回饋比例計算後四捨五入之數額為台新Point(信用卡)回饋,每戶回饋上限台新Point(信用卡)300點",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-08-27",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "為台新Point(信用卡)回饋,每戶回饋上限台新Point(信用卡)800點。 活動三指定登錄日期:2026/8/17、2026/8/27(任擇一日)當日14:00~23:59,單日登錄限量400名。依活動回饋比例計算後四捨五入之數額為台新Point(信用卡)回饋,回饋上限台新Point(信用卡)",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -160,7 +194,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "本頁含 4 個活動，請至官方頁確認對應的登錄時間。 官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "本頁含 4 個活動，請至官方頁確認對應的登錄時間。",
       "detail_ref": "activities/taishin-0ed3aecf590e.json"
     },
     {
@@ -540,11 +574,28 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
+          "start": "2026-06-10",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "惠。 如信用卡已設定指定卡片分期交易,參加本活動須先進線客服取消指定卡片分期設定,並登錄本活動,方能享有分期優惠。 須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起~202",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
           "start": "2026-06-10T10:00:00+08:00",
           "end": null,
           "label": "登錄截止",
           "source_text": "客服取消指定卡片分期設定,並登錄本活動,方能享有分期優惠。 須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-31",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "期」 登錄期間:2026/6/10(三) 10:00-2026/12/31(四) 23:59,僅適用於2026/7/1-2026/12/31完成保險費扣繳之交易。 ※曾登錄「2026年1-6月保費分期」之客戶,仍需重新登錄「2026年7-12月保費分期」,方享自登錄日起~2026/12/31每筆保費",
+          "reminder_minutes": 10,
+          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
@@ -566,7 +617,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "登錄時間早於活動期間，請至官方頁確認對應的登錄時間。",
+      "review_message": "，請至官方頁確認對應的登錄時間。 登錄時間早於活動期間；登錄時間晚於活動期間。",
       "detail_ref": "activities/taishin-de9434955d83.json"
     },
     {
@@ -603,11 +654,36 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
+          "start": "2026-06-10",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "線客服取消指定卡片分期設定,並完成活動登錄,方能享有分期優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起起~20",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
           "start": "2026-06-10T10:00:00+08:00",
           "end": null,
           "label": "登錄截止",
           "source_text": "優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-07-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "繳之交易。 ※曾登錄「2026年1-6月保費分期」之客戶,仍需重新登錄「2026年7-12月保費分期」,方享自登錄日起~2026/7/1每筆保費滿額自動分期。 ※本活動限信用卡永久額度內辦理,且限持卡人於活動期間內完成登錄始可參加。 ※台新銀行將以簡訊或電子郵件方式通知持卡人分期訂單成立,並將每",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-12-31",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "登錄,方能享有分期優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起起~2026/12/31每筆保費自動分3、6、1",
+          "reminder_minutes": 10,
+          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
@@ -630,7 +706,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "登錄時間早於活動期間，請至官方頁確認對應的登錄時間。",
+      "review_message": "，請至官方頁確認對應的登錄時間。 登錄時間早於活動期間；登錄時間晚於活動期間。",
       "detail_ref": "activities/taishin-2c53835dd7f4.json"
     },
     {
@@ -869,11 +945,28 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
+          "start": "2026-06-10",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "進線客服取消指定卡片分期設定,並登錄本活動,方能享有分期優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起~202",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
           "start": "2026-06-10T10:00:00+08:00",
           "end": null,
           "label": "登錄截止",
           "source_text": "優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-31",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "之交易。 ※曾登錄「2026年1-6月保費分期」之客戶,仍需重新登錄「2026年7-12月保費分期」, 方享自登錄日起~2026/12/31每筆保費滿額自動分期。 活動登錄 【立即變更:保費扣款信用卡】 保險公司保險費付款授權書申請 1.人壽保險 (1)線上申請: 南山人壽 國泰人壽 富邦人壽 (2",
+          "reminder_minutes": 10,
+          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
@@ -896,7 +989,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "登錄時間早於活動期間，請至官方頁確認對應的登錄時間。",
+      "review_message": "，請至官方頁確認對應的登錄時間。 登錄時間早於活動期間。",
       "detail_ref": "activities/taishin-ef27f9045960.json"
     },
     {
