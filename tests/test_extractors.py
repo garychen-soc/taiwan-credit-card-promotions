@@ -21,6 +21,7 @@ from card_promotions_monitor.extractors import (
     _html_segments,
     _hncb_credit_card_cards,
     _kgi_cards,
+    _listing_promotions,
     _lifecycle,
     _megabank_cards,
     _parse_period,
@@ -310,6 +311,10 @@ class RegistrationWindowTests(unittest.TestCase):
             ),
             "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
         )
+        self.assertEqual(
+            normalize_registration_url("ubot", "https://newnewbank.com.tw/card/register"),
+            "https://newnewbank.com.tw/card/register",
+        )
 
     def test_rejects_external_registration_link(self) -> None:
         self.assertEqual(
@@ -354,6 +359,76 @@ class RegistrationWindowTests(unittest.TestCase):
         self.assertEqual(len(values), 1)
         self.assertEqual(values[0].start, "2026-08-07T17:00:00+08:00")
         self.assertEqual(values[0].end, "2026-08-31T23:59:00+08:00")
+
+    def test_parses_full_year_dot_date_range_without_inventing_time(self) -> None:
+        values = _registration_windows(
+            "登錄期間：2026.1.1~2026.12.31(每月登錄，額滿即關閉登錄功能)",
+            2026,
+        )
+        self.assertEqual(len(values), 1)
+        self.assertEqual(values[0].start, "2026-01-01")
+        self.assertEqual(values[0].end, "2026-12-31")
+        self.assertEqual(values[0].precision, "date")
+
+    def test_does_not_treat_short_decimal_values_as_dates(self) -> None:
+        values = _registration_windows(
+            "活動回饋享2.5%，上限1.5萬元，需完成登錄。",
+            2026,
+        )
+        self.assertEqual(values, [])
+
+    def test_parses_roc_registration_date_without_inventing_time(self) -> None:
+        values = _registration_windows(
+            "本活動採登錄制，115年8月20日開放登錄。",
+            2026,
+        )
+        self.assertEqual(len(values), 1)
+        self.assertEqual(values[0].start, "2026-08-20")
+        self.assertIsNone(values[0].end)
+        self.assertEqual(values[0].precision, "date")
+
+    def test_parses_firstbank_parenthesized_monthly_opening(self) -> None:
+        values = _registration_windows(
+            "登錄期間：每月22日上午10點起(逐月登錄，額滿即關閉)",
+            2026,
+            date(2026, 8, 1),
+            date(2026, 10, 31),
+        )
+        self.assertEqual(
+            [value.start for value in values],
+            [
+                "2026-08-22T10:00:00+08:00",
+                "2026-09-22T10:00:00+08:00",
+                "2026-10-22T10:00:00+08:00",
+            ],
+        )
+
+    def test_invariants_handle_mixed_date_and_datetime_windows(self) -> None:
+        promotion = Promotion(
+            id="bank-mixed", bank_id="bank", bank_name="測試銀行", title="混合精度",
+            merchant="測試", categories=["網購"], start_date="2026-08-01",
+            end_date="2026-08-31", summary="測試", source_url="https://bank.example/offer",
+            source_entry_url="https://bank.example", observed_at="2026-08-01T10:00:00+08:00",
+            registration_required=True,
+            registration_windows=[
+                RegistrationWindow(
+                    "2026-08-01", "2026-08-15", "登錄期間", "日期", precision="date",
+                ),
+                RegistrationWindow(
+                    "2026-08-20T10:00:00+08:00", None, "登錄開放", "時間",
+                ),
+            ],
+            needs_review=True,
+            review_required=True,
+            review_message=(
+                "官方註明需登錄，但尚未取得可確認的登錄時點。 "
+                "同一子活動的登錄視窗互相重疊。"
+            ),
+        )
+        _promotion_invariants(promotion)
+        self.assertNotIn("互相重疊", promotion.review_message)
+        self.assertNotIn("尚未取得", promotion.review_message)
+        self.assertFalse(promotion.needs_review)
 
     def test_normalizes_fullwidth_time_and_roc_year_range(self) -> None:
         values = _registration_windows(
@@ -674,6 +749,99 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual([item["title"] for item in cards], ["信用卡優惠"])
         self.assertEqual(cards[0]["url"], "https://partner.example/card-offer")
 
+    def test_hncb_shared_detail_does_not_assign_one_date_to_multiple_activities(self) -> None:
+        detail_url = "https://www.hncb.com.tw/wps/portal/HNCB/card/shared"
+        source = {
+            "id": "hncb",
+            "bank_name": "華南銀行",
+            "entry_url": "https://www.hncb.com.tw/wps/portal/HNCB/card",
+            "official_domains": ["hncb.com.tw"],
+        }
+        cards = [
+            {
+                "id": f"hncb-{index}",
+                "title": title,
+                "summary": title,
+                "url": detail_url,
+                "start": date(2026, 8, 1),
+                "end": date(2026, 8, 31),
+                "fingerprint": f"fingerprint-{index}",
+                "fetch_detail": True,
+                "ambiguous_shared_detail": True,
+            }
+            for index, title in enumerate(("活動甲", "活動乙"), start=1)
+        ]
+        detail = "<h1>多活動專頁</h1><p>活動採登錄制，115年8月20日開放登錄。</p>"
+        with patch(
+            "card_promotions_monitor.extractors._fetch_many",
+            return_value={
+                detail_url: FetchResult(
+                    detail_url, detail_url, 200, detail, "text/html", "fixture"
+                )
+            },
+        ):
+            activities, failed_details, invalid_urls = _listing_promotions(
+                source,
+                cards,
+                now=datetime(2026, 8, 16, tzinfo=ZoneInfo("Asia/Taipei")),
+                percent_threshold=10,
+                amount_threshold=500,
+                activity_cache=None,
+                cache_stats=None,
+            )
+        self.assertEqual(failed_details, 0)
+        self.assertEqual(invalid_urls, [])
+        self.assertEqual(len(activities), 2)
+        self.assertTrue(all(activity.registration_required for activity in activities))
+        self.assertTrue(all(not activity.registration_windows for activity in activities))
+        self.assertTrue(all("無法可靠對應" in activity.review_message for activity in activities))
+
+    def test_listing_prefers_precise_firstbank_windows_over_broad_date_range(self) -> None:
+        source = {
+            "id": "first",
+            "bank_name": "第一銀行",
+            "entry_url": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
+            "official_domains": ["firstbank.com.tw"],
+        }
+        url = "https://card.firstbank.com.tw/sites/card/zh_TW/offer"
+        cards = [{
+            "id": "first-offer",
+            "title": "每月登錄活動",
+            "summary": "需登錄",
+            "url": url,
+            "start": date(2026, 8, 1),
+            "end": date(2026, 10, 31),
+            "fingerprint": "fingerprint",
+            "fetch_detail": False,
+            "prefer_precise_registration_windows": True,
+            "detail_html": (
+                "<p>登錄期間：2026.8.1~2026.10.31</p>"
+                "<p>每月22日上午10點起(逐月登錄，額滿即關閉)</p>"
+            ),
+        }]
+        activities, failed_details, _ = _listing_promotions(
+            source,
+            cards,
+            now=datetime(2026, 8, 16, tzinfo=ZoneInfo("Asia/Taipei")),
+            percent_threshold=10,
+            amount_threshold=500,
+            activity_cache=None,
+            cache_stats=None,
+        )
+        self.assertEqual(failed_details, 0)
+        self.assertEqual(
+            [window.start for window in activities[0].registration_windows],
+            [
+                "2026-08-22T10:00:00+08:00",
+                "2026-09-22T10:00:00+08:00",
+                "2026-10-22T10:00:00+08:00",
+            ],
+        )
+        self.assertTrue(all(
+            window.precision == "datetime"
+            for window in activities[0].registration_windows
+        ))
+
     def test_extracts_taipei_fubon_listing_card(self) -> None:
         html = (
             '<div class="discount-card">'
@@ -821,7 +989,7 @@ class ClassificationTests(unittest.TestCase):
                 <subheadlineEditor>&lt;div&gt;滿額最高回饋5%&lt;/div&gt;</subheadlineEditor>
                 <activityContent>&lt;p&gt;活動須登錄&lt;/p&gt;</activityContent>
                 <activityDate>2026.7.1~2026.12.31</activityDate>
-                <loginDate>2026/8/14 16:00~2026/8/31 23:59</loginDate>
+                <loginDate>2026.1.1~2026.12.31(每月登錄，額滿即關閉登錄功能)</loginDate>
                 <activityUrl>/sites/card/zh_TW/{activity_id}</activityUrl>
               </activityListData>
               <pageSpacingHtml>{pagination}</pageSpacingHtml>
@@ -874,6 +1042,7 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(activities[0].start_date, "2026-07-01")
         self.assertEqual(activities[0].end_date, "2026-12-31")
         self.assertEqual(len(activities[0].registration_windows), 1)
+        self.assertEqual(activities[0].registration_windows[0].precision, "date")
         self.assertEqual(
             activities[0].registration_url,
             "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
@@ -1002,6 +1171,39 @@ class ClassificationTests(unittest.TestCase):
             [window.start for window in activities[0].registration_windows],
             ["2026-08-27T14:00:00+08:00"],
         )
+
+    def test_megabank_empty_success_response_is_structure_failure(self) -> None:
+        source = {
+            "id": "megabank",
+            "bank_name": "兆豐銀行",
+            "entry_url": "https://www.megabank.com.tw/personal/credit-card/event/overview?Tag=Tag",
+            "api_url": "https://www.megabank.com.tw/api/client/DiscountOverview/GetDiscount",
+            "api_item_id": "{item}",
+            "api_setting_id": "{setting}",
+            "official_domains": ["megabank.com.tw"],
+        }
+        listing = FetchResult(
+            source["entry_url"], source["entry_url"], 200,
+            "<h1>優惠總覽</h1>", "text/html", "fixture",
+        )
+        api = FetchResult(
+            source["api_url"], source["api_url"], 200,
+            "[]", "application/json", "fixture",
+        )
+        with (
+            patch("card_promotions_monitor.extractors.fetch_text", return_value=listing),
+            patch("card_promotions_monitor.extractors.fetch_json", return_value=(api, [])),
+        ):
+            activities, health, alerts = extract_megabank(
+                source,
+                now=datetime(2026, 8, 16, tzinfo=ZoneInfo("Asia/Taipei")),
+                percent_threshold=10,
+                amount_threshold=500,
+            )
+        self.assertEqual(activities, [])
+        self.assertEqual(health.status, "failed")
+        self.assertIn("Sitecore", health.message)
+        self.assertEqual(alerts[0].type, "source_structure_changed")
 
 
 if __name__ == "__main__":

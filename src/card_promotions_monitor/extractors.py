@@ -68,7 +68,7 @@ REGISTRATION_URL_ALLOWED_HOSTS = {
     "obank": ("o-bank.com",),
     "esun": ("esunbank.com.tw", "esun.co"),
     "sunny": ("sunnybank.com.tw",),
-    "ubot": ("card.ubot.com.tw", "cardweb.ubot.com.tw"),
+    "ubot": ("card.ubot.com.tw", "cardweb.ubot.com.tw", "newnewbank.com.tw"),
     "megabank": ("megabank.com.tw",),
 }
 MONTHS = {
@@ -90,9 +90,23 @@ def _date_from_iso(value: str | None) -> date | None:
     if not value:
         return None
     try:
-        return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(TAIPEI).date()
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return parsed.date() if parsed.tzinfo is None else parsed.astimezone(TAIPEI).date()
     except ValueError:
         return None
+
+
+def _window_datetime(value: str, *, end_of_day: bool = False) -> datetime:
+    parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    if parsed.tzinfo is not None:
+        return parsed.astimezone(TAIPEI)
+    if len(value) == 10:
+        return datetime.combine(
+            parsed.date(),
+            time.max if end_of_day else time.min,
+            tzinfo=TAIPEI,
+        )
+    return parsed.replace(tzinfo=TAIPEI)
 
 
 def _date_text(value: date | None) -> str | None:
@@ -184,6 +198,13 @@ def _registration_windows(
     normalized_text = re.sub(
         r"(?<=\d):(\d{2}):\d{2}(?=\D|$)",
         r":\1",
+        normalized_text,
+    )
+    # First Bank uses full Gregorian dates with dots.  Only normalize the
+    # four-digit-year form so percentages such as 2.5% cannot become dates.
+    normalized_text = re.sub(
+        r"(?<!\d)(20\d{2})\.(\d{1,2})\.(\d{1,2})\.?(?=\D|$)",
+        r"\1/\2/\3",
         normalized_text,
     )
     normalized = _normalize_roc_dates(
@@ -311,6 +332,71 @@ def _registration_windows(
         seen.add(key)
         windows.append(RegistrationWindow(*key, "登錄截止", context))
 
+    date_range_pattern = re.compile(
+        r"(20\d{2})/(\d{1,2})/(\d{1,2})\s*~\s*"
+        r"(?:(20\d{2})/)?(\d{1,2})/(\d{1,2})"
+    )
+    for match in date_range_pattern.finditer(normalized):
+        if any(match.start() < end and match.end() > start for start, end in range_spans):
+            continue
+        before = normalized[max(0, match.start() - 30): match.start()]
+        context = normalized[max(0, match.start() - 70): min(len(normalized), match.end() + 100)]
+        if not re.search(r"登錄(?:日期|時間|期間)?\s*[:：]?\s*$", before):
+            continue
+        start_year = int(match.group(1))
+        end_year = int(match.group(4) or start_year)
+        try:
+            start_date = date(start_year, int(match.group(2)), int(match.group(3)))
+            end_date = date(end_year, int(match.group(5)), int(match.group(6)))
+        except ValueError:
+            continue
+        key = (start_date.isoformat(), end_date.isoformat())
+        if end_date < start_date or key in seen:
+            continue
+        seen.add(key)
+        windows.append(RegistrationWindow(
+            *key,
+            "活動登錄期間（時間未確認）",
+            context,
+            precision="date",
+        ))
+
+    date_point_pattern = re.compile(
+        r"(20\d{2})(?:/|年)(\d{1,2})(?:/|月)(\d{1,2})(?:日)?"
+    )
+    date_range_spans = [match.span() for match in date_range_pattern.finditer(normalized)]
+    for match in date_point_pattern.finditer(normalized):
+        if any(match.start() < end and match.end() > start for start, end in range_spans):
+            continue
+        if any(match.start() < end and match.end() > start for start, end in date_range_spans):
+            continue
+        trailing = normalized[match.end(): min(len(normalized), match.end() + 20)]
+        if re.match(r"\s*[~-]", trailing):
+            continue
+        if re.match(r"\s*(?:上午|下午|中午)?\s*\d{1,2}(?::|點)", trailing):
+            continue
+        context = normalized[max(0, match.start() - 60): min(len(normalized), match.end() + 80)]
+        if not any(marker in context for marker in ("開放登錄", "開始登錄", "活動登錄日期", "登錄日")):
+            continue
+        try:
+            registration_date = date(
+                int(match.group(1)),
+                int(match.group(2)),
+                int(match.group(3)),
+            )
+        except ValueError:
+            continue
+        key = (registration_date.isoformat(), None)
+        if key in seen:
+            continue
+        seen.add(key)
+        windows.append(RegistrationWindow(
+            *key,
+            "登錄日期（時間未確認）",
+            context,
+            precision="date",
+        ))
+
     month_pattern = re.compile(
         r"(1[0-2]月|[1-9]月)活動.{0,15}?(\d{1,2})/(\d{1,2})(?:\([^)]+\))?\s*"
         r"(上午|下午)?\s*(\d{1,2})(?::|點(?:整)?)\s*(\d{2})?.{0,12}?開始登錄"
@@ -364,9 +450,12 @@ def _registration_windows(
 
     monthly_day_pattern = re.compile(
         r"每月\s*(\d{1,2})\s*[號日]\s*(上午|下午|中午)?\s*(\d{1,2})"
-        r"(?:\s*:\s*(\d{2})|[點時](?:整)?)\s*(?:起)?(?:開放|開始)?登錄"
+        r"(?:\s*:\s*(\d{2})|[點時](?:整)?)\s*(?:起)?"
     )
     for match in ([] if explicit_dates_found else monthly_day_pattern.finditer(normalized)):
+        context = normalized[max(0, match.start() - 30): min(len(normalized), match.end() + 60)]
+        if "登錄" not in context:
+            continue
         day_of_month = int(match.group(1))
         hour, minute = _time_parts(match.group(3), match.group(4), match.group(2))
         year, month = period_start.year, period_start.month
@@ -376,7 +465,7 @@ def _registration_windows(
             except ValueError:
                 recurring_day = None
             if recurring_day:
-                add_recurring(recurring_day, hour, minute, "每月登錄開放", match.group(0))
+                add_recurring(recurring_day, hour, minute, "每月登錄開放", context)
             month += 1
             if month == 13:
                 year += 1
@@ -644,6 +733,8 @@ def _registration_timing_contracts(promotion: Promotion) -> list[str]:
         "各檔須分別登錄",
         "每月皆需登錄",
         "需每月登錄",
+        "每月登錄",
+        "逐月登錄",
         "限當月登錄",
     )):
         contracts.append("per_period_reregister")
@@ -676,7 +767,29 @@ def _append_review_issues(promotion: Promotion, issues: list[str]) -> None:
         promotion.review_message = f"{existing} {detail}。".strip() if existing else f"{detail}。"
 
 
+INVARIANT_REVIEW_ISSUES = (
+    "活動截止日尚未確認",
+    "活動截止日早於開始日",
+    "官方註明需登錄，但尚未取得可確認的登錄時點",
+    "登錄截止時間不晚於開始時間",
+    "登錄時間早於活動期間",
+    "登錄時間晚於活動期間",
+    "同一子活動的登錄視窗互相重疊",
+)
+
+
+def _clear_invariant_review_issues(promotion: Promotion) -> None:
+    message = promotion.review_message
+    for issue in INVARIANT_REVIEW_ISSUES:
+        message = re.sub(rf"(?:^|\s*){re.escape(issue)}[。；]?\s*", " ", message)
+    promotion.review_message = clean_inline(message)
+    if not promotion.review_message:
+        promotion.needs_review = False
+        promotion.review_required = False
+
+
 def _promotion_invariants(promotion: Promotion) -> None:
+    _clear_invariant_review_issues(promotion)
     start = _date_from_iso(promotion.start_date)
     end = _date_from_iso(promotion.end_date)
     if not promotion.activity_periods and start and promotion.terms_raw:
@@ -702,8 +815,8 @@ def _promotion_invariants(promotion: Promotion) -> None:
         key=lambda item: item.start,
     )
     for window in ordered:
-        window_start = datetime.fromisoformat(window.start)
-        window_end = datetime.fromisoformat(window.end) if window.end else None
+        window_start = _window_datetime(window.start)
+        window_end = _window_datetime(window.end, end_of_day=True) if window.end else None
         if window_end and window_end <= window_start:
             issues.append("登錄截止時間不晚於開始時間")
         if start and window_start.date() < start:
@@ -711,8 +824,8 @@ def _promotion_invariants(promotion: Promotion) -> None:
         if end and window_start.date() > end:
             issues.append("登錄時間晚於活動期間")
     for previous, current in zip(ordered, ordered[1:]):
-        previous_end = datetime.fromisoformat(previous.end) if previous.end else None
-        current_start = datetime.fromisoformat(current.start)
+        previous_end = _window_datetime(previous.end, end_of_day=True) if previous.end else None
+        current_start = _window_datetime(current.start)
         if previous_end and current_start < previous_end:
             issues.append("同一子活動的登錄視窗互相重疊")
             break
@@ -1138,6 +1251,7 @@ def _has_registration_requirement(text: str) -> bool:
         "每波活動須分別登錄",
         "各檔須分別登錄",
         "需於本行網站登錄",
+        "活動採登錄制",
     )
     if any(marker in text for marker in markers):
         return True
@@ -3128,6 +3242,23 @@ def _listing_promotions(
             for cached in card["cached"]:
                 if card.get("featured"):
                     cached.featured = True
+                if card.get("prefer_precise_registration_windows") and any(
+                    window.precision == "datetime" for window in cached.registration_windows
+                ):
+                    cached.registration_windows = [
+                        window
+                        for window in cached.registration_windows
+                        if window.precision == "datetime"
+                    ]
+                if card.get("ambiguous_shared_detail") and (
+                    cached.registration_required or cached.registration_windows
+                ):
+                    cached.registration_windows = []
+                    cached.registration_required = True
+                    _append_review_issues(
+                        cached,
+                        ["同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認"],
+                    )
                 _promotion_invariants(cached)
                 activities.append(cached)
             continue
@@ -3176,12 +3307,21 @@ def _listing_promotions(
             or clean_inline(str(card.get("registration_text") or ""))
         )
         terms_raw, terms_sections = _terms_content(text)
+        window_source = (
+            text
+            if card.get("prefer_precise_registration_windows")
+            else (registration_text or text)
+        )
         windows = _registration_windows(
-            registration_text or text,
+            window_source,
             start.year,
             start,
             end,
         )
+        if card.get("prefer_precise_registration_windows") and any(
+            window.precision == "datetime" for window in windows
+        ):
+            windows = [window for window in windows if window.precision == "datetime"]
         registration_required = bool(
             card.get("registration_required")
             or windows
@@ -3250,6 +3390,15 @@ def _listing_promotions(
             source_fingerprint=card["fingerprint"],
             last_detail_checked_at=checked_at,
         )
+        if card.get("ambiguous_shared_detail") and (
+            promotion.registration_required or promotion.registration_windows
+        ):
+            promotion.registration_windows = []
+            promotion.registration_required = True
+            _append_review_issues(
+                promotion,
+                ["同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認"],
+            )
         blocks = _subactivity_blocks(text)
         if blocks and source["id"] == "ubot":
             for heading, activity_text in blocks:
@@ -3485,6 +3634,12 @@ def extract_hncb(
             message,
             source["entry_url"],
         )]
+    detail_url_counts: dict[str, int] = {}
+    for card in cards:
+        if card["fetch_detail"]:
+            detail_url_counts[card["url"]] = detail_url_counts.get(card["url"], 0) + 1
+    for card in cards:
+        card["ambiguous_shared_detail"] = detail_url_counts.get(card["url"], 0) > 1
     activities, failed_details, invalid_urls = _listing_promotions(
         source,
         cards,
@@ -4044,6 +4199,7 @@ def _firstbank_rest_cards(
             "fetch_detail": False,
             "detail_html": detail_html,
             "registration_text": login_date,
+            "prefer_precise_registration_windows": True,
             "base_category": FIRSTBANK_CATEGORY_LABELS.get(category_name, ""),
             "official_category": category_name,
         })
@@ -4576,6 +4732,15 @@ def extract_megabank(
         ), [Alert("source_failed", source["bank_name"], message, source["entry_url"])]
 
     rows = [row for row in payload if isinstance(row, dict)] if isinstance(payload, list) else []
+    if not rows:
+        message = (
+            "兆豐銀行官方優惠 API 回應成功但未回傳任何項目；"
+            "可能是 Sitecore 元件識別碼已變更，本次不發布空資料。"
+        )
+        return [], SourceHealth(
+            source["id"], source["bank_name"], source["entry_url"],
+            api_result.final_url, "failed", 0, checked_at, message,
+        ), [Alert("source_structure_changed", source["bank_name"], message, source["entry_url"])]
     cards = _megabank_cards(
         rows,
         listing.final_url,
@@ -4600,11 +4765,23 @@ def extract_megabank(
         cache_stats=cache_stats,
     )
     status = "complete" if activities and failed_details == 0 else ("partial" if activities else "failed")
-    message = (
-        _detail_failure_message(failed_details, "官方活動明細", invalid_urls)
-        if failed_details
-        else f"官方 API 共篩出 {len(cards)} 筆仍有效的「需登錄」項目；收錄 {len(activities)} 筆"
+    removed_count = sum(bool(clean_inline(str(row.get("Removal") or ""))) for row in rows)
+    registration_count = sum(
+        "需登錄" in (
+            [clean_inline(str(value)) for value in (row.get("Tags") or [])]
+            if isinstance(row.get("Tags") or [], list)
+            else [clean_inline(str(row.get("Tags") or ""))]
+        )
+        for row in rows
     )
+    message = (
+        f"官方 API 回傳 {len(rows)} 筆（下架 {removed_count} 筆、標示需登錄 "
+        f"{registration_count} 筆）；篩出 {len(cards)} 筆仍有效項目，收錄 {len(activities)} 筆"
+    )
+    if failed_details:
+        message += "；" + _detail_failure_message(
+            failed_details, "官方活動明細", invalid_urls,
+        )
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"],
         listing.final_url, status, len(activities), checked_at, message,

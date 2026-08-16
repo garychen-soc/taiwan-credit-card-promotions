@@ -11,6 +11,7 @@ class RegistrationWindow:
     label: str
     source_text: str
     reminder_minutes: int = 10
+    precision: str = "datetime"
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

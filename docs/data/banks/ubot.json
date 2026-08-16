@@ -1,9 +1,9 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "ubot",
   "bank_name": "聯邦銀行",
-  "activity_count": 93,
+  "activity_count": 94,
   "activities": [
     {
       "id": "ubot-63a46253f43e",
@@ -539,43 +539,49 @@
           "start": "2026-03-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-04-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-05-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-06-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -766,57 +772,65 @@
           "start": "2026-01-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-02-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-03-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-04-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-05-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-06-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1091,22 +1105,25 @@
           "start": "2026-07-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月5日下午2點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月5日下午2點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月5日下午2點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1177,22 +1194,25 @@
           "start": "2026-07-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月5日下午2點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月5日下午2點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月5日下午2點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1241,22 +1261,41 @@
           "start": "2026-07-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2,000元,預計於115年10月底前回饋。 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-08-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": ") 活動期間每月1日下午3點開放登錄~當月底,每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。 (3) 範例:客戶A於2026/8/1登錄成功,則2026/9/1無需再登錄,2026/7/1-9/30之昇恆昌消費皆適用活動。 (4) 需於指定登錄開放期間完成登錄始符合活動參與資格,限量登錄名額",
+          "reminder_minutes": 10,
+          "precision": "date"
         },
         {
           "start": "2026-08-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2,000元,預計於115年10月底前回饋。 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "開放登錄~當月底,每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。 (3) 範例:客戶A於2026/8/1登錄成功,則2026/9/1無需再登錄,2026/7/1-9/30之昇恆昌消費皆適用活動。 (4) 需於指定登錄開放期間完成登錄始符合活動參與資格,限量登錄名額如額滿,系統將提前關閉並於登",
+          "reminder_minutes": 10,
+          "precision": "date"
         },
         {
           "start": "2026-09-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "2,000元,預計於115年10月底前回饋。 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1374,22 +1413,25 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1440,22 +1482,25 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1541,14 +1586,16 @@
           "end": null,
           "label": "登錄開放",
           "source_text": "店/燦坤/全國電子/賣場門市,適用門市名單) 單筆分期門檻 回饋刷卡金 分12期以上 回饋升級 每波限量 登錄名額 登錄時間 35,000元 700元 800元 100名 第一波 8/15下午3點開放登錄~8/20 第二波 9/15下午3點開放登錄~10/20 50,000元 1,000元 1,100元 100名 65,000元 1,300元 2,100元 100名 75,000元 1,500元 2,500元 5",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-15T15:00:00+08:00",
           "end": null,
           "label": "登錄開放",
           "source_text": " 單筆分期門檻 回饋刷卡金 分12期以上 回饋升級 每波限量 登錄名額 登錄時間 35,000元 700元 800元 100名 第一波 8/15下午3點開放登錄~8/20 第二波 9/15下午3點開放登錄~10/20 50,000元 1,000元 1,100元 100名 65,000元 1,300元 2,100元 100名 75,000元 1,500元 2,500元 50名 登錄時間 第一波 8/15下午3點開放",
-          "reminder_minutes": 10
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1721,43 +1768,49 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1807,43 +1860,49 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1895,43 +1954,49 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月10日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -1975,7 +2040,32 @@
       "reward_tiers": [],
       "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
       "registration_url_kind": "bank_portal",
-      "registration_windows": [],
+      "registration_windows": [
+        {
+          "start": "2026-01-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "為符合本專案條件之交易款項分期入帳,惟於結帳日前三天內入帳之交易及已逾持卡人帳單結帳日者將不列入。 範例一:客戶A分別於2026/1/1及2026/2/5各消費一筆國內保險金額2萬元,並於2026/2/1完成登錄「115年保險刷聯邦Visa卡分期活動_滿1萬2千」,系統主動撈取於登錄日後(不含登",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-02-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "逾持卡人帳單結帳日者將不列入。 範例一:客戶A分別於2026/1/1及2026/2/5各消費一筆國內保險金額2萬元,並於2026/2/1完成登錄「115年保險刷聯邦Visa卡分期活動_滿1萬2千」,系統主動撈取於登錄日後(不含登錄當日)之符合本專案條件之交易款項分期入帳,故2026/1/1之交易",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-02-05",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "交易款項分期入帳,惟於結帳日前三天內入帳之交易及已逾持卡人帳單結帳日者將不列入。 範例一:客戶A分別於2026/1/1及2026/2/5各消費一筆國內保險金額2萬元,並於2026/2/1完成登錄「115年保險刷聯邦Visa卡分期活動_滿1萬2千」,系統主動撈取於登錄日後(不含登錄當日)之符合本專",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
       "registration_timing_contracts": [
         "unknown"
       ],
@@ -1991,7 +2081,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "登錄時間早於活動期間。",
       "detail_ref": "activities/ubot-f8077f3069bd.json"
     },
     {
@@ -2022,43 +2112,49 @@
           "start": "2026-07-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -2238,89 +2334,101 @@
           "start": "2026-07-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月25日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月25日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月25日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月25日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月25日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月25日下午3點開放登錄",
-          "reminder_minutes": 10
+          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
-        "unknown"
+        "per_period_reregister"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 3600,
@@ -2366,43 +2474,49 @@
           "start": "2026-07-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午11點開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午11點開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午11點開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午11點開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午11點開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月20日上午11點開放登錄",
-          "reminder_minutes": 10
+          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -2624,85 +2738,97 @@
           "start": "2026-01-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-02-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-03-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-04-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-05-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-06-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日15:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26japan/,於活動期間之每月1日15:00起開放登錄,每月開放15,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -2758,85 +2884,97 @@
           "start": "2026-01-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-02-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-03-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-04-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-05-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-06-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-07-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-08-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-01T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月1日14:00起開放登錄",
-          "reminder_minutes": 10
+          "source_text": "odining.com.tw/26korea/,於活動期間之每月1日14:00起開放登錄,每月開放10,000名,優惠序號數量有限,當月登錄額滿即截止,活動期間每卡每月限登錄一次,每一序號限用一次,優",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -2900,43 +3038,57 @@
           "start": "2026-08-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-09-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-10-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-11-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         },
         {
           "start": "2026-12-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-31",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自扣加碼0.5%(核卡後三個月內上限300元) *國內嚴選日系名店加碼4%(月上限500元) 了解更多 *Agoda預訂日本飯店刷",
+          "reminder_minutes": 10,
+          "precision": "date"
         },
         {
           "start": "2027-01-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "每月15日上午10點開放登錄",
-          "reminder_minutes": 10
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -3441,6 +3593,45 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ubot-f40e07d858c3.json"
+    },
+    {
+      "id": "ubot-ed4bfeb20483",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "New New Bank",
+      "merchant": "New New Bank",
+      "categories": [
+        "繳費稅款",
+        "海外消費",
+        "強打優惠"
+      ],
+      "start_date": "2026-07-01",
+      "end_date": "2026-12-31",
+      "summary": "新戶自動扣繳聯邦信用卡款享10%回饋",
+      "source_url": "https://newnewbank.com.tw/autopaycreditcardbill.htm?openExternalBrowser=1",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 300,
+      "featured": true,
+      "tags": [
+        "New New Bank",
+        "聯邦銀行",
+        "生活繳費",
+        "繳費稅款",
+        "海外消費",
+        "強打優惠"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-ed4bfeb20483.json"
     },
     {
       "id": "ubot-03b2892d4158",

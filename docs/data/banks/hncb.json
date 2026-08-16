@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-08-16T10:18:32+08:00",
+  "schema_version": 9,
+  "generated_at": "2026-08-16T21:57:47+08:00",
   "bank_id": "hncb",
   "bank_name": "華南銀行",
   "activity_count": 42,
@@ -54,7 +54,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認。 官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-cd4ca802d246.json"
     },
     {
@@ -106,7 +106,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認。 官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-9f319cf43de8.json"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認。 官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-2e9e9235ebfe.json"
     },
     {
@@ -210,7 +210,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認。 官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-bfc6d6e4a4a8.json"
     },
     {
@@ -298,6 +298,44 @@
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-6b392b31ca89.json"
+    },
+    {
+      "id": "hncb-79537ca8d87e",
+      "bank_id": "hncb",
+      "bank_name": "華南銀行",
+      "title": "台灣Pay信用卡華南同樂會",
+      "merchant": "台灣Pay信用卡華南同樂會",
+      "categories": [
+        "行動支付",
+        "加油交通"
+      ],
+      "start_date": "2026-08-04",
+      "end_date": null,
+      "summary": "熱門優惠 台灣Pay信用卡華南同樂會 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
+      "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/115TWPAY_ALL",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 1,
+      "featured": true,
+      "tags": [
+        "台灣Pay信用卡華南同樂會",
+        "華南銀行",
+        "行動支付",
+        "加油交通"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/hncb-79537ca8d87e.json"
     },
     {
       "id": "hncb-cf2edec87359",
@@ -1170,42 +1208,6 @@
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
       "detail_ref": "activities/hncb-a4ac6c2d63cb.json"
-    },
-    {
-      "id": "hncb-79537ca8d87e",
-      "bank_id": "hncb",
-      "bank_name": "華南銀行",
-      "title": "台灣Pay信用卡華南同樂會",
-      "merchant": "台灣Pay信用卡華南同樂會",
-      "categories": [
-        "行動支付",
-        "加油交通"
-      ],
-      "start_date": "2026-08-04",
-      "end_date": null,
-      "summary": "熱門優惠 台灣Pay信用卡華南同樂會 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
-      "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/115TWPAY_ALL",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": 1,
-      "featured": true,
-      "tags": [
-        "台灣Pay信用卡華南同樂會",
-        "華南銀行",
-        "行動支付",
-        "加油交通"
-      ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/hncb-79537ca8d87e.json"
     },
     {
       "id": "hncb-66e2f3c01540",
