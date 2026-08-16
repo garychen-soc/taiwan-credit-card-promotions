@@ -9,6 +9,7 @@ from zoneinfo import ZoneInfo
 
 from card_promotions_monitor.cli import (
     PUBLISH_GUARD_EXIT_CODE,
+    _write_public_artifacts,
     assess_publish_guard,
     classify_registration_urls,
     load_previous_public_payload,
@@ -230,6 +231,27 @@ class PublishGuardTests(unittest.TestCase):
             rehydrated["activities"][0]["terms_sections"]["eligibility"],
             "參加資格：限正卡持卡人",
         )
+
+    def test_unchanged_detail_keeps_its_original_generated_time(self) -> None:
+        candidate = candidate_payload(failed=0, active=1)
+        candidate["generated_at"] = "2026-08-15T10:00:00+08:00"
+        candidate["activities"] = [{
+            "id": "offer",
+            "bank_id": "bank-0",
+            "bank_name": "銀行 0",
+            "registration_required": True,
+            "terms_raw": "活動條款",
+        }]
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "promotions.json"
+            _write_public_artifacts(candidate, output)
+            candidate["generated_at"] = "2026-08-16T10:00:00+08:00"
+            _write_public_artifacts(candidate, output)
+            detail = json.loads(
+                (output.parent / "activities" / "offer.json").read_text()
+            )
+
+        self.assertEqual(detail["generated_at"], "2026-08-15T10:00:00+08:00")
 
     def test_failed_source_retains_previous_current_activities(self) -> None:
         activities: list[dict] = []

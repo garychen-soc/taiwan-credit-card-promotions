@@ -304,7 +304,8 @@ def _write_public_artifacts(payload: dict, output_path: Path) -> dict:
         if not has_detail:
             continue
         detail_names.add(filename)
-        write_json_atomic(detail_root / filename, {
+        detail_path = detail_root / filename
+        detail_payload = {
             "schema_version": schema_version,
             "generated_at": generated_at,
             "activity_id": activity_id,
@@ -314,7 +315,25 @@ def _write_public_artifacts(payload: dict, output_path: Path) -> dict:
             "registration_text": activity.get("registration_text", ""),
             "terms_raw": activity.get("terms_raw", ""),
             "terms_sections": activity.get("terms_sections", {}),
-        })
+        }
+        if detail_path.exists():
+            try:
+                previous_detail = load_json(detail_path)
+            except (json.JSONDecodeError, OSError):
+                previous_detail = {}
+            comparable_previous = {
+                key: value for key, value in previous_detail.items()
+                if key != "generated_at"
+            }
+            comparable_current = {
+                key: value for key, value in detail_payload.items()
+                if key != "generated_at"
+            }
+            if comparable_previous == comparable_current:
+                detail_payload["generated_at"] = previous_detail.get(
+                    "generated_at", generated_at,
+                )
+        write_json_atomic(detail_path, detail_payload)
 
     bank_files: dict[str, str] = {}
     bank_names: set[str] = set()
