@@ -8,6 +8,7 @@
   const INDEX_FILTERS = new Set(["today", "tomorrow", "registration"]);
   const timeState = window.CardPromotionTime;
   const catalogState = window.CardPromotionCatalog;
+  const { escapeIcs, serializeIcs } = window.CardPromotionCalendar;
   const state = {
     data: null,
     activities: [],
@@ -107,14 +108,6 @@
     return new URL(reference, new URL(DATA_URL, window.location.href)).href;
   }
 
-  function escapeIcs(value) {
-    return String(value ?? "")
-      .replaceAll("\\", "\\\\")
-      .replaceAll("\n", "\\n")
-      .replaceAll(",", "\\,")
-      .replaceAll(";", "\\;");
-  }
-
   function utcIcs(value) {
     return new Date(value).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
   }
@@ -163,7 +156,7 @@
       lines.push("BEGIN:VALARM", "TRIGGER:-PT10M", "ACTION:DISPLAY", `DESCRIPTION:${escapeIcs(config.title)}`, "END:VALARM");
     }
     lines.push("END:VEVENT", "END:VCALENDAR", "");
-    const blob = new Blob([lines.join("\r\n")], { type: "text/calendar;charset=utf-8" });
+    const blob = new Blob([serializeIcs(lines)], { type: "text/calendar;charset=utf-8" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     link.download = `${config.filename || "calendar"}.ics`;
