@@ -12,7 +12,9 @@ from card_promotions_monitor.extractors import (
     _compact_period,
     _categories,
     _ctbc_card_blocks,
-    _firstbank_cards,
+    _firstbank_category_requests,
+    _firstbank_rest_cards,
+    _firstbank_rest_page,
     _fubon_cards,
     _fubon_page_listener,
     _has_registration_requirement,
@@ -35,6 +37,7 @@ from card_promotions_monitor.extractors import (
     _yuanta_cards,
     _esun_cards,
     extract_chb,
+    extract_first,
     extract_megabank,
     normalize_registration_url,
 )
@@ -593,19 +596,122 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(cards[0]["featured_category"], "強打優惠")
         self.assertFalse(cards[1]["featured"])
 
-    def test_extracts_firstbank_activity_links(self) -> None:
-        html = (
-            '<a href="/sites/card/touch/1234567890123">'
-            "網購滿額回饋活動</a>"
-        )
-        cards = _firstbank_cards(
-            html,
+    def test_extracts_firstbank_rest_categories_and_activity_fields(self) -> None:
+        listing = """
+        <div class="row showAjaxActivityData" data-category_id_list = '0'
+          data-all_category_asset_id = '1565690672041'
+          data-category_en_name = 'all_category'>
+        <div class="row showAjaxActivityData"
+          data-category_id_list = '1565690671943'
+          data-all_category_asset_id = '1565690672041'
+          data-category_en_name = 'online_store'>
+        """
+        requests = _firstbank_category_requests(listing)
+        self.assertEqual(len(requests), 1)
+        self.assertEqual(requests[0]["categoryEnName"], "online_store")
+
+        xml = """
+        <HashMap>
+          <activityListData>
+            <activityTitle>momo購物網</activityTitle>
+            <subheadlineEditor>&lt;div&gt;單筆滿萬最高回饋5%&lt;/div&gt;</subheadlineEditor>
+            <activityContent>&lt;p&gt;活動須登錄&lt;/p&gt;</activityContent>
+            <activityDate>2026.7.1~2026.12.31</activityDate>
+            <loginDate>2026/8/14 16:00~2026/8/31 23:59</loginDate>
+            <activityUrl>/sites/card/zh_TW/1565702005868</activityUrl>
+          </activityListData>
+          <pageSpacingHtml>&lt;a title='第2頁'&gt;2&lt;/a&gt;</pageSpacingHtml>
+        </HashMap>
+        """
+        rows, max_page = _firstbank_rest_page(xml)
+        cards = _firstbank_rest_cards(
+            rows,
             "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
             "first",
-            date(2026, 7, 30),
+            date(2026, 8, 16),
+            "online_store",
         )
-        self.assertEqual(len(cards), 1)
-        self.assertEqual(cards[0]["title"], "網購滿額回饋活動")
+        self.assertEqual(max_page, 2)
+        self.assertEqual(cards[0]["title"], "momo購物網")
+        self.assertEqual(cards[0]["start"], date(2026, 7, 1))
+        self.assertEqual(cards[0]["end"], date(2026, 12, 31))
+        self.assertEqual(cards[0]["base_category"], "網購")
+        self.assertFalse(cards[0]["fetch_detail"])
+
+    def test_firstbank_extractor_uses_official_rest_pages(self) -> None:
+        listing = """
+        <div class="row showAjaxActivityData"
+          data-category_id_list = '1565690671943'
+          data-all_category_asset_id = '1565690672041'
+          data-category_en_name = 'online_store'>
+        """
+
+        def xml_page(activity_id: str, title: str, *, page_two: bool) -> str:
+            pagination = "" if page_two else "&lt;a title='第2頁'&gt;2&lt;/a&gt;"
+            return f"""
+            <HashMap>
+              <activityListData>
+                <activityTitle>{title}</activityTitle>
+                <subheadlineEditor>&lt;div&gt;滿額最高回饋5%&lt;/div&gt;</subheadlineEditor>
+                <activityContent>&lt;p&gt;活動須登錄&lt;/p&gt;</activityContent>
+                <activityDate>2026.7.1~2026.12.31</activityDate>
+                <loginDate>2026/8/14 16:00~2026/8/31 23:59</loginDate>
+                <activityUrl>/sites/card/zh_TW/{activity_id}</activityUrl>
+              </activityListData>
+              <pageSpacingHtml>{pagination}</pageSpacingHtml>
+            </HashMap>
+            """
+
+        class FakeSession:
+            def __init__(self, *args, **kwargs):
+                pass
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return None
+
+            def fetch_text(self, url, *, data=None, **kwargs):
+                if data is None:
+                    text = listing
+                else:
+                    page_two = data["pageNumberSel"] == "2"
+                    text = xml_page(
+                        "1565702005869" if page_two else "1565702005868",
+                        "第二頁活動" if page_two else "第一頁活動",
+                        page_two=page_two,
+                    )
+                return FetchResult(url, url, 200, text, "text/xml", "hash")
+
+        source = {
+            "id": "first",
+            "bank_name": "第一銀行",
+            "entry_url": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
+            "official_domains": ["firstbank.com.tw"],
+        }
+        with patch(
+            "card_promotions_monitor.extractors.SystemCurlSession",
+            FakeSession,
+        ):
+            activities, health, alerts = extract_first(
+                source,
+                now=datetime(2026, 8, 16, tzinfo=ZoneInfo("Asia/Taipei")),
+                percent_threshold=10,
+                amount_threshold=500,
+            )
+
+        self.assertEqual(len(activities), 2)
+        self.assertEqual(health.status, "complete")
+        self.assertEqual(health.activity_count, 2)
+        self.assertEqual(alerts, [])
+        self.assertEqual(activities[0].start_date, "2026-07-01")
+        self.assertEqual(activities[0].end_date, "2026-12-31")
+        self.assertEqual(len(activities[0].registration_windows), 1)
+        self.assertEqual(
+            activities[0].registration_url,
+            "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
+        )
 
     def test_extracts_chb_editor_activity_links_only(self) -> None:
         html = (

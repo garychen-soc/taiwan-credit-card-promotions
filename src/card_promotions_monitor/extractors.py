@@ -4,8 +4,10 @@ import calendar
 import hashlib
 import re
 import unicodedata
+import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, time
+from html import escape as html_escape
 from typing import Any
 from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
@@ -39,7 +41,7 @@ REGISTRATION_URL_DEFAULTS = {
     "hncb": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
     "taipei_fubon": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
     "taishin": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
-    "first": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
+    "first": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
     "chb": "https://www.bankchb.com/frontend/CampaignLog.html",
     "ubot": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
     "megabank": "https://www.megabank.com.tw/personal/credit-card/event/overview?Keywords=&Tag=Tag&creaditcard=all&discount=all&type=all&area=all",
@@ -2937,6 +2939,10 @@ def _listing_promotions(
             continue
         page = None
         text = f"{card['title']} {card['summary']}"
+        inline_detail = str(card.get("detail_html") or "")
+        if inline_detail:
+            page = parse_page(inline_detail, card["url"])
+            text = page.text
         result = fetched.get(card["url"])
         if card["fetch_detail"]:
             if isinstance(result, Exception) or result is None:
@@ -3739,36 +3745,113 @@ def extract_taishin(
     ), _invalid_url_alerts(source, invalid_urls)
 
 
-def _firstbank_cards(
-    html: str,
+FIRSTBANK_REST_URL = (
+    "https://card.firstbank.com.tw/sites/REST/controller/"
+    "CardActivityListCTL/zh/queryActivityListByCategory2"
+)
+FIRSTBANK_REST_USER_AGENT = "curl/8.7.1"
+FIRSTBANK_CATEGORY_LABELS = {
+    "department_store_shopping": "百貨購物",
+    "online_store": "網購",
+    "home_appliance": "生活消費",
+    "travel_acommodation": "旅遊交通",
+    "delicious_food": "餐飲美食",
+    "three_c_comm": "生活消費",
+    "chuming": "生活消費",
+    "activity_Taiwan_pay": "行動支付",
+    "activity_other": "其他優惠",
+}
+
+
+def _firstbank_category_requests(html: str) -> list[dict[str, str]]:
+    requests: list[dict[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    for match in re.finditer(
+        r'<div\s+class="row showAjaxActivityData"\s+'
+        r"data-category_id_list\s*=\s*'([^']+)'\s+"
+        r"data-all_category_asset_id\s*=\s*'([^']+)'\s+"
+        r"data-category_en_name\s*=\s*'([^']+)'",
+        html,
+        flags=re.I,
+    ):
+        category_ids = clean_inline(match.group(1))
+        all_category_id = clean_inline(match.group(2))
+        category_name = clean_inline(match.group(3))
+        key = (category_ids, category_name)
+        if category_ids == "0" or category_name == "all_category" or key in seen:
+            continue
+        seen.add(key)
+        requests.append({
+            "categoryIdList": category_ids,
+            "allCategoryAssetId": all_category_id,
+            "categoryEnName": category_name,
+            "pageCategoryType": category_name,
+            "searchKeyWord": "",
+        })
+    return requests
+
+
+def _firstbank_rest_page(xml_text: str) -> tuple[list[dict[str, str]], int]:
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError as exc:
+        raise RuntimeError("第一銀行官方 REST 未回傳有效 XML。") from exc
+    rows = [
+        {child.tag: child.text or "" for child in element}
+        for element in root.findall("./activityListData")
+    ]
+    pagination = root.findtext("./pageSpacingHtml") or ""
+    page_numbers = [int(value) for value in re.findall(r"第(\d+)頁", pagination)]
+    return rows, max([1, *page_numbers])
+
+
+def _firstbank_rest_cards(
+    rows: list[dict[str, str]],
     base_url: str,
     bank_id: str,
     today: date,
+    category_name: str,
 ) -> list[dict[str, Any]]:
     cards: list[dict[str, Any]] = []
-    seen: set[str] = set()
-    for match in re.finditer(
-        r'<a[^>]+href="([^"]*/sites/card/(?:touch/)?\d+[^"]*)"[^>]*>(.*?)</a>',
-        html,
-        flags=re.I | re.S,
-    ):
-        public_url = urljoin(base_url, match.group(1))
-        title = strip_html(match.group(2))
-        if public_url == base_url or len(title) < 4 or public_url in seen:
+    for row in rows:
+        public_url = urljoin(base_url, clean_inline(row.get("activityUrl", "")))
+        title = clean_inline(
+            row.get("activityTitle", "")
+            or row.get("headlineEditor", "")
+            or row.get("assetName", "")
+        )
+        if not title or not is_allowed_url(public_url, ["firstbank.com.tw"]):
             continue
-        seen.add(public_url)
+        activity_date = clean_inline(row.get("activityDate", ""))
+        parsed_period = _parse_period(activity_date, today.year)
+        start, end = parsed_period or (today, None)
+        summary = strip_html(row.get("subheadlineEditor", "")) or title
+        login_date = clean_inline(row.get("loginDate", ""))
+        detail_html = "\n".join([
+            f"<h1>{html_escape(title)}</h1>",
+            f"<p>活動期間：{html_escape(activity_date)}</p>" if activity_date else "",
+            f"<p>登錄期間：{html_escape(login_date)}</p>" if login_date else "",
+            row.get("subheadlineEditor", ""),
+            row.get("activityContent", ""),
+            row.get("scheduleContent", ""),
+            row.get("moreTextEditor", ""),
+        ])
         cards.append({
             "id": _stable_id(bank_id, public_url),
             "title": title,
-            "summary": title,
+            "summary": summary,
             "url": public_url,
-            "start": today,
-            "end": None,
-            "fingerprint": source_fingerprint(
-                bank_id,
-                {"title": title, "url": public_url},
-            ),
-            "fetch_detail": True,
+            "start": start,
+            "end": end,
+            "fingerprint": source_fingerprint(bank_id, {
+                "category": category_name,
+                "activity": row,
+            }),
+            "fetch_detail": False,
+            "detail_html": detail_html,
+            "registration_text": login_date,
+            "base_category": FIRSTBANK_CATEGORY_LABELS.get(category_name, ""),
+            "official_category": category_name,
         })
     return cards
 
@@ -3784,72 +3867,101 @@ def extract_first(
 ) -> tuple[list[Promotion], SourceHealth, list[Alert]]:
     checked_at = _now_iso(now)
     today = now.astimezone(TAIPEI).date()
+    cards: list[dict[str, Any]] = []
+    failed_categories = 0
+    failed_pages = 0
+    resolved_url = ""
     try:
-        listing = fetch_text(source["entry_url"], source["official_domains"])
-    except RuntimeError as exc:
-        if "403" in str(exc):
-            message = (
-                "指定網址存在，但第一銀行的存取防護拒絕自動化 GET；"
-                "本次不改用其他網址，待官方解除限制後再讀取。"
-            )
-            alert_type = "source_access_blocked"
-        else:
-            message = "第一銀行指定信用卡優惠入口暫時無法讀取；未改用其他網址。"
-            alert_type = "source_failed"
-        return [], SourceHealth(
-            source["id"], source["bank_name"], source["entry_url"], "",
-            "failed", 0, checked_at, message,
-        ), [Alert(
-            alert_type,
-            source["bank_name"],
-            message,
-            source["entry_url"],
-        )]
-    if re.search(r"Access Denied|You don't have permission", listing.text, re.I):
-        message = (
-            "指定網址存在，但第一銀行的存取防護拒絕自動化 GET；"
-            "本次不改用其他網址，待官方解除限制後再讀取。"
-        )
+        with SystemCurlSession(
+            source["official_domains"],
+            user_agent=FIRSTBANK_REST_USER_AGENT,
+        ) as session:
+            listing = session.fetch_text(source["entry_url"])
+            resolved_url = listing.final_url
+            category_requests = _firstbank_category_requests(listing.text)
+            if not category_requests:
+                raise RuntimeError("第一銀行公開入口找不到活動分類參數。")
+            for request_data in category_requests:
+                try:
+                    result = session.fetch_text(
+                        FIRSTBANK_REST_URL,
+                        data={**request_data, "pageNumberSel": "1"},
+                    )
+                    rows, max_page = _firstbank_rest_page(result.text)
+                except (RuntimeError, ValueError):
+                    failed_categories += 1
+                    continue
+                cards.extend(_firstbank_rest_cards(
+                    rows,
+                    listing.final_url,
+                    source["id"],
+                    today,
+                    request_data["categoryEnName"],
+                ))
+                for page_number in range(2, max_page + 1):
+                    try:
+                        result = session.fetch_text(
+                            FIRSTBANK_REST_URL,
+                            data={**request_data, "pageNumberSel": str(page_number)},
+                        )
+                        page_rows, _ = _firstbank_rest_page(result.text)
+                    except (RuntimeError, ValueError):
+                        failed_pages += 1
+                        break
+                    cards.extend(_firstbank_rest_cards(
+                        page_rows,
+                        listing.final_url,
+                        source["id"],
+                        today,
+                        request_data["categoryEnName"],
+                    ))
+    except (RuntimeError, ValueError) as exc:
+        message = f"第一銀行公開活動入口或官方 REST 暫時無法讀取：{exc}"
         return [], SourceHealth(
             source["id"], source["bank_name"], source["entry_url"],
-            listing.final_url, "failed", 0, checked_at, message,
-        ), [Alert(
-            "source_access_blocked",
-            source["bank_name"],
-            message,
-            source["entry_url"],
-        )]
-    cards = _firstbank_cards(
-        listing.text,
-        listing.final_url,
-        source["id"],
-        today,
-    )
-    if not cards:
-        message = "指定入口可讀取，但找不到信用卡活動連結；可能是官方頁面結構已變更。"
+            resolved_url, "failed", 0, checked_at, message,
+        ), [Alert("source_failed", source["bank_name"], message, source["entry_url"])]
+
+    unique_cards: list[dict[str, Any]] = []
+    seen_ids: set[str] = set()
+    for card in cards:
+        if card["id"] in seen_ids:
+            continue
+        seen_ids.add(card["id"])
+        unique_cards.append(card)
+    if not unique_cards:
+        message = "第一銀行官方 REST 可讀取，但未回傳信用卡活動。"
         return [], SourceHealth(
             source["id"], source["bank_name"], source["entry_url"],
-            listing.final_url, "failed", 0, checked_at, message,
-        ), [Alert(
-            "source_structure_changed",
-            source["bank_name"],
-            message,
-            source["entry_url"],
-        )]
+            resolved_url, "failed", 0, checked_at, message,
+        ), [Alert("source_structure_changed", source["bank_name"], message, source["entry_url"])]
     activities, failed_details, invalid_urls = _listing_promotions(
         source,
-        cards,
+        unique_cards,
         now=now,
         percent_threshold=percent_threshold,
         amount_threshold=amount_threshold,
         activity_cache=activity_cache,
         cache_stats=cache_stats,
     )
-    status = "complete" if activities and failed_details == 0 else ("partial" if activities else "failed")
-    message = _detail_failure_message(failed_details, "官方活動明細", invalid_urls)
+    status = (
+        "complete"
+        if activities and failed_categories == 0 and failed_pages == 0 and failed_details == 0
+        else ("partial" if activities else "failed")
+    )
+    issues = []
+    if failed_categories:
+        issues.append(f"{failed_categories} 個官方分類暫時無法讀取")
+    if failed_pages:
+        issues.append(f"{failed_pages} 個官方分類分頁暫時無法讀取")
+    if failed_details:
+        issues.append(_detail_failure_message(failed_details, "官方活動資料", invalid_urls))
+    if not issues:
+        issues.append("已透過官方 REST 逐分類讀取活動")
+    message = "；".join(issues)
     return activities, SourceHealth(
         source["id"], source["bank_name"], source["entry_url"],
-        listing.final_url, status, len(activities), checked_at, message,
+        resolved_url, status, len(activities), checked_at, message,
     ), _invalid_url_alerts(source, invalid_urls)
 
 
