@@ -79,7 +79,7 @@
               <summary>Apple、Google 與 Outlook 訂閱方式</summary>
               <ul>
                 <li>Apple：點「訂閱登錄提醒」，由行事曆 App 確認加入。</li>
-                <li>Google：用電腦版網頁開啟「其他日曆 → 透過網址」，貼上固定 ICS 網址；Android App 本身不能新增訂閱網址。</li>
+                <li>Google：用電腦版網頁開啟「其他日曆 → 透過網址」，貼上固定 ICS 網址；Android App 本身不能新增訂閱網址。訂閱更新並非即時，實際抓取頻率由 Google 控制。</li>
                 <li>Outlook：選「新增行事曆 → 從網路訂閱」，貼上固定 ICS 網址。</li>
                 <li>只加單筆活動時，仍可使用卡片上的 Google 或 ICS 按鈕。</li>
               </ul>
@@ -269,6 +269,7 @@
   <noscript><p class="noscript">請啟用 JavaScript 以顯示活動資料與行事曆功能。</p></noscript>
   <script src="./assets/time-state.js?v=20260816-registration-timing"></script>
   <script src="./assets/catalog-state.js?v=20260816-layered-data"></script>
-  <script src="./assets/app.js?v=20260816-calendar-feed" defer></script>
+  <script src="./assets/calendar-state.js?v=20260816-rfc5545"></script>
+  <script src="./assets/app.js?v=20260816-rfc5545" defer></script>
 </body>
 </html>
