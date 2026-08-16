@@ -10,9 +10,11 @@ from zoneinfo import ZoneInfo
 from card_promotions_monitor.cli import (
     PUBLISH_GUARD_EXIT_CODE,
     _write_public_artifacts,
+    apply_published_source_counts,
     annotate_source_registration_coverage,
     assess_publish_guard,
     classify_registration_urls,
+    deduplicate_exact_promotions,
     load_previous_public_payload,
     persist_payload,
     retain_failed_source_activities,
@@ -46,6 +48,114 @@ def candidate_payload(*, failed: int, active: int, dns_failures: int = 0) -> dic
 
 
 class PublishGuardTests(unittest.TestCase):
+    def test_deduplicates_only_complete_matching_visible_content(self) -> None:
+        common = {
+            "bank_id": "bank",
+            "bank_name": "銀行",
+            "title": "相同活動",
+            "merchant": "商店",
+            "start_date": "2026-08-01",
+            "end_date": "2026-08-31",
+            "summary": "這是足以支持安全比對的完整活動摘要，且兩筆內容完全相同。",
+            "registration_required": False,
+            "registration_windows": [],
+            "max_reward_percent": 10.0,
+        }
+        activities = [
+            {**common, "id": "a", "source_url": "https://bank.example/a"},
+            {**common, "id": "b", "source_url": "https://bank.example/b"},
+        ]
+
+        result = deduplicate_exact_promotions(activities)
+
+        self.assertEqual([item["id"] for item in result], ["a"])
+
+    def test_same_title_and_period_with_different_terms_are_not_merged(self) -> None:
+        common = {
+            "bank_id": "bank",
+            "bank_name": "銀行",
+            "title": "相同標題",
+            "merchant": "商店",
+            "start_date": "2026-08-01",
+            "end_date": "2026-08-31",
+            "registration_required": False,
+            "registration_windows": [],
+        }
+        activities = [
+            {**common, "id": "a", "source_url": "https://bank.example/a", "summary": "回饋 10%", "max_reward_percent": 10.0},
+            {**common, "id": "b", "source_url": "https://bank.example/b", "summary": "回饋 15%", "max_reward_percent": 15.0},
+        ]
+
+        result = deduplicate_exact_promotions(activities)
+
+        self.assertEqual([item["id"] for item in result], ["a", "b"])
+
+    def test_sparse_zero_reward_pages_are_not_merged(self) -> None:
+        common = {
+            "bank_id": "bank",
+            "bank_name": "銀行",
+            "title": "相同標題",
+            "merchant": "",
+            "start_date": "2026-08-01",
+            "end_date": "2026-08-31",
+            "summary": "資訊不足",
+            "registration_required": False,
+            "registration_windows": [],
+            "max_reward_percent": 0.0,
+        }
+        activities = [
+            {**common, "id": "a", "source_url": "https://bank.example/a"},
+            {**common, "id": "b", "source_url": "https://bank.example/b"},
+        ]
+
+        result = deduplicate_exact_promotions(activities)
+
+        self.assertEqual([item["id"] for item in result], ["a", "b"])
+
+    def test_published_counts_do_not_mask_failed_source_fallback(self) -> None:
+        activities = [
+            {"bank_id": "ok"},
+            {"bank_id": "failed"},
+        ]
+        health = [
+            {"id": "ok", "status": "complete", "activity_count": 2},
+            {"id": "failed", "status": "failed", "activity_count": 0},
+        ]
+
+        apply_published_source_counts(activities, health)
+
+        self.assertEqual(health[0]["activity_count"], 1)
+        self.assertEqual(health[1]["activity_count"], 0)
+
+    def test_cross_page_match_requires_the_complete_page_lists_to_match(self) -> None:
+        shared = {
+            "bank_id": "bank",
+            "bank_name": "銀行",
+            "title": "共同活動",
+            "merchant": "商店",
+            "start_date": "2026-08-01",
+            "end_date": "2026-08-31",
+            "summary": "完整且相同的活動內容，不能因其他頁面項目不同而跨頁合併。",
+            "registration_required": False,
+            "registration_windows": [],
+            "max_reward_percent": 10.0,
+        }
+        activities = [
+            {**shared, "id": "a", "source_url": "https://bank.example/a"},
+            {**shared, "id": "b", "source_url": "https://bank.example/b"},
+            {
+                **shared,
+                "id": "b-extra",
+                "source_url": "https://bank.example/b",
+                "title": "另一個活動",
+                "summary": "另一筆足以改變整頁活動清單的完整內容。",
+            },
+        ]
+
+        result = deduplicate_exact_promotions(activities)
+
+        self.assertEqual([item["id"] for item in result], ["a", "b", "b-extra"])
+
     def test_source_registration_coverage_is_explicit(self) -> None:
         activities = [
             {"bank_id": "bank", "registration_required": True, "registration_windows": [{"start": "2026-08-01T10:00:00+08:00"}]},

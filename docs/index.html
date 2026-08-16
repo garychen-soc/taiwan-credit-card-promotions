@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://garychen-soc.github.io/taiwan-credit-card-promotions/assets/og.png">
   <title>刷卡活動登錄雷達</title>
-  <link rel="stylesheet" href="./assets/app.css?v=20260816-registration-timing">
+  <link rel="stylesheet" href="./assets/app.css?v=20260816-calendar-feed">
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳至主要內容</a>
@@ -69,7 +69,23 @@
             <p class="section-kicker">DON'T MISS THE WINDOW</p>
             <h2 id="agenda-title">近期登錄</h2>
           </div>
-          <p>所有時間均為台北時間，下載 `.ics` 即含 10 分鐘前提醒。</p>
+          <div class="agenda-subscription">
+            <p>所有時間均為台北時間，登錄事件固定 15 分鐘並於 10 分鐘前提醒。</p>
+            <div class="subscription-actions">
+              <a href="webcal://garychen-soc.github.io/taiwan-credit-card-promotions/calendars/registration.ics">訂閱登錄提醒</a>
+              <a href="./calendars/registration.ics" download>下載固定 ICS</a>
+            </div>
+            <details>
+              <summary>Apple、Google 與 Outlook 訂閱方式</summary>
+              <ul>
+                <li>Apple：點「訂閱登錄提醒」，由行事曆 App 確認加入。</li>
+                <li>Google：用電腦版網頁開啟「其他日曆 → 透過網址」，貼上固定 ICS 網址；Android App 本身不能新增訂閱網址。</li>
+                <li>Outlook：選「新增行事曆 → 從網路訂閱」，貼上固定 ICS 網址。</li>
+                <li>只加單筆活動時，仍可使用卡片上的 Google 或 ICS 按鈕。</li>
+              </ul>
+              <code>https://garychen-soc.github.io/taiwan-credit-card-promotions/calendars/registration.ics</code>
+            </details>
+          </div>
         </div>
 
         <div class="agenda-grid">
@@ -252,6 +268,6 @@
   <noscript><p class="noscript">請啟用 JavaScript 以顯示活動資料與行事曆功能。</p></noscript>
   <script src="./assets/time-state.js?v=20260816-registration-timing"></script>
   <script src="./assets/catalog-state.js?v=20260816-layered-data"></script>
-  <script src="./assets/app.js?v=20260816-registration-timing" defer></script>
+  <script src="./assets/app.js?v=20260816-calendar-feed" defer></script>
 </body>
 </html>

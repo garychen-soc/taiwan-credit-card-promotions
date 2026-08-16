@@ -1,6 +1,6 @@
 {
   "schema_version": 8,
-  "generated_at": "2026-08-16T10:02:00+08:00",
+  "generated_at": "2026-08-16T10:18:32+08:00",
   "bank_id": "dbs",
   "bank_name": "星展銀行",
   "activity_count": 17,
@@ -631,76 +631,6 @@
       "detail_ref": "activities/dbs-8b60e9db0492.json"
     },
     {
-      "id": "dbs-68d63ad308a3",
-      "bank_id": "dbs",
-      "bank_name": "星展銀行",
-      "title": "網購星精彩 分期0%利率",
-      "merchant": "樂天市場",
-      "categories": [
-        "網購",
-        "行動支付",
-        "生活消費",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "分期0%利率 刷星展卡最高回饋 NT$2,500 活動期間： 2026/7/1～2026/9/30 注意事項 免責聲明",
-      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_08_2.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-07-24T16:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展",
-          "reminder_minutes": 10
-        },
-        {
-          "start": "2026-08-24T16:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/24(五)16:00開始登錄;8月活動於8/24(一) 16:00整開始登錄;9月活動於9/24(四)16:00開始登錄,名額有限,額滿即止。 於指定電商及指定金流合作品牌網站刷星展信用卡分期達指定門檻並於指定期間內完成登錄,即可享刷卡金回饋。本活動回饋資格採正附卡合計,每一歸戶每月回",
-          "reminder_minutes": 10
-        },
-        {
-          "start": "2026-09-24T16:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/",
-          "reminder_minutes": 10
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 2500,
-      "featured": true,
-      "tags": [
-        "樂天市場",
-        "星展銀行",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/dbs-68d63ad308a3.json"
-    },
-    {
       "id": "dbs-3cf736ea1950",
       "bank_id": "dbs",
       "bank_name": "星展銀行",
@@ -769,6 +699,76 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/dbs-3cf736ea1950.json"
+    },
+    {
+      "id": "dbs-68d63ad308a3",
+      "bank_id": "dbs",
+      "bank_name": "星展銀行",
+      "title": "網購星精彩 分期0%利率",
+      "merchant": "樂天市場",
+      "categories": [
+        "網購",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "start_date": "2026-07-01",
+      "end_date": "2026-09-30",
+      "summary": "分期0%利率 刷星展卡最高回饋 NT$2,500 活動期間： 2026/7/1～2026/9/30 注意事項 免責聲明",
+      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_08_2.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-07-24T16:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展",
+          "reminder_minutes": 10
+        },
+        {
+          "start": "2026-08-24T16:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/24(五)16:00開始登錄;8月活動於8/24(一) 16:00整開始登錄;9月活動於9/24(四)16:00開始登錄,名額有限,額滿即止。 於指定電商及指定金流合作品牌網站刷星展信用卡分期達指定門檻並於指定期間內完成登錄,即可享刷卡金回饋。本活動回饋資格採正附卡合計,每一歸戶每月回",
+          "reminder_minutes": 10
+        },
+        {
+          "start": "2026-09-24T16:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/",
+          "reminder_minutes": 10
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 2500,
+      "featured": true,
+      "tags": [
+        "樂天市場",
+        "星展銀行",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/dbs-68d63ad308a3.json"
     },
     {
       "id": "dbs-66dbc2bab6f7",
@@ -841,76 +841,6 @@
       "detail_ref": "activities/dbs-66dbc2bab6f7.json"
     },
     {
-      "id": "dbs-2f81cacbf6e3",
-      "bank_id": "dbs",
-      "bank_name": "星展銀行",
-      "title": "網購星精彩 分期0%利率",
-      "merchant": "博客來網路書店",
-      "categories": [
-        "網購",
-        "行動支付",
-        "生活消費",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "分期0%利率 刷星展卡最高回饋 NT$2,500 活動期間： 2026/7/1～2026/9/30 注意事項 免責聲明",
-      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_09.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-07-24T16:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展",
-          "reminder_minutes": 10
-        },
-        {
-          "start": "2026-08-24T16:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/24(五)16:00開始登錄;8月活動於8/24(一) 16:00整開始登錄;9月活動於9/24(四)16:00開始登錄,名額有限,額滿即止。 於指定電商及指定金流合作品牌網站刷星展信用卡分期達指定門檻並於指定期間內完成登錄,即可享刷卡金回饋。本活動回饋資格採正附卡合計,每一歸戶每月回",
-          "reminder_minutes": 10
-        },
-        {
-          "start": "2026-09-24T16:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/",
-          "reminder_minutes": 10
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 2500,
-      "featured": true,
-      "tags": [
-        "博客來網路書店",
-        "星展銀行",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/dbs-2f81cacbf6e3.json"
-    },
-    {
       "id": "dbs-a7cc022e4294",
       "bank_id": "dbs",
       "bank_name": "星展銀行",
@@ -979,6 +909,76 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/dbs-a7cc022e4294.json"
+    },
+    {
+      "id": "dbs-2f81cacbf6e3",
+      "bank_id": "dbs",
+      "bank_name": "星展銀行",
+      "title": "網購星精彩 分期0%利率",
+      "merchant": "博客來網路書店",
+      "categories": [
+        "網購",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "start_date": "2026-07-01",
+      "end_date": "2026-09-30",
+      "summary": "分期0%利率 刷星展卡最高回饋 NT$2,500 活動期間： 2026/7/1～2026/9/30 注意事項 免責聲明",
+      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_09.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-07-24T16:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展",
+          "reminder_minutes": 10
+        },
+        {
+          "start": "2026-08-24T16:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/24(五)16:00開始登錄;8月活動於8/24(一) 16:00整開始登錄;9月活動於9/24(四)16:00開始登錄,名額有限,額滿即止。 於指定電商及指定金流合作品牌網站刷星展信用卡分期達指定門檻並於指定期間內完成登錄,即可享刷卡金回饋。本活動回饋資格採正附卡合計,每一歸戶每月回",
+          "reminder_minutes": 10
+        },
+        {
+          "start": "2026-09-24T16:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "(7月活動於7/24下午4點整開始登錄; 8月活動於8/24登錄下午4點整開始登錄; 9月活動於9/24下午4點整開始登錄) 【91APP 累積消費加碼活動】7/1~9/30 * 累積分期加碼活動於9/24下午4點整開始登錄 * 本活動每月須~「星展Card+信用卡數位服務」進行登錄:需選擇登錄名稱「網購星精彩」活動,7月活動於7/",
+          "reminder_minutes": 10
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 2500,
+      "featured": true,
+      "tags": [
+        "博客來網路書店",
+        "星展銀行",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/dbs-2f81cacbf6e3.json"
     },
     {
       "id": "dbs-7256282f8689",
