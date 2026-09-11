@@ -10,7 +10,7 @@ CALENDAR_REMINDER_MINUTES = 10
 
 def _escape_ics(value: object) -> str:
     return (
-        str(value or "")
+        str(value or "").replace("\r\n", "\n").replace("\r", "\n")
         .replace("\\", "\\\\")
         .replace("\n", "\\n")
         .replace(",", "\\,")
@@ -89,8 +89,9 @@ def _event_lines(
     generated_at: datetime,
     *,
     recurrence_count: int | None = None,
+    label: str = "登錄",
 ) -> list[str]:
-    title = f"[登錄] {activity.get('bank_name', '')}｜{activity.get('title', '')}"
+    title = f"[{label}] {activity.get('bank_name', '')}｜{activity.get('title', '')}"
     official_url = str(activity.get("source_url") or "")
     registration_url = str(activity.get("registration_url") or official_url)
     timing_note = (
@@ -142,7 +143,7 @@ def build_registration_feed(payload: dict) -> str:
         "X-PUBLISHED-TTL:PT6H",
     ]
     for activity in payload.get("activities", []):
-        if not isinstance(activity, dict) or not activity.get("registration_required"):
+        if not isinstance(activity, dict) or not activity.get("registration_required") or activity.get("official_status") in {"ended_by_official", "cancelled"}:
             continue
         windows: list[tuple[dict, datetime, datetime | None]] = []
         for window in activity.get("registration_windows", []):
@@ -158,6 +159,7 @@ def build_registration_feed(payload: dict) -> str:
             "per_period_reregister"
             in activity.get("registration_timing_contracts", [])
             and _consecutive_monthly(starts)
+            and len({item[0].get("label") for item in windows}) == 1
         )
         if is_monthly:
             if starts[-1] >= generated_at:
@@ -166,11 +168,12 @@ def build_registration_feed(payload: dict) -> str:
                     starts[0],
                     generated_at,
                     recurrence_count=len(starts),
+                    label=str(windows[0][0].get("label") or "登錄"),
                 ))
             continue
-        for _, start, _ in windows:
+        for window, start, _ in windows:
             if start < generated_at:
                 continue
-            lines.extend(_event_lines(activity, start, generated_at))
+            lines.extend(_event_lines(activity, start, generated_at, label=str(window.get("label") or "登錄")))
     lines.extend(["END:VCALENDAR", ""])
     return "\r\n".join(_fold_ics_line(line) for line in lines)

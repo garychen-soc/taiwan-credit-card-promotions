@@ -12,7 +12,6 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from http.cookies import SimpleCookie
 from dataclasses import dataclass
 
 
@@ -122,11 +121,13 @@ class FetchSession:
                     )
             except (
                 urllib.error.URLError,
-                urllib.error.HTTPError,
-                TimeoutError,
+                http.client.HTTPException,
+                OSError,
                 ValueError,
             ) as exc:
                 last_error = exc
+                if isinstance(exc, ValueError) or (isinstance(exc, urllib.error.HTTPError) and exc.code not in {408, 429} and exc.code < 500):
+                    break
                 if attempt + 1 < attempts:
                     time.sleep(0.8 * (attempt + 1))
         raise RuntimeError(f"Failed to fetch {url}: {last_error}") from last_error
@@ -152,7 +153,7 @@ class PersistentHTTPSession:
     ) -> None:
         self.domains = [item.lower().rstrip(".") for item in allowed_domains]
         self.user_agent = user_agent
-        self.cookies: dict[str, str] = {}
+        self.cookies = http.cookiejar.CookieJar()
         self.connections: dict[str, http.client.HTTPSConnection] = {}
 
     def close(self) -> None:
@@ -216,15 +217,14 @@ class PersistentHTTPSession:
                 "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.7",
                 "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.5",
             }
-            if self.cookies:
-                request_headers["Cookie"] = "; ".join(
-                    f"{key}={value}" for key, value in self.cookies.items()
-                )
             if body is not None:
                 request_headers["Content-Type"] = (
                     "application/x-www-form-urlencoded; charset=UTF-8"
                 )
             request_headers.update(headers or {})
+            cookie_request = urllib.request.Request(current_url, data=body, headers=request_headers, method=method)
+            self.cookies.add_cookie_header(cookie_request)
+            request_headers = dict(cookie_request.header_items())
             response = None
             last_error: Exception | None = None
             for attempt in range(attempts):
@@ -242,6 +242,7 @@ class PersistentHTTPSession:
                         headers=request_headers,
                     )
                     response = connection.getresponse()
+                    response_body = response.read(max_bytes + 1)
                     break
                 except (
                     http.client.HTTPException,
@@ -249,18 +250,14 @@ class PersistentHTTPSession:
                     TimeoutError,
                 ) as exc:
                     last_error = exc
+                    response = None
             if response is None:
                 raise RuntimeError(
                     f"Persistent HTTPS fetch failed for {current_url}: {last_error}"
                 ) from last_error
-            response_body = response.read(max_bytes + 1)
             if len(response_body) > max_bytes:
                 raise ValueError(f"Response exceeded {max_bytes} bytes")
-            for raw_cookie in response.headers.get_all("Set-Cookie", []):
-                parsed_cookie = SimpleCookie()
-                parsed_cookie.load(raw_cookie)
-                for key, morsel in parsed_cookie.items():
-                    self.cookies[key] = morsel.value
+            self.cookies.extract_cookies(response, cookie_request)
             if 300 <= response.status < 400 and response.headers.get("Location"):
                 target = urllib.parse.urljoin(
                     current_url,
@@ -394,6 +391,8 @@ class SystemCurlSession:
                 )
                 if not is_allowed_url(target, self.domains):
                     raise ValueError(f"Redirected outside official domains: {target}")
+                if status_code in {301, 302, 303}:
+                    data = None
                 current_url = target
                 continue
             if len(body) > max_bytes:
@@ -468,8 +467,10 @@ def fetch_text(
                     content_type=response.headers.get_content_type(),
                     content_hash=hashlib.sha256(body).hexdigest(),
                 )
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError) as exc:
+        except (urllib.error.URLError, OSError, http.client.HTTPException, ValueError) as exc:
             last_error = exc
+            if isinstance(exc, ValueError) or (isinstance(exc, urllib.error.HTTPError) and exc.code not in {408, 429} and exc.code < 500):
+                break
             if attempt + 1 < attempts:
                 time.sleep(0.8 * (attempt + 1))
     if last_error and "CERTIFICATE_VERIFY_FAILED" in str(last_error):
@@ -550,6 +551,8 @@ def _fetch_with_system_curl(
             target = urllib.parse.urljoin(effective_url or current_url, redirect_url)
             if not is_allowed_url(target, allowed_domains):
                 raise ValueError(f"Redirected outside official domains: {target}")
+            if status_code in {301, 302, 303}:
+                data = None
             current_url = target
             continue
         if len(body) > max_bytes:

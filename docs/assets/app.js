@@ -233,6 +233,8 @@
     const now = new Date();
     const start = parseDate(window.start);
     const end = parseDate(window.end, window.precision === "date");
+    if (window.precision === "date") return "時間未確認";
+    if (String(window.label || "").includes("截止")) return start && start <= now ? "已截止" : "即將截止";
     if (end && end < now) return "已結束";
     if (start && start <= now && !end) return "已開放";
     if (start && start <= now && (!end || end >= now)) return "登錄中";
@@ -277,6 +279,7 @@
   function agendaItemsFor(dateKey) {
     const values = [];
     state.activities.forEach((activity) => {
+      if (activity.lifecycle === "ended") return;
       (activity.registration_windows || []).forEach((window) => {
         if (!window.start || !window.start.startsWith(dateKey)) return;
         values.push({

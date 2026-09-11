@@ -49,13 +49,18 @@ def validate() -> dict[str, int]:
             f"{expected_index_count}"
         )
 
+    by_id: dict[str, dict] = {}
     activity_ids: set[str] = set()
     detail_refs: set[str] = set()
     bank_activity_count = 0
     for bank_id, reference in bank_files.items():
         if not isinstance(reference, str) or not reference.startswith("banks/"):
             raise ValueError(f"invalid bank shard reference for {bank_id}: {reference!r}")
+        if not (DATA_ROOT / reference).resolve().is_relative_to(DATA_ROOT.resolve()):
+            raise ValueError("bank reference escapes data root")
         bank = load_json(DATA_ROOT / reference)
+        if not index.get("generated_at") or bank.get("generated_at") != index["generated_at"]:
+            raise ValueError(f"generation mismatch in {reference}")
         if bank.get("schema_version") != schema_version:
             raise ValueError(f"schema_version mismatch in {reference}")
         if bank.get("bank_id") != bank_id:
@@ -78,9 +83,16 @@ def validate() -> dict[str, int]:
             if activity_id in activity_ids:
                 raise ValueError(f"duplicate activity id: {activity_id}")
             activity_ids.add(activity_id)
+            by_id[activity_id] = activity
             detail_ref = activity.get("detail_ref")
             if isinstance(detail_ref, str) and detail_ref:
+                if Path(detail_ref).stem != activity_id:
+                    raise ValueError(f"detail reference does not match {activity_id}")
                 detail_refs.add(detail_ref)
+
+    index_ids = [item.get("id") for item in index_activities]
+    if len(set(index_ids)) != len(index_ids) or any(by_id.get(item.get("id")) != item for item in index_activities):
+        raise ValueError("registration index does not match bank shards")
 
     expected_activity_count = int(catalog.get("activity_count") or 0)
     if bank_activity_count != expected_activity_count:
@@ -92,6 +104,8 @@ def validate() -> dict[str, int]:
     for reference in detail_refs:
         if not reference.startswith("activities/"):
             raise ValueError(f"invalid detail reference: {reference!r}")
+        if not (DATA_ROOT / reference).resolve().is_relative_to(DATA_ROOT.resolve()):
+            raise ValueError("detail reference escapes data root")
         detail = load_json(DATA_ROOT / reference)
         if detail.get("schema_version") != schema_version:
             raise ValueError(f"schema_version mismatch in {reference}")

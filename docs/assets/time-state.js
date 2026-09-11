@@ -15,6 +15,7 @@
   }
 
   function lifecycleFor(activity, now = new Date()) {
+    if (["ended_by_official", "cancelled"].includes(activity.official_status)) return "ended";
     const today = taipeiDateKey(now);
     if (activity.end_date && activity.end_date < today) return "ended";
     if (activity.start_date && activity.start_date > today) return "upcoming";

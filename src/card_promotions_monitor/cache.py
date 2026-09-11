@@ -131,7 +131,8 @@ def reuse_cached_promotion(
         checked_at = datetime.fromisoformat(checked_text) if isinstance(checked_text, str) else None
     except ValueError:
         checked_at = None
-    if checked_at is None or now - checked_at > timedelta(days=CACHE_MAX_AGE_DAYS):
+    if (checked_at is None or checked_at.utcoffset() is None or now.utcoffset() is None
+            or not timedelta(0) <= now - checked_at <= timedelta(days=CACHE_MAX_AGE_DAYS)):
         stats["cache_misses"] = int(stats.get("cache_misses", 0)) + 1
         return None
     if _near_activity_boundary(cached, now.date()):

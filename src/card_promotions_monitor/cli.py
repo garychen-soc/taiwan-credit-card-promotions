@@ -88,6 +88,8 @@ def _is_current_activity(item: dict, today: date) -> bool:
 
 
 def _lifecycle_for(item: dict, today: date) -> str:
+    if item.get("official_status") in {"ended_by_official", "cancelled"}:
+        return "ended"
     start_text = str(item.get("start_date") or "")
     end_text = str(item.get("end_date") or "")
     try:
@@ -146,7 +148,10 @@ def retain_failed_source_activities(
 
 
 def assess_publish_guard(payload: dict, previous_payload: dict | None) -> dict:
-    health = payload.get("source_health", [])
+    raw_health = payload.get("source_health", [])
+    health = [item for item in raw_health if isinstance(item, dict)] if isinstance(raw_health, list) else []
+    invalid_health = not health or len(health) != len(raw_health) or any(
+        item.get("status") not in {"complete", "partial", "failed"} for item in health)
     source_total = len(health)
     source_failed = sum(1 for item in health if item.get("status") == "failed")
     dns_failures = sum(
@@ -198,7 +203,7 @@ def assess_publish_guard(payload: dict, previous_payload: dict | None) -> dict:
         is not None
     )
 
-    reason_codes: list[str] = []
+    reason_codes: list[str] = ["invalid_source_health"] if invalid_health else []
     if source_total and dns_failures >= max(3, ceil(source_total * 0.5)):
         reason_codes.append("systemic_dns_failure")
     if source_total and source_failed >= ceil(source_total * 0.8):
@@ -269,7 +274,6 @@ INTERNAL_ACTIVITY_FIELDS = {
     "source_fingerprint",
     "observed_at",
     "last_detail_checked_at",
-    "official_status",
 }
 DERIVED_ACTIVITY_FIELDS = {"lifecycle", "high_return"}
 DETAIL_ACTIVITY_FIELDS = {"registration_text", "terms_raw", "terms_sections"}
@@ -583,7 +587,14 @@ def annotate_source_registration_coverage(
     for source in source_health:
         values = by_source.get(str(source.get("id") or ""), [])
         required = [item for item in values if item.get("registration_required")]
-        confirmed = [item for item in required if item.get("registration_windows")]
+        def precise(window):
+            if window.get("precision") != "datetime":
+                return False
+            try:
+                return datetime.fromisoformat(str(window.get("start"))).utcoffset() is not None
+            except (ValueError, TypeError):
+                return False
+        confirmed = [item for item in required if any(precise(w) for w in item.get("registration_windows", []))]
         source["registration_required_count"] = len(required)
         source["registration_time_confirmed_count"] = len(confirmed)
         source["registration_time_coverage_percent"] = (

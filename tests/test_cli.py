@@ -158,7 +158,7 @@ class PublishGuardTests(unittest.TestCase):
 
     def test_source_registration_coverage_is_explicit(self) -> None:
         activities = [
-            {"bank_id": "bank", "registration_required": True, "registration_windows": [{"start": "2026-08-01T10:00:00+08:00"}]},
+            {"bank_id": "bank", "registration_required": True, "registration_windows": [{"start": "2026-08-01T10:00:00+08:00", "precision": "datetime"}]},
             {"bank_id": "bank", "registration_required": True, "registration_windows": []},
             {"bank_id": "bank", "registration_required": False, "registration_windows": []},
         ]

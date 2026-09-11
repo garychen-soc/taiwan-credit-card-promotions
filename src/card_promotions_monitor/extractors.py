@@ -418,6 +418,8 @@ def _registration_windows(
     period_end = activity_end or date(activity_year, 12, 31)
 
     def add_recurring(day: date, hour: int, minute: int, label: str, source_text: str) -> None:
+        if not 0 <= hour <= 23 or not 0 <= minute <= 59:
+            return
         if day < period_start or day > period_end:
             return
         start = datetime.combine(day, time(hour, minute), tzinfo=TAIPEI)
@@ -946,6 +948,11 @@ def reuse_cached_promotion(*args: Any, **kwargs: Any) -> Promotion | None:
     if isinstance(stats, dict):
         key = "reparsed_activities" if reparsed else "cached_inputs_missing"
         stats[key] = int(stats.get(key, 0)) + 1
+    if not reparsed and kwargs.get("avoids_detail_request"):
+        if isinstance(stats, dict):
+            stats["reused_activities"] = max(0, stats.get("reused_activities", 0) - 1)
+            stats["detail_requests_avoided"] = max(0, stats.get("detail_requests_avoided", 0) - 1)
+        return None
     return promotion
 
 
@@ -1102,22 +1109,6 @@ def extract_dbs(
             avoids_detail_request=True,
         )
         if cached:
-            cached_start = _date_from_iso(cached.start_date) or today
-            cached_end = _date_from_iso(cached.end_date)
-            cached.registration_windows = _registration_windows(
-                cached.registration_text,
-                cached_start.year,
-                cached_start,
-                cached_end,
-            )
-            cached.registration_required = bool(
-                cached.registration_windows
-                or _has_registration_requirement(cached.registration_text)
-            )
-            cached.review_required = (
-                cached.registration_required and not cached.registration_windows
-            )
-            cached.featured = cached.registration_required or cached.high_return
             activities.append(cached)
             continue
         record_detail_requests(stats)
@@ -1360,6 +1351,7 @@ def extract_cathay(
         if cached:
             activities.append(cached)
             continue
+        detail_verified = False
         model: Any = {}
         detail_props: dict[str, Any] = {}
         detail_links: list[dict[str, str]] = []
@@ -1368,6 +1360,7 @@ def extract_cathay(
             _, model = fetch_json(model_url, source["official_domains"])
             detail_props = _find_campaign_properties(model)
             detail_links = _model_links(model, public_url)
+            detail_verified = bool(detail_props)
         except Exception as exc:
             failed_details += 1
             invalid_url = _invalid_detail_url(exc)
@@ -1453,7 +1446,9 @@ def extract_cathay(
             official_status="ended_by_official" if explicit_ended else "published",
             review_required=registration_required and not windows,
             source_fingerprint=fingerprint,
-            last_detail_checked_at=checked_at,
+            last_detail_checked_at=checked_at if detail_verified else "",
+            needs_review=not detail_verified,
+            review_message="" if detail_verified else "官方明細未驗證，暫用列表資料",
         ))
 
     status = "complete" if failed_details == 0 and activities else ("partial" if activities else "failed")
@@ -1521,10 +1516,11 @@ def _parse_period(value: str, default_year: int) -> tuple[date, date | None] | N
     start_year = int(match.group(1) or default_year)
     end_year = int(match.group(4) or start_year)
     try:
-        return (
-            date(start_year, int(match.group(2)), int(match.group(3))),
-            date(end_year, int(match.group(5)), int(match.group(6))),
-        )
+        start = date(start_year, int(match.group(2)), int(match.group(3)))
+        end = date(end_year, int(match.group(5)), int(match.group(6)))
+        if end < start and not match.group(4):
+            end = date(end_year + 1, int(match.group(5)), int(match.group(6)))
+        return (start, end) if start <= end else None
     except ValueError:
         return None
 
@@ -1905,25 +1901,10 @@ def extract_sinopac(
     for card in cards:
         if card["cached"]:
             cached = card["cached"]
-            cached_start = _date_from_iso(cached.start_date) or today
-            cached_end = _date_from_iso(cached.end_date)
-            cached.registration_windows = _registration_windows(
-                cached.registration_text,
-                cached_start.year,
-                cached_start,
-                cached_end,
-            )
-            cached.registration_required = bool(
-                cached.registration_windows
-                or _has_registration_requirement(cached.registration_text)
-            )
-            cached.review_required = (
-                cached.registration_required and not cached.registration_windows
-            )
-            cached.featured = cached.registration_required or cached.high_return
             activities.append(cached)
             continue
         result = fetched[card["url"]]
+        detail_verified = not isinstance(result, Exception)
         if isinstance(result, Exception):
             failed_details += 1
             invalid_url = _invalid_detail_url(result)
@@ -1981,8 +1962,10 @@ def extract_sinopac(
             tags=list(dict.fromkeys([card["title"], source["bank_name"], *categories])),
             review_required=registration_required and not windows,
             source_fingerprint=card["fingerprint"],
-            last_detail_checked_at=checked_at,
+            last_detail_checked_at=checked_at if detail_verified else "",
         )
+        if not detail_verified:
+            _append_review_issues(promotion, ["官方明細未驗證，暫用列表資料，需重新取得明細"])
         _promotion_invariants(promotion)
         activities.append(promotion)
 
@@ -2110,6 +2093,7 @@ def extract_scsb(
             activities.append(card["cached"])
             continue
         result = fetched[card["url"]]
+        detail_verified = not isinstance(result, Exception)
         if isinstance(result, Exception):
             failed_details += 1
             invalid_url = _invalid_detail_url(result)
@@ -2168,8 +2152,10 @@ def extract_scsb(
             tags=list(dict.fromkeys([card["title"], source["bank_name"], *categories])),
             review_required=registration_required and not windows,
             source_fingerprint=card["fingerprint"],
-            last_detail_checked_at=checked_at,
+            last_detail_checked_at=checked_at if detail_verified else "",
         )
+        if not detail_verified:
+            _append_review_issues(promotion, ["官方明細未驗證，暫用列表資料，需重新取得明細"])
         _promotion_invariants(promotion)
         activities.append(promotion)
 
@@ -2289,22 +2275,6 @@ def extract_obank(
             avoids_detail_request=False,
         )
         if cached:
-            cached_start = _date_from_iso(cached.start_date) or today
-            cached_end = _date_from_iso(cached.end_date)
-            cached.registration_windows = _registration_windows(
-                cached.registration_text,
-                cached_start.year,
-                cached_start,
-                cached_end,
-            )
-            cached.registration_required = bool(
-                cached.registration_windows
-                or _has_registration_requirement(cached.registration_text)
-            )
-            cached.review_required = (
-                cached.registration_required and not cached.registration_windows
-            )
-            cached.featured = cached.registration_required or cached.high_return
             activities.append(cached)
             continue
         registration_text = _registration_excerpt(description)
@@ -2422,7 +2392,8 @@ def extract_yuanta(
 
     page_count_match = re.search(r'name="pA"\s+value="(\d+)"', first_page.text, flags=re.I)
     item_count_match = re.search(r'name="iA"\s+value="(\d+)"', first_page.text, flags=re.I)
-    page_count = max(1, min(int(page_count_match.group(1)) if page_count_match else 1, 30))
+    requested_pages = max(1, int(page_count_match.group(1)) if page_count_match else 1)
+    page_count = min(requested_pages, 30)
     item_count = int(item_count_match.group(1)) if item_count_match else 0
     page_results: list[Any] = [first_page]
     if page_count > 1:
@@ -2439,7 +2410,7 @@ def extract_yuanta(
             )
         )
 
-    failed_listing_pages = sum(isinstance(result, Exception) for result in page_results)
+    failed_listing_pages = sum(isinstance(result, Exception) for result in page_results) + max(0, requested_pages - page_count)
     cards: list[dict[str, Any]] = []
     seen_urls: set[str] = set()
     for result in page_results:
@@ -2474,26 +2445,10 @@ def extract_yuanta(
     for card in cards:
         if card["cached"]:
             cached = card["cached"]
-            cached_start = _date_from_iso(cached.start_date) or today
-            cached_end = _date_from_iso(cached.end_date)
-            cached.registration_windows = _registration_windows(
-                cached.registration_text,
-                cached_start.year,
-                cached_start,
-                cached_end,
-            )
-            cached.registration_required = bool(
-                cached.registration_windows
-                or _has_registration_requirement(cached.registration_text)
-            )
-            cached.review_required = (
-                cached.registration_required and not cached.registration_windows
-            )
-            cached.featured = cached.registration_required or cached.high_return
-            if cached.lifecycle != "ended":
-                activities.append(cached)
+            activities.append(cached)
             continue
         result = fetched[card["url"]]
+        detail_verified = not isinstance(result, Exception)
         if isinstance(result, Exception):
             failed_details += 1
             invalid_url = _invalid_detail_url(result)
@@ -2557,7 +2512,9 @@ def extract_yuanta(
             tags=list(dict.fromkeys([card["title"], source["bank_name"], *categories])),
             review_required=registration_required and not windows,
             source_fingerprint=card["fingerprint"],
-            last_detail_checked_at=checked_at,
+            last_detail_checked_at=checked_at if detail_verified else "",
+            needs_review=not detail_verified,
+            review_message="" if detail_verified else "官方明細未驗證，暫用列表資料",
         ))
 
     status = (
@@ -2647,7 +2604,8 @@ def extract_esun(
     total_match = re.search(r'id="total"\s+value="(\d+)"', api_first.text, flags=re.I)
     total = int(total_match.group(1)) if total_match else 0
     page_size = max(1, len(_esun_cards(api_first.text, entry.final_url, source["id"])))
-    page_count = max(1, min((total + page_size - 1) // page_size if total else 1, 60))
+    requested_pages = max(1, (total + page_size - 1) // page_size if total else 1)
+    page_count = min(requested_pages, 60)
     page_results: list[Any] = [api_first]
     if page_count > 1:
         payloads = [
@@ -2669,7 +2627,7 @@ def extract_esun(
             )
         )
 
-    failed_listing_pages = sum(isinstance(result, Exception) for result in page_results)
+    failed_listing_pages = sum(isinstance(result, Exception) for result in page_results) + max(0, requested_pages - page_count)
     cards: list[dict[str, Any]] = []
     seen_urls: set[str] = set()
     for result in page_results:
@@ -2719,6 +2677,7 @@ def extract_esun(
                     activities.append(cached)
             continue
         result = fetched[card["url"]]
+        detail_verified = not isinstance(result, Exception)
         if isinstance(result, Exception):
             failed_details += 1
             invalid_url = _invalid_detail_url(result)
@@ -2796,8 +2755,10 @@ def extract_esun(
                 tags=list(dict.fromkeys([card["title"], heading, source["bank_name"], *categories])),
                 review_required=registration_required and not windows,
                 source_fingerprint=card["fingerprint"],
-                last_detail_checked_at=checked_at,
+                last_detail_checked_at=checked_at if detail_verified else "",
             )
+            if not detail_verified:
+                _append_review_issues(promotion, ["官方明細未驗證，暫用列表資料，需重新取得明細"])
             _promotion_invariants(promotion)
             activities.append(promotion)
 
@@ -2892,6 +2853,7 @@ def extract_sunny(
             avoids_detail_request=True,
         )
         if cached:
+            _append_review_issues(cached, ["靜態官方索引快照，內容未於本輪重新驗證"])
             activities.append(cached)
             continue
         registration_required = bool(item.get("registration_required"))
@@ -2937,12 +2899,14 @@ def extract_sunny(
             tags=list(dict.fromkeys([title, source["bank_name"], *categories])),
             review_required=registration_required and not windows,
             source_fingerprint=fingerprint,
-            last_detail_checked_at=checked_at,
+            last_detail_checked_at=str(item.get("verified_at") or ""),
+            needs_review=True,
+            review_message="靜態官方索引快照，內容未於本輪重新驗證",
         ))
 
     if access_error:
         message = (
-            "指定入口存在，但 Cloudflare 對自動化請求回傳 403；"
+            "本輪無法讀取指定官方入口；"
             "本次沿用已驗證的官方索引快照，待官方解除限制後恢復即時讀取。"
         )
         alert = Alert(
@@ -3262,6 +3226,7 @@ def _listing_promotions(
                 _promotion_invariants(cached)
                 activities.append(cached)
             continue
+        detail_verified = not card["fetch_detail"]
         page = None
         text = f"{card['title']} {card['summary']}"
         inline_detail = str(card.get("detail_html") or "")
@@ -3277,6 +3242,7 @@ def _listing_promotions(
                     invalid_urls.append(invalid_url)
                     continue
             else:
+                detail_verified = True
                 page = parse_page(result.text, result.final_url)
                 text = page.text
                 start_marker = clean_inline(str(card.get("content_start_marker") or ""))
@@ -3388,7 +3354,7 @@ def _listing_promotions(
             ])),
             review_required=registration_required and not windows,
             source_fingerprint=card["fingerprint"],
-            last_detail_checked_at=checked_at,
+            last_detail_checked_at=checked_at if detail_verified else "",
         )
         if card.get("ambiguous_shared_detail") and (
             promotion.registration_required or promotion.registration_windows
@@ -3453,6 +3419,8 @@ def _listing_promotions(
             promotion.review_message = (
                 f"本頁含 {len(blocks)} 個活動，請至官方頁確認對應的登錄時間。"
             )
+        if not detail_verified:
+            _append_review_issues(promotion, ["官方明細未驗證，暫用列表資料，需重新取得明細"])
         _promotion_invariants(promotion)
         activities.append(promotion)
     return activities, failed_details, invalid_urls
@@ -3548,6 +3516,8 @@ def extract_kgi(
             break
         seen_page_signatures.add(signature)
         pages.append((result, cards))
+    else:
+        failed_pages += 1  # final page may have more: do not claim complete coverage
     if not pages:
         return [], SourceHealth(
             source["id"], source["bank_name"], source["entry_url"], "",
@@ -3802,7 +3772,12 @@ def extract_taipei_fubon(
                 break
             page_cards: list[dict[str, Any]] = []
             target_page = page_number + 1
+            navigation_states: dict[str, int] = {}
             for navigation_attempt in range(200):
+                state_key = hashlib.sha256(page_html.encode()).hexdigest()
+                navigation_states[state_key] = navigation_states.get(state_key, 0) + 1
+                if navigation_states[state_key] > 3:
+                    break
                 listeners = _fubon_page_listeners(
                     page_html,
                     listing.final_url,
@@ -4248,7 +4223,9 @@ def extract_first(
                     today,
                     request_data["categoryEnName"],
                 ))
-                for page_number in range(2, max_page + 1):
+                page_cap = max(1, int(source.get("max_listing_pages", 60)))
+                failed_pages += max(0, max_page - page_cap)
+                for page_number in range(2, min(max_page, page_cap) + 1):
                     try:
                         result = session.fetch_text(
                             FIRSTBANK_REST_URL,
