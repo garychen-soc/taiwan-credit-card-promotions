@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "yuanta",
   "bank_name": "元大銀行",
   "activity_count": 30,
@@ -217,43 +217,56 @@
       "detail_ref": "activities/yuanta-7731a3453969.json"
     },
     {
-      "id": "yuanta-161e8a8e9e8d",
+      "id": "yuanta-3f4a32707d4c",
       "bank_id": "yuanta",
       "bank_name": "元大銀行",
-      "title": "國家兩廳院《2026兩廳院夏日爵士》刷元大信用卡購票享95折優惠",
-      "merchant": "國家兩廳院《2026兩廳院夏日爵士》刷元大信用卡購票享95折優惠",
+      "title": "Apple Pay綁定元大指定Visa信用卡 消費滿額享200元超商購物金",
+      "merchant": "Apple Pay綁定元大指定Visa信用卡 消費滿額享200元超商購物金",
       "categories": [
         "行動支付",
+        "生活消費",
         "旅遊交通",
         "海外消費",
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-06-08",
-      "end_date": "2026-08-29",
-      "summary": "刷元大信用卡購票享95折優惠",
-      "source_url": "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/in.do?id=645583a65500000454ce",
-      "registration_required": false,
+      "start_date": "2026-08-18",
+      "end_date": "2026-12-31",
+      "summary": "Apple Pay綁元大指定Visa信用卡消費滿額享最高200元超商購物金",
+      "source_url": "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/in.do?id=6b5609431f0000033260",
+      "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [
         {
-          "start": "2026-06-08",
-          "end": "2026-08-29",
+          "start": "2026-08-18",
+          "end": "2026-12-31",
           "label": "活動期間"
         }
       ],
       "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
+      "registration_url": "https://www.yuantabank.com.tw/bank/creditCard/productActivityMember/list.do",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-12-31T23:59:00+08:00",
+          "end": null,
+          "label": "登錄截止",
+          "source_text": "活動時間:2026/8/18~2026/12/31(登錄期限~2026/12/31 23:59止) 3.本活動係以登錄成功且符合活動條件之先後順序計算。持卡人須於2026/12/31 23:59前~活動登錄專區完成登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
-      "featured": false,
+      "featured": true,
       "tags": [
-        "國家兩廳院《2026兩廳院夏日爵士》刷元大信用卡購票享95折優惠",
+        "Apple Pay綁定元大指定Visa信用卡 消費滿額享200元超商購物金",
         "元大銀行",
         "行動支付",
+        "生活消費",
         "旅遊交通",
         "海外消費",
         "繳費稅款",
@@ -262,14 +275,14 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/yuanta-161e8a8e9e8d.json"
+      "detail_ref": "activities/yuanta-3f4a32707d4c.json"
     },
     {
-      "id": "yuanta-00ac5c5a27f0",
+      "id": "yuanta-ea44c03acbb7",
       "bank_id": "yuanta",
       "bank_name": "元大銀行",
-      "title": "臺中國家歌劇院 刷元大信用卡購票享9折優惠",
-      "merchant": "臺中國家歌劇院 刷元大信用卡購票享9折優惠",
+      "title": "Mastercard信用卡綁定Apple Pay支付消費達檻滿額享200元刷卡金",
+      "merchant": "Mastercard信用卡綁定Apple Pay支付消費達檻滿額享200元刷卡金",
       "categories": [
         "行動支付",
         "旅遊交通",
@@ -277,29 +290,48 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-06-09",
-      "end_date": "2026-08-30",
-      "summary": "刷元大信用卡購票享9折優惠",
-      "source_url": "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/in.do?id=5fc952a9e70000039e88",
-      "registration_required": false,
+      "start_date": "2026-08-18",
+      "end_date": "2026-12-31",
+      "summary": "Mastercard信用卡綁定Apple Pay支付消費達檻滿額享200元刷卡金",
+      "source_url": "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/in.do?id=6b55dc41fe00000642b6",
+      "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [
         {
-          "start": "2026-06-09",
-          "end": "2026-08-30",
+          "start": "2026-08-18",
+          "end": "2026-12-31",
           "label": "活動期間"
         }
       ],
       "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
+      "registration_url": "https://www.yuantabank.com.tw/bank/creditCard/productActivityMember/list.do",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-08-18T14:00:00+08:00",
+          "end": "2026-12-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "登錄期間:2026/8/18 14:00~2026/12/31 23:59止 1.參加人於本活動期間(2026/8/18~2026/12/31)以元大銀行發行之任一Mastercard信用卡綁定Apple Pay,並完成一般消費累積金額滿新臺幣2,000元,並於指定期間內完",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-31T23:59:00+08:00",
+          "end": null,
+          "label": "登錄截止",
+          "source_text": "件,正附卡交易合併計算,條件不符者恕不認列回饋。 2.持卡人須於2026/12/31 23:59前~官網活動登錄專區完成登錄(消費滿額前後均可登錄),若未於登錄截止時間內完成登錄(包括但不限於任何因電腦、網路、電話、技",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
       "max_reward_percent": null,
       "max_reward_amount_twd": null,
-      "featured": false,
+      "featured": true,
       "tags": [
-        "臺中國家歌劇院 刷元大信用卡購票享9折優惠",
+        "Mastercard信用卡綁定Apple Pay支付消費達檻滿額享200元刷卡金",
         "元大銀行",
         "行動支付",
         "旅遊交通",
@@ -310,7 +342,74 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/yuanta-00ac5c5a27f0.json"
+      "detail_ref": "activities/yuanta-ea44c03acbb7.json"
+    },
+    {
+      "id": "yuanta-5d4987369358",
+      "bank_id": "yuanta",
+      "bank_name": "元大銀行",
+      "title": "綁定 Apple Pay 筆筆20%回饋，最高享200元刷卡金",
+      "merchant": "綁定 Apple Pay 筆筆20%回饋，最高享200元刷卡金",
+      "categories": [
+        "行動支付",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-08-18",
+      "end_date": "2026-12-31",
+      "summary": "綁定 Apple Pay 筆筆20%回饋，最高享200元刷卡金",
+      "source_url": "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/in.do?id=6ae9eccdb90000053f09",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-08-18",
+          "end": "2026-12-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.yuantabank.com.tw/bank/creditCard/productActivityMember/list.do",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-08-18T14:00:00+08:00",
+          "end": "2026-12-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "rd信用卡綁定 Apple Pay ,並於指定登錄期限內完成官網登錄,每筆一般消費之交易可享20%刷卡金回饋,每戶活動期間回饋上限200元刷卡金。 *登錄期間:2026/8/18 14:00~2026/12/31 23:59止 1. 活動期間為2026/8/18~2026/12/31,參加人於本活動期間以元大銀行發行之任一Visa/Mastercard信用卡首次綁定Apple Pay,並於指定登錄期限內完成官網登錄,每筆",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-31T23:59:00+08:00",
+          "end": null,
+          "label": "登錄截止",
+          "source_text": "。 3. 本活動回饋名額以達成活動條件之先後順序計算。持卡人須於2026/12/31 23:59前~活動登錄專區完成登錄,活動限量40,000名,額滿即止,登錄完成時間及名額之計算依本行系統接收完成登錄紀錄為準。若未於",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 20.0,
+      "max_reward_amount_twd": 200,
+      "featured": true,
+      "tags": [
+        "綁定 Apple Pay 筆筆20%回饋，最高享200元刷卡金",
+        "元大銀行",
+        "行動支付",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/yuanta-5d4987369358.json"
     },
     {
       "id": "yuanta-8f6a9b7f47a5",
@@ -505,54 +604,6 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/yuanta-30817df126ea.json"
-    },
-    {
-      "id": "yuanta-97e1977bab71",
-      "bank_id": "yuanta",
-      "bank_name": "元大銀行",
-      "title": "【五福旅遊】土耳其團體行程 每卡享NT$1,000折扣",
-      "merchant": "【五福旅遊】土耳其團體行程 每卡享NT$1,000折扣",
-      "categories": [
-        "行動支付",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-12-31",
-      "summary": "土耳其團體行程 每卡享NT$1,000折扣",
-      "source_url": "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/in.do?id=58332c02210000065630",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-01",
-          "end": "2026-12-31",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "【五福旅遊】土耳其團體行程 每卡享NT$1,000折扣",
-        "元大銀行",
-        "行動支付",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/yuanta-97e1977bab71.json"
     },
     {
       "id": "yuanta-c15cb4e34845",

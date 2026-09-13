@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "hncb",
   "bank_name": "華南銀行",
-  "activity_count": 42,
+  "activity_count": 44,
   "activities": [
     {
       "id": "hncb-cd4ca802d246",
@@ -596,6 +596,44 @@
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
       "detail_ref": "activities/hncb-d362ee32f81f.json"
+    },
+    {
+      "id": "hncb-fabb6995048c",
+      "bank_id": "hncb",
+      "bank_name": "華南銀行",
+      "title": "7-ELEVEN消費付款刷華南卡輕鬆又便利",
+      "merchant": "7-ELEVEN消費付款刷華南卡輕鬆又便利",
+      "categories": [
+        "行動支付",
+        "生活消費",
+        "加油交通"
+      ],
+      "start_date": "2026-08-31",
+      "end_date": null,
+      "summary": "熱門優惠 7-ELEVEN消費付款刷華南卡輕鬆又便利 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
+      "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/11508-711+OPENCash",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "7-ELEVEN消費付款刷華南卡輕鬆又便利",
+        "華南銀行",
+        "行動支付",
+        "生活消費",
+        "加油交通"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
+      "detail_ref": "activities/hncb-fabb6995048c.json"
     },
     {
       "id": "hncb-c880f559edb3",
@@ -1344,6 +1382,40 @@
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
       "detail_ref": "activities/hncb-a7efcde59508.json"
+    },
+    {
+      "id": "hncb-b6c2a494dfdc",
+      "bank_id": "hncb",
+      "bank_name": "華南銀行",
+      "title": "布能沒有您-創世邀您「集10行善」助植物人尿布",
+      "merchant": "布能沒有您-創世邀您「集10行善」助植物人尿布",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-08-31",
+      "end_date": null,
+      "summary": "布能沒有您-創世邀您「集10行善」助植物人尿布",
+      "source_url": "https://www.genesis.org.tw/contents/project_ct?p_id=6599&branch=102",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "布能沒有您-創世邀您「集10行善」助植物人尿布",
+        "華南銀行",
+        "其他優惠"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
+      "detail_ref": "activities/hncb-b6c2a494dfdc.json"
     },
     {
       "id": "hncb-ff9eb2032f20",

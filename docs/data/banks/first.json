@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "first",
   "bank_name": "第一銀行",
-  "activity_count": 140,
+  "activity_count": 141,
   "activities": [
     {
       "id": "first-1588a71753e5",
@@ -3080,82 +3080,6 @@
       "detail_ref": "activities/first-64f6a8978776.json"
     },
     {
-      "id": "first-aa35d2f8648c",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "燦坤3C加碼現折",
-      "merchant": "燦坤3C加碼現折",
-      "categories": [
-        "生活消費",
-        "行動支付",
-        "百貨購物",
-        "分期"
-      ],
-      "start_date": "2026-08-17",
-      "end_date": "2026-08-31",
-      "summary": "滿額分期享現折",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709815392",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 800,
-      "featured": true,
-      "tags": [
-        "燦坤3C加碼現折",
-        "第一銀行",
-        "three_c_comm",
-        "生活消費",
-        "行動支付",
-        "百貨購物",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-aa35d2f8648c.json"
-    },
-    {
-      "id": "first-b84866eb882c",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "旅途就要Pay著走",
-      "merchant": "旅途就要Pay著走",
-      "categories": [
-        "行動支付"
-      ],
-      "start_date": "2026-05-18",
-      "end_date": "2026-08-17",
-      "summary": "120元台鐵便當8折美味到手！",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565711590870",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "旅途就要Pay著走",
-        "第一銀行",
-        "activity_Taiwan_pay",
-        "行動支付"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-b84866eb882c.json"
-    },
-    {
       "id": "first-dd6ce2f9aa23",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -3234,41 +3158,6 @@
       "detail_ref": "activities/first-6d375a15b624.json"
     },
     {
-      "id": "first-1347b29f519c",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "大稻埕迪化商圈Pay你吃喝玩樂",
-      "merchant": "大稻埕迪化商圈Pay你吃喝玩樂",
-      "categories": [
-        "行動支付"
-      ],
-      "start_date": "2026-04-20",
-      "end_date": "2026-08-31",
-      "summary": "單筆消費不限金額享20%回饋",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698928931",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 20.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "大稻埕迪化商圈Pay你吃喝玩樂",
-        "第一銀行",
-        "activity_Taiwan_pay",
-        "行動支付"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-1347b29f519c.json"
-    },
-    {
       "id": "first-73cadfb80af5",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -3302,6 +3191,47 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-73cadfb80af5.json"
+    },
+    {
+      "id": "first-aa35d2f8648c",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "燦坤3C加碼現折",
+      "merchant": "燦坤3C加碼現折",
+      "categories": [
+        "生活消費",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-08-17",
+      "end_date": "2026-08-31",
+      "summary": "滿額分期享現折",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709815392",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 800,
+      "featured": true,
+      "tags": [
+        "燦坤3C加碼現折",
+        "第一銀行",
+        "three_c_comm",
+        "生活消費",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-aa35d2f8648c.json"
     },
     {
       "id": "first-0829162e5d11",
@@ -3528,6 +3458,41 @@
       "detail_ref": "activities/first-932b655c843c.json"
     },
     {
+      "id": "first-c5ee99646e28",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "微碧愛點餐X台灣Pay",
+      "merchant": "微碧愛點餐X台灣Pay",
+      "categories": [
+        "行動支付"
+      ],
+      "start_date": "2026-08-17",
+      "end_date": "2026-09-30",
+      "summary": "餐餐美味、樂享回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713672710",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "微碧愛點餐X台灣Pay",
+        "第一銀行",
+        "activity_Taiwan_pay",
+        "行動支付"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-c5ee99646e28.json"
+    },
+    {
       "id": "first-3207e3554468",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -3725,6 +3690,41 @@
       "detail_ref": "activities/first-a4d1c6835559.json"
     },
     {
+      "id": "first-8ac0e6e41480",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "墊腳石Pay你樂購一夏",
+      "merchant": "墊腳石Pay你樂購一夏",
+      "categories": [
+        "行動支付"
+      ],
+      "start_date": "2026-08-21",
+      "end_date": "2026-11-30",
+      "summary": "台灣Pay好康 20%回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713660684",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 20.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "墊腳石Pay你樂購一夏",
+        "第一銀行",
+        "activity_Taiwan_pay",
+        "行動支付"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-8ac0e6e41480.json"
+    },
+    {
       "id": "first-793ce4556b3a",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -3919,6 +3919,7 @@
       "merchant": "Klook【刷一銀卡享專屬折扣】",
       "categories": [
         "旅遊交通",
+        "餐飲美食",
         "海外消費"
       ],
       "start_date": "2026-07-01",
@@ -3941,6 +3942,7 @@
         "第一銀行",
         "travel_acommodation",
         "旅遊交通",
+        "餐飲美食",
         "海外消費"
       ],
       "review_required": false,
@@ -4659,6 +4661,41 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-07577d62595a.json"
+    },
+    {
+      "id": "first-1347b29f519c",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "大稻埕迪化商圈Pay你吃喝玩樂",
+      "merchant": "大稻埕迪化商圈Pay你吃喝玩樂",
+      "categories": [
+        "行動支付"
+      ],
+      "start_date": "2026-04-20",
+      "end_date": "2026-12-31",
+      "summary": "單筆消費不限金額享20%回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698928931",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 20.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "大稻埕迪化商圈Pay你吃喝玩樂",
+        "第一銀行",
+        "activity_Taiwan_pay",
+        "行動支付"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-1347b29f519c.json"
     },
     {
       "id": "first-32de1e49cd84",
@@ -6223,18 +6260,18 @@
       "detail_ref": "activities/first-7790efe196f9.json"
     },
     {
-      "id": "first-976aa5e20929",
+      "id": "first-11f728143338",
       "bank_id": "first",
       "bank_name": "第一銀行",
-      "title": "2026 臺灣國際熱氣球嘉年華",
-      "merchant": "2026 臺灣國際熱氣球嘉年華",
+      "title": "世界卡agoda訂房最優享88折優惠",
+      "merchant": "世界卡agoda訂房最優享88折優惠",
       "categories": [
         "旅遊交通"
       ],
-      "start_date": "2026-08-16",
-      "end_date": null,
-      "summary": "刷一銀卡享2%折扣，5/31前可同享早鳥優惠",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565707514500",
+      "start_date": "2026-04-01",
+      "end_date": "2027-03-31",
+      "summary": "刷一銀世界卡享專屬優惠",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565702034231",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -6243,19 +6280,19 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 2.0,
+      "max_reward_percent": 12.0,
       "max_reward_amount_twd": null,
-      "featured": false,
+      "featured": true,
       "tags": [
-        "2026 臺灣國際熱氣球嘉年華",
+        "世界卡agoda訂房最優享88折優惠",
         "第一銀行",
         "travel_acommodation",
         "旅遊交通"
       ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/first-976aa5e20929.json"
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-11f728143338.json"
     },
     {
       "id": "first-fd3e257836e5",

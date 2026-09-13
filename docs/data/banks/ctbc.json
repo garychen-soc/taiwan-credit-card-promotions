@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "ctbc",
   "bank_name": "中國信託",
-  "activity_count": 121,
+  "activity_count": 126,
   "activities": [
     {
       "id": "ctbc-30d61ad06d21",
@@ -1782,18 +1782,19 @@
       "detail_ref": "activities/ctbc-a20bdb19fe35.json"
     },
     {
-      "id": "ctbc-b2a20260bad6",
+      "id": "ctbc-4c7dd7a71453",
       "bank_id": "ctbc",
       "bank_name": "中國信託",
-      "title": "STUDIO A",
-      "merchant": "STUDIO A",
+      "title": "LG官方線上商城",
+      "merchant": "LG官方線上商城",
       "categories": [
-        "生活消費"
+        "網購",
+        "行動支付"
       ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "最高10%+教育優惠最高省 NT13,620元｜全臺指定門市/官網",
-      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_life.html#lightbox_studioa",
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "summary": "LINE POINTS 500點｜週一至週五單筆滿額享回饋",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_shopping.html#lightbox_lgonline",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -1802,32 +1803,33 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 10.0,
+      "max_reward_percent": null,
       "max_reward_amount_twd": null,
-      "featured": true,
+      "featured": false,
       "tags": [
-        "STUDIO A",
+        "LG官方線上商城",
         "中國信託",
-        "生活消費"
+        "網購",
+        "行動支付"
       ],
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/ctbc-b2a20260bad6.json"
+      "detail_ref": "activities/ctbc-4c7dd7a71453.json"
     },
     {
-      "id": "ctbc-47a7a0175027",
+      "id": "ctbc-6193e13fc9c4",
       "bank_id": "ctbc",
       "bank_name": "中國信託",
-      "title": "kkday",
-      "merchant": "kkday",
+      "title": "台灣代駕",
+      "merchant": "台灣代駕",
       "categories": [
         "旅遊交通"
       ],
-      "start_date": "2026-05-10",
-      "end_date": "2026-08-31",
-      "summary": "LINE POINTS 18%｜限指定網頁且輸入優惠代碼",
-      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_travel.html#lightbox_kkday",
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "summary": "最高折抵NT800元 +LINE POINTS 6%｜(每人每月上限50點)",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_travel.html#lightbox_twdd",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -1836,21 +1838,21 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 18.0,
+      "max_reward_percent": 6.0,
       "max_reward_amount_twd": null,
-      "featured": true,
+      "featured": false,
       "tags": [
-        "kkday",
+        "台灣代駕",
         "中國信託",
         "旅遊交通"
       ],
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/ctbc-47a7a0175027.json"
+      "detail_ref": "activities/ctbc-6193e13fc9c4.json"
     },
     {
-      "id": "ctbc-7b6b43704a27",
+      "id": "ctbc-87b0dc80015f",
       "bank_id": "ctbc",
       "bank_name": "中國信託",
       "title": "大樹藥局",
@@ -1858,9 +1860,9 @@
       "categories": [
         "生活消費"
       ],
-      "start_date": "2026-04-01",
-      "end_date": "2026-08-31",
-      "summary": "最高8%｜每週六日單筆滿額享回饋",
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "summary": "最高6%｜每週三六不限金額最高2%，滿額再享加碼",
       "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_life.html#lightbox_greattree",
       "registration_required": false,
       "parent_activity_id": "",
@@ -1870,7 +1872,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 8.0,
+      "max_reward_percent": 6.0,
       "max_reward_amount_twd": null,
       "featured": false,
       "tags": [
@@ -1881,7 +1883,119 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/ctbc-7b6b43704a27.json"
+      "detail_ref": "activities/ctbc-87b0dc80015f.json"
+    },
+    {
+      "id": "ctbc-f83505cd3c66",
+      "bank_id": "ctbc",
+      "bank_name": "中國信託",
+      "title": "板橋凱薩大飯店",
+      "merchant": "板橋凱薩大飯店",
+      "categories": [
+        "餐飲美食",
+        "行動支付",
+        "旅遊交通"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "summary": "平日享7折 假日享75折｜Lotus泰饗蓮花餐廳享折扣 (限以刷卡支付)",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_food.html#lightbox_caesarpark",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "板橋凱薩大飯店",
+        "中國信託",
+        "餐飲美食",
+        "行動支付",
+        "旅遊交通"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ctbc-f83505cd3c66.json"
+    },
+    {
+      "id": "ctbc-6fd8a649eea7",
+      "bank_id": "ctbc",
+      "bank_name": "中國信託",
+      "title": "OLIVE YOUNG Global線上購物",
+      "merchant": "OLIVE YOUNG Global線上購物",
+      "categories": [
+        "旅遊交通",
+        "行動支付"
+      ],
+      "start_date": "2026-08-30",
+      "end_date": "2026-09-05",
+      "summary": "最高LINE POINTS 20%｜限綁定卡片並使用LINE Pay支付",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_travel.html",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 20.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "OLIVE YOUNG Global線上購物",
+        "中國信託",
+        "旅遊交通",
+        "行動支付"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ctbc-6fd8a649eea7.json"
+    },
+    {
+      "id": "ctbc-41be40819dcb",
+      "bank_id": "ctbc",
+      "bank_name": "中國信託",
+      "title": "韓國OLIVE YOUNG全門市",
+      "merchant": "韓國OLIVE YOUNG全門市",
+      "categories": [
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "start_date": "2026-08-30",
+      "end_date": "2026-09-05",
+      "summary": "最高LINE POINTS 20%｜限綁定卡片並使用LINE Pay支付",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_travel.html",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 20.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "韓國OLIVE YOUNG全門市",
+        "中國信託",
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ctbc-41be40819dcb.json"
     },
     {
       "id": "ctbc-c703eb144fcf",
@@ -2595,7 +2709,7 @@
       "detail_ref": "activities/ctbc-e947246c9211.json"
     },
     {
-      "id": "ctbc-72332c62c63c",
+      "id": "ctbc-4b1f2b04a102",
       "bank_id": "ctbc",
       "bank_name": "中國信託",
       "title": "魚中魚",
@@ -2605,7 +2719,7 @@
       ],
       "start_date": "2026-08-01",
       "end_date": "2026-09-30",
-      "summary": "LINE POINTS最高12%｜單筆滿額享回饋",
+      "summary": "LINE POINTS最高7%｜單筆滿額享回饋",
       "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_pet.html#lightbox_petsmall",
       "registration_required": false,
       "parent_activity_id": "",
@@ -2615,9 +2729,9 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 12.0,
+      "max_reward_percent": 7.0,
       "max_reward_amount_twd": null,
-      "featured": true,
+      "featured": false,
       "tags": [
         "魚中魚",
         "中國信託",
@@ -2626,7 +2740,7 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/ctbc-72332c62c63c.json"
+      "detail_ref": "activities/ctbc-4b1f2b04a102.json"
     },
     {
       "id": "ctbc-dd22b4a5366d",
@@ -4175,6 +4289,40 @@
       "detail_ref": "activities/ctbc-a8f08b069a5c.json"
     },
     {
+      "id": "ctbc-8e267f1b1cbb",
+      "bank_id": "ctbc",
+      "bank_name": "中國信託",
+      "title": "STUDIO A",
+      "merchant": "STUDIO A",
+      "categories": [
+        "生活消費"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "summary": "最高LINE POINTS 2%｜全臺指定門市/官網",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_life.html#lightbox_studioa",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 2.0,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "STUDIO A",
+        "中國信託",
+        "生活消費"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ctbc-8e267f1b1cbb.json"
+    },
+    {
       "id": "ctbc-52a5500625e9",
       "bank_id": "ctbc",
       "bank_name": "中國信託",
@@ -4351,6 +4499,40 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ctbc-0b4264764b49.json"
+    },
+    {
+      "id": "ctbc-0217eca9c5a5",
+      "bank_id": "ctbc",
+      "bank_name": "中國信託",
+      "title": "kkday",
+      "merchant": "kkday",
+      "categories": [
+        "旅遊交通"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "summary": "LINE POINTS 10%｜限指定網頁且輸入優惠代碼",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_travel.html#lightbox_kkday",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "kkday",
+        "中國信託",
+        "旅遊交通"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ctbc-0217eca9c5a5.json"
     },
     {
       "id": "ctbc-7fdf41bff9ee",

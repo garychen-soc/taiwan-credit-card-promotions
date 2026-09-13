@@ -1,67 +1,10 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "sinopac",
   "bank_name": "永豐銀行",
-  "activity_count": 23,
+  "activity_count": 22,
   "activities": [
-    {
-      "id": "sinopac-811a04e0f2f8",
-      "bank_id": "sinopac",
-      "bank_name": "永豐銀行",
-      "title": "永豐訂閱仔生存方案",
-      "merchant": "永豐訂閱仔生存方案",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-01-01",
-      "end_date": "2026-06-30",
-      "summary": "不管你是學習狂人、數位高手，還是毛孩爸媽，七大類訂閱服務10%回饋讓你省更多！",
-      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/942800346.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-01-01",
-          "end": "2026-06-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2025-12-30",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "本活動於2025/12/30開放登錄15,000名,須由正卡持卡人於符合交易次月底前透過永豐銀行網站進行線上登錄(例:1月交易,2月底前須登錄),時間以本行系統時間為準,登錄本活動時請勿同",
-          "reminder_minutes": 10,
-          "precision": "date"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "永豐訂閱仔生存方案",
-        "永豐銀行",
-        "行動支付",
-        "生活消費",
-        "海外消費",
-        "分期"
-      ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間早於活動期間。",
-      "detail_ref": "activities/sinopac-811a04e0f2f8.json"
-    },
     {
       "id": "sinopac-c3de07f6b557",
       "bank_id": "sinopac",

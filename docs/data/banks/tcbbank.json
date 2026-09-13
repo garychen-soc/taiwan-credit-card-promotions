@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "tcbbank",
   "bank_name": "台中銀行",
-  "activity_count": 18,
+  "activity_count": 20,
   "activities": [
     {
       "id": "tcbbank-c7b676f7a732",
@@ -124,6 +124,40 @@
       "detail_ref": "activities/tcbbank-d5590c29a4c2.json"
     },
     {
+      "id": "tcbbank-b73f3a11058e",
+      "bank_id": "tcbbank",
+      "bank_name": "台中銀行",
+      "title": "秋季購物節",
+      "merchant": "秋季購物節",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-08-26",
+      "end_date": "2026-11-30",
+      "summary": "(至115年11月30日有效)",
+      "source_url": "https://www.tcbbank.com.tw/Promotion/Info.html?ID=784",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "秋季購物節",
+        "台中銀行",
+        "其他優惠"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/tcbbank-b73f3a11058e.json"
+    },
+    {
       "id": "tcbbank-1dd06dd82f55",
       "bank_id": "tcbbank",
       "bank_name": "台中銀行",
@@ -198,6 +232,40 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/tcbbank-98d35f17026e.json"
+    },
+    {
+      "id": "tcbbank-490460752781",
+      "bank_id": "tcbbank",
+      "bank_name": "台中銀行",
+      "title": "VISA帶你開啟精彩旅程",
+      "merchant": "VISA帶你開啟精彩旅程",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-08-19",
+      "end_date": "2026-12-31",
+      "summary": "(至115年12月31日有效)",
+      "source_url": "https://www.tcbbank.com.tw/Promotion/Info.html?ID=785",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "VISA帶你開啟精彩旅程",
+        "台中銀行",
+        "其他優惠"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/tcbbank-490460752781.json"
     },
     {
       "id": "tcbbank-53f83812907b",
@@ -608,14 +676,13 @@
       "detail_ref": "activities/tcbbank-9ea92ee40677.json"
     },
     {
-      "id": "tcbbank-c408e2dfc87d",
+      "id": "tcbbank-9784e24ce2bc",
       "bank_id": "tcbbank",
       "bank_name": "台中銀行",
-      "title": "海外旅遊享優惠",
-      "merchant": "海外旅遊享優惠",
+      "title": "JCB陪你暢遊世界",
+      "merchant": "JCB陪你暢遊世界",
       "categories": [
-        "旅遊交通",
-        "海外消費"
+        "其他優惠"
       ],
       "start_date": "2026-07-22",
       "end_date": "2027-04-30",
@@ -633,15 +700,14 @@
       "max_reward_amount_twd": null,
       "featured": false,
       "tags": [
-        "海外旅遊享優惠",
+        "JCB陪你暢遊世界",
         "台中銀行",
-        "旅遊交通",
-        "海外消費"
+        "其他優惠"
       ],
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/tcbbank-c408e2dfc87d.json"
+      "detail_ref": "activities/tcbbank-9784e24ce2bc.json"
     }
   ]
 }

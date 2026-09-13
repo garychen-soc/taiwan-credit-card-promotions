@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "obank",
   "bank_name": "王道銀行",
-  "activity_count": 30,
+  "activity_count": 31,
   "activities": [
     {
       "id": "obank-9c18bada5e81",
@@ -713,6 +713,43 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/obank-6a0d4d5d7d0d.json"
+    },
+    {
+      "id": "obank-afe2228c41c3",
+      "bank_id": "obank",
+      "bank_name": "王道銀行",
+      "title": "新光產險刷王道 享幸運抽",
+      "merchant": "新光產險刷王道 享幸運抽",
+      "categories": [
+        "旅遊交通",
+        "加油交通"
+      ],
+      "start_date": "2026-08-20",
+      "end_date": "2026-12-31",
+      "summary": "活動期間 : 2026/08/20～2026/12/31 活動對象 : 王道銀行簽帳金融卡持卡人 活動內容 : (1) 持卡人於活動期間透過*王道銀行專屬投保連結，網路投保新光產險的*指定六大險種任一項，每張成功投保之保單可享Autopass 新台幣200元加油金抽獎機會乙次。（活動期間共抽出30名） (2) 持卡人於活動期間透過*王道銀行專屬投保連結，網路投保新光產險「國外旅遊綜合險」(國外旅平險 + 不便險)，每張成功投保保單可享TMS全鋒機場接送服務乙次抽獎機會乙次。（活動期間每月抽出2名） *同時還可享王道財富無限卡國內基本回饋1.5%（無上限）、一般卡國內外基本回饋1%（無上限） 活動詳情>>",
+      "source_url": "https://www.o-bank.com/retail/event/event-announce/debit_20261231_5",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 1.5,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "新光產險刷王道 享幸運抽",
+        "王道銀行",
+        "簽帳金融卡",
+        "旅遊交通",
+        "加油交通"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/obank-afe2228c41c3.json"
     },
     {
       "id": "obank-670ad3a9e6c1",

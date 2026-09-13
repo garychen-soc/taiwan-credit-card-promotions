@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "ubot",
   "bank_name": "聯邦銀行",
-  "activity_count": 94,
+  "activity_count": 93,
   "activities": [
     {
       "id": "ubot-63a46253f43e",
@@ -364,7 +364,7 @@
         "unknown"
       ],
       "max_reward_percent": 9.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 15000,
       "featured": true,
       "tags": [
         "百貨樂一夏",
@@ -449,7 +449,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 2.68,
       "max_reward_amount_twd": 1200,
       "featured": true,
       "tags": [
@@ -495,7 +495,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 8.0,
       "max_reward_amount_twd": 300,
       "featured": true,
       "tags": [
@@ -520,8 +520,6 @@
       "categories": [
         "旅遊交通",
         "行動支付",
-        "海外消費",
-        "分期",
         "強打優惠"
       ],
       "start_date": "2026-03-02",
@@ -539,7 +537,7 @@
           "start": "2026-03-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -547,7 +545,7 @@
           "start": "2026-04-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -555,7 +553,7 @@
           "start": "2026-05-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -563,7 +561,7 @@
           "start": "2026-06-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -571,7 +569,7 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -579,7 +577,7 @@
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -587,7 +585,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": null,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -596,8 +594,6 @@
         "旅遊優惠",
         "旅遊交通",
         "行動支付",
-        "海外消費",
-        "分期",
         "強打優惠"
       ],
       "review_required": false,
@@ -636,7 +632,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 8.0,
       "max_reward_amount_twd": 100,
       "featured": true,
       "tags": [
@@ -675,7 +671,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": null,
       "max_reward_amount_twd": 2000,
       "featured": true,
       "tags": [
@@ -727,7 +723,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 8.0,
       "max_reward_amount_twd": 1200,
       "featured": true,
       "tags": [
@@ -772,7 +768,7 @@
           "start": "2026-01-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "source_text": "限量登錄3,000名/月 (每月15日下午3點開放登錄) 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。 活動對象:聯邦銀行信用卡持卡人且完成登錄者 ※活",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -780,7 +776,7 @@
           "start": "2026-02-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "source_text": "限量登錄3,000名/月 (每月15日下午3點開放登錄) 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。 活動對象:聯邦銀行信用卡持卡人且完成登錄者 ※活",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -788,7 +784,7 @@
           "start": "2026-03-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "source_text": "限量登錄3,000名/月 (每月15日下午3點開放登錄) 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。 活動對象:聯邦銀行信用卡持卡人且完成登錄者 ※活",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -796,7 +792,7 @@
           "start": "2026-04-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "source_text": "限量登錄3,000名/月 (每月15日下午3點開放登錄) 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。 活動對象:聯邦銀行信用卡持卡人且完成登錄者 ※活",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -804,7 +800,7 @@
           "start": "2026-05-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "source_text": "限量登錄3,000名/月 (每月15日下午3點開放登錄) 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。 活動對象:聯邦銀行信用卡持卡人且完成登錄者 ※活",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -812,7 +808,7 @@
           "start": "2026-06-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "source_text": "限量登錄3,000名/月 (每月15日下午3點開放登錄) 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。 活動對象:聯邦銀行信用卡持卡人且完成登錄者 ※活",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -820,7 +816,7 @@
           "start": "2026-07-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "source_text": "限量登錄3,000名/月 (每月15日下午3點開放登錄) 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。 活動對象:聯邦銀行信用卡持卡人且完成登錄者 ※活",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -828,7 +824,7 @@
           "start": "2026-08-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "名額 15,000元 250元 限量登錄3,000名/月 (每月15日下午3點開放登錄) 35,000元 700元 50,000元 1,000元 ※活動登錄路徑:一般登錄活動→『X月【指定電信】分期",
+          "source_text": "限量登錄3,000名/月 (每月15日下午3點開放登錄) 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。 活動對象:聯邦銀行信用卡持卡人且完成登錄者 ※活",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -836,7 +832,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": null,
       "max_reward_amount_twd": 1000,
       "featured": true,
       "tags": [
@@ -3115,49 +3111,6 @@
       "detail_ref": "activities/ubot-95f81caf5e3e.json"
     },
     {
-      "id": "ubot-d9d42f7e53ca",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "微風信義耀黑極致之夜",
-      "merchant": "微風信義耀黑極致之夜",
-      "categories": [
-        "百貨購物",
-        "行動支付",
-        "生活消費",
-        "餐飲美食",
-        "分期"
-      ],
-      "start_date": "2026-08-06",
-      "end_date": "2026-08-23",
-      "summary": "聯名卡最高回饋18.8%！滿額再享樂天皇朝套餐！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026breeze/index.htm",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 18.8,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "微風信義耀黑極致之夜",
-        "聯邦銀行",
-        "百貨零售",
-        "百貨購物",
-        "行動支付",
-        "生活消費",
-        "餐飲美食",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-d9d42f7e53ca.json"
-    },
-    {
       "id": "ubot-2d72d4138f1a",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -3180,9 +3133,9 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": null,
       "max_reward_amount_twd": null,
-      "featured": true,
+      "featured": false,
       "tags": [
         "特力屋空調大方送",
         "聯邦銀行",

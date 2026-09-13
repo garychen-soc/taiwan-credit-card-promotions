@@ -1,10 +1,495 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "kgi",
   "bank_name": "凱基銀行",
-  "activity_count": 38,
+  "activity_count": 46,
   "activities": [
+    {
+      "id": "kgi-da1c4a70ac53",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "momo購物網 滿額最高回饋1,400元",
+      "merchant": "momo購物網 滿額最高回饋1,400元",
+      "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-12",
+      "summary": "活動期間：115/9/1-115/9/30 分期累積或單筆滿5,000元不限名額享1.5%刷卡金，每戶最高500元！ 分期滿額最高4%，最高享1,400元刷卡金！ 需登錄，每戶限「擇優」回饋乙次。",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/momo",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-12",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/22 16:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 16:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-22T16:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/22 16:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 16:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 本活動限於momo購物網(不含mo店+、富昇旅行社、電視購物、型錄)",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-29T16:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "26/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/22 16:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 16:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 本活動限於momo購物網(不含mo店+、富昇旅行社、電視購物、型錄)。參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 4.0,
+      "max_reward_amount_twd": 1400,
+      "featured": true,
+      "tags": [
+        "momo購物網 滿額最高回饋1,400元",
+        "凱基銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間晚於活動期間；同一子活動的登錄視窗互相重疊。",
+      "detail_ref": "activities/kgi-da1c4a70ac53.json"
+    },
+    {
+      "id": "kgi-7afc794a4f6e",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "蝦皮購物 滿額最高回饋1,400元",
+      "merchant": "蝦皮購物 滿額最高回饋1,400元",
+      "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-12",
+      "summary": "活動期間：115/9/1-115/9/30 分期累積或單筆滿5,000元不限名額享1.5%刷卡金，每戶最高500元！ 分期滿額最高4%，最高享1,400元刷卡金！ 需登錄，每戶限「擇優」回饋乙次。",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/shopee",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-12",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/22 18:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 18:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-22T18:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/22 18:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 18:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-29T18:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "26/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/22 18:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 18:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同時符合各活動門檻之成功交易為回饋依據。若活動登錄名額額滿,將提前關閉登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 4.0,
+      "max_reward_amount_twd": 1400,
+      "featured": true,
+      "tags": [
+        "蝦皮購物 滿額最高回饋1,400元",
+        "凱基銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間晚於活動期間；同一子活動的登錄視窗互相重疊。",
+      "detail_ref": "activities/kgi-7afc794a4f6e.json"
+    },
+    {
+      "id": "kgi-cc4f6b56eea1",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "PChome線上購物 滿額最高回饋1,400元",
+      "merchant": "PChome線上購物 滿額最高回饋1,400元",
+      "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "活動期間：115/9/1-115/9/30 分期累積或單筆滿5,000元不限名額享1.5%刷卡金，每戶最高500元！ 分期滿額最高4%，最高享1,400元刷卡金！ 需登錄，每戶限「擇優」回饋乙次。",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/pchome",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 17:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-29T17:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 17:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同時符合各活動門檻之成功交易為回饋依據。若活動登錄名額額滿,將提前關閉登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 4.0,
+      "max_reward_amount_twd": 1400,
+      "featured": true,
+      "tags": [
+        "PChome線上購物 滿額最高回饋1,400元",
+        "凱基銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "同一子活動的登錄視窗互相重疊。",
+      "detail_ref": "activities/kgi-cc4f6b56eea1.json"
+    },
+    {
+      "id": "kgi-d985f6df37a5",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "東森購物網 滿額最高回饋1,400元",
+      "merchant": "東森購物網 滿額最高回饋1,400元",
+      "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "活動期間：115/9/1-115/9/30 分期累積或單筆滿5,000元不限名額享1.5%刷卡金，每戶最高500元！ 分期滿額最高4%，最高享1,400元刷卡金！ 需登錄，每戶限「擇優」回饋乙次。",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/etmall",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 17:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 本活動限於東森購物網(不含電視購物、型錄)。參加本活動須由正卡人於登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-29T17:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 17:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 本活動限於東森購物網(不含電視購物、型錄)。參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同時符合各活動門檻之成功交易",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 4.0,
+      "max_reward_amount_twd": 1400,
+      "featured": true,
+      "tags": [
+        "東森購物網 滿額最高回饋1,400元",
+        "凱基銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "同一子活動的登錄視窗互相重疊。",
+      "detail_ref": "activities/kgi-d985f6df37a5.json"
+    },
+    {
+      "id": "kgi-4b69a3138ae3",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "淘寶網 滿額最高回饋1,400元",
+      "merchant": "淘寶網 滿額最高回饋1,400元",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "活動期間：115/9/1-115/9/30 累積滿5,000元不限名額享1.5%刷卡金，每戶最高500元！ 分期滿額最高4%，最高享1,400元刷卡金！ 需登錄，每戶限「擇優」回饋乙次。",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/taobao",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 16:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-29T16:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 登錄時間:2026/09/29 16:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同時符合各活動門檻之成功交易為回饋依據。若活動登錄名額額滿,將提前關閉登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 1400,
+      "featured": true,
+      "tags": [
+        "淘寶網 滿額最高回饋1,400元",
+        "凱基銀行",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "同一子活動的登錄視窗互相重疊。",
+      "detail_ref": "activities/kgi-4b69a3138ae3.json"
+    },
+    {
+      "id": "kgi-3ef3cf6f9c31",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "小北百貨刷凱基信用卡 速還金啟額最高再享20%回饋",
+      "merchant": "小北百貨刷凱基信用卡 速還金啟額最高再享20%回饋",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-11-30",
+      "summary": "活動期間：115/9/1~115/11/30 持有凱基銀行額度型貸款且完成啟額，小北百貨消費最高加碼20%回饋 需登錄",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/showba-rplevent",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 20.0,
+      "max_reward_amount_twd": 300,
+      "featured": true,
+      "tags": [
+        "小北百貨刷凱基信用卡 速還金啟額最高再享20%回饋",
+        "凱基銀行",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/kgi-3ef3cf6f9c31.json"
+    },
+    {
+      "id": "kgi-e09d8d55d237",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "新機到手心機要有 指定電信通路最高1,000元刷卡金",
+      "merchant": "新機到手心機要有 指定電信通路最高1,000元刷卡金",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/9/1~115/12/31 指定電信通路：中華電信/遠傳/台灣大哥大/傑昇通信/神腦國際/德誼數位/STUDIO A/Straight A 累積滿額最高800元刷卡金 + 單筆分12期（含）以上加碼200元刷卡金 需登錄",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/3c-reward",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 1000,
+      "featured": true,
+      "tags": [
+        "新機到手心機要有 指定電信通路最高1,000元刷卡金",
+        "凱基銀行",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/kgi-e09d8d55d237.json"
+    },
     {
       "id": "kgi-301d6be6fa97",
       "bank_id": "kgi",
@@ -214,7 +699,7 @@
           "start": "2026-08-01T00:00:00+08:00",
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "/31 | PChome 滿額最高享1.5% 無名額限制 交易方式 刷卡金額 刷卡金回饋 分期累積(限3/6/10期)或單筆 5,000元 1.5% 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 無名額限制 08/01 ~ 08/31 | PChome 滿16,000享300 活動名額:100 交易方式 刷卡金額 刷卡金回饋 單筆且分期(限3/6/10期) 16,000元 300元 登錄時間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 登錄時間:2026/08/27 17:00 ~ 2026/08/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -222,7 +707,7 @@
           "start": "2026-08-27T17:00:00+08:00",
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "| PChome 滿16,000享300 活動名額:100 交易方式 刷卡金額 刷卡金回饋 單筆且分期(限3/6/10期) 16,000元 300元 登錄時間:2026/08/27 17:00 ~ 2026/08/31 23:59 活動名額:100 08/01 ~ 08/31 | PChome 滿25,000享700 活動名額:60 交易方式 刷卡金額 刷卡金回饋 單筆且分期(限3/6/10期) 25,000元 700元 登錄",
+          "source_text": "優惠活動/登錄 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 登錄時間:2026/08/27 17:00 ~ 2026/08/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同時符合各活動門檻之成功交易為回饋依據。若活動登錄名額額滿,將提前關閉登",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -247,7 +732,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "，請至官方頁確認對應的登錄時間。 同一子活動的登錄視窗互相重疊。",
+      "review_message": "同一子活動的登錄視窗互相重疊。",
       "detail_ref": "activities/kgi-130bd32d7696.json"
     },
     {
@@ -287,7 +772,7 @@
           "start": "2026-08-01T00:00:00+08:00",
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "y 08/01 ~ 08/31 | 東森購物 滿額最高享1.5% 無名額限制 交易方式 刷卡金額 刷卡金回饋 分期累積或單筆 5,000元 1.5% 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 無名額限制 08/01 ~ 08/31 | 東森購物 滿16,000享300 活動名額:100 交易方式 刷卡金額 刷卡金回饋 分期累積 16,000元 300元 登錄時間:2026/08/27 1",
+          "source_text": "優惠活動/登錄 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 登錄時間:2026/08/27 17:00 ~ 2026/08/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 本活動限於東森購物網(不含電視購物、型錄)。參加本活動須由正卡人於登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -295,7 +780,7 @@
           "start": "2026-08-27T17:00:00+08:00",
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "8/01 ~ 08/31 | 東森購物 滿16,000享300 活動名額:100 交易方式 刷卡金額 刷卡金回饋 分期累積 16,000元 300元 登錄時間:2026/08/27 17:00 ~ 2026/08/31 23:59 活動名額:100 08/01 ~ 08/31 | 東森購物 滿25,000享700 活動名額:60 交易方式 刷卡金額 刷卡金回饋 分期累積 25,000元 700元 登錄時間:2026/08/27",
+          "source_text": "優惠活動/登錄 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 登錄時間:2026/08/27 17:00 ~ 2026/08/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 本活動限於東森購物網(不含電視購物、型錄)。參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同時符合各活動門檻之成功交易",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -320,7 +805,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "，請至官方頁確認對應的登錄時間。 同一子活動的登錄視窗互相重疊。",
+      "review_message": "同一子活動的登錄視窗互相重疊。",
       "detail_ref": "activities/kgi-46afd503f9ef.json"
     },
     {
@@ -359,7 +844,7 @@
           "start": "2026-08-01T00:00:00+08:00",
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "ne Copy 08/01 ~ 08/31 | 淘寶網 滿額最高享1.5% 無名額限制 交易方式 刷卡金額 刷卡金回饋 累積 5,000元 1.5% 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 無名額限制 08/01 ~ 08/31 | 淘寶網 滿16,000享300 活動名額:80 交易方式 刷卡金額 刷卡金回饋 累積 16,000元 300元 登錄時間:2026/08/27 16:00",
+          "source_text": "優惠活動/登錄 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 登錄時間:2026/08/27 16:00 ~ 2026/08/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -367,7 +852,7 @@
           "start": "2026-08-27T16:00:00+08:00",
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "限制 08/01 ~ 08/31 | 淘寶網 滿16,000享300 活動名額:80 交易方式 刷卡金額 刷卡金回饋 累積 16,000元 300元 登錄時間:2026/08/27 16:00 ~ 2026/08/31 23:59 活動名額:80 08/01 ~ 08/31 | 淘寶網 滿40,000享1,600 活動名額:30 交易方式 刷卡金額 刷卡金回饋 累積 40,000元 1,600元 登錄時間:2026/08/27",
+          "source_text": "優惠活動/登錄 登錄時間:2026/08/01 00:00 ~ 2026/08/31 23:59 登錄時間:2026/08/27 16:00 ~ 2026/08/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同時符合各活動門檻之成功交易為回饋依據。若活動登錄名額額滿,將提前關閉登",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -391,7 +876,7 @@
       ],
       "review_required": true,
       "needs_review": true,
-      "review_message": "，請至官方頁確認對應的登錄時間。 同一子活動的登錄視窗互相重疊。",
+      "review_message": "同一子活動的登錄視窗互相重疊。",
       "detail_ref": "activities/kgi-80ef404f5608.json"
     },
     {
@@ -507,6 +992,71 @@
       "needs_review": true,
       "review_message": "，請至官方頁確認對應的登錄時間。 登錄時間晚於活動期間。",
       "detail_ref": "activities/kgi-aff9dab71af4.json"
+    },
+    {
+      "id": "kgi-278f60a3cd4f",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "9月網購狂購節 滿5千享1.5%刷卡金",
+      "merchant": "9月網購狂購節 滿5千享1.5%刷卡金",
+      "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-07-01",
+      "end_date": "2026-09-30",
+      "summary": "活動期間：115/9/1-115/9/30 適用通路：Yahoo購物中心、生活市集、遠傳friDay購物、樂天市場 分期累積或單筆滿5,000元不限名額享1.5%刷卡金！ 需登錄，跨店累計每戶最高回饋500元！",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/buy123-friday-rakuten-a",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.kgibank.com/creditcard/campaign/registrationlist",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-01T00:00:00+08:00",
+          "end": "2026-09-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠活動/登錄 登錄時間:2026/09/01 00:00 ~ 2026/09/30 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同時符合各活動門檻之成功交易為回饋依據。",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 280,
+      "featured": true,
+      "tags": [
+        "9月網購狂購節 滿5千享1.5%刷卡金",
+        "凱基銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/kgi-278f60a3cd4f.json"
     },
     {
       "id": "kgi-59062350de8b",
@@ -818,11 +1368,11 @@
       "detail_ref": "activities/kgi-113694c6dff1.json"
     },
     {
-      "id": "kgi-49a10776945e",
+      "id": "kgi-f1aba978e8d9",
       "bank_id": "kgi",
       "bank_name": "凱基銀行",
-      "title": "2026兩廳院夏日爵士 票券95折優惠",
-      "merchant": "2026兩廳院夏日爵士 票券95折優惠",
+      "title": "往返機場超划算！最高省600元",
+      "merchant": "往返機場超划算！最高省600元",
       "categories": [
         "行動支付",
         "百貨購物",
@@ -832,10 +1382,10 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-06-08",
-      "end_date": "2026-08-29",
-      "summary": "購票活動期間：115/6/8~115/8/29 購買票券享95折優惠",
-      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/opentix",
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/9/1-115/12/31 55688機場接送輸入優惠碼，每趟最高折150元 新戶再加碼！首次註冊55688會員可兌換搭車金300元",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/55688taxi",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -848,7 +1398,7 @@
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
-        "2026兩廳院夏日爵士 票券95折優惠",
+        "往返機場超划算！最高省600元",
         "凱基銀行",
         "行動支付",
         "百貨購物",
@@ -861,14 +1411,14 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/kgi-49a10776945e.json"
+      "detail_ref": "activities/kgi-f1aba978e8d9.json"
     },
     {
-      "id": "kgi-a893067585be",
+      "id": "kgi-69e375120a8e",
       "bank_id": "kgi",
       "bank_name": "凱基銀行",
-      "title": "8月丁丁卡歡慶父親節！滿額送露營折疊椅+指定商品最高享50%",
-      "merchant": "8月丁丁卡歡慶父親節！滿額送露營折疊椅+指定商品最高享50%",
+      "title": "9月丁丁卡好禮多重送！滿額贈護髮梳+提貨券，指定商品最高享50%",
+      "merchant": "9月丁丁卡好禮多重送！滿額贈護髮梳+提貨券，指定商品最高享50%",
       "categories": [
         "行動支付",
         "百貨購物",
@@ -880,7 +1430,7 @@
       ],
       "start_date": "2026-08-01",
       "end_date": "2026-08-31",
-      "summary": "活動期間：115/8/1~115/8/31 單筆滿588元對中指定號碼贈100元提貨券 單筆滿額再贈露營折疊椅 指定保健營養品/輔具優惠好評續推出",
+      "summary": "活動期間：115/9/1~115/9/30 單筆滿999元贈櫸木護髮梳 累積滿額再贈200元提貨券 指定保健營養品/輔具優惠好評續推出！",
       "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/tintin_festival-a",
       "registration_required": false,
       "parent_activity_id": "",
@@ -894,7 +1444,7 @@
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
-        "8月丁丁卡歡慶父親節！滿額送露營折疊椅+指定商品最高享50%",
+        "9月丁丁卡好禮多重送！滿額贈護髮梳+提貨券，指定商品最高享50%",
         "凱基銀行",
         "行動支付",
         "百貨購物",
@@ -907,7 +1457,7 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/kgi-a893067585be.json"
+      "detail_ref": "activities/kgi-69e375120a8e.json"
     },
     {
       "id": "kgi-c416c8020714",
@@ -1138,6 +1688,52 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/kgi-86f6efc8b6dd.json"
+    },
+    {
+      "id": "kgi-a3f92fbe8b0b",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "Trip.com刷凱基Visa卡 優惠拿到手軟",
+      "merchant": "Trip.com刷凱基Visa卡 優惠拿到手軟",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/1/1~115/12/31 飯店最高8% + 800元 機票最高3% + 2,000元",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/tripcomvisa-a",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 2000,
+      "featured": true,
+      "tags": [
+        "Trip.com刷凱基Visa卡 優惠拿到手軟",
+        "凱基銀行",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/kgi-a3f92fbe8b0b.json"
     },
     {
       "id": "kgi-37034434262b",
@@ -1786,6 +2382,52 @@
       "detail_ref": "activities/kgi-5407d326a6d5.json"
     },
     {
+      "id": "kgi-0e8780a1bfb3",
+      "bank_id": "kgi",
+      "bank_name": "凱基銀行",
+      "title": "繳學費免手續費",
+      "merchant": "繳學費免手續費",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-08-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/8/1-115/12/31 全卡友免手續費 另享刷卡分期付優惠利率3期~30期，最低年利率6%起 首期只需付本金，超省利",
+      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/tuition",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "繳學費免手續費",
+        "凱基銀行",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/kgi-0e8780a1bfb3.json"
+    },
+    {
       "id": "kgi-cd8e24342cde",
       "bank_id": "kgi",
       "bank_name": "凱基銀行",
@@ -1830,98 +2472,6 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/kgi-cd8e24342cde.json"
-    },
-    {
-      "id": "kgi-1c4891141c0c",
-      "bank_id": "kgi",
-      "bank_name": "凱基銀行",
-      "title": "Trip.com刷凱基Visa卡訂房最高享8%折扣、訂機票最高享3%折扣",
-      "merchant": "Trip.com刷凱基Visa卡訂房最高享8%折扣、訂機票最高享3%折扣",
-      "categories": [
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-08-04",
-      "end_date": null,
-      "summary": "活動期間：即日起~115/12/31 預定飯店最高享8%折扣、訂機票最高享3%折扣",
-      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/tripcomvisa-a",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": 2000,
-      "featured": true,
-      "tags": [
-        "Trip.com刷凱基Visa卡訂房最高享8%折扣、訂機票最高享3%折扣",
-        "凱基銀行",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/kgi-1c4891141c0c.json"
-    },
-    {
-      "id": "kgi-64b7f046d41b",
-      "bank_id": "kgi",
-      "bank_name": "凱基銀行",
-      "title": "YO-YO MA LIVE IN CONCERT 卡友優先預購禮遇",
-      "merchant": "YO-YO MA LIVE IN CONCERT 卡友優先預購禮遇",
-      "categories": [
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-08-16",
-      "end_date": null,
-      "summary": "專屬搶先購票期間：115/8/14中午12點~115/8/17中午12點止 指定票區優先預購禮遇，加贈精美節目冊乙份",
-      "source_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign/mna",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "YO-YO MA LIVE IN CONCERT 卡友優先預購禮遇",
-        "凱基銀行",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/kgi-64b7f046d41b.json"
     },
     {
       "id": "kgi-be4a34605501",

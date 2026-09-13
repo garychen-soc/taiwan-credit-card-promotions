@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "scsb",
   "bank_name": "上海商銀",
   "activity_count": 22,
@@ -878,7 +878,7 @@
       "detail_ref": "activities/scsb-eea2021f13d9.json"
     },
     {
-      "id": "scsb-9f18b7080b00",
+      "id": "scsb-d4161075263a",
       "bank_id": "scsb",
       "bank_name": "上海商銀",
       "title": "小小兵看電影 六大國內指定影城，購票最高享12%",
@@ -891,7 +891,7 @@
       "start_date": "2026-07-01",
       "end_date": "2026-12-31",
       "summary": "小小兵看電影 六大國內指定影城，購票最高享12...",
-      "source_url": "https://www.scsb.com.tw/content/card/hotPage/4804",
+      "source_url": "https://www.scsb.com.tw/content/card/hotPage/5046",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [
@@ -907,7 +907,7 @@
       "registration_windows": [],
       "registration_timing_contracts": [],
       "max_reward_percent": 12.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 1000,
       "featured": true,
       "tags": [
         "小小兵看電影 六大國內指定影城，購票最高享12%",
@@ -919,7 +919,7 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/scsb-9f18b7080b00.json"
+      "detail_ref": "activities/scsb-d4161075263a.json"
     },
     {
       "id": "scsb-386c809be7c1",

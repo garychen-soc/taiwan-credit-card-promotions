@@ -1,36 +1,47 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "megabank",
   "bank_name": "兆豐銀行",
   "activity_count": 32,
   "activities": [
     {
-      "id": "megabank-0910ccace5b7",
+      "id": "megabank-4210c6bd6680",
       "bank_id": "megabank",
       "bank_name": "兆豐銀行",
-      "title": "MITSUI OUTLET PARK暑假檔期",
-      "merchant": "MITSUI OUTLET PARK暑假檔期",
+      "title": "99網購刷兆豐 滿額享2200元",
+      "merchant": "99網購刷兆豐 滿額享2200元",
       "categories": [
-        "百貨購物",
+        "網購",
+        "行動支付",
+        "旅遊交通",
+        "海外消費",
         "分期"
       ],
-      "start_date": "2026-07-03",
-      "end_date": "2026-08-30",
-      "summary": "活動期間：115/7/3-8/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/mitsuioutlet11507",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "活動期間：115/9/1~9/30",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ec202609",
       "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [],
       "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/mitsuioutlet11507",
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ec202609",
       "registration_url_kind": "unknown",
       "registration_windows": [
         {
-          "start": "2026-07-23T14:00:00+08:00",
+          "start": "2026-09-29T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "金額登錄即享: 門檻 贈品 贈品限量名額 $6,500 100元刷卡金 100名 $20,000 300元刷卡金 40名 $40,000 600元刷卡金 20名 注意事項 活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
+          "source_text": "※momo購物網活動於2026/9/29 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/9/30 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-30T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "※momo購物網活動於2026/9/29 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/9/30 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦皮購物、PChome 24h購物、酷澎Coupang加碼回饋】活動併計,正、附卡合併每戶(依正卡人身分證",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -38,20 +49,23 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 100,
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 2200,
       "featured": true,
       "tags": [
-        "MITSUI OUTLET PARK暑假檔期",
+        "99網購刷兆豐 滿額享2200元",
         "兆豐銀行",
         "需登錄",
-        "百貨購物",
+        "網購",
+        "行動支付",
+        "旅遊交通",
+        "海外消費",
         "分期"
       ],
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/megabank-0910ccace5b7.json"
+      "detail_ref": "activities/megabank-4210c6bd6680.json"
     },
     {
       "id": "megabank-0b4f6ce376d7",
@@ -78,7 +92,7 @@
           "start": "2026-07-23T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "登錄即享: 門檻 贈品 贈品限量名額 滿$6,500 刷卡金100元 80名 滿$20,000 刷卡金300元 30名 滿$40,000 刷卡金600元 10名 注意事項 活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
+          "source_text": "活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -126,7 +140,7 @@
           "start": "2026-07-23T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "登錄即享: 門檻 贈品 贈品限量名額 滿$6,500 刷卡金100元 80名 滿$20,000 刷卡金300元 30名 滿$40,000 刷卡金600元 10名 注意事項 活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
+          "source_text": "活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -177,7 +191,7 @@
           "start": "2026-08-27T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "~8/12單筆分期滿NT$25,000,享1,800元刷卡金 (限量60名) 8/19~8/22單筆分期滿NT$8,000,享600元刷卡金 (限量60名) ※momo購物網活動於2026/8/27 14:00 開放限量登錄 【蝦皮購物、PChome 24h線上購物、酷澎Coupang】 全月回饋 同一平台累積消費(含一次付清及分期付款)滿NT$5,000,享200元刷卡金(限量250名) 單筆分期滿NT$16,000,享80",
+          "source_text": "※momo購物網活動於2026/8/27 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/8/28 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -185,7 +199,7 @@
           "start": "2026-08-28T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": ",享1,800元刷卡金 (限量90名) 8/18~8/25單筆分期滿NT$8,000,享600元刷卡金 (限量120名) ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/8/28 14:00 開放限量登錄 ※本活動每戶限擇優回饋乙次,回饋上限NT$2,200。 蝦皮購物商城優惠券 兆豐信用卡專屬88折券 8/8當日蝦皮購物APP商城單筆消費滿NT$2,000結帳時使用指定優惠券享88折,最高折抵1,500元",
+          "source_text": "※momo購物網活動於2026/8/27 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/8/28 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦皮購物、PChome 24h購物、酷澎Coupang加碼回饋】活動併計,正、附卡合併每戶(依正卡人身分證",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -236,7 +250,7 @@
           "start": "2026-07-30T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "1 活動期間~全台萬家福量販店,登錄滿額即享: 門檻 贈品 贈品限量名額 單筆分期滿$10,000 刷卡金200元 500名 單筆分期滿$20,000 刷卡金400元 250名 ※2026/7/30 14:00開放登錄 【愛買】2026/7/29-9/1 活動期間~全台愛買量販店,消費滿額即贈: 門檻 贈品 贈品限量名額 單筆分期滿$10,000 愛買現金抵用券200元 100名 單筆分期滿$20,000 愛買現金抵用券400",
+          "source_text": "※2026/7/30 14:00開放登錄 萬家福活動需登錄,活動登錄期間:2026/7/30 14:00開放登錄。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         }

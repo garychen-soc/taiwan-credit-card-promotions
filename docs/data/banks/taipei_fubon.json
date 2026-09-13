@@ -1,10 +1,166 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:57:47+08:00",
+  "generated_at": "2026-08-31T08:43:44+08:00",
   "bank_id": "taipei_fubon",
   "bank_name": "台北富邦銀行",
-  "activity_count": 214,
+  "activity_count": 215,
   "activities": [
+    {
+      "id": "taipei_fubon-101fa32b6f0d",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "3C家電滿額回饋",
+      "merchant": "3C家電滿額回饋",
+      "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "指定3C家電分期滿額最高送3500元",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=D000297",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 4800,
+      "featured": true,
+      "tags": [
+        "3C家電滿額回饋",
+        "台北富邦銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/taipei_fubon-101fa32b6f0d.json"
+    },
+    {
+      "id": "taipei_fubon-22cc7d70b696",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "myfone最高回饋700",
+      "merchant": "myfone最高回饋700",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-11-30",
+      "summary": "買新手機就是要刷OP卡!",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=E000095",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-11-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 200,
+      "featured": true,
+      "tags": [
+        "myfone最高回饋700",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/taipei_fubon-22cc7d70b696.json"
+    },
+    {
+      "id": "taipei_fubon-b9119700aff1",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "購新機分期滿額回饋",
+      "merchant": "購新機分期滿額回饋",
+      "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-11-30",
+      "summary": "指定電信通訊滿額最高送3000元",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=D000296",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-11-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 4800,
+      "featured": true,
+      "tags": [
+        "購新機分期滿額回饋",
+        "台北富邦銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "分期"
+      ],
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/taipei_fubon-b9119700aff1.json"
+    },
     {
       "id": "taipei_fubon-ba0a3964bb4c",
       "bank_id": "taipei_fubon",
@@ -2047,244 +2203,6 @@
       "detail_ref": "activities/taipei_fubon-3cdf127a302a.json"
     },
     {
-      "id": "taipei_fubon-2c52ab66180e",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "大全聯中元節",
-      "merchant": "大全聯中元節",
-      "categories": [
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "分期"
-      ],
-      "start_date": "2026-08-07",
-      "end_date": "2026-08-20",
-      "summary": "享3%福利點回饋",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=F000017",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-08-07",
-          "end": "2026-08-20",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "大全聯中元節",
-        "台北富邦銀行",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-2c52ab66180e.json"
-    },
-    {
-      "id": "taipei_fubon-5f973c73e333",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "《聽見你的聲音》",
-      "merchant": "《聽見你的聲音》",
-      "categories": [
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "start_date": "2026-07-02",
-      "end_date": "2026-08-23",
-      "summary": "跨越無聲與有聲，聽見心動的生命旋律",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000150",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-02",
-          "end": "2026-08-23",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "《聽見你的聲音》",
-        "台北富邦銀行",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-5f973c73e333.json"
-    },
-    {
-      "id": "taipei_fubon-561d9d9067bd",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "2026兩廳院夏日爵士",
-      "merchant": "2026兩廳院夏日爵士",
-      "categories": [
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "start_date": "2026-06-08",
-      "end_date": "2026-08-29",
-      "summary": "臺灣最大且接軌國際的爵士音樂盛事登場",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000133",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-06-08",
-          "end": "2026-08-29",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "2026兩廳院夏日爵士",
-        "台北富邦銀行",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-561d9d9067bd.json"
-    },
-    {
-      "id": "taipei_fubon-5b3685358926",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "2026夏季巧虎大型舞臺劇",
-      "merchant": "2026夏季巧虎大型舞臺劇",
-      "categories": [
-        "網購",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "加油交通",
-        "海外消費"
-      ],
-      "start_date": "2026-05-05",
-      "end_date": "2026-08-29",
-      "summary": "銀河怪盜的祕密：勇敢出發｜購票9折",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000126",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-05-05",
-          "end": "2026-08-29",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "2026夏季巧虎大型舞臺劇",
-        "台北富邦銀行",
-        "網購",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "加油交通",
-        "海外消費"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-5b3685358926.json"
-    },
-    {
-      "id": "taipei_fubon-b1902d2c0e03",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "《別叫我成功》",
-      "merchant": "《別叫我成功》",
-      "categories": [
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "start_date": "2026-07-02",
-      "end_date": "2026-08-30",
-      "summary": "年度最受矚目台灣原創音樂劇重磅回歸！",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000151",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-02",
-          "end": "2026-08-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "《別叫我成功》",
-        "台北富邦銀行",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-b1902d2c0e03.json"
-    },
-    {
       "id": "taipei_fubon-b30d94f3f49c",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
@@ -2343,11 +2261,9 @@
       "title": "myfone網路加碼回饋",
       "merchant": "myfone網路加碼回饋",
       "categories": [
-        "網購",
         "生活消費",
         "旅遊交通",
-        "餐飲美食",
-        "分期"
+        "餐飲美食"
       ],
       "start_date": "2026-08-01",
       "end_date": "2026-08-31",
@@ -2373,68 +2289,14 @@
       "tags": [
         "myfone網路加碼回饋",
         "台北富邦銀行",
-        "網購",
         "生活消費",
         "旅遊交通",
-        "餐飲美食",
-        "分期"
+        "餐飲美食"
       ],
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-a6c75bfd2d61.json"
-    },
-    {
-      "id": "taipei_fubon-dd3d9b9b4d73",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "大丸/松坂屋百貨最高15%",
-      "merchant": "大丸/松坂屋百貨最高15%",
-      "categories": [
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2025-04-01",
-      "end_date": "2026-08-31",
-      "summary": "憑優券全日本10家分店刷富邦卡享優惠",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=C000213",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2025-04-01",
-          "end": "2026-08-31",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "大丸/松坂屋百貨最高15%",
-        "台北富邦銀行",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-dd3d9b9b4d73.json"
     },
     {
       "id": "taipei_fubon-760ec57c49ea",
@@ -4959,6 +4821,50 @@
       "detail_ref": "activities/taipei_fubon-af7ebfd6fc83.json"
     },
     {
+      "id": "taipei_fubon-5472fd73395b",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "同黨劇團《父親母親》",
+      "merchant": "同黨劇團《父親母親》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-08-19",
+      "end_date": "2026-10-25",
+      "summary": "衛武營戲劇院_購票優惠",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000159",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-08-19",
+          "end": "2026-10-25",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "同黨劇團《父親母親》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-5472fd73395b.json"
+    },
+    {
       "id": "taipei_fubon-d079aaa65717",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
@@ -5101,6 +5007,50 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-47217fef0906.json"
+    },
+    {
+      "id": "taipei_fubon-9a491f9931c2",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《風箱間的四季》",
+      "merchant": "《風箱間的四季》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-08-19",
+      "end_date": "2026-10-31",
+      "summary": "衛武營音樂廳_購票優惠",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000160",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-08-19",
+          "end": "2026-10-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《風箱間的四季》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-9a491f9931c2.json"
     },
     {
       "id": "taipei_fubon-209cc8bf6fd3",
@@ -5343,6 +5293,50 @@
       "detail_ref": "activities/taipei_fubon-1adb5c87c214.json"
     },
     {
+      "id": "taipei_fubon-6468cd15f2c4",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《夢想清單》",
+      "merchant": "《夢想清單》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-08-19",
+      "end_date": "2026-11-22",
+      "summary": "衛武營戲劇院_購票優惠",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000161",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-08-19",
+          "end": "2026-11-22",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《夢想清單》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-6468cd15f2c4.json"
+    },
+    {
       "id": "taipei_fubon-506195e75c84",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
@@ -5479,6 +5473,50 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-7a0284d1d8db.json"
+    },
+    {
+      "id": "taipei_fubon-1b3eba5884eb",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《維也納美泉宮管弦樂團》",
+      "merchant": "《維也納美泉宮管弦樂團》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-08-21",
+      "end_date": "2026-12-06",
+      "summary": "國家音樂廳_購票優惠",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000162",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-08-21",
+          "end": "2026-12-06",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《維也納美泉宮管弦樂團》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-1b3eba5884eb.json"
     },
     {
       "id": "taipei_fubon-4c070bdb4b59",
