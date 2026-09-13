@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-13T03:47:32+08:00",
+  "generated_at": "2026-09-14T00:02:01+08:00",
   "bank_id": "sunny",
   "bank_name": "陽信銀行",
   "activity_count": 25,
@@ -298,7 +298,7 @@
       "categories": [
         "分期"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": "2026-12-31",
       "summary": "陽信信用卡單筆消費分期。",
       "source_url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1",
@@ -792,7 +792,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": "2026-12-31",
       "summary": "中國與香港指定消費優惠。",
       "source_url": "https://www.sunnybank.com.tw/activityevent/Mastercard2026/web.html",
@@ -862,7 +862,7 @@
       "categories": [
         "生活消費"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": "2026-12-31",
       "summary": "陽信現金紅利點數回饋。",
       "source_url": "https://www.sunnybank.com.tw/activityevent/2026_Points/web.html",

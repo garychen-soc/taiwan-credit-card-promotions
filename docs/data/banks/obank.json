@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-13T03:47:32+08:00",
+  "generated_at": "2026-09-14T00:02:01+08:00",
   "bank_id": "obank",
   "bank_name": "王道銀行",
   "activity_count": 33,
@@ -1030,7 +1030,7 @@
       "categories": [
         "生活消費"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": "2026-12-31",
       "summary": "迎接夏日，為自己放個暑假吧 無論是在峇里島獨棟 Villa 放空、漫步長灘島細緻白沙灘感受陽光海風，或搭乘快艇展開富國島跳島之旅，在專屬島嶼時光中，讓異國美景與獨特體驗為生活重新充電！ 即日起，於 Trip.com 刷王道財富無限卡享機票住宿優惠，再享香格里拉酒店專屬折扣！ Trip.com刷王道財富無限卡訂房最高享8%折扣、訂機票最高享3%折扣 活動日期：即日起至2026/12/31止",
       "source_url": "https://www.o-bank.com/retail/event/event-announce/2025072110",
@@ -1066,7 +1066,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": "2026-12-31",
       "summary": "活動期間：即日起~2026/12/31 活動對象：王道銀行簽帳金融卡持卡人 活動內容： 活動期間內，持王道銀行簽帳金融卡至指定購票平台購買「財團法人台北愛樂文教基金會」、「MK音樂調研社」主辦之活動，即可享刷卡購票優惠。 活動詳情>>",
       "source_url": "https://www.o-bank.com/retail/event/event-announce/2026art",
@@ -1248,7 +1248,7 @@
       "categories": [
         "行動支付"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "有了 Apple Pay，在你各個 Apple 裝置上都能使用你的王道銀行簽帳金融卡，簡單、安全又私密。",
       "source_url": "https://www.o-bank.com/zh-tw/retail/event/event-compaign",
@@ -1286,7 +1286,7 @@
         "百貨購物",
         "旅遊交通"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "你的局，都有O! Range一卡搞定！ 支付、外送 最高7.8%現金回饋 指定百貨餐飲、購票 最高3.8%現金回饋",
       "source_url": "https://www.o-bank.com/zh-tw/retail/event/event-compaign",
@@ -1324,7 +1324,7 @@
       "categories": [
         "海外消費"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "全球訂房刷王道Visa簽帳金融卡，享最高20%優惠 海外消費刷王道財富無限卡，再享最高2.5%現金回饋無上限 (最高22.5%優惠=海外一般消費2.5%現金回饋+亞太區IHG洲際酒店集團最高20%折扣) 活動詳情>>",
       "source_url": "https://www.o-bank.com/retail/event/event-announce/2026030201",

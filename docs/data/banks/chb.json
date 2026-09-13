@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-13T03:47:32+08:00",
+  "generated_at": "2026-09-14T00:02:01+08:00",
   "bank_id": "chb",
   "bank_name": "彰化銀行",
   "activity_count": 23,
@@ -378,7 +378,7 @@
           "start": "2026-07-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -386,7 +386,7 @@
           "start": "2026-08-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -394,7 +394,7 @@
           "start": "2026-09-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -402,7 +402,7 @@
           "start": "2026-10-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -410,7 +410,7 @@
           "start": "2026-11-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -418,7 +418,7 @@
           "start": "2026-12-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -449,7 +449,7 @@
       "categories": [
         "網購"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3665",
@@ -495,7 +495,7 @@
       "categories": [
         "網購"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3666",
@@ -541,7 +541,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3669",
@@ -587,7 +587,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3668",
@@ -633,7 +633,7 @@
       "categories": [
         "網購"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3667",
@@ -866,7 +866,7 @@
         "旅遊交通",
         "加油交通"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3651",
@@ -903,7 +903,7 @@
       "categories": [
         "百貨購物"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3590",
@@ -938,7 +938,7 @@
       "categories": [
         "網購"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3496",

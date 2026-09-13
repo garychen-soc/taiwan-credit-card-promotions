@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-13T03:47:32+08:00",
+  "generated_at": "2026-09-14T00:02:01+08:00",
   "bank_id": "first",
   "bank_name": "第一銀行",
   "activity_count": 141,
@@ -3135,46 +3135,6 @@
       "detail_ref": "activities/first-64f6a8978776.json"
     },
     {
-      "id": "first-0f2455018801",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "易遊網 好$10光旅遊節",
-      "merchant": "易遊網 好$10光旅遊節",
-      "categories": [
-        "旅遊交通",
-        "行動支付",
-        "海外消費"
-      ],
-      "start_date": "2026-09-14",
-      "end_date": "2026-09-23",
-      "summary": "輸入折扣碼享現折優惠",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565711606263",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "易遊網 好$10光旅遊節",
-        "第一銀行",
-        "travel_acommodation",
-        "旅遊交通",
-        "行動支付",
-        "海外消費"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-0f2455018801.json"
-    },
-    {
       "id": "first-dd6ce2f9aa23",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -3213,6 +3173,46 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-dd6ce2f9aa23.json"
+    },
+    {
+      "id": "first-0f2455018801",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "易遊網 好$10光旅遊節",
+      "merchant": "易遊網 好$10光旅遊節",
+      "categories": [
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "start_date": "2026-09-14",
+      "end_date": "2026-09-23",
+      "summary": "輸入折扣碼享現折優惠",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565711606263",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "易遊網 好$10光旅遊節",
+        "第一銀行",
+        "travel_acommodation",
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-0f2455018801.json"
     },
     {
       "id": "first-ac41cb88ef5f",
@@ -6410,7 +6410,7 @@
         "百貨購物",
         "分期"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "分期滿額再享加碼點數回饋",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709817846",
@@ -6452,7 +6452,7 @@
         "百貨購物",
         "分期"
       ],
-      "start_date": "2026-09-13",
+      "start_date": "2026-09-14",
       "end_date": null,
       "summary": "滿額分期享現折",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709815392",

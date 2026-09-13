@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-13T03:47:32+08:00",
+  "generated_at": "2026-09-14T00:02:01+08:00",
   "bank_id": "scsb",
   "bank_name": "上海商銀",
-  "activity_count": 22,
+  "activity_count": 21,
   "activities": [
     {
       "id": "scsb-89ed9faac395",
@@ -161,57 +161,6 @@
       "detail_ref": "activities/scsb-6e1135af555e.json"
     },
     {
-      "id": "scsb-59d7544f6f69",
-      "bank_id": "scsb",
-      "bank_name": "上海商銀",
-      "title": "ApplePay綁上海商銀信用卡，日韓消費最高加碼10%回饋",
-      "merchant": "ApplePay綁上海商銀信用卡，日韓消費最高加碼10%回饋",
-      "categories": [
-        "行動支付",
-        "旅遊交通",
-        "加油交通",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-12-31",
-      "summary": "Apple Pay 綁定上海商銀信用卡 享日韓...",
-      "source_url": "https://www.scsb.com.tw/content/card/hotPage/4604",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-01",
-          "end": "2026-12-31",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 10.0,
-      "max_reward_amount_twd": 300,
-      "featured": true,
-      "tags": [
-        "ApplePay綁上海商銀信用卡，日韓消費最高加碼10%回饋",
-        "上海商銀",
-        "行動支付",
-        "旅遊交通",
-        "加油交通",
-        "海外消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/scsb-59d7544f6f69.json"
-    },
-    {
       "id": "scsb-c461a05d06d2",
       "bank_id": "scsb",
       "bank_name": "上海商銀",
@@ -283,6 +232,14 @@
       "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
       "registration_url_kind": "bank_portal",
       "registration_windows": [
+        {
+          "start": "2026-04-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "限量500名,登錄名額額滿即止。 ※本活動於「每月第一個週三」下午4點開放登錄,同月份登錄一次即可,次月須重新登錄。 (2026/4/1、5/6、6/3、7/1、8/5、9/2、10/7、11/4、12/2) >>>【月月活動登錄】<<< (6月起變更活動登錄網址) 注意事項 本活動僅限上海銀行",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
         {
           "start": "2026-04-01T16:00:00+08:00",
           "end": null,
