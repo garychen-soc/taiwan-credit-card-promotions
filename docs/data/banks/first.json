@@ -1,53 +1,10 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-31T08:43:44+08:00",
+  "generated_at": "2026-09-13T03:47:32+08:00",
   "bank_id": "first",
   "bank_name": "第一銀行",
   "activity_count": 141,
   "activities": [
-    {
-      "id": "first-1588a71753e5",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "2026年萬家福中元滿額/分期禮",
-      "merchant": "2026年萬家福中元滿額/分期禮",
-      "categories": [
-        "生活消費",
-        "行動支付",
-        "餐飲美食",
-        "分期"
-      ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-09-06",
-      "summary": "分期零利率 再享刷卡金",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565694304473",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 2026,
-      "featured": true,
-      "tags": [
-        "2026年萬家福中元滿額/分期禮",
-        "第一銀行",
-        "home_appliance",
-        "生活消費",
-        "行動支付",
-        "餐飲美食",
-        "分期"
-      ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/first-1588a71753e5.json"
-    },
     {
       "id": "first-e0f531fba8fb",
       "bank_id": "first",
@@ -84,6 +41,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -125,6 +83,7 @@
         "行動支付",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -138,7 +97,6 @@
       "merchant": "2026年桃園購物節",
       "categories": [
         "其他優惠",
-        "百貨購物",
         "生活消費"
       ],
       "start_date": "2026-08-01",
@@ -163,9 +121,9 @@
         "第一銀行",
         "activity_other",
         "其他優惠",
-        "百貨購物",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -218,6 +176,7 @@
         "百貨購物",
         "餐飲美食"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "登錄時間早於活動期間。",
@@ -356,6 +315,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -395,6 +355,7 @@
         "生活消費",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -434,6 +395,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -473,6 +435,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -521,6 +484,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -562,6 +526,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -605,6 +570,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -646,6 +612,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -685,6 +652,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -726,6 +694,7 @@
         "行動支付",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -765,6 +734,7 @@
         "旅遊交通",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -813,6 +783,7 @@
         "其他優惠",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -861,6 +832,7 @@
         "其他優惠",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -911,6 +883,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -961,6 +934,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1000,6 +974,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1138,6 +1113,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1276,6 +1252,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1414,6 +1391,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1552,6 +1530,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1690,6 +1669,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1733,6 +1713,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1776,6 +1757,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1819,10 +1801,55 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-9bb33e5baf09.json"
+    },
+    {
+      "id": "first-af855b31e977",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "居家好生活-億進寢具",
+      "merchant": "居家好生活-億進寢具",
+      "categories": [
+        "生活消費",
+        "百貨購物",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "summary": "分期零利率 最高再享4,500元回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698736616",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 4500,
+      "featured": true,
+      "tags": [
+        "居家好生活-億進寢具",
+        "第一銀行",
+        "home_appliance",
+        "生活消費",
+        "百貨購物",
+        "繳費稅款",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/first-af855b31e977.json"
     },
     {
       "id": "first-188cde65ebcf",
@@ -1862,6 +1889,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1905,10 +1933,99 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-d6c78717ca01.json"
+    },
+    {
+      "id": "first-5930cdb8d1a7",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "居家好生活-床的世界",
+      "merchant": "居家好生活-床的世界",
+      "categories": [
+        "生活消費",
+        "百貨購物",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "summary": "分期零利率 最高再享4,500元回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698737258",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 4500,
+      "featured": true,
+      "tags": [
+        "居家好生活-床的世界",
+        "第一銀行",
+        "home_appliance",
+        "生活消費",
+        "百貨購物",
+        "繳費稅款",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/first-5930cdb8d1a7.json"
+    },
+    {
+      "id": "first-851c45bc0eef",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "居家好生活-有情門",
+      "merchant": "居家好生活-有情門",
+      "categories": [
+        "生活消費",
+        "百貨購物",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "summary": "分期零利率 最高再享4,500元回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698737783",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 4500,
+      "featured": true,
+      "tags": [
+        "居家好生活-有情門",
+        "第一銀行",
+        "home_appliance",
+        "生活消費",
+        "百貨購物",
+        "繳費稅款",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/first-851c45bc0eef.json"
     },
     {
       "id": "first-6b11d8be8dfb",
@@ -1948,6 +2065,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1991,6 +2109,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2034,6 +2153,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2077,6 +2197,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2126,6 +2247,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2176,6 +2298,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -2215,6 +2338,7 @@
         "其他優惠",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2258,6 +2382,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2301,6 +2426,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2346,6 +2472,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2391,6 +2518,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2436,6 +2564,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2481,6 +2610,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2526,6 +2656,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2571,6 +2702,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2616,6 +2748,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2661,6 +2794,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -2753,6 +2887,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -2834,6 +2969,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -2877,94 +3013,11 @@
         "加油交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-d551538ec0ce.json"
-    },
-    {
-      "id": "first-34b9f4fbbf18",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "大全聯分期滿額送",
-      "merchant": "大全聯分期滿額送",
-      "categories": [
-        "生活消費",
-        "行動支付",
-        "百貨購物",
-        "餐飲美食",
-        "分期"
-      ],
-      "start_date": "2026-08-16",
-      "end_date": null,
-      "summary": "分期滿額送刷卡金",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565694304259",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 500,
-      "featured": true,
-      "tags": [
-        "大全聯分期滿額送",
-        "第一銀行",
-        "home_appliance",
-        "生活消費",
-        "行動支付",
-        "百貨購物",
-        "餐飲美食",
-        "分期"
-      ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/first-34b9f4fbbf18.json"
-    },
-    {
-      "id": "first-1101c1e450fa",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "大腳旅行社 X 深度旅世界",
-      "merchant": "大腳旅行社 X 深度旅世界",
-      "categories": [
-        "旅遊交通",
-        "分期"
-      ],
-      "start_date": "2026-08-16",
-      "end_date": null,
-      "summary": "GLORY+世界卡兩人成行現折10,000元",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565710963684",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 10000,
-      "featured": true,
-      "tags": [
-        "大腳旅行社 X 深度旅世界",
-        "第一銀行",
-        "travel_acommodation",
-        "旅遊交通",
-        "分期"
-      ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/first-1101c1e450fa.json"
     },
     {
       "id": "first-a81695771066",
@@ -3035,6 +3088,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -3074,10 +3128,51 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-64f6a8978776.json"
+    },
+    {
+      "id": "first-0f2455018801",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "易遊網 好$10光旅遊節",
+      "merchant": "易遊網 好$10光旅遊節",
+      "categories": [
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "start_date": "2026-09-14",
+      "end_date": "2026-09-23",
+      "summary": "輸入折扣碼享現折優惠",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565711606263",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "易遊網 好$10光旅遊節",
+        "第一銀行",
+        "travel_acommodation",
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-0f2455018801.json"
     },
     {
       "id": "first-dd6ce2f9aa23",
@@ -3113,240 +3208,11 @@
         "加油交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-dd6ce2f9aa23.json"
-    },
-    {
-      "id": "first-6d375a15b624",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "全國電子2026年8月加碼禮 滿額贈點",
-      "merchant": "全國電子2026年8月加碼禮 滿額贈點",
-      "categories": [
-        "生活消費",
-        "百貨購物",
-        "分期"
-      ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "分期零利率 滿額最高回饋600點",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709817846",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 2500,
-      "featured": true,
-      "tags": [
-        "全國電子2026年8月加碼禮 滿額贈點",
-        "第一銀行",
-        "three_c_comm",
-        "生活消費",
-        "百貨購物",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-6d375a15b624.json"
-    },
-    {
-      "id": "first-73cadfb80af5",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "棉花田X台灣Pay",
-      "merchant": "棉花田X台灣Pay",
-      "categories": [
-        "行動支付"
-      ],
-      "start_date": "2026-05-19",
-      "end_date": "2026-08-31",
-      "summary": "有機食在好安心",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565711839121",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 100,
-      "featured": false,
-      "tags": [
-        "棉花田X台灣Pay",
-        "第一銀行",
-        "activity_Taiwan_pay",
-        "行動支付"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-73cadfb80af5.json"
-    },
-    {
-      "id": "first-aa35d2f8648c",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "燦坤3C加碼現折",
-      "merchant": "燦坤3C加碼現折",
-      "categories": [
-        "生活消費",
-        "行動支付",
-        "百貨購物",
-        "分期"
-      ],
-      "start_date": "2026-08-17",
-      "end_date": "2026-08-31",
-      "summary": "滿額分期享現折",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709815392",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 800,
-      "featured": true,
-      "tags": [
-        "燦坤3C加碼現折",
-        "第一銀行",
-        "three_c_comm",
-        "生活消費",
-        "行動支付",
-        "百貨購物",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-aa35d2f8648c.json"
-    },
-    {
-      "id": "first-0829162e5d11",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "誠品生活台灣Pay",
-      "merchant": "誠品生活台灣Pay",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "加油交通"
-      ],
-      "start_date": "2026-06-04",
-      "end_date": "2026-08-31",
-      "summary": "消費滿額贈電子抵用券",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565712362868",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "誠品生活台灣Pay",
-        "第一銀行",
-        "activity_Taiwan_pay",
-        "行動支付",
-        "生活消費",
-        "加油交通"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-0829162e5d11.json"
-    },
-    {
-      "id": "first-831503501e9f",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "馬可先生TWQR享20%回饋",
-      "merchant": "馬可先生TWQR享20%回饋",
-      "categories": [
-        "行動支付",
-        "生活消費"
-      ],
-      "start_date": "2026-06-01",
-      "end_date": "2026-08-31",
-      "summary": "單筆消費滿300元享20%回饋",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565711447888",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 20.0,
-      "max_reward_amount_twd": 1000,
-      "featured": true,
-      "tags": [
-        "馬可先生TWQR享20%回饋",
-        "第一銀行",
-        "activity_Taiwan_pay",
-        "行動支付",
-        "生活消費"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-831503501e9f.json"
-    },
-    {
-      "id": "first-ed1871163f33",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "一銀卡愛買！",
-      "merchant": "一銀卡愛買！",
-      "categories": [
-        "生活消費",
-        "行動支付",
-        "分期"
-      ],
-      "start_date": "2026-07-29",
-      "end_date": "2026-09-01",
-      "summary": "中元節採購 刷滿額送抵用券",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565691808165",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "一銀卡愛買！",
-        "第一銀行",
-        "home_appliance",
-        "生活消費",
-        "行動支付",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-ed1871163f33.json"
     },
     {
       "id": "first-ac41cb88ef5f",
@@ -3380,45 +3246,11 @@
         "旅遊交通",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-ac41cb88ef5f.json"
-    },
-    {
-      "id": "first-f5c75615f8d2",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "一銀卡推薦友禮大放送",
-      "merchant": "一銀卡推薦友禮大放送",
-      "categories": [
-        "其他優惠"
-      ],
-      "start_date": "2026-04-01",
-      "end_date": "2026-09-30",
-      "summary": "推薦新戶好友線上申辦，每戶享刷卡金最高500元！",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565710985337",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 2500,
-      "featured": true,
-      "tags": [
-        "一銀卡推薦友禮大放送",
-        "第一銀行",
-        "activity_other",
-        "其他優惠"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-f5c75615f8d2.json"
     },
     {
       "id": "first-932b655c843c",
@@ -3452,6 +3284,7 @@
         "行動支付",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3487,6 +3320,7 @@
         "activity_Taiwan_pay",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3526,6 +3360,7 @@
         "生活消費",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3565,6 +3400,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3606,10 +3442,60 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-29f33e9781f5.json"
+    },
+    {
+      "id": "first-fd3e257836e5",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "全聯卡友日加碼回饋",
+      "merchant": "全聯卡友日加碼回饋",
+      "categories": [
+        "生活消費",
+        "行動支付"
+      ],
+      "start_date": "2026-09-04",
+      "end_date": "2026-10-11",
+      "summary": "滿額回饋福利點",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565710417208",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-04",
+          "end": "2026-10-01",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-09",
+          "end": "2026-10-11",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "全聯卡友日加碼回饋",
+        "第一銀行",
+        "home_appliance",
+        "生活消費",
+        "行動支付"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-fd3e257836e5.json"
     },
     {
       "id": "first-6675815d2708",
@@ -3645,6 +3531,7 @@
         "生活消費",
         "繳費稅款"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3684,6 +3571,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3719,10 +3607,51 @@
         "activity_Taiwan_pay",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-8ac0e6e41480.json"
+    },
+    {
+      "id": "first-51c29babf8fd",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "漢神洲際購物廣場",
+      "merchant": "漢神洲際購物廣場",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-11-30",
+      "summary": "台灣Pay享滿2000送200元電子商品券",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713796096",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "漢神洲際購物廣場",
+        "第一銀行",
+        "activity_Taiwan_pay",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-51c29babf8fd.json"
     },
     {
       "id": "first-793ce4556b3a",
@@ -3754,6 +3683,7 @@
         "activity_Taiwan_pay",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3791,6 +3721,7 @@
         "行動支付",
         "餐飲美食"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3830,6 +3761,7 @@
         "旅遊交通",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3869,6 +3801,7 @@
         "百貨購物",
         "餐飲美食"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3906,6 +3839,7 @@
         "其他優惠",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3945,6 +3879,7 @@
         "餐飲美食",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -3984,6 +3919,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4025,6 +3961,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4064,6 +4001,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4103,6 +4041,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4144,6 +4083,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4181,6 +4121,7 @@
         "旅遊交通",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4220,6 +4161,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4261,10 +4203,47 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-c3d418ed0db8.json"
+    },
+    {
+      "id": "first-f5c75615f8d2",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "一銀卡推薦友禮大放送",
+      "merchant": "一銀卡推薦友禮大放送",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-04-01",
+      "end_date": "2026-12-31",
+      "summary": "推薦新戶好友線上申辦，每戶享刷卡金最高500元！",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565710985337",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 2500,
+      "featured": true,
+      "tags": [
+        "一銀卡推薦友禮大放送",
+        "第一銀行",
+        "activity_other",
+        "其他優惠"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-f5c75615f8d2.json"
     },
     {
       "id": "first-1dde7eb920a9",
@@ -4300,6 +4279,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4339,10 +4319,49 @@
         "行動支付",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-91455ebc43c6.json"
+    },
+    {
+      "id": "first-b714ab9c79f8",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "傑昇愛用台灣Pay",
+      "merchant": "傑昇愛用台灣Pay",
+      "categories": [
+        "行動支付",
+        "分期"
+      ],
+      "start_date": "2026-09-09",
+      "end_date": "2026-12-31",
+      "summary": "傑昇愛用台灣Pay 獨享10%回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713573982",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": 200,
+      "featured": true,
+      "tags": [
+        "傑昇愛用台灣Pay",
+        "第一銀行",
+        "activity_Taiwan_pay",
+        "行動支付",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-b714ab9c79f8.json"
     },
     {
       "id": "first-f9626df885ce",
@@ -4378,6 +4397,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4417,6 +4437,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4456,6 +4477,7 @@
         "行動支付",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4495,6 +4517,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4536,6 +4559,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4577,6 +4601,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4616,6 +4641,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4657,6 +4683,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4692,6 +4719,7 @@
         "activity_Taiwan_pay",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4731,6 +4759,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4772,6 +4801,7 @@
         "加油交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4809,6 +4839,7 @@
         "生活消費",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4850,6 +4881,7 @@
         "加油交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4889,6 +4921,7 @@
         "網購",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4926,6 +4959,7 @@
         "生活消費",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -4963,6 +4997,7 @@
         "生活消費",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5008,6 +5043,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5051,6 +5087,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5088,6 +5125,7 @@
         "旅遊交通",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5125,6 +5163,7 @@
         "旅遊交通",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5162,6 +5201,7 @@
         "旅遊交通",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5203,6 +5243,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5242,6 +5283,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5283,6 +5325,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5320,6 +5363,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5359,6 +5403,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5396,6 +5441,7 @@
         "旅遊交通",
         "網購"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5435,6 +5481,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5474,6 +5521,7 @@
         "行動支付",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5513,6 +5561,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5552,6 +5601,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5589,6 +5639,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5626,6 +5677,7 @@
         "旅遊交通",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5667,6 +5719,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5708,6 +5761,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5747,6 +5801,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5786,6 +5841,7 @@
         "網購",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5825,6 +5881,7 @@
         "行動支付",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5864,6 +5921,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5903,6 +5961,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5942,6 +6001,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -5981,6 +6041,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -6020,6 +6081,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -6059,6 +6121,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -6098,6 +6161,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -6137,6 +6201,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -6176,6 +6241,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -6215,6 +6281,7 @@
         "行動支付",
         "百貨購物"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -6254,10 +6321,47 @@
         "行動支付",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-7790efe196f9.json"
+    },
+    {
+      "id": "first-3d881e135ebd",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "CITYLINK消費購划算",
+      "merchant": "CITYLINK消費購划算",
+      "categories": [
+        "行動支付"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2027-02-28",
+      "summary": "台灣Pay享20%回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713776886",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 20.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "CITYLINK消費購划算",
+        "第一銀行",
+        "activity_Taiwan_pay",
+        "行動支付"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-3d881e135ebd.json"
     },
     {
       "id": "first-11f728143338",
@@ -6289,25 +6393,27 @@
         "travel_acommodation",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-11f728143338.json"
     },
     {
-      "id": "first-fd3e257836e5",
+      "id": "first-6d375a15b624",
       "bank_id": "first",
       "bank_name": "第一銀行",
-      "title": "全聯卡友日加碼回饋",
-      "merchant": "全聯卡友日加碼回饋",
+      "title": "全國電子9月加碼禮與iPhone新機加贈點",
+      "merchant": "全國電子9月加碼禮與iPhone新機加贈點",
       "categories": [
         "生活消費",
-        "行動支付"
+        "百貨購物",
+        "分期"
       ],
-      "start_date": "2026-08-16",
+      "start_date": "2026-09-13",
       "end_date": null,
-      "summary": "滿額回饋福利點",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565710417208",
+      "summary": "分期滿額再享加碼點數回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709817846",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -6316,20 +6422,66 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 2500,
+      "featured": true,
       "tags": [
-        "全聯卡友日加碼回饋",
+        "全國電子9月加碼禮與iPhone新機加贈點",
         "第一銀行",
-        "home_appliance",
+        "three_c_comm",
         "生活消費",
-        "行動支付"
+        "百貨購物",
+        "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/first-fd3e257836e5.json"
+      "detail_ref": "activities/first-6d375a15b624.json"
+    },
+    {
+      "id": "first-aa35d2f8648c",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "燦坤iPhone新機加碼現折",
+      "merchant": "燦坤iPhone新機加碼現折",
+      "categories": [
+        "生活消費",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-09-13",
+      "end_date": null,
+      "summary": "滿額分期享現折",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709815392",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 2400,
+      "featured": true,
+      "tags": [
+        "燦坤iPhone新機加碼現折",
+        "第一銀行",
+        "three_c_comm",
+        "生活消費",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
+      "detail_ref": "activities/first-aa35d2f8648c.json"
     },
     {
       "id": "first-c39ae826314f",
@@ -6361,6 +6513,7 @@
         "department_store_shopping",
         "百貨購物"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -6398,6 +6551,7 @@
         "其他優惠",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",

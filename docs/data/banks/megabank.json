@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-31T08:43:44+08:00",
+  "generated_at": "2026-09-13T03:47:32+08:00",
   "bank_id": "megabank",
   "bank_name": "兆豐銀行",
-  "activity_count": 32,
+  "activity_count": 30,
   "activities": [
     {
       "id": "megabank-4210c6bd6680",
@@ -33,7 +33,7 @@
           "start": "2026-09-29T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "※momo購物網活動於2026/9/29 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/9/30 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦",
+          "source_text": "1~9/9單筆分期滿NT$25,000,享1,800元刷卡金 (限量60名) 9/19~9/22單筆分期滿NT$8,000,享600元刷卡金 (限量60名) ※momo購物網活動於2026/9/29 14:00 開放限量登錄 【蝦皮購物、PChome 24h線上購物、酷澎Coupang】 全月回饋 同一平台累積消費(含一次付清及分期付款)滿NT$5,000,享200元刷卡金(限量250名) 單筆分期滿NT$16,000,享80",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -41,7 +41,7 @@
           "start": "2026-09-30T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "※momo購物網活動於2026/9/29 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/9/30 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦皮購物、PChome 24h購物、酷澎Coupang加碼回饋】活動併計,正、附卡合併每戶(依正卡人身分證",
+          "source_text": ",享1,800元刷卡金 (限量90名) 9/18~9/25單筆分期滿NT$8,000,享600元刷卡金 (限量120名) ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/9/30 14:00 開放限量登錄 ※本活動每戶限擇優回饋乙次,回饋上限NT$2,200。 蝦皮購物商城優惠券 兆豐信用卡專屬88折券 9/9當日蝦皮購物APP商城單筆消費滿NT$2,000結帳時使用指定優惠券享88折,最高折抵1,500元",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -62,216 +62,11 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/megabank-4210c6bd6680.json"
-    },
-    {
-      "id": "megabank-0b4f6ce376d7",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "Mitsui Shopping Park LaLaport 南港店 暑假",
-      "merchant": "Mitsui Shopping Park LaLaport 南港店 暑假",
-      "categories": [
-        "百貨購物",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-08-31",
-      "summary": "活動期間：115/7/1-8/31",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/lalaportnan11507",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/lalaportnan11507",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-23T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 600,
-      "featured": true,
-      "tags": [
-        "Mitsui Shopping Park LaLaport 南港店 暑假",
-        "兆豐銀行",
-        "需登錄",
-        "百貨購物",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-0b4f6ce376d7.json"
-    },
-    {
-      "id": "megabank-cdd7ac76207e",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "Mitsui Shopping Park LaLaport 台中店 暑假",
-      "merchant": "Mitsui Shopping Park LaLaport 台中店 暑假",
-      "categories": [
-        "百貨購物",
-        "分期"
-      ],
-      "start_date": "2026-07-03",
-      "end_date": "2026-08-31",
-      "summary": "活動期間：115/7/3-8/31",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/lalaporttai11507",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/lalaporttai11507",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-23T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "活動將於2026/7/23 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 600,
-      "featured": true,
-      "tags": [
-        "Mitsui Shopping Park LaLaport 台中店 暑假",
-        "兆豐銀行",
-        "需登錄",
-        "百貨購物",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-cdd7ac76207e.json"
-    },
-    {
-      "id": "megabank-57524613c5a0",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "網購爸氣刷 兆豐卡滿額享2200元",
-      "merchant": "網購爸氣刷 兆豐卡滿額享2200元",
-      "categories": [
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "活動期間：115/8/1~8/31",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ec202608",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ec202608",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-08-27T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "※momo購物網活動於2026/8/27 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/8/28 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-28T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "※momo購物網活動於2026/8/27 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/8/28 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦皮購物、PChome 24h購物、酷澎Coupang加碼回饋】活動併計,正、附卡合併每戶(依正卡人身分證",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 2200,
-      "featured": true,
-      "tags": [
-        "網購爸氣刷 兆豐卡滿額享2200元",
-        "兆豐銀行",
-        "需登錄",
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "海外消費",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-57524613c5a0.json"
-    },
-    {
-      "id": "megabank-4b679f6bc864",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "中元來萬家福、愛買，採購刷兆豐最划算",
-      "merchant": "中元來萬家福、愛買，採購刷兆豐最划算",
-      "categories": [
-        "餐飲美食",
-        "分期"
-      ],
-      "start_date": "2026-07-15",
-      "end_date": "2026-09-01",
-      "summary": "活動期間：115/7/15-9/1",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/market11507",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/market11507",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-30T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "※2026/7/30 14:00開放登錄 萬家福活動需登錄,活動登錄期間:2026/7/30 14:00開放登錄。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 400,
-      "featured": true,
-      "tags": [
-        "中元來萬家福、愛買，採購刷兆豐最划算",
-        "兆豐銀行",
-        "需登錄",
-        "餐飲美食",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-4b679f6bc864.json"
     },
     {
       "id": "megabank-be615eb73997",
@@ -346,6 +141,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -399,6 +195,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -457,6 +254,7 @@
         "餐飲美食",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -507,6 +305,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -554,6 +353,7 @@
         "餐飲美食",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -620,6 +420,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -690,6 +491,7 @@
         "餐飲美食",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -760,6 +562,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -814,6 +617,7 @@
         "需登錄",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -866,6 +670,7 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -911,10 +716,62 @@
         "餐飲美食",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-34e3218dfb35.json"
+    },
+    {
+      "id": "megabank-ec1918399678",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "週年慶刷兆豐，最高送1800元",
+      "merchant": "週年慶刷兆豐，最高送1800元",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-11-30",
+      "summary": "活動期間：115/9/1-11/30",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115fesobr",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115fesobr",
+      "registration_url_kind": "unknown",
+      "registration_windows": [
+        {
+          "start": "2026-09-23T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "本活動限量登錄500名,將於2026/9/23 14:00開放登錄。 本活動正附卡消費合併計算,正、附卡合併每戶(依正卡人身分證字號歸戶計算)擇優回饋乙次,回饋上限為1,800元刷卡金;本活動持卡人最晚須於2026/11/30前~本行網站完成登錄(恕不受理人工登錄申請),以符合",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 300000,
+      "featured": true,
+      "tags": [
+        "週年慶刷兆豐，最高送1800元",
+        "兆豐銀行",
+        "需登錄",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/megabank-ec1918399678.json"
     },
     {
       "id": "megabank-5032bbb469a1",
@@ -948,6 +805,7 @@
         "需登錄",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -989,6 +847,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1026,6 +885,7 @@
         "需登錄",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1067,6 +927,7 @@
         "旅遊交通",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。"
@@ -1120,6 +981,7 @@
         "需登錄",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1159,6 +1021,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1253,10 +1116,53 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/megabank-8de29c45eb9a.json"
+    },
+    {
+      "id": "megabank-166cb2fed787",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "刷兆豐換手機真輕鬆，分期滿額享1500元",
+      "merchant": "刷兆豐換手機真輕鬆，分期滿額享1500元",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-09-10",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/9/10~12/31",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026q43c",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026q43c",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 50000,
+      "featured": true,
+      "tags": [
+        "刷兆豐換手機真輕鬆，分期滿額享1500元",
+        "兆豐銀行",
+        "需登錄",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/megabank-166cb2fed787.json"
     },
     {
       "id": "megabank-2164e16b34c7",
@@ -1290,6 +1196,7 @@
         "需登錄",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。"
@@ -1326,6 +1233,7 @@
         "需登錄",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1380,6 +1288,7 @@
         "需登錄",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "登錄時間晚於活動期間。",
@@ -1433,6 +1342,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1476,6 +1386,7 @@
         "需登錄",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1626,6 +1537,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1663,6 +1575,7 @@
         "需登錄",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1716,6 +1629,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -1755,6 +1669,7 @@
         "行動支付",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",

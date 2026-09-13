@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-31T08:43:44+08:00",
+  "generated_at": "2026-09-13T03:47:32+08:00",
   "bank_id": "sinopac",
   "bank_name": "永豐銀行",
-  "activity_count": 22,
+  "activity_count": 21,
   "activities": [
     {
       "id": "sinopac-c3de07f6b557",
@@ -32,7 +32,7 @@
           "start": "2026-07-17T11:00:00+08:00",
           "end": "2026-08-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "登錄時間:2026/7/17 11:00~2026/8/31 23:59,名額限量5,000名。 三、「iPhone 17」 (256GB) 乙台抽獎資格,限於活動開始前未曾啟用,且於活動期間2026/7/1-2026/8/31首次完成啟用「消費碳足跡查詢」功能,並綁定指",
+          "source_text": "7抽獎」 ,前5,000名登錄再享30元刷卡金。 首次啟用係指客戶於活動開始前未曾於本行任一通路完成消費碳足跡功能啟用,且於活動期間首次成功啟用者。 登錄時間:2026/7/17 11:00~2026/8/31 23:59,名額限量5,000名。 綁定行動支付限Apple Pay及Google Pay,不包含其他第三方支付或電子支付服務。 【獎勵內容】 抽獎獎項: iPhone 17 (256GB)乙台,共1名。 抽獎",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -40,7 +40,7 @@
           "start": "2026-08-31",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "限獲得一次抽獎資格,活動資格及啟用紀錄以本行系統登錄資料為準。 五、30元刷卡金活動將於2026年7月17日11:00~2026年8月31曰23:59開放登錄。限於本活動期間內首次啟用「消費碳足跡查詢」功能並綁定指定行動支付之客戶,且以前5,000名完成活動登錄者,始得享30元刷卡金,以本行系統記",
+          "source_text": "書面通知或電話方式通知中獎人,請中獎人依領獎程序辦理領獎事宜。 五、30元刷卡金活動將於2026年7月17日11:00~2026年8月31曰23:59開放登錄。限於本活動期間內首次啟用「消費碳足跡查詢」功能並綁定指定行動支付之客戶,且以前5,000名完成活動登錄者,始得享30元刷卡金,以本行系統記",
           "reminder_minutes": 10,
           "precision": "date"
         }
@@ -59,52 +59,11 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "同一子活動的登錄視窗互相重疊。",
       "detail_ref": "activities/sinopac-c3de07f6b557.json"
-    },
-    {
-      "id": "sinopac-2aa97156ba89",
-      "bank_id": "sinopac",
-      "bank_name": "永豐銀行",
-      "title": "稅後巔峰",
-      "merchant": "稅後巔峰",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-08-31",
-      "summary": "繳綜所稅卡友挑戰回饋無上限！",
-      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/737363709.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": 100,
-      "featured": true,
-      "tags": [
-        "稅後巔峰",
-        "永豐銀行",
-        "行動支付",
-        "生活消費",
-        "海外消費",
-        "分期"
-      ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/sinopac-2aa97156ba89.json"
     },
     {
       "id": "sinopac-2850fe180b9a",
@@ -140,7 +99,7 @@
         "unknown"
       ],
       "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 100,
       "featured": true,
       "tags": [
         "捷運任你乘",
@@ -151,6 +110,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -199,6 +159,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -243,6 +204,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -273,18 +235,10 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-04-01",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "饋。例如,已登錄本行「網購/電視購物優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/4/1、2026/7/1、2026/10/1當日開放登錄8,000名。因活動反應熱烈,2026/5/27起增加名額~12,000名。 A7:需要登錄。因活動反應熱烈,",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
           "start": "2026-05-27",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "波活動須分別登錄乙次,於2026/4/1、2026/7/1、2026/10/1當日開放登錄8,000名。因活動反應熱烈,2026/5/27起增加名額~12,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,000名。 活動方式:每波活動須分別登錄乙次,於2026/4/",
+          "source_text": "日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,000名。 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄10,000名。因活動反應熱烈,2026/9/",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -292,7 +246,15 @@
           "start": "2026-07-01",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "行「網購/電視購物優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/4/1、2026/7/1、2026/10/1當日開放登錄8,000名。因活動反應熱烈,2026/5/27起增加名額~12,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27",
+          "source_text": "饋。例如,已登錄本行「網購/電視購物優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-09-04",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "。 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,000名。 活動方式:每波活動須分別登錄乙次,於2026/7/",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -300,7 +262,7 @@
           "start": "2026-10-01",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/4/1、2026/7/1、2026/10/1當日開放登錄8,000名。因活動反應熱烈,2026/5/27起增加名額~12,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,0",
+          "source_text": "行「網購/電視購物優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,0",
           "reminder_minutes": 10,
           "precision": "date"
         }
@@ -309,7 +271,7 @@
         "per_period_reregister"
       ],
       "max_reward_percent": 2.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 600,
       "featured": true,
       "tags": [
         "消費分期優惠",
@@ -320,6 +282,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "登錄時間早於活動期間；登錄時間晚於活動期間。",
@@ -364,6 +327,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -406,6 +370,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -475,9 +440,10 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": true,
-      "review_message": "本頁含多個活動，未自動合併其他子活動的登錄時間，請至官方頁確認對應的登錄時間。",
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/sinopac-25efb0c26a98.json"
     },
     {
@@ -517,6 +483,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -563,6 +530,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -610,7 +578,7 @@
           "start": "2026-08-01T00:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享活動資格。 (限量5,000名,8/1 00:00開放登錄) 首次代繳係指2025/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享活動資格。 符合交易需於活動期間內刷卡交",
+          "source_text": "/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享活動資格。 (限量5,000名,8/1 00:00開放登錄) 首次代繳係指2025/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享活動資格。 A: 透過i繳費或聯合信用卡",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -630,9 +598,10 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
-      "review_message": "，請至官方頁確認對應的登錄時間。 登錄時間早於活動期間。",
+      "review_message": "登錄時間早於活動期間。",
       "detail_ref": "activities/sinopac-effa8fb207fc.json"
     },
     {
@@ -672,6 +641,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -714,6 +684,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -733,7 +704,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "各大3C家電/電信通訊刷永豐，消費滿額享回饋，搭配超省優惠刷卡省更多！",
       "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/928190552.html",
@@ -760,6 +731,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -778,7 +750,7 @@
         "海外消費",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "各大精選網購/電視購物刷永豐，消費滿額享優惠，讓您購好購滿！",
       "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/354768986.html",
@@ -804,6 +776,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -850,6 +823,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -896,6 +870,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -940,6 +915,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -980,6 +956,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1020,6 +997,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1060,6 +1038,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",

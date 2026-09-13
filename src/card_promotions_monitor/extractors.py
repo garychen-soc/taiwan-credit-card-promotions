@@ -2253,14 +2253,12 @@ def extract_obank(
         if end and end < today:
             continue
         page = parse_page(block, listing.final_url)
-        detail_url = next(
-            (
-                link["url"]
-                for link in page.links
-                if "/retail/event/event-announce/" in link["url"]
-            ),
-            listing.final_url,
-        )
+        detail_links = [link for link in page.links
+                        if "/retail/event/event-announce/" in link["url"]]
+        # The description may link a related offer before the card's own CTA.
+        # Prefer its details link so distinct offers cannot share the related ID.
+        detail_links.sort(key=lambda link: "活動詳情" not in link.get("text", ""))
+        detail_url = detail_links[0]["url"] if detail_links else listing.final_url
         activity_id = _stable_id(source["id"], detail_url if detail_url != listing.final_url else title)
         fingerprint = source_fingerprint(source["id"], block)
         cached = reuse_cached_promotion(

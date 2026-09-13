@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-31T08:43:44+08:00",
+  "generated_at": "2026-09-13T03:47:32+08:00",
   "bank_id": "hncb",
   "bank_name": "華南銀行",
   "activity_count": 44,
@@ -52,6 +52,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認。 官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -104,6 +105,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認。 官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -156,17 +158,18 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認。 官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/hncb-2e9e9235ebfe.json"
     },
     {
-      "id": "hncb-bfc6d6e4a4a8",
+      "id": "hncb-18c36196f529",
       "bank_id": "hncb",
       "bank_name": "華南銀行",
-      "title": "華南大玩家 輕夏光遊FUN飛自我",
-      "merchant": "華南大玩家 輕夏光遊FUN飛自我",
+      "title": "華南大玩家 天涼秋爽冬好遊",
+      "merchant": "華南大玩家 天涼秋爽冬好遊",
       "categories": [
         "網購",
         "行動支付",
@@ -178,9 +181,9 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-05-01",
-      "end_date": "2026-08-31",
-      "summary": "旅遊 華南大玩家 輕夏光遊FUN飛自我，美日韓泰再加碼 klook暢遊全世界 JCB X klook玩樂咖 華南銀行卡友專屬優惠先領起來！ 優惠一：華南銀行卡友每月專屬 全站商品滿5,000折400 優惠二：Klook海外商品95折 注意事項： 機場接送 尊享禮遇 JCB國際組織 VISA國際組織 MasterCard國際組織 可樂旅遊Club Med精緻全包式假期 可樂旅遊高鐵假期 agoda訂房優惠 雄獅旅遊【熱氣球嘉年華】 雄獅旅遊【藍皮解憂號】 iVideo WiFi/SIM/eSIM優惠 GLOBAL WiFi分享器優惠 GLOBAL WiFi 優惠 World eSIM 優惠 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "summary": "旅遊 華南大玩家 天涼秋爽冬好遊，美日韓泰再加碼 klook暢遊全世界 JCB X klook玩樂咖 華南銀行卡友專屬優惠先領起來！ 優惠一：華南銀行卡友每月專屬 全站商品滿5,000折400 優惠二：Klook海外商品95折 注意事項： 機場接送 尊享禮遇 JCB國際組織 VISA國際組織 MasterCard國際組織 可樂旅遊Club Med精緻全包式假期 可樂旅遊高鐵假期 agoda訂房優惠 雄獅旅遊【熱氣球嘉年華】 雄獅旅遊【藍皮解憂號】 iVideo WiFi/SIM/eSIM優惠 GLOBAL WiFi分享器優惠 GLOBAL WiFi 優惠 World eSIM 優惠 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/card/event/channel/travel",
       "registration_required": true,
       "parent_activity_id": "",
@@ -192,11 +195,11 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 2.0,
+      "max_reward_percent": 3.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
-        "華南大玩家 輕夏光遊FUN飛自我",
+        "華南大玩家 天涼秋爽冬好遊",
         "華南銀行",
         "網購",
         "行動支付",
@@ -208,10 +211,11 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "同一官方明細頁包含多個活動，登錄日期無法可靠對應，請至官方頁確認。 官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/hncb-bfc6d6e4a4a8.json"
+      "detail_ref": "activities/hncb-18c36196f529.json"
     },
     {
       "id": "hncb-58163204d99a",
@@ -226,7 +230,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "熱門優惠 台灣Pay信用卡「繳稅」華南超回饋 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/115TWPAY_tax_05A",
@@ -241,7 +245,7 @@
         "unknown"
       ],
       "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 10000,
       "featured": true,
       "tags": [
         "台灣Pay信用卡「繳稅」華南超回饋",
@@ -252,6 +256,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -269,7 +274,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "熱門優惠 台灣Pay信用卡繳「牌照稅」華南超回饋(回饋已於115/4/15上午9:17額滿) 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/115TWPAY_tax_04",
@@ -284,7 +289,7 @@
         "unknown"
       ],
       "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 10000,
       "featured": true,
       "tags": [
         "台灣Pay信用卡繳「牌照稅」華南超回饋(回饋已於115/4/15上午9:17額滿)",
@@ -294,6 +299,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -309,7 +315,7 @@
         "行動支付",
         "加油交通"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "熱門優惠 台灣Pay信用卡華南同樂會 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/115TWPAY_ALL",
@@ -324,7 +330,7 @@
         "unknown"
       ],
       "max_reward_percent": 15.0,
-      "max_reward_amount_twd": 1,
+      "max_reward_amount_twd": 100,
       "featured": true,
       "tags": [
         "台灣Pay信用卡華南同樂會",
@@ -332,6 +338,7 @@
         "行動支付",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -348,7 +355,7 @@
         "生活消費",
         "加油交通"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "熱門優惠 電子票證任你選~搭配華南卡享好康 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/news-126c",
@@ -363,7 +370,7 @@
         "unknown"
       ],
       "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 1000,
       "featured": true,
       "tags": [
         "電子票證任你選~搭配華南卡享好康",
@@ -372,6 +379,7 @@
         "生活消費",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -406,7 +414,7 @@
       "registration_windows": [],
       "registration_timing_contracts": [],
       "max_reward_percent": 10.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 400,
       "featured": true,
       "tags": [
         "icash Pay綁超級點數聯名卡珍珠白款，多元通路享最高10%OP點回饋",
@@ -420,6 +428,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -468,6 +477,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -510,6 +520,7 @@
         "海外消費",
         "繳費稅款"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -528,6 +539,7 @@
         "生活消費",
         "旅遊交通",
         "加油交通",
+        "海外消費",
         "繳費稅款",
         "分期"
       ],
@@ -543,9 +555,9 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 3.4,
-      "max_reward_amount_twd": null,
-      "featured": false,
+      "max_reward_percent": 13.11,
+      "max_reward_amount_twd": 300,
+      "featured": true,
       "tags": [
         "華南熊Q卡 熊挺你的神隊友",
         "華南銀行",
@@ -555,9 +567,11 @@
         "生活消費",
         "旅遊交通",
         "加油交通",
+        "海外消費",
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -572,7 +586,7 @@
       "categories": [
         "餐飲美食"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "4星好評人氣餐廳推薦",
       "source_url": "https://www.wonderful-food.com.tw/editor_page.php?Fullkey=80",
@@ -592,6 +606,7 @@
         "華南銀行",
         "餐飲美食"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -630,6 +645,7 @@
         "生活消費",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -651,7 +667,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "JCB晶緻卡 專屬優惠 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/card/event/cc_job",
@@ -678,6 +694,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -692,7 +709,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "JCB晶緻悠遊聯名卡自動加值10%現金回饋",
       "source_url": "https://ezweb.easycard.com.tw/Event01/JCBMainServlet",
@@ -712,6 +729,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -734,7 +752,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "MasterCard世界卡 專屬優惠 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/card/event/mastercard_world",
@@ -762,6 +780,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -784,7 +803,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "MasterCard鈦金卡 專屬優惠 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/card/event/mastercard_titanium",
@@ -812,6 +831,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -833,7 +853,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "VISA商務御璽卡 專屬優惠 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/card/event/cc_visa_business",
@@ -860,6 +880,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -882,7 +903,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "VISA御璽卡 專屬優惠 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/card/event/cc-visa-signature",
@@ -910,6 +931,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -932,7 +954,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "VISA無限卡 專屬優惠 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/card/event/cc_visa_infinite",
@@ -960,6 +982,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -974,7 +997,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "VISA無限卡獨家饗宴",
       "source_url": "https://tw.eztable.com/channel/3391",
@@ -994,6 +1017,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1009,7 +1033,7 @@
         "行動支付",
         "加油交通"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "icash Pay綁嘟嘟房聯名卡指定加油站/計程車10%OPEN POINT優惠",
       "source_url": "https://www.icashpay.com.tw/advertMessage/view/id/2037",
@@ -1030,6 +1054,7 @@
         "行動支付",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1044,7 +1069,7 @@
       "categories": [
         "行動支付"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "「台灣行動支付APP」X 華南信用卡感應購物2%回饋",
       "source_url": "https://www.twmp.com.tw/News_detail/a7246a500b3248bf87b9e30cfe3c1534",
@@ -1064,6 +1089,7 @@
         "華南銀行",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1078,7 +1104,7 @@
       "categories": [
         "生活消費"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "一卡通聯名卡於超商消費滿額享綠點50%回饋",
       "source_url": "https://www.i-pass.com.tw/Preferential/Detail/3079",
@@ -1098,6 +1124,7 @@
         "華南銀行",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1116,7 +1143,7 @@
         "加油交通",
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "熱門優惠 下半年真薪為您 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/115salaryQ3-Q4",
@@ -1129,7 +1156,7 @@
       "registration_windows": [],
       "registration_timing_contracts": [],
       "max_reward_percent": 20.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 200,
       "featured": true,
       "tags": [
         "下半年真薪為您",
@@ -1140,6 +1167,7 @@
         "加油交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1154,7 +1182,7 @@
       "categories": [
         "繳費稅款"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "中信i繳費活動-刷卡繳學費！限量現金抵用券等你拿！",
       "source_url": "https://ctbc.tw/FCM3C9",
@@ -1174,6 +1202,7 @@
         "華南銀行",
         "繳費稅款"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1188,7 +1217,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "即刻援助｜急難婦幼家庭救援計劃",
       "source_url": "https://www.csstpe.org.tw/donate/DonatePage.aspx?ActID=31",
@@ -1208,6 +1237,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1222,7 +1252,7 @@
       "categories": [
         "旅遊交通"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "可樂旅遊Club Med精緻全包式假期95折優惠",
       "source_url": "https://www.colatour.com.tw/webDM/bankCard/hn/theme/sale.html?utm_campaign=bankcamp&utm_medium=payAD&utm_source=hn&utm_content=hnEDM",
@@ -1242,6 +1272,7 @@
         "華南銀行",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1256,7 +1287,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "嘩仔報報-當季活動精選",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/data_stored/co-management/co_file-stored_s/card_banner/card_banner_1",
@@ -1276,6 +1307,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1290,7 +1322,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "夢時代聯名卡_夢時代館內餐飲88折優惠",
       "source_url": "https://www.dreammall.com.tw/downloads",
@@ -1310,6 +1342,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1324,7 +1357,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "大甲媽祖認同卡 首刷禮兌換",
       "source_url": "https://www.hnbpower.com.tw/",
@@ -1344,6 +1377,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1358,7 +1392,7 @@
       "categories": [
         "餐飲美食"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "就愛刷華南‧餐廳優惠一把抓",
       "source_url": "https://www.wonderful-food.com.tw/editor_page.php?Fullkey=82",
@@ -1378,6 +1412,7 @@
         "華南銀行",
         "餐飲美食"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1412,6 +1447,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1428,7 +1464,7 @@
         "百貨購物",
         "加油交通"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "熱門優惠 新卡首刷 紅利滿滿 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/11401-newnew",
@@ -1450,6 +1486,7 @@
         "百貨購物",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1464,7 +1501,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "熊愛做公益 ‧ 拯救童年 Come and Join",
       "source_url": "https://www.waker.org.tw/civicrm/contribute/transact?reset=1&id=84",
@@ -1484,6 +1521,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1498,7 +1536,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "用愛點亮自閉症青年勇敢前行的道路",
       "source_url": "https://neti.cc/k345a9B",
@@ -1518,6 +1556,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1532,7 +1571,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "異國美味，刷華南卡享優惠",
       "source_url": "https://www.wonderful-food.com.tw/editor_page.php?Fullkey=83",
@@ -1552,6 +1591,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1568,7 +1608,7 @@
         "生活消費",
         "加油交通"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "綁定LINE個人化服務 大家最愛的LINE帳務神器 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/per_finance/finance/service/line_personal_banking",
@@ -1590,6 +1630,7 @@
         "生活消費",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1604,9 +1645,9 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
-      "summary": "�ثn�Ȧ�y�C�p�W�d�ഫ�O�W���ӽ�",
+      "summary": "線上申請轉換記名式悠遊聯名卡(無須換卡)",
       "source_url": "https://netbank.hncb.com.tw/netbank/pages/jsp/CrdEasyCardSign/html/pre.jsp",
       "registration_required": false,
       "parent_activity_id": "",
@@ -1624,6 +1665,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1638,7 +1680,7 @@
       "categories": [
         "行動支付"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "美德耐長庚轉運站 用台灣Pay消費尚讚",
       "source_url": "https://www.taiwanpay.com.tw/content/info/nnews_detail.aspx?t=n&newsid=1841",
@@ -1658,6 +1700,7 @@
         "華南銀行",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1672,7 +1715,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "華南go好康",
       "source_url": "https://www.wonderful-food.com.tw/index.php",
@@ -1692,6 +1735,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1706,7 +1750,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "華南刷卡優惠好康報報",
       "source_url": "https://www.wonderful-food.com.tw/editor_page.php?Fullkey=81",
@@ -1726,6 +1770,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
@@ -1740,7 +1785,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": null,
       "summary": "電支跨機構收單(TWQR)介紹",
       "source_url": "https://www.twqr.com.tw/",
@@ -1760,6 +1805,7 @@
         "華南銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",

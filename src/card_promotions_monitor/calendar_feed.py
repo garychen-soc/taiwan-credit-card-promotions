@@ -45,8 +45,17 @@ def _fold_ics_line(line: str) -> str:
     for character in line:
         candidate = current + character
         if current and len(candidate.encode("utf-8")) > 75:
-            physical.append(current)
-            current = " " + character
+            # Move boundary whitespace with the content, in addition to the
+            # continuation marker. Unfolding must preserve every original byte.
+            prefix = current.rstrip(" \t")
+            tail = current[len(prefix):]
+            continuation = " " + tail + character
+            if prefix and len(continuation.encode("utf-8")) <= 75:
+                physical.append(prefix)
+                current = continuation
+            else:
+                physical.append(current)
+                current = " " + character
         else:
             current = candidate
     physical.append(current)

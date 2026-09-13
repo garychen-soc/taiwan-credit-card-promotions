@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-31T08:43:44+08:00",
+  "generated_at": "2026-09-13T03:47:32+08:00",
   "bank_id": "dbs",
   "bank_name": "星展銀行",
   "activity_count": 17,
@@ -18,9 +18,9 @@
         "生活消費",
         "分期"
       ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "Coupang 酷澎 分期0%利率 滿額最高享現折 NT$2,000 優惠 活動期間：2026/8/1～2026/8/31 注意事項",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "Coupang 酷澎 分期0%利率 滿額最高享現折 4000元 刷卡金 活動期間：2026/9/1～2026/9/30 注意事項",
       "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_12.html",
       "registration_required": true,
       "parent_activity_id": "",
@@ -30,10 +30,10 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-08-26T16:00:00+08:00",
+          "start": "2026-09-29T16:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄:於2026/8/26 16:00開始登錄。登錄名額有限,額滿即止。 並於指定期間內完成登錄,即可享: 正卡持卡人所持之信用卡於回饋當時需為有效卡,若有遭限制或停止使用、延遲繳款或其他違反信用卡約定條款之情事,本行得不待通知逕行取消持卡人之回饋資格。需於",
+          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄:於2026/9/29 16:00開始登錄。登錄名額有限,額滿即止。 並於指定期間內完成登錄,即可享: 正卡持卡人所持之信用卡於回饋當時需為有效卡,若有遭限制或停止使用、延遲繳款或其他違反信用卡約定條款之情事,本行得不待通知逕行取消持卡人之回饋資格。需於",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -42,7 +42,7 @@
         "unknown"
       ],
       "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 2000,
+      "max_reward_amount_twd": 4000,
       "featured": true,
       "tags": [
         "Coupang 酷澎",
@@ -53,350 +53,11 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/dbs-28addee5c8e7.json"
-    },
-    {
-      "id": "dbs-7cf0280fd866",
-      "bank_id": "dbs",
-      "bank_name": "星展銀行",
-      "title": "Yahoo!奇摩購物中心/拍賣(含購物中心商店)信用卡優惠",
-      "merchant": "Yahoo!奇摩購物中心/拍賣",
-      "categories": [
-        "網購",
-        "行動支付",
-        "生活消費",
-        "分期"
-      ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "Yahoo購物中心 分期0%利率 滿額最高享 7,000 刷卡金回饋 活動期間：2026/8/1～2026/8/31 注意事項 免責聲明",
-      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_03.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-08-31T10:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "須~「星展Card+信用卡數位服務」進行登錄;於2026/8/31 11:00開始登錄。登錄名額有限,額滿即止。 * 三星摺疊新機活動須~「yahoo購物中心活動網頁」進行登錄;於2026/8/31 10:00開始登錄。登錄名額有限,額滿即止。 並於指定期間內完成登錄,即可享: 單筆分期滿NT$8,000(含)以上(不可跨平台累積)並完成登錄 單筆分期滿NT$30,000(含)以上(不可跨平台累積)並完成登錄 單筆分期滿NT$",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-31T11:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄;於2026/8/31 11:00開始登錄。登錄名額有限,額滿即止。 * 三星摺疊新機活動須~「yahoo購物中心活動網頁」進行登錄;於2026/8/31 10:00開始登錄。登錄名額有限,額滿即止。 並於指定期間內完成登錄,即可享: 單筆分期滿NT$8",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "Yahoo!奇摩購物中心/拍賣",
-        "星展銀行",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/dbs-7cf0280fd866.json"
-    },
-    {
-      "id": "dbs-4cb5996d5572",
-      "bank_id": "dbs",
-      "bank_name": "星展銀行",
-      "title": "momo購物網( LINE Pay 用戶優惠適用一次付清消費方式)(不含mofun旅遊網富昇旅行社、momo摩天商城、電視購物、型錄)信用卡優惠",
-      "merchant": "momo購物網",
-      "categories": [
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "分期"
-      ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "momo 分期0%利率 滿額最高享 $7,000 mo幣 活動期間：2026/8/1～2026/8/31 注意事項 免責聲明",
-      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_02.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-08-31T15:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄;於2026/8/31 15:00開始登錄。登錄名額有限,額滿即止。 * 三星及機車館優惠活動(mo幣)8/31 15:30於momo購物網活動網站開放登錄。 本活動限星展銀行(台灣)發行之星展信用卡正卡持卡人參加,於momo購物網(不含mo店+、mof",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-31T15:30:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄;於2026/8/31 15:00開始登錄。登錄名額有限,額滿即止。 * 三星及機車館優惠活動(mo幣)8/31 15:30於momo購物網活動網站開放登錄。 本活動限星展銀行(台灣)發行之星展信用卡正卡持卡人參加,於momo購物網(不含mo店+、mofun旅遊網富昇旅行社、電視購物、型錄)刷星展信用卡分期消費達指定門檻及期數,請於活動指定期",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 7000,
-      "featured": true,
-      "tags": [
-        "momo購物網",
-        "星展銀行",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/dbs-4cb5996d5572.json"
-    },
-    {
-      "id": "dbs-24a8b1b17837",
-      "bank_id": "dbs",
-      "bank_name": "星展銀行",
-      "title": "taobao淘寶網信用卡優惠",
-      "merchant": "taobao淘寶網",
-      "categories": [
-        "網購",
-        "生活消費",
-        "分期"
-      ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "淘寶 消費滿額享 NT$300 刷卡金回饋 活動期間：2026/8/1～2026/8/31 注意事項 免責聲明",
-      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_05.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-08-28T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄:於2026/8/28 14:00開始登錄。登錄名額有限,額滿即止。 並於指定期間內完成登錄,即可享: 請於指定期間~「星展Card+ 信用卡數位服務」進行登錄,上述活動所有門檻須個別登錄,完成登錄後即可享有參加本活動之資格,登錄額滿,活動即提前終止並關",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "taobao淘寶網",
-        "星展銀行",
-        "網購",
-        "生活消費",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/dbs-24a8b1b17837.json"
-    },
-    {
-      "id": "dbs-e2993e4e1144",
-      "bank_id": "dbs",
-      "bank_name": "星展銀行",
-      "title": "星展PChome Prime聯名卡優惠",
-      "merchant": "PChome線上購物",
-      "categories": [
-        "網購",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "分期"
-      ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "PChome 分期0%利率 滿額最高享 11,000 P幣回饋 活動期間：2026/8/1～2026/8/31 注意事項 免責聲明",
-      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_01.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-08-31T15:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "(活動登錄日期:2026/8/31 15:00起~PChome活動網站進行登錄) 本活動限於PChome24h購物刷星展信用卡消費達指定門檻及期數,於指定期間內完成登錄成功,即可享限量P幣回饋。正、附卡消費合併計算,以上本月所有門檻除三星旗鑑館加碼活動以外每一正卡持",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "PChome線上購物",
-        "星展銀行",
-        "網購",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/dbs-e2993e4e1144.json"
-    },
-    {
-      "id": "dbs-7c7c23f64ded",
-      "bank_id": "dbs",
-      "bank_name": "星展銀行",
-      "title": "東森/森森購物(旅遊商品、草莓網商品除外)信用卡優惠",
-      "merchant": "東森/森森購物",
-      "categories": [
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "分期"
-      ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "東森購物 分期0%利率 滿額最高享 NT$2,000 提貨券 活動期間：2026/8/1～2026/8/31 注意事項 免責聲明",
-      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_04.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-08-31T11:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "(以上優惠活動8/31上午11:00於東森購物活動網站開放登錄) (以上優惠活動8/31上午11:00於東森購物活動網站開放登錄,每正卡人活動期間限回饋乙次且不可跨等級重複兌換。) 持卡人需於消費當月~指定活動網站完成登錄,登錄額滿活動即提前終止。上述活動",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-11-30",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "入東森購物會員方可進行登錄,登錄時間以東森購物登錄網頁系統顯示為準,於指定時間開放登錄,登錄額滿即關閉登錄。本活動最快於2026/11/30前回饋東森提貨券~正卡持卡人之東森購物會員帳戶。 並於指定期間內完成登錄,即可享: 享50 樂透金 + 500東森幣 (不需登錄) 享50 樂透金 (不需登錄)",
-          "reminder_minutes": 10,
-          "precision": "date"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 2000,
-      "featured": true,
-      "tags": [
-        "東森/森森購物",
-        "星展銀行",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "分期"
-      ],
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間晚於活動期間。",
-      "detail_ref": "activities/dbs-7c7c23f64ded.json"
-    },
-    {
-      "id": "dbs-05b85d7044c8",
-      "bank_id": "dbs",
-      "bank_name": "星展銀行",
-      "title": "蝦皮購物信用卡優惠",
-      "merchant": "蝦皮購物",
-      "categories": [
-        "網購",
-        "百貨購物",
-        "生活消費",
-        "分期"
-      ],
-      "start_date": "2026-08-01",
-      "end_date": "2026-08-31",
-      "summary": "蝦皮購物 分期0%利率 最高享刷卡金 NT$5,000 活動期間：2026/8/1～2026/8/31 【現折優惠】 全站 蝦皮商城 蝦皮直營-Apple品牌旗艦館+3C家電館+遊戲館 安卓旗艦館限定新機SAMSUNG Z8摺疊系列現折優惠 注意事項 免責申明",
-      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_06.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-08-01",
-          "end": "2026-08-31",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-08-26T11:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "* 活動一~活動四須~「星展Card+信用卡數位服務」完成登錄;活動於2026/8/26上午11:00開始登錄,登錄名額有限,額滿即止。 於蝦皮購物刷星展信用卡消費達指定門檻,並於指定期間內完成登錄,即可享: 本活動限於蝦皮購物刷星展信用卡消費達指定門檻及期數,於指定期間內完成登錄成功,即可享刷卡金回饋。正附卡合計,每一",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 5000,
-      "featured": true,
-      "tags": [
-        "蝦皮購物",
-        "星展銀行",
-        "網購",
-        "百貨購物",
-        "生活消費",
-        "分期"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/dbs-05b85d7044c8.json"
     },
     {
       "id": "dbs-aa5ba61450af",
@@ -452,6 +113,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -519,10 +181,305 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/dbs-253a17663fbc.json"
+    },
+    {
+      "id": "dbs-7cf0280fd866",
+      "bank_id": "dbs",
+      "bank_name": "星展銀行",
+      "title": "Yahoo!奇摩購物中心/拍賣(含購物中心商店)信用卡優惠",
+      "merchant": "Yahoo!奇摩購物中心/拍賣",
+      "categories": [
+        "網購",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "Yahoo購物中心 分期0%利率 滿額最高享 6,500 刷卡金 活動期間：2026/9/1～2026/9/30 注意事項 免責聲明",
+      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_03.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-29T10:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "「星展Card+信用卡數位服務」進行登錄;於2026/9/29 11:00開始登錄。登錄名額有限,額滿即止。 *APPLE指定新品活動須~「yahoo購物中心活動網頁」進行登錄;於2026/9/29 10:00開始登錄。登錄名額有限,額滿即止。 並於指定期間內完成登錄,即可享: 單筆分期滿NT$6,000(含)以上(不可跨平台累積)並完成登錄 單筆分期滿NT$15,000(含)以上(不可跨平台累積)並完成登錄 單筆分期滿NT$",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-29T11:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄;於2026/9/29 11:00開始登錄。登錄名額有限,額滿即止。 *APPLE指定新品活動須~「yahoo購物中心活動網頁」進行登錄;於2026/9/29 10:00開始登錄。登錄名額有限,額滿即止。 並於指定期間內完成登錄,即可享: 單筆分期滿NT",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "Yahoo!奇摩購物中心/拍賣",
+        "星展銀行",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/dbs-7cf0280fd866.json"
+    },
+    {
+      "id": "dbs-4cb5996d5572",
+      "bank_id": "dbs",
+      "bank_name": "星展銀行",
+      "title": "momo購物網( LINE Pay 用戶優惠適用一次付清消費方式)(不含mofun旅遊網富昇旅行社、momo摩天商城、電視購物、型錄)信用卡優惠",
+      "merchant": "momo購物網",
+      "categories": [
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "momo 分期0%利率 滿額最高享 $7,000 mo幣 活動期間：2026/9/1～2026/9/30 注意事項 免責聲明",
+      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_02.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-30T15:30:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄;於2026/9/30 15:30開始登錄。登錄名額有限,額滿即止。 * APPLE新機及機車館優惠活動(mo幣)9/30 16:00於momo購物網活動網站開放登錄。 本活動限星展銀行(台灣)發行之星展信用卡正卡持卡人參加,於momo購物網(不含mo店",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-30T16:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄;於2026/9/30 15:30開始登錄。登錄名額有限,額滿即止。 * APPLE新機及機車館優惠活動(mo幣)9/30 16:00於momo購物網活動網站開放登錄。 本活動限星展銀行(台灣)發行之星展信用卡正卡持卡人參加,於momo購物網(不含mo店+、mofun旅遊網富昇旅行社、電視購物、型錄)刷星展信用卡分期消費達指定門檻及期數,請於活動指定期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 7000,
+      "featured": true,
+      "tags": [
+        "momo購物網",
+        "星展銀行",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/dbs-4cb5996d5572.json"
+    },
+    {
+      "id": "dbs-24a8b1b17837",
+      "bank_id": "dbs",
+      "bank_name": "星展銀行",
+      "title": "taobao淘寶網信用卡優惠",
+      "merchant": "taobao淘寶網",
+      "categories": [
+        "網購",
+        "生活消費",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "淘寶 消費滿額享 NT$300 刷卡金回饋 活動期間：2026/9/1～2026/9/30 注意事項 免責聲明",
+      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_05.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-29T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "* 刷卡金活動須~「星展Card+信用卡數位服務」進行登錄:於2026/9/29 14:00開始登錄。登錄名額有限,額滿即止。 並於指定期間內完成登錄,即可享: 請於指定期間~「星展Card+ 信用卡數位服務」進行登錄,上述活動所有門檻須個別登錄,完成登錄後即可享有參加本活動之資格,登錄額滿,活動即提前終止並關",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "taobao淘寶網",
+        "星展銀行",
+        "網購",
+        "生活消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/dbs-24a8b1b17837.json"
+    },
+    {
+      "id": "dbs-e2993e4e1144",
+      "bank_id": "dbs",
+      "bank_name": "星展銀行",
+      "title": "星展PChome Prime聯名卡優惠",
+      "merchant": "PChome線上購物",
+      "categories": [
+        "網購",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "PChome 分期0%利率 滿額最高享 11,000 P幣回饋 活動期間：2026/9/1～2026/9/30 注意事項 免責聲明",
+      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_01.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-08-31T15:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "(活動登錄日期:2026/9/30 15:00起~PChome活動網站進行登錄) (活動登錄日期:2026/8/31 15:00起~PChome活動網站進行登錄) *活動登錄日期:2026/9/30下午3:00起~PChome活動網站進行登錄 本活動限於PChome24h購物刷星展信用卡消費達指定門檻及期數,於指定期間內完成登錄成功,即可享限量P",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-09-30T15:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "(活動登錄日期:2026/9/30 15:00起~PChome活動網站進行登錄) (活動登錄日期:2026/8/31 15:00起~PChome活動網站進行登錄) *活動登錄日期:2026/9/30下午3:00起~PChome活動網站進行登錄 本活動限於PChome",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "PChome線上購物",
+        "星展銀行",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間早於活動期間。",
+      "detail_ref": "activities/dbs-e2993e4e1144.json"
+    },
+    {
+      "id": "dbs-7c7c23f64ded",
+      "bank_id": "dbs",
+      "bank_name": "星展銀行",
+      "title": "東森/森森購物(旅遊商品、草莓網商品除外)信用卡優惠",
+      "merchant": "東森/森森購物",
+      "categories": [
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "分期"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "summary": "東森購物 分期0%利率 滿額最高享 NT$2,500 提貨券 活動期間：2026/9/1～2026/9/30 注意事項 免責聲明",
+      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_04.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-30T11:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "(以上優惠活動9/30上午11:00於東森購物活動網站開放登錄) (以上優惠活動9/30上午11:00於東森購物活動網站開放登錄,每正卡人活動期間限回饋乙次且不可跨等級重複兌換。) 持卡人需於消費當月~指定活動網站完成登錄,登錄額滿活動即提前終止。上述活動",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-31",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "入東森購物會員方可進行登錄,登錄時間以東森購物登錄網頁系統顯示為準,於指定時間開放登錄,登錄額滿即關閉登錄。本活動最快於2026/12/31前回饋東森提貨券~正卡持卡人之東森購物會員帳戶。 並於指定期間內完成登錄,即可享: 享50 樂透金 + 500東森幣 (不需登錄) 享50 樂透金 (不需登錄)",
+          "reminder_minutes": 10,
+          "precision": "date"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 2500,
+      "featured": true,
+      "tags": [
+        "東森/森森購物",
+        "星展銀行",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間晚於活動期間。",
+      "detail_ref": "activities/dbs-7c7c23f64ded.json"
     },
     {
       "id": "dbs-001ecdb5efa0",
@@ -586,6 +543,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -653,6 +611,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -726,6 +685,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -799,6 +759,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -872,6 +833,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -945,6 +907,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1018,6 +981,7 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1091,10 +1055,74 @@
         "生活消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/dbs-7256282f8689.json"
+    },
+    {
+      "id": "dbs-05b85d7044c8",
+      "bank_id": "dbs",
+      "bank_name": "星展銀行",
+      "title": "蝦皮購物信用卡優惠",
+      "merchant": "蝦皮購物",
+      "categories": [
+        "網購",
+        "百貨購物",
+        "生活消費",
+        "分期"
+      ],
+      "start_date": "2026-08-01",
+      "end_date": "2026-09-30",
+      "summary": "蝦皮購物 分期0%利率 最高享刷卡金 NT$5,000 活動期間：2026/9/1～2026/9/30 【現折優惠】 全站 蝦皮商城 蝦皮直營-Apple品牌旗艦館+3C家電館+遊戲點數 iPhone新機預購上市 注意事項 免責申明",
+      "source_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/mall_06.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-31",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://www.dbs.com.tw/personal-zh/digital-service/cardplus/announcement#/?redirect=Btn_Campaign&source=pweb",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-09-28T11:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "* 活動一~活動四須~「星展Card+信用卡數位服務」完成登錄;活動於2026/9/28上午11:00開始登錄,登錄名額有限,額滿即止。 於蝦皮購物刷星展信用卡消費達指定門檻,並於指定期間內完成登錄,即可享: 本活動限於蝦皮購物刷星展信用卡消費達指定門檻及期數,於指定期間內完成登錄成功,即可享刷卡金回饋。正附卡合計,每一",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 5000,
+      "featured": true,
+      "tags": [
+        "蝦皮購物",
+        "星展銀行",
+        "網購",
+        "百貨購物",
+        "生活消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/dbs-05b85d7044c8.json"
     }
   ]
 }

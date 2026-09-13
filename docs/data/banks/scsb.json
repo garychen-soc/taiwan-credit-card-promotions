@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-31T08:43:44+08:00",
+  "generated_at": "2026-09-13T03:47:32+08:00",
   "bank_id": "scsb",
   "bank_name": "上海商銀",
   "activity_count": 22,
@@ -48,6 +48,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -153,6 +154,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -192,7 +194,7 @@
         "unknown"
       ],
       "max_reward_percent": 10.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 300,
       "featured": true,
       "tags": [
         "ApplePay綁上海商銀信用卡，日韓消費最高加碼10%回饋",
@@ -203,6 +205,7 @@
         "海外消費",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -247,6 +250,7 @@
         "分期",
         "繳費稅款"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -279,14 +283,6 @@
       "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
       "registration_url_kind": "bank_portal",
       "registration_windows": [
-        {
-          "start": "2026-04-01",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "限量500名,登錄名額額滿即止。 ※本活動於「每月第一個週三」下午4點開放登錄,同月份登錄一次即可,次月須重新登錄。 (2026/4/1、5/6、6/3、7/1、8/5、9/2、10/7、11/4、12/2) >>>【月月活動登錄】<<< (6月起變更活動登錄網址) 注意事項 本活動僅限上海銀行",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
         {
           "start": "2026-04-01T16:00:00+08:00",
           "end": null,
@@ -364,7 +360,7 @@
         "unknown"
       ],
       "max_reward_percent": 5.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 100,
       "featured": true,
       "tags": [
         "台灣行動支付登錄加碼筆筆消費享5%回饋",
@@ -372,6 +368,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -412,7 +409,7 @@
         "unknown"
       ],
       "max_reward_percent": 5.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 200,
       "featured": true,
       "tags": [
         "生活小確幸!一般消費滿額 7-11、全家指定支付最高享5%",
@@ -424,6 +421,7 @@
         "旅遊交通",
         "餐飲美食"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -472,6 +470,7 @@
         "加油交通",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -520,6 +519,7 @@
         "餐飲美食",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -566,6 +566,7 @@
         "餐飲美食",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -614,6 +615,7 @@
         "旅遊交通",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -656,6 +658,7 @@
         "百貨購物",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -700,6 +703,7 @@
         "餐飲美食",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -746,6 +750,7 @@
         "加油交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -790,6 +795,7 @@
         "旅遊交通",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -830,6 +836,7 @@
         "上海商銀",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -864,7 +871,7 @@
       "registration_windows": [],
       "registration_timing_contracts": [],
       "max_reward_percent": 2.0,
-      "max_reward_amount_twd": null,
+      "max_reward_amount_twd": 100,
       "featured": false,
       "tags": [
         "台灣行動支付綁定上海卡感應支付加碼２%回饋金",
@@ -872,6 +879,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -916,6 +924,7 @@
         "行動支付",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -960,6 +969,7 @@
         "行動支付",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1004,6 +1014,7 @@
         "生活消費",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1054,6 +1065,7 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1094,6 +1106,7 @@
         "生活消費",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -1136,6 +1149,7 @@
         "旅遊交通",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",

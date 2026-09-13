@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-31T08:43:44+08:00",
+  "generated_at": "2026-09-13T03:47:32+08:00",
   "bank_id": "tcbbank",
   "bank_name": "台中銀行",
-  "activity_count": 20,
+  "activity_count": 21,
   "activities": [
     {
       "id": "tcbbank-c7b676f7a732",
@@ -42,6 +42,7 @@
         "加油交通",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
@@ -84,24 +85,25 @@
         "加油交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/tcbbank-e8edd5286a00.json"
     },
     {
-      "id": "tcbbank-d5590c29a4c2",
+      "id": "tcbbank-de4c10e1c2cf",
       "bank_id": "tcbbank",
       "bank_name": "台中銀行",
-      "title": "中元節量販滿額禮",
-      "merchant": "中元節量販滿額禮",
+      "title": "世界卡尊榮旅遊講座",
+      "merchant": "世界卡尊榮旅遊講座",
       "categories": [
-        "其他優惠"
+        "旅遊交通"
       ],
-      "start_date": "2026-07-29",
-      "end_date": "2026-09-02",
-      "summary": "(至115年9月2日有效)",
-      "source_url": "https://www.tcbbank.com.tw/Promotion/Info.html?ID=777",
+      "start_date": "2026-09-09",
+      "end_date": "2026-10-03",
+      "summary": "(至115年10月3日有效)",
+      "source_url": "https://www.tcbbank.com.tw/Promotion/Info.html?ID=797",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -114,14 +116,15 @@
       "max_reward_amount_twd": null,
       "featured": false,
       "tags": [
-        "中元節量販滿額禮",
+        "世界卡尊榮旅遊講座",
         "台中銀行",
-        "其他優惠"
+        "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/tcbbank-d5590c29a4c2.json"
+      "detail_ref": "activities/tcbbank-de4c10e1c2cf.json"
     },
     {
       "id": "tcbbank-b73f3a11058e",
@@ -152,6 +155,7 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -186,6 +190,7 @@
         "台中銀行",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -228,6 +233,7 @@
         "旅遊交通",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -262,6 +268,7 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -296,6 +303,7 @@
         "台中銀行",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -330,6 +338,7 @@
         "台中銀行",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -364,6 +373,7 @@
         "台中銀行",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -398,6 +408,7 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -432,6 +443,7 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -466,6 +478,7 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -500,6 +513,7 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -534,6 +548,7 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -568,6 +583,7 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -602,6 +618,7 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -636,6 +653,7 @@
         "台中銀行",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -670,6 +688,7 @@
         "台中銀行",
         "加油交通"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
@@ -704,10 +723,46 @@
         "台中銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/tcbbank-9784e24ce2bc.json"
+    },
+    {
+      "id": "tcbbank-db0757d417da",
+      "bank_id": "tcbbank",
+      "bank_name": "台中銀行",
+      "title": "線上申辦JCB晶緻卡，晶選加碼禮",
+      "merchant": "線上申辦JCB晶緻卡，晶選加碼禮",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": null,
+      "summary": "(至116年3月15有效)",
+      "source_url": "https://www.tcbbank.com.tw/Promotion/Info.html?ID=792",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "線上申辦JCB晶緻卡，晶選加碼禮",
+        "台中銀行",
+        "其他優惠"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
+      "detail_ref": "activities/tcbbank-db0757d417da.json"
     }
   ]
 }

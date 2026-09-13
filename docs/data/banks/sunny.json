@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-31T08:43:44+08:00",
+  "generated_at": "2026-09-13T03:47:32+08:00",
   "bank_id": "sunny",
   "bank_name": "陽信銀行",
-  "activity_count": 27,
+  "activity_count": 25,
   "activities": [
     {
       "id": "sunny-b75ea4fdf3e4",
@@ -36,80 +36,11 @@
         "陽信銀行",
         "網購"
       ],
+      "official_status": "published",
       "review_required": true,
       "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證 官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sunny-b75ea4fdf3e4.json"
-    },
-    {
-      "id": "sunny-bc6ae28f4652",
-      "bank_id": "sunny",
-      "bank_name": "陽信銀行",
-      "title": "日本大國藥妝刷陽信JCB卡 享最高30%事後現金回饋",
-      "merchant": "日本大國藥妝刷陽信JCB卡 享最高30%事後現金回饋",
-      "categories": [
-        "生活消費",
-        "海外消費"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-08-31",
-      "summary": "日本大國藥妝刷陽信JCB卡最高30%事後現金回饋。",
-      "source_url": "https://www.sunnybank.com.tw/activityevent/Daikoku/web.html",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 30.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "日本大國藥妝刷陽信JCB卡 享最高30%事後現金回饋",
-        "陽信銀行",
-        "生活消費",
-        "海外消費"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/sunny-bc6ae28f4652.json"
-    },
-    {
-      "id": "sunny-f7fee9780679",
-      "bank_id": "sunny",
-      "bank_name": "陽信銀行",
-      "title": "璀璨非凡滿額贈",
-      "merchant": "璀璨非凡滿額贈",
-      "categories": [
-        "其他優惠"
-      ],
-      "start_date": "2026-06-01",
-      "end_date": "2026-08-31",
-      "summary": "陽信信用卡滿額回饋活動。",
-      "source_url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "璀璨非凡滿額贈",
-        "陽信銀行",
-        "其他優惠"
-      ],
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/sunny-f7fee9780679.json"
     },
     {
       "id": "sunny-ab04d49730fa",
@@ -140,9 +71,10 @@
         "陽信銀行",
         "海外消費"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-ab04d49730fa.json"
     },
     {
@@ -174,9 +106,10 @@
         "陽信銀行",
         "旅遊交通"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-5eb3f7b04318.json"
     },
     {
@@ -208,9 +141,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-d08724f1b1b6.json"
     },
     {
@@ -242,9 +176,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-9818696bbc3c.json"
     },
     {
@@ -276,9 +211,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-09430b71cc1d.json"
     },
     {
@@ -310,9 +246,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-4f8d1f9f1dbd.json"
     },
     {
@@ -346,9 +283,10 @@
         "百貨購物",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-9fe36a793ebe.json"
     },
     {
@@ -360,7 +298,7 @@
       "categories": [
         "分期"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": "2026-12-31",
       "summary": "陽信信用卡單筆消費分期。",
       "source_url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1",
@@ -380,9 +318,10 @@
         "陽信銀行",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-a4b07a972c42.json"
     },
     {
@@ -414,9 +353,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-8d20dab4d741.json"
     },
     {
@@ -448,9 +388,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-a4d1483b388d.json"
     },
     {
@@ -482,9 +423,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-09b9b5610ccc.json"
     },
     {
@@ -516,9 +458,10 @@
         "陽信銀行",
         "百貨購物"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-347a5be687c2.json"
     },
     {
@@ -552,9 +495,10 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-4e7fe857671e.json"
     },
     {
@@ -588,9 +532,10 @@
         "繳費稅款",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-8802d0ad30e5.json"
     },
     {
@@ -622,9 +567,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-9a46aaef233d.json"
     },
     {
@@ -656,9 +602,10 @@
         "陽信銀行",
         "分期"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-8a04ca4f015b.json"
     },
     {
@@ -690,9 +637,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-fb47a1ca4e42.json"
     },
     {
@@ -724,9 +672,10 @@
         "陽信銀行",
         "繳費稅款"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-45e893571f99.json"
     },
     {
@@ -758,9 +707,10 @@
         "陽信銀行",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-d5df6616054f.json"
     },
     {
@@ -792,9 +742,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-409c5655950a.json"
     },
     {
@@ -826,9 +777,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-76a59f65cb5c.json"
     },
     {
@@ -840,7 +792,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": "2026-12-31",
       "summary": "中國與香港指定消費優惠。",
       "source_url": "https://www.sunnybank.com.tw/activityevent/Mastercard2026/web.html",
@@ -860,9 +812,10 @@
         "陽信銀行",
         "其他優惠"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-1127de450512.json"
     },
     {
@@ -894,9 +847,10 @@
         "陽信銀行",
         "行動支付"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-3e125e12c000.json"
     },
     {
@@ -908,7 +862,7 @@
       "categories": [
         "生活消費"
       ],
-      "start_date": "2026-08-04",
+      "start_date": "2026-09-13",
       "end_date": "2026-12-31",
       "summary": "陽信現金紅利點數回饋。",
       "source_url": "https://www.sunnybank.com.tw/activityevent/2026_Points/web.html",
@@ -928,9 +882,10 @@
         "陽信銀行",
         "生活消費"
       ],
+      "official_status": "published",
       "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "needs_review": true,
+      "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-ddf90fb1f99d.json"
     }
   ]

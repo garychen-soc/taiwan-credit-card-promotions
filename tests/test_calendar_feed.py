@@ -3,10 +3,27 @@ from __future__ import annotations
 import re
 import unittest
 
-from card_promotions_monitor.calendar_feed import build_registration_feed
+from card_promotions_monitor.calendar_feed import build_registration_feed, _fold_ics_line
 
 
 class RegistrationCalendarFeedTests(unittest.TestCase):
+    def test_fold_preserves_whitespace_and_utf8_at_boundary(self) -> None:
+        for logical in ["SUMMARY:" + "a" * 65 + "  消費滿額",
+                        "SUMMARY:" + "中" * 21 + " \t滿額",
+                        "DESCRIPTION:" + "信用卡 " * 40]:
+            with self.subTest(logical=logical):
+                folded = _fold_ics_line(logical)
+                self.assertEqual(folded.replace("\r\n ", ""), logical)
+                lines = folded.split("\r\n")
+                self.assertTrue(all(len(line.encode("utf-8")) <= 75 for line in lines))
+                self.assertTrue(all(not line.endswith((" ", "\t")) for line in lines[:-1]))
+
+    def test_fold_long_whitespace_run_still_preserves_text_and_limit(self) -> None:
+        logical = "DESCRIPTION:" + " " * 150 + "end"
+        folded = _fold_ics_line(logical)
+        self.assertEqual(folded.replace("\r\n ", ""), logical)
+        self.assertTrue(all(len(line.encode("utf-8")) <= 75 for line in folded.split("\r\n")))
+
     def test_feed_uses_stable_events_and_omits_expired_point_windows(self) -> None:
         payload = {
             "generated_at": "2026-08-16T10:00:00+08:00",
