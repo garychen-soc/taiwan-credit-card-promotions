@@ -8,6 +8,7 @@
   const INDEX_FILTERS = new Set(["today", "tomorrow", "registration"]);
   const timeState = window.CardPromotionTime;
   const catalogState = window.CardPromotionCatalog;
+  const sourceHealthState = window.CardPromotionSourceHealth;
   const { escapeIcs, serializeIcs } = window.CardPromotionCalendar;
   const state = {
     data: null,
@@ -27,6 +28,8 @@
   const el = {
     sourceDot: document.querySelector("#source-dot"),
     updateLabel: document.querySelector("#update-label"),
+    websiteUpdateLabel: document.querySelector("#website-update-label"),
+    partialUpdateLabel: document.querySelector("#partial-update-label"),
     statRegistration: document.querySelector("#stat-registration"),
     statHighReturn: document.querySelector("#stat-high-return"),
     statTotal: document.querySelector("#stat-total"),
@@ -69,6 +72,15 @@
     timeZone: "Asia/Taipei"
   });
   const timeFmt = new Intl.DateTimeFormat("zh-TW", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: "Asia/Taipei"
+  });
+  const dateTimeFmt = new Intl.DateTimeFormat("zh-TW", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
@@ -733,10 +745,18 @@
 
   function renderHealth() {
     const health = state.data.source_health;
-    const allComplete = health.every((item) => item.status === "complete");
-    const anyFailed = health.some((item) => item.status === "failed");
-    el.sourceDot.className = `source-dot ${allComplete ? "is-ok" : anyFailed ? "is-error" : ""}`;
-    el.updateLabel.textContent = `${allComplete ? "官方來源正常" : "部分來源需留意"} · ${shortDateFmt.format(parseDate(state.data.generated_at))}`;
+    const summary = sourceHealthState.deriveSourceHealth(state.data);
+    el.sourceDot.className = `source-dot ${summary.allComplete ? "is-ok" : summary.anyFailed ? "is-error" : ""}`;
+    el.updateLabel.textContent = summary.allComplete ? "官方來源正常" : "部分來源需留意";
+    const websiteDate = parseDate(summary.websiteUpdatedAt);
+    el.websiteUpdateLabel.textContent = `網站更新：${websiteDate ? dateTimeFmt.format(websiteDate) : "時間不明"}`;
+    el.partialUpdateLabel.hidden = summary.incomplete.length === 0;
+    el.partialUpdateLabel.textContent = summary.incomplete.length
+      ? `部分來源更新：${summary.incomplete.map((item) => {
+        const date = parseDate(item.lastUpdatedAt);
+        return `${item.bankName}（最後更新 ${date ? dateTimeFmt.format(date) : "時間不明"}）`;
+      }).join("、")}`
+      : "";
     el.sourceHealthList.replaceChildren();
     health.forEach((item) => {
       const li = document.createElement("li");
@@ -746,10 +766,15 @@
       name.textContent = item.bank_name;
       const status = document.createElement("span");
       const sourceStatus = item.status === "complete" ? "來源正常" : item.status === "partial" ? "部分可讀" : "讀取失敗";
+      const sourceUpdatedAt = item.status === "complete" ? "" : item.last_updated_at;
+      const sourceUpdatedDate = parseDate(sourceUpdatedAt);
+      const sourceUpdateText = sourceUpdatedDate
+        ? ` · 最後更新 ${dateTimeFmt.format(sourceUpdatedDate)}`
+        : (item.status === "complete" ? "" : " · 最後更新時間不明");
       const registrationCoverage = item.registration_required_count
         ? ` · 登錄時點 ${item.registration_time_confirmed_count}/${item.registration_required_count}（${item.registration_time_coverage_percent}%）`
         : " · 無需登錄活動";
-      status.textContent = `${sourceStatus} · ${item.activity_count} 筆${registrationCoverage}`;
+      status.textContent = `${sourceStatus} · ${item.activity_count} 筆${registrationCoverage}${sourceUpdateText}`;
       li.append(dot, name, status);
       el.sourceHealthList.append(li);
     });
@@ -866,6 +891,8 @@
     } catch (error) {
       el.sourceDot.classList.add("is-error");
       el.updateLabel.textContent = "資料載入失敗";
+      el.websiteUpdateLabel.textContent = "網站更新：無法取得";
+      el.partialUpdateLabel.hidden = true;
       el.activityList.replaceChildren();
       const message = document.createElement("p");
       message.className = "empty-state";

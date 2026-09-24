@@ -604,6 +604,55 @@ def annotate_source_registration_coverage(
         )
 
 
+def annotate_source_update_times(
+    activities: list[dict],
+    source_health: list[dict],
+    previous_payload: dict | None,
+) -> None:
+    """Record successful data refreshes separately from source-check attempts."""
+    previous_health = {
+        str(item.get("id") or ""): item
+        for item in (
+            previous_payload.get("source_health", [])
+            if isinstance(previous_payload, dict)
+            else []
+        )
+        if isinstance(item, dict)
+    }
+    timestamps: dict[str, list[tuple[datetime, str]]] = {}
+    for activity in activities:
+        value = str(activity.get("last_detail_checked_at") or "")
+        try:
+            parsed = datetime.fromisoformat(value)
+        except ValueError:
+            continue
+        if parsed.utcoffset() is None:
+            continue
+        timestamps.setdefault(str(activity.get("bank_id") or ""), []).append(
+            (parsed, value)
+        )
+
+    for source in source_health:
+        source_id = str(source.get("id") or "")
+        if source.get("status") == "complete":
+            source["last_updated_at"] = str(source.get("checked_at") or "")
+            continue
+        candidates = timestamps.get(source_id, [])
+        if candidates:
+            source["last_updated_at"] = max(candidates, key=lambda item: item[0])[1]
+            continue
+        previous = previous_health.get(source_id, {})
+        source["last_updated_at"] = str(
+            previous.get("last_updated_at")
+            or (
+                previous.get("checked_at")
+                if previous.get("status") == "complete"
+                else ""
+            )
+            or ""
+        )
+
+
 def persist_payload(
     payload: dict,
     previous_payload: dict | None,
@@ -731,6 +780,7 @@ def build_payload(
 
     classify_registration_urls(activities)
     annotate_source_registration_coverage(activities, health)
+    annotate_source_update_times(activities, health, previous_payload)
 
     activities.sort(
         key=lambda item: (

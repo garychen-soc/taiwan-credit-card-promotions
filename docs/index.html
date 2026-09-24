@@ -22,9 +22,13 @@
           <span class="brand-mark" aria-hidden="true"><span></span></span>
           <span>登錄雷達</span>
         </a>
-        <div class="topbar-meta">
+        <div class="topbar-meta" aria-live="polite">
           <span id="source-dot" class="source-dot" aria-hidden="true"></span>
-          <span id="update-label">載入官方資料中</span>
+          <div class="topbar-meta-copy">
+            <strong id="update-label">載入官方資料中</strong>
+            <span id="website-update-label">網站更新：載入中</span>
+            <span id="partial-update-label" hidden></span>
+          </div>
         </div>
       </nav>
 
@@ -270,6 +274,7 @@
   <script src="./assets/time-state.js?v=20260912-scheduled-review"></script>
   <script src="./assets/catalog-state.js?v=20260816-layered-data"></script>
   <script src="./assets/calendar-state.js?v=20260816-rfc5545"></script>
-  <script src="./assets/app.js?v=20260912-scheduled-review" defer></script>
+  <script src="./assets/source-health-state.js?v=20260924-source-times"></script>
+  <script src="./assets/app.js?v=20260924-source-times" defer></script>
 </body>
 </html>

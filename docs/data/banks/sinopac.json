@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-14T00:02:01+08:00",
+  "generated_at": "2026-09-24T10:01:57+08:00",
   "bank_id": "sinopac",
   "bank_name": "永豐銀行",
-  "activity_count": 21,
+  "activity_count": 22,
   "activities": [
     {
       "id": "sinopac-c3de07f6b557",
@@ -367,6 +367,49 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-a416e4255b5a.json"
+    },
+    {
+      "id": "sinopac-d5f710c614d2",
+      "bank_id": "sinopac",
+      "bank_name": "永豐銀行",
+      "title": "韓團演唱會購票序號抽獎",
+      "merchant": "韓團演唱會購票序號抽獎",
+      "categories": [
+        "行動支付",
+        "生活消費",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2026-09-17",
+      "end_date": "2026-10-07",
+      "summary": "完成任務參加BABYMONSTER演唱會專屬購票序號抽獎！",
+      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/755685802.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "韓團演唱會購票序號抽獎",
+        "永豐銀行",
+        "行動支付",
+        "生活消費",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/sinopac-d5f710c614d2.json"
     },
     {
       "id": "sinopac-25efb0c26a98",

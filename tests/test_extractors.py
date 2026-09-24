@@ -40,6 +40,7 @@ from card_promotions_monitor.extractors import (
     extract_chb,
     extract_first,
     extract_megabank,
+    extract_sunny,
     normalize_registration_url,
     reuse_cached_promotion,
 )
@@ -562,7 +563,58 @@ class RegistrationWindowTests(unittest.TestCase):
 
 
 class ClassificationTests(unittest.TestCase):
-    def test_chb_invalid_detail_redirect_is_skipped_and_reported(self) -> None:
+    def test_chb_invalid_redirect_retries_the_public_url_with_browser_session(self) -> None:
+        source = {
+            "id": "chb",
+            "bank_name": "彰化銀行",
+            "entry_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3657",
+            "official_domains": ["bankchb.com"],
+            "category_ids": ["3646"],
+        }
+        entry_html = '<a href="bonusDetail.jsp?id=3646">信用卡優惠</a>'
+        category_html = (
+            '<a class="editor_link" href="bonusDetail.jsp?id=3450">'
+            "【測試】不安全導向活動</a>"
+        )
+        rejected_url = "http://10.100.6.38/frontend/bonusDetail.jsp?id=3450"
+
+        def fake_fetch(url: str, _domains: list[str], **_kwargs) -> FetchResult:
+            if "id=3450" in url:
+                raise ValueError(f"URL is outside official domains: {rejected_url}")
+            html = category_html if "id=3646" in url else entry_html
+            return FetchResult(url, url, 200, html, "text/html", "fixture")
+
+        detail_html = (
+            "<h1>【測試】不安全導向活動</h1>"
+            "<p>活動期間：2026/8/1~2026/8/31，最高回饋10%。</p>"
+        )
+        with patch(
+            "card_promotions_monitor.extractors.fetch_text",
+            side_effect=fake_fetch,
+        ), patch(
+            "card_promotions_monitor.extractors.SystemCurlSession.fetch_text",
+            return_value=FetchResult(
+                source["entry_url"],
+                "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3450",
+                200,
+                detail_html,
+                "text/html",
+                "browser-fixture",
+            ),
+        ):
+            activities, health, alerts = extract_chb(
+                source,
+                now=datetime(2026, 8, 4, 12, 0, tzinfo=ZoneInfo("Asia/Taipei")),
+                percent_threshold=10,
+                amount_threshold=500,
+            )
+
+        self.assertEqual(len(activities), 1)
+        self.assertEqual(health.status, "complete")
+        self.assertEqual(alerts, [])
+        self.assertEqual(activities[0].source_url, "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3450")
+
+    def test_chb_browser_retry_still_rejects_non_official_redirect(self) -> None:
         source = {
             "id": "chb",
             "bank_name": "彰化銀行",
@@ -586,6 +638,9 @@ class ClassificationTests(unittest.TestCase):
         with patch(
             "card_promotions_monitor.extractors.fetch_text",
             side_effect=fake_fetch,
+        ), patch(
+            "card_promotions_monitor.extractors.SystemCurlSession.fetch_text",
+            side_effect=ValueError(f"Redirected outside official domains: {rejected_url}"),
         ):
             activities, health, alerts = extract_chb(
                 source,
@@ -597,9 +652,39 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(activities, [])
         self.assertEqual(health.status, "failed")
         self.assertIn(rejected_url, health.message)
-        self.assertEqual(len(alerts), 1)
-        self.assertEqual(alerts[0].type, "source_emitted_invalid_url")
         self.assertEqual(alerts[0].old_url, rejected_url)
+
+    def test_sunny_snapshot_records_its_last_verified_time(self) -> None:
+        source = {
+            "id": "sunny",
+            "bank_name": "陽信銀行",
+            "entry_url": "https://www.sunnybank.com.tw/net/Main/Page/6?onews=1",
+            "official_domains": ["sunnybank.com.tw"],
+            "fallback_verified_at": "2026-09-24T09:47:38+08:00",
+            "fallback_activities": [{
+                "title": "9月測試活動",
+                "period": "115/9/1-115/9/30",
+                "summary": "滿額完成登錄享回饋。",
+                "url": "https://www.sunnybank.com.tw/net/Prg/ActNewsView/1493",
+                "registration_required": True,
+                "registration_text": "2026/9/24 10:00開放登錄至2026/9/30 23:59止。",
+            }],
+        }
+
+        with patch(
+            "card_promotions_monitor.extractors.fetch_text",
+            side_effect=RuntimeError("Cloudflare challenge"),
+        ):
+            activities, health, _ = extract_sunny(
+                source,
+                now=datetime(2026, 9, 24, 10, 0, tzinfo=ZoneInfo("Asia/Taipei")),
+                percent_threshold=10,
+                amount_threshold=500,
+            )
+
+        self.assertEqual(health.status, "partial")
+        self.assertEqual(activities[0].last_detail_checked_at, source["fallback_verified_at"])
+        self.assertEqual(activities[0].registration_windows[0].start, "2026-09-24T10:00:00+08:00")
 
     def test_reward_threshold_inputs(self) -> None:
         percent, amount = _reward_values("最高享12%回饋，另贈NT$1,500刷卡金")
@@ -1052,6 +1137,8 @@ class ClassificationTests(unittest.TestCase):
         html = (
             '<a class="editor_link" href="https://www.bankchb.com/frontend/'
             'bonusDetail.jsp?id=3577">【線上購物】MOMO全通路活動</a>'
+            '<a class="editor_link" href="http://10.100.6.38/frontend/'
+            'bonusDetail.jsp?id=3594">【保險/稅費】年中繳保費</a>'
             '<a class="editor_link" href="/frontend/mashup.jsp?funcId=x">'
             "信用卡費率</a>"
         )
@@ -1061,8 +1148,12 @@ class ClassificationTests(unittest.TestCase):
             "chb",
             date(2026, 7, 30),
         )
-        self.assertEqual(len(cards), 1)
+        self.assertEqual(len(cards), 2)
         self.assertEqual(cards[0]["title"], "【線上購物】MOMO全通路活動")
+        self.assertEqual(
+            cards[1]["url"],
+            "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3594",
+        )
 
     def test_megabank_cards_keep_only_current_registration_items(self) -> None:
         rows = [

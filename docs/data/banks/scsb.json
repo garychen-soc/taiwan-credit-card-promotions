@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-14T00:02:01+08:00",
+  "generated_at": "2026-09-24T10:01:57+08:00",
   "bank_id": "scsb",
   "bank_name": "上海商銀",
-  "activity_count": 21,
+  "activity_count": 24,
   "activities": [
     {
       "id": "scsb-89ed9faac395",
@@ -159,6 +159,57 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/scsb-6e1135af555e.json"
+    },
+    {
+      "id": "scsb-59d7544f6f69",
+      "bank_id": "scsb",
+      "bank_name": "上海商銀",
+      "title": "ApplePay綁上海商銀信用卡，日韓消費最高加碼10%回饋",
+      "merchant": "ApplePay綁上海商銀信用卡，日韓消費最高加碼10%回饋",
+      "categories": [
+        "行動支付",
+        "旅遊交通",
+        "加油交通",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2026-07-01",
+      "end_date": "2026-12-31",
+      "summary": "Apple Pay 綁定上海商銀信用卡 享日韓...",
+      "source_url": "https://www.scsb.com.tw/content/card/hotPage/4604",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-07-01",
+          "end": "2026-12-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": 300,
+      "featured": true,
+      "tags": [
+        "ApplePay綁上海商銀信用卡，日韓消費最高加碼10%回饋",
+        "上海商銀",
+        "行動支付",
+        "旅遊交通",
+        "加油交通",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/scsb-59d7544f6f69.json"
     },
     {
       "id": "scsb-c461a05d06d2",
@@ -383,6 +434,53 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/scsb-de06e5ada1c6.json"
+    },
+    {
+      "id": "scsb-72ce0c5ec521",
+      "bank_id": "scsb",
+      "bank_name": "上海商銀",
+      "title": "Visa Select 優選好評加碼，旅遊出發前先享專屬禮遇",
+      "merchant": "Visa Select 優選好評加碼，旅遊出發前先享專屬禮遇",
+      "categories": [
+        "其他優惠",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費"
+      ],
+      "start_date": "2026-08-19",
+      "end_date": "2026-09-30",
+      "summary": "Visa Select優選回饋好評加碼！ 松山...",
+      "source_url": "https://www.scsb.com.tw/content/card/hotPage/5041",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-08-19",
+          "end": "2026-09-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "Visa Select 優選好評加碼，旅遊出發前先享專屬禮遇",
+        "上海商銀",
+        "其他優惠",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/scsb-72ce0c5ec521.json"
     },
     {
       "id": "scsb-9746f4bd5789",
@@ -1027,6 +1125,57 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/scsb-c9e3db1ced9f.json"
+    },
+    {
+      "id": "scsb-be88e52d1911",
+      "bank_id": "scsb",
+      "bank_name": "上海商銀",
+      "title": "指定百貨周年慶 刷上海商銀信用卡分期最高贈NT$500",
+      "merchant": "指定百貨周年慶 刷上海商銀信用卡分期最高贈NT$500",
+      "categories": [
+        "其他優惠",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "餐飲美食",
+        "分期"
+      ],
+      "start_date": "2026-09-15",
+      "end_date": "2027-01-04",
+      "summary": "指定百貨周年慶，上海商銀卡友享分期0利率！！滿額...",
+      "source_url": "https://www.scsb.com.tw/content/card/hotPage/5221",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-15",
+          "end": "2027-01-04",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 500,
+      "featured": true,
+      "tags": [
+        "指定百貨周年慶 刷上海商銀信用卡分期最高贈NT$500",
+        "上海商銀",
+        "其他優惠",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "餐飲美食",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/scsb-be88e52d1911.json"
     },
     {
       "id": "scsb-c4f9060a60e9",

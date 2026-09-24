@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, time
 from html import escape as html_escape
-from typing import Any
+from typing import Any, Callable
 from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
@@ -1613,10 +1613,16 @@ def _invalid_url_alerts(
     ]
 
 
-def _fetch_many(urls: list[str], domains: list[str], workers: int = 6) -> dict[str, Any]:
+def _fetch_many(
+    urls: list[str],
+    domains: list[str],
+    workers: int = 6,
+    *,
+    fetcher: Callable[[str], Any] | None = None,
+) -> dict[str, Any]:
     def fetch_one(url: str) -> Any:
         try:
-            return fetch_text(url, domains)
+            return fetcher(url) if fetcher is not None else fetch_text(url, domains)
         except Exception as exc:
             # A single detail page must not abort every other source. The caller
             # classifies rejected URLs separately and records them in health/alerts.
@@ -2897,7 +2903,11 @@ def extract_sunny(
             tags=list(dict.fromkeys([title, source["bank_name"], *categories])),
             review_required=registration_required and not windows,
             source_fingerprint=fingerprint,
-            last_detail_checked_at=str(item.get("verified_at") or ""),
+            last_detail_checked_at=str(
+                item.get("verified_at")
+                or source.get("fallback_verified_at")
+                or ""
+            ),
             needs_review=True,
             review_message="靜態官方索引快照，內容未於本輪重新驗證",
         ))
@@ -3160,6 +3170,8 @@ def _listing_promotions(
     amount_threshold: int,
     activity_cache: dict[str, dict[str, Any]] | None,
     cache_stats: dict[str, Any] | None,
+    detail_fetcher: Callable[[str], Any] | None = None,
+    detail_workers: int = 6,
 ) -> tuple[list[Promotion], int, list[str]]:
     checked_at = _now_iso(now)
     today = now.astimezone(TAIPEI).date()
@@ -3194,7 +3206,12 @@ def _listing_promotions(
 
     unique_urls = list(dict.fromkeys(urls_to_fetch))
     record_detail_requests(stats, len(unique_urls))
-    fetched = _fetch_many(unique_urls, source["official_domains"], workers=6)
+    fetched = _fetch_many(
+        unique_urls,
+        source["official_domains"],
+        workers=detail_workers,
+        fetcher=detail_fetcher,
+    )
     activities: list[Promotion] = []
     failed_details = 0
     invalid_urls: list[str] = []
@@ -4306,6 +4323,17 @@ def _chb_cards(
     ):
         title = strip_html(match.group(2))
         public_url = urljoin(base_url, match.group(1))
+        parsed_url = urlsplit(public_url)
+        if (
+            parsed_url.hostname == "10.100.6.38"
+            and parsed_url.path == "/frontend/bonusDetail.jsp"
+        ):
+            activity_id = re.fullmatch(r"id=(\d+)", parsed_url.query)
+            if activity_id:
+                public_url = urljoin(
+                    base_url,
+                    f"bonusDetail.jsp?id={activity_id.group(1)}",
+                )
         if not title.startswith("【") or public_url in seen:
             continue
         seen.add(public_url)
@@ -4410,6 +4438,25 @@ def extract_chb(
             message,
             source["entry_url"],
         )]
+
+    def fetch_chb_detail(url: str) -> Any:
+        # CHB intermittently redirects non-browser clients to an internal host.
+        # Fetch detail pages with a browser identity from the outset and retry
+        # only the original public URL. The session still enforces HTTPS and the
+        # configured official-domain allowlist on every redirect.
+        last_error: Exception | None = None
+        for _ in range(3):
+            try:
+                with SystemCurlSession(source["official_domains"]) as session:
+                    return session.fetch_text(url)
+            except Exception as exc:
+                if not _invalid_detail_url(exc):
+                    raise
+                last_error = exc
+        if last_error is not None:
+            raise last_error
+        raise RuntimeError(f"彰化銀行活動明細無法讀取：{url}")
+
     activities, failed_details, invalid_urls = _listing_promotions(
         source,
         unique_cards,
@@ -4418,6 +4465,8 @@ def extract_chb(
         amount_threshold=amount_threshold,
         activity_cache=activity_cache,
         cache_stats=cache_stats,
+        detail_fetcher=fetch_chb_detail,
+        detail_workers=1,
     )
     status = (
         "complete"

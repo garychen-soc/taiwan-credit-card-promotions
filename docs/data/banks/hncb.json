@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-14T00:02:01+08:00",
+  "generated_at": "2026-09-24T10:01:57+08:00",
   "bank_id": "hncb",
   "bank_name": "華南銀行",
   "activity_count": 44,
@@ -1384,41 +1384,6 @@
       "detail_ref": "activities/hncb-04814ffdc798.json"
     },
     {
-      "id": "hncb-a7efcde59508",
-      "bank_id": "hncb",
-      "bank_name": "華南銀行",
-      "title": "就愛刷華南‧餐廳優惠一把抓",
-      "merchant": "就愛刷華南‧餐廳優惠一把抓",
-      "categories": [
-        "餐飲美食"
-      ],
-      "start_date": "2026-09-14",
-      "end_date": null,
-      "summary": "就愛刷華南‧餐廳優惠一把抓",
-      "source_url": "https://www.wonderful-food.com.tw/editor_page.php?Fullkey=82",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "就愛刷華南‧餐廳優惠一把抓",
-        "華南銀行",
-        "餐飲美食"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/hncb-a7efcde59508.json"
-    },
-    {
       "id": "hncb-b6c2a494dfdc",
       "bank_id": "hncb",
       "bank_name": "華南銀行",
@@ -1775,6 +1740,41 @@
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
       "detail_ref": "activities/hncb-c41d0a136a86.json"
+    },
+    {
+      "id": "hncb-3baa6bc7415b",
+      "bank_id": "hncb",
+      "bank_name": "華南銀行",
+      "title": "華南刷卡優惠好康報報",
+      "merchant": "華南刷卡優惠好康報報",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-09-24",
+      "end_date": null,
+      "summary": "華南刷卡優惠好康報報",
+      "source_url": "https://www.wonderful-food.com.tw/editor_page.php?Fullkey=84",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "華南刷卡優惠好康報報",
+        "華南銀行",
+        "其他優惠"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
+      "detail_ref": "activities/hncb-3baa6bc7415b.json"
     },
     {
       "id": "hncb-a97e63b25328",

@@ -12,6 +12,7 @@ from card_promotions_monitor.cli import (
     _write_public_artifacts,
     apply_published_source_counts,
     annotate_source_registration_coverage,
+    annotate_source_update_times,
     assess_publish_guard,
     classify_registration_urls,
     deduplicate_exact_promotions,
@@ -48,6 +49,28 @@ def candidate_payload(*, failed: int, active: int, dns_failures: int = 0) -> dic
 
 
 class PublishGuardTests(unittest.TestCase):
+    def test_source_update_times_distinguish_publish_and_partial_data_times(self) -> None:
+        health = [
+            {"id": "complete", "status": "complete", "checked_at": "2026-09-24T10:00:00+08:00"},
+            {"id": "partial", "status": "partial", "checked_at": "2026-09-24T10:00:00+08:00"},
+            {"id": "failed", "status": "failed", "checked_at": "2026-09-24T10:00:00+08:00"},
+        ]
+        activities = [{
+            "bank_id": "partial",
+            "last_detail_checked_at": "2026-09-23T18:30:00+08:00",
+        }]
+        previous = {"source_health": [{
+            "id": "failed",
+            "status": "complete",
+            "checked_at": "2026-09-20T01:00:00+08:00",
+        }]}
+
+        annotate_source_update_times(activities, health, previous)
+
+        self.assertEqual(health[0]["last_updated_at"], "2026-09-24T10:00:00+08:00")
+        self.assertEqual(health[1]["last_updated_at"], "2026-09-23T18:30:00+08:00")
+        self.assertEqual(health[2]["last_updated_at"], "2026-09-20T01:00:00+08:00")
+
     def test_deduplicates_only_complete_matching_visible_content(self) -> None:
         common = {
             "bank_id": "bank",

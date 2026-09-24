@@ -110,10 +110,24 @@ a { color: inherit; }
 }
 .topbar-meta {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 9px;
   color: rgba(255,255,255,.72);
+  font-size: .78rem;
+  text-align: right;
+  max-width: min(680px, 68vw);
+}
+.topbar-meta-copy {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+}
+.topbar-meta-copy strong {
+  color: rgba(255,255,255,.92);
   font-size: .88rem;
+}
+.topbar-meta-copy span {
+  line-height: 1.35;
 }
 .source-dot {
   width: 8px;
@@ -121,6 +135,8 @@ a { color: inherit; }
   border-radius: 50%;
   background: #f1cb57;
   box-shadow: 0 0 0 5px rgba(241, 203, 87, .13);
+  margin-top: 5px;
+  flex: 0 0 auto;
 }
 .source-dot.is-ok {
   background: var(--lime);
@@ -803,8 +819,9 @@ a { color: inherit; }
 @media (max-width: 640px) {
   :root { --shell: min(100% - 24px, 540px); }
   .site-header { min-height: auto; }
-  .topbar { height: 72px; }
-  .topbar-meta { max-width: 46%; text-align: right; font-size: .7rem; }
+  .topbar { min-height: 82px; height: auto; padding: 12px 0; }
+  .topbar-meta { max-width: 68%; font-size: .65rem; }
+  .topbar-meta-copy strong { font-size: .75rem; }
   .hero-grid { min-height: auto; padding: 64px 0 72px; }
   .hero-copy h1 { font-size: clamp(3.35rem, 17vw, 5.2rem); }
   .hero-intro { font-size: .94rem; }

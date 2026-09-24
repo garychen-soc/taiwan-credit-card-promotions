@@ -1,72 +1,10 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-14T00:02:01+08:00",
+  "generated_at": "2026-09-24T10:01:57+08:00",
   "bank_id": "ctbc",
   "bank_name": "中國信託",
-  "activity_count": 119,
+  "activity_count": 120,
   "activities": [
-    {
-      "id": "ctbc-4b2a62331a16",
-      "bank_id": "ctbc",
-      "bank_name": "中國信託",
-      "title": "Coupang 酷澎(台灣)",
-      "merchant": "Coupang 酷澎(台灣)",
-      "categories": [
-        "網購"
-      ],
-      "start_date": "2026-09-16",
-      "end_date": "2026-12-31",
-      "summary": "滿額最高享9%｜活動① 火箭速配最高享9%",
-      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_shopping.html#lightbox_coupang",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.ctbcbank.com/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_register.html",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-06T10:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": " 火箭速配最高享9% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-11-06T10:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": " 火箭速配最高享9% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-12-06T10:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": " 火箭速配最高享9% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 9.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "Coupang 酷澎(台灣)",
-        "中國信託",
-        "網購"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ctbc-4b2a62331a16.json"
-    },
     {
       "id": "ctbc-30d61ad06d21",
       "bank_id": "ctbc",
@@ -191,6 +129,68 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ctbc-e90836b7af37.json"
+    },
+    {
+      "id": "ctbc-4b2a62331a16",
+      "bank_id": "ctbc",
+      "bank_name": "中國信託",
+      "title": "Coupang 酷澎(台灣)",
+      "merchant": "Coupang 酷澎(台灣)",
+      "categories": [
+        "網購"
+      ],
+      "start_date": "2026-09-16",
+      "end_date": "2026-12-31",
+      "summary": "滿額最高享9%｜活動① 火箭速配最高享9%",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_shopping.html#lightbox_coupang",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.ctbcbank.com/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_register.html",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-06T10:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": " 火箭速配最高享9% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-06T10:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": " 火箭速配最高享9% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-06T10:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": " 火箭速配最高享9% 活動2 LINE POINTS 5%(每月6號10:00開放登錄) 活動詳情 立即登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 9.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "Coupang 酷澎(台灣)",
+        "中國信託",
+        "網購"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ctbc-4b2a62331a16.json"
     },
     {
       "id": "ctbc-4b41fadc4043",
@@ -3803,7 +3803,7 @@
       "detail_ref": "activities/ctbc-0334965caf13.json"
     },
     {
-      "id": "ctbc-680c4d906e59",
+      "id": "ctbc-eda5ec4f6b3a",
       "bank_id": "ctbc",
       "bank_name": "中國信託",
       "title": "SHOPBACK平台_淘寶",
@@ -3813,7 +3813,7 @@
       ],
       "start_date": "2026-07-01",
       "end_date": "2026-12-31",
-      "summary": "12%｜限信用卡且透過SHOPBACK專區",
+      "summary": "11%｜限信用卡且透過SHOPBACK專區",
       "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_shopping.html#lightbox_shopback",
       "registration_required": false,
       "parent_activity_id": "",
@@ -3823,7 +3823,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 12.0,
+      "max_reward_percent": 11.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -3835,7 +3835,7 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/ctbc-680c4d906e59.json"
+      "detail_ref": "activities/ctbc-eda5ec4f6b3a.json"
     },
     {
       "id": "ctbc-955b3258a0d7",
@@ -3978,6 +3978,41 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ctbc-2701dc091f02.json"
+    },
+    {
+      "id": "ctbc-8e267f1b1cbb",
+      "bank_id": "ctbc",
+      "bank_name": "中國信託",
+      "title": "STUDIO A",
+      "merchant": "STUDIO A",
+      "categories": [
+        "生活消費"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "summary": "最高LINE POINTS 2%｜全臺指定門市/官網",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_life.html#lightbox_studioa",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 2.0,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "STUDIO A",
+        "中國信託",
+        "生活消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ctbc-8e267f1b1cbb.json"
     },
     {
       "id": "ctbc-52a5500625e9",
@@ -4447,7 +4482,7 @@
       "detail_ref": "activities/ctbc-906294003c4f.json"
     },
     {
-      "id": "ctbc-617db2079c19",
+      "id": "ctbc-3a00018f2f38",
       "bank_id": "ctbc",
       "bank_name": "中國信託",
       "title": "寵物公園",
@@ -4458,7 +4493,7 @@
       ],
       "start_date": "2026-06-01",
       "end_date": "2026-12-31",
-      "summary": "LINE POINTS 8%｜限綁定卡片並使用LINE Pay 支付",
+      "summary": "LINE POINTS最高8%｜限綁定卡片並使用LINE Pay 支付",
       "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_pet.html#lightbox_petpark",
       "registration_required": false,
       "parent_activity_id": "",
@@ -4481,7 +4516,7 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/ctbc-617db2079c19.json"
+      "detail_ref": "activities/ctbc-3a00018f2f38.json"
     },
     {
       "id": "ctbc-078bfa62626b",

@@ -1,10 +1,56 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-14T00:02:01+08:00",
+  "generated_at": "2026-09-24T10:01:57+08:00",
   "bank_id": "first",
   "bank_name": "第一銀行",
-  "activity_count": 141,
+  "activity_count": 143,
   "activities": [
+    {
+      "id": "first-34b9f4fbbf18",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "大全聯分期滿額送",
+      "merchant": "大全聯分期滿額送",
+      "categories": [
+        "生活消費",
+        "行動支付",
+        "百貨購物",
+        "餐飲美食",
+        "分期"
+      ],
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-28",
+      "summary": "分期滿額送刷卡金",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565694304259",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 500,
+      "featured": true,
+      "tags": [
+        "大全聯分期滿額送",
+        "第一銀行",
+        "home_appliance",
+        "生活消費",
+        "行動支付",
+        "百貨購物",
+        "餐飲美食",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/first-34b9f4fbbf18.json"
+    },
     {
       "id": "first-e0f531fba8fb",
       "bank_id": "first",
@@ -1984,50 +2030,6 @@
       "detail_ref": "activities/first-5930cdb8d1a7.json"
     },
     {
-      "id": "first-851c45bc0eef",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "居家好生活-有情門",
-      "merchant": "居家好生活-有情門",
-      "categories": [
-        "生活消費",
-        "百貨購物",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-01-01",
-      "end_date": "2026-12-31",
-      "summary": "分期零利率 最高再享4,500元回饋",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698737783",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 4500,
-      "featured": true,
-      "tags": [
-        "居家好生活-有情門",
-        "第一銀行",
-        "home_appliance",
-        "生活消費",
-        "百貨購物",
-        "繳費稅款",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/first-851c45bc0eef.json"
-    },
-    {
       "id": "first-6b11d8be8dfb",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -2431,6 +2433,46 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-7ae2e557e0bd.json"
+    },
+    {
+      "id": "first-6bcb50761d31",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "第一銀行 X 喜鴻假期",
+      "merchant": "第一銀行 X 喜鴻假期",
+      "categories": [
+        "旅遊交通",
+        "行動支付"
+      ],
+      "start_date": "2026-07-01",
+      "end_date": "2026-12-31",
+      "summary": "第二人折價優惠!",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565712258835",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 1.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "第一銀行 X 喜鴻假期",
+        "第一銀行",
+        "travel_acommodation",
+        "旅遊交通",
+        "行動支付"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/first-6bcb50761d31.json"
     },
     {
       "id": "first-19db90f20fcd",
@@ -3030,7 +3072,7 @@
         "百貨購物",
         "分期"
       ],
-      "start_date": "2026-08-16",
+      "start_date": "2026-09-24",
       "end_date": null,
       "summary": "分期O利率 滿額再送最高2,500元刷卡金",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698411259",
@@ -3041,14 +3083,6 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [
-        {
-          "start": "2026-09-01T00:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
         {
           "start": "2026-10-01T00:00:00+08:00",
           "end": null,
@@ -3104,7 +3138,7 @@
         "旅遊交通",
         "分期"
       ],
-      "start_date": "2026-08-16",
+      "start_date": "2026-09-24",
       "end_date": null,
       "summary": "指定行程最高現折60,000元",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565711700601",
@@ -3173,46 +3207,6 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-dd6ce2f9aa23.json"
-    },
-    {
-      "id": "first-0f2455018801",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "易遊網 好$10光旅遊節",
-      "merchant": "易遊網 好$10光旅遊節",
-      "categories": [
-        "旅遊交通",
-        "行動支付",
-        "海外消費"
-      ],
-      "start_date": "2026-09-14",
-      "end_date": "2026-09-23",
-      "summary": "輸入折扣碼享現折優惠",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565711606263",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "易遊網 好$10光旅遊節",
-        "第一銀行",
-        "travel_acommodation",
-        "旅遊交通",
-        "行動支付",
-        "海外消費"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-0f2455018801.json"
     },
     {
       "id": "first-ac41cb88ef5f",
@@ -3365,6 +3359,48 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-3207e3554468.json"
+    },
+    {
+      "id": "first-bbd3657e3a46",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "燦坤9月加碼現折",
+      "merchant": "燦坤9月加碼現折",
+      "categories": [
+        "生活消費",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-09-16",
+      "end_date": "2026-09-30",
+      "summary": "滿額分期享現折",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713856079",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 800,
+      "featured": true,
+      "tags": [
+        "燦坤9月加碼現折",
+        "第一銀行",
+        "three_c_comm",
+        "生活消費",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-bbd3657e3a46.json"
     },
     {
       "id": "first-93324dc46fa4",
@@ -3576,6 +3612,88 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-a4d1c6835559.json"
+    },
+    {
+      "id": "first-aa35d2f8648c",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "燦坤iPhone新機加碼現折",
+      "merchant": "燦坤iPhone新機加碼現折",
+      "categories": [
+        "生活消費",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-09-18",
+      "end_date": "2026-10-31",
+      "summary": "滿額分期享現折",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709815392",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 2400,
+      "featured": true,
+      "tags": [
+        "燦坤iPhone新機加碼現折",
+        "第一銀行",
+        "three_c_comm",
+        "生活消費",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-aa35d2f8648c.json"
+    },
+    {
+      "id": "first-53b5040aaa3d",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "STUDIO A 購新機",
+      "merchant": "STUDIO A 購新機",
+      "categories": [
+        "行動支付",
+        "百貨購物"
+      ],
+      "start_date": "2026-09-11",
+      "end_date": "2026-11-30",
+      "summary": "台灣Pay享10%現金回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713841465",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "STUDIO A 購新機",
+        "第一銀行",
+        "activity_Taiwan_pay",
+        "行動支付",
+        "百貨購物"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-53b5040aaa3d.json"
     },
     {
       "id": "first-8ac0e6e41480",
@@ -6440,50 +6558,6 @@
       "detail_ref": "activities/first-6d375a15b624.json"
     },
     {
-      "id": "first-aa35d2f8648c",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "燦坤iPhone新機加碼現折",
-      "merchant": "燦坤iPhone新機加碼現折",
-      "categories": [
-        "生活消費",
-        "網購",
-        "行動支付",
-        "百貨購物",
-        "分期"
-      ],
-      "start_date": "2026-09-14",
-      "end_date": null,
-      "summary": "滿額分期享現折",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709815392",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 2400,
-      "featured": true,
-      "tags": [
-        "燦坤iPhone新機加碼現折",
-        "第一銀行",
-        "three_c_comm",
-        "生活消費",
-        "網購",
-        "行動支付",
-        "百貨購物",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/first-aa35d2f8648c.json"
-    },
-    {
       "id": "first-c39ae826314f",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -6492,7 +6566,7 @@
       "categories": [
         "百貨購物"
       ],
-      "start_date": "2026-08-16",
+      "start_date": "2026-09-24",
       "end_date": null,
       "summary": "館內消費滿額享優惠",
       "source_url": "https://card.firstbank.com.tw/sites/card/CardActivitySchedule?typeDepartment=ESKYLAND_shopping",
@@ -6529,7 +6603,7 @@
         "其他優惠",
         "生活消費"
       ],
-      "start_date": "2026-08-16",
+      "start_date": "2026-09-24",
       "end_date": null,
       "summary": "掌握消費碳足跡!",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698601420",

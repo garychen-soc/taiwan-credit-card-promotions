@@ -1,122 +1,10 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-14T00:02:01+08:00",
+  "generated_at": "2026-09-24T10:01:57+08:00",
   "bank_id": "ubot",
   "bank_name": "聯邦銀行",
-  "activity_count": 91,
+  "activity_count": 95,
   "activities": [
-    {
-      "id": "ubot-63a46253f43e",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "萊爾富刷聯邦不限金額５%",
-      "merchant": "萊爾富刷聯邦不限金額５%",
-      "categories": [
-        "百貨購物",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "海外消費"
-      ],
-      "start_date": "2026-07-22",
-      "end_date": "2026-08-18",
-      "summary": "iPASS MONEY優惠升級~10%現折無上限！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026hilife/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-22",
-          "end": "2026-09-15",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-22",
-          "end": "2026-08-18",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 30.0,
-      "max_reward_amount_twd": 50,
-      "featured": true,
-      "tags": [
-        "萊爾富刷聯邦不限金額５%",
-        "聯邦銀行",
-        "百貨零售",
-        "百貨購物",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "海外消費"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-63a46253f43e.json"
-    },
-    {
-      "id": "ubot-922af9e40cd2",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "萊爾富抽黃金送好禮",
-      "merchant": "萊爾富抽黃金送好禮",
-      "categories": [
-        "百貨購物",
-        "行動支付",
-        "生活消費"
-      ],
-      "start_date": "2026-01-01",
-      "end_date": "2026-08-18",
-      "summary": "萊爾富單筆滿199元，筆筆抽黃金再送翻牌好禮，再享現折無上限",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20260722hilife/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-01-01",
-          "end": "2026-12-31",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-22",
-          "end": "2026-08-18",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 5.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "萊爾富抽黃金送好禮",
-        "聯邦銀行",
-        "百貨零售",
-        "百貨購物",
-        "行動支付",
-        "生活消費"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-922af9e40cd2.json"
-    },
     {
       "id": "ubot-7d22d751b48d",
       "bank_id": "ubot",
@@ -739,7 +627,7 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -747,7 +635,7 @@
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -755,7 +643,7 @@
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -844,6 +732,72 @@
       "detail_ref": "activities/ubot-4bd7314a5ace.json"
     },
     {
+      "id": "ubot-63a46253f43e",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "萊爾富刷聯邦不限金額５%",
+      "merchant": "萊爾富刷聯邦不限金額５%",
+      "categories": [
+        "百貨購物",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "加油交通",
+        "海外消費"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-10-13",
+      "summary": "iPASS MONEY優惠升級~10%現折無上限！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026hilife/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-10-31",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-16",
+          "end": "2026-11-10",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-16",
+          "end": "2026-10-13",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 30.0,
+      "max_reward_amount_twd": 50,
+      "featured": true,
+      "tags": [
+        "萊爾富刷聯邦不限金額５%",
+        "聯邦銀行",
+        "百貨零售",
+        "百貨購物",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "加油交通",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-63a46253f43e.json"
+    },
+    {
       "id": "ubot-99adbb00aa54",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -896,7 +850,7 @@
           "start": "2026-09-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "source_text": "本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -904,7 +858,7 @@
           "start": "2026-10-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "source_text": "本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -983,7 +937,7 @@
           "start": "2026-09-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "source_text": "本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -991,7 +945,7 @@
           "start": "2026-10-05T14:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
+          "source_text": "本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1402,6 +1356,48 @@
       "detail_ref": "activities/ubot-7ee52ff8f592.json"
     },
     {
+      "id": "ubot-c1eaccad0554",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "OLIVE YOUNG",
+      "merchant": "OLIVE YOUNG",
+      "categories": [
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "start_date": "2026-09-10",
+      "end_date": "2026-11-09",
+      "summary": "指定門市刷聯邦JCB享最高8%回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026jcb/oliveyoung/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 8.0,
+      "max_reward_amount_twd": 20000,
+      "featured": true,
+      "tags": [
+        "OLIVE YOUNG",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-c1eaccad0554.json"
+    },
+    {
       "id": "ubot-4a307202c8ee",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -1487,6 +1483,7 @@
       "categories": [
         "旅遊交通",
         "行動支付",
+        "餐飲美食",
         "海外消費"
       ],
       "start_date": "2026-07-01",
@@ -1504,7 +1501,7 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1512,7 +1509,7 @@
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1520,7 +1517,7 @@
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1528,7 +1525,7 @@
           "start": "2026-10-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1536,7 +1533,7 @@
           "start": "2026-11-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1544,7 +1541,7 @@
           "start": "2026-12-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "12萬元 2,500元 滿20萬元 5,000元 註: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1561,6 +1558,7 @@
         "旅遊優惠",
         "旅遊交通",
         "行動支付",
+        "餐飲美食",
         "海外消費"
       ],
       "official_status": "published",
@@ -2219,7 +2217,7 @@
           "start": "2026-07-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "source_text": "每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2227,7 +2225,7 @@
           "start": "2026-08-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "source_text": "每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2235,7 +2233,7 @@
           "start": "2026-09-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "source_text": "每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2243,7 +2241,7 @@
           "start": "2026-10-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "source_text": "每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2251,7 +2249,7 @@
           "start": "2026-11-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "source_text": "每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2259,7 +2257,7 @@
           "start": "2026-12-20T11:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 活動對象:聯邦信用卡持卡人且消費當月完成登錄者。 註1: 每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
+          "source_text": "每月20日上午11點開放登錄~當月月底,美廉社、小北百貨合計,每月限量登錄5,000名,如額滿系統將提前關閉並於登錄頁面公告。(活動登錄路徑",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -3108,6 +3106,61 @@
       "detail_ref": "activities/ubot-0c49ea47f742.json"
     },
     {
+      "id": "ubot-831806e99614",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "萊爾富翻翻樂送好禮",
+      "merchant": "萊爾富翻翻樂送好禮",
+      "categories": [
+        "百貨購物",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-10-13",
+      "summary": "刷聯邦卡不限金額享現折～單筆滿199元筆筆玩翻翻樂送好禮！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20260916hilife/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-01-01",
+          "end": "2026-12-31",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-16",
+          "end": "2026-10-13",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 5.0,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "萊爾富翻翻樂送好禮",
+        "聯邦銀行",
+        "百貨零售",
+        "百貨購物",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-831806e99614.json"
+    },
+    {
       "id": "ubot-ccf4e98ca93c",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -3148,6 +3201,48 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ubot-ccf4e98ca93c.json"
+    },
+    {
+      "id": "ubot-5e0162824b14",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "居家生活再升級",
+      "merchant": "居家生活再升級",
+      "categories": [
+        "百貨購物",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "start_date": "2026-09-24",
+      "end_date": "2026-11-17",
+      "summary": "刷聯邦卡享優惠，最高贈500元電子折價券！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202609trplus/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "居家生活再升級",
+        "聯邦銀行",
+        "百貨零售",
+        "百貨購物",
+        "行動支付",
+        "生活消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-5e0162824b14.json"
     },
     {
       "id": "ubot-933e45d57c12",
@@ -5018,6 +5113,90 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ubot-6557715f7825.json"
+    },
+    {
+      "id": "ubot-f23ec4ee2255",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "暢遊名古屋",
+      "merchant": "暢遊名古屋",
+      "categories": [
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "start_date": "2026-09-18",
+      "end_date": "2027-03-31",
+      "summary": "刷聯邦JCB卡享獨家優惠！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026jcb/nagoya/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 30.0,
+      "max_reward_amount_twd": 2000,
+      "featured": true,
+      "tags": [
+        "暢遊名古屋",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-f23ec4ee2255.json"
+    },
+    {
+      "id": "ubot-99b9c175e030",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "真航空刷聯邦JCB卡",
+      "merchant": "真航空刷聯邦JCB卡",
+      "categories": [
+        "旅遊交通",
+        "海外消費"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2027-03-31",
+      "summary": "回國托運行李可達上限20kg免費！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026jcb/jinair/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2027-03-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "真航空刷聯邦JCB卡",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-99b9c175e030.json"
     },
     {
       "id": "ubot-531d619c366a",
