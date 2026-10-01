@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-24T10:01:57+08:00",
+  "generated_at": "2026-09-28T04:10:35+08:00",
   "bank_id": "sunny",
   "bank_name": "陽信銀行",
   "activity_count": 33,
@@ -487,7 +487,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-d1ad2c6e6dca.json"
@@ -522,7 +522,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-9818696bbc3c.json"
@@ -557,7 +557,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-09430b71cc1d.json"
@@ -592,7 +592,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-4f8d1f9f1dbd.json"
@@ -629,7 +629,7 @@
         "分期"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-9fe36a793ebe.json"
@@ -664,7 +664,7 @@
         "分期"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-a4b07a972c42.json"
@@ -699,7 +699,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-8d20dab4d741.json"
@@ -734,7 +734,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-a4d1483b388d.json"
@@ -769,7 +769,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-09b9b5610ccc.json"
@@ -804,7 +804,7 @@
         "百貨購物"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-347a5be687c2.json"
@@ -841,7 +841,7 @@
         "分期"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-4e7fe857671e.json"
@@ -878,7 +878,7 @@
         "分期"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-8802d0ad30e5.json"
@@ -913,7 +913,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-9a46aaef233d.json"
@@ -948,7 +948,7 @@
         "分期"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-8a04ca4f015b.json"
@@ -983,7 +983,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-fb47a1ca4e42.json"
@@ -1018,7 +1018,7 @@
         "繳費稅款"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-45e893571f99.json"
@@ -1053,7 +1053,7 @@
         "行動支付"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-d5df6616054f.json"
@@ -1088,7 +1088,7 @@
         "旅遊交通"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-b894da121e31.json"
@@ -1123,7 +1123,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-409c5655950a.json"
@@ -1158,7 +1158,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-76a59f65cb5c.json"
@@ -1193,7 +1193,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-1127de450512.json"
@@ -1228,7 +1228,7 @@
         "行動支付"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-3e125e12c000.json"
@@ -1263,7 +1263,7 @@
         "生活消費"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-ddf90fb1f99d.json"
@@ -1298,7 +1298,7 @@
         "其他優惠"
       ],
       "official_status": "published",
-      "review_required": false,
+      "review_required": true,
       "needs_review": true,
       "review_message": "靜態官方索引快照，內容未於本輪重新驗證",
       "detail_ref": "activities/sunny-a5d3bd8f1826.json"
