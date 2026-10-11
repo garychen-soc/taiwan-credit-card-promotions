@@ -1,96 +1,10 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-28T04:10:35+08:00",
+  "generated_at": "2026-10-05T03:38:18+08:00",
   "bank_id": "chb",
   "bank_name": "彰化銀行",
-  "activity_count": 24,
+  "activity_count": 23,
   "activities": [
-    {
-      "id": "chb-460553489279",
-      "bank_id": "chb",
-      "bank_name": "彰化銀行",
-      "title": "【百貨購物】Mitsui Shopping Park LaLaport 南港 暑假檔期",
-      "merchant": "【百貨購物】Mitsui Shopping Park LaLaport 南港 暑假檔期",
-      "categories": [
-        "百貨購物"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-08-31",
-      "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3596",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-01",
-          "end": "2026-08-31",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "【百貨購物】Mitsui Shopping Park LaLaport 南港 暑假檔期",
-        "彰化銀行",
-        "百貨購物"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/chb-460553489279.json"
-    },
-    {
-      "id": "chb-33e4dbd9f5df",
-      "bank_id": "chb",
-      "bank_name": "彰化銀行",
-      "title": "【百貨購物】誠品線上 滿額登錄送刷卡金",
-      "merchant": "【百貨購物】誠品線上 滿額登錄送刷卡金",
-      "categories": [
-        "百貨購物"
-      ],
-      "start_date": "2026-09-01",
-      "end_date": "2026-09-30",
-      "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3678",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-09-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "【百貨購物】誠品線上 滿額登錄送刷卡金",
-        "彰化銀行",
-        "百貨購物"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/chb-33e4dbd9f5df.json"
-    },
     {
       "id": "chb-ca4ed364011f",
       "bank_id": "chb",
@@ -127,6 +41,52 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/chb-ca4ed364011f.json"
+    },
+    {
+      "id": "chb-62dd3d66c7d1",
+      "bank_id": "chb",
+      "bank_name": "彰化銀行",
+      "title": "【百貨購物】十月寵愛卡友 指定百貨通路刷彰銀 最高享20%回饋",
+      "merchant": "【百貨購物】十月寵愛卡友 指定百貨通路刷彰銀 最高享20%回饋",
+      "categories": [
+        "百貨購物"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "summary": "CHB",
+      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3720",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-05T10:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠訊息/登錄 指定登錄期間:2026/10/5 10:00~2026/10/31 23:59, 登錄網址:https://www.bankchb.com/frontend/CampaignLog.html?v=1 於指定百貨刷彰銀實體信用卡單筆滿1,000元(含)以上,消費滿額並於指定登錄期",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 20.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "【百貨購物】十月寵愛卡友 指定百貨通路刷彰銀 最高享20%回饋",
+        "彰化銀行",
+        "百貨購物"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/chb-62dd3d66c7d1.json"
     },
     {
       "id": "chb-cd808c87e379",
@@ -478,18 +438,18 @@
       "detail_ref": "activities/chb-ef66ac41a562.json"
     },
     {
-      "id": "chb-5d3edfc2220b",
+      "id": "chb-a0a2bf6cd603",
       "bank_id": "chb",
       "bank_name": "彰化銀行",
-      "title": "【線上購物】MOMO全通路9月促刷活動",
-      "merchant": "【線上購物】MOMO全通路9月促刷活動",
+      "title": "【線上購物】MOMO全通路10月促刷活動",
+      "merchant": "【線上購物】MOMO全通路10月促刷活動",
       "categories": [
         "網購"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-05",
       "end_date": null,
       "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3665",
+      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3699",
       "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -498,10 +458,10 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-09-28T10:00:00+08:00",
-          "end": "2026-09-30T23:59:00+08:00",
+          "start": "2026-10-28T10:00:00+08:00",
+          "end": "2026-10-30T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "指定日完成登錄,可享以下滿額回饋: ※單筆消費且須分期付款滿15,000元(含)以上,回饋550元刷卡金 (限量70名)。 登錄辦法: 【全月活動】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 【99狂購節】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 【桃金日】指定登錄日:2026/9/28 10:00~2026/",
+          "source_text": "優惠訊息/登錄 【全月活動】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 【10.10週年慶】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 【桃金日】指定登錄日:2026/10/28 10:00",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -513,7 +473,7 @@
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
-        "【線上購物】MOMO全通路9月促刷活動",
+        "【線上購物】MOMO全通路10月促刷活動",
         "彰化銀行",
         "網購"
       ],
@@ -521,21 +481,21 @@
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/chb-5d3edfc2220b.json"
+      "detail_ref": "activities/chb-a0a2bf6cd603.json"
     },
     {
-      "id": "chb-6d9fa675440f",
+      "id": "chb-774151e95a1d",
       "bank_id": "chb",
       "bank_name": "彰化銀行",
-      "title": "【線上購物】PChome線上購物9月促刷活動",
-      "merchant": "【線上購物】PChome線上購物9月促刷活動",
+      "title": "【線上購物】PChome線上購物10月促刷活動",
+      "merchant": "【線上購物】PChome線上購物10月促刷活動",
       "categories": [
         "網購"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-05",
       "end_date": null,
       "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3666",
+      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3700",
       "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -544,10 +504,10 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-09-28T10:00:00+08:00",
-          "end": "2026-09-30T23:59:00+08:00",
+          "start": "2026-10-28T10:00:00+08:00",
+          "end": "2026-10-30T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "00元刷卡金 (限量80名)。 (2)單筆消費且須分期付款滿15,000元(含)以上,回饋500元刷卡金 (限量80名)。 登錄辦法: 【全月活動】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 【99購物節】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 登錄網址:https://www.bankchb.com/fro",
+          "source_text": "優惠訊息/登錄 【全月活動】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 【超級品牌週】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 登錄網址:https://www.bankchb.com/f",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -559,7 +519,7 @@
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
-        "【線上購物】PChome線上購物9月促刷活動",
+        "【線上購物】PChome線上購物10月促刷活動",
         "彰化銀行",
         "網購"
       ],
@@ -567,21 +527,21 @@
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/chb-6d9fa675440f.json"
+      "detail_ref": "activities/chb-774151e95a1d.json"
     },
     {
-      "id": "chb-1fec40c85196",
+      "id": "chb-ca1506600aaf",
       "bank_id": "chb",
       "bank_name": "彰化銀行",
-      "title": "【線上購物】Yahoo奇摩購物9月促刷活動",
-      "merchant": "【線上購物】Yahoo奇摩購物9月促刷活動",
+      "title": "【線上購物】Yahoo購物10月促刷活動",
+      "merchant": "【線上購物】Yahoo購物10月促刷活動",
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-05",
       "end_date": null,
       "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3669",
+      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3703",
       "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -590,10 +550,10 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-09-28T10:00:00+08:00",
-          "end": "2026-09-30T23:59:00+08:00",
+          "start": "2026-10-28T10:00:00+08:00",
+          "end": "2026-10-30T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "0元刷卡金 (限量150名)。 (二) 單筆消費且須分期付款滿6,000元(含)以上,回饋200元刷卡金(限量150名)。 登錄辦法: 【全月活動】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 【99鈔省節】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 登錄網址:https://www.bankchb.com/fro",
+          "source_text": "優惠訊息/登錄 【全月活動】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 【百貨周慶】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 登錄網址:https://www.bankchb.com/fr",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -605,53 +565,7 @@
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
-        "【線上購物】Yahoo奇摩購物9月促刷活動",
-        "彰化銀行",
-        "其他優惠"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/chb-1fec40c85196.json"
-    },
-    {
-      "id": "chb-44cb1d02f1fd",
-      "bank_id": "chb",
-      "bank_name": "彰化銀行",
-      "title": "【線上購物】淘寶網9月促刷活動",
-      "merchant": "【線上購物】淘寶網9月促刷活動",
-      "categories": [
-        "其他優惠"
-      ],
-      "start_date": "2026-09-14",
-      "end_date": null,
-      "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3668",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-09-28T10:00:00+08:00",
-          "end": "2026-09-30T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "以上,回饋800元刷卡金 (限量80名)。 (2)單筆消費滿10,000元(含)以上,回饋350元刷卡金 (限量80名)。 登錄辦法: 【全月活動】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 【99購物節】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 ※登錄網址:https://www.bankchb.com/fr",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "【線上購物】淘寶網9月促刷活動",
+        "【線上購物】Yahoo購物10月促刷活動",
         "彰化銀行",
         "其他優惠"
       ],
@@ -659,21 +573,21 @@
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/chb-44cb1d02f1fd.json"
+      "detail_ref": "activities/chb-ca1506600aaf.json"
     },
     {
-      "id": "chb-b108ebd2859b",
+      "id": "chb-cf6f75892dde",
       "bank_id": "chb",
       "bank_name": "彰化銀行",
-      "title": "【線上購物】蝦皮購物9月促刷活動",
-      "merchant": "【線上購物】蝦皮購物9月促刷活動",
+      "title": "【線上購物】淘寶網10月促刷活動",
+      "merchant": "【線上購物】淘寶網10月促刷活動",
       "categories": [
-        "網購"
+        "其他優惠"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-05",
       "end_date": null,
       "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3667",
+      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3702",
       "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -682,10 +596,10 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-09-28T10:00:00+08:00",
-          "end": "2026-09-30T23:59:00+08:00",
+          "start": "2026-10-28T10:00:00+08:00",
+          "end": "2026-10-30T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "兌換券等)、特定類別與特定商品,若有任何使用上的問題請洽詢蝦皮購物客服。 折價劵使用方式與規則,請依蝦皮購物官網公告為準。 登錄辦法: 【全月活動】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 【9.9購物節】指定登錄日:2026/9/28 10:00~2026/9/30 23:59,登錄額滿即提前終止。 登錄網址:https://www.bankchb.com/fr",
+          "source_text": "優惠訊息/登錄 【全月活動】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 【購物狂歡節】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 登錄網址:https://www.bankchb.com/f",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -697,7 +611,53 @@
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
-        "【線上購物】蝦皮購物9月促刷活動",
+        "【線上購物】淘寶網10月促刷活動",
+        "彰化銀行",
+        "其他優惠"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
+      "detail_ref": "activities/chb-cf6f75892dde.json"
+    },
+    {
+      "id": "chb-c84412490942",
+      "bank_id": "chb",
+      "bank_name": "彰化銀行",
+      "title": "【線上購物】蝦皮購物10月促刷活動",
+      "merchant": "【線上購物】蝦皮購物10月促刷活動",
+      "categories": [
+        "網購"
+      ],
+      "start_date": "2026-10-05",
+      "end_date": null,
+      "summary": "CHB",
+      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3701",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.bankchb.com/frontend/CampaignLog.html",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-28T10:00:00+08:00",
+          "end": "2026-10-30T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "優惠訊息/登錄 【全月活動】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 【10.10 品牌週年慶】指定登錄日:2026/10/28 10:00~2026/10/30 23:59,登錄額滿即提前終止。 登錄網址:https://www.bankchb",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "【線上購物】蝦皮購物10月促刷活動",
         "彰化銀行",
         "網購"
       ],
@@ -705,7 +665,7 @@
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/chb-b108ebd2859b.json"
+      "detail_ref": "activities/chb-c84412490942.json"
     },
     {
       "id": "chb-9983fb106dfa",
@@ -784,6 +744,41 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/chb-d89d07925461.json"
+    },
+    {
+      "id": "chb-4e2844dd448f",
+      "bank_id": "chb",
+      "bank_name": "彰化銀行",
+      "title": "【百貨購物】裕隆城週年慶 獨家滿額禮",
+      "merchant": "【百貨購物】裕隆城週年慶 獨家滿額禮",
+      "categories": [
+        "百貨購物"
+      ],
+      "start_date": "2026-09-24",
+      "end_date": "2026-10-26",
+      "summary": "CHB",
+      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3732",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "【百貨購物】裕隆城週年慶 獨家滿額禮",
+        "彰化銀行",
+        "百貨購物"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/chb-4e2844dd448f.json"
     },
     {
       "id": "chb-341f4649d406",
@@ -893,57 +888,18 @@
       "detail_ref": "activities/chb-55b713505fcd.json"
     },
     {
-      "id": "chb-91b7ad9ea1eb",
+      "id": "chb-0aebdb98acaf",
       "bank_id": "chb",
       "bank_name": "彰化銀行",
-      "title": "【交通/加油】彰銀Visa卡感應支付帶你暢行臺北捷運，筆筆享現金回饋最高100%",
-      "merchant": "【交通/加油】彰銀Visa卡感應支付帶你暢行臺北捷運，筆筆享現金回饋最高100%",
-      "categories": [
-        "行動支付",
-        "旅遊交通",
-        "加油交通"
-      ],
-      "start_date": "2026-09-14",
-      "end_date": null,
-      "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3651",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "【交通/加油】彰銀Visa卡感應支付帶你暢行臺北捷運，筆筆享現金回饋最高100%",
-        "彰化銀行",
-        "行動支付",
-        "旅遊交通",
-        "加油交通"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/chb-91b7ad9ea1eb.json"
-    },
-    {
-      "id": "chb-ad0bff9bae03",
-      "bank_id": "chb",
-      "bank_name": "彰化銀行",
-      "title": "【百貨購物】百貨暑假開刷，彰銀樂享回饋，最高享10,000元回饋!",
-      "merchant": "【百貨購物】百貨暑假開刷，彰銀樂享回饋，最高享10,000元回饋!",
+      "title": "【百貨購物】彰銀信用卡專屬禮遇 於麗晶精品最高享9,000元回饋",
+      "merchant": "【百貨購物】彰銀信用卡專屬禮遇 於麗晶精品最高享9,000元回饋",
       "categories": [
         "百貨購物"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-05",
       "end_date": null,
       "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3590",
+      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3721",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -953,10 +909,10 @@
       "registration_windows": [],
       "registration_timing_contracts": [],
       "max_reward_percent": null,
-      "max_reward_amount_twd": 10000,
+      "max_reward_amount_twd": 9000,
       "featured": true,
       "tags": [
-        "【百貨購物】百貨暑假開刷，彰銀樂享回饋，最高享10,000元回饋!",
+        "【百貨購物】彰銀信用卡專屬禮遇 於麗晶精品最高享9,000元回饋",
         "彰化銀行",
         "百貨購物"
       ],
@@ -964,21 +920,21 @@
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/chb-ad0bff9bae03.json"
+      "detail_ref": "activities/chb-0aebdb98acaf.json"
     },
     {
-      "id": "chb-a38f720892cd",
+      "id": "chb-6006afefdffb",
       "bank_id": "chb",
       "bank_name": "彰化銀行",
-      "title": "【線上購物】網購平台9月優惠活動",
-      "merchant": "【線上購物】網購平台9月優惠活動",
+      "title": "【線上購物】網購平台10月優惠活動",
+      "merchant": "【線上購物】網購平台10月優惠活動",
       "categories": [
         "網購"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-05",
       "end_date": null,
       "summary": "CHB",
-      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3496",
+      "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3450",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -991,7 +947,7 @@
       "max_reward_amount_twd": null,
       "featured": false,
       "tags": [
-        "【線上購物】網購平台9月優惠活動",
+        "【線上購物】網購平台10月優惠活動",
         "彰化銀行",
         "網購"
       ],
@@ -999,7 +955,7 @@
       "review_required": true,
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
-      "detail_ref": "activities/chb-a38f720892cd.json"
+      "detail_ref": "activities/chb-6006afefdffb.json"
     }
   ]
 }

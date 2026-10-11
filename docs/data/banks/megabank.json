@@ -1,423 +1,36 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-28T04:10:35+08:00",
+  "generated_at": "2026-10-05T03:38:18+08:00",
   "bank_id": "megabank",
   "bank_name": "兆豐銀行",
-  "activity_count": 30,
+  "activity_count": 29,
   "activities": [
     {
-      "id": "megabank-4210c6bd6680",
+      "id": "megabank-eff264652e7f",
       "bank_id": "megabank",
       "bank_name": "兆豐銀行",
-      "title": "99網購刷兆豐 滿額享2200元",
-      "merchant": "99網購刷兆豐 滿額享2200元",
+      "title": "Mitsui Shopping Park LaLaport 南港店 週年慶",
+      "merchant": "Mitsui Shopping Park LaLaport 南港店 週年慶",
       "categories": [
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "海外消費",
+        "百貨購物",
         "分期"
       ],
-      "start_date": "2026-09-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/9/1~9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ec202609",
+      "start_date": "2026-10-08",
+      "end_date": "2026-11-04",
+      "summary": "活動期間：115/10/8-11/4",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/lalaportnan11510",
       "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [],
       "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ec202609",
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/lalaportnan11510",
       "registration_url_kind": "unknown",
       "registration_windows": [
         {
-          "start": "2026-09-29T14:00:00+08:00",
+          "start": "2026-10-22T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "※momo購物網活動於2026/9/29 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/9/30 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-30T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "※momo購物網活動於2026/9/29 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/9/30 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦皮購物、PChome 24h購物、酷澎Coupang加碼回饋】活動併計,正、附卡合併每戶(依正卡人身分證",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 2200,
-      "featured": true,
-      "tags": [
-        "99網購刷兆豐 滿額享2200元",
-        "兆豐銀行",
-        "需登錄",
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "海外消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-4210c6bd6680.json"
-    },
-    {
-      "id": "megabank-be615eb73997",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "Mega One、BT21信用卡 優惠自由選享加碼1%",
-      "merchant": "Mega One、BT21信用卡 優惠自由選享加碼1%",
-      "categories": [
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "加油交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/7/1~9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q3ftc",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q3ftc",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-03",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "※指定通路每月限擇一登錄,2026/7/3、2026/8/3、2026/9/3 10:00 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月3號上午10時開放登錄,每指定通路每月限量2,5",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
-          "start": "2026-07-03T10:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": " 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月3號上午10時開放登錄,每指定通路每月限量2,500名,如登錄額滿系統將提前關閉並於登錄頁面公告。每戶每月只能擇一指定通路登錄(即同時",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-03",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "※指定通路每月限擇一登錄,2026/7/3、2026/8/3、2026/9/3 10:00 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月3號上午10時開放登錄,每指定通路每月限量2,500名,如登錄額滿",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
-          "start": "2026-08-03T10:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": " 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月3號上午10時開放登錄,每指定通路每月限量2,500名,如登錄額滿系統將提前關閉並於登錄頁面公告。每戶每月只能擇一指定通路登錄(即同時",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-03T10:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "※指定通路每月限擇一登錄,2026/7/3、2026/8/3、2026/9/3 10:00 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月3號上午10時開放登錄,每指定通路每月限量2,500名,如登錄額滿系統將提前關閉並於登錄頁面公告。每戶每月只能擇一指定通路登錄(即同時持有「宇宙明星BT21",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 1.0,
-      "max_reward_amount_twd": 200,
-      "featured": true,
-      "tags": [
-        "Mega One、BT21信用卡 優惠自由選享加碼1%",
-        "兆豐銀行",
-        "需登錄",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "加油交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-be615eb73997.json"
-    },
-    {
-      "id": "megabank-d1af75eb060c",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "「利多御璽卡」刷遍世界拿利多・回饋最高6%",
-      "merchant": "「利多御璽卡」刷遍世界拿利多・回饋最高6%",
-      "categories": [
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "加油交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/7/1~9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026q3lidoforbonus",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026q3lidoforbonus",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 9.1,
-      "max_reward_amount_twd": 3000,
-      "featured": true,
-      "tags": [
-        "「利多御璽卡」刷遍世界拿利多・回饋最高6%",
-        "兆豐銀行",
-        "需登錄",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "加油交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/megabank-d1af75eb060c.json"
-    },
-    {
-      "id": "megabank-48b6c3df4d3e",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "三筆刷兆豐，免費咖啡更香濃！",
-      "merchant": "三筆刷兆豐，免費咖啡更香濃！",
-      "categories": [
-        "行動支付",
-        "餐飲美食",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/7/1-9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q3coffeefree",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q3coffeefree",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-23T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "活動於2026/7/23 14:00於兆豐官網開放登錄。 開放登錄日起~2026/9/30期間先行完成網頁登錄;活動期間內只需登錄一次,完成網頁登錄之當月(含當月)起~2026/9/30,均可參與本活動。 開放登錄時間 每滿 3 筆 並完成登錄, 註 1:",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-30",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "活動於2026/7/23 14:00於兆豐官網開放登錄。 開放登錄日起~2026/9/30期間先行完成網頁登錄;活動期間內只需登錄一次,完成網頁登錄之當月(含當月)起~2026/9/30,均可參與本活動。 開放登錄時間 每滿 3 筆 並完成登錄, 註",
-          "reminder_minutes": 10,
-          "precision": "date"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "三筆刷兆豐，免費咖啡更香濃！",
-        "兆豐銀行",
-        "需登錄",
-        "行動支付",
-        "餐飲美食",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-48b6c3df4d3e.json"
-    },
-    {
-      "id": "megabank-34863411f102",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "昇恆昌 2026第三季優惠",
-      "merchant": "昇恆昌 2026第三季優惠",
-      "categories": [
-        "網購",
-        "行動支付",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/7/1-9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/everrich2026q3",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/everrich2026q3",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-23T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "活動需登錄,活動登錄期間:2026/7/23 14:00開放登錄。 正、附卡合併計算,限正卡持卡人登錄,消費門檻擇優計算,每戶(以正卡持卡人身分證字號歸戶計算)「第三季優惠」最高回饋刷卡金600元,再享「暑假加碼活動」刷卡金900元,合計最高回饋刷卡金1,500元。持卡人須於",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.0,
-      "max_reward_amount_twd": 1500,
-      "featured": true,
-      "tags": [
-        "昇恆昌 2026第三季優惠",
-        "兆豐銀行",
-        "需登錄",
-        "網購",
-        "行動支付",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-34863411f102.json"
-    },
-    {
-      "id": "megabank-63d5796b6b7b",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "生日就刷兆豐卡！消費享最高10%回饋",
-      "merchant": "生日就刷兆豐卡！消費享最高10%回饋",
-      "categories": [
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/7/1~9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/megabirthday",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/megabirthday",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 10.0,
-      "max_reward_amount_twd": 300,
-      "featured": true,
-      "tags": [
-        "生日就刷兆豐卡！消費享最高10%回饋",
-        "兆豐銀行",
-        "需登錄",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/megabank-63d5796b6b7b.json"
-    },
-    {
-      "id": "megabank-b99fc05b1489",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "精選旅行社滿額回饋NT$5,000",
-      "merchant": "精選旅行社滿額回饋NT$5,000",
-      "categories": [
-        "行動支付",
-        "旅遊交通",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/7/1~9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q3travel",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q3travel",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-10T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "※每月10日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/7/10 14:00、2026/8/10 14:00、2026/9/10 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 於指定旅行社刷兆豐信用卡單月累積消費達以下門檻並完成當月活動登錄,享最高 活動登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-10T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "※每月10日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/7/10 14:00、2026/8/10 14:00、2026/9/10 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 於指定旅行社刷兆豐信用卡單月累積消費達以下門檻並完成當月活動登錄,享最高 活動登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-10T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "※每月10日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/7/10 14:00、2026/8/10 14:00、2026/9/10 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 於指定旅行社刷兆豐信用卡單月累積消費達以下門檻並完成當月活動登錄,享最高 活動登錄",
+          "source_text": "活動將於2026/10/22 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -426,218 +39,20 @@
         "unknown"
       ],
       "max_reward_percent": null,
-      "max_reward_amount_twd": 5000,
+      "max_reward_amount_twd": 600,
       "featured": true,
       "tags": [
-        "精選旅行社滿額回饋NT$5,000",
+        "Mitsui Shopping Park LaLaport 南港店 週年慶",
         "兆豐銀行",
         "需登錄",
-        "行動支付",
-        "旅遊交通",
+        "百貨購物",
         "分期"
       ],
       "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/megabank-b99fc05b1489.json"
-    },
-    {
-      "id": "megabank-1236f5d41eda",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "精選旅遊通路滿額回饋NT$2,000",
-      "merchant": "精選旅遊通路滿額回饋NT$2,000",
-      "categories": [
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "餐飲美食",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/7/1~9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q3trip",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q3trip",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-21T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "NT$400刷卡金;依此類推,回饋上限NT$2,000刷卡金。(每月限量500名) ※每月21日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/7/21 14:00、2026/8/21 14:00、2026/9/21 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 活動登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-21T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "饋上限NT$2,000刷卡金。(每月限量500名) ※每月21日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/7/21 14:00、2026/8/21 14:00、2026/9/21 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 活動登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-21T14:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "每月限量500名) ※每月21日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/7/21 14:00、2026/8/21 14:00、2026/9/21 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 活動登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 2000,
-      "featured": true,
-      "tags": [
-        "精選旅遊通路滿額回饋NT$2,000",
-        "兆豐銀行",
-        "需登錄",
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "餐飲美食",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-1236f5d41eda.json"
-    },
-    {
-      "id": "megabank-ab149ad22913",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "精選網購刷兆豐卡 滿額筆筆享3%",
-      "merchant": "精選網購刷兆豐卡 滿額筆筆享3%",
-      "categories": [
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/7/1~9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ecselect2026q3",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ecselect2026q3",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-24T14:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "※活動將於活動期間每月24日下午2點開放當月登錄,持卡人需於消費之同月份完成登錄始符合活動參加資格,每月限量500名,累積消費採單月計算,每月每戶回饋上限2",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-24T14:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "※活動將於活動期間每月24日下午2點開放當月登錄,持卡人需於消費之同月份完成登錄始符合活動參加資格,每月限量500名,累積消費採單月計算,每月每戶回饋上限2",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-24T14:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "※活動將於活動期間每月24日下午2點開放當月登錄,持卡人需於消費之同月份完成登錄始符合活動參加資格,每月限量500名,累積消費採單月計算,每月每戶回饋上限2",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 3.0,
-      "max_reward_amount_twd": 200,
-      "featured": true,
-      "tags": [
-        "精選網購刷兆豐卡 滿額筆筆享3%",
-        "兆豐銀行",
-        "需登錄",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-ab149ad22913.json"
-    },
-    {
-      "id": "megabank-44b5c2b149a8",
-      "bank_id": "megabank",
-      "bank_name": "兆豐銀行",
-      "title": "雙幣鈦金卡消費滿額加碼贈500元",
-      "merchant": "雙幣鈦金卡消費滿額加碼贈500元",
-      "categories": [
-        "生活消費"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "活動期間：115/7/1~9/30",
-      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026dcevent1",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/2026dcevent1",
-      "registration_url_kind": "unknown",
-      "registration_windows": [
-        {
-          "start": "2026-07-01T10:00:00+08:00",
-          "end": null,
-          "label": "登錄開放",
-          "source_text": "1.本活動於2026/7/1 10:00開放登錄~2026/9/30之23時59分止,限正卡持卡人登錄,若登錄提前額滿,則不再接受新登錄。未於登錄期間內完成登錄者,視同放棄參加本活動,恕不接受人工登錄、事後補登或要求優惠回饋,完成登錄時間悉以本行系統為準。 雙",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-30",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "1.本活動於2026/7/1 10:00開放登錄~2026/9/30之23時59分止,限正卡持卡人登錄,若登錄提前額滿,則不再接受新登錄。未於登錄期間內完成登錄者,視同放棄參加本活動,恕不接受人工登錄、事後補登或要求優惠回饋,完",
-          "reminder_minutes": 10,
-          "precision": "date"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 2.5,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "雙幣鈦金卡消費滿額加碼贈500元",
-        "兆豐銀行",
-        "需登錄",
-        "生活消費"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/megabank-44b5c2b149a8.json"
+      "detail_ref": "activities/megabank-eff264652e7f.json"
     },
     {
       "id": "megabank-2b34be290ecf",
@@ -691,6 +106,118 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/megabank-2b34be290ecf.json"
+    },
+    {
+      "id": "megabank-4e1d6d65fd8e",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "雙十網購刷兆豐 滿額享2500元",
+      "merchant": "雙十網購刷兆豐 滿額享2500元",
+      "categories": [
+        "網購",
+        "行動支付",
+        "旅遊交通",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "summary": "活動期間：115/10/1~10/31",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ec202610",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ec202610",
+      "registration_url_kind": "unknown",
+      "registration_windows": [
+        {
+          "start": "2026-10-29T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "※momo購物網活動於2026/10/29 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/10/30 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-30T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "※momo購物網活動於2026/10/29 14:00 開放限量登錄 ※蝦皮購物、PChome 24h購物、酷澎Coupang於2026/10/30 14:00 開放限量登錄 正附卡消費合併計算,回饋金計算~新臺幣元為止,小數點以下金額均無條件捨去,同月份【momo購物網、蝦皮購物、PChome 24h購物、酷澎Coupang加碼回饋】活動併計,正、附卡合併每戶(依正卡人身分證",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 2500,
+      "featured": true,
+      "tags": [
+        "雙十網購刷兆豐 滿額享2500元",
+        "兆豐銀行",
+        "需登錄",
+        "網購",
+        "行動支付",
+        "旅遊交通",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/megabank-4e1d6d65fd8e.json"
+    },
+    {
+      "id": "megabank-898e613cd487",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "MITSUI OUTLET PARK週年慶",
+      "merchant": "MITSUI OUTLET PARK週年慶",
+      "categories": [
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-10-02",
+      "end_date": "2026-11-22",
+      "summary": "活動期間：115/10/2-11/22",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/mitsuioutlet11510",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/mitsuioutlet11510",
+      "registration_url_kind": "unknown",
+      "registration_windows": [
+        {
+          "start": "2026-11-12T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "活動將於2026/11/12 14:00開放登錄,限正卡持卡人登錄,數量有限,額滿即止。 正、附卡合併計算,消費門檻擇優計算,正、附卡合併每戶(以正卡持卡人身分證字號歸戶計算)每日限領一份回饋,恕不累贈,正卡持卡人須於活動登錄期間內完成登錄,始取得活動參與資格",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 150,
+      "featured": true,
+      "tags": [
+        "MITSUI OUTLET PARK週年慶",
+        "兆豐銀行",
+        "需登錄",
+        "百貨購物",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/megabank-898e613cd487.json"
     },
     {
       "id": "megabank-34e3218dfb35",
@@ -826,6 +353,101 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-5032bbb469a1.json"
+    },
+    {
+      "id": "megabank-871a1964a6ec",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "Mega One、BT21信用卡 優惠自由選享加碼1%",
+      "merchant": "Mega One、BT21信用卡 優惠自由選享加碼1%",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "加油交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/10/1~12/31",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q4ftc",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q4ftc",
+      "registration_url_kind": "unknown",
+      "registration_windows": [
+        {
+          "start": "2026-10-02",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "※指定通路每月限擇一登錄,2026/10/2、2026/11/2、2026/12/2 10:00 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月2號上午10時開放登錄,每指定通路每月限量2",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-10-02T10:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": " 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月2號上午10時開放登錄,每指定通路每月限量2,500名,如登錄額滿系統將提前關閉並於登錄頁面公告。每戶每月只能擇一指定通路登錄(即同時",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-02",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "※指定通路每月限擇一登錄,2026/10/2、2026/11/2、2026/12/2 10:00 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月2號上午10時開放登錄,每指定通路每月限量2,500名,如登錄額",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-11-02T10:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": " 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月2號上午10時開放登錄,每指定通路每月限量2,500名,如登錄額滿系統將提前關閉並於登錄頁面公告。每戶每月只能擇一指定通路登錄(即同時",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-02T10:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "※指定通路每月限擇一登錄,2026/10/2、2026/11/2、2026/12/2 10:00 開放正卡持卡人登錄,每通路每月限登錄2,500名。 本活動每月2號上午10時開放登錄,每指定通路每月限量2,500名,如登錄額滿系統將提前關閉並於登錄頁面公告。每戶每月只能擇一指定通路登錄(即同時持有「宇宙明星BT21",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 1.0,
+      "max_reward_amount_twd": 200,
+      "featured": true,
+      "tags": [
+        "Mega One、BT21信用卡 優惠自由選享加碼1%",
+        "兆豐銀行",
+        "需登錄",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "加油交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/megabank-871a1964a6ec.json"
     },
     {
       "id": "megabank-bec6bee969a6",
@@ -1407,6 +1029,316 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/megabank-8be773b8fed8.json"
+    },
+    {
+      "id": "megabank-d39dcdab1a8e",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "昇恆昌 2026第四季優惠",
+      "merchant": "昇恆昌 2026第四季優惠",
+      "categories": [
+        "網購",
+        "行動支付",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/10/1-12/31",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/everrich2026q4",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/everrich2026q4",
+      "registration_url_kind": "unknown",
+      "registration_windows": [
+        {
+          "start": "2026-10-29T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "活動需登錄,活動登錄期間:2026/10/29 14:00開放登錄。 正、附卡合併計算,限正卡持卡人登錄,消費門檻擇優計算,每戶(以正卡持卡人身分證字號歸戶計算)「第四季優惠」最高回饋刷卡金600元,再享「週年慶加碼活動」或「聖誕加碼」刷卡金900元,合計最高回饋刷卡金1,50",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 1500,
+      "featured": true,
+      "tags": [
+        "昇恆昌 2026第四季優惠",
+        "兆豐銀行",
+        "需登錄",
+        "網購",
+        "行動支付",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/megabank-d39dcdab1a8e.json"
+    },
+    {
+      "id": "megabank-e25fd878cf7b",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "生日刷兆豐卡享好利！消費享最高10%回饋",
+      "merchant": "生日刷兆豐卡享好利！消費享最高10%回饋",
+      "categories": [
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/10/1~12/31",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/megabirthday",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/megabirthday",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": 300,
+      "featured": true,
+      "tags": [
+        "生日刷兆豐卡享好利！消費享最高10%回饋",
+        "兆豐銀行",
+        "需登錄",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/megabank-e25fd878cf7b.json"
+    },
+    {
+      "id": "megabank-83ea55f34316",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "精選旅行社滿額回饋NT$5,000",
+      "merchant": "精選旅行社滿額回饋NT$5,000",
+      "categories": [
+        "行動支付",
+        "旅遊交通",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/10/1~12/31",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q4travel",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q4travel",
+      "registration_url_kind": "unknown",
+      "registration_windows": [
+        {
+          "start": "2026-10-16T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "※每月16日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/10/16 14:00、2026/11/16 14:00、2026/12/16 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 於指定旅行社刷兆豐信用卡單月累積消費達以下門檻並完成當月活動登錄,享最高 活動登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-16T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "※每月16日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/10/16 14:00、2026/11/16 14:00、2026/12/16 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 於指定旅行社刷兆豐信用卡單月累積消費達以下門檻並完成當月活動登錄,享最高 活動登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-16T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "※每月16日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/10/16 14:00、2026/11/16 14:00、2026/12/16 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 於指定旅行社刷兆豐信用卡單月累積消費達以下門檻並完成當月活動登錄,享最高 活動登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 5000,
+      "featured": true,
+      "tags": [
+        "精選旅行社滿額回饋NT$5,000",
+        "兆豐銀行",
+        "需登錄",
+        "行動支付",
+        "旅遊交通",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/megabank-83ea55f34316.json"
+    },
+    {
+      "id": "megabank-907ae4e828f5",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "精選旅遊通路滿額回饋NT$2,000",
+      "merchant": "精選旅遊通路滿額回饋NT$2,000",
+      "categories": [
+        "網購",
+        "行動支付",
+        "旅遊交通",
+        "餐飲美食",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/10/1~12/31",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q4trip",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/115q4trip",
+      "registration_url_kind": "unknown",
+      "registration_windows": [
+        {
+          "start": "2026-10-23T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "NT$400刷卡金;依此類推,回饋上限NT$2,000刷卡金。(每月限量500名) ※每月23日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/10/23 14:00、2026/11/23 14:00、2026/12/23 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 活動登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-23T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "上限NT$2,000刷卡金。(每月限量500名) ※每月23日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/10/23 14:00、2026/11/23 14:00、2026/12/23 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 活動登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-23T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "限量500名) ※每月23日14:00 起開放當月活動登錄,活動期間每戶限擇優回饋乙次。 活動需登錄,本行分別於2026/10/23 14:00、2026/11/23 14:00、2026/12/23 14:00開放登錄,額滿即關閉,限正卡持卡人登錄,恕不受理人工登錄。 活動登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 2000,
+      "featured": true,
+      "tags": [
+        "精選旅遊通路滿額回饋NT$2,000",
+        "兆豐銀行",
+        "需登錄",
+        "網購",
+        "行動支付",
+        "旅遊交通",
+        "餐飲美食",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/megabank-907ae4e828f5.json"
+    },
+    {
+      "id": "megabank-7c9152c24088",
+      "bank_id": "megabank",
+      "bank_name": "兆豐銀行",
+      "title": "精選網購刷兆豐卡 滿額筆筆享5%",
+      "merchant": "精選網購刷兆豐卡 滿額筆筆享5%",
+      "categories": [
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "活動期間：115/10/1~12/31",
+      "source_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ecselect2026q4",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.megabank.com.tw/personal/credit-card/event/overview/ecselect2026q4",
+      "registration_url_kind": "unknown",
+      "registration_windows": [
+        {
+          "start": "2026-10-23T14:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※活動將於活動期間每月23日下午2點開放當月登錄,持卡人需於消費之同月份完成登錄始符合活動參加資格,每月限量500名,累積消費採單月計算,每月每戶回饋上限2",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-23T14:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※活動將於活動期間每月23日下午2點開放當月登錄,持卡人需於消費之同月份完成登錄始符合活動參加資格,每月限量500名,累積消費採單月計算,每月每戶回饋上限2",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-23T14:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※活動將於活動期間每月23日下午2點開放當月登錄,持卡人需於消費之同月份完成登錄始符合活動參加資格,每月限量500名,累積消費採單月計算,每月每戶回饋上限2",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 5.0,
+      "max_reward_amount_twd": 200,
+      "featured": true,
+      "tags": [
+        "精選網購刷兆豐卡 滿額筆筆享5%",
+        "兆豐銀行",
+        "需登錄",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/megabank-7c9152c24088.json"
     },
     {
       "id": "megabank-6906e74eec2e",

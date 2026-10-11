@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-28T04:10:35+08:00",
+  "generated_at": "2026-10-05T03:38:18+08:00",
   "bank_id": "tcbbank",
   "bank_name": "台中銀行",
-  "activity_count": 21,
+  "activity_count": 22,
   "activities": [
     {
       "id": "tcbbank-c7b676f7a732",
@@ -90,41 +90,6 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/tcbbank-e8edd5286a00.json"
-    },
-    {
-      "id": "tcbbank-de4c10e1c2cf",
-      "bank_id": "tcbbank",
-      "bank_name": "台中銀行",
-      "title": "世界卡尊榮旅遊講座",
-      "merchant": "世界卡尊榮旅遊講座",
-      "categories": [
-        "旅遊交通"
-      ],
-      "start_date": "2026-09-09",
-      "end_date": "2026-10-03",
-      "summary": "(至115年10月3日有效)",
-      "source_url": "https://www.tcbbank.com.tw/Promotion/Info.html?ID=797",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "世界卡尊榮旅遊講座",
-        "台中銀行",
-        "旅遊交通"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/tcbbank-de4c10e1c2cf.json"
     },
     {
       "id": "tcbbank-b73f3a11058e",
@@ -693,6 +658,76 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/tcbbank-9ea92ee40677.json"
+    },
+    {
+      "id": "tcbbank-369a3529ce7c",
+      "bank_id": "tcbbank",
+      "bank_name": "台中銀行",
+      "title": "暖冬回饋季，刷卡抽好禮",
+      "merchant": "暖冬回饋季，刷卡抽好禮",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2027-01-31",
+      "summary": "(至116年1月31日有效)",
+      "source_url": "https://www.tcbbank.com.tw/Promotion/Info.html?ID=799",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "暖冬回饋季，刷卡抽好禮",
+        "台中銀行",
+        "其他優惠"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/tcbbank-369a3529ce7c.json"
+    },
+    {
+      "id": "tcbbank-d5f5eae891f4",
+      "bank_id": "tcbbank",
+      "bank_name": "台中銀行",
+      "title": "家電家居樂享購",
+      "merchant": "家電家居樂享購",
+      "categories": [
+        "百貨購物"
+      ],
+      "start_date": "2026-09-30",
+      "end_date": "2027-02-28",
+      "summary": "(至116年2月28日有效)",
+      "source_url": "https://www.tcbbank.com.tw/Promotion/Info.html?ID=801",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "家電家居樂享購",
+        "台中銀行",
+        "百貨購物"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/tcbbank-d5f5eae891f4.json"
     },
     {
       "id": "tcbbank-9784e24ce2bc",

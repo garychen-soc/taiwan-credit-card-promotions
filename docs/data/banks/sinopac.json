@@ -1,121 +1,10 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-28T04:10:35+08:00",
+  "generated_at": "2026-10-05T03:38:18+08:00",
   "bank_id": "sinopac",
   "bank_name": "永豐銀行",
   "activity_count": 22,
   "activities": [
-    {
-      "id": "sinopac-c3de07f6b557",
-      "bank_id": "sinopac",
-      "bank_name": "永豐銀行",
-      "title": "低碳生活 迎向美好未來",
-      "merchant": "低碳生活 迎向美好未來",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-08-31",
-      "summary": "永豐消費碳足跡查詢功能，完成啟用享綠色消費回饋，再加碼抽好禮！",
-      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/437203357.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-07-17T11:00:00+08:00",
-          "end": "2026-08-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "7抽獎」 ,前5,000名登錄再享30元刷卡金。 首次啟用係指客戶於活動開始前未曾於本行任一通路完成消費碳足跡功能啟用,且於活動期間首次成功啟用者。 登錄時間:2026/7/17 11:00~2026/8/31 23:59,名額限量5,000名。 綁定行動支付限Apple Pay及Google Pay,不包含其他第三方支付或電子支付服務。 【獎勵內容】 抽獎獎項: iPhone 17 (256GB)乙台,共1名。 抽獎",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-31",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "書面通知或電話方式通知中獎人,請中獎人依領獎程序辦理領獎事宜。 五、30元刷卡金活動將於2026年7月17日11:00~2026年8月31曰23:59開放登錄。限於本活動期間內首次啟用「消費碳足跡查詢」功能並綁定指定行動支付之客戶,且以前5,000名完成活動登錄者,始得享30元刷卡金,以本行系統記",
-          "reminder_minutes": 10,
-          "precision": "date"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 20.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "低碳生活 迎向美好未來",
-        "永豐銀行",
-        "行動支付",
-        "生活消費",
-        "海外消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "同一子活動的登錄視窗互相重疊。",
-      "detail_ref": "activities/sinopac-c3de07f6b557.json"
-    },
-    {
-      "id": "sinopac-2850fe180b9a",
-      "bank_id": "sinopac",
-      "bank_name": "永豐銀行",
-      "title": "捷運任你乘",
-      "merchant": "捷運任你乘",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "加油交通",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "搭捷運使用Apple Pay感應進站，最高享100%刷卡金回饋！",
-      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/417322625.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": 100,
-      "featured": true,
-      "tags": [
-        "捷運任你乘",
-        "永豐銀行",
-        "行動支付",
-        "生活消費",
-        "加油交通",
-        "海外消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/sinopac-2850fe180b9a.json"
-    },
     {
       "id": "sinopac-52f8c07009f3",
       "bank_id": "sinopac",
@@ -235,18 +124,10 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-05-27",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,000名。 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄10,000名。因活動反應熱烈,2026/9/",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
           "start": "2026-07-01",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "饋。例如,已登錄本行「網購/電視購物優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27",
+          "source_text": "~2025/12/31期間未申請單筆消費分期或帳單分期之永豐信用卡正卡持卡人)參加 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 *排除卡別:公司卡、承銷卡、配銷卡、Debit卡不",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -254,7 +135,7 @@
           "start": "2026-09-04",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "。 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,000名。 活動方式:每波活動須分別登錄乙次,於2026/7/",
+          "source_text": "加 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 *排除卡別:公司卡、承銷卡、配銷卡、Debit卡不適用本活動。 *境外投資交易及幣倍卡外幣交易不得辦理信用卡分期付款。 注意事項 ",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -262,7 +143,7 @@
           "start": "2026-09-15",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "得要求轉讓、提領或兌現。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~10,000名。 活動須登錄,於2026/9/15當日開放登錄50,000名。 活動內容:刷永豐信用卡,於通路辦理特店分期消費並完成登錄,享雙重好禮! 不限通路、不限金額,刷永豐信用卡,分期消費(限分3期、6期",
+          "source_text": "領獎:本行將寄送中獎通知專函予得獎者,得獎者依專函領獎程序辦理後,刷卡金將於抽獎日後25個工作天內入帳。 活動須登錄,於2026/9/15當日開放登錄50,000名。 *單持公司卡、承銷卡、配銷卡、Debit卡之客戶不適用本活動。 *境外投資交易及幣倍卡外幣交易不得辦理信用卡分期付款。 注意事項 ",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -270,7 +151,15 @@
           "start": "2026-10-01",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "行「網購/電視購物優惠」活動且已獲得回饋者,不可再享本活動回饋。 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 A7:需要登錄。因活動反應熱烈,2026/5/27起增加名額~12,0",
+          "source_text": "31期間未申請單筆消費分期或帳單分期之永豐信用卡正卡持卡人)參加 活動方式:每波活動須分別登錄乙次,於2026/7/1、2026/10/1當日開放登錄12,000名。因活動反應熱烈,2026/9/4起增加名額~15,000名。 *排除卡別:公司卡、承銷卡、配銷卡、Debit卡不適用本活動。 *境外",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2027-02-22",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "分期,享1次抽獎機會 獎項:享500元刷卡金折抵分期利息 ,每戶最高500元(限量登錄) 名額:共40名 抽獎時間:預計2027/2/22抽獎 領獎:本行將寄送中獎通知專函予得獎者,得獎者依專函領獎程序辦理後,刷卡金將於抽獎日後25個工作天內入帳。 活動須登錄,於2026/9/15當日開放登錄50",
           "reminder_minutes": 10,
           "precision": "date"
         }
@@ -293,7 +182,7 @@
       "official_status": "published",
       "review_required": true,
       "needs_review": true,
-      "review_message": "登錄時間早於活動期間；登錄時間晚於活動期間。",
+      "review_message": "登錄時間晚於活動期間。",
       "detail_ref": "activities/sinopac-83d36451e297.json"
     },
     {
@@ -426,6 +315,64 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/sinopac-d5f710c614d2.json"
+    },
+    {
+      "id": "sinopac-ddbe64197116",
+      "bank_id": "sinopac",
+      "bank_name": "永豐銀行",
+      "title": "Google Pay享回饋",
+      "merchant": "Google Pay享回饋",
+      "categories": [
+        "行動支付",
+        "生活消費",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "永豐JCB卡綁定Google Pay滿額享回饋！",
+      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/556758267.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-01",
+          "end": "2026-12-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-15T15:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "本活動登錄名額總限量20,000名,於2026/10/15 15:00開放登錄,活動期間僅須登錄乙次即享活動資格,無須重複登錄。 欲參加本活動,須由正卡持卡人於活動期間透過永豐銀行網站進行線上登錄,時間以本行系統時間為準,登錄本活動時請勿同時開啟多個視窗,並請以半形英數字登錄。逾期未登錄或",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": 100,
+      "featured": true,
+      "tags": [
+        "Google Pay享回饋",
+        "永豐銀行",
+        "行動支付",
+        "生活消費",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/sinopac-ddbe64197116.json"
     },
     {
       "id": "sinopac-25efb0c26a98",
@@ -834,53 +781,6 @@
       "detail_ref": "activities/sinopac-6107d1d27b2b.json"
     },
     {
-      "id": "sinopac-9926b67300f3",
-      "bank_id": "sinopac",
-      "bank_name": "永豐銀行",
-      "title": "美食餐飲優惠",
-      "merchant": "美食餐飲優惠",
-      "categories": [
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-04-14",
-      "end_date": "2026-08-31",
-      "summary": "指定餐飲/美食外送享優惠，讓您呷飽呷好康！",
-      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/459643050.html",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "美食餐飲優惠",
-        "永豐銀行",
-        "網購",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/sinopac-9926b67300f3.json"
-    },
-    {
       "id": "sinopac-964298be52c5",
       "bank_id": "sinopac",
       "bank_name": "永豐銀行",
@@ -973,6 +873,51 @@
       "detail_ref": "activities/sinopac-8264c38d7833.json"
     },
     {
+      "id": "sinopac-9926b67300f3",
+      "bank_id": "sinopac",
+      "bank_name": "永豐銀行",
+      "title": "美食餐飲優惠",
+      "merchant": "美食餐飲優惠",
+      "categories": [
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "summary": "指定餐飲/美食外送享優惠，讓您呷飽呷好康！",
+      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/459643050.html",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "美食餐飲優惠",
+        "永豐銀行",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/sinopac-9926b67300f3.json"
+    },
+    {
       "id": "sinopac-6ae0b8add595",
       "bank_id": "sinopac",
       "bank_name": "永豐銀行",
@@ -1053,6 +998,47 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/sinopac-c307ce7a4fe8.json"
+    },
+    {
+      "id": "sinopac-c3de07f6b557",
+      "bank_id": "sinopac",
+      "bank_name": "永豐銀行",
+      "title": "低碳生活 迎向美好未來",
+      "merchant": "低碳生活 迎向美好未來",
+      "categories": [
+        "行動支付",
+        "生活消費",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2022-09-26",
+      "end_date": "2030-12-31",
+      "summary": "永豐消費碳足跡查詢功能，完成啟用享綠色消費回饋，再加碼抽好禮！",
+      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/437203357.html",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "低碳生活 迎向美好未來",
+        "永豐銀行",
+        "行動支付",
+        "生活消費",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/sinopac-c3de07f6b557.json"
     },
     {
       "id": "sinopac-b5a12c3730a4",

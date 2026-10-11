@@ -1,131 +1,10 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-28T04:10:35+08:00",
+  "generated_at": "2026-10-05T03:38:18+08:00",
   "bank_id": "ubot",
   "bank_name": "聯邦銀行",
   "activity_count": 95,
   "activities": [
-    {
-      "id": "ubot-7d22d751b48d",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "99狂購節",
-      "merchant": "99狂購節",
-      "categories": [
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "分期"
-      ],
-      "start_date": "2026-09-01",
-      "end_date": "2026-09-22",
-      "summary": "刷聯邦卡滿額贈5,300元刷卡金！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20260901momo/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-09-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-04",
-          "end": "2026-09-12",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-09",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-19",
-          "end": "2026-09-22",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 0.5,
-      "max_reward_amount_twd": 5300,
-      "featured": true,
-      "tags": [
-        "99狂購節",
-        "聯邦銀行",
-        "網購數位",
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-7d22d751b48d.json"
-    },
-    {
-      "id": "ubot-b6e866958e6a",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "9.9超級購物節",
-      "merchant": "9.9超級購物節",
-      "categories": [
-        "網購",
-        "分期"
-      ],
-      "start_date": "2026-09-01",
-      "end_date": "2026-09-25",
-      "summary": "刷聯邦卡滿額最高享1,800元回饋！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20260901shopee/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-09-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-01",
-          "end": "2026-09-13",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-18",
-          "end": "2026-09-25",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 4000,
-      "featured": true,
-      "tags": [
-        "9.9超級購物節",
-        "聯邦銀行",
-        "網購數位",
-        "網購",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-b6e866958e6a.json"
-    },
     {
       "id": "ubot-033d2d82c202",
       "bank_id": "ubot",
@@ -203,269 +82,6 @@
       "detail_ref": "activities/ubot-033d2d82c202.json"
     },
     {
-      "id": "ubot-e82028a2e775",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "MyJapan+ APP",
-      "merchant": "MyJapan+ APP",
-      "categories": [
-        "旅遊交通",
-        "行動支付",
-        "海外消費",
-        "強打優惠"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "刷聯邦JCB日本實體店最高10%回饋！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026jcb/myjapan/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 10.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "MyJapan+ APP",
-        "聯邦銀行",
-        "旅遊優惠",
-        "旅遊交通",
-        "行動支付",
-        "海外消費",
-        "強打優惠"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-e82028a2e775.json"
-    },
-    {
-      "id": "ubot-41e0d4c5dc5f",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "全月滿額贈",
-      "merchant": "全月滿額贈",
-      "categories": [
-        "網購",
-        "行動支付",
-        "分期"
-      ],
-      "start_date": "2026-09-01",
-      "end_date": "2026-09-30",
-      "summary": "刷聯邦卡最高享8%回饋！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20260901taobao/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-09-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 8.0,
-      "max_reward_amount_twd": 100,
-      "featured": true,
-      "tags": [
-        "全月滿額贈",
-        "聯邦銀行",
-        "網購數位",
-        "網購",
-        "行動支付",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-41e0d4c5dc5f.json"
-    },
-    {
-      "id": "ubot-cea90fba6f25",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "昇恆昌免稅購物第一站",
-      "merchant": "昇恆昌免稅購物第一站",
-      "categories": [
-        "百貨購物",
-        "行動支付",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "昇恆昌刷聯邦卡，每滿1萬元最贈200元刷卡金！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026q3everrich/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-07-01T15:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": ",上限2,000元/戶,限量登錄1萬名/月) 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-01",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "X月登錄。 活動期間每月1日下午3點開放登錄~當月底,每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。 範例:客戶A於2026/8/1登錄成功,則2026/9/1無需再登錄,2026/7/1-9/30之昇恆昌消費皆適用活動。 活動對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 活動登錄 活動",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
-          "start": "2026-08-01T15:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": ",上限2,000元/戶,限量登錄1萬名/月) 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-01",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "下午3點開放登錄~當月底,每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。 範例:客戶A於2026/8/1登錄成功,則2026/9/1無需再登錄,2026/7/1-9/30之昇恆昌消費皆適用活動。 活動對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 活動登錄 活動對象:聯邦銀行信用卡持卡人且",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
-          "start": "2026-09-01T15:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": ",上限2,000元/戶,限量登錄1萬名/月) 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "per_period_reregister"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 200,
-      "featured": true,
-      "tags": [
-        "昇恆昌免稅購物第一站",
-        "聯邦銀行",
-        "百貨零售",
-        "百貨購物",
-        "行動支付",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-cea90fba6f25.json"
-    },
-    {
-      "id": "ubot-9f51b881d4be",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "滿額享回饋",
-      "merchant": "滿額享回饋",
-      "categories": [
-        "網購",
-        "行動支付",
-        "分期"
-      ],
-      "start_date": "2026-09-01",
-      "end_date": "2026-09-30",
-      "summary": "刷聯邦卡滿額最高享1,800元回饋！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20260901coupang/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-09-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 1800,
-      "featured": true,
-      "tags": [
-        "滿額享回饋",
-        "聯邦銀行",
-        "網購數位",
-        "網購",
-        "行動支付",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-9f51b881d4be.json"
-    },
-    {
-      "id": "ubot-1f32386a5288",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "網購9月購物節",
-      "merchant": "網購9月購物節",
-      "categories": [
-        "網購",
-        "強打優惠"
-      ],
-      "start_date": "2026-09-01",
-      "end_date": "2026-09-30",
-      "summary": "刷聯邦卡最高享5,300元回饋！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20260901ec/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 5300,
-      "featured": true,
-      "tags": [
-        "網購9月購物節",
-        "聯邦銀行",
-        "網購數位",
-        "網購",
-        "強打優惠"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-1f32386a5288.json"
-    },
-    {
       "id": "ubot-b6d4705cafa4",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -530,77 +146,6 @@
       "detail_ref": "activities/ubot-b6d4705cafa4.json"
     },
     {
-      "id": "ubot-a88b14da864d",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "聯邦陪您輕鬆玩世界",
-      "merchant": "聯邦陪您輕鬆玩世界",
-      "categories": [
-        "旅遊交通",
-        "行動支付",
-        "海外消費",
-        "分期",
-        "強打優惠"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "航空、飯店、精選旅行社/旅遊及訂房網站滿額拿９５００元刷卡金",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202607travel/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-07-10T15:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-08-10T15:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-10T15:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 10.0,
-      "max_reward_amount_twd": 9500,
-      "featured": true,
-      "tags": [
-        "聯邦陪您輕鬆玩世界",
-        "聯邦銀行",
-        "旅遊優惠",
-        "旅遊交通",
-        "行動支付",
-        "海外消費",
-        "分期",
-        "強打優惠"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-a88b14da864d.json"
-    },
-    {
       "id": "ubot-da11b6429b4a",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -627,7 +172,7 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -635,7 +180,7 @@
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -643,7 +188,7 @@
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -668,68 +213,6 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ubot-da11b6429b4a.json"
-    },
-    {
-      "id": "ubot-4bd7314a5ace",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "超級品牌週",
-      "merchant": "超級品牌週",
-      "categories": [
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-09-01",
-      "end_date": "2026-09-30",
-      "summary": "刷聯邦卡最高贈2,500元刷卡金！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20260901pchome/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-09-01",
-          "end": "2026-09-13",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-10",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 2500,
-      "featured": true,
-      "tags": [
-        "超級品牌週",
-        "聯邦銀行",
-        "網購數位",
-        "網購",
-        "行動支付",
-        "旅遊交通",
-        "海外消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-4bd7314a5ace.json"
     },
     {
       "id": "ubot-63a46253f43e",
@@ -972,141 +455,37 @@
       "detail_ref": "activities/ubot-5d729af02c20.json"
     },
     {
-      "id": "ubot-01c10c66abe7",
+      "id": "ubot-bdd4ce26b503",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
-      "title": "百貨週年慶",
-      "merchant": "百貨週年慶",
+      "title": "10月週年慶",
+      "merchant": "10月週年慶",
       "categories": [
-        "百貨購物",
-        "生活消費",
+        "網購",
+        "行動支付",
+        "旅遊交通",
         "分期"
       ],
-      "start_date": "2026-04-23",
-      "end_date": "2026-10-26",
-      "summary": "刷聯邦最高3%回饋，再享分期0利率！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202609departmentstoreall/index.htm",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-22",
+      "summary": "刷聯邦卡最高享10%回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20261001momo/index.htm",
       "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [
         {
-          "start": "2026-04-23",
-          "end": "2026-05-10",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-07",
-          "end": "2026-09-17",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-08-26",
-          "end": "2026-09-14",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-03",
-          "end": "2026-09-20",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-03",
-          "end": "2026-10-11",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-03",
-          "end": "2026-11-04",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-03",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-04",
-          "end": "2026-09-20",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-10",
-          "end": "2026-10-28",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-11",
-          "end": "2026-09-20",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-12",
-          "end": "2026-10-18",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-16",
-          "end": "2026-09-24",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-17",
-          "end": "2026-11-11",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-18",
-          "end": "2027-01-04",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-18",
-          "end": "2026-10-26",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-18",
-          "end": "2026-09-23",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-18",
-          "end": "2026-09-27",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-24",
-          "end": "2026-10-16",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-24",
-          "end": "2026-10-18",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-24",
-          "end": "2026-09-28",
+          "start": "2026-10-01",
+          "end": "2026-10-31",
           "label": "活動期間"
         },
         {
           "start": "2026-10-01",
-          "end": "2026-10-26",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-10-08",
-          "end": "2026-10-18",
+          "end": "2026-10-12",
           "label": "活動期間"
         },
         {
           "start": "2026-10-19",
-          "end": "2026-10-26",
+          "end": "2026-10-22",
           "label": "活動期間"
         }
       ],
@@ -1117,22 +496,81 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 4.0,
-      "max_reward_amount_twd": 97500,
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": 2300,
       "featured": true,
       "tags": [
-        "百貨週年慶",
+        "10月週年慶",
         "聯邦銀行",
-        "百貨零售",
-        "百貨購物",
-        "生活消費",
+        "網購數位",
+        "網購",
+        "行動支付",
+        "旅遊交通",
         "分期"
       ],
       "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-01c10c66abe7.json"
+      "detail_ref": "activities/ubot-bdd4ce26b503.json"
+    },
+    {
+      "id": "ubot-5b73c7bc869a",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "10.10品牌週年慶",
+      "merchant": "10.10品牌週年慶",
+      "categories": [
+        "網購",
+        "行動支付",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-25",
+      "summary": "刷聯邦卡最高贈2,000元刷卡金！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20261001shopee/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-01",
+          "end": "2026-10-10",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-01",
+          "end": "2026-10-31",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-18",
+          "end": "2026-10-25",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 7000,
+      "featured": true,
+      "tags": [
+        "10.10品牌週年慶",
+        "聯邦銀行",
+        "網購數位",
+        "網購",
+        "行動支付",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-5b73c7bc869a.json"
     },
     {
       "id": "ubot-685431c40f88",
@@ -1272,6 +710,54 @@
       "detail_ref": "activities/ubot-986dafdb94e4.json"
     },
     {
+      "id": "ubot-59fa3c60bcec",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "全月滿額贈",
+      "merchant": "全月滿額贈",
+      "categories": [
+        "網購",
+        "行動支付",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "summary": "刷聯邦卡最高享8%回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20261001taobao/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-01",
+          "end": "2026-10-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 8.0,
+      "max_reward_amount_twd": 800,
+      "featured": true,
+      "tags": [
+        "全月滿額贈",
+        "聯邦銀行",
+        "網購數位",
+        "網購",
+        "行動支付",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-59fa3c60bcec.json"
+    },
+    {
       "id": "ubot-59324e3875f6",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -1316,6 +802,94 @@
       "detail_ref": "activities/ubot-59324e3875f6.json"
     },
     {
+      "id": "ubot-146691d2fd09",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "滿額享回饋",
+      "merchant": "滿額享回饋",
+      "categories": [
+        "網購",
+        "行動支付",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "summary": "刷聯邦卡滿額享95折，最高再享8%回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20261001coupang/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-01",
+          "end": "2026-10-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 8.0,
+      "max_reward_amount_twd": 100,
+      "featured": true,
+      "tags": [
+        "滿額享回饋",
+        "聯邦銀行",
+        "網購數位",
+        "網購",
+        "行動支付",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-146691d2fd09.json"
+    },
+    {
+      "id": "ubot-5b024c1eac6e",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "網購10月購物節",
+      "merchant": "網購10月購物節",
+      "categories": [
+        "網購",
+        "強打優惠"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "summary": "刷聯邦卡最高享10%回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20261001ec/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "網購10月購物節",
+        "聯邦銀行",
+        "網購數位",
+        "網購",
+        "強打優惠"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-5b024c1eac6e.json"
+    },
+    {
       "id": "ubot-7ee52ff8f592",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -1354,6 +928,63 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-7ee52ff8f592.json"
+    },
+    {
+      "id": "ubot-652a7d3ee0d6",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "超級品牌週",
+      "merchant": "超級品牌週",
+      "categories": [
+        "網購",
+        "行動支付",
+        "旅遊交通",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "summary": "刷聯邦卡最高贈1,000元刷卡金！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/20261001pchome/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-01",
+          "end": "2026-10-18",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-01",
+          "end": "2026-10-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 1000,
+      "featured": true,
+      "tags": [
+        "超級品牌週",
+        "聯邦銀行",
+        "網購數位",
+        "網購",
+        "行動支付",
+        "旅遊交通",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-652a7d3ee0d6.json"
     },
     {
       "id": "ubot-c1eaccad0554",
@@ -1396,6 +1027,192 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-c1eaccad0554.json"
+    },
+    {
+      "id": "ubot-b9478db193ca",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "百貨週年慶",
+      "merchant": "百貨週年慶",
+      "categories": [
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-09-03",
+      "end_date": "2026-11-22",
+      "summary": "刷聯邦最高3%回饋，再享分期0利率！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202610departmentstoreall/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-03",
+          "end": "2026-10-11",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-03",
+          "end": "2026-11-04",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-10",
+          "end": "2026-10-28",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-12",
+          "end": "2026-10-18",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-17",
+          "end": "2026-11-11",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-18",
+          "end": "2027-01-04",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-18",
+          "end": "2026-10-26",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-18",
+          "end": "2026-09-23",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-21",
+          "end": "2026-10-11",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-24",
+          "end": "2026-10-16",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-09-24",
+          "end": "2026-10-18",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-01",
+          "end": "2026-12-13",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-01",
+          "end": "2026-12-31",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-01",
+          "end": "2026-10-26",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-01",
+          "end": "2026-11-13",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-01",
+          "end": "2026-11-02",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-08",
+          "end": "2026-11-04",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-08",
+          "end": "2026-10-18",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-08",
+          "end": "2026-10-26",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-08",
+          "end": "2026-10-27",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-08",
+          "end": "2026-11-01",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-15",
+          "end": "2026-11-10",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-15",
+          "end": "2026-11-18",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-16",
+          "end": "2026-11-08",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-19",
+          "end": "2026-10-26",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-22",
+          "end": "2026-11-15",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-22",
+          "end": "2026-11-16",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-22",
+          "end": "2026-11-17",
+          "label": "活動期間"
+        },
+        {
+          "start": "2026-10-30",
+          "end": "2026-11-22",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 3.0,
+      "max_reward_amount_twd": 97500,
+      "featured": true,
+      "tags": [
+        "百貨週年慶",
+        "聯邦銀行",
+        "百貨零售",
+        "百貨購物",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-b9478db193ca.json"
     },
     {
       "id": "ubot-4a307202c8ee",
@@ -1690,7 +1507,7 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 (限量登錄6,000名/月,每戶每月最高贈200元刷卡金) 活動時間:2",
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1698,7 +1515,7 @@
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 (限量登錄6,000名/月,每戶每月最高贈200元刷卡金) 活動時間:2",
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1706,7 +1523,7 @@
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 (限量登錄6,000名/月,每戶每月最高贈200元刷卡金) 活動時間:2",
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1714,7 +1531,7 @@
           "start": "2026-10-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 (限量登錄6,000名/月,每戶每月最高贈200元刷卡金) 活動時間:2",
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1722,7 +1539,7 @@
           "start": "2026-11-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 (限量登錄6,000名/月,每戶每月最高贈200元刷卡金) 活動時間:2",
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1730,7 +1547,7 @@
           "start": "2026-12-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 (限量登錄6,000名/月,每戶每月最高贈200元刷卡金) 活動時間:2",
+          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1960,6 +1777,89 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-c051a4fd5f92.json"
+    },
+    {
+      "id": "ubot-30879341d03d",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "昇恆昌免稅店",
+      "merchant": "昇恆昌免稅店",
+      "categories": [
+        "百貨購物",
+        "行動支付",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "刷聯邦樂享免稅優惠，滿額最高贈2000元刷卡金！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026q4everrich/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-01T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": ",上限2,000元/戶,限量登錄1萬名/月) 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "X月登錄。 活動期間每月1日下午3點開放登錄~當月底,每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。 範例:客戶A於2026/11/1登錄成功,則2026/12/1無需再登錄,2026/10/1-12/31之昇恆昌消費皆適用活動。 活動對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 活動登錄",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-11-01T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": ",上限2,000元/戶,限量登錄1萬名/月) 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "午3點開放登錄~當月底,每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。 範例:客戶A於2026/11/1登錄成功,則2026/12/1無需再登錄,2026/10/1-12/31之昇恆昌消費皆適用活動。 活動對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 活動登錄 活動對象:聯邦銀行信用卡持卡",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-12-01T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": ",上限2,000元/戶,限量登錄1萬名/月) 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "per_period_reregister"
+      ],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 2000,
+      "featured": true,
+      "tags": [
+        "昇恆昌免稅店",
+        "聯邦銀行",
+        "百貨零售",
+        "百貨購物",
+        "行動支付",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-30879341d03d.json"
     },
     {
       "id": "ubot-88054727f0db",
@@ -2355,11 +2255,155 @@
       "detail_ref": "activities/ubot-3c6333903081.json"
     },
     {
-      "id": "ubot-48c75117c36c",
+      "id": "ubot-b6bff58ca72a",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
-      "title": "聯邦賴點卡吉伊卡哇版",
-      "merchant": "聯邦賴點卡吉伊卡哇版",
+      "title": "聯邦陪您輕鬆玩世界",
+      "merchant": "聯邦陪您輕鬆玩世界",
+      "categories": [
+        "旅遊交通",
+        "行動支付",
+        "加油交通",
+        "海外消費",
+        "分期",
+        "強打優惠"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "航空、飯店、旅行社、訂房網滿額最高贈９５００元刷卡金",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202610travel/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-10T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-10T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-10T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 20.0,
+      "max_reward_amount_twd": 9500,
+      "featured": true,
+      "tags": [
+        "聯邦陪您輕鬆玩世界",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "行動支付",
+        "加油交通",
+        "海外消費",
+        "分期",
+        "強打優惠"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-b6bff58ca72a.json"
+    },
+    {
+      "id": "ubot-f788cfb624f3",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "訂閱新生活",
+      "merchant": "訂閱新生活",
+      "categories": [
+        "網購",
+        "行動支付",
+        "生活消費",
+        "海外消費",
+        "強打優惠"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "指定影音串流、遊戲、AI綁定聯邦卡，最高享10%回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202610sub/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-20T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "放登錄5千名、11月開放登錄3千名、12月開放登錄2千名) 每月20日下午3點開放登錄~當月底,自登錄當月起享活動參與資格,無需每月登錄,如額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-11-20T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "放登錄5千名、11月開放登錄3千名、12月開放登錄2千名) 每月20日下午3點開放登錄~當月底,自登錄當月起享活動參與資格,無需每月登錄,如額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-20T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "放登錄5千名、11月開放登錄3千名、12月開放登錄2千名) 每月20日下午3點開放登錄~當月底,自登錄當月起享活動參與資格,無需每月登錄,如額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "per_period_reregister"
+      ],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": 200,
+      "featured": true,
+      "tags": [
+        "訂閱新生活",
+        "聯邦銀行",
+        "網購數位",
+        "網購",
+        "行動支付",
+        "生活消費",
+        "海外消費",
+        "強打優惠"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-f788cfb624f3.json"
+    },
+    {
+      "id": "ubot-1afebe0f904a",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "賴點卡有感回饋",
+      "merchant": "賴點卡有感回饋",
       "categories": [
         "卡片權益",
         "行動支付",
@@ -2371,7 +2415,7 @@
       ],
       "start_date": "2026-07-01",
       "end_date": "2026-12-31",
-      "summary": "可愛登場！國內最高11%/國外3%無上限",
+      "summary": "國內LINE Pay最高11%/國外3%無上限！",
       "source_url": "https://activity.ubot.com.tw/2026LaiDianCard/index.htm",
       "registration_required": true,
       "parent_activity_id": "",
@@ -2387,7 +2431,7 @@
       "max_reward_amount_twd": 100,
       "featured": true,
       "tags": [
-        "聯邦賴點卡吉伊卡哇版",
+        "賴點卡有感回饋",
         "聯邦銀行",
         "卡片優惠",
         "卡片權益",
@@ -2402,7 +2446,7 @@
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/ubot-48c75117c36c.json"
+      "detail_ref": "activities/ubot-1afebe0f904a.json"
     },
     {
       "id": "ubot-dab677957eea",
@@ -2942,170 +2986,6 @@
       "detail_ref": "activities/ubot-95f81caf5e3e.json"
     },
     {
-      "id": "ubot-d4d5980eb9d1",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "Trip.com月底救星",
-      "merchant": "Trip.com月底救星",
-      "categories": [
-        "旅遊交通"
-      ],
-      "start_date": "2026-04-01",
-      "end_date": "2026-09-30",
-      "summary": "刷聯邦Visa卡機票飯店滿額現折1,000",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026visa_offers/tripcom/index.htm",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-04-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 2000,
-      "featured": true,
-      "tags": [
-        "Trip.com月底救星",
-        "聯邦銀行",
-        "旅遊優惠",
-        "旅遊交通"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-d4d5980eb9d1.json"
-    },
-    {
-      "id": "ubot-e85c012742cd",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "王品瘋Pay享６％回饋",
-      "merchant": "王品瘋Pay享６％回饋",
-      "categories": [
-        "生活消費",
-        "行動支付",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "週六王品指定餐廳使用瘋Pay綁定聯邦卡消費享６％瘋點數回饋",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202607wowfoods/index.htm",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 6.0,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "王品瘋Pay享６％回饋",
-        "聯邦銀行",
-        "購物娛樂",
-        "生活消費",
-        "行動支付",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-e85c012742cd.json"
-    },
-    {
-      "id": "ubot-44ef17e54cea",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "全聯福利中心",
-      "merchant": "全聯福利中心",
-      "categories": [
-        "百貨購物",
-        "行動支付",
-        "旅遊交通"
-      ],
-      "start_date": "2026-09-04",
-      "end_date": "2026-10-01",
-      "summary": "全聯福利中心卡友日，週六日刷聯邦滿額贈３６０點福利點！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202609pxmart/index.htm",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "全聯福利中心",
-        "聯邦銀行",
-        "百貨零售",
-        "百貨購物",
-        "行動支付",
-        "旅遊交通"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-44ef17e54cea.json"
-    },
-    {
-      "id": "ubot-0c49ea47f742",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "微風廣場25周年慶",
-      "merchant": "微風廣場25周年慶",
-      "categories": [
-        "百貨購物",
-        "分期",
-        "強打優惠"
-      ],
-      "start_date": "2026-09-03",
-      "end_date": "2026-10-04",
-      "summary": "滿額再享台韓雙人饗宴 ！",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026breeze/index.htm",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 18.6,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "微風廣場25周年慶",
-        "聯邦銀行",
-        "百貨零售",
-        "百貨購物",
-        "分期",
-        "強打優惠"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-0c49ea47f742.json"
-    },
-    {
       "id": "ubot-831806e99614",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -3201,6 +3081,48 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ubot-ccf4e98ca93c.json"
+    },
+    {
+      "id": "ubot-6e185a6ec8af",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "115年夏天卡利HIGH",
+      "merchant": "115年夏天卡利HIGH",
+      "categories": [
+        "百貨購物",
+        "生活消費",
+        "加油交通",
+        "繳費稅款"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-11-08",
+      "summary": "活動點數查詢",
+      "source_url": "https://card.ubot.com.tw/service/202607high/high_login.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "115年夏天卡利HIGH",
+        "聯邦銀行",
+        "百貨零售",
+        "百貨購物",
+        "生活消費",
+        "加油交通",
+        "繳費稅款"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-6e185a6ec8af.json"
     },
     {
       "id": "ubot-5e0162824b14",
@@ -4461,6 +4383,54 @@
       "detail_ref": "activities/ubot-17cb4e028177.json"
     },
     {
+      "id": "ubot-3fb0d8017dc8",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "日本精品名牌",
+      "merchant": "日本精品名牌",
+      "categories": [
+        "旅遊交通",
+        "行動支付",
+        "百貨購物",
+        "海外消費"
+      ],
+      "start_date": "2026-04-27",
+      "end_date": "2026-12-31",
+      "summary": "刷聯邦Visa卡享最高10%現金回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026visa_offers/boutique/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-04-27",
+          "end": "2026-12-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "日本精品名牌",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "行動支付",
+        "百貨購物",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-3fb0d8017dc8.json"
+    },
+    {
       "id": "ubot-0d5cf4b6719e",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -4543,6 +4513,48 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ubot-44cf37c66eb1.json"
+    },
+    {
+      "id": "ubot-f4da6e6ba51e",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "王品瘋Pay享6%回饋",
+      "merchant": "王品瘋Pay享6%回饋",
+      "categories": [
+        "生活消費",
+        "行動支付",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "週六王品指定餐廳使用瘋Pay綁定聯邦卡消費享6%瘋點數回饋",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202610wowfoods/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 6.0,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "王品瘋Pay享6%回饋",
+        "聯邦銀行",
+        "購物娛樂",
+        "生活消費",
+        "行動支付",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-f4da6e6ba51e.json"
     },
     {
       "id": "ubot-13e146c1bf37",
@@ -5235,6 +5247,52 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ubot-531d619c366a.json"
+    },
+    {
+      "id": "ubot-0c6bb62314fb",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "日本指定藥妝電器門市",
+      "merchant": "日本指定藥妝電器門市",
+      "categories": [
+        "旅遊交通",
+        "生活消費",
+        "海外消費"
+      ],
+      "start_date": "2026-08-15",
+      "end_date": "2027-08-14",
+      "summary": "刷聯邦Visa卡滿2萬送2千現金回饋",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026visa_offers/drugstore/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-08-15",
+          "end": "2027-08-14",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "日本指定藥妝電器門市",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "生活消費",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-0c6bb62314fb.json"
     },
     {
       "id": "ubot-4edc93bb52ab",

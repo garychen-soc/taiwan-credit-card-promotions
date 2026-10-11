@@ -1,32 +1,30 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-09-28T04:10:35+08:00",
+  "generated_at": "2026-10-05T03:38:18+08:00",
   "bank_id": "scsb",
   "bank_name": "上海商銀",
-  "activity_count": 24,
+  "activity_count": 21,
   "activities": [
     {
-      "id": "scsb-89ed9faac395",
+      "id": "scsb-02a75dbc93ed",
       "bank_id": "scsb",
       "bank_name": "上海商銀",
-      "title": "兵迷滿額月月抽小小兵BOB泡泡燈",
-      "merchant": "兵迷滿額月月抽小小兵BOB泡泡燈",
+      "title": "80周年慶！里數加碼送！兌換亞洲萬里通里數滿里送800里！",
+      "merchant": "80周年慶！里數加碼送！兌換亞洲萬里通里數滿里送800里！",
       "categories": [
         "其他優惠",
-        "網購",
-        "行動支付",
-        "分期"
+        "旅遊交通"
       ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "兵迷滿額月月抽小小兵BOB泡泡燈 活動對象...",
-      "source_url": "https://www.scsb.com.tw/content/card/hotPage/4641",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "summary": "國泰航空80周年慶，上海商銀紅利點數兌里限時加碼...",
+      "source_url": "https://www.scsb.com.tw/content/card/hotPage/5382",
       "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [
         {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
+          "start": "2026-10-01",
+          "end": "2026-10-31",
           "label": "活動期間"
         }
       ],
@@ -41,124 +39,16 @@
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
-        "兵迷滿額月月抽小小兵BOB泡泡燈",
+        "80周年慶！里數加碼送！兌換亞洲萬里通里數滿里送800里！",
         "上海商銀",
         "其他優惠",
-        "網購",
-        "行動支付",
-        "分期"
+        "旅遊交通"
       ],
       "official_status": "published",
       "review_required": true,
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/scsb-89ed9faac395.json"
-    },
-    {
-      "id": "scsb-6e1135af555e",
-      "bank_id": "scsb",
-      "bank_name": "上海商銀",
-      "title": "持Teresa卡當月一般消費滿額，享指定餐廳滿兩千送200",
-      "merchant": "持Teresa卡當月一般消費滿額，享指定餐廳滿兩千送200",
-      "categories": [
-        "其他優惠",
-        "網購",
-        "行動支付",
-        "百貨購物",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "TeresaCard正卡當月登錄並累...",
-      "source_url": "https://www.scsb.com.tw/content/card/hotPage/4665",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-07-02",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "與注意事項之條款及約定。本行活動登錄網頁於每月第二個星期二下午4時起開放登錄~每月月底日下午5時止,例如:刷卡交易日若為2026年7月2日,正卡持卡人需於2026年7月14日下午4時~2026年7月31日下午5時之間~本行網站完成登錄及完成登錄查詢(以此類推),始符合活動當月份之回饋資格。 7. ",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
-          "start": "2026-07-14",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "錄網頁於每月第二個星期二下午4時起開放登錄~每月月底日下午5時止,例如:刷卡交易日若為2026年7月2日,正卡持卡人需於2026年7月14日下午4時~2026年7月31日下午5時之間~本行網站完成登錄及完成登錄查詢(以此類推),始符合活動當月份之回饋資格。 7. 當月活動登錄於當月的第二周星期二(7",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
-          "start": "2026-07-14T16:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "每月第二個星期二16:00開放登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-07-31",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "時起開放登錄~每月月底日下午5時止,例如:刷卡交易日若為2026年7月2日,正卡持卡人需於2026年7月14日下午4時~2026年7月31日下午5時之間~本行網站完成登錄及完成登錄查詢(以此類推),始符合活動當月份之回饋資格。 7. 當月活動登錄於當月的第二周星期二(7/14、8/11、9/8下午4",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
-          "start": "2026-08-11T16:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "每月第二個星期二16:00開放登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-09-08T16:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "每月第二個星期二16:00開放登錄",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "per_period_reregister"
-      ],
-      "max_reward_percent": 3.8,
-      "max_reward_amount_twd": 200,
-      "featured": true,
-      "tags": [
-        "持Teresa卡當月一般消費滿額，享指定餐廳滿兩千送200",
-        "上海商銀",
-        "其他優惠",
-        "網購",
-        "行動支付",
-        "百貨購物",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/scsb-6e1135af555e.json"
+      "detail_ref": "activities/scsb-02a75dbc93ed.json"
     },
     {
       "id": "scsb-59d7544f6f69",
@@ -383,6 +273,112 @@
       "detail_ref": "activities/scsb-4f7345a8cbc8.json"
     },
     {
+      "id": "scsb-b9d10d6add7a",
+      "bank_id": "scsb",
+      "bank_name": "上海商銀",
+      "title": "持Teresa卡當月一般消費滿額，享指定餐廳滿兩千送200",
+      "merchant": "持Teresa卡當月一般消費滿額，享指定餐廳滿兩千送200",
+      "categories": [
+        "其他優惠",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "TeresaCard正卡當月登錄並累積一般消費達...",
+      "source_url": "https://www.scsb.com.tw/content/card/hotPage/5321",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-01",
+          "end": "2026-12-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-02",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "與注意事項之條款及約定。本行活動登錄網頁於每月第二個星期二下午4時起開放登錄~每月月底日下午5時止,例如:刷卡交易日若為2026年10月2日,正卡持卡人需於2026年10月6日下午4時~2026年10月31日下午5時之間~本行網站完成登錄及完成登錄查詢(以此類推),始符合活動當月份之回饋資格。 7.",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-10-06",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "網頁於每月第二個星期二下午4時起開放登錄~每月月底日下午5時止,例如:刷卡交易日若為2026年10月2日,正卡持卡人需於2026年10月6日下午4時~2026年10月31日下午5時之間~本行網站完成登錄及完成登錄查詢(以此類推),始符合活動當月份之回饋資格。 7.當月活動登錄於當月的第二周星期二(1",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-10-13T16:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "每月第二個星期二16:00開放登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-31",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "起開放登錄~每月月底日下午5時止,例如:刷卡交易日若為2026年10月2日,正卡持卡人需於2026年10月6日下午4時~2026年10月31日下午5時之間~本行網站完成登錄及完成登錄查詢(以此類推),始符合活動當月份之回饋資格。 7.當月活動登錄於當月的第二周星期二(10/6、11/10、12/8下午",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-11-10T16:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "每月第二個星期二16:00開放登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-12-08T16:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "每月第二個星期二16:00開放登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "per_period_reregister"
+      ],
+      "max_reward_percent": 3.8,
+      "max_reward_amount_twd": 200,
+      "featured": true,
+      "tags": [
+        "持Teresa卡當月一般消費滿額，享指定餐廳滿兩千送200",
+        "上海商銀",
+        "其他優惠",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/scsb-b9d10d6add7a.json"
+    },
+    {
       "id": "scsb-de06e5ada1c6",
       "bank_id": "scsb",
       "bank_name": "上海商銀",
@@ -436,27 +432,25 @@
       "detail_ref": "activities/scsb-de06e5ada1c6.json"
     },
     {
-      "id": "scsb-72ce0c5ec521",
+      "id": "scsb-4cd6c14640c5",
       "bank_id": "scsb",
       "bank_name": "上海商銀",
-      "title": "Visa Select 優選好評加碼，旅遊出發前先享專屬禮遇",
-      "merchant": "Visa Select 優選好評加碼，旅遊出發前先享專屬禮遇",
+      "title": "KKday全站消費刷上海商銀卡，滿額最高折500!",
+      "merchant": "KKday全站消費刷上海商銀卡，滿額最高折500!",
       "categories": [
         "其他優惠",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
+        "旅遊交通"
       ],
-      "start_date": "2026-08-19",
-      "end_date": "2026-09-30",
-      "summary": "Visa Select優選回饋好評加碼！ 松山...",
-      "source_url": "https://www.scsb.com.tw/content/card/hotPage/5041",
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "於 KKday 刷上海商銀信用卡輸入折扣碼滿額享...",
+      "source_url": "https://www.scsb.com.tw/content/card/hotPage/5365",
       "registration_required": false,
       "parent_activity_id": "",
       "activity_periods": [
         {
-          "start": "2026-08-19",
-          "end": "2026-09-30",
+          "start": "2026-10-01",
+          "end": "2026-12-31",
           "label": "活動期間"
         }
       ],
@@ -469,163 +463,16 @@
       "max_reward_amount_twd": null,
       "featured": false,
       "tags": [
-        "Visa Select 優選好評加碼，旅遊出發前先享專屬禮遇",
+        "KKday全站消費刷上海商銀卡，滿額最高折500!",
         "上海商銀",
         "其他優惠",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
+        "旅遊交通"
       ],
       "official_status": "published",
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/scsb-72ce0c5ec521.json"
-    },
-    {
-      "id": "scsb-9746f4bd5789",
-      "bank_id": "scsb",
-      "bank_name": "上海商銀",
-      "title": "Visa感應支付帶你暢行台北捷運，筆筆享現金回饋最高100%",
-      "merchant": "Visa感應支付帶你暢行台北捷運，筆筆享現金回饋最高100%",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "加油交通",
-        "海外消費"
-      ],
-      "start_date": "2026-06-30",
-      "end_date": "2026-09-30",
-      "summary": "那些生活中讓人會心一笑的小確幸，就藏在日日往返的...",
-      "source_url": "https://www.scsb.com.tw/content/card/hotPage/4703",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-06-30",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 8.0,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "Visa感應支付帶你暢行台北捷運，筆筆享現金回饋最高100%",
-        "上海商銀",
-        "行動支付",
-        "生活消費",
-        "旅遊交通",
-        "加油交通",
-        "海外消費"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/scsb-9746f4bd5789.json"
-    },
-    {
-      "id": "scsb-e6cde01709e2",
-      "bank_id": "scsb",
-      "bank_name": "上海商銀",
-      "title": "日本遊刷上海商銀Visa卡，享全球精品名牌機票住宿優惠！",
-      "merchant": "日本遊刷上海商銀Visa卡，享全球精品名牌機票住宿優惠！",
-      "categories": [
-        "其他優惠",
-        "百貨購物",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "start_date": "2026-05-08",
-      "end_date": "2026-09-30",
-      "summary": "旅日購物，不僅是美學更是一種經濟學。 春末夏初...",
-      "source_url": "https://www.scsb.com.tw/content/card/hotPage/4448",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-05-08",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 10.0,
-      "max_reward_amount_twd": 800,
-      "featured": true,
-      "tags": [
-        "日本遊刷上海商銀Visa卡，享全球精品名牌機票住宿優惠！",
-        "上海商銀",
-        "其他優惠",
-        "百貨購物",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/scsb-e6cde01709e2.json"
-    },
-    {
-      "id": "scsb-10422b4be053",
-      "bank_id": "scsb",
-      "bank_name": "上海商銀",
-      "title": "線上投保汽機車險、旅遊險享優惠，投保滿額再抽萬元好禮!!",
-      "merchant": "線上投保汽機車險、旅遊險享優惠，投保滿額再抽萬元好禮!!",
-      "categories": [
-        "其他優惠",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2026-09-30",
-      "summary": "刷上海商銀信用卡輸入專案代碼「SCSB」享折扣+...",
-      "source_url": "https://www.scsb.com.tw/content/card/hotPage/4743",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 10.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "線上投保汽機車險、旅遊險享優惠，投保滿額再抽萬元好禮!!",
-        "上海商銀",
-        "其他優惠",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/scsb-10422b4be053.json"
+      "detail_ref": "activities/scsb-4cd6c14640c5.json"
     },
     {
       "id": "scsb-0fd22122a807",
@@ -1031,6 +878,55 @@
       "detail_ref": "activities/scsb-386c809be7c1.json"
     },
     {
+      "id": "scsb-c20979112dd4",
+      "bank_id": "scsb",
+      "bank_name": "上海商銀",
+      "title": "線上投保汽機車任意險最高享86折，旅遊班機延誤最高賠2.4萬",
+      "merchant": "線上投保汽機車任意險最高享86折，旅遊班機延誤最高賠2.4萬",
+      "categories": [
+        "其他優惠",
+        "百貨購物",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "刷上海商銀信用卡輸入專案代碼「SCSB」享折扣+...",
+      "source_url": "https://www.scsb.com.tw/content/card/hotPage/5364",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-01",
+          "end": "2026-12-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "線上投保汽機車任意險最高享86折，旅遊班機延誤最高賠2.4萬",
+        "上海商銀",
+        "其他優惠",
+        "百貨購物",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/scsb-c20979112dd4.json"
+    },
+    {
       "id": "scsb-1652ebf69511",
       "bank_id": "scsb",
       "bank_name": "上海商銀",
@@ -1217,49 +1113,6 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/scsb-c4f9060a60e9.json"
-    },
-    {
-      "id": "scsb-78814caaf6c0",
-      "bank_id": "scsb",
-      "bank_name": "上海商銀",
-      "title": "KKday全站消費刷上海商銀卡，滿額最高折500!",
-      "merchant": "KKday全站消費刷上海商銀卡，滿額最高折500!",
-      "categories": [
-        "旅遊交通",
-        "海外消費"
-      ],
-      "start_date": "2026-07-01",
-      "end_date": "2027-03-31",
-      "summary": "於 KKday 刷上海商銀信用卡輸入折扣碼滿額享...",
-      "source_url": "https://www.scsb.com.tw/content/card/hotPage/4705",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "KKday全站消費刷上海商銀卡，滿額最高折500!",
-        "上海商銀",
-        "旅遊交通",
-        "海外消費"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/scsb-78814caaf6c0.json"
     }
   ]
 }
