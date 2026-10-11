@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-05T03:38:18+08:00",
+  "generated_at": "2026-10-12T06:59:48+08:00",
   "bank_id": "first",
   "bank_name": "第一銀行",
   "activity_count": 140,
@@ -1982,6 +1982,50 @@
       "detail_ref": "activities/first-d6c78717ca01.json"
     },
     {
+      "id": "first-303c2c068689",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "居家好生活-席伊麗床墊",
+      "merchant": "居家好生活-席伊麗床墊",
+      "categories": [
+        "生活消費",
+        "百貨購物",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "summary": "分期零利率 最高再享4,500元回饋",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698738401",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 4500,
+      "featured": true,
+      "tags": [
+        "居家好生活-席伊麗床墊",
+        "第一銀行",
+        "home_appliance",
+        "生活消費",
+        "百貨購物",
+        "繳費稅款",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/first-303c2c068689.json"
+    },
+    {
       "id": "first-5930cdb8d1a7",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -3201,55 +3245,6 @@
       "needs_review": true,
       "review_message": "活動截止日尚未確認；官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/first-64f6a8978776.json"
-    },
-    {
-      "id": "first-fd3e257836e5",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "全聯卡友日加碼回饋",
-      "merchant": "全聯卡友日加碼回饋",
-      "categories": [
-        "生活消費",
-        "行動支付"
-      ],
-      "start_date": "2026-09-04",
-      "end_date": "2026-10-11",
-      "summary": "滿額回饋福利點",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565710417208",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-09-04",
-          "end": "2026-10-01",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-10-09",
-          "end": "2026-10-11",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": false,
-      "tags": [
-        "全聯卡友日加碼回饋",
-        "第一銀行",
-        "home_appliance",
-        "生活消費",
-        "行動支付"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/first-fd3e257836e5.json"
     },
     {
       "id": "first-6675815d2708",

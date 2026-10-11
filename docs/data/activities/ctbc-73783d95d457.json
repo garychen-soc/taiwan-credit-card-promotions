@@ -1,13 +1,13 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-05T03:38:18+08:00",
+  "generated_at": "2026-10-12T06:59:48+08:00",
   "activity_id": "ctbc-73783d95d457",
   "bank_id": "ctbc",
   "title": "生活日用",
   "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_life.html",
   "registration_text": "",
-  "terms_raw": "LINE Pay支付 生活日用 週週領40元優惠券 2026/10/1~2026/12/31 限綁定卡片並使用LINE Pay 支付 活動詳情",
+  "terms_raw": "LINE Pay支付 生活日用週週領40元優惠券 2026/10/1~2026/12/31 限綁定卡片並使用LINE Pay 支付 活動詳情",
   "terms_sections": {
-    "overview": "LINE Pay支付 生活日用 週週領40元優惠券 2026/10/1~2026/12/31 限綁定卡片並使用LINE Pay 支付 活動詳情"
+    "overview": "LINE Pay支付 生活日用週週領40元優惠券 2026/10/1~2026/12/31 限綁定卡片並使用LINE Pay 支付 活動詳情"
   }
 }

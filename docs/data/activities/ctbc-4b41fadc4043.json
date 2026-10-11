@@ -1,13 +1,13 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:48:45+08:00",
+  "generated_at": "2026-10-12T06:59:48+08:00",
   "activity_id": "ctbc-4b41fadc4043",
   "bank_id": "ctbc",
   "title": "GU",
   "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_shopping.html#lightbox_gu",
-  "registration_text": "JCB GU LINE POINTS 10% 2026/7/1~2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
-  "terms_raw": "JCB GU LINE POINTS 10% 2026/7/1~2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+  "registration_text": "JCB GULINE POINTS 10% 2026/7/1~2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
+  "terms_raw": "JCB GULINE POINTS 10% 2026/7/1~2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄",
   "terms_sections": {
-    "overview": "JCB GU LINE POINTS 10% 2026/7/1~2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄"
+    "overview": "JCB GULINE POINTS 10% 2026/7/1~2026/12/31 限以LINE Pay JCB卡支付 (每月6號下午1:00開放登錄) 活動詳情 立即登錄"
   }
 }

@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-05T03:38:18+08:00",
+  "generated_at": "2026-10-12T06:59:48+08:00",
   "bank_id": "tcbbank",
   "bank_name": "台中銀行",
-  "activity_count": 22,
+  "activity_count": 23,
   "activities": [
     {
       "id": "tcbbank-c7b676f7a732",
@@ -695,11 +695,46 @@
       "detail_ref": "activities/tcbbank-369a3529ce7c.json"
     },
     {
-      "id": "tcbbank-d5f5eae891f4",
+      "id": "tcbbank-7559063cffc8",
       "bank_id": "tcbbank",
       "bank_name": "台中銀行",
-      "title": "家電家居樂享購",
-      "merchant": "家電家居樂享購",
+      "title": "好康6%輕鬆Go網頁",
+      "merchant": "好康6%輕鬆Go網頁",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-10-06",
+      "end_date": "2027-02-15",
+      "summary": "(至116年2月15日有效)",
+      "source_url": "https://www.tcbbank.com.tw/Promotion/Info.html?ID=802",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 6.0,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "好康6%輕鬆Go網頁",
+        "台中銀行",
+        "其他優惠"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/tcbbank-7559063cffc8.json"
+    },
+    {
+      "id": "tcbbank-cb665cf320ea",
+      "bank_id": "tcbbank",
+      "bank_name": "台中銀行",
+      "title": "2026家電信用卡優惠",
+      "merchant": "2026家電信用卡優惠",
       "categories": [
         "百貨購物"
       ],
@@ -719,7 +754,7 @@
       "max_reward_amount_twd": null,
       "featured": false,
       "tags": [
-        "家電家居樂享購",
+        "2026家電信用卡優惠",
         "台中銀行",
         "百貨購物"
       ],
@@ -727,7 +762,7 @@
       "review_required": false,
       "needs_review": false,
       "review_message": "",
-      "detail_ref": "activities/tcbbank-d5f5eae891f4.json"
+      "detail_ref": "activities/tcbbank-cb665cf320ea.json"
     },
     {
       "id": "tcbbank-9784e24ce2bc",

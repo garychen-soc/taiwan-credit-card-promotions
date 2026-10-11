@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-05T03:38:18+08:00",
+  "generated_at": "2026-10-12T06:59:48+08:00",
   "bank_id": "sinopac",
   "bank_name": "永豐銀行",
-  "activity_count": 22,
+  "activity_count": 21,
   "activities": [
     {
       "id": "sinopac-52f8c07009f3",
@@ -274,49 +274,6 @@
       "detail_ref": "activities/sinopac-a416e4255b5a.json"
     },
     {
-      "id": "sinopac-d5f710c614d2",
-      "bank_id": "sinopac",
-      "bank_name": "永豐銀行",
-      "title": "韓團演唱會購票序號抽獎",
-      "merchant": "韓團演唱會購票序號抽獎",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-09-17",
-      "end_date": "2026-10-07",
-      "summary": "完成任務參加BABYMONSTER演唱會專屬購票序號抽獎！",
-      "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/755685802.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://bank.sinopac.com/sinopacBT/rwd.html?w=https://mma.sinopac.com/SinoCard/Activity/RegisteredInquiry&m=https://m.sinopac.com/m/SinoCard/Activity/RegisteredInquiry",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "韓團演唱會購票序號抽獎",
-        "永豐銀行",
-        "行動支付",
-        "生活消費",
-        "海外消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/sinopac-d5f710c614d2.json"
-    },
-    {
       "id": "sinopac-ddbe64197116",
       "bank_id": "sinopac",
       "bank_name": "永豐銀行",
@@ -349,7 +306,7 @@
           "start": "2026-10-15T15:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "本活動登錄名額總限量20,000名,於2026/10/15 15:00開放登錄,活動期間僅須登錄乙次即享活動資格,無須重複登錄。 欲參加本活動,須由正卡持卡人於活動期間透過永豐銀行網站進行線上登錄,時間以本行系統時間為準,登錄本活動時請勿同時開啟多個視窗,並請以半形英數字登錄。逾期未登錄或",
+          "source_text": "動期間,使用永豐JCB信用卡綁定Google Pay於國內外消費累計滿1,000元(含)以上,可享100元刷卡金回饋!(限量登錄) 登錄名額 本活動登錄名額總限量20,000名,於2026/10/15 15:00開放登錄,活動期間僅須登錄乙次即享活動資格,無須重複登錄。 備註 Google Pay交易係指消費請款名稱須出現:G、GP、MG開頭之交易。Google Pay限以手機實體感應交易,或網路線上使用Google Pay A",
           "reminder_minutes": 10,
           "precision": "datetime"
         }

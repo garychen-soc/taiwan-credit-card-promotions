@@ -1,23 +1,23 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-05T03:38:18+08:00",
+  "generated_at": "2026-10-12T06:59:48+08:00",
   "bank_id": "cathay",
   "bank_name": "國泰世華",
-  "activity_count": 22,
+  "activity_count": 23,
   "activities": [
     {
-      "id": "cathay-87e4653b7f47",
+      "id": "cathay-e78d7839e882",
       "bank_id": "cathay",
       "bank_name": "國泰世華",
-      "title": "蝦皮購物 10月狂購盛典 (10/01~10/10)",
-      "merchant": "蝦皮購物 10月狂購盛典 (10/01~10/10)",
+      "title": "PChome24h購物 iPhone新機預購優惠｜刷卡滿額最高享13%回饋",
+      "merchant": "PChome24h購物 iPhone新機預購優惠｜",
       "categories": [
         "網購"
       ],
-      "start_date": "2026-10-01",
-      "end_date": "2026-10-10",
-      "summary": "單筆滿額最高回饋2,000元刷卡金或等值小樹點(信用卡)",
-      "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202610/shopee202610_2.html",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-23",
+      "summary": "單筆最高享10%及玩數位最高3.3%回饋，累積滿額再享最高2%加碼優惠！",
+      "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202610/pchomeonline202610_3.html",
       "registration_required": true,
       "parent_activity_id": "",
       "activity_periods": [],
@@ -26,10 +26,26 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-10-13T16:00:00+08:00",
+          "start": "2026-10-26T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": " 贈NT$500刷卡金或小樹點(信用卡) ■單筆消費且須分期(限3、6、24期)滿NT$25,000(含)以上, 贈NT$2,000刷卡金或小樹點(信用卡) *2026/10/13 16:00~10/31 23:59於本行官網登錄專區及國泰優惠CUBE Rewards APP開放登錄,兩門檻限量登錄1,000名,額滿即關閉。 *每一正卡戶限回饋乙次,最高回饋NT$2,000,同月份之促刷活動每戶限擇優回饋乙次,若",
+          "source_text": "會員於PChome 24h購物刷國泰世華信用卡,累積消費(含一次付清及分期付款)滿NT$150,000(含)以上 ,成功登錄再享1,500 P幣! ※本活動須於2026/10/26 16:00~2026/10/31 23:59透過『PChome 活動網頁』完成會員登錄始符合資格,登錄名額限量200名,額滿即關閉。 ※P幣預計於活動結束後次次月回饋~PChome會員帳戶,回饋時間依PChome作業為準。P幣價值為$1等值NT",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-27T16:00:00+08:00",
+          "end": null,
+          "label": "登錄截止",
+          "source_text": ",500點小樹點(信用卡) + 2,500 P幣 ※上述門檻須於2026/10/27 16:00~2026/10/31 23:59透過『PChome門檻登錄網頁』完成登錄始符合資格,登錄名額限量200名,額滿即關閉。",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-30T16:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "10/31 於PChome 24h購物刷國泰世華信用卡,累積消費(須分期付款)滿NT$150,000(含)以上 ,成功登錄再享1,500點小樹點(信用卡)! ※2026/10/30 16:00~2026/10/31 23:59於本行官網登錄專區及國泰優惠 CUBE Rewards App開放登錄,活動限量登錄200名,額滿即關閉。 ※每一正卡戶加碼活動限回饋乙次,最高回饋1,500點小樹點(信用卡)。活動辦法及注意事項詳『",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -37,19 +53,81 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": 2000,
+      "max_reward_percent": 13.0,
+      "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
-        "蝦皮購物 10月狂購盛典 (10/01~10/10)",
+        "PChome24h購物 iPhone新機預購優惠｜",
         "國泰世華",
         "網購"
       ],
       "official_status": "published",
       "review_required": true,
       "needs_review": true,
-      "review_message": "登錄時間晚於活動期間。",
-      "detail_ref": "activities/cathay-87e4653b7f47.json"
+      "review_message": "登錄時間晚於活動期間；同一子活動的登錄視窗互相重疊。",
+      "detail_ref": "activities/cathay-e78d7839e882.json"
+    },
+    {
+      "id": "cathay-765a05425d47",
+      "bank_id": "cathay",
+      "bank_name": "國泰世華",
+      "title": "momo購物網 iPhone新機預購優惠 (10/16~10/23)",
+      "merchant": "momo購物網 iPhone新機預購優惠 (10/16~10/23)",
+      "categories": [
+        "網購"
+      ],
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-23",
+      "summary": "單筆滿額最高享11%小樹點(信用卡)回饋，累積消費滿額再享最高1,800小樹點(信用卡)及1,800mo點",
+      "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202610/momo202610_3.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.cathaybk.com.tw/promotion/",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-23T16:00:00+08:00",
+          "end": "2026-10-23T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "1.參加本活動須於2026/10/23 16:00~2026/10/23 23:59完成活動登錄始符合資格,活動登錄限量名額300名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、簽帳金融卡、LINE PAY、街口支付、悠遊付、橘子支付等第三方支付不適用。3.正附卡消費合併計算,",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-30T15:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "omo會員於momo購物網刷國泰世華信用卡,指定消費累積(含一次付清及分期付款)滿NT$120,000(含)以上 ,成功登錄再享1,800mo點! ※本活動須於2026/10/30 15:00~2026/10/31 23:59透過『momo 登錄網頁』完成會員登錄始符合資格,登錄名額限量300名,額滿即關閉。 ※指定消費排除(1)購買電子票券、紅利金、使用APP發紅包之消費 (2)訂閱moPro或moPro+會員之訂閱費用",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-30T16:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "/10/31 於momo購物網刷國泰世華信用卡,累積消費金額(須分期付款)滿NT$120,000(含)以上 ,成功登錄再享 1,800 點小樹點(信用卡)! ※2026/10/30 16:00~2026/10/31 23:59於本行官網登錄專區及國泰優惠 CUBE Rewards App開放登錄,活動限量登錄300名,額滿即關閉。 ※每一正卡戶加碼活動限回饋乙次,最高回饋1,800點小樹點(信用卡)。 ※活動辦法及注意事項",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 11.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "momo購物網 iPhone新機預購優惠 (10/16~10/23)",
+        "國泰世華",
+        "網購"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間晚於活動期間；同一子活動的登錄視窗互相重疊。",
+      "detail_ref": "activities/cathay-765a05425d47.json"
     },
     {
       "id": "cathay-1c099fea3c4e",
@@ -72,10 +150,10 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-10-28T16:00:00+08:00",
+          "start": "2026-10-26T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "會員於PChome 24h購物刷國泰世華信用卡,累積消費(含一次付清及分期付款)滿NT$150,000(含)以上 ,成功登錄再享1,500 P幣! ※本活動須於2026/10/28 16:00~10/31 23:59透過『PChome 活動網頁』完成會員登錄始符合資格,登錄名額限量200名,額滿即關閉。 ※P幣預計於活動結束後次次月回饋~PChome會員帳戶,回饋時間依PChome作業為準。P幣價值為$1等值NT",
+          "source_text": "會員於PChome 24h購物刷國泰世華信用卡,累積消費(含一次付清及分期付款)滿NT$150,000(含)以上 ,成功登錄再享1,500 P幣! ※本活動須於2026/10/26 16:00~10/31 23:59透過『PChome 活動網頁』完成會員登錄始符合資格,登錄名額限量200名,額滿即關閉。 ※P幣預計於活動結束後次次月回饋~PChome會員帳戶,回饋時間依PChome作業為準。P幣價值為$1等值NT",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -135,10 +213,10 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
-          "start": "2026-10-28T16:00:00+08:00",
+          "start": "2026-10-26T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "員於PChome 24h購物刷國泰世華信用卡,累積消費(含一次付清及分期付款)滿NT$150,000(含)以上 ,成功登錄再享$1,500 P幣! ※本活動須於2026/10/28 16:00~10/31 23:59透過『PChome 活動網頁』完成會員登錄始符合資格,登錄名額限量200名,額滿即關閉。 ※P幣預計於活動結束後次次月回饋~PChome會員帳戶,回饋時間依PChome作業為準。P幣價值為$1等值NT",
+          "source_text": "員於PChome 24h購物刷國泰世華信用卡,累積消費(含一次付清及分期付款)滿NT$150,000(含)以上 ,成功登錄再享$1,500 P幣! ※本活動須於2026/10/26 16:00~10/31 23:59透過『PChome 活動網頁』完成會員登錄始符合資格,登錄名額限量200名,額滿即關閉。 ※P幣預計於活動結束後次次月回饋~PChome會員帳戶,回饋時間依PChome作業為準。P幣價值為$1等值NT",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -193,7 +271,7 @@
           "start": "2026-10-29T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "1.參加本活動須於2026/10/29 16:00~2026/10/31 23:59完成活動登錄始符合資格,活動登錄限量名額4,000名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、簽帳金融卡、LINE PAY、街口支付、悠遊付、橘子支付等第三方支付不適用。3.正附卡消費合併計",
+          "source_text": "momo購物網 刷卡優惠 (10/1~10/31) 單筆滿額最高享6%小樹點(信用卡)回饋! 1.參加本活動須於2026/10/29 16:00~2026/10/31 23:59完成活動登錄始符合資格,活動登錄限量名額4,000名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、簽帳金融卡、LINE PAY、街口支付、悠遊付、橘子支付等第三方支付不適用。3.正附卡消費合併計",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -263,7 +341,7 @@
           "start": "2026-10-30T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "1.參加活動須於2026/10/30 16:00~2026/10/31 23:59完成活動登錄始符合資格,活動登錄限量名額300名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、簽帳金融卡、LINE PAY、街口支付、悠遊付、橘子支付等第三方支付不適用。3.正附卡消費合併計算,",
+          "source_text": "momo購物網 累積滿額加碼優惠 (10/1 - 10/31) 累積消費滿額最高享3%回饋!(含1.5%小樹點(信用卡)及1.5%mo點) 1.參加活動須於2026/10/30 16:00~2026/10/31 23:59完成活動登錄始符合資格,活動登錄限量名額300名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、簽帳金融卡、LINE PAY、街口支付、悠遊付、橘子支付等第三方支付不適用。3.正附卡消費合併計算,",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -309,7 +387,7 @@
           "start": "2026-10-27T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "1.參加本活動之持卡人須於2026/10/27 16:00~10/31 23:59透過本行官網登錄專區或國泰優惠CUBE Rewards App完成活動登錄始符合資格(限以正卡人資料登錄),兩門檻合計限量登錄4,000名,登錄名額額滿將提前關閉登錄系統。2. 本活動商務卡、LINE",
+          "source_text": "蝦皮購物10月購物嘉年華 (10/01~10/31) 單筆滿額最高回饋1,200元刷卡金或等值小樹點(信用卡) 1.參加本活動之持卡人須於2026/10/27 16:00~10/31 23:59透過本行官網登錄專區或國泰優惠CUBE Rewards App完成活動登錄始符合資格(限以正卡人資料登錄),兩門檻合計限量登錄4,000名,登錄名額額滿將提前關閉登錄系統。2. 本活動商務卡、LINE",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -326,9 +404,9 @@
         "網購"
       ],
       "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "本頁含多個活動，未自動合併其他子活動的登錄時間，請至官方頁確認對應的登錄時間。",
       "detail_ref": "activities/cathay-7b195af184fd.json"
     },
     {
@@ -355,7 +433,7 @@
           "start": "2026-10-20T16:00:00+08:00",
           "end": "2026-10-20T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "1.參加本活動之持卡人須於2026/10/20 16:00~23:59透過本行官網登錄專區、國泰優惠APP完成活動登錄始符合資格(限以正卡人資料登錄),活動登錄限量名額1,500名,將以登錄成功且同時符合各活動門檻之成功交易訂單為回饋依據,若活動登錄",
+          "source_text": "蝦皮購物聯名卡加碼 蝦皮購物消費滿額再享額外蝦幣 1.參加本活動之持卡人須於2026/10/20 16:00~23:59透過本行官網登錄專區、國泰優惠APP完成活動登錄始符合資格(限以正卡人資料登錄),活動登錄限量名額1,500名,將以登錄成功且同時符合各活動門檻之成功交易訂單為回饋依據,若活動登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1011,7 +1089,7 @@
       "categories": [
         "網購"
       ],
-      "start_date": "2026-10-05",
+      "start_date": "2026-10-12",
       "end_date": null,
       "summary": "電子現金抵用券，消費主動提醒 刷卡優惠速享不漏接",
       "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202406/treecoupon.html",

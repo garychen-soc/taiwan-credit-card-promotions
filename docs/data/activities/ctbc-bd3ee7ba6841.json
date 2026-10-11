@@ -1,13 +1,13 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:48:45+08:00",
+  "generated_at": "2026-10-12T06:59:48+08:00",
   "activity_id": "ctbc-bd3ee7ba6841",
   "bank_id": "ctbc",
   "title": "IKEA",
   "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_life.html#lightbox_ikea",
-  "registration_text": "Visa IKEA LINE POINTS 5% 2026/7/1~2026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
-  "terms_raw": "Visa IKEA LINE POINTS 5% 2026/7/1~2026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+  "registration_text": "Visa IKEALINE POINTS 5% 2026/7/1~2026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
+  "terms_raw": "Visa IKEALINE POINTS 5% 2026/7/1~2026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄",
   "terms_sections": {
-    "overview": "Visa IKEA LINE POINTS 5% 2026/7/1~2026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄"
+    "overview": "Visa IKEALINE POINTS 5% 2026/7/1~2026/12/31 限以LINE Pay Visa卡支付 (每月6號10:00開放登錄) 活動詳情 立即登錄"
   }
 }

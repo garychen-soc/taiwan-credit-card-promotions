@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-05T03:38:18+08:00",
+  "generated_at": "2026-10-12T06:59:48+08:00",
   "bank_id": "ubot",
   "bank_name": "聯邦銀行",
-  "activity_count": 95,
+  "activity_count": 98,
   "activities": [
     {
       "id": "ubot-033d2d82c202",
@@ -1385,6 +1385,48 @@
       "detail_ref": "activities/ubot-1665ef291b73.json"
     },
     {
+      "id": "ubot-96376595c2e8",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "MyJapan+ APP",
+      "merchant": "MyJapan+ APP",
+      "categories": [
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "start_date": "2026-09-15",
+      "end_date": "2026-12-31",
+      "summary": "刷聯邦JCB登錄享博多指定商店最高30%回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026jcb/hakata/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 30.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "MyJapan+ APP",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-96376595c2e8.json"
+    },
+    {
       "id": "ubot-5f60c493e8b8",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -1804,7 +1846,7 @@
           "start": "2026-10-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": ",上限2,000元/戶,限量登錄1萬名/月) 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
+          "source_text": "贈2,000元,預計於116年1月底前回饋。 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1812,7 +1854,7 @@
           "start": "2026-11-01",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "X月登錄。 活動期間每月1日下午3點開放登錄~當月底,每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。 範例:客戶A於2026/11/1登錄成功,則2026/12/1無需再登錄,2026/10/1-12/31之昇恆昌消費皆適用活動。 活動對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 活動登錄",
+          "source_text": ") 活動期間每月1日下午3點開放登錄~當月底,每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。 (3) 範例:客戶A於2026/11/1登錄成功,則2026/12/1無需再登錄,2026/10/1-12/31之昇恆昌消費皆適用活動。 (4) 需於指定登錄開放期間完成登錄始符合活動參與資格,限量登",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -1820,23 +1862,15 @@
           "start": "2026-11-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": ",上限2,000元/戶,限量登錄1萬名/月) 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
+          "source_text": "贈2,000元,預計於116年1月底前回饋。 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
           "reminder_minutes": 10,
           "precision": "datetime"
-        },
-        {
-          "start": "2026-12-01",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "午3點開放登錄~當月底,每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。 範例:客戶A於2026/11/1登錄成功,則2026/12/1無需再登錄,2026/10/1-12/31之昇恆昌消費皆適用活動。 活動對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 活動登錄 活動對象:聯邦銀行信用卡持卡",
-          "reminder_minutes": 10,
-          "precision": "date"
         },
         {
           "start": "2026-12-01T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": ",上限2,000元/戶,限量登錄1萬名/月) 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
+          "source_text": "贈2,000元,預計於116年1月底前回饋。 註2:需登錄,每月1日下午3點開放登錄~當月底。活動期間每一正卡持卡人登錄乙次即享活動資格,無需每月登錄。活動登錄路徑:一般活動登錄專區→『【昇恆昌】",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -2283,7 +2317,7 @@
           "start": "2026-10-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2291,7 +2325,7 @@
           "start": "2026-11-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2299,7 +2333,7 @@
           "start": "2026-12-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
+          "source_text": "滿1.5萬元 加贈150元(上限4,500元) 註1: 活動每月10日下午3點開放登錄,每月限量登錄12,000名,額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準。(活動登錄路徑:一般登",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -2355,7 +2389,7 @@
           "start": "2026-10-20T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "放登錄5千名、11月開放登錄3千名、12月開放登錄2千名) 每月20日下午3點開放登錄~當月底,自登錄當月起享活動參與資格,無需每月登錄,如額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準",
+          "source_text": "千名、11月開放登錄3千名、12月開放登錄2千名) 註1: 每月20日下午3點開放登錄~當月底,自登錄當月起享活動參與資格,無需每月登錄,如額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2363,7 +2397,7 @@
           "start": "2026-11-20T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "放登錄5千名、11月開放登錄3千名、12月開放登錄2千名) 每月20日下午3點開放登錄~當月底,自登錄當月起享活動參與資格,無需每月登錄,如額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準",
+          "source_text": "千名、11月開放登錄3千名、12月開放登錄2千名) 註1: 每月20日下午3點開放登錄~當月底,自登錄當月起享活動參與資格,無需每月登錄,如額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2371,7 +2405,7 @@
           "start": "2026-12-20T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "放登錄5千名、11月開放登錄3千名、12月開放登錄2千名) 每月20日下午3點開放登錄~當月底,自登錄當月起享活動參與資格,無需每月登錄,如額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準",
+          "source_text": "千名、11月開放登錄3千名、12月開放登錄2千名) 註1: 每月20日下午3點開放登錄~當月底,自登錄當月起享活動參與資格,無需每月登錄,如額滿系統將提前關閉並於登錄頁面公告,登錄時間以本行系統為準",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -3167,6 +3201,50 @@
       "detail_ref": "activities/ubot-5e0162824b14.json"
     },
     {
+      "id": "ubot-9899c32e5f36",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "日本商店刷聯邦Visa卡",
+      "merchant": "日本商店刷聯邦Visa卡",
+      "categories": [
+        "旅遊交通",
+        "海外消費"
+      ],
+      "start_date": "2026-09-01",
+      "end_date": "2026-11-30",
+      "summary": "高島屋及BicCamera門市享10%現金回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026visa_offers/BicCamera/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-09-01",
+          "end": "2026-11-30",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 10.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "日本商店刷聯邦Visa卡",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-9899c32e5f36.json"
+    },
+    {
       "id": "ubot-933e45d57c12",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -3643,6 +3721,44 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ubot-3e55f00b8b00.json"
+    },
+    {
+      "id": "ubot-13da42243b4e",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "Trip.com",
+      "merchant": "Trip.com",
+      "categories": [
+        "旅遊交通",
+        "行動支付"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "刷聯邦卡機票最高折４００元；訂房最高折７％。",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202610tripcom/index.htm",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 7.0,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "Trip.com",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "行動支付"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ubot-13da42243b4e.json"
     },
     {
       "id": "ubot-0e0d1746df51",

@@ -1,13 +1,13 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-08-16T21:48:45+08:00",
+  "generated_at": "2026-10-12T06:59:48+08:00",
   "activity_id": "ctbc-9b76a5265a38",
   "bank_id": "ctbc",
   "title": "FunNow",
   "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_travel.html#lightbox_funnow",
   "registration_text": "",
-  "terms_raw": "FunNow LINE POINTS 10% 2026/7/1~2026/12/31 指定類別且輸入代碼 活動詳情",
+  "terms_raw": "FunNow享LINE POINTS 10% 2026/7/1~2026/12/31 指定類別且輸入代碼 活動詳情",
   "terms_sections": {
-    "overview": "FunNow LINE POINTS 10% 2026/7/1~2026/12/31 指定類別且輸入代碼 活動詳情"
+    "overview": "FunNow享LINE POINTS 10% 2026/7/1~2026/12/31 指定類別且輸入代碼 活動詳情"
   }
 }
