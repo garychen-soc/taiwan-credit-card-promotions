@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-12T06:59:48+08:00",
+  "generated_at": "2026-10-19T07:13:21+08:00",
   "bank_id": "taipei_fubon",
   "bank_name": "台北富邦銀行",
-  "activity_count": 168,
+  "activity_count": 177,
   "activities": [
     {
       "id": "taipei_fubon-4fd6ef9581bb",
@@ -597,23 +597,15 @@
           "start": "2026-07-10T10:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "於2026/7/1~2026/12/31(含)前進件且於2027/1/10(含)前核卡,進件及核卡日期皆以本行系統為準。 登錄規則: 最晚須於核卡後30日內完成登錄。 開放登錄時間2026/7/10 10:00起~2027/1/10 23:59止,名額無上限。 登錄方式: 下載【Fubon+ 台北富邦行動銀行】註冊/登入後,點選【優惠】>>【活動登錄】勾選活動即完成登錄。 語音登錄:撥打(02)8751-1313,請說【語音登",
+          "source_text": "開放登錄時間2026/7/10 10:00起~2027/1/10 23:59止,名額無上限。 下載【Fubon+ 台北富邦行動銀行】註冊/登入後,點選【優惠】>>【活動登錄】勾選活動即完成登錄。 核卡時間2026/7/1~2026/9/30,且2026/10/3",
           "reminder_minutes": 10,
           "precision": "datetime"
-        },
-        {
-          "start": "2027-01-10",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "費回饋維持不變。上述國家若有異動,依本行官網公告為準。 本活動需於2026/7/1~2026/12/31(含)前進件且於2027/1/10(含)前核卡,進件及核卡日期皆以本行系統為準。 登錄規則: 最晚須於核卡後30日內完成登錄。 開放登錄時間2026/7/10 10:00起~2027/1/10 ",
-          "reminder_minutes": 10,
-          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": 300,
       "featured": true,
       "tags": [
@@ -629,9 +621,9 @@
         "分期"
       ],
       "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間晚於活動期間。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/taipei_fubon-7bff8a4ac1b1.json"
     },
     {
@@ -642,7 +634,6 @@
       "merchant": "momo卡海外好好刷",
       "categories": [
         "網購",
-        "行動支付",
         "百貨購物",
         "生活消費",
         "旅遊交通",
@@ -670,14 +661,13 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 25.0,
+      "max_reward_percent": 50.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "momo卡海外好好刷",
         "台北富邦銀行",
         "網購",
-        "行動支付",
         "百貨購物",
         "生活消費",
         "旅遊交通",
@@ -744,9 +734,12 @@
       "id": "taipei_fubon-172c36299c44",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
-      "title": "悍勇卡外送5%回饋",
-      "merchant": "悍勇卡外送5%回饋",
+      "title": "悍勇卡精選通路5%回饋",
+      "merchant": "悍勇卡精選通路5%回饋",
       "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食"
@@ -770,17 +763,17 @@
       "registration_windows": [
         {
           "start": "2026-07-22T16:00:00+08:00",
-          "end": "2026-07-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "提前終止活動,額滿為止,不另行通知。額滿後恕無法補登及享有回饋資格,登錄未成功者亦同,登錄結果以本行系統顯示為準。 登錄時間: 月份 登錄時間 登錄名額 7月 2026/7/22 16:00~2026/7/31 23:59 限量5,000名 8月 2026/8/22 16:00~2026/8/31 23:59 限量5,000名 9月 2026/9/22 16:00~2026/9/30 23:59 限量5,000名 10",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
         {
           "start": "2026-08-22T16:00:00+08:00",
-          "end": "2026-08-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "錄結果以本行系統顯示為準。 登錄時間: 月份 登錄時間 登錄名額 7月 2026/7/22 16:00~2026/7/31 23:59 限量5,000名 8月 2026/8/22 16:00~2026/8/31 23:59 限量5,000名 9月 2026/9/22 16:00~2026/9/30 23:59 限量5,000名 10月 2026/10/22 16:00~2026/10/31 23:59 限量5,000名",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -788,7 +781,7 @@
           "start": "2026-09-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -796,7 +789,7 @@
           "start": "2026-10-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -804,7 +797,7 @@
           "start": "2026-11-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -812,20 +805,23 @@
           "start": "2026-12-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
-        "registration_closes_early"
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
       "tags": [
-        "悍勇卡外送5%回饋",
+        "悍勇卡精選通路5%回饋",
         "台北富邦銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食"
@@ -869,7 +865,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -922,7 +918,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": 7,
       "featured": true,
       "tags": [
@@ -1304,6 +1300,7 @@
       "merchant": "精選海外旅遊最高回饋5%",
       "categories": [
         "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -1329,25 +1326,25 @@
       "registration_windows": [
         {
           "start": "2026-01-01T00:00:00+08:00",
-          "end": "2026-01-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "登錄名額限量,額滿將提前終止活動,登錄結果以本行系統顯示為準,恕無法補登享回饋資格,登錄未成功者亦同。本活動之回饋,正、附卡消費合併計算。 登錄期間 活動代碼 2026/1/1 00:00~1/31 23:59 0106 2026/2/1 00:00~2/28 23:59 0203 2026/3/1 00:00~3/31 23:59 0303 2026/4/1 00:00~4/30 23:59 0403 2",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
         {
           "start": "2026-02-01T00:00:00+08:00",
-          "end": "2026-02-28T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "恕無法補登享回饋資格,登錄未成功者亦同。本活動之回饋,正、附卡消費合併計算。 登錄期間 活動代碼 2026/1/1 00:00~1/31 23:59 0106 2026/2/1 00:00~2/28 23:59 0203 2026/3/1 00:00~3/31 23:59 0303 2026/4/1 00:00~4/30 23:59 0403 2026/5/1 00:00~5/31 23:59 0503 2",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
         {
           "start": "2026-03-01T00:00:00+08:00",
-          "end": "2026-03-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "消費合併計算。 登錄期間 活動代碼 2026/1/1 00:00~1/31 23:59 0106 2026/2/1 00:00~2/28 23:59 0203 2026/3/1 00:00~3/31 23:59 0303 2026/4/1 00:00~4/30 23:59 0403 2026/5/1 00:00~5/31 23:59 0503 2026/6/1 00:00~6/30 23:59 0603 2",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1355,7 +1352,7 @@
           "start": "2026-04-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1363,7 +1360,7 @@
           "start": "2026-05-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1371,7 +1368,7 @@
           "start": "2026-06-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1379,7 +1376,7 @@
           "start": "2026-07-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1387,7 +1384,7 @@
           "start": "2026-08-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1395,7 +1392,7 @@
           "start": "2026-09-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1403,7 +1400,7 @@
           "start": "2026-10-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1411,7 +1408,7 @@
           "start": "2026-11-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1419,30 +1416,22 @@
           "start": "2026-12-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
-        },
-        {
-          "start": "2026-12-31",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/31) 網路投保旅平險抽Rimowa行李箱,再享2%回饋(~2026/9/30) 萬事達海外消費回饋最高享25%現金回饋(~2026/9/30) 樂遊韓國萬事達OL",
-          "reminder_minutes": 10,
-          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
-        "per_period_reregister",
-        "registration_closes_early"
+        "per_period_reregister"
       ],
-      "max_reward_percent": 25.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "精選海外旅遊最高回饋5%",
         "台北富邦銀行",
         "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -1513,7 +1502,6 @@
       "title": "肯驛 叫⾞吧8 折起",
       "merchant": "肯驛 叫⾞吧8 折起",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -1541,13 +1529,12 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "肯驛 叫⾞吧8 折起",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -1641,7 +1628,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -1692,7 +1679,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -1746,7 +1733,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": 550,
       "featured": true,
       "tags": [
@@ -1800,7 +1787,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -1825,7 +1812,6 @@
       "title": "Agoda訂房最高享12%",
       "merchant": "Agoda訂房最高享12%",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -1865,13 +1851,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "Agoda訂房最高享12%",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -1883,98 +1868,6 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-3cdf127a302a.json"
-    },
-    {
-      "id": "taipei_fubon-03399ef43730",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "維也納愛樂在臺北",
-      "merchant": "維也納愛樂在臺北",
-      "categories": [
-        "網購",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "start_date": "2026-08-07",
-      "end_date": "2026-10-17",
-      "summary": "卡友優先預購、獲贈節目冊禮遇！",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000158",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-08-07",
-          "end": "2026-10-17",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "維也納愛樂在臺北",
-        "台北富邦銀行",
-        "網購",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-03399ef43730.json"
-    },
-    {
-      "id": "taipei_fubon-76be48973d7e",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "2026衛武營管風琴音樂節",
-      "merchant": "2026衛武營管風琴音樂節",
-      "categories": [
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "start_date": "2026-06-22",
-      "end_date": "2026-10-18",
-      "summary": "【2026衛武營管風琴音樂節】",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000137",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-06-22",
-          "end": "2026-10-18",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "2026衛武營管風琴音樂節",
-        "台北富邦銀行",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-76be48973d7e.json"
     },
     {
       "id": "taipei_fubon-439f2691a0d0",
@@ -2071,6 +1964,51 @@
       "detail_ref": "activities/taipei_fubon-af7ebfd6fc83.json"
     },
     {
+      "id": "taipei_fubon-0b78d88f63af",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《大群舞》",
+      "merchant": "《大群舞》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-25",
+      "summary": "驫舞劇場20週年鉅獻，交揉過去與當下",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000169",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-10-25",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《大群舞》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-0b78d88f63af.json"
+    },
+    {
       "id": "taipei_fubon-5472fd73395b",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
@@ -2123,7 +2061,6 @@
       "merchant": "BicCamera享17%",
       "categories": [
         "網購",
-        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -2155,7 +2092,6 @@
         "BicCamera享17%",
         "台北富邦銀行",
         "網購",
-        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -2200,7 +2136,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -2341,7 +2277,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -2482,7 +2418,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -2533,7 +2469,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -2698,6 +2634,186 @@
       "detail_ref": "activities/taipei_fubon-1adb5c87c214.json"
     },
     {
+      "id": "taipei_fubon-bad9422c4311",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《女人皆如此》",
+      "merchant": "《女人皆如此》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-11-01",
+      "summary": "莫札特270誕辰鉅獻！",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000170",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-11-01",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《女人皆如此》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-bad9422c4311.json"
+    },
+    {
+      "id": "taipei_fubon-33e1ce58d643",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《安蒂岡妮》",
+      "merchant": "《安蒂岡妮》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-11-01",
+      "summary": "直視衝突，你願意付出代價嗎?",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000171",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-11-01",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《安蒂岡妮》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-33e1ce58d643.json"
+    },
+    {
+      "id": "taipei_fubon-e14200efaf4d",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《共振計畫：感．響》",
+      "merchant": "《共振計畫：感．響》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-11-08",
+      "summary": "一場打開全身感官與聲響共振的沉浸體驗",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000172",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-11-08",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《共振計畫：感．響》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-e14200efaf4d.json"
+    },
+    {
+      "id": "taipei_fubon-2ef1f6c8224e",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "拉圖與巴伐利亞廣播交響樂團",
+      "merchant": "拉圖與巴伐利亞廣播交響樂團",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-11-16",
+      "summary": "世界頂尖之聲再臨，演繹浪漫交響巨作",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000173",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-11-16",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "拉圖與巴伐利亞廣播交響樂團",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-2ef1f6c8224e.json"
+    },
+    {
       "id": "taipei_fubon-6468cd15f2c4",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
@@ -2741,6 +2857,51 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-6468cd15f2c4.json"
+    },
+    {
+      "id": "taipei_fubon-25adc71c0c52",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《女巫安息日》",
+      "merchant": "《女巫安息日》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-11-22",
+      "summary": "一生必看一次的超現實劇場",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000174",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-11-22",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《女巫安息日》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-25adc71c0c52.json"
     },
     {
       "id": "taipei_fubon-509b25c0c81c",
@@ -2837,6 +2998,51 @@
       "detail_ref": "activities/taipei_fubon-506195e75c84.json"
     },
     {
+      "id": "taipei_fubon-c213039785a6",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《信仰、金錢、戰爭與愛》",
+      "merchant": "《信仰、金錢、戰爭與愛》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-11-29",
+      "summary": "羅伯．勒帕吉5小時史詩鉅作亞洲首演！",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000175",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-11-29",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《信仰、金錢、戰爭與愛》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-c213039785a6.json"
+    },
+    {
       "id": "taipei_fubon-729c28e670f8",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
@@ -2931,6 +3137,51 @@
       "detail_ref": "activities/taipei_fubon-7a0284d1d8db.json"
     },
     {
+      "id": "taipei_fubon-b4f4ed6ec58f",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《烏龍天下》",
+      "merchant": "《烏龍天下》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-12-06",
+      "summary": "2026旗艦製作！一代茶聖的傳奇神話",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000176",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-12-06",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《烏龍天下》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-b4f4ed6ec58f.json"
+    },
+    {
       "id": "taipei_fubon-1b3eba5884eb",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
@@ -2974,6 +3225,51 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-1b3eba5884eb.json"
+    },
+    {
+      "id": "taipei_fubon-835fecfeab5b",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《慾望城國》",
+      "merchant": "《慾望城國》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-12-13",
+      "summary": "當代傳奇劇場40周年，經典再現！",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000177",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-12-13",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《慾望城國》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-835fecfeab5b.json"
     },
     {
       "id": "taipei_fubon-825bbd964427",
@@ -3021,6 +3317,51 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-825bbd964427.json"
+    },
+    {
+      "id": "taipei_fubon-145963b783b9",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "《南都幽靈夜譚》",
+      "merchant": "《南都幽靈夜譚》",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-12-27",
+      "summary": "一齣融合歷史、鬼仔古的怪談喜劇",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000178",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-14",
+          "end": "2026-12-27",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "《南都幽靈夜譚》",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-145963b783b9.json"
     },
     {
       "id": "taipei_fubon-4c070bdb4b59",
@@ -3256,7 +3597,6 @@
       "title": "礁溪寒沐酒店",
       "merchant": "礁溪寒沐酒店",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -3281,13 +3621,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "礁溪寒沐酒店",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -3362,7 +3701,6 @@
       "title": "AsiaYo",
       "merchant": "AsiaYo",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -3388,13 +3726,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": 400,
       "featured": true,
       "tags": [
         "AsiaYo",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -3467,7 +3804,8 @@
         "網購",
         "生活消費",
         "旅遊交通",
-        "餐飲美食"
+        "餐飲美食",
+        "分期"
       ],
       "start_date": "2025-06-10",
       "end_date": "2026-12-31",
@@ -3487,7 +3825,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -3496,7 +3834,8 @@
         "網購",
         "生活消費",
         "旅遊交通",
-        "餐飲美食"
+        "餐飲美食",
+        "分期"
       ],
       "official_status": "published",
       "review_required": false,
@@ -3511,7 +3850,6 @@
       "title": "DJB全球上網",
       "merchant": "DJB全球上網",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -3536,13 +3874,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "DJB全球上網",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -3587,7 +3924,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 18.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -3779,7 +4116,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -3829,7 +4166,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": 1200,
       "featured": true,
       "tags": [
@@ -3854,7 +4191,6 @@
       "title": "J卡KLOOK優惠",
       "merchant": "J卡KLOOK優惠",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -3879,13 +4215,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "J卡KLOOK優惠",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -3931,7 +4266,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -3958,7 +4293,6 @@
       "title": "J卡日本專屬伴手禮",
       "merchant": "J卡日本專屬伴手禮",
       "categories": [
-        "行動支付",
         "百貨購物",
         "生活消費",
         "旅遊交通",
@@ -4004,13 +4338,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "J卡日本專屬伴手禮",
         "台北富邦銀行",
-        "行動支付",
         "百貨購物",
         "生活消費",
         "旅遊交通",
@@ -4036,7 +4369,8 @@
         "生活消費",
         "旅遊交通",
         "餐飲美食",
-        "海外消費"
+        "海外消費",
+        "分期"
       ],
       "start_date": "2026-01-01",
       "end_date": "2026-12-31",
@@ -4076,7 +4410,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -4087,7 +4421,8 @@
         "生活消費",
         "旅遊交通",
         "餐飲美食",
-        "海外消費"
+        "海外消費",
+        "分期"
       ],
       "official_status": "published",
       "review_required": false,
@@ -4102,7 +4437,6 @@
       "title": "J卡韓國專屬伴手禮",
       "merchant": "J卡韓國專屬伴手禮",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4147,13 +4481,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "J卡韓國專屬伴手禮",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4173,7 +4506,6 @@
       "title": "KKBOX訂閱卡友優惠",
       "merchant": "KKBOX訂閱卡友優惠",
       "categories": [
-        "網購",
         "行動支付",
         "生活消費",
         "旅遊交通",
@@ -4203,7 +4535,6 @@
       "tags": [
         "KKBOX訂閱卡友優惠",
         "台北富邦銀行",
-        "網購",
         "行動支付",
         "生活消費",
         "旅遊交通",
@@ -4247,7 +4578,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -4321,6 +4652,7 @@
       "merchant": "KKday最高88折優惠",
       "categories": [
         "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4345,13 +4677,14 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 25.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "KKday最高88折優惠",
         "台北富邦銀行",
         "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4371,7 +4704,6 @@
       "title": "Klook eSIM 5折",
       "merchant": "Klook eSIM 5折",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4396,13 +4728,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "Klook eSIM 5折",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4448,7 +4779,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 18.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -4526,7 +4857,8 @@
         "行動支付",
         "生活消費",
         "旅遊交通",
-        "餐飲美食"
+        "餐飲美食",
+        "分期"
       ],
       "start_date": "2026-07-01",
       "end_date": "2026-12-31",
@@ -4546,7 +4878,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": 50,
       "featured": true,
       "tags": [
@@ -4556,7 +4888,8 @@
         "行動支付",
         "生活消費",
         "旅遊交通",
-        "餐飲美食"
+        "餐飲美食",
+        "分期"
       ],
       "official_status": "published",
       "review_required": false,
@@ -4661,7 +4994,6 @@
       "title": "Trip.com",
       "merchant": "Trip.com",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4686,13 +5018,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "Trip.com",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4810,7 +5141,6 @@
       "title": "中租租車",
       "merchant": "中租租車",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4835,13 +5165,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "中租租車",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4886,7 +5215,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -4916,7 +5245,8 @@
         "行動支付",
         "生活消費",
         "旅遊交通",
-        "餐飲美食"
+        "餐飲美食",
+        "分期"
       ],
       "start_date": "2026-07-01",
       "end_date": "2026-12-31",
@@ -4936,7 +5266,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -4946,7 +5276,8 @@
         "行動支付",
         "生活消費",
         "旅遊交通",
-        "餐飲美食"
+        "餐飲美食",
+        "分期"
       ],
       "official_status": "published",
       "review_required": false,
@@ -4961,7 +5292,6 @@
       "title": "充電刷OP卡最高享10%",
       "merchant": "充電刷OP卡最高享10%",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -4986,13 +5316,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": 600,
       "featured": true,
       "tags": [
         "充電刷OP卡最高享10%",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -5038,7 +5367,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -5065,7 +5394,6 @@
       "title": "全球通派車",
       "merchant": "全球通派車",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -5090,13 +5418,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "全球通派車",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -5189,7 +5516,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -5241,7 +5568,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -6186,7 +6513,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 20.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": 5,
       "featured": true,
       "tags": [
@@ -6285,7 +6612,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": 2000,
       "featured": true,
       "tags": [
@@ -6356,7 +6683,6 @@
       "title": "富邦J卡獨享",
       "merchant": "富邦J卡獨享",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -6381,13 +6707,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": 500,
       "featured": true,
       "tags": [
         "富邦J卡獨享",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -6432,7 +6757,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -6482,7 +6807,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -6507,7 +6832,6 @@
       "title": "富邦卡海外消費單筆分期優惠",
       "merchant": "富邦卡海外消費單筆分期優惠",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -6532,13 +6856,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "富邦卡海外消費單筆分期優惠",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -6773,7 +7096,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -6893,7 +7216,6 @@
       "title": "日暉國際渡假村",
       "merchant": "日暉國際渡假村",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -6924,7 +7246,6 @@
       "tags": [
         "日暉國際渡假村",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -6969,7 +7290,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 19.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -7021,7 +7342,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -7073,7 +7394,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -7125,7 +7446,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -7177,7 +7498,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -7195,6 +7516,55 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-18c40d7769f5.json"
+    },
+    {
+      "id": "taipei_fubon-709de5de8767",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "東南旅遊",
+      "merchant": "東南旅遊",
+      "categories": [
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費",
+        "分期"
+      ],
+      "start_date": "2026-10-05",
+      "end_date": "2026-12-31",
+      "summary": "日本中四國刷卡優惠",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=C000333",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-10-05",
+          "end": "2026-12-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 30.0,
+      "max_reward_amount_twd": 2500,
+      "featured": true,
+      "tags": [
+        "東南旅遊",
+        "台北富邦銀行",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "海外消費",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-709de5de8767.json"
     },
     {
       "id": "taipei_fubon-e6448e00b7a7",
@@ -7424,7 +7794,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -7450,7 +7820,6 @@
       "title": "璞石麗緻溫泉會館",
       "merchant": "璞石麗緻溫泉會館",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -7475,13 +7844,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "璞石麗緻溫泉會館",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -7732,7 +8100,6 @@
       "title": "長榮酒店(連鎖系列)",
       "merchant": "長榮酒店(連鎖系列)",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -7757,13 +8124,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "長榮酒店(連鎖系列)",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -7783,7 +8149,6 @@
       "title": "長榮酒店(連鎖系列)",
       "merchant": "長榮酒店(連鎖系列)",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -7808,13 +8173,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "長榮酒店(連鎖系列)",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -7859,7 +8223,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -7885,7 +8249,6 @@
       "title": "雄獅旅遊運動專案優惠",
       "merchant": "雄獅旅遊運動專案優惠",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -7910,13 +8273,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "雄獅旅遊運動專案優惠",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -8029,7 +8391,6 @@
       "merchant": "高鐵刷富邦卡享升等商務車廂",
       "categories": [
         "網購",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -8055,14 +8416,13 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "高鐵刷富邦卡享升等商務車廂",
         "台北富邦銀行",
         "網購",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -8153,7 +8513,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 18.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -8204,7 +8564,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": 7,
       "featured": true,
       "tags": [
@@ -8255,7 +8615,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -8307,7 +8667,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -8359,7 +8719,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -8385,7 +8745,6 @@
       "title": "韓際新世界免稅店購物優惠",
       "merchant": "韓際新世界免稅店購物優惠",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -8410,13 +8769,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "韓際新世界免稅店購物優惠",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -8481,7 +8839,6 @@
       "title": "韓國新羅飯店最高享10%",
       "merchant": "韓國新羅飯店最高享10%",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -8506,13 +8863,12 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "韓國新羅飯店最高享10%",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -8557,7 +8913,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 20.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -8708,7 +9064,7 @@
       "registration_url_kind": "unknown",
       "registration_windows": [],
       "registration_timing_contracts": [],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [

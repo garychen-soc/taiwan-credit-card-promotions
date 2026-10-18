@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-12T06:59:48+08:00",
+  "generated_at": "2026-10-19T07:13:21+08:00",
   "timezone": "Asia/Taipei",
   "thresholds": {
     "percent_at_least": 10,
@@ -102,22 +102,22 @@
     "strategy": "listing_fingerprint_with_current_parser",
     "schema_version": 4,
     "max_age_days": 30,
-    "previous_generated_at": "2026-10-05T03:38:18+08:00",
-    "reused_activities": 1017,
-    "reparsed_activities": 1017,
+    "previous_generated_at": "2026-10-12T06:59:48+08:00",
+    "reused_activities": 520,
+    "reparsed_activities": 520,
     "cached_inputs_missing": 2,
-    "cache_misses": 175,
-    "detail_requests_avoided": 838,
-    "detail_requests_performed": 73
+    "cache_misses": 698,
+    "detail_requests_avoided": 303,
+    "detail_requests_performed": 632
   },
   "summary": {
-    "total": 1222,
-    "active_or_upcoming": 1203,
-    "registration_required": 326,
-    "registration_times_confirmed": 170,
-    "registration_time_coverage_percent": 52.1,
-    "needs_review": 274,
-    "high_return": 660,
+    "total": 1240,
+    "active_or_upcoming": 1219,
+    "registration_required": 318,
+    "registration_times_confirmed": 164,
+    "registration_time_coverage_percent": 51.6,
+    "needs_review": 268,
+    "high_return": 669,
     "alerts": 1
   },
   "source_health": [
@@ -128,12 +128,12 @@
       "resolved_url": "https://www.dbs.com.tw/personal-zh/cards/offers/ce/default.html",
       "status": "complete",
       "activity_count": 17,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
       "registration_required_count": 17,
       "registration_time_confirmed_count": 17,
       "registration_time_coverage_percent": 100.0,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "cathay",
@@ -142,12 +142,12 @@
       "resolved_url": "https://www.cathay-cube.com.tw/cathaybk/personal/event/overview",
       "status": "complete",
       "activity_count": 23,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
       "registration_required_count": 13,
       "registration_time_confirmed_count": 13,
       "registration_time_coverage_percent": 100.0,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "ctbc",
@@ -155,13 +155,13 @@
       "requested_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/store.html?utm_source=google_keyword&utm_medium=google_keyword&utm_campaign=25546_Linepay_Q1_2023&ctsource=google_keyword&ctchannel=google_keyword&ctid=25546_Linepay_Q1_2023&Unit=13157&Seed=8723CK001",
       "resolved_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/store.html?utm_source=google_keyword&utm_medium=google_keyword&utm_campaign=25546_Linepay_Q1_2023&ctsource=google_keyword&ctchannel=google_keyword&ctid=25546_Linepay_Q1_2023&Unit=13157&Seed=8723CK001",
       "status": "complete",
-      "activity_count": 125,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "activity_count": 126,
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
       "registration_required_count": 19,
       "registration_time_confirmed_count": 18,
       "registration_time_coverage_percent": 94.7,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "sinopac",
@@ -170,12 +170,12 @@
       "resolved_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/list.html",
       "status": "complete",
       "activity_count": 21,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
       "registration_required_count": 14,
       "registration_time_confirmed_count": 3,
       "registration_time_coverage_percent": 21.4,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "scsb",
@@ -183,13 +183,13 @@
       "requested_url": "https://www.scsb.com.tw/content/card/hotList",
       "resolved_url": "https://www.scsb.com.tw/content/card/hotList",
       "status": "complete",
-      "activity_count": 21,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "activity_count": 22,
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
       "registration_required_count": 6,
       "registration_time_confirmed_count": 2,
       "registration_time_coverage_percent": 33.3,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "obank",
@@ -197,13 +197,13 @@
       "requested_url": "https://www.o-bank.com/retail/event/event-compaign",
       "resolved_url": "https://www.o-bank.com/zh-tw/retail/event/event-compaign",
       "status": "complete",
-      "activity_count": 28,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "activity_count": 31,
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "僅讀取簽帳金融卡分頁 Content_divContent_1；已排除存錢、貸款及投資理財分頁。",
-      "registration_required_count": 4,
-      "registration_time_confirmed_count": 3,
-      "registration_time_coverage_percent": 75.0,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "registration_required_count": 5,
+      "registration_time_confirmed_count": 4,
+      "registration_time_coverage_percent": 80.0,
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "yuanta",
@@ -212,12 +212,12 @@
       "resolved_url": "https://www.yuantabank.com.tw/bank/creditCard/promotionActivity/list.do",
       "status": "complete",
       "activity_count": 30,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
       "registration_required_count": 6,
       "registration_time_confirmed_count": 4,
       "registration_time_coverage_percent": 66.7,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "esun",
@@ -225,13 +225,13 @@
       "requested_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
       "resolved_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
       "status": "complete",
-      "activity_count": 183,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "activity_count": 184,
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
-      "registration_required_count": 46,
-      "registration_time_confirmed_count": 31,
-      "registration_time_coverage_percent": 67.4,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "registration_required_count": 41,
+      "registration_time_confirmed_count": 28,
+      "registration_time_coverage_percent": 68.3,
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "sunny",
@@ -240,7 +240,7 @@
       "resolved_url": "",
       "status": "partial",
       "activity_count": 25,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "本輪無法讀取指定官方入口；本次沿用已驗證的官方索引快照，待官方解除限制後恢復即時讀取。",
       "registration_required_count": 1,
       "registration_time_confirmed_count": 0,
@@ -254,12 +254,12 @@
       "resolved_url": "https://www.tcbbank.com.tw/creditcard/J_01.html",
       "status": "complete",
       "activity_count": 23,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
       "registration_required_count": 2,
       "registration_time_confirmed_count": 0,
       "registration_time_coverage_percent": 0.0,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "kgi",
@@ -267,13 +267,13 @@
       "requested_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign",
       "resolved_url": "https://www.kgibank.com.tw/zh-tw/personal/promotion/card-campaign",
       "status": "complete",
-      "activity_count": 42,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "activity_count": 41,
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
       "registration_required_count": 14,
       "registration_time_confirmed_count": 8,
       "registration_time_coverage_percent": 57.1,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "hncb",
@@ -282,12 +282,12 @@
       "resolved_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDQw93T3cnQ18DQIsDAzMAk3M_UMtwoxCPY30w_EpMDI0148iSj8O4GhApH7cCqLwGx-uH4XPCrAPCJlRkBsaGmGQ6QgAkO1qlw!!/?1dmy&urile=wcm%3apath%3a/wps/wcm/connect/hncb_v2/site_map/hncb/per_finance/service/public_item/best_offer",
       "status": "complete",
       "activity_count": 41,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "僅讀取信用卡 tab 對應容器 id-cbbdca5b-6d30-44e8-bb52-4676dbe3fc5a-content；已排除存款/外匯、基金/投資、保險、貸款與其他分頁。",
-      "registration_required_count": 8,
+      "registration_required_count": 9,
       "registration_time_confirmed_count": 0,
       "registration_time_coverage_percent": 0.0,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "taipei_fubon",
@@ -295,13 +295,13 @@
       "requested_url": "https://cardpromote.taipeifubon.com.tw/promotion/Result",
       "resolved_url": "https://cardpromote.taipeifubon.com.tw/promotion/Result",
       "status": "complete",
-      "activity_count": 168,
-      "checked_at": "2026-10-12T06:59:48+08:00",
-      "message": "已讀取 19 個官方清單分頁",
+      "activity_count": 177,
+      "checked_at": "2026-10-19T07:13:21+08:00",
+      "message": "已讀取 20 個官方清單分頁",
       "registration_required_count": 28,
       "registration_time_confirmed_count": 11,
       "registration_time_coverage_percent": 39.3,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "taishin",
@@ -309,13 +309,13 @@
       "requested_url": "https://mkpcard.taishinbank.com.tw/tscccms/promotion/offerList/A",
       "resolved_url": "https://mkpcard.taishinbank.com.tw/tscccms/promotion/offerList/A",
       "status": "complete",
-      "activity_count": 184,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "activity_count": 186,
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "已讀取 A–I 九個信用卡優惠分類",
       "registration_required_count": 14,
       "registration_time_confirmed_count": 5,
       "registration_time_coverage_percent": 35.7,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "first",
@@ -323,13 +323,13 @@
       "requested_url": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
       "resolved_url": "https://card.firstbank.com.tw/sites/card/touch/1565690686288",
       "status": "complete",
-      "activity_count": 140,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "activity_count": 142,
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "已透過官方 REST 逐分類讀取活動",
-      "registration_required_count": 58,
+      "registration_required_count": 57,
       "registration_time_confirmed_count": 8,
-      "registration_time_coverage_percent": 13.8,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "registration_time_coverage_percent": 14.0,
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "chb",
@@ -338,12 +338,12 @@
       "resolved_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3657",
       "status": "complete",
       "activity_count": 23,
-      "checked_at": "2026-10-12T06:59:48+08:00",
+      "checked_at": "2026-10-19T07:13:21+08:00",
       "message": "",
       "registration_required_count": 15,
       "registration_time_confirmed_count": 7,
       "registration_time_coverage_percent": 46.7,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "ubot",
@@ -352,12 +352,12 @@
       "resolved_url": "https://card.ubot.com.tw/CardActivity?category=%E7%B6%B2%E8%B3%BC%E6%95%B8%E4%BD%8D",
       "status": "complete",
       "activity_count": 98,
-      "checked_at": "2026-10-12T06:59:48+08:00",
-      "message": "已讀取 7 個資料分類；API 共 97 筆，目前有效 98 筆；另以 hotOrder 標記 13 筆強打優惠",
-      "registration_required_count": 40,
-      "registration_time_confirmed_count": 18,
-      "registration_time_coverage_percent": 45.0,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "checked_at": "2026-10-19T07:13:21+08:00",
+      "message": "已讀取 7 個資料分類；API 共 99 筆，目前有效 98 筆；另以 hotOrder 標記 13 筆強打優惠",
+      "registration_required_count": 39,
+      "registration_time_confirmed_count": 16,
+      "registration_time_coverage_percent": 41.0,
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     },
     {
       "id": "megabank",
@@ -366,12 +366,12 @@
       "resolved_url": "https://www.megabank.com.tw/personal/credit-card/event/overview?Keywords=&Tag=Tag&creaditcard=all&discount=all&type=all&area=all",
       "status": "complete",
       "activity_count": 30,
-      "checked_at": "2026-10-12T06:59:48+08:00",
-      "message": "官方 API 回傳 292 筆（下架 41 筆、標示需登錄 64 筆）；篩出 30 筆仍有效項目，收錄 30 筆",
+      "checked_at": "2026-10-19T07:13:21+08:00",
+      "message": "官方 API 回傳 294 筆（下架 41 筆、標示需登錄 64 筆）；篩出 30 筆仍有效項目，收錄 30 筆",
       "registration_required_count": 30,
       "registration_time_confirmed_count": 12,
       "registration_time_coverage_percent": 40.0,
-      "last_updated_at": "2026-10-12T06:59:48+08:00"
+      "last_updated_at": "2026-10-19T07:13:21+08:00"
     }
   ],
   "alerts": [
@@ -385,324 +385,161 @@
   ],
   "registration_agenda": {
     "today": {
-      "date": "2026-10-12",
+      "date": "2026-10-19",
       "items": [
         {
           "activity_id": "esun-756b2637b2be",
           "bank_name": "玉山銀行",
           "title": "玉山Wallet週週登錄拿點趣",
           "merchant": "玉山Wallet週週登錄拿點趣",
-          "start": "2026-10-12T10:00:00+08:00",
-          "end": "2026-10-18T23:59:00+08:00",
+          "start": "2026-10-19T10:00:00+08:00",
+          "end": "2026-10-25T23:59:00+08:00",
           "label": "活動登錄期間",
           "precision": "datetime",
           "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
           "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=8068"
         },
         {
-          "activity_id": "cathay-745c0ecebc92",
-          "bank_name": "國泰世華",
-          "title": "蝦皮購物促刷檔期再加碼6%蝦幣",
-          "merchant": "蝦皮購物促",
-          "start": "2026-10-12T16:00:00+08:00",
-          "end": "2026-10-12T23:59:00+08:00",
+          "activity_id": "esun-d9ffe6cae5f8",
+          "bank_name": "玉山銀行",
+          "title": "Yahoo購物中心10月網購活動｜活動一 分期滿額最高享1,050元回饋",
+          "merchant": "Yahoo購物中心10月網購活動",
+          "start": "2026-10-19T15:00:00+08:00",
+          "end": "2026-10-26T23:59:00+08:00",
           "label": "活動登錄期間",
           "precision": "datetime",
-          "registration_url": "https://www.cathaybk.com.tw/promotion/",
-          "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202411/sp-campaign.html"
+          "registration_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
+          "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2001_10"
+        },
+        {
+          "activity_id": "taipei_fubon-ab431c1d0485",
+          "bank_name": "台北富邦銀行",
+          "title": "J卡亞洲精選最高享6%",
+          "merchant": "J卡亞洲精選最高享6%",
+          "start": "2026-10-19T16:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "precision": "datetime",
+          "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
+          "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=C000306"
         }
       ]
     },
     "tomorrow": {
-      "date": "2026-10-13",
+      "date": "2026-10-20",
       "items": [
         {
-          "activity_id": "scsb-62f433d520eb",
-          "bank_name": "上海商銀",
-          "title": "持Teresa卡當月一般消費滿額，享指定餐廳滿兩千送200",
-          "merchant": "持Teresa卡當月一般消費滿額，享指定餐廳滿兩千送200",
-          "start": "2026-10-13T16:00:00+08:00",
+          "activity_id": "esun-d255ba0c6e68",
+          "bank_name": "玉山銀行",
+          "title": "IKEA",
+          "merchant": "IKEA",
+          "start": "2026-10-20",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "precision": "date",
+          "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
+          "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=5031"
+        },
+        {
+          "activity_id": "esun-d255ba0c6e68",
+          "bank_name": "玉山銀行",
+          "title": "IKEA",
+          "merchant": "IKEA",
+          "start": "2026-10-20T10:00:00+08:00",
+          "end": "2026-12-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "precision": "datetime",
+          "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
+          "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=5031"
+        },
+        {
+          "activity_id": "ubot-c1d9bbd64400",
+          "bank_name": "聯邦銀行",
+          "title": "全國電子",
+          "merchant": "全國電子",
+          "start": "2026-10-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
           "precision": "datetime",
-          "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
-          "source_url": "https://www.scsb.com.tw/content/card/hotPage/5422"
+          "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+          "source_url": "https://activity.ubot.com.tw/aws_act/2026/202607elife/index.htm"
+        },
+        {
+          "activity_id": "ubot-40c1cfbf1684",
+          "bank_name": "聯邦銀行",
+          "title": "精選特店分期享回饋",
+          "merchant": "精選特店分期享回饋",
+          "start": "2026-10-20T10:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "precision": "datetime",
+          "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+          "source_url": "https://activity.ubot.com.tw/aws_act/2026/202607storeinstallment/index.htm"
+        },
+        {
+          "activity_id": "ubot-dd8f1e0a0770",
+          "bank_name": "聯邦銀行",
+          "title": "美廉社、小北百貨最高８％",
+          "merchant": "美廉社、小北百貨最高８％",
+          "start": "2026-10-20T11:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "precision": "datetime",
+          "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+          "source_url": "https://activity.ubot.com.tw/aws_act/2026/202607supermarket/index.htm"
+        },
+        {
+          "activity_id": "taipei_fubon-9bf136760b06",
+          "bank_name": "台北富邦銀行",
+          "title": "10-12月家居分期回饋",
+          "merchant": "10-12月家居分期回饋",
+          "start": "2026-10-20T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "precision": "datetime",
+          "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
+          "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=D000313"
+        },
+        {
+          "activity_id": "taipei_fubon-3a9b74454aca",
+          "bank_name": "台北富邦銀行",
+          "title": "10-12月電車保修活動",
+          "merchant": "10-12月電車保修活動",
+          "start": "2026-10-20T14:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "precision": "datetime",
+          "registration_url": "https://www.fubon.com/banking/event/credit_card/20170718A/index.html",
+          "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=D000312"
+        },
+        {
+          "activity_id": "ubot-f788cfb624f3",
+          "bank_name": "聯邦銀行",
+          "title": "訂閱新生活",
+          "merchant": "訂閱新生活",
+          "start": "2026-10-20T15:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "precision": "datetime",
+          "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+          "source_url": "https://activity.ubot.com.tw/aws_act/2026/202610sub/index.htm"
+        },
+        {
+          "activity_id": "cathay-048574e1a8c5",
+          "bank_name": "國泰世華",
+          "title": "蝦皮購物聯名卡加碼",
+          "merchant": "蝦皮購物聯名卡加碼",
+          "start": "2026-10-20T16:00:00+08:00",
+          "end": "2026-10-20T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "precision": "datetime",
+          "registration_url": "https://www.cathaybk.com.tw/promotion/",
+          "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202410/sp-permonth.html"
         }
       ]
     }
   },
   "activities": [
-    {
-      "id": "cathay-e78d7839e882",
-      "bank_id": "cathay",
-      "bank_name": "國泰世華",
-      "title": "PChome24h購物 iPhone新機預購優惠｜刷卡滿額最高享13%回饋",
-      "merchant": "PChome24h購物 iPhone新機預購優惠｜",
-      "categories": [
-        "網購"
-      ],
-      "start_date": "2026-10-16",
-      "end_date": "2026-10-23",
-      "summary": "單筆最高享10%及玩數位最高3.3%回饋，累積滿額再享最高2%加碼優惠！",
-      "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202610/pchomeonline202610_3.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.cathaybk.com.tw/promotion/",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-26T16:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "會員於PChome 24h購物刷國泰世華信用卡,累積消費(含一次付清及分期付款)滿NT$150,000(含)以上 ,成功登錄再享1,500 P幣! ※本活動須於2026/10/26 16:00~2026/10/31 23:59透過『PChome 活動網頁』完成會員登錄始符合資格,登錄名額限量200名,額滿即關閉。 ※P幣預計於活動結束後次次月回饋~PChome會員帳戶,回饋時間依PChome作業為準。P幣價值為$1等值NT",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-10-27T16:00:00+08:00",
-          "end": null,
-          "label": "登錄截止",
-          "source_text": ",500點小樹點(信用卡) + 2,500 P幣 ※上述門檻須於2026/10/27 16:00~2026/10/31 23:59透過『PChome門檻登錄網頁』完成登錄始符合資格,登錄名額限量200名,額滿即關閉。",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-10-30T16:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "10/31 於PChome 24h購物刷國泰世華信用卡,累積消費(須分期付款)滿NT$150,000(含)以上 ,成功登錄再享1,500點小樹點(信用卡)! ※2026/10/30 16:00~2026/10/31 23:59於本行官網登錄專區及國泰優惠 CUBE Rewards App開放登錄,活動限量登錄200名,額滿即關閉。 ※每一正卡戶加碼活動限回饋乙次,最高回饋1,500點小樹點(信用卡)。活動辦法及注意事項詳『",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 13.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "PChome24h購物 iPhone新機預購優惠｜",
-        "國泰世華",
-        "網購"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間晚於活動期間；同一子活動的登錄視窗互相重疊。",
-      "detail_ref": "activities/cathay-e78d7839e882.json"
-    },
-    {
-      "id": "cathay-765a05425d47",
-      "bank_id": "cathay",
-      "bank_name": "國泰世華",
-      "title": "momo購物網 iPhone新機預購優惠 (10/16~10/23)",
-      "merchant": "momo購物網 iPhone新機預購優惠 (10/16~10/23)",
-      "categories": [
-        "網購"
-      ],
-      "start_date": "2026-10-16",
-      "end_date": "2026-10-23",
-      "summary": "單筆滿額最高享11%小樹點(信用卡)回饋，累積消費滿額再享最高1,800小樹點(信用卡)及1,800mo點",
-      "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202610/momo202610_3.html",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.cathaybk.com.tw/promotion/",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-23T16:00:00+08:00",
-          "end": "2026-10-23T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "1.參加本活動須於2026/10/23 16:00~2026/10/23 23:59完成活動登錄始符合資格,活動登錄限量名額300名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、簽帳金融卡、LINE PAY、街口支付、悠遊付、橘子支付等第三方支付不適用。3.正附卡消費合併計算,",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-10-30T15:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "omo會員於momo購物網刷國泰世華信用卡,指定消費累積(含一次付清及分期付款)滿NT$120,000(含)以上 ,成功登錄再享1,800mo點! ※本活動須於2026/10/30 15:00~2026/10/31 23:59透過『momo 登錄網頁』完成會員登錄始符合資格,登錄名額限量300名,額滿即關閉。 ※指定消費排除(1)購買電子票券、紅利金、使用APP發紅包之消費 (2)訂閱moPro或moPro+會員之訂閱費用",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-10-30T16:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "/10/31 於momo購物網刷國泰世華信用卡,累積消費金額(須分期付款)滿NT$120,000(含)以上 ,成功登錄再享 1,800 點小樹點(信用卡)! ※2026/10/30 16:00~2026/10/31 23:59於本行官網登錄專區及國泰優惠 CUBE Rewards App開放登錄,活動限量登錄300名,額滿即關閉。 ※每一正卡戶加碼活動限回饋乙次,最高回饋1,800點小樹點(信用卡)。 ※活動辦法及注意事項",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 11.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "momo購物網 iPhone新機預購優惠 (10/16~10/23)",
-        "國泰世華",
-        "網購"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間晚於活動期間；同一子活動的登錄視窗互相重疊。",
-      "detail_ref": "activities/cathay-765a05425d47.json"
-    },
-    {
-      "id": "esun-70ea728f8085",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "蝦皮購物10月網購活動｜活動四 蝦皮狂購日 最高享3,450元回饋",
-      "merchant": "蝦皮購物10月網購活動",
-      "categories": [
-        "網購",
-        "分期"
-      ],
-      "start_date": "2026-10-18",
-      "end_date": "2026-10-28",
-      "summary": "單筆分期滿15,000元享800點玉山e point，1點＝1元。 單筆分期滿30,000元享1,800點玉山e point，1點＝1元。 刷玉山Unicard最高享3,450元回饋 (試算詳下方說明)。 ※ 本活動限量登錄1,200名，限正卡人登錄，正、附卡消費合併計算，每歸戶擇優回饋1次，最高回饋上限1,800點玉山e point。 ※ 正卡、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※ 玉山Unicard分期消費享2%~3.5%回饋 (上限5,000點)。>>活動詳情 ※ 玉山e point，1點＝1元。折抵未出帳消費最高可折抵30%；實體門市 / 線上消費最高可折抵100%。>>詳情請見 ※ 玉山U Bear信用卡分期享網購加碼2% (上限150元)>>活動詳情 ※ 刷玉山Unicard拿更多： 單筆分期滿15,000元，享12.8%回饋：成功登錄活動一＋活動四，可獲得活動一300點＋活動四800點＋玉山Unicard【UP選方案】分期享3.5% (525點)＋玉山Unicard蝦皮新申辦加碼8% (300點)，共1,925點玉山e point回饋，1,925 / 15,000＝12.8%。 單筆分期滿30,000元，享3,450元回饋：成功登錄活動一＋活動四，可獲得活動一300點＋活動四1,800點＋玉山Unicard【UP選方案】分期享3.5% (1,050點)＋玉山Unicard蝦皮新申辦加碼8% (300點)，共3,450點玉山e point回饋。 ※ 玉山Unicard新申辦加碼需透過蝦皮專屬連結首次申辦方可享有。 ※ 登錄辦法：2",
-      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2100_10",
-      "registration_required": true,
-      "parent_activity_id": "esun-691f5a85b769",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-29T17:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "525點)+玉山Unicard蝦皮新申辦加碼8% (300點),共1,925點玉山e point回饋,1,925 / 15,000=12.8%。 ※ 登錄辦法:2026/10/29 17:00~2026/10/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 10/29登錄(限量1,200名)",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 30.0,
-      "max_reward_amount_twd": 9350,
-      "featured": true,
-      "tags": [
-        "蝦皮購物10月網購活動",
-        "活動四 蝦皮狂購日 最高享3,450元回饋",
-        "玉山銀行",
-        "網購",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間晚於活動期間。",
-      "detail_ref": "activities/esun-70ea728f8085.json"
-    },
-    {
-      "id": "esun-edbb28540525",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "PChome線上購物10月網購活動｜活動三 24力會員日，最高享2,500元回饋",
-      "merchant": "PChome線上購物10月網購活動",
-      "categories": [
-        "網購",
-        "分期"
-      ],
-      "start_date": "2026-10-14",
-      "end_date": "2026-10-31",
-      "summary": "單筆滿18,000元以上，享1,200點玉山e point，1點＝1元。 單筆分期滿35,000元以上，享2,200點玉山e point，1點＝1元。 刷玉山U Bear信用卡網購最高再享3%刷卡金回饋。 ※ 本活動限量登錄1,200名，限正卡人登錄，正、附卡消費合併計算。每歸戶擇優回饋1次，最高回饋上限2,200點玉山e point。統一於2026年12旬後陸續回饋於正卡人帳戶。 ※ 本活動可與活動一全月活動同時參加，惟各活動須分別登錄，最高可享2,500元回饋。 ※ 正卡、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※ 玉山U Bear信用卡網購最高享3%刷卡金，分期消費享2%刷卡金回饋 (上限150元)。>>活動詳情 ※ 玉山e point，1點＝1元。折抵未出帳消費最高可折抵30%；線上消費 / 實體門市最高可折抵100%。(詳情請見) ※ 登錄辦法：2026/10/30 14:00:00~2026/10/31 23:59:00 統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等，恕不適用。 10/30(限量1,200名)",
-      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2006_10",
-      "registration_required": true,
-      "parent_activity_id": "esun-b818f6510b7d",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-30T14:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "※ 登錄辦法:2026/10/30 14:00~2026/10/31 23:59 統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 30.0,
-      "max_reward_amount_twd": 8550,
-      "featured": true,
-      "tags": [
-        "PChome線上購物10月網購活動",
-        "活動三 24力會員日，最高享2,500元回饋",
-        "玉山銀行",
-        "網購",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/esun-edbb28540525.json"
-    },
-    {
-      "id": "esun-b3e9a660f083",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "momo 購物10月網購活動｜活動三 桃金日最高享2,475元回饋",
-      "merchant": "momo 購物10月網購活動",
-      "categories": [
-        "網購",
-        "分期"
-      ],
-      "start_date": "2026-10-16",
-      "end_date": "2026-10-31",
-      "summary": "單筆滿15,000元以上，享1,000點玉山e point，1點＝1元。 刷玉山Unicard最高享2,475元回饋 (試算詳下方說明)。 ※ 本活動限量登錄1,500名，限正卡人登錄，正、附卡消費合併計算，每歸戶擇優回饋1次，最高回饋上限1,000點玉山e point，1點＝1元。 ※ 正、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※ 玉山U Bear信用卡網購最高享3%刷卡金，分期享2%刷卡金回饋 (上限150元)>>活動詳情。 ※ 玉山Unicard最高享4.5%回饋，分期消費享2%~3.5%回饋 (上限5,000點)>>活動詳情。 ※ 玉山e point，1點＝1元。折抵未出帳消費最高可折抵30%；實體門市 / 線上消費最高可折抵100%>>詳情請見。 ※ 登錄辦法：2026/10/28 17:00:00~2026/10/31 23:59:00統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等，恕不適用。 10/28 17:00開放登錄(限量1,500名) ※ 刷玉山Unicard拿更多！ 單筆滿15,000元，享2,475元回饋：成功登錄活動一＋活動三可獲得，活動一500mo幣＋活動三1,000點玉山e point＋玉山Unicard新申辦加碼8% (上限300點玉山e point)＋玉山Unicard【UP選方案】最高享4.5% (675點玉山e point)，共2,475元回饋，玉山e point，1點＝1元。 ※ 玉山Unicard新申辦加碼需透過momo專屬連結首次申辦方可享有。",
-      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2008_10",
-      "registration_required": true,
-      "parent_activity_id": "esun-6b7ca715ac88",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-28T17:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "※ 登錄辦法:2026/10/28 17:00~2026/10/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 10/28 17:00開放登錄(限量1,500名)",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 30.0,
-      "max_reward_amount_twd": 9400,
-      "featured": true,
-      "tags": [
-        "momo 購物10月網購活動",
-        "活動三 桃金日最高享2,475元回饋",
-        "玉山銀行",
-        "網購",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/esun-b3e9a660f083.json"
-    },
     {
       "id": "yuanta-7731a3453969",
       "bank_id": "yuanta",
@@ -1282,7 +1119,7 @@
           "start": "2026-10-01T00:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "優惠活動/登錄 登錄時間:2026/10/01 00:00 ~ 2026/10/31 23:59 登錄時間:2026/10/21 16:00 ~ 2026/10/31 23:59 登錄時間:2026/10/28 16:00 ~ 2026/10/31 23:59 優惠活動登錄 信用卡活動登錄 前往",
+          "source_text": "y 10/01 ~ 10/31 | momo 滿額最高享1.5% 無名額限制 交易方式 刷卡金額 刷卡金回饋 分期累積或單筆 5,000元 1.5% 登錄時間:2026/10/01 00:00 ~ 2026/10/31 23:59 無名額限制 10/01 ~ 10/12 | momo 購物節滿25,000享800 活動名額:60 交易方式 刷卡金額 刷卡金回饋 單筆且分期 25,000元 800元 登錄時間:2026/10/2",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1290,7 +1127,7 @@
           "start": "2026-10-21T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "優惠活動/登錄 登錄時間:2026/10/01 00:00 ~ 2026/10/31 23:59 登錄時間:2026/10/21 16:00 ~ 2026/10/31 23:59 登錄時間:2026/10/28 16:00 ~ 2026/10/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 本活動限於momo購物網(不含mo店+、富昇旅行社、電視購物、型錄)",
+          "source_text": "1 ~ 10/12 | momo 購物節滿25,000享800 活動名額:60 交易方式 刷卡金額 刷卡金回饋 單筆且分期 25,000元 800元 登錄時間:2026/10/21 16:00 ~ 2026/10/31 23:59 活動名額:60 10/01 ~ 10/12 | momo 購物節滿35,000享1,400 活動名額:30 交易方式 刷卡金額 刷卡金回饋 單筆且分期 35,000元 1,400元 登錄時間:202",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1298,7 +1135,7 @@
           "start": "2026-10-28T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "26/10/01 00:00 ~ 2026/10/31 23:59 登錄時間:2026/10/21 16:00 ~ 2026/10/31 23:59 登錄時間:2026/10/28 16:00 ~ 2026/10/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 本活動限於momo購物網(不含mo店+、富昇旅行社、電視購物、型錄)。參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同",
+          "source_text": "/01 ~ 10/31 | momo 滿15,000享400 活動名額:100 交易方式 刷卡金額 刷卡金回饋 單筆且分期 15,000元 400元 登錄時間:2026/10/28 16:00 ~ 2026/10/31 23:59 活動名額:100 10/01 ~ 10/31 | momo 滿30,000享1,000 活動名額:50 交易方式 刷卡金額 刷卡金回饋 單筆且分期 30,000元 1,000元 登錄時間:2026/",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1369,7 +1206,7 @@
           "start": "2026-10-01T00:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "優惠活動/登錄 登錄時間:2026/10/01 00:00 ~ 2026/10/31 23:59 登錄時間:2026/10/21 18:00 ~ 2026/10/31 23:59 登錄時間:2026/10/28 18:00 ~ 2026/10/31 23:59 優惠活動登錄 信用卡活動登錄 前往",
+          "source_text": "y 10/01 ~ 10/31 | 蝦皮購物 滿額最高享1.5% 無名額限制 交易方式 刷卡金額 刷卡金回饋 分期累積或單筆 5,000元 1.5% 登錄時間:2026/10/01 00:00 ~ 2026/10/31 23:59 無名額限制 10/01 ~ 10/12 | 蝦皮購物 購物節滿25,000享800 活動名額:60 交易方式 刷卡金額 刷卡金回饋 單筆且分期 25,000元 800元 登錄時間:2026/10/2",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1377,7 +1214,7 @@
           "start": "2026-10-21T18:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "優惠活動/登錄 登錄時間:2026/10/01 00:00 ~ 2026/10/31 23:59 登錄時間:2026/10/21 18:00 ~ 2026/10/31 23:59 登錄時間:2026/10/28 18:00 ~ 2026/10/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以",
+          "source_text": "1 ~ 10/12 | 蝦皮購物 購物節滿25,000享800 活動名額:60 交易方式 刷卡金額 刷卡金回饋 單筆且分期 25,000元 800元 登錄時間:2026/10/21 18:00 ~ 2026/10/31 23:59 活動名額:60 10/01 ~ 10/12 | 蝦皮購物 購物節滿35,000享1,400 活動名額:30 交易方式 刷卡金額 刷卡金回饋 單筆且分期 35,000元 1,400元 登錄時間:202",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -1385,7 +1222,7 @@
           "start": "2026-10-28T18:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "26/10/01 00:00 ~ 2026/10/31 23:59 登錄時間:2026/10/21 18:00 ~ 2026/10/31 23:59 登錄時間:2026/10/28 18:00 ~ 2026/10/31 23:59 優惠活動登錄 信用卡活動登錄 前往活動登錄專區 參加本活動須由正卡人於登錄時間完成活動登錄,以本行系統時間為準。將以登錄成功且同時符合各活動門檻之成功交易為回饋依據。若活動登錄名額額滿,將提前關閉登",
+          "source_text": "/01 ~ 10/31 | 蝦皮購物 滿15,000享400 活動名額:100 交易方式 刷卡金額 刷卡金回饋 單筆且分期 15,000元 400元 登錄時間:2026/10/28 18:00 ~ 2026/10/31 23:59 活動名額:100 10/01 ~ 10/31 | 蝦皮購物 滿30,000享1,000 活動名額:50 交易方式 刷卡金額 刷卡金回饋 單筆且分期 30,000元 1,000元 登錄時間:2026/",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1413,155 +1250,6 @@
       "needs_review": true,
       "review_message": "登錄時間晚於活動期間；同一子活動的登錄視窗互相重疊。",
       "detail_ref": "activities/kgi-7b4ac716bac3.json"
-    },
-    {
-      "id": "esun-22fc84d622dc",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "momo 購物10月網購活動｜活動二 雙10週年慶，最高享3,850元回饋",
-      "merchant": "momo 購物10月網購活動",
-      "categories": [
-        "網購",
-        "分期"
-      ],
-      "start_date": "2026-10-01",
-      "end_date": "2026-10-12",
-      "summary": "單筆滿18,000元以上，享1,200點玉山e point，1點＝1元。 單筆分期滿30,000元以上，享2,000點玉山e point，1點＝1元。 刷玉山Unicard最高享3,850元回饋 (試算詳下方說明)。 ※ 限量登錄1,300名，限正卡人登錄，正、附卡消費合併計算，每歸戶擇優回饋1次，最高回饋上限2,000點玉山e point。 ※ 正、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※ 玉山Unicard最高享4.5%回饋，分期消費享2%~3.5%回饋 (上限5,000點)>>活動詳情。 ※ 玉山U Bear信用卡網購最高享3%刷卡金，分期享2%刷卡金回饋 (上限150元)>>活動詳情。 ※ 玉山e point，1點＝1元。折抵未出帳消費最高可折抵30%；實體門市 / 線上消費最高可折抵100%>>詳情請見。 ※ 刷玉山Unicard拿更多！ 單筆分期滿30,000元，享3,850點回饋：成功登錄活動一＋活動二，可獲得活動一500 mo幣＋活動二2,000點玉山e point＋玉山Unicard新申辦加碼8% (上限300點玉山e point)＋玉山Unicard【UP選方案】分期最高享3.5% (1,050點玉山e point)，共3,850點回饋，玉山e point，1點＝1元。 ※ 玉山Unicard新申辦加碼需透過momo專屬連結首次申辦方可享有。 ※ 登錄辦法：2026/10/15 17:00:00~2026/10/31 23:59:00統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡",
-      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2008_10",
-      "registration_required": true,
-      "parent_activity_id": "esun-6b7ca715ac88",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-15T17:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "※ 登錄辦法:2026/10/15 17:00~2026/10/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 10/15 17:00開放登錄(限量1,300名)",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 30.0,
-      "max_reward_amount_twd": 9400,
-      "featured": true,
-      "tags": [
-        "momo 購物10月網購活動",
-        "活動二 雙10週年慶，最高享3,850元回饋",
-        "玉山銀行",
-        "網購",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間晚於活動期間。",
-      "detail_ref": "activities/esun-22fc84d622dc.json"
-    },
-    {
-      "id": "esun-5a9bba4e686c",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "蝦皮購物10月網購活動｜活動二 10.10品牌週年慶，最高享3,210元回饋",
-      "merchant": "蝦皮購物10月網購活動",
-      "categories": [
-        "網購",
-        "分期"
-      ],
-      "start_date": "2026-10-01",
-      "end_date": "2026-10-12",
-      "summary": "單筆分期滿12,000元享700點玉山e point，1點＝1元。 單筆分期滿26,000元享1,700點玉山e point ，1點＝1元。 刷玉山Unicard分期再享3.5%回饋，最高3,210元回饋 (試算詳下方說明)。 ※ 本活動限量登錄1,200名，限正卡人登錄，正附卡消費合併計算。每歸戶擇優回饋1次，最高回饋上限1,700點玉山e point，1點＝1元。 ※ 正、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※ 玉山Unicard分期消費享2%~3.5%回饋 (上限5,000點玉山e point) >>活動詳情 ※ 玉山e point，1點＝1元。折抵未出帳消費最高可折抵30%；實體門市 / 線上消費最高可折抵100%。>>詳情請見 ※ 玉山U Bear信用卡分期享加碼2% (上限150元) >>活動詳情 ※ 登錄辦法：2026/10/16 17:00:00~2026/10/31 23:59:00統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等，恕不適用。 10/16登錄(限量1,200名) ※ 刷玉山Unicard拿更多： 單筆分期滿26,000元享3,210元回饋：成功登錄活動一＋活動二，單筆分期滿26,000元，可獲得活動一300點＋活動二1,700點＋玉山Unicard【UP選方案】最高3.5% (910點)＋玉山Unicard新申辦加碼8% (300點)，共3,210點玉山e point回饋。 ※ 玉山Unicard新申辦加碼需透過蝦皮專屬連結首次申辦方可享有。",
-      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2100_10",
-      "registration_required": true,
-      "parent_activity_id": "esun-691f5a85b769",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-16T17:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "※ 登錄辦法:2026/10/16 17:00~2026/10/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 10/16登錄(限量1,200名)",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 30.0,
-      "max_reward_amount_twd": 9350,
-      "featured": true,
-      "tags": [
-        "蝦皮購物10月網購活動",
-        "活動二 10.10品牌週年慶，最高享3,210元回饋",
-        "玉山銀行",
-        "網購",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間晚於活動期間。",
-      "detail_ref": "activities/esun-5a9bba4e686c.json"
-    },
-    {
-      "id": "esun-1065795adb67",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "PChome線上購物10月網購活動｜活動二 百貨週年慶，最高享1,800元回饋",
-      "merchant": "PChome線上購物10月網購活動",
-      "categories": [
-        "網購",
-        "百貨購物",
-        "分期"
-      ],
-      "start_date": "2026-10-01",
-      "end_date": "2026-10-13",
-      "summary": "單筆滿15,000元以上，享1,000點玉山e point，1點＝1元。 單筆分期滿25,000元以上，享1,500點玉山e point，1點＝1元。 刷玉山U Bear信用卡網購最高再享3%刷卡金回饋。 ※ 本活動限量登錄1,200名，限正卡人登錄，正、附卡消費合併計算。每歸戶擇優回饋1次，最高回饋上限1,500點玉山e point。統一於2026年12月中旬後陸續回饋於正卡人帳戶。 ※ 本活動可與活動一全月活動同時參加，惟各活動須分別登錄，最高可享1,800元回饋。 ※ 正卡、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※ 玉山U Bear信用卡網購最高享3%刷卡金，分期消費享2%刷卡金回饋 (上限150元)。>>活動詳情 ※ 玉山e point，1點＝1元。折抵未出帳消費最高可折抵30%；線上消費 / 實體門市最高可折抵100%。(詳情請見) ※ 登錄辦法：2026/10/14 14:00:00~2026/10/31 23:59:00 統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等，恕不適用。 10/14(限量1,200名)",
-      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2006_10",
-      "registration_required": true,
-      "parent_activity_id": "esun-b818f6510b7d",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-14T14:00:00+08:00",
-          "end": "2026-10-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "※ 登錄辦法:2026/10/14 14:00~2026/10/31 23:59 統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 30.0,
-      "max_reward_amount_twd": 8550,
-      "featured": true,
-      "tags": [
-        "PChome線上購物10月網購活動",
-        "活動二 百貨週年慶，最高享1,800元回饋",
-        "玉山銀行",
-        "網購",
-        "百貨購物",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間晚於活動期間。",
-      "detail_ref": "activities/esun-1065795adb67.json"
     },
     {
       "id": "ubot-63a46253f43e",
@@ -1630,275 +1318,6 @@
       "detail_ref": "activities/ubot-63a46253f43e.json"
     },
     {
-      "id": "esun-de0fe0326c3f",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "燦坤3C家電",
-      "merchant": "燦坤3C家電",
-      "categories": [
-        "網購",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-10-01",
-      "end_date": "2026-10-18",
-      "summary": "讀取中 ::: 個人金融企業/商家私銀/亞資ESG 永續金融關於玉山 智能客服服務據點 EN 網站導覽 玉山銀行官方網站 個人金融 企業/商家 私銀/亞資 ESG 永續金融 產品與服務 存匯 產品/服務介紹 存匯首頁 臺幣服務 外幣服務 外幣優惠 ATM服務 保管箱服務 一站式外籍人才金融專區 線上申辦/查詢 線上開立數位帳戶 ATM據點查詢 台外幣利率查詢 匯率查詢 匯率換算 線上票信查詢 基本資料更新 全方位代收網 IXML憑證 預約預填分行業務 線上取號 信用卡 產品/服務介紹 信用卡首頁 信用卡介紹 簽帳金融卡 全球企業卡 玉山電子支付 支付碳帳戶 信用卡理財 刷卡優惠 商店收款服務 點數專區 國民旅遊卡專區 理債關懷專區 更多服務 信用卡申辦 辦卡進度查詢/補件 掛失/補發/開卡 額度調整申請/補件 卡友權益/服務 帳戶自動扣繳卡費 帳單e化申請 各項服務申請 活動登錄 貸款 產品/服務介紹 貸款首頁 個人信貸 信貸最新優惠 房屋貸款 所有專案貸款 個人紓困緩繳方案 理債關懷專區 友善貸款專區 線上申辦/查詢 貸款試算 信貸線上申請 房貸(含二順位)線上申請 房貸保證人線上申請 房貸額度利率評估 智能房屋價值試算 貸款線上簽約 查詢/補件/調閱平台 契約變更線上申請 房屋抵押權塗銷線上申請 財富管理 產品/服務介紹 財富管理首頁 貴賓理財 共同基金 海外ETF 海外股票 海外債券 結構型商品 黃金存摺 更多服務 玉山投研觀點 理財快易通 我的觀察清單 信託 產品/服務介紹 信託首頁 傳富發發金錢信託 樂活久久安養信託 簡易型安養信託 子女教育信託 股權傳承信託 危老不",
-      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=0013",
-      "registration_required": true,
-      "parent_activity_id": "esun-de0fe0326c3f",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 4.5,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "燦坤3C家電",
-        "玉山銀行",
-        "網購",
-        "行動支付",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/esun-de0fe0326c3f.json"
-    },
-    {
-      "id": "first-caa8a126c523",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "燦坤10月週年慶會員特典",
-      "merchant": "燦坤10月週年慶會員特典",
-      "categories": [
-        "生活消費",
-        "網購",
-        "百貨購物",
-        "分期"
-      ],
-      "start_date": "2026-10-01",
-      "end_date": "2026-10-18",
-      "summary": "滿額分期送燦坤K幣",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713931361",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "燦坤10月週年慶會員特典",
-        "第一銀行",
-        "three_c_comm",
-        "生活消費",
-        "網購",
-        "百貨購物",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/first-caa8a126c523.json"
-    },
-    {
-      "id": "ubot-99adbb00aa54",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "屈臣氏",
-      "merchant": "屈臣氏",
-      "categories": [
-        "百貨購物",
-        "網購",
-        "行動支付",
-        "生活消費"
-      ],
-      "start_date": "2024-01-01",
-      "end_date": "2026-10-18",
-      "summary": "刷聯邦最高享10%回饋",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202607drugstore/index.htm",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2024-01-01",
-          "end": "2024-06-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-01-01",
-          "end": "2026-06-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-01",
-          "end": "2026-12-31",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-03",
-          "end": "2026-10-18",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-09-05T14:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-10-05T14:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "per_period_reregister"
-      ],
-      "max_reward_percent": 10.0,
-      "max_reward_amount_twd": 120,
-      "featured": true,
-      "tags": [
-        "屈臣氏",
-        "聯邦銀行",
-        "百貨零售",
-        "百貨購物",
-        "網購",
-        "行動支付",
-        "生活消費"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-99adbb00aa54.json"
-    },
-    {
-      "id": "ubot-5d729af02c20",
-      "bank_id": "ubot",
-      "bank_name": "聯邦銀行",
-      "title": "康是美",
-      "merchant": "康是美",
-      "categories": [
-        "百貨購物",
-        "網購",
-        "行動支付",
-        "生活消費"
-      ],
-      "start_date": "2024-01-01",
-      "end_date": "2026-10-18",
-      "summary": "刷聯邦滿額最高贈200元現金折價券",
-      "source_url": "https://activity.ubot.com.tw/aws_act/2026/202607drugstore/index.htm?p=cosmed",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2024-01-01",
-          "end": "2024-06-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-01-01",
-          "end": "2026-06-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-01",
-          "end": "2026-12-31",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-07-01",
-          "end": "2026-09-30",
-          "label": "活動期間"
-        },
-        {
-          "start": "2026-09-03",
-          "end": "2026-10-18",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-09-05T14:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-10-05T14:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "用本活動,排除商品請見屈臣氏店內公告說明。 註2: 本活動於每月5日下午2點開放登錄~當月月底,參加本活動之持卡人須當月完成登錄始符合當月活動資格,如額滿系統將提前關閉並於登錄頁面公告。活動回饋取",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "per_period_reregister"
-      ],
-      "max_reward_percent": 10.0,
-      "max_reward_amount_twd": 120,
-      "featured": true,
-      "tags": [
-        "康是美",
-        "聯邦銀行",
-        "百貨零售",
-        "百貨購物",
-        "網購",
-        "行動支付",
-        "生活消費"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/ubot-5d729af02c20.json"
-    },
-    {
       "id": "ubot-bdd4ce26b503",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -1959,6 +1378,130 @@
       "detail_ref": "activities/ubot-bdd4ce26b503.json"
     },
     {
+      "id": "cathay-e78d7839e882",
+      "bank_id": "cathay",
+      "bank_name": "國泰世華",
+      "title": "PChome24h購物 iPhone新機預購優惠｜刷卡滿額最高享13%回饋",
+      "merchant": "PChome24h購物 iPhone新機預購優惠｜",
+      "categories": [
+        "網購"
+      ],
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-23",
+      "summary": "單筆最高享10%及玩數位最高3.3%回饋，累積滿額再享最高2%加碼優惠！",
+      "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202610/pchomeonline202610_3.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.cathaybk.com.tw/promotion/",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-26T16:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "會員於PChome 24h購物刷國泰世華信用卡,累積消費(含一次付清及分期付款)滿NT$150,000(含)以上 ,成功登錄再享1,500 P幣! ※本活動須於2026/10/26 16:00~2026/10/31 23:59透過『PChome 活動網頁』完成會員登錄始符合資格,登錄名額限量200名,額滿即關閉。 ※P幣預計於活動結束後次次月回饋~PChome會員帳戶,回饋時間依PChome作業為準。P幣價值為$1等值NT",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-27T16:00:00+08:00",
+          "end": null,
+          "label": "登錄截止",
+          "source_text": ",500點小樹點(信用卡) + 2,500 P幣 ※上述門檻須於2026/10/27 16:00~2026/10/31 23:59透過『PChome門檻登錄網頁』完成登錄始符合資格,登錄名額限量200名,額滿即關閉。",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-30T16:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "10/31 於PChome 24h購物刷國泰世華信用卡,累積消費(須分期付款)滿NT$150,000(含)以上 ,成功登錄再享1,500點小樹點(信用卡)! ※2026/10/30 16:00~2026/10/31 23:59於本行官網登錄專區及國泰優惠 CUBE Rewards App開放登錄,活動限量登錄200名,額滿即關閉。 ※每一正卡戶加碼活動限回饋乙次,最高回饋1,500點小樹點(信用卡)。活動辦法及注意事項詳『",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 13.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "PChome24h購物 iPhone新機預購優惠｜",
+        "國泰世華",
+        "網購"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間晚於活動期間；同一子活動的登錄視窗互相重疊。",
+      "detail_ref": "activities/cathay-e78d7839e882.json"
+    },
+    {
+      "id": "cathay-765a05425d47",
+      "bank_id": "cathay",
+      "bank_name": "國泰世華",
+      "title": "momo購物網 iPhone新機預購優惠 (10/16~10/23)",
+      "merchant": "momo購物網 iPhone新機預購優惠 (10/16~10/23)",
+      "categories": [
+        "網購"
+      ],
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-23",
+      "summary": "單筆滿額最高享11%小樹點(信用卡)回饋，累積消費滿額再享最高1,800小樹點(信用卡)及1,800mo點",
+      "source_url": "https://www.cathay-cube.com.tw/content/cub-aem-cs/zh-tw/cathaybk/personal/event/overview/credit-card/online-shopping/202610/momo202610_3.html",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.cathaybk.com.tw/promotion/",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-23T16:00:00+08:00",
+          "end": "2026-10-23T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "1.參加本活動須於2026/10/23 16:00~2026/10/23 23:59完成活動登錄始符合資格,活動登錄限量名額300名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、簽帳金融卡、LINE PAY、街口支付、悠遊付、橘子支付等第三方支付不適用。3.正附卡消費合併計算,",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-30T15:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "omo會員於momo購物網刷國泰世華信用卡,指定消費累積(含一次付清及分期付款)滿NT$120,000(含)以上 ,成功登錄再享1,800mo點! ※本活動須於2026/10/30 15:00~2026/10/31 23:59透過『momo 登錄網頁』完成會員登錄始符合資格,登錄名額限量300名,額滿即關閉。 ※指定消費排除(1)購買電子票券、紅利金、使用APP發紅包之消費 (2)訂閱moPro或moPro+會員之訂閱費用",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
+          "start": "2026-10-30T16:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "/10/31 於momo購物網刷國泰世華信用卡,累積消費金額(須分期付款)滿NT$120,000(含)以上 ,成功登錄再享 1,800 點小樹點(信用卡)! ※2026/10/30 16:00~2026/10/31 23:59於本行官網登錄專區及國泰優惠 CUBE Rewards App開放登錄,活動限量登錄300名,額滿即關閉。 ※每一正卡戶加碼活動限回饋乙次,最高回饋1,800點小樹點(信用卡)。 ※活動辦法及注意事項",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 11.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "momo購物網 iPhone新機預購優惠 (10/16~10/23)",
+        "國泰世華",
+        "網購"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間晚於活動期間；同一子活動的登錄視窗互相重疊。",
+      "detail_ref": "activities/cathay-765a05425d47.json"
+    },
+    {
       "id": "ubot-5b73c7bc869a",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -2015,6 +1558,55 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/ubot-5b73c7bc869a.json"
+    },
+    {
+      "id": "esun-70ea728f8085",
+      "bank_id": "esun",
+      "bank_name": "玉山銀行",
+      "title": "蝦皮購物10月網購活動｜活動四 蝦皮狂購日 最高享3,450元回饋",
+      "merchant": "蝦皮購物10月網購活動",
+      "categories": [
+        "網購",
+        "分期"
+      ],
+      "start_date": "2026-10-18",
+      "end_date": "2026-10-28",
+      "summary": "單筆分期滿15,000元享800點玉山e point，1點＝1元。 單筆分期滿30,000元享1,800點玉山e point，1點＝1元。 刷玉山Unicard最高享3,450元回饋 (試算詳下方說明)。 ※ 本活動限量登錄1,200名，限正卡人登錄，正、附卡消費合併計算，每歸戶擇優回饋1次，最高回饋上限1,800點玉山e point。 ※ 正卡、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※ 玉山Unicard分期消費享2%~3.5%回饋 (上限5,000點)。>>活動詳情 ※ 玉山e point，1點＝1元。折抵未出帳消費最高可折抵30%；實體門市 / 線上消費最高可折抵100%。>>詳情請見 ※ 玉山U Bear信用卡分期享網購加碼2% (上限150元)>>活動詳情 ※ 刷玉山Unicard拿更多： 單筆分期滿15,000元，享12.8%回饋：成功登錄活動一＋活動四，可獲得活動一300點＋活動四800點＋玉山Unicard【UP選方案】分期享3.5% (525點)＋玉山Unicard蝦皮新申辦加碼8% (300點)，共1,925點玉山e point回饋，1,925 / 15,000＝12.8%。 單筆分期滿30,000元，享3,450元回饋：成功登錄活動一＋活動四，可獲得活動一300點＋活動四1,800點＋玉山Unicard【UP選方案】分期享3.5% (1,050點)＋玉山Unicard蝦皮新申辦加碼8% (300點)，共3,450點玉山e point回饋。 ※ 玉山Unicard新申辦加碼需透過蝦皮專屬連結首次申辦方可享有。 ※ 登錄辦法：2",
+      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2100_10",
+      "registration_required": true,
+      "parent_activity_id": "esun-691f5a85b769",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-29T17:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "525點)+玉山Unicard蝦皮新申辦加碼8% (300點),共1,925點玉山e point回饋,1,925 / 15,000=12.8%。 ※ 登錄辦法:2026/10/29 17:00~2026/10/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 10/29登錄(限量1,200名)",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 30.0,
+      "max_reward_amount_twd": 9350,
+      "featured": true,
+      "tags": [
+        "蝦皮購物10月網購活動",
+        "活動四 蝦皮狂購日 最高享3,450元回饋",
+        "玉山銀行",
+        "網購",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間晚於活動期間。",
+      "detail_ref": "activities/esun-70ea728f8085.json"
     },
     {
       "id": "scsb-02a75dbc93ed",
@@ -2586,7 +2178,7 @@
           "start": "2026-06-10",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "惠。 如信用卡已設定指定卡片分期交易,參加本活動須先進線客服取消指定卡片分期設定,並登錄本活動,方能享有分期優惠。 須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起~202",
+          "source_text": "台新銀行信用卡帳單地址。保費認列不含國外保險交易、單筆消費分期0利率之交易、非臺灣保險公司扣繳之保險費、健保費等。 須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起~202",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -2594,15 +2186,31 @@
           "start": "2026-06-10T10:00:00+08:00",
           "end": null,
           "label": "登錄截止",
-          "source_text": "客服取消指定卡片分期設定,並登錄本活動,方能享有分期優惠。 須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
+          "source_text": "費分期0利率之交易、非臺灣保險公司扣繳之保險費、健保費等。 須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
           "reminder_minutes": 10,
           "precision": "datetime"
+        },
+        {
+          "start": "2026-07-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "2026年7-12月保費分期」,方享自登錄日起~2026/12/31每筆保費滿額自動分期。 正卡持卡人須於指定登錄期間:2026/7/1(三)10:00-2026/10/31(六)23:59,於台新銀行官網、Richart Life APP完成本活動登錄作業始得參加,逾期未登錄者視同放棄,恕不得",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-10-31",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "享自登錄日起~2026/12/31每筆保費滿額自動分期。 正卡持卡人須於指定登錄期間:2026/7/1(三)10:00-2026/10/31(六)23:59,於台新銀行官網、Richart Life APP完成本活動登錄作業始得參加,逾期未登錄者視同放棄,恕不得要求補登參加或變更回饋內容。 台新銀行",
+          "reminder_minutes": 10,
+          "precision": "date"
         },
         {
           "start": "2026-12-31",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "期」 登錄期間:2026/6/10(三) 10:00-2026/12/31(四) 23:59,僅適用於2026/7/1-2026/12/31完成保險費扣繳之交易。 ※曾登錄「2026年1-6月保費分期」之客戶,仍需重新登錄「2026年7-12月保費分期」,方享自登錄日起~2026/12/31每筆保費",
+          "source_text": "錄去 登錄期間:2026/6/10(三) 10:00-2026/12/31(四) 23:59,僅適用於2026/7/1-2026/12/31完成保險費扣繳之交易。 ※曾登錄「2026年1-6月保費分期」之客戶,仍需重新登錄「2026年7-12月保費分期」,方享自登錄日起~2026/12/31每筆保費",
           "reminder_minutes": 10,
           "precision": "date"
         }
@@ -2667,7 +2275,7 @@
           "start": "2026-06-10",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "線客服取消指定卡片分期設定,並完成活動登錄,方能享有分期優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起起~20",
+          "source_text": "分期」,方享自登錄日起~2026/7/1每筆保費滿額自動分期。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起起~20",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -2675,7 +2283,7 @@
           "start": "2026-06-10T10:00:00+08:00",
           "end": null,
           "label": "登錄截止",
-          "source_text": "優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
+          "source_text": "分期。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2683,7 +2291,7 @@
           "start": "2026-07-01",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "繳之交易。 ※曾登錄「2026年1-6月保費分期」之客戶,仍需重新登錄「2026年7-12月保費分期」,方享自登錄日起~2026/7/1每筆保費滿額自動分期。 ※本活動限信用卡永久額度內辦理,且限持卡人於活動期間內完成登錄始可參加。 ※台新銀行將以簡訊或電子郵件方式通知持卡人分期訂單成立,並將每",
+          "source_text": "繳之交易。 ※曾登錄「2026年1-6月保費分期」之客戶,仍需重新登錄「2026年7-12月保費分期」,方享自登錄日起~2026/7/1每筆保費滿額自動分期。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -2691,7 +2299,7 @@
           "start": "2026-12-31",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "登錄,方能享有分期優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起起~2026/12/31每筆保費自動分3、6、1",
+          "source_text": "1每筆保費滿額自動分期。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起起~2026/12/31每筆保費自動分3、6、1",
           "reminder_minutes": 10,
           "precision": "date"
         }
@@ -2907,7 +2515,7 @@
           "start": "2026-10-29T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "1.參加本活動須於2026/10/29 16:00~2026/10/31 23:59完成活動登錄始符合資格,活動登錄限量名額3,000名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、LINE PAY、Pi錢包、街口支付、悠遊付及AFTEE(後支付)等第三方支付不適用,簽帳金融卡",
+          "source_text": "PChome 24h購物 刷卡優惠 (10/1~10/31) 單筆滿額最高享6%小樹點(信用卡)回饋 1.參加本活動須於2026/10/29 16:00~2026/10/31 23:59完成活動登錄始符合資格,活動登錄限量名額3,000名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、LINE PAY、Pi錢包、街口支付、悠遊付及AFTEE(後支付)等第三方支付不適用,簽帳金融卡",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -2970,7 +2578,7 @@
           "start": "2026-10-30T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "1.參加本活動須於2026/10/30 16:00~2026/10/31 23:59完成活動登錄始符合資格,活動登錄限量名額200名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、LINE PAY、Pi錢包、街口支付、悠遊付及AFTEE(後支付)等第三方支付不適用,簽帳金融卡不適",
+          "source_text": "Chome 24h購物 累積滿額加碼優惠 (10/1-10/31) 累積分期滿15萬最高享1,500小樹點(信用卡)+ 1,500 P幣回饋 1.參加本活動須於2026/10/30 16:00~2026/10/31 23:59完成活動登錄始符合資格,活動登錄限量名額200名,登錄名額額滿將提前關閉登錄系統。2.本活動商務卡、LINE PAY、Pi錢包、街口支付、悠遊付及AFTEE(後支付)等第三方支付不適用,簽帳金融卡不適",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -3750,7 +3358,7 @@
           "start": "2026-10-29T14:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "※ 登錄辦法:2026/10/29 14:00~2026/10/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 10/29登錄(限量1,500名)",
+          "source_text": "0元)。>>活動詳情 ※ 玉山e point,1點=1元。折抵未出帳消費最高可折抵30%;實體門市 / 線上消費最高可折抵100%。>>詳情請見 ※ 登錄辦法:2026/10/29 14:00~2026/10/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等,恕不適用上述活動。 10/29登錄(限量1,500名)",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -3773,6 +3381,55 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/esun-4347d37a4fbd.json"
+    },
+    {
+      "id": "esun-edbb28540525",
+      "bank_id": "esun",
+      "bank_name": "玉山銀行",
+      "title": "PChome線上購物10月網購活動｜活動三 24力會員日，最高享2,500元回饋",
+      "merchant": "PChome線上購物10月網購活動",
+      "categories": [
+        "網購",
+        "分期"
+      ],
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-31",
+      "summary": "單筆滿18,000元以上，享1,200點玉山e point，1點＝1元。 單筆分期滿35,000元以上，享2,200點玉山e point，1點＝1元。 刷玉山U Bear信用卡網購最高再享3%刷卡金回饋。 ※ 本活動限量登錄1,200名，限正卡人登錄，正、附卡消費合併計算。每歸戶擇優回饋1次，最高回饋上限2,200點玉山e point。統一於2026年12旬後陸續回饋於正卡人帳戶。 ※ 本活動可與活動一全月活動同時參加，惟各活動須分別登錄，最高可享2,500元回饋。 ※ 正卡、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※ 玉山U Bear信用卡網購最高享3%刷卡金，分期消費享2%刷卡金回饋 (上限150元)。>>活動詳情 ※ 玉山e point，1點＝1元。折抵未出帳消費最高可折抵30%；線上消費 / 實體門市最高可折抵100%。(詳情請見) ※ 登錄辦法：2026/10/30 14:00:00~2026/10/31 23:59:00 統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等，恕不適用。 10/30(限量1,200名)",
+      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2006_10",
+      "registration_required": true,
+      "parent_activity_id": "esun-b818f6510b7d",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-30T14:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "0元)。>>活動詳情 ※ 玉山e point,1點=1元。折抵未出帳消費最高可折抵30%;線上消費 / 實體門市最高可折抵100%。(詳情請見) ※ 登錄辦法:2026/10/30 14:00~2026/10/31 23:59 統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等,恕不適用。 10/30(限量1,200名)",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 30.0,
+      "max_reward_amount_twd": 8550,
+      "featured": true,
+      "tags": [
+        "PChome線上購物10月網購活動",
+        "活動三 24力會員日，最高享2,500元回饋",
+        "玉山銀行",
+        "網購",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/esun-edbb28540525.json"
     },
     {
       "id": "esun-583bd6649f7c",
@@ -3799,7 +3456,7 @@
           "start": "2026-10-01T14:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "※ 登錄辦法:2026/10/1 14:00~2026/10/31 23:59統一開放正卡人於PChome指定網頁登錄。 10/1登錄(限量1000名)",
+          "source_text": "歸戶上限800元刷卡金+200 P幣。 ※ 玉山U Bear信用卡網購最高享3%刷卡金,分期消費享2%刷卡金回饋 (上限150元)。>>活動詳情 ※ 登錄辦法:2026/10/1 14:00~2026/10/31 23:59統一開放正卡人於PChome指定網頁登錄。 ※ 本活動須先登入PChome會員,並且須先消費滿額方可進行登錄。 ※ 簽帳金融卡、公司卡及採購卡等,恕不適用。 10/1登錄(限量1000名)",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -3969,6 +3626,55 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/esun-b6a4a194b97c.json"
+    },
+    {
+      "id": "esun-b3e9a660f083",
+      "bank_id": "esun",
+      "bank_name": "玉山銀行",
+      "title": "momo 購物10月網購活動｜活動三 桃金日最高享2,475元回饋",
+      "merchant": "momo 購物10月網購活動",
+      "categories": [
+        "網購",
+        "分期"
+      ],
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-31",
+      "summary": "單筆滿15,000元以上，享1,000點玉山e point，1點＝1元。 刷玉山Unicard最高享2,475元回饋 (試算詳下方說明)。 ※ 本活動限量登錄1,500名，限正卡人登錄，正、附卡消費合併計算，每歸戶擇優回饋1次，最高回饋上限1,000點玉山e point，1點＝1元。 ※ 正、附卡人參加本活動皆需下載玉山Wallet並註冊成功者始符合活動資格。 ※ 玉山U Bear信用卡網購最高享3%刷卡金，分期享2%刷卡金回饋 (上限150元)>>活動詳情。 ※ 玉山Unicard最高享4.5%回饋，分期消費享2%~3.5%回饋 (上限5,000點)>>活動詳情。 ※ 玉山e point，1點＝1元。折抵未出帳消費最高可折抵30%；實體門市 / 線上消費最高可折抵100%>>詳情請見。 ※ 登錄辦法：2026/10/28 17:00:00~2026/10/31 23:59:00統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 ※ 簽帳金融卡、公司卡及採購卡等，恕不適用。 10/28 17:00開放登錄(限量1,500名) ※ 刷玉山Unicard拿更多！ 單筆滿15,000元，享2,475元回饋：成功登錄活動一＋活動三可獲得，活動一500mo幣＋活動三1,000點玉山e point＋玉山Unicard新申辦加碼8% (上限300點玉山e point)＋玉山Unicard【UP選方案】最高享4.5% (675點玉山e point)，共2,475元回饋，玉山e point，1點＝1元。 ※ 玉山Unicard新申辦加碼需透過momo專屬連結首次申辦方可享有。",
+      "source_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=2008_10",
+      "registration_required": true,
+      "parent_activity_id": "esun-6b7ca715ac88",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.esunbank.com.tw/EsunCreditweb/txnservice/identify?PRJCD=ALLACTIV#b",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-28T17:00:00+08:00",
+          "end": "2026-10-31T23:59:00+08:00",
+          "label": "活動登錄期間",
+          "source_text": "※ 登錄辦法:2026/10/28 17:00~2026/10/31 23:59統一開放正卡人於玉山銀行官網活動登錄頁、玉山Wallet App登錄。 10/28 17:00開放登錄(限量1,500名)",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 30.0,
+      "max_reward_amount_twd": 9400,
+      "featured": true,
+      "tags": [
+        "momo 購物10月網購活動",
+        "活動三 桃金日最高享2,475元回饋",
+        "玉山銀行",
+        "網購",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/esun-b3e9a660f083.json"
     },
     {
       "id": "esun-65553dbdcef2",
@@ -4536,6 +4242,53 @@
       "detail_ref": "activities/esun-3cc792466657.json"
     },
     {
+      "id": "obank-e40eea331e40",
+      "bank_id": "obank",
+      "bank_name": "王道銀行",
+      "title": "一卡通卡友限定 ! 刷卡消費限時最高享3%現金回饋",
+      "merchant": "一卡通卡友限定 ! 刷卡消費限時最高享3%現金回饋",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-31",
+      "summary": "活動期間：2026/10/15～2026/10/31 活動對象：王道銀行一卡通票證功能之簽帳金融卡持卡人 活動內容： 於活動期間持王道銀行一卡通票證功能之簽帳金融卡刷卡一般消費享額外加碼2%現金回饋 ，每一持卡人最高加碼回饋上限新台幣100元。活動須登錄，限量5,000名，額滿將於活動登錄頁告示。 本活動於2026/10/15中午12:00起開放登錄 活動登錄>> 活動詳情>>",
+      "source_url": "https://www.o-bank.com/retail/event/event-announce/debit_20261031_2",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.o-bank.com/egift/RegisterCampaign",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-15T12:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "持王道銀行一卡通票證功能之簽帳金融卡刷卡一般消費享額外加碼2%現金回饋 ,每一持卡人最高加碼回饋上限新台幣100元。活動須登錄,限量5,000名,額滿將於活動登錄頁告示。 本活動於2026/10/15中午12:00起開放登錄 活動登錄>> 活動詳情>>",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 3.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "一卡通卡友限定 ! 刷卡消費限時最高享3%現金回饋",
+        "王道銀行",
+        "簽帳金融卡",
+        "其他優惠"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/obank-e40eea331e40.json"
+    },
+    {
       "id": "first-807f822bd2a0",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -4637,7 +4390,7 @@
           "start": "2026-08-15T15:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "店/燦坤/全國電子/賣場門市,適用門市名單) 單筆分期門檻 回饋刷卡金 分12期以上 回饋升級 每波限量 登錄名額 登錄時間 35,000元 700元 800元 100名 第一波 8/15下午3點開放登錄~8/20 第二波 9/15下午3點開放登錄~10/20 50,000元 1,000元 1,100元 100名 65,000元 1,300元 2,100元 100名 75,000元 1,500元 2,500元 5",
+          "source_text": "8/15下午3點開放登錄~8/20 9/15下午3點開放登錄~10/20 第一波 8/15下午3點開放登錄~8/20 第二波 9/15下午3點開放登錄~10/20",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -4645,7 +4398,7 @@
           "start": "2026-09-15T15:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": " 單筆分期門檻 回饋刷卡金 分12期以上 回饋升級 每波限量 登錄名額 登錄時間 35,000元 700元 800元 100名 第一波 8/15下午3點開放登錄~8/20 第二波 9/15下午3點開放登錄~10/20 50,000元 1,000元 1,100元 100名 65,000元 1,300元 2,100元 100名 75,000元 1,500元 2,500元 50名 登錄時間 第一波 8/15下午3點開放",
+          "source_text": "8/15下午3點開放登錄~8/20 9/15下午3點開放登錄~10/20 第一波 8/15下午3點開放登錄~8/20 第二波 9/15下午3點開放登錄~10/20",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -5020,7 +4773,7 @@
           "start": "2026-10-08T10:00:00+08:00",
           "end": "2026-11-01T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "登錄期間:2026/10/8 10:00~2026/11/1 23:59 本活動消費計算期間:於2026/10/8~2026/11/1消費且入帳日於2026/11/6前。交易金額認定與計算順序係以持卡人消費入帳日為準。台新銀行將於活動結束後,計算已完成登錄之持卡人,及符合",
+          "source_text": "期間 活動期間 2026-10-08~2026-11-01 優惠內容 【週年慶滿額最高贈500點】 活動期間:2026/10/8~2026/11/1 登錄期間:2026/10/8 10:00~2026/11/1 23:59 活動期間當日單店 .刷台新信用卡累計消費滿20,000元,贈400點台新Point(信用卡) (限量100份) .刷SKM Park Outlets聯名卡累計消費滿6,000元,再加贈100點台新P",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -5447,7 +5200,7 @@
           "start": "2026-09-23T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "金 NT$50,000 800元刷卡金 NT$100,000 1,800元刷卡金 NT$300,000 加贈高級掛燙機乙台(限量20台) 活動注意事項 本活動限量登錄500名,將於2026/9/23 14:00開放登錄。 1~4門檻每戶(正附卡合併計算)限擇優回饋乙次,最高回饋1,800元刷卡金。。 本活動僅適用兆豐信用卡消費。不適用於電子支付(LINE Pay、街口支付等)之付款方式。 注意事項 本活動正附卡消費合併計算,正",
+          "source_text": "本活動限量登錄500名,將於2026/9/23 14:00開放登錄。 本活動正附卡消費合併計算,正、附卡合併每戶(依正卡人身分證字號歸戶計算)擇優回饋乙次,回饋上限為1,800元刷卡金;本活動持卡人最晚須於2026/11/30前~本行網站完成登錄(恕不受理人工登錄申請),以符合",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -5821,7 +5574,7 @@
           "start": "2026-09-15T10:00:00+08:00",
           "end": "2026-09-30T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "者,仍可於活動期間完成首次LINE Pay消費後取得此項資格。 ※ 登錄辦法:當月15日早上10:00 ~ 當月最後一日23:59止,例如9月份活動登錄時間為:2026/9/15 10:00~2026/9/30 23:59止,以此類推。僅限正卡持卡人登錄參加。活動採每月限量登錄制,9、10、11月皆可參加,惟每月均須重新完成活動登錄,前一月份之登錄資格不延續~次月。 ※ 每歸戶每月回饋上限500點,每月限量登錄5,00",
+          "source_text": "※ 登錄辦法:當月15日早上10:00 ~ 當月最後一日23:59止,例如9月份活動登錄時間為:2026/9/15 10:00~2026/9/30 23:59止,以此類推。僅限正卡持卡人登錄參加。活動採每月限量登錄制,9、10、11月皆可參加,惟每月均須重新完成活動登錄,前一月份之登錄資格不延續~次月。 活動期間 (2026/9/1~2026/11/30)",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -6121,14 +5874,6 @@
       "registration_url": "https://ebank.scsb.com.tw/ternal/ofwbcv05/page#/ofwb/cv/05/01",
       "registration_url_kind": "bank_portal",
       "registration_windows": [
-        {
-          "start": "2026-04-01",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "限量500名,登錄名額額滿即止。 ※本活動於「每月第一個週三」下午4點開放登錄,同月份登錄一次即可,次月須重新登錄。 (2026/4/1、5/6、6/3、7/1、8/5、9/2、10/7、11/4、12/2) >>>【月月活動登錄】<<< (6月起變更活動登錄網址) 注意事項 本活動僅限上海銀行",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
         {
           "start": "2026-04-01T16:00:00+08:00",
           "end": null,
@@ -8072,7 +7817,7 @@
           "start": "2026-08-18T14:00:00+08:00",
           "end": "2026-12-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "卡 活動內容: Mastercard信用卡綁定Apple Pay支付消費達檻滿額享200元刷卡金 活動期間:2026/8/18~2026/12/31 登錄期間:2026/8/18 14:00~2026/12/31 23:59止 (已額滿) 活動內容: 活動期間內以元大銀行發行之Mastercard信用卡綁定Apple Pay,支付一般消費累積滿新臺幣2,000元,並於指定期間內完成官網登錄,贈「刷卡金新臺幣200元」。 ",
+          "source_text": "登錄期間:2026/8/18 14:00~2026/12/31 23:59止 (已額滿) 1.參加人於本活動期間(2026/8/18~2026/12/31)以元大銀行發行之任一Mastercard信用卡綁定Apple Pay,並完成一般消費累積金額滿新臺幣2,000元,並於",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -8251,7 +7996,7 @@
           "start": "2026-10-23T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "活動於2026/10/23 14:00於兆豐官網開放登錄。 開放登錄日起~2026/12/31期間先行完成網頁登錄;活動期間內只需登錄一次,完成網頁登錄之當月(含當月)起~2026/12/31,均可參與本活動。 開放登錄時間 並完成登錄, 註 1:活動限量5",
+          "source_text": "msung Pay); 非實體通路如網路、非面對面、傳真、郵購刷卡消費, 或其他電子支付交易皆不適用。 注意事項 政府採購卡、商務卡及公司戶所持VISA金融卡不適用本活動。 活動於2026/10/23 14:00於兆豐官網開放登錄。 7-ELEVEN 50元現金抵用券符合回饋資格認定: 開放登錄日起~2026/12/31期間先行完成網頁登錄;活動期間內只需登錄一次,完成網頁登錄之當月(含當月)起~2026/12/31,均可參與本",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -8259,7 +8004,7 @@
           "start": "2026-12-31",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "活動於2026/10/23 14:00於兆豐官網開放登錄。 開放登錄日起~2026/12/31期間先行完成網頁登錄;活動期間內只需登錄一次,完成網頁登錄之當月(含當月)起~2026/12/31,均可參與本活動。 開放登錄時間 並完成登錄, 註 1:活動限",
+          "source_text": "026/10/23 14:00於兆豐官網開放登錄。 7-ELEVEN 50元現金抵用券符合回饋資格認定: 開放登錄日起~2026/12/31期間先行完成網頁登錄;活動期間內只需登錄一次,完成網頁登錄之當月(含當月)起~2026/12/31,均可參與本活動。 正卡及附卡需分開登錄且分開計算消費,【優惠",
           "reminder_minutes": 10,
           "precision": "date"
         }
@@ -9448,9 +9193,8 @@
       "title": "旅遊出行 凱基卡友專享肯驛最高20%優惠",
       "merchant": "旅遊出行 凱基卡友專享肯驛最高20%優惠",
       "categories": [
-        "行動支付",
+        "網購",
         "百貨購物",
-        "生活消費",
         "旅遊交通",
         "加油交通",
         "海外消費",
@@ -9477,9 +9221,8 @@
       "tags": [
         "旅遊出行 凱基卡友專享肯驛最高20%優惠",
         "凱基銀行",
-        "行動支付",
+        "網購",
         "百貨購物",
-        "生活消費",
         "旅遊交通",
         "加油交通",
         "海外消費",
@@ -10058,23 +9801,15 @@
           "start": "2026-07-10T10:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "於2026/7/1~2026/12/31(含)前進件且於2027/1/10(含)前核卡,進件及核卡日期皆以本行系統為準。 登錄規則: 最晚須於核卡後30日內完成登錄。 開放登錄時間2026/7/10 10:00起~2027/1/10 23:59止,名額無上限。 登錄方式: 下載【Fubon+ 台北富邦行動銀行】註冊/登入後,點選【優惠】>>【活動登錄】勾選活動即完成登錄。 語音登錄:撥打(02)8751-1313,請說【語音登",
+          "source_text": "開放登錄時間2026/7/10 10:00起~2027/1/10 23:59止,名額無上限。 下載【Fubon+ 台北富邦行動銀行】註冊/登入後,點選【優惠】>>【活動登錄】勾選活動即完成登錄。 核卡時間2026/7/1~2026/9/30,且2026/10/3",
           "reminder_minutes": 10,
           "precision": "datetime"
-        },
-        {
-          "start": "2027-01-10",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "費回饋維持不變。上述國家若有異動,依本行官網公告為準。 本活動需於2026/7/1~2026/12/31(含)前進件且於2027/1/10(含)前核卡,進件及核卡日期皆以本行系統為準。 登錄規則: 最晚須於核卡後30日內完成登錄。 開放登錄時間2026/7/10 10:00起~2027/1/10 ",
-          "reminder_minutes": 10,
-          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": 300,
       "featured": true,
       "tags": [
@@ -10090,9 +9825,9 @@
         "分期"
       ],
       "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "登錄時間晚於活動期間。",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
       "detail_ref": "activities/taipei_fubon-7bff8a4ac1b1.json"
     },
     {
@@ -10103,7 +9838,6 @@
       "merchant": "momo卡海外好好刷",
       "categories": [
         "網購",
-        "行動支付",
         "百貨購物",
         "生活消費",
         "旅遊交通",
@@ -10131,14 +9865,13 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 25.0,
+      "max_reward_percent": 50.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "momo卡海外好好刷",
         "台北富邦銀行",
         "網購",
-        "行動支付",
         "百貨購物",
         "生活消費",
         "旅遊交通",
@@ -10205,9 +9938,12 @@
       "id": "taipei_fubon-172c36299c44",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
-      "title": "悍勇卡外送5%回饋",
-      "merchant": "悍勇卡外送5%回饋",
+      "title": "悍勇卡精選通路5%回饋",
+      "merchant": "悍勇卡精選通路5%回饋",
       "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食"
@@ -10231,17 +9967,17 @@
       "registration_windows": [
         {
           "start": "2026-07-22T16:00:00+08:00",
-          "end": "2026-07-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "提前終止活動,額滿為止,不另行通知。額滿後恕無法補登及享有回饋資格,登錄未成功者亦同,登錄結果以本行系統顯示為準。 登錄時間: 月份 登錄時間 登錄名額 7月 2026/7/22 16:00~2026/7/31 23:59 限量5,000名 8月 2026/8/22 16:00~2026/8/31 23:59 限量5,000名 9月 2026/9/22 16:00~2026/9/30 23:59 限量5,000名 10",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
         {
           "start": "2026-08-22T16:00:00+08:00",
-          "end": "2026-08-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "錄結果以本行系統顯示為準。 登錄時間: 月份 登錄時間 登錄名額 7月 2026/7/22 16:00~2026/7/31 23:59 限量5,000名 8月 2026/8/22 16:00~2026/8/31 23:59 限量5,000名 9月 2026/9/22 16:00~2026/9/30 23:59 限量5,000名 10月 2026/10/22 16:00~2026/10/31 23:59 限量5,000名",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10249,7 +9985,7 @@
           "start": "2026-09-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10257,7 +9993,7 @@
           "start": "2026-10-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10265,7 +10001,7 @@
           "start": "2026-11-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10273,20 +10009,23 @@
           "start": "2026-12-22T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "pp完成活動登錄,刷卡消費即享5%刷卡金回饋。 ※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
+          "source_text": "※登錄時間:每月22日下午16:00開放登錄~當月月底,每季限量15,000名 ※此活動每季僅需登錄一次即符合當季活動資格,不需每月重覆登錄(ex.7月登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
-        "registration_closes_early"
+        "unknown"
       ],
       "max_reward_percent": 15.0,
       "max_reward_amount_twd": 1000,
       "featured": true,
       "tags": [
-        "悍勇卡外送5%回饋",
+        "悍勇卡精選通路5%回饋",
         "台北富邦銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食"
@@ -10330,7 +10069,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -10383,7 +10122,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": 7,
       "featured": true,
       "tags": [
@@ -10765,6 +10504,7 @@
       "merchant": "精選海外旅遊最高回饋5%",
       "categories": [
         "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -10790,25 +10530,25 @@
       "registration_windows": [
         {
           "start": "2026-01-01T00:00:00+08:00",
-          "end": "2026-01-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "登錄名額限量,額滿將提前終止活動,登錄結果以本行系統顯示為準,恕無法補登享回饋資格,登錄未成功者亦同。本活動之回饋,正、附卡消費合併計算。 登錄期間 活動代碼 2026/1/1 00:00~1/31 23:59 0106 2026/2/1 00:00~2/28 23:59 0203 2026/3/1 00:00~3/31 23:59 0303 2026/4/1 00:00~4/30 23:59 0403 2",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
         {
           "start": "2026-02-01T00:00:00+08:00",
-          "end": "2026-02-28T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "恕無法補登享回饋資格,登錄未成功者亦同。本活動之回饋,正、附卡消費合併計算。 登錄期間 活動代碼 2026/1/1 00:00~1/31 23:59 0106 2026/2/1 00:00~2/28 23:59 0203 2026/3/1 00:00~3/31 23:59 0303 2026/4/1 00:00~4/30 23:59 0403 2026/5/1 00:00~5/31 23:59 0503 2",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
         {
           "start": "2026-03-01T00:00:00+08:00",
-          "end": "2026-03-31T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "消費合併計算。 登錄期間 活動代碼 2026/1/1 00:00~1/31 23:59 0106 2026/2/1 00:00~2/28 23:59 0203 2026/3/1 00:00~3/31 23:59 0303 2026/4/1 00:00~4/30 23:59 0403 2026/5/1 00:00~5/31 23:59 0503 2026/6/1 00:00~6/30 23:59 0603 2",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10816,7 +10556,7 @@
           "start": "2026-04-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10824,7 +10564,7 @@
           "start": "2026-05-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10832,7 +10572,7 @@
           "start": "2026-06-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10840,7 +10580,7 @@
           "start": "2026-07-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10848,7 +10588,7 @@
           "start": "2026-08-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10856,7 +10596,7 @@
           "start": "2026-09-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10864,7 +10604,7 @@
           "start": "2026-10-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10872,7 +10612,7 @@
           "start": "2026-11-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -10880,30 +10620,22 @@
           "start": "2026-12-01T00:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "正附卡合併計算,每月每戶加碼回饋合計上限600元好多金。 ※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/",
+          "source_text": "※每月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 1.每月登錄期間可透過本行網銀/行銀或登錄專線02-8751-131",
           "reminder_minutes": 10,
           "precision": "datetime"
-        },
-        {
-          "start": "2026-12-31",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "月1日00:00開放登錄,每月登錄名額共5萬名,限登錄正卡人資料。 其他旅遊優惠: KKday全球指定行程最高88折(~2026/12/31) 網路投保旅平險抽Rimowa行李箱,再享2%回饋(~2026/9/30) 萬事達海外消費回饋最高享25%現金回饋(~2026/9/30) 樂遊韓國萬事達OL",
-          "reminder_minutes": 10,
-          "precision": "date"
         }
       ],
       "registration_timing_contracts": [
-        "per_period_reregister",
-        "registration_closes_early"
+        "per_period_reregister"
       ],
-      "max_reward_percent": 25.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "精選海外旅遊最高回饋5%",
         "台北富邦銀行",
         "行動支付",
+        "百貨購物",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -10974,7 +10706,6 @@
       "title": "肯驛 叫⾞吧8 折起",
       "merchant": "肯驛 叫⾞吧8 折起",
       "categories": [
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -11002,13 +10733,12 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
         "肯驛 叫⾞吧8 折起",
         "台北富邦銀行",
-        "行動支付",
         "生活消費",
         "旅遊交通",
         "餐飲美食",
@@ -11102,7 +10832,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -11153,7 +10883,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -11207,7 +10937,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 15.0,
+      "max_reward_percent": 30.0,
       "max_reward_amount_twd": 550,
       "featured": true,
       "tags": [
@@ -11312,7 +11042,7 @@
           "start": "2026-06-10",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "進線客服取消指定卡片分期設定,並登錄本活動,方能享有分期優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得享有自登錄日起~202",
+          "source_text": "登錄期間:2026/6/10(三) 10:00-12/31(四) 23:59,僅適用於2026/7/1~12/31內完成保險費扣繳之交易。 方享自登錄日起~2026/12/31每筆保費滿額",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -11320,7 +11050,7 @@
           "start": "2026-06-10T10:00:00+08:00",
           "end": null,
           "label": "登錄截止",
-          "source_text": "優惠。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
+          "source_text": "分期。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於台新銀行Richart Life APP或台新銀行官網完成活動登錄作業,始得",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -11328,7 +11058,7 @@
           "start": "2026-12-31",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "之交易。 ※曾登錄「2026年1-6月保費分期」之客戶,仍需重新登錄「2026年7-12月保費分期」, 方享自登錄日起~2026/12/31每筆保費滿額自動分期。 活動登錄 【立即變更:保費扣款信用卡】 保險公司保險費付款授權書申請 1.人壽保險 (1)線上申請: 南山人壽 國泰人壽 富邦人壽 (2",
+          "source_text": "10:00-12/31(四) 23:59,僅適用於2026/7/1~12/31內完成保險費扣繳之交易。 方享自登錄日起~2026/12/31每筆保費滿額自動分期。 持卡人如欲參加「2026年7-12月保費分期」活動,須於2026/6/10(三) 10:00-2026/12/31(四) 23:59 於",
           "reminder_minutes": 10,
           "precision": "date"
         }
@@ -11388,7 +11118,7 @@
           "start": "2026-09-01T10:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "於指定登錄期間完成線上登錄,並於指定消費期間內於日本指定店面累計消費達檻享最高20%現金回饋 ※指定登錄期間:2026/9/1 10:00~2026/10/31 23:59(日本標準時間) 信用卡活動登錄",
+          "source_text": "費期間內於日本指定店面累計消費達檻享最高20%現金回饋 👉活動網頁 日本環球影城實體店面,累計消費滿10,000日圓,享2,000日圓現金回饋 ※指定登錄期間:2026/9/1 10:00~2026/10/31 23:59(日本標準時間) ※指定消費期間:2026/10/1~2026/10/31(日本標準時間) ※限量登錄12,000張JCB卡,登錄額滿即截止。 ---------- 【日本百家連鎖家電,最高享免稅10",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -11450,7 +11180,7 @@
           "start": "2026-10-29T16:00:00+08:00",
           "end": "2026-10-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "Apple直營店/Apple Store購新機 消費1+1回饋雙重送 分期滿額最高贈4,000元刷卡金 加購週邊額外再享最高150點 1.須於2026/10/29 16:00~10/31 23:59 或2026/12/29 16:00~11/30 23:59 於本行官網登錄專區、國泰優惠APP完成活動登錄始符合資格且限以正卡人資料登錄,每波限量登錄8千名兩波共計1萬6千名,額滿即關閉。2.商務卡",
+          "source_text": "1.須於2026/10/29 16:00~10/31 23:59 或2026/12/29 16:00~11/30 23:59 於本行官網登錄專區、國泰優惠APP完成活動登錄始符合資格且限以正卡人資料登錄,每波限量登錄8千名兩波共計1萬6千名,額滿即關閉。2.商務卡",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -11505,7 +11235,7 @@
           "start": "2026-09-01T16:00:00+08:00",
           "end": "2026-12-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "CASETiFY台灣官網消費滿額 Apple直營/線上商店任一筆 登錄成功享100點小樹點(信用卡) 新朋友再加贈最高享150點 1.須於2026/9/1 16:00~12/31 23:59 於本行官網登錄專區、國泰優惠APP完成活動登錄始符合資格且限以正卡人資料登錄,不限名額登錄。2.商務卡、簽帳金融卡、第三方支付不適用。3.正附卡消費合併計算,每正卡戶最高回饋150點小樹點(信用卡)",
+          "source_text": "1.須於2026/9/1 16:00~12/31 23:59 於本行官網登錄專區、國泰優惠APP完成活動登錄始符合資格且限以正卡人資料登錄,不限名額登錄。2.商務卡、簽帳金融卡、第三方支付不適用。3.正附卡消費合併計算,每正卡戶最高回饋150點小樹點(信用卡)",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -11616,7 +11346,7 @@
           "start": "2026-09-22T16:00:00+08:00",
           "end": "2026-09-24T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "蝦皮卡指定外送、交通、旅遊最高7% 於指定外送、交通、旅遊通路刷蝦皮卡不限消費金額最高7%回饋 1.參加本活動之持卡人須於2026/9/22 16:00~2026/9/24 23:59透過本行官網登錄專區、國泰優惠APP完成活動登錄始符合資格(限以正卡人資料登錄),活動登錄限量名額10,000名,將以登錄成功且同時符合各活動門檻之成功交易訂單為回饋依據,若活動登錄名額額滿,將提前關",
+          "source_text": "皮購物聯名卡不限消費金額,登錄成功加碼6.5%蝦幣,加計原權益0.5%蝦幣,最高可達7%! 【活動時間】 1. 第一波:2026/7/1~2026/9/30。於2026/9/22 16:00~2026/9/24 23:59開放登錄。 2. 第二波:2026/10/1~2026/12/31。於2026/12/22 16:00~2026/12/24 23:59開放登錄。 *每波活動須分別登錄,將於本行官網登錄專區及國泰優惠",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -11624,7 +11354,7 @@
           "start": "2026-12-22T16:00:00+08:00",
           "end": "2026-12-24T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "/1~2026/9/30。於2026/9/22 16:00~2026/9/24 23:59開放登錄。 2. 第二波:2026/10/1~2026/12/31。於2026/12/22 16:00~2026/12/24 23:59開放登錄。 *每波活動須分別登錄,將於本行官網登錄專區及國泰優惠App開放登錄,每波限量登錄10,000名,額滿即關閉。 *加碼6.5%回饋每戶每波活動期間回饋上限為3,000蝦幣。 【指定通路】 ◎",
+          "source_text": "1.參加本活動之持卡人須於2026/12/22 16:00~2026/12/24 23:59透過本行官網登錄專區、國泰優惠APP完成活動登錄始符合資格(限以正卡人資料登錄),活動登錄限量名額10,000名,將以登錄成功且同時符合各活動門檻之成功交易訂單為回饋依據,若活動登錄名額額滿,將提前關",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -12006,7 +11736,7 @@
           "start": "2026-07-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -12014,7 +11744,7 @@
           "start": "2026-08-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -12022,7 +11752,7 @@
           "start": "2026-09-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -12030,7 +11760,7 @@
           "start": "2026-10-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -12038,7 +11768,7 @@
           "start": "2026-11-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -12046,7 +11776,7 @@
           "start": "2026-12-01T08:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "上所載內容認定,限以彰化銀行系統判定為準。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
+          "source_text": "始回饋,每歸戶每月加碼回饋上限200元)。 (三)持卡人需於每月1日08:00─24:00,~彰化銀行官網之活動登錄專區登錄,限以正卡人資料登錄,正卡登錄成功者,附卡亦得享有同等優惠,即當月正卡登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -12806,7 +12536,7 @@
           "start": "2026-07-15",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "完成登錄,即享Marshall Minor IV 真無限藍芽耳機/經典黑! ※贈品為限量提供,每歸戶最高回饋乙份贈品,於2026/7/15 PM15:00開放登錄400名,本活動限量回饋90名,以符合活動門檻且同時成功登錄時間依序回饋~額滿為止,不另行公告。 注意事項 活動期間: 2026/6/2",
+          "source_text": "完成登錄,即享Marshall Minor IV 真無限藍芽耳機/經典黑! ※贈品為限量提供,每歸戶最高回饋乙份贈品,於2026/7/15 PM15:00開放登錄400名,本活動限量回饋90名,以符合活動門檻且同時成功登錄時間依序回饋~額滿為止,不另行公告。 活動期間: 2026/6/24-8/7",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -12814,7 +12544,7 @@
           "start": "2026-07-15T15:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "可獲得Dyson V8 Cyclone SV55 無線吸塵器乙台(每人限領乙次,限量50名)。 活動期間:2026/6/24~2026/8/7 (以永豐銀行收件日為準) 登錄期間:2026/7/15 15:00起~2026/8/7 23:59,額滿將提前關閉 消費期間:2026/6/24~2026/9/30 (依實際消費日為準) *贈品為限量提供,每人限領乙次,於2026/7/15 PM15:00開放登錄100名,本活動限量回",
+          "source_text": "富世界卡正卡,並於登錄期間內完成活動登錄且於消費期間內完成【指定任務】,即可獲得Dyson V8 Cyclone SV55 無線吸塵器乙台(每人限領乙次,限量50名)。 登錄期間:2026/7/15 15:00起~2026/8/7 23:59,額滿將提前關閉 *贈品為限量提供,每人限領乙次,於2026/7/15 PM15:00開放登錄100名,本活動限量回饋50名,以符合活動門檻且同時成功登錄時間依序回饋~額滿為止,不另行公告",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -12822,7 +12552,7 @@
           "start": "2026-08-07T23:59:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "ne SV55 無線吸塵器乙台(每人限領乙次,限量50名)。 活動期間:2026/6/24~2026/8/7 (以永豐銀行收件日為準) 登錄期間:2026/7/15 15:00起~2026/8/7 23:59,額滿將提前關閉 消費期間:2026/6/24~2026/9/30 (依實際消費日為準) *贈品為限量提供,每人限領乙次,於2026/7/15 PM15:00開放登錄100名,本活動限量回饋50名,以符合活動門檻且同時成",
+          "source_text": "動登錄且於消費期間內完成【指定任務】,即可獲得Dyson V8 Cyclone SV55 無線吸塵器乙台(每人限領乙次,限量50名)。 登錄期間:2026/7/15 15:00起~2026/8/7 23:59,額滿將提前關閉 *贈品為限量提供,每人限領乙次,於2026/7/15 PM15:00開放登錄100名,本活動限量回饋50名,以符合活動門檻且同時成功登錄時間依序回饋~額滿為止,不另行公告。 第一條 活動期間: 2026",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -12919,7 +12649,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 6.66,
+      "max_reward_percent": 8.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -12972,7 +12702,7 @@
           "start": "2026-01-01T00:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "稅方式,不含便利超商代收、公務機關臨櫃繳費及第三方支付繳費) (3)養管費(原汽燃費):請透過監理服務網或下載監理服務APP繳納(含網路及電話) 活動二及活動三皆為限量登錄,統一於1/1 00:00開放登錄,自登錄當月起享活動資格,不得溯及既往。 指定稅款費用不列入本行「一般消費」定義,公司卡、配銷卡、八通卡、儲值卡、簽帳金融卡不適用。 符合交易需於活動期間內刷卡交易且於回饋計算前已完成登錄及入帳,若因特店未請款導",
+          "source_text": "不溯及既往。 ※上半年開放登錄4萬名,下半年分別於7月及11月各開放1萬名,上半年已登錄者毋須重新登錄,自登錄當月起享活動參加資格,不溯及既往。 活動二及活動三皆為限量登錄,統一於1/1 00:00開放登錄,自登錄當月起享活動資格,不得溯及既往。 ※首次代繳係指2025/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -12980,7 +12710,7 @@
           "start": "2026-08-01T00:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "026/8/1-10/31期間內,代扣繳公共事業費享2%刷卡金回饋(上限50元) ※指定申請方式請詳:三、【申請方式】如何代扣繳公共事業費 活動登錄 立即登錄 (限量5,000名,8/1 00:00開放登錄) 永豐八通卡、公司卡、配銷卡、Debit卡不適用本活動。 ※例如小永於以下日期完成自動代扣繳且完成登錄 ※詳細活動辦法、限制條件等,請詳閱本活動【注意事項】。 三、【申請方式】如何代扣繳公共事業費 線上申請 公",
+          "source_text": "/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享活動資格。 (限量5,000名,8/1 00:00開放登錄) 首次代繳係指2025/1/1~2025/12/31未曾使用永豐信用卡申請自動代扣繳並成功繳納上述費用者。本活動須於繳納當月完成登錄,次月登錄無效,登錄後符合活動條件即享活動資格。 A: 透過i繳費或聯合信用卡",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -13188,47 +12918,6 @@
       "needs_review": true,
       "review_message": "登錄時間早於活動期間。",
       "detail_ref": "activities/esun-ddaabf779365.json"
-    },
-    {
-      "id": "esun-3dfd8272c8c9",
-      "bank_id": "esun",
-      "bank_name": "玉山銀行",
-      "title": "保險就愛刷玉山卡",
-      "merchant": "保險就愛刷玉山卡",
-      "categories": [
-        "行動支付",
-        "生活消費",
-        "分期"
-      ],
-      "start_date": "2026-09-01",
-      "end_date": "2026-12-31",
-      "summary": "刷保費首選玉山卡 線上投保超簡單 付款授權書申請 刷保費首選玉山卡 玉山世界卡/玉山無限卡 扣繳壽險保費 登錄最高享1.66%回饋 活動期間：2026/9/1~2026/12/31 活動詳情 南山人壽聯名卡 扣繳南山人壽保費 登錄最高享2%回饋 一次付清最高2%回饋或 1%折扣+12期0利率 活動期間：2026/1/1~2026/12/31 活動詳情 玉山Unicard 扣繳壽險保費 登錄最高享1.1%回饋 含同時申辦帳單e化及玉山臺幣帳戶 自動扣繳享1%+保費加碼享0.1%玉山e point回饋 活動期間：2026/1/1~2026/12/31 活動詳情 玉山 Pi 拍錢包信用卡 扣繳壽產險保費 最高享1.2% P幣回饋 活動期間：2026/3/1~2027/2/28 活動詳情 玉山數位保險卡 扣繳壽產險保費 享1.2%玉山 e point回饋 一次付清享1.2%玉山 e point無上限或 分期最高12期0利率＋0.5%玉山e point (需登錄) 活動期間：2026/1/1~2026/12/31 活動詳情 玉山信用卡 繳保費無負擔 登錄最高享12期0利率 單筆滿6,000元 (含) 以上，登錄享6期0利率 單筆滿15,000元 (含) 以上，登錄享12期0利率 活動期間：2026/1/1~2026/12/31 活動詳情 更多保費優惠資訊 刷保費省荷包攻略 適用卡片 險種 優惠方案 保費最高回饋率 分期0利率 玉山世界卡／玉山無限卡 壽險 享回饋 1.66% 享分期 - 6期或12期 產險 享回饋 原卡片基本回饋 享分期 - 6期或12期 南山人壽聯名卡 (限南山保費) ",
-      "source_url": "https://event.esunbank.com.tw/credit/1090918insurance/index.html",
-      "registration_required": true,
-      "parent_activity_id": "esun-3dfd8272c8c9",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shops",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 2.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "保險就愛刷玉山卡",
-        "玉山銀行",
-        "行動支付",
-        "生活消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/esun-3dfd8272c8c9.json"
     },
     {
       "id": "esun-1a1f42858dc2",
@@ -13532,7 +13221,7 @@
           "start": "2026-07-15T10:00:00+08:00",
           "end": "2026-07-31T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "下載玉山Wallet登錄,每月限量名額共6,000名,額滿為止,開放登錄時間:當月15日早上10:00 ~ 當月最後一日23:59止,例如7月份活動登錄時間為:2026/7/15 10:00 ~ 2026/7/31 23:59止,以此類推。 活動登錄 活動登錄中獎名單卡友權益",
+          "source_text": "下載玉山Wallet登錄,每月限量名額共6,000名,額滿為止,開放登錄時間:當月15日早上10:00 ~ 當月最後一日23:59止,例如7月份活動登錄時間為:2026/7/15 10:00 ~ 2026/7/31 23:59止,以此類推。 本活動綁定icash Pay於「7-ELEVEN實體門市」消費,登錄加碼6% OPENPOINT點數,每歸戶每月回饋上限200點;當月符合資格之消費,點數最晚將於次次月底前匯入icas",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -17145,6 +16834,7 @@
       "categories": [
         "網購",
         "百貨購物",
+        "加油交通",
         "分期",
         "強打優惠"
       ],
@@ -17163,7 +16853,7 @@
           "start": "2026-09-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 限量登錄名額 15,000元 300元 5,000名/月 每月15日下午3點 開放登錄~月底 30,000元 600元 40,000元 900元 60,000元 1,600元 註1: 需於消費當月完",
+          "source_text": "現金或轉讓他人,實際回饋時間依本行作業時程為準。 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。需於消費當月完成登錄始享當月活動參與資格,完成登錄時間悉以本行信用卡管理系統為準。 活動對",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17171,7 +16861,7 @@
           "start": "2026-10-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 限量登錄名額 15,000元 300元 5,000名/月 每月15日下午3點 開放登錄~月底 30,000元 600元 40,000元 900元 60,000元 1,600元 註1: 需於消費當月完",
+          "source_text": "現金或轉讓他人,實際回饋時間依本行作業時程為準。 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。需於消費當月完成登錄始享當月活動參與資格,完成登錄時間悉以本行信用卡管理系統為準。 活動對",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17179,7 +16869,7 @@
           "start": "2026-11-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 限量登錄名額 15,000元 300元 5,000名/月 每月15日下午3點 開放登錄~月底 30,000元 600元 40,000元 900元 60,000元 1,600元 註1: 需於消費當月完",
+          "source_text": "現金或轉讓他人,實際回饋時間依本行作業時程為準。 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。需於消費當月完成登錄始享當月活動參與資格,完成登錄時間悉以本行信用卡管理系統為準。 活動對",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17187,7 +16877,7 @@
           "start": "2026-12-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 限量登錄名額 15,000元 300元 5,000名/月 每月15日下午3點 開放登錄~月底 30,000元 600元 40,000元 900元 60,000元 1,600元 註1: 需於消費當月完",
+          "source_text": "現金或轉讓他人,實際回饋時間依本行作業時程為準。 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。需於消費當月完成登錄始享當月活動參與資格,完成登錄時間悉以本行信用卡管理系統為準。 活動對",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -17195,7 +16885,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 0.88,
+      "max_reward_percent": 2.0,
       "max_reward_amount_twd": 1700,
       "featured": true,
       "tags": [
@@ -17204,6 +16894,7 @@
         "網購數位",
         "網購",
         "百貨購物",
+        "加油交通",
         "分期",
         "強打優惠"
       ],
@@ -17349,6 +17040,48 @@
       "detail_ref": "activities/ubot-96376595c2e8.json"
     },
     {
+      "id": "ubot-8719054267d1",
+      "bank_id": "ubot",
+      "bank_name": "聯邦銀行",
+      "title": "MyJapan+ APP",
+      "merchant": "MyJapan+ APP",
+      "categories": [
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "start_date": "2026-09-15",
+      "end_date": "2026-12-31",
+      "summary": "刷聯邦JCB登錄享札幌指定商店最高30%回饋！",
+      "source_url": "https://activity.ubot.com.tw/aws_act/2026/2026jcb/sapporo/index.htm",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://card.ubot.com.tw/eCard/activity_login/register_activity.aspx",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 30.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "MyJapan+ APP",
+        "聯邦銀行",
+        "旅遊優惠",
+        "旅遊交通",
+        "行動支付",
+        "海外消費"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/ubot-8719054267d1.json"
+    },
+    {
       "id": "ubot-5f60c493e8b8",
       "bank_id": "ubot",
       "bank_name": "聯邦銀行",
@@ -17376,7 +17109,7 @@
           "start": "2026-07-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 活動時間:2026/7/1-12/31 (登錄時間詳見第5點)。 本活動",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17384,7 +17117,7 @@
           "start": "2026-08-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 活動時間:2026/7/1-12/31 (登錄時間詳見第5點)。 本活動",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17392,7 +17125,7 @@
           "start": "2026-09-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 活動時間:2026/7/1-12/31 (登錄時間詳見第5點)。 本活動",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17400,7 +17133,7 @@
           "start": "2026-10-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 活動時間:2026/7/1-12/31 (登錄時間詳見第5點)。 本活動",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17408,7 +17141,7 @@
           "start": "2026-11-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 活動時間:2026/7/1-12/31 (登錄時間詳見第5點)。 本活動",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17416,7 +17149,7 @@
           "start": "2026-12-10T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "對象:聯邦銀行信用卡持卡人且於指定期間完成登錄者 登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 Uber Eats、foodpanda 刷聯邦卡當月完成登錄 不限金額筆",
+          "source_text": "登錄時間:每月10日下午3點開放登錄~當月月底,完成登錄始符合當月活動資格 活動時間:2026/7/1-12/31 (登錄時間詳見第5點)。 本活動",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -17563,7 +17296,7 @@
           "start": "2026-01-01",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "為符合本專案條件之交易款項分期入帳,惟於結帳日前三天內入帳之交易及已逾持卡人帳單結帳日者將不列入。 範例一:客戶A分別於2026/1/1及2026/2/5各消費一筆國內保險金額2萬元,並於2026/2/1完成登錄「115年保險刷聯邦Visa卡分期活動_滿1萬2千」,系統主動撈取於登錄日後(不含登",
+          "source_text": "期活動_滿6千」門檻,因未正確申請符合交易金額之活動門檻,將視為未完成登錄,該筆消費不會進行分期。 範例一:客戶A分別於2026/1/1及2026/2/5各消費一筆國內保險金額2萬元,並於2026/2/1完成登錄「115年保險刷聯邦Visa卡分期活動_滿1萬2千」,系統主動撈取於登錄日後(不含登",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -17571,7 +17304,7 @@
           "start": "2026-02-01",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "逾持卡人帳單結帳日者將不列入。 範例一:客戶A分別於2026/1/1及2026/2/5各消費一筆國內保險金額2萬元,並於2026/2/1完成登錄「115年保險刷聯邦Visa卡分期活動_滿1萬2千」,系統主動撈取於登錄日後(不含登錄當日)之符合本專案條件之交易款項分期入帳,故2026/1/1之交易",
+          "source_text": "成登錄,該筆消費不會進行分期。 範例一:客戶A分別於2026/1/1及2026/2/5各消費一筆國內保險金額2萬元,並於2026/2/1完成登錄「115年保險刷聯邦Visa卡分期活動_滿1萬2千」,系統主動撈取於登錄日後(不含登錄當日)之符合本專案條件之交易款項分期入帳,故2026/1/1之交易",
           "reminder_minutes": 10,
           "precision": "date"
         },
@@ -17579,7 +17312,7 @@
           "start": "2026-02-05",
           "end": null,
           "label": "登錄日期（時間未確認）",
-          "source_text": "交易款項分期入帳,惟於結帳日前三天內入帳之交易及已逾持卡人帳單結帳日者將不列入。 範例一:客戶A分別於2026/1/1及2026/2/5各消費一筆國內保險金額2萬元,並於2026/2/1完成登錄「115年保險刷聯邦Visa卡分期活動_滿1萬2千」,系統主動撈取於登錄日後(不含登錄當日)之符合本專",
+          "source_text": "檻,因未正確申請符合交易金額之活動門檻,將視為未完成登錄,該筆消費不會進行分期。 範例一:客戶A分別於2026/1/1及2026/2/5各消費一筆國內保險金額2萬元,並於2026/2/1完成登錄「115年保險刷聯邦Visa卡分期活動_滿1萬2千」,系統主動撈取於登錄日後(不含登錄當日)之符合本專",
           "reminder_minutes": 10,
           "precision": "date"
         }
@@ -17631,7 +17364,7 @@
           "start": "2026-07-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "每月20日上午10點開放登錄 (限量登錄3,500名/月) 活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月月底,",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17639,7 +17372,7 @@
           "start": "2026-08-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "每月20日上午10點開放登錄 (限量登錄3,500名/月) 活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月月底,",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17647,7 +17380,7 @@
           "start": "2026-09-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "每月20日上午10點開放登錄 (限量登錄3,500名/月) 活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月月底,",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17655,7 +17388,7 @@
           "start": "2026-10-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "每月20日上午10點開放登錄 (限量登錄3,500名/月) 活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月月底,",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17663,7 +17396,7 @@
           "start": "2026-11-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "每月20日上午10點開放登錄 (限量登錄3,500名/月) 活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月月底,",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17671,7 +17404,7 @@
           "start": "2026-12-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "每月20日上午10點開放登錄 (限量登錄3,500名/月) 活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月月底,",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -17932,7 +17665,7 @@
           "start": "2026-07-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日上午10點開放登錄 (限量登錄3,500名/月) 註2:活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17940,7 +17673,7 @@
           "start": "2026-07-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "source_text": "(每月25日下午3點開放登錄2,000名) 註1:活動期間僅需登錄乙次即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17948,7 +17681,7 @@
           "start": "2026-08-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日上午10點開放登錄 (限量登錄3,500名/月) 註2:活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17956,7 +17689,7 @@
           "start": "2026-08-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "source_text": "(每月25日下午3點開放登錄2,000名) 註1:活動期間僅需登錄乙次即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17964,7 +17697,7 @@
           "start": "2026-09-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日上午10點開放登錄 (限量登錄3,500名/月) 註2:活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17972,7 +17705,7 @@
           "start": "2026-09-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "source_text": "(每月25日下午3點開放登錄2,000名) 註1:活動期間僅需登錄乙次即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17980,7 +17713,7 @@
           "start": "2026-10-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日上午10點開放登錄 (限量登錄3,500名/月) 註2:活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17988,7 +17721,7 @@
           "start": "2026-10-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "source_text": "(每月25日下午3點開放登錄2,000名) 註1:活動期間僅需登錄乙次即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -17996,7 +17729,7 @@
           "start": "2026-11-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日上午10點開放登錄 (限量登錄3,500名/月) 註2:活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -18004,7 +17737,7 @@
           "start": "2026-11-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "source_text": "(每月25日下午3點開放登錄2,000名) 註1:活動期間僅需登錄乙次即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -18012,7 +17745,7 @@
           "start": "2026-12-20T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "門檻 回饋刷卡金 登錄開放時間 滿20,000元 400元 每月20日上午10點開放登錄 (限量登錄3,500名/月) 滿50,000元 1,000元 滿80,000元 1,800元 滿120,000",
+          "source_text": "即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日上午10點開放登錄 (限量登錄3,500名/月) 註2:活動限量登錄3,500名/月,當月活動於當月20號10:00開放登錄~當月",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -18020,7 +17753,7 @@
           "start": "2026-12-25T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": "額 2,000元 100元 總限量登錄名額 6,000名 (每月25日下午3點開放登錄2,000名) 12,000元 250元 30,000元 600元 60,000元 1,500元 120,000",
+          "source_text": "(每月25日下午3點開放登錄2,000名) 註1:活動期間僅需登錄乙次即符合活動參與資格,無須每月登錄,登錄時間依本行系統為準。 每月20日",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -18461,6 +18194,7 @@
       "categories": [
         "網購",
         "百貨購物",
+        "加油交通",
         "分期",
         "強打優惠"
       ],
@@ -18479,7 +18213,7 @@
           "start": "2026-09-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 限量登錄名額 15,000元 300元 5,000名/月 每月15日下午3點 開放登錄~月底 30,000元 600元 40,000元 900元 60,000元 1,600元 註1: 需於消費當月完",
+          "source_text": "現金或轉讓他人,實際回饋時間依本行作業時程為準。 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。需於消費當月完成登錄始享當月活動參與資格,完成登錄時間悉以本行信用卡管理系統為準。 活動對",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -18487,7 +18221,7 @@
           "start": "2026-10-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 限量登錄名額 15,000元 300元 5,000名/月 每月15日下午3點 開放登錄~月底 30,000元 600元 40,000元 900元 60,000元 1,600元 註1: 需於消費當月完",
+          "source_text": "現金或轉讓他人,實際回饋時間依本行作業時程為準。 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。需於消費當月完成登錄始享當月活動參與資格,完成登錄時間悉以本行信用卡管理系統為準。 活動對",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -18495,7 +18229,7 @@
           "start": "2026-11-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 限量登錄名額 15,000元 300元 5,000名/月 每月15日下午3點 開放登錄~月底 30,000元 600元 40,000元 900元 60,000元 1,600元 註1: 需於消費當月完",
+          "source_text": "現金或轉讓他人,實際回饋時間依本行作業時程為準。 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。需於消費當月完成登錄始享當月活動參與資格,完成登錄時間悉以本行信用卡管理系統為準。 活動對",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -18503,7 +18237,7 @@
           "start": "2026-12-15T15:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": " 限量登錄名額 15,000元 300元 5,000名/月 每月15日下午3點 開放登錄~月底 30,000元 600元 40,000元 900元 60,000元 1,600元 註1: 需於消費當月完",
+          "source_text": "現金或轉讓他人,實際回饋時間依本行作業時程為準。 登錄時間:每月15日下午3點開放登錄~當月月底,額滿為止。需於消費當月完成登錄始享當月活動參與資格,完成登錄時間悉以本行信用卡管理系統為準。 活動對",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -18511,7 +18245,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 0.88,
+      "max_reward_percent": 2.0,
       "max_reward_amount_twd": 1700,
       "featured": true,
       "tags": [
@@ -18520,6 +18254,7 @@
         "網購數位",
         "網購",
         "百貨購物",
+        "加油交通",
         "分期",
         "強打優惠"
       ],
@@ -19036,6 +18771,61 @@
       "detail_ref": "activities/hncb-18c36196f529.json"
     },
     {
+      "id": "hncb-2b9963c36807",
+      "bank_id": "hncb",
+      "bank_name": "華南銀行",
+      "title": "華南熊Q卡 熊挺你的神隊友",
+      "merchant": "華南熊Q卡 熊挺你的神隊友",
+      "categories": [
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "加油交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "熊Q卡 【週一~週四】Visa熊Q卡夢時代指定用餐店櫃5%刷卡金回饋 【指定週四】Visa熊Q卡夢時代指定店櫃單筆滿1,000元回饋100元 關係升級 回饋加成 一般消費現金點數回饋 一般消費滿額享最高12期分期0利率 申請： 變更： 終止： 申請書表單及線上申辦路徑： 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
+      "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/card/introduce/cash_feedback_card/BearQcard2026",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://netbank.hncb.com.tw/netbank/servlet/TrxDispatcher?trx=com.lb.wibc.trx.CardPromoteOverall_RWD&state=prompt",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [],
+      "registration_timing_contracts": [
+        "per_period_reregister"
+      ],
+      "max_reward_percent": 13.11,
+      "max_reward_amount_twd": 300,
+      "featured": true,
+      "tags": [
+        "華南熊Q卡 熊挺你的神隊友",
+        "華南銀行",
+        "網購",
+        "行動支付",
+        "百貨購物",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食",
+        "加油交通",
+        "海外消費",
+        "繳費稅款",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
+      "detail_ref": "activities/hncb-2b9963c36807.json"
+    },
+    {
       "id": "sunny-b75ea4fdf3e4",
       "bank_id": "sunny",
       "bank_name": "陽信銀行",
@@ -19105,7 +18895,7 @@
       "registration_timing_contracts": [
         "unknown"
       ],
-      "max_reward_percent": 17.0,
+      "max_reward_percent": 15.0,
       "max_reward_amount_twd": null,
       "featured": true,
       "tags": [
@@ -19277,10 +19067,26 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
+          "start": "2026-06-30",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 活動期間2026/1/1-2026/6/30,自完成登錄起活動期間於日本實體商店(不含網路交易、交通類交易)使用聯邦吉鶴卡綁定Google Pay單筆感應支付換算台幣100元含以上,享活動加碼1.5%回饋",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
+          "start": "2026-07-15T10:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 活動期間2026/1/1-2026/6/30,自完成登錄起活動期間於日本實體商店(不含網路交易、交通",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        },
+        {
           "start": "2026-08-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 活動期間2026/1/1-2026/6/30,自完成登錄起活動期間於日本實體商店(不含網路交易、交通",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -19288,7 +19094,7 @@
           "start": "2026-09-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 活動期間2026/1/1-2026/6/30,自完成登錄起活動期間於日本實體商店(不含網路交易、交通",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -19296,7 +19102,7 @@
           "start": "2026-10-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 活動期間2026/1/1-2026/6/30,自完成登錄起活動期間於日本實體商店(不含網路交易、交通",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -19304,7 +19110,7 @@
           "start": "2026-11-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 活動期間2026/1/1-2026/6/30,自完成登錄起活動期間於日本實體商店(不含網路交易、交通",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -19312,23 +19118,7 @@
           "start": "2026-12-15T10:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
-          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
-        {
-          "start": "2026-12-31",
-          "end": null,
-          "label": "登錄日期（時間未確認）",
-          "source_text": "始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自扣加碼0.5%(核卡後三個月內上限300元) *國內嚴選日系名店加碼4%(月上限500元) 了解更多 *Agoda預訂日本飯店刷",
-          "reminder_minutes": 10,
-          "precision": "date"
-        },
-        {
-          "start": "2027-01-15T10:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 了解更多 活動登錄 活動期間:2026/7/1-2026/12/31 *國內消費1%無上限 *新戶自",
+          "source_text": ",當月消費須於當月完成登錄後始符合活動參與資格 *登錄時間:每月15日上午10點開放登錄~當月月底 活動期間2026/1/1-2026/6/30,自完成登錄起活動期間於日本實體商店(不含網路交易、交通",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -19352,9 +19142,9 @@
         "強打優惠"
       ],
       "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間早於活動期間。",
       "detail_ref": "activities/ubot-95f81caf5e3e.json"
     },
     {
@@ -20234,7 +20024,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-19",
       "end_date": null,
       "summary": "各大3C家電/電信通訊刷永豐，消費滿額享回饋，搭配超省優惠刷卡省更多！",
       "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/928190552.html",
@@ -20280,7 +20070,7 @@
         "海外消費",
         "分期"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-19",
       "end_date": null,
       "summary": "各大精選網購/電視購物刷永豐，消費滿額享優惠，讓您購好購滿！",
       "source_url": "https://bank.sinopac.com/sinopacBT/personal/credit-card/discount/354768986.html",
@@ -20340,7 +20130,7 @@
           "start": "2026-10-05T10:00:00+08:00",
           "end": "2026-10-11T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "2026/10/5起開放正卡人於玉山Wallet每週活動登錄,每週限量登錄50,000名,額滿為止。 第一週2026/10/05 10:00~2026/10/11 23:59統一開放正卡人於玉山Wallet App登錄。 第二週2026/10/12 10:00~2026/10/18 23:59統一開放正卡人於玉山Wallet App登錄。 第三週2026/10/19 10",
+          "source_text": "0,000名,額滿為止,每歸戶於活動期間每週需重新登錄才可獲得當週回饋。每歸戶回饋上限70點玉山e point ,活動登錄方式詳見注意事項。 登錄辦法: 第一週2026/10/05 10:00~2026/10/11 23:59統一開放正卡人於玉山Wallet App登錄。 第二週2026/10/12 10:00~2026/10/18 23:59統一開放正卡人於玉山Wallet App登錄。 第三週2026/10/19 10",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -20348,7 +20138,7 @@
           "start": "2026-10-12T10:00:00+08:00",
           "end": "2026-10-18T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "量登錄50,000名,額滿為止。 第一週2026/10/05 10:00~2026/10/11 23:59統一開放正卡人於玉山Wallet App登錄。 第二週2026/10/12 10:00~2026/10/18 23:59統一開放正卡人於玉山Wallet App登錄。 第三週2026/10/19 10:00~2026/10/25 23:59統一開放正卡人於玉山Wallet App登錄。 第四週2026/10/26 10",
+          "source_text": " ~ 2026/11/1 (日) 第一週2026/10/05 10:00~2026/10/11 23:59統一開放正卡人於玉山Wallet App登錄。 第二週2026/10/12 10:00~2026/10/18 23:59統一開放正卡人於玉山Wallet App登錄。 第三週2026/10/19 10:00~2026/10/25 23:59統一開放正卡人於玉山Wallet App登錄。 第四週2026/10/26 10",
           "reminder_minutes": 10,
           "precision": "datetime"
         },
@@ -20364,7 +20154,7 @@
           "start": "2026-10-26T10:00:00+08:00",
           "end": "2026-11-01T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "於玉山Wallet App登錄。 第三週2026/10/19 10:00~2026/10/25 23:59統一開放正卡人於玉山Wallet App登錄。 第四週2026/10/26 10:00~2026/11/01 23:59統一開放正卡人於玉山Wallet App登錄。 10/5登錄 10/12登錄 10/19登錄 10/26登錄 活動期間 : 2026/10/5 (一) ~ 2026/11/1 (日) ,活動需登錄。 ",
+          "source_text": "於玉山Wallet App登錄。 第三週2026/10/19 10:00~2026/10/25 23:59統一開放正卡人於玉山Wallet App登錄。 第四週2026/10/26 10:00~2026/11/01 23:59統一開放正卡人於玉山Wallet App登錄。 10/5登錄 10/12登錄 10/19登錄 10/26登錄 注意事項 活動名稱:玉山Wallet週週登錄拿點趣 (第一波)。 活動期間 : 2026/",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -20510,7 +20300,7 @@
         "繳費稅款",
         "分期"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-19",
       "end_date": null,
       "summary": "熱門優惠 台灣Pay信用卡「繳稅」華南超回饋 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/115TWPAY_tax_05A",
@@ -20597,7 +20387,7 @@
         "行動支付",
         "加油交通"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-19",
       "end_date": null,
       "summary": "熱門優惠 台灣Pay信用卡華南同樂會 謹慎理財．信用至上 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/115TWPAY_ALL",
@@ -20637,7 +20427,7 @@
         "生活消費",
         "加油交通"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-19",
       "end_date": null,
       "summary": "熱門優惠 電子票證任你選~搭配華南卡享好康 試算精靈 匯率利率 轉換提領實體條塊應補繳差額 單位：新台幣元 客服中心 消費者服務電話 金融卡服務專線 信用卡服務專線 ATM服務專線 語音操作流程說明 信用卡服務_請按 1 銀行服務_請按 2 存款理財服務_請按 3 貸款服務_請按 4 行動銀行登入 華南銀行行動選單 離開華南銀行網站確認",
       "source_url": "https://www.hncb.com.tw/wps/portal/HNCB/msg/co-management/pb-best-offer/c1/t5/news-126c",
@@ -20675,15 +20465,15 @@
     "source_total": 18,
     "source_failed": 0,
     "dns_failures": 0,
-    "candidate_active_or_upcoming": 1203,
-    "previous_active_or_upcoming": 1184,
+    "candidate_active_or_upcoming": 1219,
+    "previous_active_or_upcoming": 1203,
     "activity_drop_percent": 0.0,
     "published_snapshot_preserved": false
   },
   "catalog": {
     "default_filter": "registration",
-    "activity_count": 1222,
-    "registration_index_count": 335,
+    "activity_count": 1240,
+    "registration_index_count": 330,
     "bank_files": {
       "cathay": "banks/cathay.json",
       "chb": "banks/chb.json",

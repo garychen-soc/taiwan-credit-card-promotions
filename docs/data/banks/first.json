@@ -1,54 +1,10 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-12T06:59:48+08:00",
+  "generated_at": "2026-10-19T07:13:21+08:00",
   "bank_id": "first",
   "bank_name": "第一銀行",
-  "activity_count": 140,
+  "activity_count": 142,
   "activities": [
-    {
-      "id": "first-caa8a126c523",
-      "bank_id": "first",
-      "bank_name": "第一銀行",
-      "title": "燦坤10月週年慶會員特典",
-      "merchant": "燦坤10月週年慶會員特典",
-      "categories": [
-        "生活消費",
-        "網購",
-        "百貨購物",
-        "分期"
-      ],
-      "start_date": "2026-10-01",
-      "end_date": "2026-10-18",
-      "summary": "滿額分期送燦坤K幣",
-      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713931361",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": null,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "燦坤10月週年慶會員特典",
-        "第一銀行",
-        "three_c_comm",
-        "生活消費",
-        "網購",
-        "百貨購物",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": true,
-      "needs_review": true,
-      "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
-      "detail_ref": "activities/first-caa8a126c523.json"
-    },
     {
       "id": "first-807f822bd2a0",
       "bank_id": "first",
@@ -3371,6 +3327,48 @@
       "detail_ref": "activities/first-aa35d2f8648c.json"
     },
     {
+      "id": "first-bbd3657e3a46",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "燦坤10月加碼現折",
+      "merchant": "燦坤10月加碼現折",
+      "categories": [
+        "生活消費",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "start_date": "2026-10-19",
+      "end_date": "2026-11-05",
+      "summary": "滿額分期享現折",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713856079",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 0.0,
+      "max_reward_amount_twd": 800,
+      "featured": true,
+      "tags": [
+        "燦坤10月加碼現折",
+        "第一銀行",
+        "three_c_comm",
+        "生活消費",
+        "行動支付",
+        "百貨購物",
+        "分期"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-bbd3657e3a46.json"
+    },
+    {
       "id": "first-53b5040aaa3d",
       "bank_id": "first",
       "bank_name": "第一銀行",
@@ -3519,6 +3517,42 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-793ce4556b3a.json"
+    },
+    {
+      "id": "first-194ebff6b34c",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "漢神巨蛋就愛台灣Pay",
+      "merchant": "漢神巨蛋就愛台灣Pay",
+      "categories": [
+        "行動支付"
+      ],
+      "start_date": "2026-10-08",
+      "end_date": "2026-12-13",
+      "summary": "滿2,000送200元漢神巨蛋商品券",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565714185017",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": 5750,
+      "featured": true,
+      "tags": [
+        "漢神巨蛋就愛台灣Pay",
+        "第一銀行",
+        "activity_Taiwan_pay",
+        "行動支付"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-194ebff6b34c.json"
     },
     {
       "id": "first-d6f8a6b9e77d",
@@ -5313,6 +5347,44 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/first-b5e5087ced10.json"
+    },
+    {
+      "id": "first-b76fa5b5416f",
+      "bank_id": "first",
+      "bank_name": "第一銀行",
+      "title": "福懋台灣Pay加油享回饋",
+      "merchant": "福懋台灣Pay加油享回饋",
+      "categories": [
+        "行動支付",
+        "加油交通"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "汽油每公升回饋新臺幣0.7元",
+      "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565713924947",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "福懋台灣Pay加油享回饋",
+        "第一銀行",
+        "activity_Taiwan_pay",
+        "行動支付",
+        "加油交通"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/first-b76fa5b5416f.json"
     },
     {
       "id": "first-2b2fb332347f",

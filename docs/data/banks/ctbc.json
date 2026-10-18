@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-12T06:59:48+08:00",
+  "generated_at": "2026-10-19T07:13:21+08:00",
   "bank_id": "ctbc",
   "bank_name": "中國信託",
-  "activity_count": 125,
+  "activity_count": 126,
   "activities": [
     {
       "id": "ctbc-e90836b7af37",
@@ -4207,6 +4207,43 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/ctbc-906294003c4f.json"
+    },
+    {
+      "id": "ctbc-bfeea05eaf7b",
+      "bank_id": "ctbc",
+      "bank_name": "中國信託",
+      "title": "完美行滑雪",
+      "merchant": "完美行滑雪",
+      "categories": [
+        "旅遊交通",
+        "行動支付"
+      ],
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-31",
+      "summary": "現折800日圓 + LINE POINTS 5%｜限LINE Pay信用卡",
+      "source_url": "https://www.ctbcbank.com/content/dam/minisite/long/creditcard/LINEPay/page_travel.html#lightbox_wamazing",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 5.0,
+      "max_reward_amount_twd": 800,
+      "featured": true,
+      "tags": [
+        "完美行滑雪",
+        "中國信託",
+        "旅遊交通",
+        "行動支付"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/ctbc-bfeea05eaf7b.json"
     },
     {
       "id": "ctbc-ee6fa80afed6",

@@ -1,10 +1,57 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-10-12T06:59:48+08:00",
+  "generated_at": "2026-10-19T07:13:21+08:00",
   "bank_id": "obank",
   "bank_name": "王道銀行",
-  "activity_count": 28,
+  "activity_count": 31,
   "activities": [
+    {
+      "id": "obank-e40eea331e40",
+      "bank_id": "obank",
+      "bank_name": "王道銀行",
+      "title": "一卡通卡友限定 ! 刷卡消費限時最高享3%現金回饋",
+      "merchant": "一卡通卡友限定 ! 刷卡消費限時最高享3%現金回饋",
+      "categories": [
+        "其他優惠"
+      ],
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-31",
+      "summary": "活動期間：2026/10/15～2026/10/31 活動對象：王道銀行一卡通票證功能之簽帳金融卡持卡人 活動內容： 於活動期間持王道銀行一卡通票證功能之簽帳金融卡刷卡一般消費享額外加碼2%現金回饋 ，每一持卡人最高加碼回饋上限新台幣100元。活動須登錄，限量5,000名，額滿將於活動登錄頁告示。 本活動於2026/10/15中午12:00起開放登錄 活動登錄>> 活動詳情>>",
+      "source_url": "https://www.o-bank.com/retail/event/event-announce/debit_20261031_2",
+      "registration_required": true,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "https://www.o-bank.com/egift/RegisterCampaign",
+      "registration_url_kind": "bank_portal",
+      "registration_windows": [
+        {
+          "start": "2026-10-15T12:00:00+08:00",
+          "end": null,
+          "label": "登錄開放",
+          "source_text": "持王道銀行一卡通票證功能之簽帳金融卡刷卡一般消費享額外加碼2%現金回饋 ,每一持卡人最高加碼回饋上限新台幣100元。活動須登錄,限量5,000名,額滿將於活動登錄頁告示。 本活動於2026/10/15中午12:00起開放登錄 活動登錄>> 活動詳情>>",
+          "reminder_minutes": 10,
+          "precision": "datetime"
+        }
+      ],
+      "registration_timing_contracts": [
+        "unknown"
+      ],
+      "max_reward_percent": 3.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "一卡通卡友限定 ! 刷卡消費限時最高享3%現金回饋",
+        "王道銀行",
+        "簽帳金融卡",
+        "其他優惠"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/obank-e40eea331e40.json"
+    },
     {
       "id": "obank-0bc7aa018efc",
       "bank_id": "obank",
@@ -245,6 +292,42 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/obank-77cec54adb1c.json"
+    },
+    {
+      "id": "obank-2badb2ddeb4a",
+      "bank_id": "obank",
+      "bank_name": "王道銀行",
+      "title": "龍戰台灣大賽 奪冠就是王道",
+      "merchant": "龍戰台灣大賽 奪冠就是王道",
+      "categories": [
+        "行動支付"
+      ],
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-26",
+      "summary": "活動期間：2026/10/16~2026/10/26 活動對象：本行味全龍聯名卡持卡人 活動內容： 1. 持卡人完成指定場次活動登錄後，於味全龍贏球隔日使用味全龍聯名卡綁定Line Pay或Apple Pay刷卡一般消費，可享最高3%現金回饋。每場最高回饋新台幣200元！ 2. 台灣大賽期間於味全龍大巨蛋實體商店，使用味全龍聯名卡綁定 LINE Pay或Apple Pay 消費，享全店9折＋滿額抽實戰簽名球衣和簽名球！ 活動登錄>> 活動詳情>>",
+      "source_url": "https://www.o-bank.com/retail/event/event-announce/wd-twseries-2026",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 3.0,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "龍戰台灣大賽 奪冠就是王道",
+        "王道銀行",
+        "簽帳金融卡",
+        "行動支付"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/obank-2badb2ddeb4a.json"
     },
     {
       "id": "obank-fc056df4ce60",
@@ -699,7 +782,7 @@
       "categories": [
         "生活消費"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-19",
       "end_date": "2026-12-31",
       "summary": "迎接夏日，為自己放個暑假吧 無論是在峇里島獨棟 Villa 放空、漫步長灘島細緻白沙灘感受陽光海風，或搭乘快艇展開富國島跳島之旅，在專屬島嶼時光中，讓異國美景與獨特體驗為生活重新充電！ 即日起，於 Trip.com 刷王道財富無限卡享機票住宿優惠，再享香格里拉酒店專屬折扣！ Trip.com刷王道財富無限卡訂房最高享8%折扣、訂機票最高享3%折扣 活動日期：即日起至2026/12/31止",
       "source_url": "https://www.o-bank.com/retail/event/event-announce/2025072110",
@@ -843,7 +926,7 @@
       "categories": [
         "其他優惠"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-19",
       "end_date": "2026-12-31",
       "summary": "活動期間：即日起~2026/12/31 活動對象：王道銀行簽帳金融卡持卡人 活動內容： 活動期間內，持王道銀行簽帳金融卡至指定購票平台購買「財團法人台北愛樂文教基金會」、「MK音樂調研社」主辦之活動，即可享刷卡購票優惠。 活動詳情>>",
       "source_url": "https://www.o-bank.com/retail/event/event-announce/2026art",
@@ -1025,7 +1108,7 @@
       "categories": [
         "行動支付"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-19",
       "end_date": null,
       "summary": "有了 Apple Pay，在你各個 Apple 裝置上都能使用你的王道銀行簽帳金融卡，簡單、安全又私密。",
       "source_url": "https://www.o-bank.com/zh-tw/retail/event/event-compaign",
@@ -1101,7 +1184,7 @@
       "categories": [
         "海外消費"
       ],
-      "start_date": "2026-09-14",
+      "start_date": "2026-10-19",
       "end_date": null,
       "summary": "全球訂房刷王道Visa簽帳金融卡，享最高20%優惠 海外消費刷王道財富無限卡，再享最高2.5%現金回饋無上限 (最高22.5%優惠=海外一般消費2.5%現金回饋+亞太區IHG洲際酒店集團最高20%折扣) 活動詳情>>",
       "source_url": "https://www.o-bank.com/retail/event/event-announce/2026030201",
@@ -1127,6 +1210,42 @@
       "needs_review": true,
       "review_message": "活動截止日尚未確認。",
       "detail_ref": "activities/obank-543b040e8b51.json"
+    },
+    {
+      "id": "obank-ec747e18632e",
+      "bank_id": "obank",
+      "bank_name": "王道銀行",
+      "title": "金融科技 讓生活更王道",
+      "merchant": "金融科技 讓生活更王道",
+      "categories": [
+        "生活消費"
+      ],
+      "start_date": "2026-10-19",
+      "end_date": null,
+      "summary": "活動時間：2026/10/23(五)、2026/10/24(六) 活動地點：台北世界貿易中心 展覽大樓(世貿一館) 攤位編號：A320 活動內容： 活動一：王道拍起來｜拍出你的王道卡 活動二：王道開起來｜申辦你的王道卡 活動三：王道刷起來｜現刷現折的王道卡 活動詳情>>",
+      "source_url": "https://www.o-bank.com/retail/event/event-announce/fintech-taipei-2026",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": null,
+      "max_reward_amount_twd": null,
+      "featured": false,
+      "tags": [
+        "金融科技 讓生活更王道",
+        "王道銀行",
+        "簽帳金融卡",
+        "生活消費"
+      ],
+      "official_status": "published",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "活動截止日尚未確認。",
+      "detail_ref": "activities/obank-ec747e18632e.json"
     }
   ]
 }
