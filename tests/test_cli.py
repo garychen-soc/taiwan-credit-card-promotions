@@ -254,6 +254,42 @@ class PublishGuardTests(unittest.TestCase):
         self.assertIn("source_activity_regression", guard["reason_codes"])
         self.assertNotIn("catastrophic_activity_regression", guard["reason_codes"])
 
+    def test_source_regression_ignores_activities_expired_since_last_publish(self) -> None:
+        candidate = candidate_payload(failed=0, active=1071)
+        candidate["generated_at"] = "2026-11-01T00:53:19+08:00"
+        candidate["source_health"][0]["activity_count"] = 13
+        previous = candidate_payload(failed=0, active=1071)
+        previous["source_health"][0]["activity_count"] = 22
+        previous["activities"] = [
+            {"id": f"old-{index}", "bank_id": "bank-0", "end_date": "2026-10-31"}
+            for index in range(2)
+        ] + [
+            {"id": f"current-{index}", "bank_id": "bank-0", "end_date": "2026-12-31"}
+            for index in range(20)
+        ]
+
+        guard = assess_publish_guard(candidate, previous)
+
+        self.assertFalse(guard["blocked"])
+
+    def test_source_regression_still_blocks_drop_of_current_activities(self) -> None:
+        candidate = candidate_payload(failed=0, active=1071)
+        candidate["generated_at"] = "2026-11-01T00:53:19+08:00"
+        candidate["source_health"][0]["activity_count"] = 11
+        previous = candidate_payload(failed=0, active=1071)
+        previous["source_health"][0]["activity_count"] = 22
+        previous["activities"] = [
+            {"id": "old", "bank_id": "bank-0", "end_date": "2026-10-31"},
+        ] + [
+            {"id": f"current-{index}", "bank_id": "bank-0", "end_date": None}
+            for index in range(21)
+        ]
+
+        guard = assess_publish_guard(candidate, previous)
+
+        self.assertTrue(guard["blocked"])
+        self.assertIn("source_activity_regression", guard["reason_codes"])
+
     def test_activity_drop_excludes_retained_fallback_activities(self) -> None:
         candidate = candidate_payload(failed=16, active=1110)
         candidate["cache"] = {"source_fallback_activities": 1069}

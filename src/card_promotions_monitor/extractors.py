@@ -4208,7 +4208,7 @@ def extract_first(
     checked_at = _now_iso(now)
     today = now.astimezone(TAIPEI).date()
     cards: list[dict[str, Any]] = []
-    failed_categories = 0
+    failed_categories: list[str] = []
     failed_pages = 0
     resolved_url = ""
     try:
@@ -4229,7 +4229,7 @@ def extract_first(
                     )
                     rows, max_page = _firstbank_rest_page(result.text)
                 except (RuntimeError, ValueError):
-                    failed_categories += 1
+                    failed_categories.append(request_data["categoryEnName"])
                     continue
                 cards.extend(_firstbank_rest_cards(
                     rows,
@@ -4288,12 +4288,16 @@ def extract_first(
     )
     status = (
         "complete"
-        if activities and failed_categories == 0 and failed_pages == 0 and failed_details == 0
+        if activities and not failed_categories and failed_pages == 0 and failed_details == 0
         else ("partial" if activities else "failed")
     )
     issues = []
     if failed_categories:
-        issues.append(f"{failed_categories} 個官方分類暫時無法讀取")
+        labels = "、".join(
+            f"{FIRSTBANK_CATEGORY_LABELS.get(name, name)}（{name}）"
+            for name in failed_categories
+        )
+        issues.append(f"{len(failed_categories)} 個官方分類暫時無法讀取：{labels}")
     if failed_pages:
         issues.append(f"{failed_pages} 個官方分類分頁暫時無法讀取")
     if failed_details:

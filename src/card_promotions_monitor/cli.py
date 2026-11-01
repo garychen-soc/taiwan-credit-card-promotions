@@ -195,6 +195,27 @@ def assess_publish_guard(payload: dict, previous_payload: dict | None) -> dict:
         )
         if isinstance(item, dict) and item.get("id")
     }
+    # Activities that expired since the last publish are expected to disappear;
+    # compare against the previous snapshot's still-current activities only.
+    previous_activities = (
+        previous_payload.get("activities", [])
+        if isinstance(previous_payload, dict)
+        else []
+    )
+    try:
+        guard_today = datetime.fromisoformat(str(payload.get("generated_at") or "")).date()
+    except ValueError:
+        guard_today = None
+    if previous_activities and guard_today is not None:
+        current_counts = Counter(
+            str(item.get("bank_id"))
+            for item in previous_activities
+            if isinstance(item, dict) and _is_current_activity(item, guard_today)
+        )
+        previous_source_counts = {
+            source_id: current_counts.get(source_id, 0)
+            for source_id in previous_source_counts
+        }
     has_source_activity_regression = any(
         previous_count > 0
         and (1 - (int(item.get("activity_count") or 0) / previous_count)) > 0.4
