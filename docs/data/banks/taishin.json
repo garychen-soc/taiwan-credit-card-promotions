@@ -1,70 +1,10 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-11-01T08:00:50+08:00",
+  "generated_at": "2026-11-02T08:01:43+08:00",
   "bank_id": "taishin",
   "bank_name": "台新銀行",
-  "activity_count": 181,
+  "activity_count": 179,
   "activities": [
-    {
-      "id": "taishin-b2fcd6842ed6",
-      "bank_id": "taishin",
-      "bank_name": "台新銀行",
-      "title": "SKM Park Outlets贈最高4.5%，刷台新信用卡",
-      "merchant": "SKM Park Outlets贈最高4.5%，刷台新信用卡",
-      "categories": [
-        "網購",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "加油交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-10-08",
-      "end_date": "2026-11-01",
-      "summary": "刷台新信用卡，贈最高4.5%",
-      "source_url": "https://mkpcard.taishinbank.com.tw/tscccms/promotion/detail/WM_20260819160408048",
-      "registration_required": true,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "https://mkpcard.taishinbank.com.tw/tscccms/signin",
-      "registration_url_kind": "bank_portal",
-      "registration_windows": [
-        {
-          "start": "2026-10-08T10:00:00+08:00",
-          "end": "2026-11-01T23:59:00+08:00",
-          "label": "活動登錄期間",
-          "source_text": "登錄期間:2026/10/8 10:00~2026/11/1 23:59 本活動消費計算期間:於2026/10/8~2026/11/1消費且入帳日於2026/11/6前。交易金額認定與計算順序係以持卡人消費入帳日為準。台新銀行將於活動結束後,計算已完成登錄之持卡人,及符合",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        }
-      ],
-      "registration_timing_contracts": [
-        "unknown"
-      ],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": 1000,
-      "featured": true,
-      "tags": [
-        "SKM Park Outlets贈最高4.5%，刷台新信用卡",
-        "台新銀行",
-        "網購",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "加油交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taishin-b2fcd6842ed6.json"
-    },
     {
       "id": "taishin-940ee931c7d1",
       "bank_id": "taishin",
@@ -588,55 +528,6 @@
       "needs_review": true,
       "review_message": "官方註明需登錄，但尚未取得可確認的登錄時點。",
       "detail_ref": "activities/taishin-5621bfe1a654.json"
-    },
-    {
-      "id": "taishin-9835b65720de",
-      "bank_id": "taishin",
-      "bank_name": "台新銀行",
-      "title": "Pinkoi瘋設祭XRichart卡，優先入場現折最高10%",
-      "merchant": "Pinkoi瘋設祭XRichart卡，優先入場現折最高10%",
-      "categories": [
-        "網購",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "加油交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "start_date": "2026-10-30",
-      "end_date": "2026-11-01",
-      "summary": "Pinkoi瘋設祭 Chill刷最高5%",
-      "source_url": "https://mkpcard.taishinbank.com.tw/tscccms/promotion/detail/WM_20260930174525402",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": 90,
-      "featured": true,
-      "tags": [
-        "Pinkoi瘋設祭XRichart卡，優先入場現折最高10%",
-        "台新銀行",
-        "網購",
-        "百貨購物",
-        "生活消費",
-        "旅遊交通",
-        "加油交通",
-        "海外消費",
-        "繳費稅款",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taishin-9835b65720de.json"
     },
     {
       "id": "taishin-e3663b688e6e",

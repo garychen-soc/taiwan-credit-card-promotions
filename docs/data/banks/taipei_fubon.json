@@ -1,9 +1,9 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-11-01T08:00:50+08:00",
+  "generated_at": "2026-11-02T08:01:43+08:00",
   "bank_id": "taipei_fubon",
   "bank_name": "台北富邦銀行",
-  "activity_count": 170,
+  "activity_count": 168,
   "activities": [
     {
       "id": "taipei_fubon-5e1fec969e7e",
@@ -208,7 +208,7 @@
           "start": "2026-10-01T16:00:00+08:00",
           "end": "2026-12-10T23:59:00+08:00",
           "label": "活動登錄期間",
-          "source_text": "註3:若以富邦信用卡參加本活動,正卡持卡人需於指定期間內完成活動登錄方符合回饋資格,登錄期間自2026/10/1 16:00~2026/12/10 23:59,活動登錄名額限量10萬名,登錄額滿為止,不另行通知。 若以富邦信用卡參加本活動,正卡持卡人需於指定期間內完成活動登錄方符合回饋資格,登錄期間自2026/10/1 16:00~2026/12/10 2",
+          "source_text": "錢包》掃碼繳費限繳分期繳外幣保單始享回饋,且以新台幣給付回饋金。 註3:若以富邦信用卡參加本活動,正卡持卡人需於指定期間內完成活動登錄方符合回饋資格,登錄期間自2026/10/1 16:00~2026/12/10 23:59,活動登錄名額限量10萬名,登錄額滿為止,不另行通知。 2《原卡片回饋》最高享0.5% 即信用卡產品原回饋 例:J POINTS/JU卡為LINE POINTS 0.5%回饋、Costco聯名卡為0.",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1147,7 +1147,7 @@
           "start": "2026-12-22T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/12/22 14:00起開放登錄~2026/12/31 23:59止,登錄額滿活動即提前終止。",
+          "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/12/22 14:00起開放登錄~2026/12/31 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個PChome24h購物優惠活動,每歸戶限擇優擇一項",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1212,7 +1212,7 @@
           "start": "2026-12-22T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/12/22 14:00起開放登錄~2026/12/31 23:59止,登錄額滿活動即提前終止。",
+          "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/12/22 14:00起開放登錄~2026/12/31 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算回饋,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個淘寶優惠活動,每歸戶限擇優擇一項活動回饋乙次。",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1276,7 +1276,7 @@
           "start": "2026-12-22T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "登錄結果以本行系統顯示為準。(1)登錄辦法: 網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/12/22 14:00起開放登錄~2026/12/31 23:59止,登錄額滿活動即提前終止。",
+          "source_text": "登錄結果以本行系統顯示為準。(1)登錄辦法: 網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/12/22 14:00起開放登錄~2026/12/31 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算回饋,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個蝦皮購物優惠活動,每歸戶限擇優擇一項活動回饋乙",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1340,7 +1340,7 @@
           "start": "2026-12-22T14:00:00+08:00",
           "end": null,
           "label": "登錄開放",
-          "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/12/22 14:00起開放登錄~2026/12/31 23:59止,登錄額滿活動即提前終止。",
+          "source_text": "登錄結果以本行系統顯示為準。 (1)登錄辦法:網路登錄:下載【Fubon+台北富邦行動銀行】,註冊/登錄會員後,點選【優惠】>>【活動登錄】勾選活動即可完成登錄。 (2)登錄時間:2026/12/22 14:00起開放登錄~2026/12/31 23:59止,登錄額滿活動即提前終止。 2.正附卡消費合併計算回饋,並以正卡持卡人為刷卡金受贈者,【活動一~活動三】採分別登錄制,如登錄多個酷澎coupang優惠活動,每歸戶限擇優擇一項",
           "reminder_minutes": 10,
           "precision": "datetime"
         }
@@ -1953,96 +1953,6 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-3cdf127a302a.json"
-    },
-    {
-      "id": "taipei_fubon-bad9422c4311",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "《女人皆如此》",
-      "merchant": "《女人皆如此》",
-      "categories": [
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "start_date": "2026-10-14",
-      "end_date": "2026-11-01",
-      "summary": "莫札特270誕辰鉅獻！",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000170",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-10-14",
-          "end": "2026-11-01",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "《女人皆如此》",
-        "台北富邦銀行",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-bad9422c4311.json"
-    },
-    {
-      "id": "taipei_fubon-33e1ce58d643",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "《安蒂岡妮》",
-      "merchant": "《安蒂岡妮》",
-      "categories": [
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "start_date": "2026-10-14",
-      "end_date": "2026-11-01",
-      "summary": "直視衝突，你願意付出代價嗎?",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=B000171",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-10-14",
-          "end": "2026-11-01",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "《安蒂岡妮》",
-        "台北富邦銀行",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-33e1ce58d643.json"
     },
     {
       "id": "taipei_fubon-ea61ff5f0a96",
@@ -7241,57 +7151,6 @@
       "detail_ref": "activities/taipei_fubon-e6448e00b7a7.json"
     },
     {
-      "id": "taipei_fubon-a73f2ec7d2d3",
-      "bank_id": "taipei_fubon",
-      "bank_name": "台北富邦銀行",
-      "title": "海外線上消費滿千最高享8%",
-      "merchant": "海外線上消費滿千最高享8%",
-      "categories": [
-        "網購",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費",
-        "分期"
-      ],
-      "start_date": "2026-10-15",
-      "end_date": "2026-12-31",
-      "summary": "網購/訂房平台/影音優惠享遍全世界",
-      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=C000334",
-      "registration_required": false,
-      "parent_activity_id": "",
-      "activity_periods": [
-        {
-          "start": "2026-10-15",
-          "end": "2026-12-31",
-          "label": "活動期間"
-        }
-      ],
-      "reward_tiers": [],
-      "registration_url": "",
-      "registration_url_kind": "unknown",
-      "registration_windows": [],
-      "registration_timing_contracts": [],
-      "max_reward_percent": 15.0,
-      "max_reward_amount_twd": null,
-      "featured": true,
-      "tags": [
-        "海外線上消費滿千最高享8%",
-        "台北富邦銀行",
-        "網購",
-        "生活消費",
-        "旅遊交通",
-        "餐飲美食",
-        "海外消費",
-        "分期"
-      ],
-      "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
-      "detail_ref": "activities/taipei_fubon-a73f2ec7d2d3.json"
-    },
-    {
       "id": "taipei_fubon-585d8722a851",
       "bank_id": "taipei_fubon",
       "bank_name": "台北富邦銀行",
@@ -7868,7 +7727,6 @@
       "title": "雄獅旅遊 鐵道旅遊季",
       "merchant": "雄獅旅遊 鐵道旅遊季",
       "categories": [
-        "網購",
         "行動支付",
         "生活消費",
         "旅遊交通",
@@ -7900,7 +7758,6 @@
       "tags": [
         "雄獅旅遊 鐵道旅遊季",
         "台北富邦銀行",
-        "網購",
         "行動支付",
         "生活消費",
         "旅遊交通",
@@ -8752,6 +8609,53 @@
       "needs_review": false,
       "review_message": "",
       "detail_ref": "activities/taipei_fubon-421901eee96f.json"
+    },
+    {
+      "id": "taipei_fubon-4a9cf869a6cc",
+      "bank_id": "taipei_fubon",
+      "bank_name": "台北富邦銀行",
+      "title": "高雄中央公園英迪格酒店",
+      "merchant": "高雄中央公園英迪格酒店",
+      "categories": [
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "start_date": "2026-11-01",
+      "end_date": "2027-12-31",
+      "summary": "用餐刷富邦卡享9折",
+      "source_url": "https://cardpromote.taipeifubon.com.tw/promotion/Detail?sn=A000187",
+      "registration_required": false,
+      "parent_activity_id": "",
+      "activity_periods": [
+        {
+          "start": "2026-11-01",
+          "end": "2027-12-31",
+          "label": "活動期間"
+        }
+      ],
+      "reward_tiers": [],
+      "registration_url": "",
+      "registration_url_kind": "unknown",
+      "registration_windows": [],
+      "registration_timing_contracts": [],
+      "max_reward_percent": 15.0,
+      "max_reward_amount_twd": null,
+      "featured": true,
+      "tags": [
+        "高雄中央公園英迪格酒店",
+        "台北富邦銀行",
+        "行動支付",
+        "生活消費",
+        "旅遊交通",
+        "餐飲美食"
+      ],
+      "official_status": "published",
+      "review_required": false,
+      "needs_review": false,
+      "review_message": "",
+      "detail_ref": "activities/taipei_fubon-4a9cf869a6cc.json"
     },
     {
       "id": "taipei_fubon-790eb030cf81",

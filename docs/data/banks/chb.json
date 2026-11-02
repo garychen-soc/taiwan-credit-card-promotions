@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-11-01T08:00:50+08:00",
+  "generated_at": "2026-11-02T08:01:43+08:00",
   "bank_id": "chb",
   "bank_name": "彰化銀行",
   "activity_count": 23,
@@ -778,7 +778,7 @@
       "categories": [
         "分期"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3594",
@@ -813,7 +813,7 @@
       "categories": [
         "百貨購物"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "CHB",
       "source_url": "https://www.bankchb.com/frontend/bonusDetail.jsp?id=3720",

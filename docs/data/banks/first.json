@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-11-01T08:00:50+08:00",
+  "generated_at": "2026-11-02T08:01:43+08:00",
   "bank_id": "first",
   "bank_name": "第一銀行",
   "activity_count": 142,
@@ -2979,7 +2979,7 @@
         "餐飲美食",
         "分期"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "週年慶分期滿額享回饋",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565694304259",
@@ -3022,7 +3022,7 @@
         "百貨購物",
         "分期"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "分期O利率 滿額再送最高2,500元刷卡金",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698411259",
@@ -3033,14 +3033,6 @@
       "registration_url": "https://ccard.firstbank.com.tw/cmsweb/act/ca_index",
       "registration_url_kind": "bank_portal",
       "registration_windows": [
-        {
-          "start": "2026-11-01T00:00:00+08:00",
-          "end": null,
-          "label": "每月登錄開放",
-          "source_text": "銀行信用卡,排除公司卡、簽帳金融卡。 需逐月登錄,登錄日期自每月1日00時起,限量名額依達成順序計算,額滿即關閉登錄功能。 活動以「交易日」為主,交易金額係正附卡合併計算,限正卡持卡人登錄參加,且",
-          "reminder_minutes": 10,
-          "precision": "datetime"
-        },
         {
           "start": "2026-12-01T00:00:00+08:00",
           "end": null,
@@ -3080,7 +3072,7 @@
         "旅遊交通",
         "分期"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "指定行程最高現折60,000元",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565711700601",
@@ -6327,7 +6319,7 @@
         "旅遊交通",
         "分期"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "雙11趁現在 分期最高享13%",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565699647731",
@@ -6369,7 +6361,7 @@
         "旅遊交通",
         "分期"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "雙11放大回饋 最高回饋8,888元",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565702005868",
@@ -6410,7 +6402,7 @@
         "百貨購物",
         "分期"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "分期滿額再享加碼點數回饋",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565709817846",
@@ -6448,7 +6440,7 @@
       "categories": [
         "百貨購物"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "館內消費滿額享優惠",
       "source_url": "https://card.firstbank.com.tw/sites/card/CardActivitySchedule?typeDepartment=ESKYLAND_shopping",
@@ -6487,7 +6479,7 @@
         "旅遊交通",
         "分期"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "雙11限定！分期最高享25%回饋",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565701873763",
@@ -6527,7 +6519,7 @@
         "其他優惠",
         "生活消費"
       ],
-      "start_date": "2026-11-01",
+      "start_date": "2026-11-02",
       "end_date": null,
       "summary": "掌握消費碳足跡!",
       "source_url": "https://card.firstbank.com.tw/sites/card/zh_TW/1565698601420",

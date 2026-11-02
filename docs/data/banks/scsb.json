@@ -1,6 +1,6 @@
 {
   "schema_version": 9,
-  "generated_at": "2026-11-01T08:00:50+08:00",
+  "generated_at": "2026-11-02T08:01:43+08:00",
   "bank_id": "scsb",
   "bank_name": "上海商銀",
   "activity_count": 22,
@@ -130,6 +130,14 @@
       "registration_url_kind": "bank_portal",
       "registration_windows": [
         {
+          "start": "2026-04-01",
+          "end": null,
+          "label": "登錄日期（時間未確認）",
+          "source_text": "限量500名,登錄名額額滿即止。 ※本活動於「每月第一個週三」下午4點開放登錄,同月份登錄一次即可,次月須重新登錄。 (2026/4/1、5/6、6/3、7/1、8/5、9/2、10/7、11/4、12/2) >>>【月月活動登錄】<<< (6月起變更活動登錄網址) 注意事項 本活動僅限上海銀行",
+          "reminder_minutes": 10,
+          "precision": "date"
+        },
+        {
           "start": "2026-04-01T16:00:00+08:00",
           "end": null,
           "label": "每月登錄開放",
@@ -200,6 +208,14 @@
           "source_text": "每月第一個週三」下午4點開放登錄",
           "reminder_minutes": 10,
           "precision": "datetime"
+        },
+        {
+          "start": "2027-01-06T16:00:00+08:00",
+          "end": null,
+          "label": "每月登錄開放",
+          "source_text": "每月第一個週三」下午4點開放登錄",
+          "reminder_minutes": 10,
+          "precision": "datetime"
         }
       ],
       "registration_timing_contracts": [
@@ -216,9 +232,9 @@
         "分期"
       ],
       "official_status": "published",
-      "review_required": false,
-      "needs_review": false,
-      "review_message": "",
+      "review_required": true,
+      "needs_review": true,
+      "review_message": "登錄時間晚於活動期間。",
       "detail_ref": "activities/scsb-6e86e6016e1e.json"
     },
     {
